@@ -2,6 +2,8 @@ style "default"
 {
     GtkButton::default_border         = {0, 0, 0, 0}
     GtkButton::default_outside_border = {0, 0, 0, 0}
+    GtkButton::child_displacement_x   = 1
+    GtkButton::child_displacement_y   = 1
     GtkButton::default_spacing        = 5
     GtkButton::focus-line-width       = 1
     GtkButton::focus-padding          = 0
