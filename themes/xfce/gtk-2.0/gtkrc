@@ -1,12 +1,12 @@
 style "xfce-default"
 {
     GtkButton::default_border         = {0, 0, 0, 0}
-    GtkButton::default_outside_border = {0, 0, 0, 0}
+    GtkButton::default_outside_border = {2, 2, 2, 2}
     GtkButton::default_spacing        = 10
-    GtkCheckButton::indicator_size    = 15
+    GtkCheckButton::indicator_size    = 12
     GtkMenuItem::selected_shadow_type = etched-in
     GtkPaned::handle_full_size        = 1
-    GtkPaned::handle_size             = 6
+    GtkPaned::handle_size             = 7
     GtkRadioButton::indicator_size    = 15
     GtkRange::slider_width            = 15
     GtkRange::stepper_size            = 15
@@ -15,11 +15,14 @@ style "xfce-default"
     GtkScrollbar::min_slider_length   = 20
     GtkSpinButton::shadow_type        = out
     GtkWidget::internal_padding       = 2
+    GtkMenuBar::internal-padding      = 0
     GtkWidget::focus_padding          = 2
     GtkWidget::focus-line-width       = 1
     GtkWidget::interior_focus         = 5
-    GtkMenuBar::shadow_type           = none
-    GtkToolbar::shadow_type           = none
+    GtkMenuBar::shadow_type           = out
+    GtkToolbar::shadow_type           = out
+    GtkButton::child_displacement_x   = 0
+    GtkButton::child_displacement_y   = 1
     
     xthickness = 2
     ythickness = 2
@@ -68,7 +71,10 @@ style "xfce-menustyle" = "xfce-default"
         smooth_edge = true
         boxfill
         {
-            fill_style = plain
+            fill_style = gradient
+            orientation = vertical
+            shade_start = 1.1
+            shade_end = 0.9
         }
     }
 }
@@ -120,8 +126,8 @@ style "xfce-sbstyle" = "xfce-default"
         {
             fill_style = gradient
             orientation = automatic
-            shade_start = 0.95
-            shade_end = 1.05
+            shade_start = 0.9
+            shade_end = 1.1
         }
     }
 }
