@@ -6,7 +6,7 @@ style "curve-default"
     GtkButton::default_spacing        = 2
     GtkCheckButton::indicator_size    = 15
     GtkPaned::handle_full_size        = 1
-    GtkRange::trough_border           = 0
+    GtkRange::trough_border           = 2
     GtkRange::slider_width            = 15
     GtkRange::stepper_size            = 15
     GtkRange::stepper_spacing         = 0
@@ -22,14 +22,14 @@ style "curve-default"
     bg[PRELIGHT]    = "#f2f2f2"
     bg[ACTIVE]      = "#cccccc"
     bg[INSENSITIVE] = "#d8d8d8"
-    bg[SELECTED]    = "#4c59a6"
+    bg[SELECTED]    = "#28578f"
 
-    base[SELECTED]  = "#4c59a6"
+    base[SELECTED]  = "#1a65a2"
     text[SELECTED]  = "#ffffff"
 
     engine "xfce" 
     {
-        smooth_edge = TRUE
+        smooth_edge = FALSE
     }
 }
 
