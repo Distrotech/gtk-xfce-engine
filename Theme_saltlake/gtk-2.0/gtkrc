@@ -22,7 +22,7 @@ style "default"
     bg[INSENSITIVE]   = "#E4E4E0"
     bg[NORMAL]        = "#E4E4E0"
     bg[PRELIGHT]      = "#CCC9C5"
-    bg[SELECTED]      = "#334985"
+    bg[SELECTED]      = "#3f993f"
 
     base[ACTIVE]      = "#E5E5E5"
     base[INSENSITIVE] = "#E4E4E0"
