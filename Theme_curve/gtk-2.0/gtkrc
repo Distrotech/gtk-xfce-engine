@@ -22,9 +22,9 @@ style "curve-default"
     bg[PRELIGHT]    = "#f2f2f2"
     bg[ACTIVE]      = "#cccccc"
     bg[INSENSITIVE] = "#d8d8d8"
-    bg[SELECTED]    = "#0a5f89"
+    bg[SELECTED]    = "#4E48A6"
 
-    base[SELECTED]  = "#0a5f89"
+    base[SELECTED]  = "#4E48A6"
     text[SELECTED]  = "#ffffff"
 
     engine "xfce" 
