@@ -1,3 +1,40 @@
+2004-10-27 23:03  olivier
+
+	* themes/redmondxp/gtk-2.0/gtkrc: Common sense
+
+2004-10-27 22:56  olivier
+
+	* src/xfce_theme_draw.c, themes/cadmium/gtk-2.0/gtkrc,
+	  themes/kde2/gtk-2.0/gtkrc: Spinbutton tweaking
+
+2004-10-27 20:00  olivier
+
+	* src/xfce_theme_draw.c, themes/b5/gtk-2.0/gtkrc,
+	  themes/cadmium/gtk-2.0/gtkrc, themes/curve/gtk-2.0/gtkrc,
+	  themes/dawn/gtk-2.0/gtkrc, themes/kolors/gtk-2.0/gtkrc,
+	  themes/light/gtk-2.0/gtkrc, themes/redmondxp/gtk-2.0/gtkrc,
+	  themes/smooth/gtk-2.0/gtkrc, themes/stellar/gtk-2.0/gtkrc,
+	  themes/winter/gtk-2.0/gtkrc, themes/xfce/gtk-2.0/gtkrc,
+	  themes/xfce-4.0/gtk-2.0/gtkrc: Some simple theme updates
+
+2004-10-25 21:59  olivier
+
+	* src/xfce_theme_draw.c: Change spin buttons' shadows.
+
+2004-10-25 21:20  olivier
+
+	* src/xfce_theme_draw.c, themes/xfce/gtk-2.0/gtkrc: Code and theme
+	  cleanup
+
+2004-10-24 20:02  olivier
+
+	* themes/xfce/gtk-2.0/gtkrc: Remove backward stepper as some apps
+	  (OO) don't support it...
+
+2004-10-23 16:45  olivier
+
+	* ChangeLog: Update ChangeLog
+
 2004-10-23 15:35  olivier
 
 	* themes/: dawn/gtk-2.0/gtkrc, xfce/gtk-2.0/gtkrc: Theme cleanup
