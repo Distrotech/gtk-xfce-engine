@@ -112,8 +112,8 @@ style "menubar" = "colored"
 
 style "button" = "default"
 {
-    xthickness = 4
-    ythickness = 4
+    xthickness = 2
+    ythickness = 2
 
     bg[PRELIGHT]      = "#d4d8e0"
     bg[NORMAL]        = "#d4d8e0"
