@@ -1,0 +1,14 @@
+Source: gtk-xfce-engine
+Section: x11
+Priority: optional
+Maintainer: Martin Loschwitz <madkiss@madkiss.org>
+Build-Depends: debhelper (>> 3.0.0), libatk1.0-dev, libglib2.0-dev, libgtk2.0-dev, libpango1.0-dev
+Standards-Version: 3.5.7
+
+Package: gtk-xfce-engine
+Architecture: any
+Depends: ${shlibs:Depends}
+Description: A GTK+-2.0 theme engine for Xfce
+ This package contains an XFCE engine for GTK2.0 which makes you able
+ to use various GTK2.0 themes with Xfce. It also contains some ready
+ engines, but you are of course free to design your owns.
