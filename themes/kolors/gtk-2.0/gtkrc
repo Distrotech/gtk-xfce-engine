@@ -1,4 +1,4 @@
-style "xfce-kolors-default"
+style "default"
 {
     GtkButton::default_border         = {0, 0, 0, 0}
     GtkButton::default_outside_border = {0, 0, 0, 0}
@@ -59,9 +59,9 @@ style "xfce-kolors-default"
         }
     }
 }
-widget_class "*"                   style "xfce-kolors-default"
+widget_class "*"                   style "default"
 
-style "xfce-kolors-menustyle" = "xfce-kolors-default"
+style "menustyle" = "default"
 {
     xthickness = 1
     ythickness = 2
@@ -74,16 +74,16 @@ style "xfce-kolors-menustyle" = "xfce-kolors-default"
         }
     }
 }
-widget_class "*BonoboDockItem*"    style "xfce-kolors-menustyle"
-class "*BonoboDockItem*"           style "xfce-kolors-menustyle"
-widget_class "*HandleBox*"         style "xfce-kolors-menustyle"
-class "*HandleBox*"                style "xfce-kolors-menustyle"
-widget_class "*Tool*"              style "xfce-kolors-menustyle"
-class "*Tool*"                     style "xfce-kolors-menustyle"
-widget_class "*MenuBar*"           style "xfce-kolors-menustyle"
-class "*MenuBar*"                  style "xfce-kolors-menustyle"
+widget_class "*BonoboDockItem*"    style "menustyle"
+class "*BonoboDockItem*"           style "menustyle"
+widget_class "*HandleBox*"         style "menustyle"
+class "*HandleBox*"                style "menustyle"
+widget_class "*Tool*"              style "menustyle"
+class "*Tool*"                     style "menustyle"
+widget_class "*MenuBar*"           style "menustyle"
+class "*MenuBar*"                  style "menustyle"
 
-style "xfce-kolors-buttonstyle" = "xfce-kolors-default"
+style "buttonstyle" = "default"
 {
     xthickness = 1
     ythickness = 1
@@ -99,10 +99,10 @@ style "xfce-kolors-buttonstyle" = "xfce-kolors-default"
         }
     }
 }
-widget_class "*Button*"            style "xfce-kolors-buttonstyle"
-class "*Button*"                   style "xfce-kolors-buttonstyle"
+widget_class "*Button*"            style "buttonstyle"
+class "*Button*"                   style "buttonstyle"
 
-style "xfce-kolors-sbstyle" = "xfce-kolors-default"
+style "sbstyle" = "default"
 {
     xthickness = 1
     ythickness = 1
@@ -118,12 +118,12 @@ style "xfce-kolors-sbstyle" = "xfce-kolors-default"
         }
     }
 }
-widget_class "*Scrollbar*"         style "xfce-kolors-sbstyle"
-class "*Scrollbar*"                style "xfce-kolors-sbstyle"
-widget_class "*Scale*"             style "xfce-kolors-sbstyle"
-class "*Scale*"                    style "xfce-kolors-sbstyle"
+widget_class "*Scrollbar*"         style "sbstyle"
+class "*Scrollbar*"                style "sbstyle"
+widget_class "*Scale*"             style "sbstyle"
+class "*Scale*"                    style "sbstyle"
 
-style "xfce-kolors-progress" = "xfce-kolors-default"
+style "progress" = "default"
 {
     xthickness = 1
     ythickness = 1
@@ -139,16 +139,18 @@ style "xfce-kolors-progress" = "xfce-kolors-default"
         }
     }
 }
-widget_class "*Progress*"          style "xfce-kolors-progress" 
-class "*Progress*"                 style "xfce-kolors-progress" 
+widget_class "*Progress*"          style "progress" 
+class "*Progress*"                 style "progress" 
 
-style "xfce-kolors-titlebar"
+# This is for the window borders (xfwm4 & metacity)
+# 
+style "titlebar"
 {
     bg[SELECTED]      = "#3E91EB"
     fg[SELECTED]      = "#ffffff"
-    bg[ACTIVE]        = "#8F9FB4"
-    fg[NORMAL]        = "#ffffff"
+    bg[INSENSITIVE]   = "#8F9FB4"
+    fg[INSENSITIVE]   = "#ffffff"
 }
-widget "xfwm"                      style "xfce-kolors-titlebar"
-class "MetaFrames"                 style "xfce-kolors-titlebar"
-widget_class "MetaFrames"          style "xfce-kolors-titlebar"
+widget "xfwm"                      style "titlebar"
+class "MetaFrames"                 style "titlebar"
+widget_class "MetaFrames"          style "titlebar"

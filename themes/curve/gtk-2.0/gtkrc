@@ -1,4 +1,4 @@
-style "curve-default"
+style "default"
 {
     GtkButton::default_border         = {0, 0 ,0 ,0}
     GtkButton::default_outside_border = {0, 0 ,0 ,0}
@@ -60,9 +60,9 @@ style "curve-default"
     }
 }
 
-widget_class "*"                   style "curve-default"
+widget_class "*"                   style "default"
 
-style "curve-menu-color" = "curve-default"
+style "menu-color" = "default"
 {
     bg[PRELIGHT]    = "#4464ac"
     fg[PRELIGHT]    = "#ffffff"
@@ -77,7 +77,7 @@ style "curve-menu-color" = "curve-default"
     }
 }
 
-style "curve-tool-bar" = "curve-menu-color"
+style "tool-bar" = "menu-color"
 {
     xthickness = 2
     ythickness = 2
@@ -91,16 +91,16 @@ style "curve-tool-bar" = "curve-menu-color"
 	}
     }
 }
-widget_class "*BonoboDockItem*"    style "curve-tool-bar"
-class "*BonoboDockItem*"           style "curve-tool-bar"
-widget_class "*HandleBox*"         style "curve-tool-bar"
-class "*HandleBox*"                style "curve-tool-bar"
-widget_class "*Tool*"              style "curve-tool-bar"
-class "*Tool*"                     style "curve-tool-bar"
-widget_class "*MenuBar*"           style "curve-tool-bar"
-class "*MenuBar*"                  style "curve-tool-bar"
+widget_class "*BonoboDockItem*"    style "tool-bar"
+class "*BonoboDockItem*"           style "tool-bar"
+widget_class "*HandleBox*"         style "tool-bar"
+class "*HandleBox*"                style "tool-bar"
+widget_class "*Tool*"              style "tool-bar"
+class "*Tool*"                     style "tool-bar"
+widget_class "*MenuBar*"           style "tool-bar"
+class "*MenuBar*"                  style "tool-bar"
 
-style "curve-menu" = "curve-menu-color"
+style "menu" = "menu-color"
 {
     xthickness = 2
     ythickness = 2
@@ -117,10 +117,10 @@ style "curve-menu" = "curve-menu-color"
 	}
     }
 }
-widget_class "*MenuItem*"          style "curve-menu"
-class "*MenuItem*"                 style "curve-menu"
+widget_class "*MenuItem*"          style "menu"
+class "*MenuItem*"                 style "menu"
 
-style "curve-progress" = "curve-menu-color"
+style "progress" = "menu-color"
 {
     xthickness = 1
     ythickness = 1
@@ -137,10 +137,10 @@ style "curve-progress" = "curve-menu-color"
 	}
     }
 }
-widget_class "*Progress*"          style "curve-progress"
-class "*Progress*"                 style "curve-progress"
+widget_class "*Progress*"          style "progress"
+class "*Progress*"                 style "progress"
 
-style "curve-button" = "curve-default"
+style "button" = "default"
 {
     xthickness = 2
     ythickness = 2
@@ -154,5 +154,20 @@ style "curve-button" = "curve-default"
         }
     }
 }
-widget_class "*Button*"            style "curve-button"
-class "*Button*"                   style "curve-button"
+widget_class "*Button*"            style "button"
+class "*Button*"                   style "button"
+
+# This is for the window borders (xfwm4 & metacity)
+# 
+style "titlebar"
+{
+    bg[SELECTED]      = "#4464ac"
+    fg[SELECTED]      = "#ffffff"
+    bg[INSENSITIVE]   = "#cccccc"
+    fg[INSENSITIVE]   = "#000000"
+}
+
+widget "xfwm"	          style "titlebar"
+class "MetaFrames"        style "titlebar"
+widget_class "MetaFrames" style "titlebar"
+

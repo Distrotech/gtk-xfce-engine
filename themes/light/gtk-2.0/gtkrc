@@ -81,17 +81,17 @@ style "notebook" = "default"
 widget_class "*Notebook"  style "notebook"
 class "*Notebook"         style "notebook"
 
-# xfwm4 frame colors
+# This is for the window borders (xfwm4 & metacity)
 # 
-# style "titlebar"
-# {
-#     bg[SELECTED]  = "#818178"
-#     fg[SELECTED]  = "#ffffff"
-#     bg[ACTIVE]    = "#a5a789"
-#     fg[ACTIVE]    = "#000000"
-#     bg[NORMAL]    = "#c0c2ab"
-#     fg[NORMAL]    = "#000000"
-# }
-# 
-# widget "xfwm" style "titlebar"
-# class "MetaFrames" style "titlebar"
+style "titlebar" = "default"
+{
+    bg[SELECTED]      = "#bcb4cf"
+    fg[SELECTED]      = "#000000"
+    bg[INSENSITIVE]   = "#d4d4cd"
+    fg[INSENSITIVE]   = "#000000"
+}
+
+widget "xfwm"	          style "titlebar"
+class "MetaFrames"        style "titlebar"
+widget_class "MetaFrames" style "titlebar"
+

@@ -1,4 +1,4 @@
-style "xfce-default"
+style "default"
 {
     GtkButton::default_border         = {0, 0, 0, 0}
     GtkButton::default_outside_border = {0, 0, 0, 0}
@@ -62,9 +62,9 @@ style "xfce-default"
         }
     }
 }
-widget_class "*"                   style "xfce-default"
+widget_class "*"                   style "default"
 
-style "xfce-menustyle" = "xfce-default"
+style "menustyle" = "default"
 {
     xthickness = 2
     ythickness = 2
@@ -77,16 +77,16 @@ style "xfce-menustyle" = "xfce-default"
         }
     }
 }
-widget_class "*BonoboDockItem*"    style "xfce-menustyle"
-class "*BonoboDockItem*"           style "xfce-menustyle"
-widget_class "*HandleBox*"         style "xfce-menustyle"
-class "*HandleBox*"                style "xfce-menustyle"
-widget_class "*Tool*"              style "xfce-menustyle"
-class "*Tool*"                     style "xfce-menustyle"
-widget_class "*MenuBar*"           style "xfce-menustyle"
-class "*MenuBar*"                  style "xfce-menustyle"
+widget_class "*BonoboDockItem*"    style "menustyle"
+class "*BonoboDockItem*"           style "menustyle"
+widget_class "*HandleBox*"         style "menustyle"
+class "*HandleBox*"                style "menustyle"
+widget_class "*Tool*"              style "menustyle"
+class "*Tool*"                     style "menustyle"
+widget_class "*MenuBar*"           style "menustyle"
+class "*MenuBar*"                  style "menustyle"
 
-style "xfce-button" = "xfce-default"
+style "button" = "default"
 {
     xthickness = 2
     ythickness = 2
@@ -103,18 +103,18 @@ style "xfce-button" = "xfce-default"
         }
     }
 }
-widget_class "*Button*"            style "xfce-button"
-class "*Button*"                   style "xfce-button"
-widget_class "*button*"            style "xfce-button"
-class "*button*"                   style "xfce-button"
-widget_class "*OptionMenu*"        style "xfce-button"
-class "*OptionMenu*"               style "xfce-button"
-# widget_class "*Tree*"            style "xfce-button"
-# class "*Tree*"                   style "xfce-button"
-# widget_class "*Scale*"           style "xfce-button"
-# class "*Scale*"                  style "xfce-button"
+widget_class "*Button*"            style "button"
+class "*Button*"                   style "button"
+widget_class "*button*"            style "button"
+class "*button*"                   style "button"
+widget_class "*OptionMenu*"        style "button"
+class "*OptionMenu*"               style "button"
+# widget_class "*Tree*"            style "button"
+# class "*Tree*"                   style "button"
+# widget_class "*Scale*"           style "button"
+# class "*Scale*"                  style "button"
 
-style "xfce-sbstyle" = "xfce-default"
+style "sbstyle" = "default"
 {
     xthickness = 2
     ythickness = 2
@@ -130,35 +130,37 @@ style "xfce-sbstyle" = "xfce-default"
         }
     }
 }
-widget_class "*Scrollbar*"         style "xfce-sbstyle"
-class "*Scrollbar*"                style "xfce-sbstyle"
-widget_class "*Scale*"             style "xfce-sbstyle"
-class "*Scale*"                    style "xfce-sbstyle"
+widget_class "*Scrollbar*"         style "sbstyle"
+class "*Scrollbar*"                style "sbstyle"
+widget_class "*Scale*"             style "sbstyle"
+class "*Scale*"                    style "sbstyle"
 
-style "xfce-progress" = "xfce-default"
+style "progress" = "default"
 {
     xthickness = 1
     ythickness = 1
 }
-widget_class "*Progress*"          style "xfce-progress" 
-class "*Progress*"                 style "xfce-progress" 
+widget_class "*Progress*"          style "progress" 
+class "*Progress*"                 style "progress" 
 
-style "xfce-menuitem" = "xfce-default"
+style "menuitem" = "default"
 {
     xthickness = 1
     ythickness = 2
 }
 
-widget_class "*MenuItem*"          style "xfce-menuitem"
-class "*MenuItem*"                 style "xfce-menuitem"
+widget_class "*MenuItem*"          style "menuitem"
+class "*MenuItem*"                 style "menuitem"
 
-style "xfce-titlebar"
+# This is for the window borders (xfwm4 & metacity)
+# 
+style "titlebar" = "default"
 {
     bg[SELECTED]      = "#647694"
     fg[SELECTED]      = "#ffffff"
-    bg[ACTIVE]        = "#A0A3A7"
-    fg[NORMAL]        = "#ffffff"
+    bg[INSENSITIVE]   = "#A0A3A7"
+    fg[INSENSITIVE]   = "#ffffff"
 }
-widget "xfwm"                      style "xfce-titlebar"
-class "MetaFrames"                 style "xfce-titlebar"
-widget_class "MetaFrames"          style "xfce-titlebar"
+widget "xfwm"                      style "titlebar"
+class "MetaFrames"                 style "titlebar"
+widget_class "MetaFrames"          style "titlebar"

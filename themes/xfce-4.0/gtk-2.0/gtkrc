@@ -1,7 +1,7 @@
 # Default Xfce theme
 # Olivier Fourdan 05/2003
 
-style "xfce-default"
+style "default"
 {
     GtkButton::default_border         = {0, 0, 0, 0}
     GtkButton::default_outside_border = {0, 0, 0, 0}
@@ -63,9 +63,9 @@ style "xfce-default"
     }
 }
 
-widget_class "*"                   style "xfce-default"
+widget_class "*"                   style "default"
 
-style "xfce-colored" = "xfce-default"
+style "colored" = "default"
 {
     xthickness = 3
     ythickness = 3
@@ -89,14 +89,14 @@ style "xfce-colored" = "xfce-default"
     }
 }
 
-widget_class "*List*"              style "xfce-colored"
-class "*List*"                     style "xfce-colored"
-widget_class "*Text*"              style "xfce-colored"
-class "*Text*"                     style "xfce-colored"
-widget_class "*Entry*"             style "xfce-colored"
-class "*Entry*"                    style "xfce-colored"
+widget_class "*List*"              style "colored"
+class "*List*"                     style "colored"
+widget_class "*Text*"              style "colored"
+class "*Text*"                     style "colored"
+widget_class "*Entry*"             style "colored"
+class "*Entry*"                    style "colored"
 
-style "xfce-menubar" = "xfce-colored"
+style "menubar" = "colored"
 {
     xthickness = 1
     ythickness = 2
@@ -111,16 +111,16 @@ style "xfce-menubar" = "xfce-colored"
     }
 }
 
-widget_class "*BonoboDockItem*"    style "xfce-menubar"
-class "*BonoboDockItem*"           style "xfce-menubar"
-widget_class "*HandleBox*"         style "xfce-menubar"
-class "*HandleBox*"                style "xfce-menubar"
-widget_class "*Tool*"              style "xfce-menubar"
-class "*Tool*"                     style "xfce-menubar"
-widget_class "*MenuBar*"           style "xfce-menubar"
-class "*MenuBar*"                  style "xfce-menubar"
+widget_class "*BonoboDockItem*"    style "menubar"
+class "*BonoboDockItem*"           style "menubar"
+widget_class "*HandleBox*"         style "menubar"
+class "*HandleBox*"                style "menubar"
+widget_class "*Tool*"              style "menubar"
+class "*Tool*"                     style "menubar"
+widget_class "*MenuBar*"           style "menubar"
+class "*MenuBar*"                  style "menubar"
 
-style "xfce-menuitem" = "xfce-colored"
+style "menuitem" = "colored"
 {
     xthickness = 2
     ythickness = 2
@@ -138,10 +138,10 @@ style "xfce-menuitem" = "xfce-colored"
     }
 }
 
-widget_class "*MenuItem*"          style "xfce-menuitem"
-class "*MenuItem*"                 style "xfce-menuitem"
+widget_class "*MenuItem*"          style "menuitem"
+class "*MenuItem*"                 style "menuitem"
 
-style "xfce-scrollbar" = "xfce-default"
+style "scrollbar" = "default"
 {
     xthickness = 2
     ythickness = 2
@@ -157,10 +157,10 @@ style "xfce-scrollbar" = "xfce-default"
         }
     }
 }
-widget_class "*Scrollbar*"         style "xfce-scrollbar"
-class "*Scrollbar*"                style "xfce-scrollbar"
+widget_class "*Scrollbar*"         style "scrollbar"
+class "*Scrollbar*"                style "scrollbar"
 
-style "xfce-button" = "xfce-colored"
+style "button" = "colored"
 {
     xthickness = 3
     ythickness = 3
@@ -177,18 +177,18 @@ style "xfce-button" = "xfce-colored"
         }
     }
 }
-widget_class "*Button*"            style "xfce-button" 
-class "*Button*"                   style "xfce-button" 
-widget_class "*button*"            style "xfce-button" 
-class "*button*"                   style "xfce-button" 
-widget_class "*OptionMenu*"        style "xfce-button" 
-class "*OptionMenu*"               style "xfce-button" 
-widget_class "*Tree*"              style "xfce-button" 
-class "*Tree*"                     style "xfce-button" 
-widget_class "*Scale*"             style "xfce-button" 
-class "*Scale*"                    style "xfce-button" 
+widget_class "*Button*"            style "button" 
+class "*Button*"                   style "button" 
+widget_class "*button*"            style "button" 
+class "*button*"                   style "button" 
+widget_class "*OptionMenu*"        style "button" 
+class "*OptionMenu*"               style "button" 
+widget_class "*Tree*"              style "button" 
+class "*Tree*"                     style "button" 
+widget_class "*Scale*"             style "button" 
+class "*Scale*"                    style "button" 
 
-style "xfce-progress" = "xfce-colored"
+style "progress" = "colored"
 {
     xthickness = 1
     ythickness = 1
@@ -205,10 +205,24 @@ style "xfce-progress" = "xfce-colored"
         }
     }
 }
-widget_class "*Progress*"          style "xfce-progress" 
-class "*Progress*"                 style "xfce-progress" 
+widget_class "*Progress*"          style "progress" 
+class "*Progress*"                 style "progress" 
 
-widget_class "*CheckButton*"       style "xfce-default"
-class "*CheckButton*"              style "xfce-default"
-widget_class "*RadioButton*"       style "xfce-default"
-class "*RadioButton*"              style "xfce-default"
+widget_class "*CheckButton*"       style "default"
+class "*CheckButton*"              style "default"
+widget_class "*RadioButton*"       style "default"
+class "*RadioButton*"              style "default"
+
+# This is for the window borders (xfwm4 & metacity)
+# 
+style "titlebar" = "default"
+{
+    bg[SELECTED]      = "#606080"
+    fg[SELECTED]      = "#ffffff"
+    bg[INSENSITIVE]   = "#bfbdbb"
+    fg[INSENSITIVE]   = "#000000"
+}
+
+widget "xfwm"	          style "titlebar"
+class "MetaFrames"        style "titlebar"
+widget_class "MetaFrames" style "titlebar"

@@ -1,4 +1,4 @@
-style "xfce-redmondxp-default"
+style "default"
 {
     GtkButton::default_border         = {0, 0, 0, 0}
     GtkButton::default_outside_border = {0, 0, 0, 0}
@@ -55,9 +55,9 @@ style "xfce-redmondxp-default"
 	}
     }
 }
-widget_class "*"                   style "xfce-redmondxp-default"
+widget_class "*"                   style "default"
 
-style "xfce-redmondxp-colored" = "xfce-redmondxp-default"
+style "colored" = "default"
 {
     xthickness = 1
     ythickness = 1
@@ -80,16 +80,16 @@ style "xfce-redmondxp-colored" = "xfce-redmondxp-default"
 	}
     }
 }
-widget_class "*GtkList*"           style "xfce-redmondxp-colored"
-class "*GtkList*"                  style "xfce-redmondxp-colored"
-widget_class "*GtkEntry*"	   style "xfce-redmondxp-colored"
-class "*GtkEntry*"	           style "xfce-redmondxp-colored"
-widget_class "*GtkTree*"	   style "xfce-redmondxp-colored"
-class "*GtkTree*"	           style "xfce-redmondxp-colored"
-widget_class "*GtkProgress*"	   style "xfce-redmondxp-colored"
-class "*GtkProgress*"	           style "xfce-redmondxp-colored"
+widget_class "*GtkList*"           style "colored"
+class "*GtkList*"                  style "colored"
+widget_class "*GtkEntry*"	   style "colored"
+class "*GtkEntry*"	           style "colored"
+widget_class "*GtkTree*"	   style "colored"
+class "*GtkTree*"	           style "colored"
+widget_class "*GtkProgress*"	   style "colored"
+class "*GtkProgress*"	           style "colored"
 
-style "xfce-redmondxp-menu" = "xfce-redmondxp-colored"
+style "menu" = "colored"
 {
     xthickness = 1
     ythickness = 1
@@ -106,25 +106,25 @@ style "xfce-redmondxp-menu" = "xfce-redmondxp-colored"
 	}
     }
 }
-widget_class "*Menu*"              style "xfce-redmondxp-menu"
-class "*Menu*"                     style "xfce-redmondxp-menu"
+widget_class "*Menu*"              style "menu"
+class "*Menu*"                     style "menu"
 
-style "xfce-redmondxp-menubar" = "xfce-redmondxp-colored"
+style "menubar" = "colored"
 {
     xthickness = 1
     ythickness = 1
 }
 
-widget_class "*BonoboDockItem*"    style "xfce-redmondxp-menubar"
-class "*BonoboDockItem*"           style "xfce-redmondxp-menubar"
-widget_class "*HandleBox*"         style "xfce-redmondxp-menubar"
-class "*HandleBox*"                style "xfce-redmondxp-menubar"
-widget_class "*Tool*"              style "xfce-redmondxp-menubar"
-class "*Tool*"                     style "xfce-redmondxp-menubar"
-widget_class "*MenuBar*"           style "xfce-redmondxp-menubar"
-class "*MenuBar*"                  style "xfce-redmondxp-menubar"
+widget_class "*BonoboDockItem*"    style "menubar"
+class "*BonoboDockItem*"           style "menubar"
+widget_class "*HandleBox*"         style "menubar"
+class "*HandleBox*"                style "menubar"
+widget_class "*Tool*"              style "menubar"
+class "*Tool*"                     style "menubar"
+widget_class "*MenuBar*"           style "menubar"
+class "*MenuBar*"                  style "menubar"
 
-style "xfce-redmondxp-button" = "xfce-redmondxp-default"
+style "button" = "default"
 {
     bg[NORMAL]        = "#fafaf2"
     bg[ACTIVE]        = "#ffcb39"
@@ -145,14 +145,14 @@ style "xfce-redmondxp-button" = "xfce-redmondxp-default"
 	}
     }
 }
-widget_class "*Button*"            style "xfce-redmondxp-button"
-class "*Button*"                   style "xfce-redmondxp-button"
-widget_class "*button*"            style "xfce-redmondxp-button"
-class "*button*"                   style "xfce-redmondxp-button"
-widget_class "*OptionMenu*"        style "xfce-redmondxp-button"
-class "*OptionMenu*"               style "xfce-redmondxp-button"
+widget_class "*Button*"            style "button"
+class "*Button*"                   style "button"
+widget_class "*button*"            style "button"
+class "*button*"                   style "button"
+widget_class "*OptionMenu*"        style "button"
+class "*OptionMenu*"               style "button"
 
-style "xfce-redmondxp-notebook" = "xfce-redmondxp-default"
+style "notebook" = "default"
 {
     xthickness = 1
     ythickness = 1
@@ -161,10 +161,10 @@ style "xfce-redmondxp-notebook" = "xfce-redmondxp-default"
     bg[ACTIVE]        = "#d4d4ce"
 }
 
-widget_class "*Notebook*"          style "xfce-redmondxp-notebook"
-class "*Notebook*"                 style "xfce-redmondxp-notebook"
+widget_class "*Notebook*"          style "notebook"
+class "*Notebook*"                 style "notebook"
 
-style "xfce-redmondxp-scroll" = "xfce-redmondxp-default"
+style "scroll" = "default"
 {
     base[ACTIVE]      = "#d4d4ce"
     base[INSENSITIVE] = "#edeada"
@@ -189,18 +189,20 @@ style "xfce-redmondxp-scroll" = "xfce-redmondxp-default"
 	}
     }
 }
-widget_class "*Scrollbar*"         style "xfce-redmondxp-scroll"
-class "*Scrollbar*"                style "xfce-redmondxp-scroll"
-widget_class "*Scale*"             style "xfce-redmondxp-scroll"
-class "*Scale*"                    style "xfce-redmondxp-scroll"
+widget_class "*Scrollbar*"         style "scroll"
+class "*Scrollbar*"                style "scroll"
+widget_class "*Scale*"             style "scroll"
+class "*Scale*"                    style "scroll"
 
-style "xfce-redmondxp-titlebar"
+# This is for the window borders (xfwm4 & metacity)
+# 
+style "titlebar" = "default"
 {
     bg[SELECTED]      = "#0055ef"
     fg[SELECTED]      = "#ffffff"
-    bg[ACTIVE]        = "#7b96de"
-    fg[NORMAL]        = "#dee7f7"
+    bg[INSENSITIVE]   = "#7b96de"
+    fg[INSENSITIVE]   = "#dee7f7"
 }
-widget "xfwm"                      style "xfce-redmondxp-titlebar"
-class "MetaFrames"                 style "xfce-redmondxp-titlebar"
-widget_class "MetaFrames"          style "xfce-redmondxp-titlebar"
+widget "xfwm"                      style "titlebar"
+class "MetaFrames"                 style "titlebar"
+widget_class "MetaFrames"          style "titlebar"

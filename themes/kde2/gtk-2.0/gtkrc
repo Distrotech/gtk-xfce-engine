@@ -56,7 +56,7 @@ style "default"
 }
 widget_class "*" style "default"
 
-style "xfce-kde2-menustyle" = "default"
+style "menustyle" = "default"
 {
     xthickness = 3
     ythickness = 3
@@ -69,16 +69,16 @@ style "xfce-kde2-menustyle" = "default"
         }
     }
 }
-widget_class "*BonoboDockItem*"    style "xfce-kde2-menustyle"
-class "*BonoboDockItem*"           style "xfce-kde2-menustyle"
-widget_class "*HandleBox*"         style "xfce-kde2-menustyle"
-class "*HandleBox*"                style "xfce-kde2-menustyle"
-widget_class "*Tool*"              style "xfce-kde2-menustyle"
-class "*Tool*"                     style "xfce-kde2-menustyle"
-widget_class "*MenuBar*"           style "xfce-kde2-menustyle"
-class "*MenuBar*"                  style "xfce-kde2-menustyle"
+widget_class "*BonoboDockItem*"    style "menustyle"
+class "*BonoboDockItem*"           style "menustyle"
+widget_class "*HandleBox*"         style "menustyle"
+class "*HandleBox*"                style "menustyle"
+widget_class "*Tool*"              style "menustyle"
+class "*Tool*"                     style "menustyle"
+widget_class "*MenuBar*"           style "menustyle"
+class "*MenuBar*"                  style "menustyle"
 
-style "xfce-kde2-buttonstyle" = "default"
+style "buttonstyle" = "default"
 {
     xthickness = 3
     ythickness = 3
@@ -94,5 +94,20 @@ style "xfce-kde2-buttonstyle" = "default"
         }
     }
 }
-widget_class "*Button*"            style "xfce-kde2-buttonstyle"
-class "*Button*"                   style "xfce-kde2-buttonstyle"
+widget_class "*Button*"            style "buttonstyle"
+class "*Button*"                   style "buttonstyle"
+
+# This is for the window borders (xfwm4 & metacity)
+# 
+style "titlebar"
+{
+    bg[SELECTED]      = { 0.039, 0.373, 0.537 }
+    fg[SELECTED]      = { 1.000, 1.000, 1.000 }
+    bg[INSENSITIVE]   = { 0.933, 0.933, 0.933 }
+    fg[INSENSITIVE]   = { 0.250, 0.250, 0.250 }
+}
+
+widget "xfwm"	          style "titlebar"
+class "MetaFrames"        style "titlebar"
+widget_class "MetaFrames" style "titlebar"
+

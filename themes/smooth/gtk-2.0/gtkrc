@@ -56,3 +56,17 @@ style "thin" = "default"
 
 widget_class "*Progress*" style "thin" 
 class "*Progress*"        style "thin" 
+
+# This is for the window borders (xfwm4 & metacity)
+# 
+style "titlebar" = "default"
+{
+    bg[SELECTED]      = "#a5abba"
+    fg[SELECTED]      = "#000000"
+    bg[INSENSITIVE]   = "#c2c2be"
+    fg[INSENSITIVE]   = "#000000"
+}
+
+widget "xfwm"	          style "titlebar"
+class "MetaFrames"        style "titlebar"
+widget_class "MetaFrames" style "titlebar"

@@ -26,23 +26,26 @@ style "default"
     fg[NORMAL]       = "#000000"
     fg[ACTIVE]       = "#000000"
     fg[PRELIGHT]     = "#000000"
-    fg[SELECTED]     = "#FFFFFF"
-    fg[INSENSITIVE]  = "#4E4F56" 
-    bg[NORMAL]       = "#AEB2C3"
-    bg[ACTIVE]       = "#9BA0B0"
-    bg[PRELIGHT]     = "#AEB2C3"
-    bg[SELECTED]     = "#B24D7A"
-    bg[INSENSITIVE]  = "#9BA0B0"
-    base[NORMAL]     = "#FCFCF0"
-    base[SELECTED]   = "#B24D7A"
-    base[ACTIVE]     = "#888CA0"
-    base[PRELIGHT]   = "#B24D7A"
-    base[INSENSITIVE]= "#969BB4"
+    fg[SELECTED]     = "#ffffff"
+    fg[INSENSITIVE]  = "#4e4f56" 
+
+    bg[NORMAL]       = "#aeb2c3"
+    bg[ACTIVE]       = "#9ba0b0"
+    bg[PRELIGHT]     = "#aeb2c3"
+    bg[SELECTED]     = "#b24d7a"
+    bg[INSENSITIVE]  = "#9ba0b0"
+
+    base[NORMAL]     = "#fcfcf0"
+    base[SELECTED]   = "#b24d7a"
+    base[ACTIVE]     = "#888ca0"
+    base[PRELIGHT]   = "#b24d7a"
+    base[INSENSITIVE]= "#969bb4"
+
     text[INSENSITIVE]= "#747474"
     text[NORMAL]     = "#000000"
     text[ACTIVE]     = "#000000"
     text[PRELIGHT]   = "#000000"
-    text[SELECTED]   = "#FFFFFF"
+    text[SELECTED]   = "#ffffff"
 
     engine "xfce"
     {
@@ -58,3 +61,17 @@ style "menu" = "default"
 
 class "GtkWidget"    style "default"
 class "GtkMenuItem*" style "menu"
+
+# This is for the window borders (xfwm4 & metacity)
+# 
+style "titlebar" = "default"
+{
+    bg[SELECTED]      = "#b24d7a"
+    fg[SELECTED]      = "#ffffff"
+    bg[INSENSITIVE]   = "#9ba0b0"
+    fg[INSENSITIVE]   = "#000000"
+}
+
+widget "xfwm"	          style "titlebar"
+class "MetaFrames"        style "titlebar"
+widget_class "MetaFrames" style "titlebar"
