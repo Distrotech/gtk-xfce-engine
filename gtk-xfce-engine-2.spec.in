@@ -1,7 +1,7 @@
 Summary: 	Port of xfce engine to GTK+-2.0
 Name: 		gtk-xfce-engine
 Version: 	@VERSION@
-Release: 	0.1
+Release: 	1
 License:	GPL
 URL: 		http://www.xfce.org/
 Source0: 	%{name}-%{version}.tar.gz
