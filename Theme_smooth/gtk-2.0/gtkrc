@@ -1,33 +1,35 @@
 style "default"
 {
-   fg[NORMAL]        = "#000000"
-   fg[ACTIVE]        = "#000000"
-   fg[INSENSITIVE]   = "#969696"
-   fg[PRELIGHT]      = "#000000"
-   fg[SELECTED]      = "#000000"
-        
-   bg[ACTIVE]        = "#c2c2be"
-   bg[NORMAL]        = "#e2e2de"
-   bg[INSENSITIVE]   = "#e2e2de"
-   bg[PRELIGHT]      = "#f2f2ee"
-   bg[SELECTED]      = "#a5abba"
+    GtkRange::trough_border = 2
 
-   base[NORMAL]      = "#ffffff"
-   base[ACTIVE]      = "#a5abba"
-   base[INSENSITIVE] = "#ffffff"
-   base[PRELIGHT]    = "#eaeaea"
-   base[SELECTED]    = "#a5abba"
-        
-   text[NORMAL]      = "#000000"
-   text[ACTIVE]      = "#000000"
-   text[PRELIGHT]    = "#000000"
-   text[SELECTED]    = "#000000"
-   text[INSENSITIVE] = "#000000"
+    fg[NORMAL]        = "#000000"
+    fg[ACTIVE]        = "#000000"
+    fg[INSENSITIVE]   = "#969696"
+    fg[PRELIGHT]      = "#000000"
+    fg[SELECTED]      = "#000000"
 
-   engine "xfce"
-   {
-     smooth_edge = TRUE
-   }
+    bg[ACTIVE]        = "#c2c2be"
+    bg[NORMAL]        = "#e2e2de"
+    bg[INSENSITIVE]   = "#e2e2de"
+    bg[PRELIGHT]      = "#f2f2ee"
+    bg[SELECTED]      = "#a5abba"
+
+    base[NORMAL]      = "#ffffff"
+    base[ACTIVE]      = "#a5abba"
+    base[INSENSITIVE] = "#ffffff"
+    base[PRELIGHT]    = "#eaeaea"
+    base[SELECTED]    = "#a5abba"
+
+    text[NORMAL]      = "#000000"
+    text[ACTIVE]      = "#000000"
+    text[PRELIGHT]    = "#000000"
+    text[SELECTED]    = "#000000"
+    text[INSENSITIVE] = "#000000"
+
+    engine "xfce"
+    {
+	smooth_edge = TRUE
+    }
 }
 
 class "GtkWidget" style "default"
