@@ -1,6 +1,3 @@
-# Default Xfce theme
-# Olivier Fourdan 02/2004
-
 style "xfce-default"
 {
     GtkButton::default_border         = {0, 0, 0, 0}
@@ -23,35 +20,35 @@ style "xfce-default"
     GtkWidget::interior_focus         = 5
     GtkMenuBar::shadow_type           = none
     GtkToolbar::shadow_type           = none
-
+    
     xthickness = 2
     ythickness = 2
 
-    base[ACTIVE]      = "#c4c4c4"
-    base[INSENSITIVE] = "#EEEEE2"
+    base[ACTIVE]      = "#cececa"
+    base[INSENSITIVE] = "#eeeeea"
     base[NORMAL]      = "#ffffff"
-    base[PRELIGHT]    = "#EEEEE2"
-    base[SELECTED]    = "#4a7eae"
+    base[PRELIGHT]    = "#b0c0d0"
+    base[SELECTED]    = "#b0c0d0"
 
-    bg[ACTIVE]        = "#c4c4c4"
-    bg[INSENSITIVE]   = "#EEEEE2"
-    bg[NORMAL]        = "#EEEEE2"
-    bg[PRELIGHT]      = "#EEEEE2"
-    bg[SELECTED]      = "#4a7eae"
+    bg[ACTIVE]        = "#cececa"
+    bg[INSENSITIVE]   = "#eeeeea"
+    bg[NORMAL]        = "#eeeeea"
+    bg[PRELIGHT]      = "#b0c0d0"
+    bg[SELECTED]      = "#b0c0d0"
 
-    fg[ACTIVE]        = "#000000"
-    fg[INSENSITIVE]   = "#808080"
-    fg[NORMAL]        = "#000000"
+    fg[ACTIVE]        = "#1f1f1f"
+    fg[INSENSITIVE]   = "#8e8e8a"
+    fg[NORMAL]        = "#1f1f1f"
     fg[PRELIGHT]      = "#000000"
-    fg[SELECTED]      = "#ffffff"
+    fg[SELECTED]      = "#000000"
 
-    text[ACTIVE]      = "#000000"
-    text[INSENSITIVE] = "#000000"
-    text[NORMAL]      = "#000000"
+    text[ACTIVE]      = "#1f1f1f"
+    text[INSENSITIVE] = "#1f1f1f"
+    text[NORMAL]      = "#1f1f1f"
     text[PRELIGHT]    = "#000000"
-    text[SELECTED]    = "#ffffff"
+    text[SELECTED]    = "#000000"
 
-    engine "xfce"
+    engine "xfce" 
     {
         smooth_edge = true
         boxfill
@@ -60,46 +57,13 @@ style "xfce-default"
         }
     }
 }
-
 widget_class "*"                   style "xfce-default"
 
-style "xfce-colored" = "xfce-default"
-{
-    xthickness = 3
-    ythickness = 2
-
-    bg[ACTIVE]        = "#c4c4c4"
-    bg[PRELIGHT]      = "#4a7eae"
-
-    fg[ACTIVE]        = "#000000"
-    fg[PRELIGHT]      = "#ffffff"
-
-    text[ACTIVE]      = "#000000"
-    text[PRELIGHT]    = "#ffffff"
-
-    engine "xfce"
-    {
-        smooth_edge = true
-        boxfill
-        {
-            fill_style = plain
-        }
-    }
-}
-
-widget_class "*List*"              style "xfce-colored"
-class "*List*"                     style "xfce-colored"
-widget_class "*Text*"              style "xfce-colored"
-class "*Text*"                     style "xfce-colored"
-widget_class "*Entry*"             style "xfce-colored"
-class "*Entry*"                    style "xfce-colored"
-
-style "xfce-menubar" = "xfce-colored"
+style "xfce-menustyle" = "xfce-default"
 {
     xthickness = 2
     ythickness = 2
-
-    engine "xfce"
+    engine "xfce" 
     {
         smooth_edge = true
         boxfill
@@ -108,79 +72,29 @@ style "xfce-menubar" = "xfce-colored"
         }
     }
 }
-
-widget_class "*BonoboDockItem*"    style "xfce-menubar"
-class "*BonoboDockItem*"           style "xfce-menubar"
-widget_class "*HandleBox*"         style "xfce-menubar"
-class "*HandleBox*"                style "xfce-menubar"
-widget_class "*Tool*"              style "xfce-menubar"
-class "*Tool*"                     style "xfce-menubar"
-widget_class "*MenuBar*"           style "xfce-menubar"
-class "*MenuBar*"                  style "xfce-menubar"
-
-style "xfce-menuitem" = "xfce-colored"
-{
-    xthickness = 1
-    ythickness = 2
-
-    engine "xfce"
-    {
-        smooth_edge = true
-        boxfill
-        {
-            fill_style = plain
-        }
-    }
-}
-
-widget_class "*MenuItem*"          style "xfce-menuitem"
-class "*MenuItem*"                 style "xfce-menuitem"
-
-style "xfce-scrollbar" = "xfce-default"
-{
-    xthickness = 2
-    ythickness = 2
-    engine "xfce"
-    {
-        smooth_edge = true
-        boxfill
-        {
-            fill_style = gradient
-            orientation = auto
-            shade_start = 0.85
-            shade_end = 1.15
-        }
-    }
-}
-widget_class "*Scrollbar*"         style "xfce-scrollbar"
-class "*Scrollbar*"                style "xfce-scrollbar"
+widget_class "*BonoboDockItem*"    style "xfce-menustyle"
+class "*BonoboDockItem*"           style "xfce-menustyle"
+widget_class "*HandleBox*"         style "xfce-menustyle"
+class "*HandleBox*"                style "xfce-menustyle"
+widget_class "*Tool*"              style "xfce-menustyle"
+class "*Tool*"                     style "xfce-menustyle"
+widget_class "*MenuBar*"           style "xfce-menustyle"
+class "*MenuBar*"                  style "xfce-menustyle"
 
 style "xfce-button" = "xfce-default"
 {
     xthickness = 2
     ythickness = 2
 
-    base[ACTIVE]      = "#acb6cf"
-    base[INSENSITIVE] = "#d7dbe4"
-    base[NORMAL]      = "#ffffff"
-    base[PRELIGHT]    = "#d7dbe4"
-    base[SELECTED]    = "#4a7eae"
-
-    bg[ACTIVE]        = "#acb6cf"
-    bg[INSENSITIVE]   = "#d7dbe4"
-    bg[NORMAL]        = "#d7dbe4"
-    bg[PRELIGHT]      = "#d7dbe4"
-    bg[SELECTED]      = "#4a7eae"
-
-    engine "xfce"
+    engine "xfce" 
     {
         smooth_edge = true
         boxfill
         {
             fill_style = gradient
             orientation = vertical
-            shade_start = 1.15
-            shade_end = 0.85
+            shade_start = 1.1
+            shade_end = 0.9
         }
     }
 }
@@ -190,40 +104,45 @@ widget_class "*button*"            style "xfce-button"
 class "*button*"                   style "xfce-button"
 widget_class "*OptionMenu*"        style "xfce-button"
 class "*OptionMenu*"               style "xfce-button"
-widget_class "*Tree*"              style "xfce-button"
-class "*Tree*"                     style "xfce-button"
-widget_class "*Scale*"             style "xfce-button"
-class "*Scale*"                    style "xfce-button"
+# widget_class "*Tree*"            style "xfce-button"
+# class "*Tree*"                   style "xfce-button"
+# widget_class "*Scale*"           style "xfce-button"
+# class "*Scale*"                  style "xfce-button"
 
-style "xfce-progress" = "xfce-colored"
+style "xfce-sbstyle" = "xfce-default"
 {
-    xthickness = 1
-    ythickness = 1
-
-    engine "xfce"
+    xthickness = 2
+    ythickness = 2
+    engine "xfce" 
     {
         smooth_edge = true
         boxfill
         {
-            fill_style = plain
+            fill_style = gradient
+            orientation = automatic
+            shade_start = 0.9
+            shade_end = 1.1
         }
     }
 }
-widget_class "*Progress*"          style "xfce-progress"
-class "*Progress*"                 style "xfce-progress"
+widget_class "*Scrollbar*"         style "xfce-sbstyle"
+class "*Scrollbar*"                style "xfce-sbstyle"
+widget_class "*Scale*"             style "xfce-sbstyle"
+class "*Scale*"                    style "xfce-sbstyle"
 
-widget_class "*CheckButton*"       style "xfce-default"
-class "*CheckButton*"              style "xfce-default"
-widget_class "*RadioButton*"       style "xfce-default"
-class "*RadioButton*"              style "xfce-default"
-
-style "xfce-titlebar"
+style "xfce-progress" = "xfce-default"
 {
-    bg[SELECTED]      = "#d7dbe4"
-    fg[SELECTED]      = "#000000"
-    bg[ACTIVE]        = "#c7cad0"
-    fg[NORMAL]        = "#888c95"
+    xthickness = 1
+    ythickness = 1
 }
-widget "xfwm"                      style "xfce-titlebar"
-class "MetaFrames"                 style "xfce-titlebar"
-widget_class "MetaFrames"          style "xfce-titlebar"
+widget_class "*Progress*"          style "xfce-progress" 
+class "*Progress*"                 style "xfce-progress" 
+
+style "xfce-menuitem" = "xfce-default"
+{
+    xthickness = 1
+    ythickness = 2
+}
+
+widget_class "*MenuItem*"          style "xfce-menuitem"
+class "*MenuItem*"                 style "xfce-menuitem"
