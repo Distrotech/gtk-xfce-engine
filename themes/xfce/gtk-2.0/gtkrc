@@ -264,8 +264,10 @@ class "*GtkVScrollbar*"            style "scrollbar"
 widget_class "*GtkHScrollbar*"     style "scrollbar"
 class "*GtkHScrollbar*"            style "scrollbar"
 
-widget_class "*Scale*"             style "scale"
-class "*Scale*"                    style "scale"
+widget_class "*.GtkHScale*"        style "scale"
+class "*.GtkHScale*"               style "scale"
+widget_class "*.GtkVScale*"        style "scale"
+class "*.GtkVScale*"               style "scale"
 
 widget_class "*.GtkProgress*"      style "progress"
 class "*.GtkProgress*"             style "progress"
