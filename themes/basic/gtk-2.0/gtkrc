@@ -10,6 +10,8 @@ style "default"
     GtkPaned::handle_full_size        = 1
     GtkRange::trough_border           = 1
     GtkScrollbar::min_slider_length   = 20
+    GtkMenuBar::shadow_type           = none
+    GtkToolbar::shadow_type           = none
 
     engine "xfce" 
     {

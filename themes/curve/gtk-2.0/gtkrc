@@ -19,6 +19,8 @@ style "curve-default"
     GtkWidget::interior_focus         = 0
     GtkWidget::interior_focus         = 0
     GtkWidget::internal-padding       = 2
+    GtkMenuBar::shadow_type           = none
+    GtkToolbar::shadow_type           = none
 
     xthickness = 2
     ythickness = 2
@@ -76,7 +78,7 @@ style "curve-menu-color" = "curve-default"
 
 style "curve-tool-bar" = "curve-menu-color"
 {
-    xthickness = 0
+    xthickness = 2
     ythickness = 2
 
     engine "xfce" 
@@ -99,8 +101,8 @@ class "*MenuBar*"                  style "curve-tool-bar"
 
 style "curve-menu" = "curve-menu-color"
 {
-    xthickness = 3
-    ythickness = 3
+    xthickness = 2
+    ythickness = 2
 
     engine "xfce" 
     {

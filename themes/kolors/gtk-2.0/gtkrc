@@ -19,6 +19,8 @@ style "xfce-kolors-default"
     GtkWidget::focus-line-pattern     = "\0"
     GtkWidget::focus-line-width       = 2
     GtkWidget::interior_focus         = 0
+    GtkMenuBar::shadow_type           = none
+    GtkToolbar::shadow_type           = none
     
     xthickness = 1
     ythickness = 1

@@ -13,7 +13,9 @@ style "xfce-redmondxp-default"
     GtkSpinButton::shadow_type        = out
     GtkMenuItem::selected_shadow_type = none
     GtkScrollbar::min_slider_length   = 20
-    GtkWidget::internal-padding       = 2
+    GtkWidget::internal-padding       = 4
+    GtkMenuBar::shadow_type           = none
+    GtkToolbar::shadow_type           = none
 
     xthickness = 2
     ythickness = 2
@@ -88,7 +90,7 @@ class "*GtkProgress*"	           style "xfce-redmondxp-colored"
 style "xfce-redmondxp-menu" = "xfce-redmondxp-colored"
 {
     xthickness = 1
-    ythickness = 2
+    ythickness = 1
 
     bg[INSENSITIVE]   = "#ffffff"
     bg[NORMAL]        = "#ffffff"
@@ -107,8 +109,8 @@ class "*.GtkMenu*"                 style "xfce-redmondxp-menu"
 
 style "xfce-redmondxp-menubar" = "xfce-redmondxp-colored"
 {
-    xthickness = 0
-    ythickness = 3
+    xthickness = 2
+    ythickness = 2
 }
 
 widget_class "*BonoboDockItem*"    style "xfce-redmondxp-menubar"
