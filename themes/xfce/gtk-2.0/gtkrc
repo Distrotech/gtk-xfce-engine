@@ -143,8 +143,8 @@ class "*Scrollbar*"                style "scrollbar"
 
 style "progress" = "default"
 {
-    xthickness = 1
-    ythickness = 1
+    xthickness = 2
+    ythickness = 2
 
     bg[PRELIGHT]      = "#d4d8e0"
     bg[NORMAL]        = "#eeeeef"
