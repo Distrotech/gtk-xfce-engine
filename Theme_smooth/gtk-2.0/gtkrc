@@ -46,11 +46,3 @@ style "default"
 }
 
 class "GtkWidget" style "default"
-
-style "titlebar"
-{
-    bg[SELECTED]      = "#678653"
-    fg[SELECTED]      = "#ffffff"
-}
-
-widget "xfwm"	     style "titlebar"
