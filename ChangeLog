@@ -1,3 +1,20 @@
+2003-04-01  xfce
+
+	* Theme_etria/gtk-2.0/gtkrc: Adjust Etria colors
+
+2003-04-01  xfce
+
+	* Makefile.am, Makefile.in, configure, configure.in,
+	Theme_etria/ICON.png, Theme_etria/Makefile.am,
+	Theme_etria/Makefile.in, Theme_etria/README.html,
+	Theme_etria/gtk-2.0/Makefile.am, Theme_etria/gtk-2.0/Makefile.in,
+	Theme_etria/gtk-2.0/gtkrc: Initialize early i18n in mcs plugins Add
+	Etria theme
+
+2003-03-27  xfce
+
+	* ChangeLog: Update ChangeLog
+
 2003-03-26  xfce
 
 	* Theme/gtk-2.0/gtkrc, Theme_curve/gtk-2.0/gtkrc: Small adjusments

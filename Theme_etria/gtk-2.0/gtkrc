@@ -1,22 +1,27 @@
 style "xfce-etria-default"
 {
-    GtkWidget::interior_focus         = 1
     GtkButton::default_border         = {0, 0, 0, 0}
     GtkButton::default_outside_border = {0, 0, 0, 0}
     GtkButton::default_spacing        = 10
-    GtkCheckButton::indicator_size    = 15
-    GtkPaned::handle_full_size        = 1
-    GtkRange::trough_border           = 0
-    GtkRange::slider_width            = 15
-    GtkRange::stepper_size            = 15
-    GtkRange::stepper_spacing         = 0
-    GtkSpinButton::shadow_type        = out
+    GtkCheckButton::indicator_size    = 10
     GtkMenuItem::selected_shadow_type = none
+    GtkPaned::handle_full_size        = 1
+    GtkRadioButton::indicator_size    = 12
+    GtkRange::slider_width            = 11
+    GtkRange::stepper_size            = 11
+    GtkRange::stepper_spacing         = 0
+    GtkRange::trough_border           = 1
     GtkScrollbar::min_slider_length   = 20
-    GtkWidget::internal-padding       = 2
-
-    xthickness = 2
-    ythickness = 2
+    GtkSpinButton::shadow_type        = out
+    GtkStatusbar::shadow_type         = none
+    GtkWidget::internal-padding       = 0
+    GtkWidget::focus-padding          = 0
+    GtkWidget::focus-line-pattern     = "\0"
+    GtkWidget::interior_focus         = 0
+    GtkWidget::focus-line-width       = 2
+    
+    xthickness = 1
+    ythickness = 1
 
     base[ACTIVE]      = "#ffdd76"
     base[INSENSITIVE] = "#fdfdfd"
