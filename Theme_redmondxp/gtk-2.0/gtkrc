@@ -124,12 +124,10 @@ style "xfce-redmondxp-button" = "xfce-redmondxp-default"
 {
     bg[NORMAL]        = "#fafaf2"
     bg[ACTIVE]        = "#ffcb39"
-    bg[PRELIGHT]      = "#0055ef"
+    bg[PRELIGHT]      = "#fafaf2"
     bg[INSENSITIVE]   = "#fafaf2"
     fg[SELECTED]      = "#000000"
-    fg[PRELIGHT]      = "#ffffff"
     text[SELECTED]    = "#000000"
-    text[PRELIGHT]    = "#ffffff"
 
     engine "xfce" 
     {
