@@ -18,4 +18,9 @@ libxfce_la_SOURCES = \
 
 libxfce_la_LDFLAGS = -module -avoid-version
 
+if HAVE_CYGWIN
+libxfce_la_LDFLAGS +=           \
+	-no-undefined
+endif
+
 libxfce_la_LIBADD = $(XFCE_LIBS)
