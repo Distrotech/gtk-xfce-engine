@@ -106,8 +106,8 @@ style "xfce-redmondxp-menu" = "xfce-redmondxp-colored"
 	}
     }
 }
-widget_class "*.GtkMenu*"          style "xfce-redmondxp-menu"
-class "*.GtkMenu*"                 style "xfce-redmondxp-menu"
+widget_class "*Menu*"              style "xfce-redmondxp-menu"
+class "*Menu*"                     style "xfce-redmondxp-menu"
 
 style "xfce-redmondxp-menubar" = "xfce-redmondxp-colored"
 {

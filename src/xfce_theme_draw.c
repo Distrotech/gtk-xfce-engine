@@ -83,8 +83,8 @@ static const guchar check_text_bits[] = {
     0x08, 0x00
 };
 static const guchar check_cross_bits[] = {
-    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x18, 0x03, 0xb8, 0x03, 0xf0, 0x01,
-    0xe0, 0x00, 0xf0, 0x01, 0xb8, 0x03, 0x18, 0x03, 0x00, 0x00, 0x00, 0x00,
+    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x03, 0x80, 0x03, 0xd8, 0x01,
+    0xf8, 0x00, 0x78, 0x00, 0x38, 0x00, 0x18, 0x00, 0x00, 0x00, 0x00, 0x00,
     0x00, 0x00,
 };
 static const guchar radio_light_bits[] = {
@@ -937,18 +937,21 @@ static void draw_check(GtkStyle * style, GdkWindow * window, GtkStateType state,
 
     if(DETAIL("check"))    /* Menu item */
     {
+#if 0
+        draw_part(window, style->bg_gc[state], area, x, y, CHECK_BASE);
+#endif
         draw_part(window, style->dark_gc[state], area, x, y, CHECK_LIGHT);
         draw_part(window, style->dark_gc[state], area, x, y, CHECK_DARK);
 
         if(shadow == GTK_SHADOW_IN)
         {
-            draw_part(window, style->text_gc[state], area, x, y, CHECK_TEXT);
+            draw_part(window, style->fg_gc[state], area, x, y, CHECK_CROSS);
         }
     }
     else
     {
         draw_part(window, style->base_gc[state], area, x, y, CHECK_BASE);
-        draw_part(window, style->light_gc[state], area, x, y, CHECK_LIGHT);
+        draw_part(window, style->dark_gc[state], area, x, y, CHECK_LIGHT);
         draw_part(window, style->dark_gc[state], area, x, y, CHECK_DARK);
 
         if(shadow == GTK_SHADOW_IN)
@@ -965,18 +968,21 @@ static void draw_option(GtkStyle * style, GdkWindow * window, GtkStateType state
 
     if(DETAIL("option"))   /* Menu item */
     {
+#if 0
+        draw_part(window, style->bg_gc[state], area, x, y, RADIO_BASE);
+#endif
         draw_part(window, style->dark_gc[state], area, x, y, RADIO_LIGHT);
         draw_part(window, style->dark_gc[state], area, x, y, RADIO_DARK);
 
         if(shadow == GTK_SHADOW_IN)
         {
-            draw_part(window, style->text_gc[state], area, x, y, RADIO_TEXT);
+            draw_part(window, style->fg_gc[state], area, x, y, RADIO_TEXT);
         }
     }
     else
     {
         draw_part(window, style->base_gc[state], area, x, y, RADIO_BASE);
-        draw_part(window, style->light_gc[state], area, x, y, RADIO_LIGHT);
+        draw_part(window, style->dark_gc[state], area, x, y, RADIO_LIGHT);
         draw_part(window, style->dark_gc[state], area, x, y, RADIO_DARK);
 
         if(shadow == GTK_SHADOW_IN)
