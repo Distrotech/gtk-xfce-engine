@@ -2,26 +2,30 @@
 
 style "xfce-default"
 {
-  base[ACTIVE]      = "#CDCDC8"
-  base[INSENSITIVE] = "#D7D7CF"
-  base[NORMAL]      = "#E5E5DF"
-  base[PRELIGHT]    = "#E5E5DF"
-  base[SELECTED]    = "#C1C1BA"
-  bg[ACTIVE]        = "#C1C1BA"
-  bg[INSENSITIVE]   = "#D7D7CF"
-  bg[NORMAL]        = "#D7D7CF"
-  bg[PRELIGHT]      = "#D7D7CF"
-  bg[SELECTED]      = "#28578F"
+  base[ACTIVE]      = "#cdcdc8"
+  base[INSENSITIVE] = "#d7d7cf"
+  base[NORMAL]      = "#ffffff"
+  base[PRELIGHT]    = "#e5e5df"
+  base[SELECTED]    = "#1a65a2"
+
+  bg[ACTIVE]        = "#c1c1ba"
+  bg[INSENSITIVE]   = "#d7d7cf"
+  bg[NORMAL]        = "#d7d7cf"
+  bg[PRELIGHT]      = "#d7d7cf"
+  bg[SELECTED]      = "#28578f"
+
   fg[ACTIVE]        = "#000000"
   fg[INSENSITIVE]   = "#7f7f79"
   fg[NORMAL]        = "#000000"
   fg[PRELIGHT]      = "#000000"
   fg[SELECTED]      = "#ffffff"
+
   text[ACTIVE]      = "#000000"
   text[INSENSITIVE] = "#000000"
   text[NORMAL]      = "#000000"
   text[PRELIGHT]    = "#000000"
-  text[SELECTED]    = "#000000"
+  text[SELECTED]    = "#ffffff"
+
   engine "xfce" {}
 }
 
@@ -33,26 +37,30 @@ widget_class "*.GtkToggleButton*"  style "xfce-default"
 
 style "xfce-colored"
 {
-  base[ACTIVE]      = "#CDCDC8"
-  base[INSENSITIVE] = "#D7D7CF"
-  base[NORMAL]      = "#E5E5DF"
-  base[PRELIGHT]    = "#E5E5DF"
-  base[SELECTED]    = "#1A65A2"
-  bg[ACTIVE]        = "#1D5A8B"
-  bg[INSENSITIVE]   = "#D7D7CF"
-  bg[NORMAL]        = "#D7D7CF"
-  bg[PRELIGHT]      = "#1A65A2"
-  bg[SELECTED]      = "#1A65A2"
+  base[ACTIVE]      = "#cdcdc8"
+  base[INSENSITIVE] = "#d7d7cf"
+  base[NORMAL]      = "#ffffff"
+  base[PRELIGHT]    = "#e5e5df"
+  base[SELECTED]    = "#1a65a2"
+
+  bg[ACTIVE]        = "#1d5a8b"
+  bg[INSENSITIVE]   = "#d7d7cf"
+  bg[NORMAL]        = "#d7d7cf"
+  bg[PRELIGHT]      = "#1a65a2"
+  bg[SELECTED]      = "#1a65a2"
+
   fg[ACTIVE]        = "#ffffff"
   fg[INSENSITIVE]   = "#7f7f79"
   fg[NORMAL]        = "#000000"
   fg[PRELIGHT]      = "#ffffff"
   fg[SELECTED]      = "#ffffff"
+
   text[ACTIVE]      = "#000000"
   text[INSENSITIVE] = "#000000"
   text[NORMAL]      = "#000000"
   text[PRELIGHT]    = "#ffffff"
   text[SELECTED]    = "#ffffff"
+
   engine "xfce" {}
 }
 
