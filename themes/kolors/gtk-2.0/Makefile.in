@@ -129,7 +129,7 @@ sbindir = @sbindir@
 sharedstatedir = @sharedstatedir@
 sysconfdir = @sysconfdir@
 target_alias = @target_alias@
-themedir = $(datadir)/themes/Xfce-etria/gtk-2.0
+themedir = $(datadir)/themes/Xfce-kolors/gtk-2.0
 theme_DATA = gtkrc
 
 EXTRA_DIST = $(theme_DATA)
