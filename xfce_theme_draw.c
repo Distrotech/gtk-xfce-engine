@@ -144,7 +144,7 @@ parts[] =
 };
 
 /* internal functions */
-static void xfce_fill_background(GtkStyle * style, GdkWindow * window, GtkStateType state_type, GdkRectangle * area, GtkWidget * widget, gint x, gint y, gint width, gint height);
+static void xfce_fill_background(GtkStyle * style, GdkWindow * window, GtkStateType state_type, GdkRectangle * area, gint x, gint y, gint width, gint height);
 static void xfce_draw_handlers(GtkStyle * style, GdkWindow * window, GtkStateType state_type, GdkRectangle * area, GtkWidget * widget, gint x, gint y, gint width, gint height, GtkOrientation orientation);
 
 static void draw_hline(GtkStyle * style, GdkWindow * window, GtkStateType state_type, GdkRectangle * area, GtkWidget * widget, const gchar * detail, gint x1, gint x2, gint y);
@@ -162,7 +162,7 @@ static void draw_extension(GtkStyle * style, GdkWindow * window, GtkStateType st
 static void draw_slider(GtkStyle * style, GdkWindow * window, GtkStateType state_type, GtkShadowType shadow_type, GdkRectangle * area, GtkWidget * widget, const gchar * detail, gint x, gint y, gint width, gint height, GtkOrientation orientation);
 static void draw_handle(GtkStyle * style, GdkWindow * window, GtkStateType state_type, GtkShadowType shadow_type, GdkRectangle * area, GtkWidget * widget, const gchar * detail, gint x, gint y, gint width, gint height, GtkOrientation orientation);
 
-static void xfce_fill_background(GtkStyle * style, GdkWindow * window, GtkStateType state_type, GdkRectangle * area, GtkWidget * widget, gint x, gint y, gint width, gint height)
+static void xfce_fill_background(GtkStyle * style, GdkWindow * window, GtkStateType state_type, GdkRectangle * area, gint x, gint y, gint width, gint height)
 {
     GdkRectangle clip_area;
     GradientType gradient_type = GRADIENT_VERTICAL;
@@ -870,7 +870,7 @@ static void draw_box(GtkStyle * style, GdkWindow * window, GtkStateType state_ty
 
     if(!style->bg_pixmap[state_type])
     {
-	xfce_fill_background(style, window, state_type, area, widget, x, y, width, height);
+	xfce_fill_background(style, window, state_type, area, x, y, width, height);
     }
     else
     {
