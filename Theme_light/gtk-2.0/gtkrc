@@ -69,7 +69,7 @@ style "titlebar"
     fg[SELECTED]  = "#ffffff"
     bg[ACTIVE]    = "#a5a789"
     fg[ACTIVE]    = "#000000"
-    bg[NORMAL]    = "#d6d8c7"
+    bg[NORMAL]    = "#c0c2ab"
     fg[NORMAL]    = "#000000"
 }
 
