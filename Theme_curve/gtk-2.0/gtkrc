@@ -11,6 +11,7 @@ style "curve-default"
     GtkRange::stepper_size            = 15
     GtkRange::stepper_spacing         = 0
     GtkSpinButton::shadow_type        = etched-in
+    GtkMenuItem::selected_shadow_type = out
     GtkMenuBar::internal-padding      = 0
     GtkWidget::focus_padding          = 1
     GtkScrollbar::min_slider_length   = 20
@@ -50,3 +51,14 @@ style "curve-frame" = "curve-default"
 
 widget "xfwm" style "curve-frame"
 class "MetaFrames" style "curve-frame"
+
+style "curve-menu" = "curve-default"
+{
+
+    bg[PRELIGHT]    = "#4c59a6"
+    fg[PRELIGHT]    = "#ffffff"
+}
+
+widget_class "*.GtkMenu*"          style "curve-menu"
+widget_class "*.GtkProgress*"      style "curve-menu"
+

@@ -13,6 +13,7 @@ style "xfce-redmondxp-default"
     GtkRange::stepper_size            = 15
     GtkRange::stepper_spacing         = 0
     GtkSpinButton::shadow_type        = out
+    GtkMenuItem::selected_shadow_type = none
     GtkScrollbar::min_slider_length   = 20
 
     base[ACTIVE]      = "#e5e5e5"
