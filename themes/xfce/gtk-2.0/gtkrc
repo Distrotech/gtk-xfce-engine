@@ -28,16 +28,16 @@ style "xfce-default"
     ythickness = 2
 
     base[ACTIVE]      = "#c4c4c4"
-    base[INSENSITIVE] = "#f0f0f0"
+    base[INSENSITIVE] = "#EEEEE2"
     base[NORMAL]      = "#ffffff"
-    base[PRELIGHT]    = "#f0f0f0"
-    base[SELECTED]    = "#5058a0"
+    base[PRELIGHT]    = "#EEEEE2"
+    base[SELECTED]    = "#6ea0cd"
 
     bg[ACTIVE]        = "#c4c4c4"
-    bg[INSENSITIVE]   = "#f0f0f0"
-    bg[NORMAL]        = "#f0f0f0"
-    bg[PRELIGHT]      = "#f0f0f0"
-    bg[SELECTED]      = "#5058a0"
+    bg[INSENSITIVE]   = "#EEEEE2"
+    bg[NORMAL]        = "#EEEEE2"
+    bg[PRELIGHT]      = "#EEEEE2"
+    bg[SELECTED]      = "#6ea0cd"
 
     fg[ACTIVE]        = "#000000"
     fg[INSENSITIVE]   = "#808080"
@@ -69,7 +69,7 @@ style "xfce-colored" = "xfce-default"
     ythickness = 2
 
     bg[ACTIVE]        = "#c4c4c4"
-    bg[PRELIGHT]      = "#5058a0"
+    bg[PRELIGHT]      = "#6ea0cd"
 
     fg[ACTIVE]        = "#000000"
     fg[PRELIGHT]      = "#ffffff"
@@ -160,17 +160,17 @@ style "xfce-button" = "xfce-default"
     xthickness = 2
     ythickness = 2
 
-    base[ACTIVE]      = "#c0c0c0"
-    base[INSENSITIVE] = "#e0e0e0"
+    base[ACTIVE]      = "#e0e0e0"
+    base[INSENSITIVE] = "#f4f4f4"
     base[NORMAL]      = "#ffffff"
-    base[PRELIGHT]    = "#e0e0e0"
-    base[SELECTED]    = "#5058a0"
+    base[PRELIGHT]    = "#f4f4f4"
+    base[SELECTED]    = "#6ea0cd"
 
-    bg[ACTIVE]        = "#c0c0c0"
-    bg[INSENSITIVE]   = "#e0e0e0"
-    bg[NORMAL]        = "#e0e0e0"
-    bg[PRELIGHT]      = "#e0e0e0"
-    bg[SELECTED]      = "#5058a0"
+    bg[ACTIVE]        = "#e0e0e0"
+    bg[INSENSITIVE]   = "#f4f4f4"
+    bg[NORMAL]        = "#f4f4f4"
+    bg[PRELIGHT]      = "#f4f4f4"
+    bg[SELECTED]      = "#6ea0cd"
 
     engine "xfce"
     {
@@ -219,10 +219,10 @@ class "*RadioButton*"              style "xfce-default"
 
 style "xfce-titlebar"
 {
-    bg[SELECTED]      = "#5058a0"
+    bg[SELECTED]      = "#6ea0cd"
     fg[SELECTED]      = "#ffffff"
-    bg[ACTIVE]        = "#f0f0f0"
-    fg[NORMAL]        = "#a8a8a8"
+    bg[ACTIVE]        = "#EEEEE2"
+    fg[NORMAL]        = "#b4b492"
 }
 widget "xfwm"                      style "xfce-titlebar"
 class "MetaFrames"                 style "xfce-titlebar"
