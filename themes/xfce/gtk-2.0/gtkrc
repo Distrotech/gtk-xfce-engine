@@ -30,17 +30,17 @@ style "default"
     xthickness = 2
     ythickness = 2
 
-    base[ACTIVE]      = "#cfcecd"
+    base[ACTIVE]      = "#d4d3d2"
     base[INSENSITIVE] = "#e8e7e6"
     base[NORMAL]      = "#ffffff"
-    base[PRELIGHT]    = "#cfcecd"
+    base[PRELIGHT]    = "#d4d3d2"
     base[SELECTED]    = "#867d94"
 
-    bg[ACTIVE]        = "#cfcecd"
+    bg[ACTIVE]        = "#d4d3d2"
     bg[INSENSITIVE]   = "#e8e7e6"
     bg[NORMAL]        = "#e8e7e6"
-    bg[PRELIGHT]      = "#cfcecd"
-    bg[SELECTED]      = "#cfcecd"
+    bg[PRELIGHT]      = "#d4d3d2"
+    bg[SELECTED]      = "#d4d3d2"
 
     fg[ACTIVE]        = "#000000"
     fg[INSENSITIVE]   = "#8e8e8a"
@@ -92,8 +92,8 @@ style "button" = "default"
     xthickness = 3
     ythickness = 3
 
-    bg[PRELIGHT]      = "#cfcecd"
-    bg[NORMAL]        = "#cfcecd"
+    bg[PRELIGHT]      = "#d4d3d2"
+    bg[NORMAL]        = "#d4d3d2"
     bg[ACTIVE]        = "#bfbebd"
 
     engine "xfce" 
@@ -121,8 +121,8 @@ style "scrollbar" = "default"
     xthickness = 2
     ythickness = 2
 
-    bg[PRELIGHT]      = "#cfcecd"
-    bg[NORMAL]        = "#cfcecd"
+    bg[PRELIGHT]      = "#d4d3d2"
+    bg[NORMAL]        = "#d4d3d2"
     bg[ACTIVE]        = "#e8e7e6"
 
     engine "xfce" 
@@ -148,7 +148,7 @@ style "progress" = "default"
     xthickness = 2
     ythickness = 2
 
-    bg[PRELIGHT]      = "#cfcecd"
+    bg[PRELIGHT]      = "#d4d3d2"
     bg[NORMAL]        = "#e8e7e6"
     bg[ACTIVE]        = "#e8e7e6"
 

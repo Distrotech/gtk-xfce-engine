@@ -661,10 +661,6 @@ static void draw_shadow(GtkStyle * style, GdkWindow * window, GtkStateType state
                 {
                     /* Do nothing */
                 }
-                else if (DETAIL ("handlebox"))
-                {
-                    /* Do nothing */
-                }
                 else if (DETAIL("menu"))
                 {
                     if ((xt > 0) && (yt > 0))
@@ -795,10 +791,6 @@ static void draw_shadow(GtkStyle * style, GdkWindow * window, GtkStateType state
                     /* Do nothing */
                 }
                 if ((DETAIL("spinbutton_up") || DETAIL("spinbutton_down")) && (state_type != GTK_STATE_PRELIGHT))
-                {
-                    /* Do nothing */
-                }
-                else if (DETAIL ("handlebox"))
                 {
                     /* Do nothing */
                 }
@@ -1330,7 +1322,9 @@ static void draw_handle(GtkStyle * style, GdkWindow * window, GtkStateType state
     if(height > width)
         orientation = GTK_ORIENTATION_VERTICAL;
 
+#if 0
     draw_box(style, window, state_type, shadow_type, area, widget, detail, x, y, width, height);
+#endif
     xfce_draw_grips(style, window, state_type, area, widget, x, y, width, height, orientation);
 }
 
