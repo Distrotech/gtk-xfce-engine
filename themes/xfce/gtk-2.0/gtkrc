@@ -29,29 +29,29 @@ style "xfce-default"
     xthickness = 2
     ythickness = 2
 
-    base[ACTIVE]      = "#c2c4ca"
-    base[INSENSITIVE] = "#eeeeef"
+    base[ACTIVE]      = "#ccc9c8"
+    base[INSENSITIVE] = "#e6e3e1"
     base[NORMAL]      = "#ffffff"
-    base[PRELIGHT]    = "#d4d8e0"
-    base[SELECTED]    = "#7585c0"
+    base[PRELIGHT]    = "#ccc9c8"
+    base[SELECTED]    = "#8d9fbe"
 
-    bg[ACTIVE]        = "#c2c4ca"
-    bg[INSENSITIVE]   = "#eeeeef"
-    bg[NORMAL]        = "#eeeeef"
-    bg[PRELIGHT]      = "#d4d8e0"
-    bg[SELECTED]      = "#7585c0"
+    bg[ACTIVE]        = "#ccc9c8"
+    bg[INSENSITIVE]   = "#e6e3e1"
+    bg[NORMAL]        = "#e6e3e1"
+    bg[PRELIGHT]      = "#ccc9c8"
+    bg[SELECTED]      = "#8d9fbe"
 
     fg[ACTIVE]        = "#000000"
     fg[INSENSITIVE]   = "#8e8e8a"
     fg[NORMAL]        = "#000000"
     fg[PRELIGHT]      = "#000000"
-    fg[SELECTED]      = "#ffffff"
+    fg[SELECTED]      = "#000000"
 
     text[ACTIVE]      = "#000000"
     text[INSENSITIVE] = "#000000"
     text[NORMAL]      = "#000000"
     text[PRELIGHT]    = "#000000"
-    text[SELECTED]    = "#ffffff"
+    text[SELECTED]    = "#000000"
 
     engine "xfce" 
     {
@@ -98,8 +98,8 @@ style "xfce-button" = "xfce-default"
         {
             fill_style = gradient
             orientation = vertical
-            shade_start = 0.90
-            shade_end = 0.95
+            shade_start = 0.98
+            shade_end = 1.02
         }
     }
 }
@@ -125,8 +125,8 @@ style "xfce-sbstyle" = "xfce-default"
         {
             fill_style = gradient
             orientation = automatic
-            shade_start = 0.95
-            shade_end = 1.05
+            shade_start = 0.98
+            shade_end = 1.02
         }
     }
 }
@@ -154,10 +154,10 @@ class "*MenuItem*"                 style "xfce-menuitem"
 
 style "xfce-titlebar"
 {
-    bg[SELECTED]      = "#5f6c9c"
+    bg[SELECTED]      = "#859dc6"
     fg[SELECTED]      = "#ffffff"
-    bg[ACTIVE]        = "#c4c6cc"
-    fg[NORMAL]        = "#868992"
+    bg[ACTIVE]        = "#ccc9c8"
+    fg[NORMAL]        = "#908c8a"
 }
 widget "xfwm"                      style "xfce-titlebar"
 class "MetaFrames"                 style "xfce-titlebar"
