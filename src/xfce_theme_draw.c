@@ -163,7 +163,8 @@ static void xfce_fill_background(GtkStyle * style, GdkWindow * window, GtkStateT
 {
     GdkRectangle clip_area;
     GradientType gradient_style = GRADIENT_VERTICAL;
-    gfloat shade_start = 1.0, shade_end = 1.0; 
+    gfloat shade_start = 1.0, shade_end = 1.0;
+    gboolean draw_flat = FALSE;
   
     if((width == -1) && (height == -1))
         gdk_drawable_get_size(window, &width, &height);
@@ -177,7 +178,19 @@ static void xfce_fill_background(GtkStyle * style, GdkWindow * window, GtkStateT
     clip_area.width = width;
     clip_area.height = height;
 
-    if (XFCE_RC_STYLE(style->rc_style)->gradient) 
+    /* Spin buttons are a special case */
+    if (widget && GTK_IS_SPIN_BUTTON (widget))
+    {
+        if (DETAIL("spinbutton_up") || DETAIL("spinbutton_down"))
+        {
+            if ((state_type != GTK_STATE_PRELIGHT) && (state_type != GTK_STATE_ACTIVE))
+            {
+                draw_flat = TRUE;
+            }
+        }
+    }
+
+    if ((!draw_flat) && (XFCE_RC_STYLE(style->rc_style)->gradient))
     {
         GdkGC *gc = gdk_gc_new(window);
         GdkGCValues gc_values;
