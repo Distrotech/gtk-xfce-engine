@@ -653,7 +653,7 @@ static void draw_shadow(GtkStyle * style, GdkWindow * window, GtkStateType state
                 {
                     /* Do nothing */
                 }
-                else if(DETAIL("vscrollbar") || DETAIL("hscrollbar") || DETAIL("slider") || DETAIL("vscale") || DETAIL("hscale"))
+                else if(DETAIL("vscrollbar") || DETAIL("hscrollbar") || DETAIL("bar") || DETAIL("slider") || DETAIL("vscale") || DETAIL("hscale"))
                 {
                     if ((xt > 1) && (yt > 1))
                     {
