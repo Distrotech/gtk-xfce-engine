@@ -624,7 +624,11 @@ static void draw_shadow(GtkStyle * style, GdkWindow * window, GtkStateType state
             {
                 if(DETAIL("trough"))
                 {
-                    /* Do nothing */
+                    gdk_draw_line(window, style->bg_gc[GTK_STATE_ACTIVE], x, y, x + width - 1, y);
+                    gdk_draw_line(window, style->bg_gc[GTK_STATE_ACTIVE], x, y, x, y + height - 1);
+
+                    gdk_draw_line(window, style->bg_gc[GTK_STATE_ACTIVE], x + 1, y + height - 1, x + width - 1, y + height - 1);
+                    gdk_draw_line(window, style->bg_gc[GTK_STATE_ACTIVE], x + width - 1, y + 1, x + width - 1, y + height - 1);
                 }
                 else if ((xt > 1) && (yt > 1))
                 {
