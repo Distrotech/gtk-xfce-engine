@@ -7,7 +7,7 @@ style "xfce-default"
     GtkButton::default_outside_border = {0, 0, 0, 0}
     GtkButton::default_spacing        = 10
     GtkCheckButton::indicator_size    = 15
-    GtkMenuItem::selected_shadow_type = out
+    GtkMenuItem::selected_shadow_type = etched-in
     GtkPaned::handle_full_size        = 1
     GtkPaned::handle_size             = 8
     GtkRadioButton::indicator_size    = 15
@@ -27,17 +27,17 @@ style "xfce-default"
     xthickness = 2
     ythickness = 2
 
-    base[ACTIVE]      = "#d0d0d0"
-    base[INSENSITIVE] = "#e0e0e0"
+    base[ACTIVE]      = "#c4c4c4"
+    base[INSENSITIVE] = "#f4f4f4"
     base[NORMAL]      = "#ffffff"
-    base[PRELIGHT]    = "#e0e0e0"
-    base[SELECTED]    = "#4a7eae"
+    base[PRELIGHT]    = "#f4f4f4"
+    base[SELECTED]    = "#4c7ba6"
 
-    bg[ACTIVE]        = "#d0d0d0"
-    bg[INSENSITIVE]   = "#e0e0e0"
-    bg[NORMAL]        = "#e0e0e0"
-    bg[PRELIGHT]      = "#e0e0e0"
-    bg[SELECTED]      = "#4a7eae"
+    bg[ACTIVE]        = "#c4c4c4"
+    bg[INSENSITIVE]   = "#f4f4f4"
+    bg[NORMAL]        = "#f4f4f4"
+    bg[PRELIGHT]      = "#f4f4f4"
+    bg[SELECTED]      = "#4c7ba6"
 
     fg[ACTIVE]        = "#000000"
     fg[INSENSITIVE]   = "#808080"
@@ -68,8 +68,8 @@ style "xfce-colored" = "xfce-default"
     xthickness = 3
     ythickness = 2
 
-    bg[ACTIVE]        = "#d0d0d0"
-    bg[PRELIGHT]      = "#4a7eae"
+    bg[ACTIVE]        = "#c4c4c4"
+    bg[PRELIGHT]      = "#4c7ba6"
 
     fg[ACTIVE]        = "#000000"
     fg[PRELIGHT]      = "#ffffff"
@@ -120,7 +120,7 @@ class "*MenuBar*"                  style "xfce-menubar"
 
 style "xfce-menuitem" = "xfce-colored"
 {
-    xthickness = 2
+    xthickness = 1
     ythickness = 2
 
     engine "xfce"
@@ -128,10 +128,7 @@ style "xfce-menuitem" = "xfce-colored"
         smooth_edge = true
         boxfill
         {
-            fill_style = gradient
-            orientation = auto
-            shade_start = 0.85
-            shade_end = 1.25
+            fill_style = plain
         }
     }
 }
@@ -158,10 +155,22 @@ style "xfce-scrollbar" = "xfce-default"
 widget_class "*Scrollbar*"         style "xfce-scrollbar"
 class "*Scrollbar*"                style "xfce-scrollbar"
 
-style "xfce-button" = "xfce-colored"
+style "xfce-button" = "xfce-default"
 {
     xthickness = 2
     ythickness = 2
+
+    base[ACTIVE]      = "#c4c4c4"
+    base[INSENSITIVE] = "#e4e4e4"
+    base[NORMAL]      = "#ffffff"
+    base[PRELIGHT]    = "#e4e4e4"
+    base[SELECTED]    = "#4c7ba6"
+
+    bg[ACTIVE]        = "#c4c4c4"
+    bg[INSENSITIVE]   = "#e4e4e4"
+    bg[NORMAL]        = "#e4e4e4"
+    bg[PRELIGHT]      = "#e4e4e4"
+    bg[SELECTED]      = "#4c7ba6"
 
     engine "xfce"
     {
@@ -188,8 +197,8 @@ class "*Scale*"                    style "xfce-button"
 
 style "xfce-progress" = "xfce-colored"
 {
-    xthickness = 1
-    ythickness = 1
+    xthickness = 2
+    ythickness = 2
 
     engine "xfce"
     {
