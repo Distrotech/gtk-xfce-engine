@@ -44,7 +44,16 @@ style "default"
     }
 }
 
-class "GtkWidget" style "default"
+widget_class "*"          style "default"
+
+style "thin" = "default"
+{
+    xthickness = 1
+    ythickness = 1
+}
+
+widget_class "*Progress*" style "thin" 
+class "*Progress*"        style "thin" 
 
 style "button" = "default"
 {
@@ -54,7 +63,10 @@ style "button" = "default"
     bg[INSENSITIVE]   = "#f8f8ef"
 }
 
-class "GtkButton" style "button"
+widget_class "*Button*"   style "button"
+class "*Button*"          style "button"
+widget_class "*button*"   style "button"
+class "*button*"          style "button"
 
 style "notebook" = "default"
 {
@@ -62,7 +74,8 @@ style "notebook" = "default"
     bg[ACTIVE]        = "#d4d4ce"
 }
 
-class "GtkNotebook" style "notebook"
+widget_class "*Notebook"  style "notebook"
+class "*Notebook"         style "notebook"
 
 # xfwm4 frame colors
 # 

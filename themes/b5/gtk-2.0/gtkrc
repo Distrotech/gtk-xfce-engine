@@ -44,15 +44,24 @@ style "default"
     }
 }
 
-class "GtkWidget" style "default"
+widget_class "*"          style "default"
+
+style "thin" = "default"
+{
+    xthickness = 1
+    ythickness = 1
+}
+
+widget_class "*Progress*" style "thin" 
+class "*Progress*"        style "thin" 
 
 # This is for xfwm4, in case you want separate colors for the window borders.
 # 
-style "xfwm4-ttitlebar"
+style "titlebar"
 {
-    bg[SELECTED]      = "#cfefff"
+    bg[SELECTED]      = "#ffcb00"
     fg[SELECTED]      = "#000000"
 }
 
-widget "xfwm"	     style "xfwm4-ttitlebar"
+widget "xfwm"	          style "titlebar"
 

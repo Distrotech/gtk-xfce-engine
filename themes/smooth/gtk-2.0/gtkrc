@@ -11,7 +11,7 @@ style "default"
     GtkRange::stepper_size            = 15
     GtkRange::stepper_spacing         = 0
     GtkSpinButton::shadow_type        = out
-    GtkMenuItem::selected_shadow_type = etched-in
+    GtkMenuItem::selected_shadow_type = out
     GtkScrollbar::min_slider_length   = 20
 
     fg[NORMAL]        = "#000000"
@@ -44,4 +44,14 @@ style "default"
     }
 }
 
-class "GtkWidget" style "default"
+widget_class "*"          style "default"
+
+style "thin" = "default"
+{
+    xthickness = 1
+    ythickness = 1
+}
+
+widget_class "*Progress*" style "thin" 
+class "*Progress*"        style "thin" 
+

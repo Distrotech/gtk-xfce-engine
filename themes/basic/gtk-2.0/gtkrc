@@ -3,7 +3,7 @@ style "default"
     GtkWidget::interior_focus         = 1
     GtkButton::default_border         = {0, 0, 0, 0}
     GtkButton::default_outside_border = {0, 0, 0, 0}
-    GtkButton::default_spacing        = 2
+    GtkButton::default_spacing        = 8
     GtkRange::slider_width            = 15
     GtkRange::stepper_size            = 15
     GtkCheckButton::indicator_size    = 15
@@ -22,7 +22,16 @@ style "default"
 }
 widget_class "*"                style "default"
 
-style "xfce-basic-buttonstyle" = "default"
+style "thin" = "default"
+{
+    xthickness = 1
+    ythickness = 1
+}
+
+widget_class "*Progress*"       style "thin" 
+class "*Progress*"              style "thin" 
+
+style "button" = "default"
 {
     xthickness = 2
     ythickness = 2
@@ -38,10 +47,10 @@ style "xfce-basic-buttonstyle" = "default"
         }
     }
 }
-widget_class "*Button*"            style "xfce-basic-buttonstyle"
-class "*Button*"                   style "xfce-basic-buttonstyle"
+widget_class "*Button*"            style "button"
+class "*Button*"                   style "button"
 
-style "xfce-basic-sbstyle" = "default"
+style "scrollbar" = "default"
 {
     xthickness = 1
     ythickness = 1
@@ -57,8 +66,8 @@ style "xfce-basic-sbstyle" = "default"
         }
     }
 }
-widget_class "*Scrollbar*"         style "xfce-basic-sbstyle"
-class "*Scrollbar*"                style "xfce-basic-sbstyle"
-widget_class "*Scale*"             style "xfce-basic-sbstyle"
-class "*Scale*"                    style "xfce-basic-sbstyle"
+widget_class "*Scrollbar*"         style "scrollbar"
+class "*Scrollbar*"                style "scrollbar"
+widget_class "*Scale*"             style "scrollbar"
+class "*Scale*"                    style "scrollbar"
 
