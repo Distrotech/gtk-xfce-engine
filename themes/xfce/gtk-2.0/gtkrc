@@ -1,37 +1,41 @@
+# Default Xfce theme
+# Olivier Fourdan 05/2003
+
 style "xfce-default"
 {
     GtkButton::default_border         = {0, 0, 0, 0}
     GtkButton::default_outside_border = {0, 0, 0, 0}
-    GtkButton::default_spacing        = 5
+    GtkButton::default_spacing        = 10
     GtkCheckButton::indicator_size    = 15
-    GtkMenuItem::selected_shadow_type = none
+    GtkMenuItem::selected_shadow_type = out
     GtkPaned::handle_full_size        = 1
+    GtkPaned::handle_size             = 8
     GtkRadioButton::indicator_size    = 15
     GtkRange::slider_width            = 15
     GtkRange::stepper_size            = 15
     GtkRange::stepper_spacing         = 0
-    GtkRange::trough_border           = 0
+    GtkRange::trough_border           = 1
     GtkScrollbar::min_slider_length   = 20
-    GtkSpinButton::shadow_type        = etched-in
+    GtkSpinButton::shadow_type        = out
     GtkWidget::internal-padding       = 0
     GtkWidget::focus-padding          = 0
     GtkWidget::focus-line-width       = 1
-    GtkWidget::interior_focus         = 2
+    GtkWidget::interior_focus         = 5
 
     xthickness = 2
     ythickness = 2
 
-    base[ACTIVE]      = "#d8d8d0"
+    base[ACTIVE]      = "#bfbdbb"
     base[INSENSITIVE] = "#eae7e4"
     base[NORMAL]      = "#ffffff"
     base[PRELIGHT]    = "#eae7e4"
-    base[SELECTED]    = "#405090"
+    base[SELECTED]    = "#606080"
 
-    bg[ACTIVE]        = "#d8d8d0"
+    bg[ACTIVE]        = "#bfbdbb"
     bg[INSENSITIVE]   = "#eae7e4"
     bg[NORMAL]        = "#eae7e4"
     bg[PRELIGHT]      = "#eae7e4"
-    bg[SELECTED]      = "#405090"
+    bg[SELECTED]      = "#606080"
 
     fg[ACTIVE]        = "#000000"
     fg[INSENSITIVE]   = "#7f7f79"
@@ -56,24 +60,20 @@ style "xfce-default"
 }
 
 widget_class "*"                   style "xfce-default"
-widget_class "*SpinButton*"        style "xfce-default"
-widget_class "*CheckButton*"       style "xfce-default"
-widget_class "*RadioButton*"       style "xfce-default"
-widget_class "*ToggleButton*"      style "xfce-default"
 
 style "xfce-colored" = "xfce-default"
 {
-    xthickness = 1
-    ythickness = 1
+    xthickness = 3
+    ythickness = 3
 
-    bg[ACTIVE]        = "#1d5a8b"
-    bg[PRELIGHT]      = "#405090"
+    bg[ACTIVE]        = "#bfbdbb"
+    bg[PRELIGHT]      = "#606080"
 
-    fg[ACTIVE]        = "#ffffff"
-    fg[PRELIGHT]      = "#ffffff"
+    fg[ACTIVE]        = "#000000"
+    fg[PRELIGHT]      = "#000000"
 
     text[ACTIVE]      = "#000000"
-    text[PRELIGHT]    = "#ffffff"
+    text[PRELIGHT]    = "#000000"
 
     engine "xfce" 
     {
@@ -87,16 +87,55 @@ style "xfce-colored" = "xfce-default"
 
 widget_class "*List*"              style "xfce-colored"
 class "*List*"                     style "xfce-colored"
-widget_class "*MenuItem*"          style "xfce-colored"
-class "*MenuItem*"                 style "xfce-colored"
 widget_class "*Text*"              style "xfce-colored"
 class "*Text*"                     style "xfce-colored"
 widget_class "*Entry*"             style "xfce-colored"
 class "*Entry*"                    style "xfce-colored"
-widget_class "*Tree*"              style "xfce-colored"
-class "*Tree*"                     style "xfce-colored"
-widget_class "*Progress*"          style "xfce-colored"
-class "*Progress*"                 style "xfce-colored"
+
+style "xfce-menubar" = "xfce-colored"
+{
+    xthickness = 0
+    ythickness = 3
+
+    engine "xfce" 
+    {
+        smooth_edge = true
+        boxfill
+        {
+            fill_style = plain
+        }
+    }
+}
+
+widget_class "*BonoboDockItem*"    style "xfce-menubar"
+class "*BonoboDockItem*"           style "xfce-menubar"
+widget_class "*HandleBox*"         style "xfce-menubar"
+class "*HandleBox*"                style "xfce-menubar"
+widget_class "*Tool*"              style "xfce-menubar"
+class "*Tool*"                     style "xfce-menubar"
+widget_class "*MenuBar*"           style "xfce-menubar"
+class "*MenuBar*"                  style "xfce-menubar"
+
+style "xfce-menuitem" = "xfce-colored"
+{
+    xthickness = 3
+    ythickness = 3
+
+    engine "xfce" 
+    {
+        smooth_edge = true
+        boxfill
+        {
+            fill_style = gradient
+            orientation = auto
+            shade_start = 0.90
+            shade_end = 2.00
+        }
+    }
+}
+
+widget_class "*MenuItem*"          style "xfce-menuitem"
+class "*MenuItem*"                 style "xfce-menuitem"
 
 style "xfce-scrollbar" = "xfce-default"
 {
@@ -109,20 +148,19 @@ style "xfce-scrollbar" = "xfce-default"
         {
             fill_style = gradient
             orientation = auto
-            shade_start = 1.05
-            shade_end = 0.90
+            shade_start = 0.90
+            shade_end = 2.00
         }
     }
 }
 widget_class "*Scrollbar*"         style "xfce-scrollbar"
 class "*Scrollbar*"                style "xfce-scrollbar"
-widget_class "*Scale*"             style "xfce-scrollbar"
-class "*Scale*"                    style "xfce-scrollbar"
 
-style "xfce-button" = "xfce-default"
+style "xfce-button" = "xfce-colored"
 {
-    xthickness = 2
-    ythickness = 2
+    xthickness = 3
+    ythickness = 3
+
     engine "xfce" 
     {
         smooth_edge = true
@@ -130,11 +168,25 @@ style "xfce-button" = "xfce-default"
         {
             fill_style = gradient
             orientation = vertical
-            shade_start = 1.05
-            shade_end = 0.90
+            shade_start = 0.90
+            shade_end = 2.00
         }
     }
 }
-widget_class "*Button*"         style "xfce-button"
-class "*Button*"                style "xfce-button"
+widget_class "*Button*"            style "xfce-button" 
+class "*Button*"                   style "xfce-button" 
+widget_class "*button*"            style "xfce-button" 
+class "*button*"                   style "xfce-button" 
+widget_class "*OptionMenu*"        style "xfce-button" 
+class "*OptionMenu*"               style "xfce-button" 
+widget_class "*Tree*"              style "xfce-button" 
+class "*Tree*"                     style "xfce-button" 
+widget_class "*Progress*"          style "xfce-button" 
+class "*Progress*"                 style "xfce-button" 
+widget_class "*Scale*"             style "xfce-button" 
+class "*Scale*"                    style "xfce-button" 
 
+widget_class "*CheckButton*"       style "xfce-default"
+class "*CheckButton*"              style "xfce-default"
+widget_class "*RadioButton*"       style "xfce-default"
+class "*RadioButton*"              style "xfce-default"
