@@ -14,7 +14,7 @@ style "xfce-default"
     GtkRange::slider_width            = 15
     GtkRange::stepper_size            = 15
     GtkRange::stepper_spacing         = 0
-    GtkRange::trough_border           = 0
+    GtkRange::trough_border           = 1
     GtkScrollbar::min_slider_length   = 20
     GtkSpinButton::shadow_type        = out
     GtkWidget::internal_padding       = 0
@@ -147,8 +147,8 @@ style "xfce-scrollbar" = "xfce-default"
         {
             fill_style = gradient
             orientation = auto
-            shade_start = 1.05
-            shade_end = 0.95
+            shade_start = 0.85
+            shade_end = 1.15
         }
     }
 }
@@ -160,16 +160,16 @@ style "xfce-button" = "xfce-default"
     xthickness = 2
     ythickness = 2
 
-    base[ACTIVE]      = "#e0e0e0"
-    base[INSENSITIVE] = "#f4f4f4"
+    base[ACTIVE]      = "#acb6cf"
+    base[INSENSITIVE] = "#d7dbe4"
     base[NORMAL]      = "#ffffff"
-    base[PRELIGHT]    = "#f4f4f4"
+    base[PRELIGHT]    = "#d7dbe4"
     base[SELECTED]    = "#4a7eae"
 
-    bg[ACTIVE]        = "#e0e0e0"
-    bg[INSENSITIVE]   = "#f4f4f4"
-    bg[NORMAL]        = "#f4f4f4"
-    bg[PRELIGHT]      = "#f4f4f4"
+    bg[ACTIVE]        = "#acb6cf"
+    bg[INSENSITIVE]   = "#d7dbe4"
+    bg[NORMAL]        = "#d7dbe4"
+    bg[PRELIGHT]      = "#d7dbe4"
     bg[SELECTED]      = "#4a7eae"
 
     engine "xfce"
@@ -179,8 +179,8 @@ style "xfce-button" = "xfce-default"
         {
             fill_style = gradient
             orientation = vertical
-            shade_start = 1.05
-            shade_end = 0.95
+            shade_start = 1.15
+            shade_end = 0.85
         }
     }
 }
@@ -221,8 +221,8 @@ style "xfce-titlebar"
 {
     bg[SELECTED]      = "#d7dbe4"
     fg[SELECTED]      = "#000000"
-    bg[ACTIVE]        = "#EEEEE2"
-    fg[NORMAL]        = "#b4b492"
+    bg[ACTIVE]        = "#c7cad0"
+    fg[NORMAL]        = "#888c95"
 }
 widget "xfwm"                      style "xfce-titlebar"
 class "MetaFrames"                 style "xfce-titlebar"
