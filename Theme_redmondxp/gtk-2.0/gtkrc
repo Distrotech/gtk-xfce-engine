@@ -2,31 +2,46 @@
 
 style "xfce-redmondxp-default"
 {
-  base[ACTIVE]      = "#E5E5E5"
-  base[INSENSITIVE] = "#EDEDE5"
-  base[NORMAL]      = "#ffffff"
-  base[PRELIGHT]    = "#EDEDE5"
-  base[SELECTED]    = "#4978CC"
+    GtkWidget::interior_focus         = 5
+    GtkButton::default_border         = {5, 5, 5, 5}
+    GtkButton::default_outside_border = {5, 5, 5, 5}
+    GtkButton::default_spacing        = 6
+    GtkCheckButton::indicator_size    = 13
+    GtkPaned::handle_full_size        = 1
+    GtkRange::trough_border           = 2
+    GtkRange::slider_width            = 15
+    GtkRange::stepper_size            = 15
+    GtkRange::stepper_spacing         = 0
+    GtkSpinButton::shadow_type        = etched-in
 
-  bg[ACTIVE]        = "#D4D4CE"
-  bg[INSENSITIVE]   = "#EDEDE5"
-  bg[NORMAL]        = "#EDEDE5"
-  bg[PRELIGHT]      = "#EDEDE5"
-  bg[SELECTED]      = "#4978CC"
+    base[ACTIVE]      = "#E5E5E5"
+    base[INSENSITIVE] = "#EDEDE5"
+    base[NORMAL]      = "#ffffff"
+    base[PRELIGHT]    = "#EDEDE5"
+    base[SELECTED]    = "#4978CC"
 
-  fg[ACTIVE]        = "#000000"
-  fg[INSENSITIVE]   = "#7f7f79"
-  fg[NORMAL]        = "#000000"
-  fg[PRELIGHT]      = "#000000"
-  fg[SELECTED]      = "#ffffff"
+    bg[ACTIVE]        = "#D4D4CE"
+    bg[INSENSITIVE]   = "#EDEDE5"
+    bg[NORMAL]        = "#EDEDE5"
+    bg[PRELIGHT]      = "#EDEDE5"
+    bg[SELECTED]      = "#4978CC"
 
-  text[ACTIVE]      = "#000000"
-  text[INSENSITIVE] = "#000000"
-  text[NORMAL]      = "#000000"
-  text[PRELIGHT]    = "#000000"
-  text[SELECTED]    = "#ffffff"
+    fg[ACTIVE]        = "#000000"
+    fg[INSENSITIVE]   = "#7f7f79"
+    fg[NORMAL]        = "#000000"
+    fg[PRELIGHT]      = "#000000"
+    fg[SELECTED]      = "#ffffff"
 
-  engine "xfce" {}
+    text[ACTIVE]      = "#000000"
+    text[INSENSITIVE] = "#000000"
+    text[NORMAL]      = "#000000"
+    text[PRELIGHT]    = "#000000"
+    text[SELECTED]    = "#ffffff"
+
+    engine "xfce" 
+    {
+	smooth_edge = FALSE
+    }
 }
 
 class "GtkWidget"                  style "xfce-redmondxp-default"
@@ -37,31 +52,34 @@ widget_class "*.GtkToggleButton*"  style "xfce-redmondxp-default"
 
 style "xfce-redmondxp-colored"
 {
-  base[ACTIVE]      = "#E5E5E5"
-  base[INSENSITIVE] = "#EDEDE5"
-  base[NORMAL]      = "#ffffff"
-  base[PRELIGHT]    = "#EDEDE5"
-  base[SELECTED]    = "#4978CC"
+    base[ACTIVE]      = "#E5E5E5"
+    base[INSENSITIVE] = "#EDEDE5"
+    base[NORMAL]      = "#ffffff"
+    base[PRELIGHT]    = "#EDEDE5"
+    base[SELECTED]    = "#4978CC"
 
-  bg[ACTIVE]        = "#4978CC"
-  bg[INSENSITIVE]   = "#EDEDE5"
-  bg[NORMAL]        = "#EDEDE5"
-  bg[PRELIGHT]      = "#4978CC"
-  bg[SELECTED]      = "#4978CC"
+    bg[ACTIVE]        = "#4978CC"
+    bg[INSENSITIVE]   = "#EDEDE5"
+    bg[NORMAL]        = "#EDEDE5"
+    bg[PRELIGHT]      = "#4978CC"
+    bg[SELECTED]      = "#4978CC"
 
-  fg[ACTIVE]        = "#ffffff"
-  fg[INSENSITIVE]   = "#7f7f79"
-  fg[NORMAL]        = "#000000"
-  fg[PRELIGHT]      = "#ffffff"
-  fg[SELECTED]      = "#ffffff"
+    fg[ACTIVE]        = "#ffffff"
+    fg[INSENSITIVE]   = "#7f7f79"
+    fg[NORMAL]        = "#000000"
+    fg[PRELIGHT]      = "#ffffff"
+    fg[SELECTED]      = "#ffffff"
 
-  text[ACTIVE]      = "#000000"
-  text[INSENSITIVE] = "#000000"
-  text[NORMAL]      = "#000000"
-  text[PRELIGHT]    = "#ffffff"
-  text[SELECTED]    = "#ffffff"
+    text[ACTIVE]      = "#000000"
+    text[INSENSITIVE] = "#000000"
+    text[NORMAL]      = "#000000"
+    text[PRELIGHT]    = "#ffffff"
+    text[SELECTED]    = "#ffffff"
 
-  engine "xfce" {}
+    engine "xfce" 
+    {
+	smooth_edge = TRUE
+    }
 }
 
 class "GtkList"                    style "xfce-redmondxp-colored"

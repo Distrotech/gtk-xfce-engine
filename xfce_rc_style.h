@@ -16,12 +16,7 @@ struct _XfceRcStyle
 {
   GtkRcStyle parent_instance;
 
-  guint scrollbar_type:1;
-  guint scrollbar_marks:1;
-  guint scroll_button_marks:1;
-  guint handlebox_marks:1;
-  guint mark_type1;
-  guint mark_type2;
+  gboolean smooth_edge;
 };
 
 struct _XfceRcStyleClass
@@ -35,3 +30,11 @@ void xfce_rc_style_register_type (GTypeModule *module);
 #define DEFAULT_SCROLLTHUMB_SIZE  12
 #define DEFAULT_MIN_SLIDER_SIZE   9
 #define SMALLEST_HANDLE           17
+
+enum
+  {
+    TOKEN_SMOOTHEDGE = G_TOKEN_LAST + 1,
+    TOKEN_TRUE,
+    TOKEN_FALSE,
+  };
+  

@@ -2,7 +2,22 @@
 
 style "default"
 {
-  engine "xfce" {}
+   GtkWidget::interior_focus         = 5
+   GtkButton::default_border         = {5, 5, 5, 5}
+   GtkButton::default_outside_border = {5, 5, 5, 5}
+   GtkButton::default_spacing        = 6
+   GtkCheckButton::indicator_size    = 13
+   GtkPaned::handle_full_size        = 1
+   GtkRange::trough_border           = 2
+   GtkRange::slider_width            = 15
+   GtkRange::stepper_size            = 15
+   GtkRange::stepper_spacing         = 0
+   GtkSpinButton::shadow_type        = etched-in
+
+   engine "xfce" 
+   {
+       smooth_edge = FALSE
+   }
 }
 
 class "*"                      style "default"

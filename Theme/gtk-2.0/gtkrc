@@ -2,31 +2,46 @@
 
 style "xfce-default"
 {
-  base[ACTIVE]      = "#cdcdc8"
-  base[INSENSITIVE] = "#d7d7cf"
-  base[NORMAL]      = "#ffffff"
-  base[PRELIGHT]    = "#e5e5df"
-  base[SELECTED]    = "#1a65a2"
+    GtkWidget::interior_focus         = 5
+    GtkButton::default_border         = {5, 5, 5, 5}
+    GtkButton::default_outside_border = {5, 5, 5, 5}
+    GtkButton::default_spacing        = 6
+    GtkCheckButton::indicator_size    = 13
+    GtkPaned::handle_full_size        = 1
+    GtkRange::trough_border           = 2
+    GtkRange::slider_width            = 15
+    GtkRange::stepper_size            = 15
+    GtkRange::stepper_spacing         = 0
+    GtkSpinButton::shadow_type        = etched-in
 
-  bg[ACTIVE]        = "#c1c1ba"
-  bg[INSENSITIVE]   = "#d7d7cf"
-  bg[NORMAL]        = "#d7d7cf"
-  bg[PRELIGHT]      = "#d7d7cf"
-  bg[SELECTED]      = "#28578f"
+    base[ACTIVE]      = "#cdcdc8"
+    base[INSENSITIVE] = "#d7d7cf"
+    base[NORMAL]      = "#ffffff"
+    base[PRELIGHT]    = "#e5e5df"
+    base[SELECTED]    = "#1a65a2"
 
-  fg[ACTIVE]        = "#000000"
-  fg[INSENSITIVE]   = "#7f7f79"
-  fg[NORMAL]        = "#000000"
-  fg[PRELIGHT]      = "#000000"
-  fg[SELECTED]      = "#ffffff"
+    bg[ACTIVE]        = "#c1c1ba"
+    bg[INSENSITIVE]   = "#d7d7cf"
+    bg[NORMAL]        = "#d7d7cf"
+    bg[PRELIGHT]      = "#d7d7cf"
+    bg[SELECTED]      = "#28578f"
 
-  text[ACTIVE]      = "#000000"
-  text[INSENSITIVE] = "#000000"
-  text[NORMAL]      = "#000000"
-  text[PRELIGHT]    = "#000000"
-  text[SELECTED]    = "#ffffff"
+    fg[ACTIVE]        = "#000000"
+    fg[INSENSITIVE]   = "#7f7f79"
+    fg[NORMAL]        = "#000000"
+    fg[PRELIGHT]      = "#000000"
+    fg[SELECTED]      = "#ffffff"
 
-  engine "xfce" {}
+    text[ACTIVE]      = "#000000"
+    text[INSENSITIVE] = "#000000"
+    text[NORMAL]      = "#000000"
+    text[PRELIGHT]    = "#000000"
+    text[SELECTED]    = "#ffffff"
+
+    engine "xfce" 
+    {
+	smooth_edge = FALSE
+    }
 }
 
 class "GtkWidget"                  style "xfce-default"
@@ -37,31 +52,34 @@ widget_class "*.GtkToggleButton*"  style "xfce-default"
 
 style "xfce-colored"
 {
-  base[ACTIVE]      = "#cdcdc8"
-  base[INSENSITIVE] = "#d7d7cf"
-  base[NORMAL]      = "#ffffff"
-  base[PRELIGHT]    = "#e5e5df"
-  base[SELECTED]    = "#1a65a2"
+    base[ACTIVE]      = "#cdcdc8"
+    base[INSENSITIVE] = "#d7d7cf"
+    base[NORMAL]      = "#ffffff"
+    base[PRELIGHT]    = "#e5e5df"
+    base[SELECTED]    = "#1a65a2"
 
-  bg[ACTIVE]        = "#1d5a8b"
-  bg[INSENSITIVE]   = "#d7d7cf"
-  bg[NORMAL]        = "#d7d7cf"
-  bg[PRELIGHT]      = "#1a65a2"
-  bg[SELECTED]      = "#1a65a2"
+    bg[ACTIVE]        = "#1d5a8b"
+    bg[INSENSITIVE]   = "#d7d7cf"
+    bg[NORMAL]        = "#d7d7cf"
+    bg[PRELIGHT]      = "#1a65a2"
+    bg[SELECTED]      = "#1a65a2"
 
-  fg[ACTIVE]        = "#ffffff"
-  fg[INSENSITIVE]   = "#7f7f79"
-  fg[NORMAL]        = "#000000"
-  fg[PRELIGHT]      = "#ffffff"
-  fg[SELECTED]      = "#ffffff"
+    fg[ACTIVE]        = "#ffffff"
+    fg[INSENSITIVE]   = "#7f7f79"
+    fg[NORMAL]        = "#000000"
+    fg[PRELIGHT]      = "#ffffff"
+    fg[SELECTED]      = "#ffffff"
 
-  text[ACTIVE]      = "#000000"
-  text[INSENSITIVE] = "#000000"
-  text[NORMAL]      = "#000000"
-  text[PRELIGHT]    = "#ffffff"
-  text[SELECTED]    = "#ffffff"
+    text[ACTIVE]      = "#000000"
+    text[INSENSITIVE] = "#000000"
+    text[NORMAL]      = "#000000"
+    text[PRELIGHT]    = "#ffffff"
+    text[SELECTED]    = "#ffffff"
 
-  engine "xfce" {}
+    engine "xfce" 
+    {
+	smooth_edge = FALSE
+    }
 }
 
 class "GtkList"                    style "xfce-colored"

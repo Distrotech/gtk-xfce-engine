@@ -1,31 +1,45 @@
 style "default"
 {
-   fg[ACTIVE]        = "#000000"
-   fg[INSENSITIVE]   = "#c6c6c6"
-   fg[NORMAL]        = "#000000"
-   fg[PRELIGHT]      = "#000000"
-   fg[SELECTED]      = "#000000"
-        
-   bg[ACTIVE]        = "#c6c6c6"
-   bg[INSENSITIVE]   = "#dbdbdb"
-   bg[NORMAL]        = "#dbdbdb"
-   bg[PRELIGHT]      = "#e8e8e8"
-   bg[SELECTED]      = "#8ca9ed"
+    GtkWidget::interior_focus         = 5
+    GtkButton::default_border         = {5, 5, 5, 5}
+    GtkButton::default_outside_border = {5, 5, 5, 5}
+    GtkButton::default_spacing        = 6
+    GtkCheckButton::indicator_size    = 13
+    GtkPaned::handle_full_size        = 1
+    GtkRange::trough_border           = 2
+    GtkRange::slider_width            = 15
+    GtkRange::stepper_size            = 15
+    GtkRange::stepper_spacing         = 0
+    GtkSpinButton::shadow_type        = etched-in
 
-   base[ACTIVE]      = "#c6c6c6"
-   base[INSENSITIVE] = "#c6c6c6"
-   base[NORMAL]      = "#ffffff"
-   base[PRELIGHT]    = "#e8e8e8"
-   base[SELECTED]    = "#8ca9ed"
-        
-   text[ACTIVE]      = "#000000"
-   text[INSENSITIVE] = "#000000"
-   text[NORMAL]      = "#000000"
-   text[PRELIGHT]    = "#000000"
-   text[SELECTED]    = "#000000"
+    fg[ACTIVE]        = "#000000"
+    fg[INSENSITIVE]   = "#c6c6c6"
+    fg[NORMAL]        = "#000000"
+    fg[PRELIGHT]      = "#000000"
+    fg[SELECTED]      = "#000000"
 
-   engine "xfce"
-   {}
+    bg[ACTIVE]        = "#c6c6c6"
+    bg[INSENSITIVE]   = "#dbdbdb"
+    bg[NORMAL]        = "#dbdbdb"
+    bg[PRELIGHT]      = "#e8e8e8"
+    bg[SELECTED]      = "#8ca9ed"
+
+    base[ACTIVE]      = "#c6c6c6"
+    base[INSENSITIVE] = "#c6c6c6"
+    base[NORMAL]      = "#ffffff"
+    base[PRELIGHT]    = "#e8e8e8"
+    base[SELECTED]    = "#8ca9ed"
+
+    text[ACTIVE]      = "#000000"
+    text[INSENSITIVE] = "#000000"
+    text[NORMAL]      = "#000000"
+    text[PRELIGHT]    = "#000000"
+    text[SELECTED]    = "#000000"
+
+    engine "xfce" 
+    {
+	smooth_edge = TRUE
+    }
 }
 
 class "GtkWidget" style "default"
