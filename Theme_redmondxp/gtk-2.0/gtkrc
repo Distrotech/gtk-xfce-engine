@@ -44,11 +44,11 @@ style "xfce-redmondxp-default"
 
     engine "xfce" 
     {
-        smooth_edge = true
-        boxfill
-        {
-            fill_style = plain
-        }
+	smooth_edge = true
+	boxfill
+	{
+	    fill_style = plain
+	}
     }
 }
 widget_class "*"                   style "xfce-redmondxp-default"
@@ -66,24 +66,24 @@ style "xfce-redmondxp-colored" = "xfce-redmondxp-default"
 
     engine "xfce" 
     {
-        smooth_edge = true
-        boxfill
-        {
-            fill_style = gradient
-            orientation = vertical
-            shade_start = 0.9
-            shade_end = 1.1
-        }
+	smooth_edge = true
+	boxfill
+	{
+	    fill_style = gradient
+	    orientation = vertical
+	    shade_start = 0.9
+	    shade_end = 1.1
+	}
     }
 }
-widget_class "*GtkList*"          style "xfce-redmondxp-colored"
-class "*GtkList*"                 style "xfce-redmondxp-colored"
-widget_class "*GtkEntry*"	  style "xfce-redmondxp-colored"
-class "*GtkEntry*"	          style "xfce-redmondxp-colored"
-widget_class "*GtkTree*"	  style "xfce-redmondxp-colored"
-class "*GtkTree*"	          style "xfce-redmondxp-colored"
-widget_class "*GtkProgress*"	  style "xfce-redmondxp-colored"
-class "*GtkProgress*"	          style "xfce-redmondxp-colored"
+widget_class "*GtkList*"           style "xfce-redmondxp-colored"
+class "*GtkList*"                  style "xfce-redmondxp-colored"
+widget_class "*GtkEntry*"	   style "xfce-redmondxp-colored"
+class "*GtkEntry*"	           style "xfce-redmondxp-colored"
+widget_class "*GtkTree*"	   style "xfce-redmondxp-colored"
+class "*GtkTree*"	           style "xfce-redmondxp-colored"
+widget_class "*GtkProgress*"	   style "xfce-redmondxp-colored"
+class "*GtkProgress*"	           style "xfce-redmondxp-colored"
 
 style "xfce-redmondxp-menu" = "xfce-redmondxp-colored"
 {
@@ -95,15 +95,15 @@ style "xfce-redmondxp-menu" = "xfce-redmondxp-colored"
 
     engine "xfce" 
     {
-        smooth_edge = true
-        boxfill
-        {
-            fill_style = plain
-        }
+	smooth_edge = true
+	boxfill
+	{
+	    fill_style = plain
+	}
     }
 }
-widget_class "*Menu*"           style "xfce-redmondxp-menu"
-class "*Menu*"                  style "xfce-redmondxp-menu"
+widget_class "*.GtkMenu*"          style "xfce-redmondxp-menu"
+class "*.GtkMenu*"                 style "xfce-redmondxp-menu"
 
 style "xfce-redmondxp-menubar" = "xfce-redmondxp-colored"
 {
@@ -131,18 +131,20 @@ style "xfce-redmondxp-button" = "xfce-redmondxp-default"
 
     engine "xfce" 
     {
-        smooth_edge = true
-        boxfill
-        {
-            fill_style = gradient
-            orientation = auto
-            shade_start = 1.1
-            shade_end = 0.9
-        }
+	smooth_edge = true
+	boxfill
+	{
+	    fill_style = gradient
+	    orientation = auto
+	    shade_start = 1.1
+	    shade_end = 0.9
+	}
     }
 }
-widget_class "*Button*"   style "xfce-redmondxp-button"
-class "*Button*"          style "xfce-redmondxp-button"
+widget_class "*Button*"            style "xfce-redmondxp-button"
+class "*Button*"                   style "xfce-redmondxp-button"
+widget_class "*OptionMenu*"        style "xfce-redmondxp-button"
+class "*OptionMenu*"               style "xfce-redmondxp-button"
 
 style "xfce-redmondxp-notebook" = "xfce-redmondxp-default"
 {
@@ -153,8 +155,8 @@ style "xfce-redmondxp-notebook" = "xfce-redmondxp-default"
     bg[ACTIVE]        = "#d4d4ce"
 }
 
-widget_class "*Notebook*" style "xfce-redmondxp-notebook"
-class "*Notebook*"        style "xfce-redmondxp-notebook"
+widget_class "*Notebook*"          style "xfce-redmondxp-notebook"
+class "*Notebook*"                 style "xfce-redmondxp-notebook"
 
 style "xfce-redmondxp-scroll" = "xfce-redmondxp-default"
 {
@@ -171,14 +173,14 @@ style "xfce-redmondxp-scroll" = "xfce-redmondxp-default"
 
     engine "xfce" 
     {
-        smooth_edge = true
-        boxfill
-        {
-            fill_style = gradient
-            orientation = auto
-            shade_start = 1.1
-            shade_end = 0.9
-        }
+	smooth_edge = true
+	boxfill
+	{
+	    fill_style = gradient
+	    orientation = auto
+	    shade_start = 1.1
+	    shade_end = 0.9
+	}
     }
 }
 widget_class "*Scrollbar*"         style "xfce-redmondxp-scroll"
@@ -193,4 +195,5 @@ style "xfce-redmondxp-titlebar"
     bg[ACTIVE]        = "#7b96de"
     fg[NORMAL]        = "#dee7f7"
 }
-widget "xfwm"        style "xfce-redmondxp-titlebar"
+widget "xfwm"                      style "xfce-redmondxp-titlebar"
+class "MetaFrames"                 style "xfce-redmondxp-titlebar"

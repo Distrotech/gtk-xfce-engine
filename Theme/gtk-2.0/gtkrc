@@ -3,11 +3,11 @@ style "xfce-default"
     GtkWidget::interior_focus         = 1
     GtkButton::default_border         = {0, 0, 0, 0}
     GtkButton::default_outside_border = {0, 0, 0, 0}
-    GtkMenuItem::selected_shadow_type = out
+    GtkMenuItem::selected_shadow_type = none
     GtkButton::default_spacing        = 5
     GtkCheckButton::indicator_size    = 15
     GtkPaned::handle_full_size        = 1
-    GtkRange::trough_border           = 2
+    GtkRange::trough_border           = 1
     GtkRange::slider_width            = 15
     GtkRange::stepper_size            = 15
     GtkRange::stepper_spacing         = 0
@@ -43,7 +43,7 @@ style "xfce-default"
 
     engine "xfce" 
     {
-        smooth_edge = false
+        smooth_edge = true
         boxfill
         {
             fill_style = plain
@@ -59,8 +59,8 @@ widget_class "*ToggleButton*"      style "xfce-default"
 
 style "xfce-colored" = "xfce-default"
 {
-    xthickness = 3
-    ythickness = 3
+    xthickness = 1
+    ythickness = 1
 
     bg[ACTIVE]        = "#1d5a8b"
     bg[PRELIGHT]      = "#4464ac"
@@ -73,13 +73,10 @@ style "xfce-colored" = "xfce-default"
 
     engine "xfce" 
     {
-        smooth_edge = false
+        smooth_edge = true
         boxfill
         {
-            fill_style = gradient
-            orientation = vertical
-            shade_start = 0.8
-            shade_end = 1.1
+            fill_style = plain
         }
     }
 }
@@ -103,13 +100,13 @@ style "xfce-scrollbar" = "xfce-default"
     ythickness = 2
     engine "xfce" 
     {
-        smooth_edge = false
+        smooth_edge = true
         boxfill
         {
             fill_style = gradient
             orientation = auto
-            shade_start = 0.8
-            shade_end = 1.1
+            shade_start = 1.05
+            shade_end = 0.90
         }
     }
 }
@@ -124,13 +121,13 @@ style "xfce-button" = "xfce-default"
     ythickness = 2
     engine "xfce" 
     {
-        smooth_edge = false
+        smooth_edge = true
         boxfill
         {
             fill_style = gradient
             orientation = vertical
-            shade_start = 1.1
-            shade_end = 0.8
+            shade_start = 1.05
+            shade_end = 0.90
         }
     }
 }

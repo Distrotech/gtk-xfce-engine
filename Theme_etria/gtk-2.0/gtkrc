@@ -128,3 +128,4 @@ style "xfce-etria-titlebar"
     fg[NORMAL]        = "#ffffff"
 }
 widget "xfwm"                      style "xfce-etria-titlebar"
+class "MetaFrames"                 style "xfce-etria-titlebar"

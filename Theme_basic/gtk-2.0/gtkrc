@@ -8,7 +8,7 @@ style "default"
     GtkRange::stepper_size            = 15
     GtkCheckButton::indicator_size    = 15
     GtkPaned::handle_full_size        = 1
-    GtkRange::trough_border           = 0
+    GtkRange::trough_border           = 1
     GtkScrollbar::min_slider_length   = 20
 
     engine "xfce" 
@@ -24,8 +24,8 @@ widget_class "*"                style "default"
 
 style "xfce-basic-buttonstyle" = "default"
 {
-    xthickness = 1
-    ythickness = 1
+    xthickness = 2
+    ythickness = 2
     engine "xfce" 
     {
         smooth_edge = true
@@ -33,8 +33,8 @@ style "xfce-basic-buttonstyle" = "default"
         {
             fill_style = gradient
             orientation = nothern_diagonal
-            shade_start = 0.9
-            shade_end = 1.1
+            shade_start = 1.1
+            shade_end = 0.95
         }
     }
 }
@@ -52,8 +52,8 @@ style "xfce-basic-sbstyle" = "default"
         {
             fill_style = gradient
             orientation = auto
-            shade_start = 0.9
-            shade_end = 1.1
+            shade_start = 1.1
+            shade_end = 0.95
         }
     }
 }

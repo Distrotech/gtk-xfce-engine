@@ -69,41 +69,10 @@ style "curve-menu-color" = "curve-default"
         smooth_edge = false
         boxfill
         {
-	    fill_style = gradient
-	    orientation = vertical
-	    shade_start = 0.90
-	    shade_end = 1.10
+	    fill_style = plain
 	}
     }
 }
-
-style "curve-menu-bar" = "curve-menu-color"
-{
-    xthickness = 2
-    ythickness = 1
-}
-
-style "curve-menu" = "curve-menu-color"
-{
-    xthickness = 2
-    ythickness = 2
-
-    engine "xfce" 
-    {
-        smooth_edge = true
-        boxfill
-        {
-	    fill_style = gradient
-	    orientation = vertical
-	    shade_start = 0.90
-	    shade_end = 1.20
-	}
-    }
-}
-widget_class "*MenuItem*"          style "curve-menu"
-class "*MenuItem*"                 style "curve-menu"
-widget_class "*Progress*"          style "curve-menu"
-class "*Progress*"                 style "curve-menu"
 
 style "curve-tool-bar" = "curve-menu-color"
 {
@@ -128,3 +97,24 @@ class "*Tool*"                     style "curve-tool-bar"
 widget_class "*MenuBar*"           style "curve-tool-bar"
 class "*MenuBar*"                  style "curve-tool-bar"
 
+style "curve-menu" = "curve-menu-color"
+{
+    xthickness = 3
+    ythickness = 3
+
+    engine "xfce" 
+    {
+        smooth_edge = false
+        boxfill
+        {
+	    fill_style = gradient
+	    orientation = vertical
+	    shade_start = 0.75
+	    shade_end = 1.20
+	}
+    }
+}
+widget_class "*MenuItem*"          style "curve-menu"
+class "*MenuItem*"                 style "curve-menu"
+widget_class "*Progress*"          style "curve-menu"
+class "*Progress*"                 style "curve-menu"
