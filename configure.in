@@ -3,7 +3,7 @@ AC_INIT(xfce_theme_draw.c)
 THEME="xfce"
 
 # For automake.
-VERSION=2.0.3
+VERSION=2.0.4
 PACKAGE=gtk-${THEME}-engine
 
 AM_INIT_AUTOMAKE($PACKAGE, $VERSION, no-define)
