@@ -1,0 +1,36 @@
+# Edit these colors and fonts however you like.
+
+style "default"
+{
+  GtkButton::default_spacing = 6
+  GtkCheckButton::indicator_size = 13
+  GtkPaned::handle_full_size = 1
+  GtkRange::trough_border = 2
+  GtkRange::slider_width = 15
+  GtkRange::stepper_size = 15
+  GtkRange::stepper_spacing = 0
+  GtkSpinButton::shadow_type = GTK_ETCHED_IN
+
+  fg[NORMAL]        = "#000000"
+  text[NORMAL]      = "#000000"
+  text[INSENSITIVE] = "#000000"
+  fg[INSENSITIVE]   = "#000000"
+  fg[ACTIVE]        = "#000000"
+  text[ACTIVE]      = "#000000"
+  fg[PRELIGHT]      = "#000000"
+  text[PRELIGHT]    = "#000000"
+  fg[SELECTED]      = "#ffffff"
+  text[SELECTED]    = "#ffffff"
+  bg[NORMAL]        = "#DCDCDC"
+  base[NORMAL]      = "#FFFFFF"
+  bg[ACTIVE]        = "#C6C6C6"
+  base[ACTIVE]      = "#E5E5E5"
+  bg[PRELIGHT]      = "#DCDCDC"
+  base[PRELIGHT]    = "#FFFFFF"
+  bg[SELECTED]      = "#235C9C"
+  bg[INSENSITIVE]   = "#DCDCDC"
+  base[INSENSITIVE] = "#DCDCDC"
+  engine "xfce" {}
+}
+
+class "GtkWidget" style "default"
