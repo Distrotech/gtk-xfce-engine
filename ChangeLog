@@ -1,3 +1,11 @@
+2003-03-16  xfce
+
+	* Theme/gtk-2.0/gtkrc, Theme_saltlake/gtk-2.0/gtkrc: Adjust colors
+
+2003-03-13  xfce
+
+	* ChangeLog: Update Changelogs
+
 2003-03-11  xfce
 
 	* Theme/gtk-2.0/gtkrc: [no log message]
