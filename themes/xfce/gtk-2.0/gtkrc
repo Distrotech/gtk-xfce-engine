@@ -185,15 +185,10 @@ style "scale" = "scrollbar"
     }
 }
 
-style "progress" = "default"
+style "progress" = "colored"
 {
     xthickness = 0
     ythickness = 0
-
-    bg[PRELIGHT]      = "#d4d8e0"
-    fg[PRELIGHT]      = "#000000"
-    bg[NORMAL]        = "#ceced9"
-    bg[ACTIVE]        = "#a5a5a9"
 
     engine "xfce" 
     {
@@ -269,8 +264,8 @@ class "*GtkVScrollbar*"            style "scrollbar"
 widget_class "*GtkHScrollbar*"     style "scrollbar"
 class "*GtkHScrollbar*"            style "scrollbar"
 
-widget_class "*.GtkScale*"         style "scale"
-class "*.GtkScale*"                style "scale"
+widget_class "*Scale*"             style "scale"
+class "*Scale*"                    style "scale"
 
 widget_class "*.GtkProgress*"      style "progress"
 class "*.GtkProgress*"             style "progress"
