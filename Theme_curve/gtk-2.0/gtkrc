@@ -6,11 +6,13 @@ style "curve-default"
     GtkButton::default_spacing        = 2
     GtkCheckButton::indicator_size    = 15
     GtkPaned::handle_full_size        = 1
-    GtkRange::trough_border           = 1
+    GtkRange::trough_border           = 0
     GtkRange::slider_width            = 15
     GtkRange::stepper_size            = 15
     GtkRange::stepper_spacing         = 0
     GtkSpinButton::shadow_type        = etched-in
+    GtkMenuBar::internal-padding      = 0
+    GtkWidget::focus_padding          = 1
 
     fg[NORMAL]      = "#000000"
     fg[ACTIVE]      = "#000000"
@@ -22,9 +24,9 @@ style "curve-default"
     bg[PRELIGHT]    = "#f2f2f2"
     bg[ACTIVE]      = "#cccccc"
     bg[INSENSITIVE] = "#d8d8d8"
-    bg[SELECTED]    = "#4E48A6"
+    bg[SELECTED]    = "#4c59a6"
 
-    base[SELECTED]  = "#4E48A6"
+    base[SELECTED]  = "#4c59a6"
     text[SELECTED]  = "#ffffff"
 
     engine "xfce" 
