@@ -94,7 +94,7 @@ style "button" = "default"
 
     bg[PRELIGHT]      = "#cfcecd"
     bg[NORMAL]        = "#cfcecd"
-    bg[ACTIVE]        = "#cfcecd"
+    bg[ACTIVE]        = "#bfbebd"
 
     engine "xfce" 
     {
