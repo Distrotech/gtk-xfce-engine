@@ -21,7 +21,6 @@ style "default"
     GtkScrollbar::has_backward_stepper           = 1
     GtkScrollbar::has_secondary_backward_stepper = 0
     GtkScrollbar::min_slider_length              = 20
-    GtkSpinButton::shadow_type                   = out
     GtkToolbar::shadow_type                      = none
     GtkWidget::focus-line-width                  = 1
     GtkWidget::focus_padding                     = 3 

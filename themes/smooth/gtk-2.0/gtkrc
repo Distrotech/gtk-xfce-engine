@@ -14,7 +14,6 @@ style "default"
     GtkRange::stepper_spacing         = 0
     GtkRange::trough_border           = 0
     GtkScrollbar::min_slider_length   = 20
-    GtkSpinButton::shadow_type        = out
     GtkWidget::interior_focus         = 1
 
     fg[NORMAL]        = "#000000"

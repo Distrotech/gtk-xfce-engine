@@ -11,11 +11,10 @@ style "default"
     GtkMenuItem::selected_shadow_type = none
     GtkPaned::handle_full_size        = 1
     GtkRange::slider_width            = 15
-    GtkRange::stepper_size            = 16
+    GtkRange::stepper_size            = 15
     GtkRange::stepper_spacing         = 0
     GtkRange::trough_border           = 0
     GtkScrollbar::min_slider_length   = 20
-    GtkSpinButton::shadow_type        = out
     GtkToolbar::shadow_type           = none
     GtkWidget::interior_focus         = 1
     GtkWidget::internal-padding       = 4
@@ -24,15 +23,15 @@ style "default"
     ythickness = 2
 
     base[ACTIVE]      = "#e5e5e5"
-    base[INSENSITIVE] = "#edeada"
+    base[INSENSITIVE] = "#efebdf"
     base[NORMAL]      = "#ffffff"
-    base[PRELIGHT]    = "#edeada"
+    base[PRELIGHT]    = "#efebdf"
     base[SELECTED]    = "#0055ef"
 
     bg[ACTIVE]        = "#d4d4ce"
-    bg[INSENSITIVE]   = "#edeada"
-    bg[NORMAL]        = "#edeada"
-    bg[PRELIGHT]      = "#edeada"
+    bg[INSENSITIVE]   = "#efebdf"
+    bg[NORMAL]        = "#efebdf"
+    bg[PRELIGHT]      = "#efebdf"
     bg[SELECTED]      = "#0055ef"
 
     fg[ACTIVE]        = "#000000"
@@ -57,6 +56,19 @@ style "default"
     }
 }
 widget_class "*"                   style "default"
+
+style "tools" = "default"
+{
+    xthickness = 1
+    ythickness = 1
+}
+
+widget_class "*BonoboDockItem*"    style "tools"
+class "*BonoboDockItem*"           style "tools"
+widget_class "*HandleBox*"         style "tools"
+class "*HandleBox*"                style "tools"
+widget_class "*Tool*"              style "tools"
+class "*Tool*"                     style "tools"
 
 style "colored" = "default"
 {
@@ -116,12 +128,6 @@ style "menubar" = "colored"
     ythickness = 1
 }
 
-widget_class "*BonoboDockItem*"    style "menubar"
-class "*BonoboDockItem*"           style "menubar"
-widget_class "*HandleBox*"         style "menubar"
-class "*HandleBox*"                style "menubar"
-widget_class "*Tool*"              style "menubar"
-class "*Tool*"                     style "menubar"
 widget_class "*MenuBar*"           style "menubar"
 class "*MenuBar*"                  style "menubar"
 
@@ -131,8 +137,6 @@ style "button" = "default"
     bg[ACTIVE]        = "#ffcb39"
     bg[PRELIGHT]      = "#fafaf2"
     bg[INSENSITIVE]   = "#fafaf2"
-    fg[SELECTED]      = "#000000"
-    text[SELECTED]    = "#000000"
 
     engine "xfce" 
     {
@@ -168,13 +172,13 @@ class "*Notebook*"                 style "notebook"
 style "scroll" = "default"
 {
     base[ACTIVE]      = "#d4d4ce"
-    base[INSENSITIVE] = "#edeada"
-    base[NORMAL]      = "#edeada"
+    base[INSENSITIVE] = "#efebdf"
+    base[NORMAL]      = "#efebdf"
     base[PRELIGHT]    = "#c6d3ff"
     base[SELECTED]    = "#c6d3ff"
     bg[NORMAL]        = "#c6d3ff"
     bg[PRELIGHT]      = "#c6d3ff"
-    bg[SELECTED]      = "#edeada"
+    bg[SELECTED]      = "#efebdf"
     fg[SELECTED]      = "#000000"
     text[SELECTED]    = "#000000"
 

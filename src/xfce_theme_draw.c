@@ -51,9 +51,6 @@
 
 #define DETAIL(s)   ((detail) && (!strcmp(s, detail)))
 
-/* 
- */
-
 static void xfce_style_init(XfceStyle * style);
 static void xfce_style_class_init(XfceStyleClass * klass);
 static GtkStyleClass *parent_class = NULL;
