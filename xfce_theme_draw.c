@@ -274,20 +274,23 @@ draw_vline (GtkStyle * style, GdkWindow * window, GtkStateType state_type, GdkRe
 static void
 draw_shadow (GtkStyle * style, GdkWindow * window, GtkStateType state_type, GtkShadowType shadow_type, GdkRectangle * area, GtkWidget * widget, const gchar * detail, gint x, gint y, gint width, gint height)
 {
-  GdkGC *gc1, *gc2, *gc3;
-
+  GdkGC *gc1, *gc2, *gc3, *gc4;
+  guint rdelta = 0;
   g_return_if_fail (style != NULL);
   g_return_if_fail (window != NULL);
 	
   gc1 = style->dark_gc[state_type];
   gc2 = style->light_gc[state_type];
   gc3 = style->black_gc;
+  gc4 = style->dark_gc[state_type];
 	
   if(XFCE_RC_STYLE (style->rc_style)->smooth_edge)
   {
-      gc1 = style->mid_gc[state_type];
+      rdelta = 1;
+      gc1 = style->dark_gc[state_type];
       gc2 = style->light_gc[state_type];
       gc3 = style->dark_gc[state_type];
+      gc4 = style->mid_gc[state_type];
   }
 
   if ((width == -1) && (height == -1))
@@ -302,6 +305,7 @@ draw_shadow (GtkStyle * style, GdkWindow * window, GtkStateType state_type, GtkS
     gdk_gc_set_clip_rectangle (gc1, area);
     gdk_gc_set_clip_rectangle (gc2, area);
     gdk_gc_set_clip_rectangle (gc3, area);
+    gdk_gc_set_clip_rectangle (gc4, area);
     gdk_gc_set_clip_rectangle (style->bg_gc[state_type], area);
   }
 
@@ -336,30 +340,30 @@ draw_shadow (GtkStyle * style, GdkWindow * window, GtkStateType state_type, GtkS
     gdk_draw_line (window, style->light_gc[state_type], x + width - 2, y + 1, x + width - 2, y + height - 2);
     break;
   case GTK_SHADOW_IN:
-    gdk_draw_line (window, gc1, x, y, x + width - 1, y);
-    gdk_draw_line (window, gc1, x, y, x, y + height - 1);
+    gdk_draw_line (window, gc1, x + rdelta, y, x + width - 1 - rdelta, y);
+    gdk_draw_line (window, gc1, x, y + rdelta, x, y + height - 1 - rdelta);
 
-    gdk_draw_line (window, gc2, x + 1, y + height - 1, x + width - 1, y + height - 1);
-    gdk_draw_line (window, gc2, x + width - 1, y + 1, x + width - 1, y + height - 1);
+    gdk_draw_line (window, gc2, x + 1, y + height - 1, x + width - 1 - rdelta, y + height - 1);
+    gdk_draw_line (window, gc2, x + width - 1, y + 1, x + width - 1, y + height - 1 - rdelta);
 
     gdk_draw_line (window, gc3, x + 1, y + 1, x + width - 2, y + 1);
     gdk_draw_line (window, gc3, x + 1, y + 1, x + 1, y + height - 2);
 
-    gdk_draw_line (window, gc1, x + 2, y + height - 2, x + width - 2, y + height - 2);
-    gdk_draw_line (window, gc1, x + width - 2, y + 2, x + width - 2, y + height - 2);
+    gdk_draw_line (window, gc4, x + 2, y + height - 2, x + width - 2, y + height - 2);
+    gdk_draw_line (window, gc4, x + width - 2, y + 2, x + width - 2, y + height - 2);
     break;
   case GTK_SHADOW_OUT:
-    gdk_draw_line (window, gc1, x, y, x + width - 1, y);
-    gdk_draw_line (window, gc1, x, y, x, y + height - 1);
+    gdk_draw_line (window, gc1, x + rdelta, y, x + width - 1 - rdelta, y);
+    gdk_draw_line (window, gc1, x, y + rdelta, x, y + height - 1 - rdelta);
 
-    gdk_draw_line (window, gc3, x + 1, y + height - 1, x + width - 1, y + height - 1);
-    gdk_draw_line (window, gc3, x + width - 1, y + 1, x + width - 1, y + height - 1);
+    gdk_draw_line (window, gc3, x + 1, y + height - 1, x + width - 1 - rdelta, y + height - 1);
+    gdk_draw_line (window, gc3, x + width - 1, y + 1, x + width - 1, y + height - 1 - rdelta);
 
     gdk_draw_line (window, gc2, x + 1, y + 1, x + width - 2, y + 1);
     gdk_draw_line (window, gc2, x + 1, y + 1, x + 1, y + height - 2);
 
-    gdk_draw_line (window, gc1, x + 2, y + height - 2, x + width - 2, y + height - 2);
-    gdk_draw_line (window, gc1, x + width - 2, y + 2, x + width - 2, y + height - 2);
+    gdk_draw_line (window, gc4, x + 2, y + height - 2, x + width - 2, y + height - 2);
+    gdk_draw_line (window, gc4, x + width - 2, y + 2, x + width - 2, y + height - 2);
     break;
   }
   if (area)
@@ -367,6 +371,7 @@ draw_shadow (GtkStyle * style, GdkWindow * window, GtkStateType state_type, GtkS
     gdk_gc_set_clip_rectangle (gc1, NULL);
     gdk_gc_set_clip_rectangle (gc2, NULL);
     gdk_gc_set_clip_rectangle (gc3, NULL);
+    gdk_gc_set_clip_rectangle (gc4, NULL);
     gdk_gc_set_clip_rectangle (style->bg_gc[state_type], NULL);
   }
 }
