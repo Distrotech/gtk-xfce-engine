@@ -1,3 +1,19 @@
+2002-07-04  xfce
+
+	* Makefile.am, Makefile.in, acconfig.h, aclocal.m4, config.h.in,
+	configure, configure.in, Theme/Makefile.in,
+	Theme/gtk-2.0/Makefile.in, Theme_basic/Makefile.in,
+	Theme_basic/gtk-2.0/Makefile.in, Theme_funklor/Makefile.in,
+	Theme_funklor/gtk-2.0/Makefile.in, Theme_redmondxp/ICON.png,
+	Theme_redmondxp/Makefile.am, Theme_redmondxp/Makefile.in,
+	Theme_redmondxp/README.html, Theme_redmondxp/gtk-2.0/Makefile.am,
+	Theme_redmondxp/gtk-2.0/Makefile.in, Theme_redmondxp/gtk-2.0/gtkrc:
+	Add Xfce-Redmondxp theme
+
+2002-07-01  xfce
+
+	* ChangeLog: Update ChangeLog
+
 2002-07-01  xfce
 
 	* Theme/gtk-2.0/gtkrc: [no log message]
