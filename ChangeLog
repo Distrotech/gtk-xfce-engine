@@ -1,3 +1,13 @@
+2004-01-07 19:58  olivier
+
+	* gtk-xfce-engine-2.spec.in: Fix spec files so that debug files
+	  aren't include on Red Hat 9 and later
+
+2003-12-29 16:19  olivier
+
+	* ChangeLog: Update version number, Update ChangeLog Fix missing
+	  CHARSET in potfiles
+
 2003-12-18 00:00  olivier
 
 	* ChangeLog: Update ChangeLog(s)
