@@ -14,11 +14,13 @@ style "default"
     GtkPaned::handle_full_size        = 1
     GtkPaned::handle_size             = 7
     GtkRadioButton::indicator_size    = 15
-    GtkRange::slider_width            = 15
+    GtkRange::slider_width            = 14
     GtkRange::stepper_size            = 15
     GtkRange::stepper_spacing         = 0
-    GtkRange::trough_border           = 0
+    GtkRange::trough_border           = 1
     GtkScrollbar::min_slider_length   = 20
+    GtkScrollbar::has_backward_stepper = 1
+    GtkScrollbar::has_secondary_backward_stepper = 1
     GtkSpinButton::shadow_type        = out
     GtkToolbar::shadow_type           = none
     GtkWidget::focus-line-width       = 1
@@ -98,8 +100,8 @@ style "button" = "default"
         {
             fill_style = gradient
             orientation = vertical
-            shade_start = 0.95
-            shade_end = 1.05
+            shade_start = 1.05
+            shade_end = 0.95
         }
     }
 }
@@ -116,8 +118,8 @@ class "*OptionMenu*"               style "button"
 
 style "sbstyle" = "default"
 {
-    xthickness = 2
-    ythickness = 2
+    xthickness = 1
+    ythickness = 1
     engine "xfce" 
     {
         smooth_edge = true
@@ -125,8 +127,8 @@ style "sbstyle" = "default"
         {
             fill_style = gradient
             orientation = automatic
-            shade_start = 0.95
-            shade_end = 1.05
+            shade_start = 1.05
+            shade_end = 0.95
         }
     }
 }
