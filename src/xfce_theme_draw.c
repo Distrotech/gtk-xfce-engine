@@ -665,6 +665,17 @@ static void draw_shadow(GtkStyle * style, GdkWindow * window, GtkStateType state
                 {
                     /* Do nothing */
                 }
+                else if (DETAIL("menu"))
+                {
+                    if ((xt > 0) && (yt > 0))
+                    {
+                        gdk_draw_line(window, style->dark_gc[state_type], x, y, x + width - 1, y);
+                        gdk_draw_line(window, style->dark_gc[state_type], x, y, x, y + height - 1);
+
+                        gdk_draw_line(window, style->dark_gc[state_type], x + 1, y + height - 1, x + width - 1, y + height - 1);
+                        gdk_draw_line(window, style->dark_gc[state_type], x + width - 1, y + 1, x + width - 1, y + height - 1);
+                    }
+                }
                 else if (DETAIL("menubar"))
                 {
                     if ((xt > 1) && (yt > 1))
