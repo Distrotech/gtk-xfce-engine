@@ -18,17 +18,17 @@ extern GType xfce_type_rc_style;
 
 struct _XfceRcStyle
 {
-  GtkRcStyle parent_instance;
+    GtkRcStyle parent_instance;
 
-  gboolean smooth_edge;
+    gboolean smooth_edge;
 };
 
 struct _XfceRcStyleClass
 {
-  GtkRcStyleClass parent_class;
+    GtkRcStyleClass parent_class;
 };
 
-void xfce_rc_style_register_type (GTypeModule *module);
+void xfce_rc_style_register_type(GTypeModule * module);
 
 /* Default stuff */
 #define DEFAULT_SCROLLTHUMB_SIZE  12
@@ -36,9 +36,8 @@ void xfce_rc_style_register_type (GTypeModule *module);
 #define SMALLEST_HANDLE           17
 
 enum
-  {
+{
     TOKEN_SMOOTHEDGE = G_TOKEN_LAST + 1,
     TOKEN_TRUE,
     TOKEN_FALSE,
-  };
-  
+};

@@ -18,14 +18,12 @@ extern GType xfce_type_style;
 
 struct _XfceStyle
 {
-  GtkStyle parent_instance;
+    GtkStyle parent_instance;
 };
 
 struct _XfceStyleClass
 {
-  GtkStyleClass parent_class;
+    GtkStyleClass parent_class;
 };
 
-void xfce_style_register_type (GTypeModule *module);
-
-
+void xfce_style_register_type(GTypeModule * module);
