@@ -1,5 +1,3 @@
-# Edit these colors and fonts however you like.
-
 style "xfce-redmondxp-default"
 {
     GtkWidget::interior_focus         = 1

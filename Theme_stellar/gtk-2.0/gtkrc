@@ -1,9 +1,3 @@
-# Solaris theme for GTK+ 2.0
-# (c) fox@ppdv.ru
-#
-# (based on PrettyOkayish theme)
-
-# Edit these colors and fonts however you like.
 style "default"
 {
   GtkWidget::interior_focus         = 5

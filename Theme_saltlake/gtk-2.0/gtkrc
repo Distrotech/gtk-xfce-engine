@@ -1,8 +1,8 @@
 style "default"
 {
-    GtkWidget::interior_focus         = 5
-    GtkButton::default_border         = {5, 5, 5, 5}
-    GtkButton::default_outside_border = {5, 5, 5, 5}
+    GtkWidget::interior_focus         = 1
+    GtkButton::default_border         = {0, 0, 0, 0}
+    GtkButton::default_outside_border = {0, 0, 0, 0}
     GtkButton::default_spacing        = 5
     GtkRange::slider_width            = 15
     GtkRange::stepper_size            = 15
