@@ -2,13 +2,18 @@
 AC_INIT(xfce_theme_draw.c)
 THEME="xfce"
 
-# For automake.
+AC_PREREQ(2.52)
+
 VERSION=2.0.11
 PACKAGE=gtk-${THEME}-engine
-
-AM_INIT_AUTOMAKE($PACKAGE, $VERSION, no-define)
+AM_INIT_AUTOMAKE($PACKAGE, $VERSION)
 
 AM_CONFIG_HEADER(config.h)
+AM_MAINTAINER_MODE
+
+## libtool support (for plugins)
+AC_DISABLE_STATIC
+AC_PROG_LIBTOOL
 
 # Honor aclocal flags
 ACLOCAL="$ACLOCAL $ACLOCAL_FLAGS"
@@ -16,11 +21,11 @@ ACLOCAL="$ACLOCAL $ACLOCAL_FLAGS"
 AC_PROG_CC
 AC_PROG_INSTALL
 
-# No static please
-AM_DISABLE_STATIC
+AC_C_INLINE
+AC_C_CONST
 
-dnl Initialize libtool
-AM_PROG_LIBTOOL
+AC_PATH_XTRA
+AC_HEADER_STDC
 
 ## Versions of dependencies
 GLIB_REQUIRED_VERSION=2.0.0
@@ -38,12 +43,6 @@ GTK_VERSION=`$PKG_CONFIG --variable=gtk_binary_version gtk+-2.0`
 AC_SUBST(GTK_VERSION)
 AC_SUBST(XFCE_CFLAGS)
 AC_SUBST(XFCE_LIBS)
-
-# Checks for header files.
-AC_HEADER_STDC
-
-# Checks for typedefs, structures, and compiler characteristics.
-AC_C_CONST
 
 AC_OUTPUT([
 gtk-xfce-engine-2.spec

@@ -18,17 +18,17 @@ style "xfce-default"
     xthickness = 2
     ythickness = 2
 
-    base[ACTIVE]      = "#cdcdc8"
-    base[INSENSITIVE] = "#dadbda"
+    base[ACTIVE]      = "#d8d7c4"
+    base[INSENSITIVE] = "#e1e0d7"
     base[NORMAL]      = "#ffffff"
-    base[PRELIGHT]    = "#cacbca"
-    base[SELECTED]    = "#1a65a2"
+    base[PRELIGHT]    = "#e1e0d7"
+    base[SELECTED]    = "#3e83a6"
 
-    bg[ACTIVE]        = "#c1c1ba"
-    bg[INSENSITIVE]   = "#dadbda"
-    bg[NORMAL]        = "#dadbda"
-    bg[PRELIGHT]      = "#dadbda"
-    bg[SELECTED]      = "#1a65a2"
+    bg[ACTIVE]        = "#d8d7c4"
+    bg[INSENSITIVE]   = "#e1e0d7"
+    bg[NORMAL]        = "#e1e0d7"
+    bg[PRELIGHT]      = "#e1e0d7"
+    bg[SELECTED]      = "#3e83a6"
 
     fg[ACTIVE]        = "#000000"
     fg[INSENSITIVE]   = "#7f7f79"
@@ -59,17 +59,17 @@ style "xfce-colored"
     xthickness = 2
     ythickness = 2
 
-    base[ACTIVE]      = "#cdcdc8"
-    base[INSENSITIVE] = "#dadbda"
+    base[ACTIVE]      = "#d8d7c4"
+    base[INSENSITIVE] = "#e1e0d7"
     base[NORMAL]      = "#ffffff"
-    base[PRELIGHT]    = "#cacbca"
-    base[SELECTED]    = "#1a65a2"
+    base[PRELIGHT]    = "#e1e0d7"
+    base[SELECTED]    = "#3e83a6"
 
     bg[ACTIVE]        = "#1d5a8b"
-    bg[INSENSITIVE]   = "#dadbda"
-    bg[NORMAL]        = "#dadbda"
-    bg[PRELIGHT]      = "#1a65a2"
-    bg[SELECTED]      = "#1a65a2"
+    bg[INSENSITIVE]   = "#e1e0d7"
+    bg[NORMAL]        = "#e1e0d7"
+    bg[PRELIGHT]      = "#3e83a6"
+    bg[SELECTED]      = "#3e83a6"
 
     fg[ACTIVE]        = "#ffffff"
     fg[INSENSITIVE]   = "#7f7f79"
