@@ -82,7 +82,7 @@ class "*Notebook*"                 style "notebook"
 
 style "menubar" = "default"
 {
-    xthickness = 0
+    xthickness = 2
     ythickness = 2
 }
 widget_class "*BonoboDockItem"     style "menubar"
@@ -202,8 +202,8 @@ class "*GtkProgress*"              style "progress"
 
 style "handlebox" = "default"
 {
-    xthickness = 0
-    ythickness = 0
+    xthickness = 2
+    ythickness = 2
 }
 widget_class "*HandleBox"          style "handlebox"
 
