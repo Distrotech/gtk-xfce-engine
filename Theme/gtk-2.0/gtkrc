@@ -54,9 +54,6 @@ widget_class "*.GtkToggleButton*"  style "xfce-default"
 
 style "xfce-colored"
 {
-    xthickness = 1
-    ythickness = 1
-
     base[ACTIVE]      = "#d8d8d0"
     base[INSENSITIVE] = "#e1e0df"
     base[NORMAL]      = "#ffffff"
