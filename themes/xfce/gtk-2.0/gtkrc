@@ -9,6 +9,7 @@ style "default"
     GtkCheckButton::indicator_size               = 12
     GtkMenuBar::internal-padding                 = 2
     GtkMenuBar::shadow_type                      = none
+    GtkHandleBox::shadow_type                    = none
     GtkMenuItem::selected_shadow_type            = etched-in
     GtkPaned::handle_full_size                   = 1
     GtkPaned::handle_size                        = 7
@@ -148,6 +149,13 @@ style "progress" = "default"
 }
 widget_class "*Progress*"          style "progress" 
 class "*Progress*"                 style "progress" 
+
+style "flat" = "default"
+{
+    xthickness = 0
+    ythickness = 0
+}
+widget_class "*HandleBox*"         style "flat"
 
 style "menuitem" = "default"
 {
