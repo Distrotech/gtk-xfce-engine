@@ -9,8 +9,8 @@ style "xfce-redmondxp-default"
     GtkCheckButton::indicator_size    = 13
     GtkPaned::handle_full_size        = 1
     GtkRange::trough_border           = 2
-    GtkRange::slider_width            = 15
-    GtkRange::stepper_size            = 15
+    GtkRange::slider_width            = 13
+    GtkRange::stepper_size            = 13
     GtkRange::stepper_spacing         = 0
     GtkSpinButton::shadow_type        = etched-in
 
@@ -40,7 +40,7 @@ style "xfce-redmondxp-default"
 
     engine "xfce" 
     {
-	smooth_edge = FALSE
+	smooth_edge = TRUE
     }
 }
 
