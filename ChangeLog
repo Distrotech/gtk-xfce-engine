@@ -1,3 +1,7 @@
+2004-07-09 09:53  olivier
+
+	* ChangeLog: Update ChangeLogs for 4.0.6
+
 2004-05-18 22:04  olivier
 
 	* configure, configure.in, src/xfce_theme_draw.c: Backport from
