@@ -12,7 +12,7 @@ style "default"
     GtkRange::slider_width            = 12
     GtkRange::stepper_size            = 12
     GtkRange::stepper_spacing         = 0
-    GtkRange::trough_border           = 1
+    GtkRange::trough_border           = 0
     GtkScrollbar::min_slider_length   = 20
     GtkWidget::focus-line-pattern     = "\0"
     GtkWidget::focus-line-width       = 2

@@ -11,7 +11,7 @@ style "default"
     GtkPaned::handle_full_size                   = 1                
     GtkRange::slider_width                       = 15               
     GtkRange::stepper_size                       = 15               
-    GtkRange::trough_border                      = 1                
+    GtkRange::trough_border                      = 0
     GtkSpinButton::shadow_type                   = in
     GtkScrollbar::has_backward_stepper           = 1
     GtkScrollbar::has_forward_stepper            = 1

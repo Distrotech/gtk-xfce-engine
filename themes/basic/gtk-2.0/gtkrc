@@ -12,7 +12,7 @@ style "default"
     GtkRange::slider_width            = 14
     GtkRange::stepper_size            = 14
     GtkRange::stepper_spacing         = 0
-    GtkRange::trough_border           = 1
+    GtkRange::trough_border           = 0
 
     engine "xfce" 
     {
@@ -68,8 +68,8 @@ widget_class "*Collection"         style "rox"
 
 style "scrollbar" = "default"
 {
-    xthickness = 1
-    ythickness = 1
+    xthickness = 2
+    ythickness = 2
     engine "xfce" 
     {
         smooth_edge = true

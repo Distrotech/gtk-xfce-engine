@@ -7,11 +7,11 @@ style "default"
     GtkButton::focus-padding          = 0
     GtkCheckButton::indicator_size    = 15
     GtkRadioButton::indicator_size    = 15
-    GtkMenuItem::selected_shadow_type = in
+    GtkMenuItem::selected_shadow_type = etched-in
     GtkPaned::handle_full_size        = 1
     GtkRange::slider_width            = 15
     GtkRange::stepper_size            = 15
-    GtkRange::trough_border           = 2
+    GtkRange::trough_border           = 0
     GtkScrollbar::min_slider_length   = 20
     GtkWidget::interior_focus         = 1
 
@@ -58,7 +58,8 @@ style "thin" = "default"
 
 widget_class "*Progress"  style "thin" 
 class "*Progress"         style "thin" 
-
+widget_class "*MenuItem*" style "thin" 
+class "*MenuItem*"        style "thin" 
 
 # This is for ROX-Filer
 # 
