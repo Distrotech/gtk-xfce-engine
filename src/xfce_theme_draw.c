@@ -905,14 +905,16 @@ static GdkBitmap *get_part_bmap (GdkDrawable *drawable, Part part)
     {
 	parts[part].bmap = gdk_bitmap_create_from_data(drawable, parts[part].bits, PART_SIZE, PART_SIZE);
     }
-    return parts[part].bmap
+    return parts[part].bmap;
 #endif
 }
 
 static void draw_part(GdkDrawable * drawable, GdkGC * gc, GdkRectangle * area, gint x, gint y, Part part)
 {
     if(area)
+    {
 	gdk_gc_set_clip_rectangle(gc, area);
+    }
 
     gdk_gc_set_ts_origin(gc, x, y);
     gdk_gc_set_stipple(gc, get_part_bmap (drawable, part));
@@ -923,7 +925,9 @@ static void draw_part(GdkDrawable * drawable, GdkGC * gc, GdkRectangle * area, g
     gdk_gc_set_fill(gc, GDK_SOLID);
 
     if(area)
+    {
 	gdk_gc_set_clip_rectangle(gc, NULL);
+    }
 }
 
 static void draw_check(GtkStyle * style, GdkWindow * window, GtkStateType state, GtkShadowType shadow, GdkRectangle * area, GtkWidget * widget, const gchar * detail, gint x, gint y, gint width, gint height)
