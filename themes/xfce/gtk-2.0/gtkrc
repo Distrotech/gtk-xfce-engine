@@ -15,7 +15,7 @@ style "default"
     GtkPaned::handle_size                        = 7
     GtkRadioButton::indicator_size               = 15
     GtkRange::slider_width                       = 14
-    GtkRange::stepper_size                       = 15
+    GtkRange::stepper_size                       = 14
     GtkRange::stepper_spacing                    = 0
     GtkRange::trough_border                      = 1
     GtkScrollbar::has_backward_stepper           = 1
@@ -58,7 +58,7 @@ style "default"
     engine "xfce" 
     {
         smooth_edge = true
-        grip_style = none
+        grip_style = engrave
         boxfill
         {
             fill_style = plain
