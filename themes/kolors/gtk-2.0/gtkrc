@@ -1,4 +1,4 @@
-style "xfce-etria-default"
+style "xfce-kolors-default"
 {
     GtkButton::default_border         = {0, 0, 0, 0}
     GtkButton::default_outside_border = {0, 0, 0, 0}
@@ -56,9 +56,9 @@ style "xfce-etria-default"
         }
     }
 }
-widget_class "*"                   style "xfce-etria-default"
+widget_class "*"                   style "xfce-kolors-default"
 
-style "xfce-etria-menustyle" = "xfce-etria-default"
+style "xfce-kolors-menustyle" = "xfce-kolors-default"
 {
     xthickness = 0
     ythickness = 2
@@ -71,16 +71,16 @@ style "xfce-etria-menustyle" = "xfce-etria-default"
         }
     }
 }
-widget_class "*BonoboDockItem*"    style "xfce-etria-menustyle"
-class "*BonoboDockItem*"           style "xfce-etria-menustyle"
-widget_class "*HandleBox*"         style "xfce-etria-menustyle"
-class "*HandleBox*"                style "xfce-etria-menustyle"
-widget_class "*Tool*"              style "xfce-etria-menustyle"
-class "*Tool*"                     style "xfce-etria-menustyle"
-widget_class "*MenuBar*"           style "xfce-etria-menustyle"
-class "*MenuBar*"                  style "xfce-etria-menustyle"
+widget_class "*BonoboDockItem*"    style "xfce-kolors-menustyle"
+class "*BonoboDockItem*"           style "xfce-kolors-menustyle"
+widget_class "*HandleBox*"         style "xfce-kolors-menustyle"
+class "*HandleBox*"                style "xfce-kolors-menustyle"
+widget_class "*Tool*"              style "xfce-kolors-menustyle"
+class "*Tool*"                     style "xfce-kolors-menustyle"
+widget_class "*MenuBar*"           style "xfce-kolors-menustyle"
+class "*MenuBar*"                  style "xfce-kolors-menustyle"
 
-style "xfce-etria-buttonstyle" = "xfce-etria-default"
+style "xfce-kolors-buttonstyle" = "xfce-kolors-default"
 {
     xthickness = 1
     ythickness = 1
@@ -96,10 +96,10 @@ style "xfce-etria-buttonstyle" = "xfce-etria-default"
         }
     }
 }
-widget_class "*Button*"            style "xfce-etria-buttonstyle"
-class "*Button*"                   style "xfce-etria-buttonstyle"
+widget_class "*Button*"            style "xfce-kolors-buttonstyle"
+class "*Button*"                   style "xfce-kolors-buttonstyle"
 
-style "xfce-etria-sbstyle" = "xfce-etria-default"
+style "xfce-kolors-sbstyle" = "xfce-kolors-default"
 {
     xthickness = 1
     ythickness = 1
@@ -115,17 +115,36 @@ style "xfce-etria-sbstyle" = "xfce-etria-default"
         }
     }
 }
-widget_class "*Scrollbar*"         style "xfce-etria-sbstyle"
-class "*Scrollbar*"                style "xfce-etria-sbstyle"
-widget_class "*Scale*"             style "xfce-etria-sbstyle"
-class "*Scale*"                    style "xfce-etria-sbstyle"
+widget_class "*Scrollbar*"         style "xfce-kolors-sbstyle"
+class "*Scrollbar*"                style "xfce-kolors-sbstyle"
+widget_class "*Scale*"             style "xfce-kolors-sbstyle"
+class "*Scale*"                    style "xfce-kolors-sbstyle"
 
-style "xfce-etria-titlebar"
+style "xfce-kolors-progress" = "xfce-kolors-default"
+{
+    xthickness = 1
+    ythickness = 1
+    engine "xfce" 
+    {
+        smooth_edge = true
+        boxfill
+        {
+            fill_style = gradient
+            orientation = auto
+            shade_start = 1.1
+            shade_end = 0.9
+        }
+    }
+}
+widget_class "*Progress*"          style "xfce-kolors-progress" 
+class "*Progress*"                 style "xfce-kolors-progress" 
+
+style "xfce-kolors-titlebar"
 {
     bg[SELECTED]      = "#3E91EB"
     fg[SELECTED]      = "#ffffff"
     bg[ACTIVE]        = "#8F9FB4"
     fg[NORMAL]        = "#ffffff"
 }
-widget "xfwm"                      style "xfce-etria-titlebar"
-class "MetaFrames"                 style "xfce-etria-titlebar"
+widget "xfwm"                      style "xfce-kolors-titlebar"
+class "MetaFrames"                 style "xfce-kolors-titlebar"

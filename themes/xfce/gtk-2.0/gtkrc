@@ -70,10 +70,10 @@ style "xfce-colored" = "xfce-default"
     bg[PRELIGHT]      = "#606080"
 
     fg[ACTIVE]        = "#000000"
-    fg[PRELIGHT]      = "#000000"
+    fg[PRELIGHT]      = "#ffffff"
 
     text[ACTIVE]      = "#000000"
-    text[PRELIGHT]    = "#000000"
+    text[PRELIGHT]    = "#ffffff"
 
     engine "xfce" 
     {
@@ -128,8 +128,8 @@ style "xfce-menuitem" = "xfce-colored"
         {
             fill_style = gradient
             orientation = auto
-            shade_start = 0.90
-            shade_end = 2.00
+            shade_start = 0.80
+            shade_end = 1.80
         }
     }
 }
@@ -148,8 +148,8 @@ style "xfce-scrollbar" = "xfce-default"
         {
             fill_style = gradient
             orientation = auto
-            shade_start = 0.90
-            shade_end = 2.00
+            shade_start = 0.80
+            shade_end = 1.80
         }
     }
 }
@@ -168,8 +168,8 @@ style "xfce-button" = "xfce-colored"
         {
             fill_style = gradient
             orientation = vertical
-            shade_start = 0.90
-            shade_end = 2.00
+            shade_start = 0.80
+            shade_end = 1.80
         }
     }
 }
@@ -181,10 +181,28 @@ widget_class "*OptionMenu*"        style "xfce-button"
 class "*OptionMenu*"               style "xfce-button" 
 widget_class "*Tree*"              style "xfce-button" 
 class "*Tree*"                     style "xfce-button" 
-widget_class "*Progress*"          style "xfce-button" 
-class "*Progress*"                 style "xfce-button" 
 widget_class "*Scale*"             style "xfce-button" 
 class "*Scale*"                    style "xfce-button" 
+
+style "xfce-progress" = "xfce-colored"
+{
+    xthickness = 1
+    ythickness = 1
+
+    engine "xfce" 
+    {
+        smooth_edge = true
+        boxfill
+        {
+            fill_style = gradient
+            orientation = vertical
+            shade_start = 0.80
+            shade_end = 1.80
+        }
+    }
+}
+widget_class "*Progress*"          style "xfce-progress" 
+class "*Progress*"                 style "xfce-progress" 
 
 widget_class "*CheckButton*"       style "xfce-default"
 class "*CheckButton*"              style "xfce-default"
