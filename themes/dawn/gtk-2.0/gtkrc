@@ -71,7 +71,7 @@ style "menustyle" = "default"
     engine "xfce" 
     {
         smooth_edge = true
-        grip_style = slide
+        grip_style = none
         boxfill
         {
             fill_style = gradient
@@ -98,7 +98,7 @@ style "button" = "default"
     engine "xfce" 
     {
         smooth_edge = true
-        grip_style = slide
+        grip_style = none
         boxfill
         {
             fill_style = gradient
@@ -126,7 +126,7 @@ style "sbstyle" = "default"
     engine "xfce" 
     {
         smooth_edge = true
-        grip_style = slide
+        grip_style = none
         boxfill
         {
             fill_style = gradient
