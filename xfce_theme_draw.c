@@ -342,6 +342,11 @@ draw_shadow (GtkStyle * style, GdkWindow * window, GtkStateType state_type, GtkS
 
 	gdk_draw_line (window, style->light_gc[state_type], x + 2, y + height - 2, x + width - 2, y + height - 2);
 	gdk_draw_line (window, style->light_gc[state_type], x + width - 2, y + 2, x + width - 2, y + height - 2);
+
+        gdk_draw_point (window, style->dark_gc[state_type], x + RDELTA, y + RDELTA);
+        gdk_draw_point (window, style->dark_gc[state_type], x + width - 1 - RDELTA, y + RDELTA);
+        gdk_draw_point (window, style->dark_gc[state_type], x + RDELTA, y + height - 1 - RDELTA);
+        gdk_draw_point (window, style->dark_gc[state_type], x + width - 1 - RDELTA, y + height - 1 - RDELTA);
     }
     else
     {
@@ -372,6 +377,11 @@ draw_shadow (GtkStyle * style, GdkWindow * window, GtkStateType state_type, GtkS
 
 	gdk_draw_line (window, style->mid_gc[state_type], x + 2, y + height - 2, x + width - 2, y + height - 2);
 	gdk_draw_line (window, style->mid_gc[state_type], x + width - 2, y + 2, x + width - 2, y + height - 2);
+
+        gdk_draw_point (window, style->dark_gc[state_type], x + RDELTA, y + RDELTA);
+        gdk_draw_point (window, style->dark_gc[state_type], x + width - 1 - RDELTA, y + RDELTA);
+        gdk_draw_point (window, style->dark_gc[state_type], x + RDELTA, y + height - 1 - RDELTA);
+        gdk_draw_point (window, style->dark_gc[state_type], x + width - 1 - RDELTA, y + height - 1 - RDELTA);
     }
     else
     {
