@@ -210,9 +210,16 @@ static void xfce_fill_background(GtkStyle * style, GdkWindow * window, GtkStateT
 		}
 		break;
 	}
-        shade_start = XFCE_RC_STYLE(style->rc_style)->shade_start;
-        shade_end = XFCE_RC_STYLE(style->rc_style)->shade_end;
-	
+	if (state_type == GTK_STATE_ACTIVE)
+	{
+            shade_start = MIN (XFCE_RC_STYLE(style->rc_style)->shade_start, XFCE_RC_STYLE(style->rc_style)->shade_end);
+            shade_end = MAX (XFCE_RC_STYLE(style->rc_style)->shade_start, XFCE_RC_STYLE(style->rc_style)->shade_end);
+        }
+	else
+	{
+            shade_start = XFCE_RC_STYLE(style->rc_style)->shade_start;
+            shade_end = XFCE_RC_STYLE(style->rc_style)->shade_end;
+	}	
         gdk_gc_get_values(style->bg_gc[state_type], &gc_values);
 	gdk_gc_set_function(gc, GDK_COPY);
         gdk_gc_set_line_attributes(gc, 1, GDK_LINE_SOLID, gc_values.cap_style, gc_values.join_style);

@@ -60,10 +60,8 @@ style "xfce-redmondxp-colored" = "xfce-redmondxp-default"
 
     bg[ACTIVE]        = "#0055ef"
     bg[PRELIGHT]      = "#0055ef"
-
     fg[ACTIVE]        = "#ffffff"
     fg[PRELIGHT]      = "#ffffff"
-
     text[PRELIGHT]    = "#ffffff"
 
     engine "xfce" 
@@ -78,52 +76,60 @@ style "xfce-redmondxp-colored" = "xfce-redmondxp-default"
         }
     }
 }
-class "GtkList"                    style "xfce-redmondxp-colored"
-widget_class "*.GtkMenu*"          style "xfce-redmondxp-colored"
-widget_class "*.GtkText*"          style "xfce-redmondxp-colored"
-widget_class "*.GtkEntry*"         style "xfce-redmondxp-colored"
-widget_class "*.GtkTree*"          style "xfce-redmondxp-colored"
-widget_class "*.GtkProgress*"      style "xfce-redmondxp-colored"
+widget_class "*GtkList*"          style "xfce-redmondxp-colored"
+class "*GtkList*"                 style "xfce-redmondxp-colored"
+widget_class "*GtkEntry*"	  style "xfce-redmondxp-colored"
+class "*GtkEntry*"	          style "xfce-redmondxp-colored"
+widget_class "*GtkTree*"	  style "xfce-redmondxp-colored"
+class "*GtkTree*"	          style "xfce-redmondxp-colored"
+widget_class "*GtkProgress*"	  style "xfce-redmondxp-colored"
+class "*GtkProgress*"	          style "xfce-redmondxp-colored"
 
-style "xfce-redmondxp-scroll" = "xfce-redmondxp-default"
+style "xfce-redmondxp-menu" = "xfce-redmondxp-colored"
 {
-    base[ACTIVE]      = "#d4d4ce"
-    base[INSENSITIVE] = "#f7efe7"
-    base[NORMAL]      = "#f7efe7"
-    base[PRELIGHT]    = "#c6d3ff"
-    base[SELECTED]    = "#c6d3ff"
+    xthickness = 1
+    ythickness = 2
 
-    bg[NORMAL]        = "#c6d3ff"
-    bg[PRELIGHT]      = "#c6d3ff"
-    bg[SELECTED]      = "#f7efe7"
-
-    fg[SELECTED]      = "#000000"
-
-    text[SELECTED]    = "#000000"
+    bg[INSENSITIVE]   = "#ffffff"
+    bg[NORMAL]        = "#ffffff"
 
     engine "xfce" 
     {
         smooth_edge = true
         boxfill
         {
-            fill_style = gradient
-            orientation = auto
-            shade_start = 0.9
-            shade_end = 1.1
+            fill_style = plain
         }
     }
 }
-widget_class "*Scrollbar*"         style "xfce-redmondxp-scroll"
-class "*Scrollbar*"                style "xfce-redmondxp-scroll"
-widget_class "*Scale*"             style "xfce-redmondxp-scroll"
-class "*Scale*"                    style "xfce-redmondxp-scroll"
+widget_class "*Menu*"           style "xfce-redmondxp-menu"
+class "*Menu*"                  style "xfce-redmondxp-menu"
+
+style "xfce-redmondxp-menubar" = "xfce-redmondxp-colored"
+{
+    xthickness = 0
+    ythickness = 3
+}
+
+widget_class "*BonoboDockItem*"    style "xfce-redmondxp-menubar"
+class "*BonoboDockItem*"           style "xfce-redmondxp-menubar"
+widget_class "*HandleBox*"         style "xfce-redmondxp-menubar"
+class "*HandleBox*"                style "xfce-redmondxp-menubar"
+widget_class "*Tool*"              style "xfce-redmondxp-menubar"
+class "*Tool*"                     style "xfce-redmondxp-menubar"
+widget_class "*MenuBar*"           style "xfce-redmondxp-menubar"
+class "*MenuBar*"                  style "xfce-redmondxp-menubar"
 
 style "xfce-redmondxp-button" = "xfce-redmondxp-default"
 {
     bg[NORMAL]        = "#fafaf2"
     bg[ACTIVE]        = "#ffcb39"
-    bg[PRELIGHT]      = "#fafaf2"
+    bg[PRELIGHT]      = "#0055ef"
     bg[INSENSITIVE]   = "#fafaf2"
+    fg[SELECTED]      = "#000000"
+    fg[PRELIGHT]      = "#ffffff"
+    text[SELECTED]    = "#000000"
+    text[PRELIGHT]    = "#ffffff"
 
     engine "xfce" 
     {
@@ -151,6 +157,36 @@ style "xfce-redmondxp-notebook" = "xfce-redmondxp-default"
 
 widget_class "*Notebook*" style "xfce-redmondxp-notebook"
 class "*Notebook*"        style "xfce-redmondxp-notebook"
+
+style "xfce-redmondxp-scroll" = "xfce-redmondxp-default"
+{
+    base[ACTIVE]      = "#d4d4ce"
+    base[INSENSITIVE] = "#f7efe7"
+    base[NORMAL]      = "#f7efe7"
+    base[PRELIGHT]    = "#c6d3ff"
+    base[SELECTED]    = "#c6d3ff"
+    bg[NORMAL]        = "#c6d3ff"
+    bg[PRELIGHT]      = "#c6d3ff"
+    bg[SELECTED]      = "#f7efe7"
+    fg[SELECTED]      = "#000000"
+    text[SELECTED]    = "#000000"
+
+    engine "xfce" 
+    {
+        smooth_edge = true
+        boxfill
+        {
+            fill_style = gradient
+            orientation = auto
+            shade_start = 1.1
+            shade_end = 0.9
+        }
+    }
+}
+widget_class "*Scrollbar*"         style "xfce-redmondxp-scroll"
+class "*Scrollbar*"                style "xfce-redmondxp-scroll"
+widget_class "*Scale*"             style "xfce-redmondxp-scroll"
+class "*Scale*"                    style "xfce-redmondxp-scroll"
 
 style "xfce-redmondxp-titlebar"
 {

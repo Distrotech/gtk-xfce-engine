@@ -61,7 +61,7 @@ widget_class "*"                   style "xfce-etria-default"
 style "xfce-etria-menustyle" = "xfce-etria-default"
 {
     xthickness = 0
-    ythickness = 0
+    ythickness = 2
     engine "xfce" 
     {
         smooth_edge = true
