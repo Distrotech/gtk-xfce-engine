@@ -1,53 +1,58 @@
 style "default"
 {
-  GtkWidget::interior_focus         = 5
-  GtkButton::default_border         = {5, 5, 5, 5}
-  GtkButton::default_outside_border = {5, 5, 5, 5}
-  GtkButton::default_spacing        = 5
-  GtkCheckButton::indicator_size    = 15
-  GtkPaned::handle_full_size        = 1
-  GtkRange::trough_border           = 1
-  GtkRange::slider_width            = 12
-  GtkRange::stepper_size            = 12
-  GtkRange::stepper_spacing         = 0
-  GtkSpinButton::shadow_type        = out
-  GtkMenuItem::selected_shadow_type = in
-  GtkScrollbar::min_slider_length   = 20
+    GtkWidget::interior_focus         = 5
+    GtkButton::default_border         = {5, 5, 5, 5}
+    GtkButton::default_outside_border = {5, 5, 5, 5}
+    GtkButton::default_spacing        = 5
+    GtkCheckButton::indicator_size    = 15
+    GtkPaned::handle_full_size        = 1
+    GtkRange::trough_border           = 1
+    GtkRange::slider_width            = 12
+    GtkRange::stepper_size            = 12
+    GtkRange::stepper_spacing         = 0
+    GtkSpinButton::shadow_type        = out
+    GtkWidget::internal-padding       = 2
+    GtkWidget::focus-padding          = 0
+    GtkWidget::focus-line-pattern     = "\0"
+    GtkWidget::focus-line-width       = 2
+    GtkWidget::interior_focus         = 0
+    GtkMenuItem::selected_shadow_type = in
+    GtkScrollbar::min_slider_length   = 20
 
-  xthickness = 1
-  ythickness = 1
+    xthickness = 1
+    ythickness = 1
 
-  fg[NORMAL]       = "#000000"
-  fg[ACTIVE]       = "#000000"
-  fg[PRELIGHT]     = "#000000"
-  fg[SELECTED]     = "#FFFFFF"
-  fg[INSENSITIVE]  = "#4E4F56" 
-  bg[NORMAL]       = "#AEB2C3"
-  bg[ACTIVE]       = "#9BA0B0"
-  bg[PRELIGHT]     = "#AEB2C3"
-  bg[SELECTED]     = "#B24D7A"
-  bg[INSENSITIVE]  = "#9BA0B0"
-  base[NORMAL]     = "#FCFCF0"
-  base[SELECTED]   = "#B24D7A"
-  base[ACTIVE]     = "#888CA0"
-  base[PRELIGHT]   = "#B24D7A"
-  base[INSENSITIVE]= "#969BB4"
-  text[INSENSITIVE]= "#747474"
-  text[NORMAL]     = "#000000"
-  text[ACTIVE]     = "#000000"
-  text[PRELIGHT]   = "#000000"
-  text[SELECTED]   = "#FFFFFF"
+    fg[NORMAL]       = "#000000"
+    fg[ACTIVE]       = "#000000"
+    fg[PRELIGHT]     = "#000000"
+    fg[SELECTED]     = "#FFFFFF"
+    fg[INSENSITIVE]  = "#4E4F56" 
+    bg[NORMAL]       = "#AEB2C3"
+    bg[ACTIVE]       = "#9BA0B0"
+    bg[PRELIGHT]     = "#AEB2C3"
+    bg[SELECTED]     = "#B24D7A"
+    bg[INSENSITIVE]  = "#9BA0B0"
+    base[NORMAL]     = "#FCFCF0"
+    base[SELECTED]   = "#B24D7A"
+    base[ACTIVE]     = "#888CA0"
+    base[PRELIGHT]   = "#B24D7A"
+    base[INSENSITIVE]= "#969BB4"
+    text[INSENSITIVE]= "#747474"
+    text[NORMAL]     = "#000000"
+    text[ACTIVE]     = "#000000"
+    text[PRELIGHT]   = "#000000"
+    text[SELECTED]   = "#FFFFFF"
 
-  engine "xfce"
-  {
-      smooth_edge = true
-  }
+    engine "xfce"
+    {
+        smooth_edge = true
+    }
 }
 
 style "menu" = "default"
 {
-  bg[PRELIGHT]     = "#9BA0B0" 
-  text[PRELIGHT]   = "#FFFFFF"
+    bg[PRELIGHT]     = "#9BA0B0" 
+    text[PRELIGHT]   = "#FFFFFF"
 }
 
 class "GtkWidget"    style "default"
