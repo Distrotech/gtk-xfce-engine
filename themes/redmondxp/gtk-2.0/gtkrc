@@ -1,21 +1,23 @@
 style "xfce-redmondxp-default"
 {
-    GtkWidget::interior_focus         = 1
     GtkButton::default_border         = {0, 0, 0, 0}
     GtkButton::default_outside_border = {0, 0, 0, 0}
     GtkButton::default_spacing        = 10
+    GtkButton::focus-line-width       = 1
+    GtkButton::focus-padding          = 0
     GtkCheckButton::indicator_size    = 15
+    GtkMenuBar::shadow_type           = none
+    GtkMenuItem::selected_shadow_type = none
     GtkPaned::handle_full_size        = 1
-    GtkRange::trough_border           = 0
     GtkRange::slider_width            = 15
     GtkRange::stepper_size            = 15
     GtkRange::stepper_spacing         = 0
-    GtkSpinButton::shadow_type        = out
-    GtkMenuItem::selected_shadow_type = none
+    GtkRange::trough_border           = 0
     GtkScrollbar::min_slider_length   = 20
-    GtkWidget::internal-padding       = 4
-    GtkMenuBar::shadow_type           = none
+    GtkSpinButton::shadow_type        = out
     GtkToolbar::shadow_type           = none
+    GtkWidget::interior_focus         = 1
+    GtkWidget::internal-padding       = 4
 
     xthickness = 2
     ythickness = 2

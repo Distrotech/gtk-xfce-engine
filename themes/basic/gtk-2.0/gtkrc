@@ -1,17 +1,19 @@
 style "default"
 {
-    GtkWidget::interior_focus         = 1
     GtkButton::default_border         = {0, 0, 0, 0}
     GtkButton::default_outside_border = {0, 0, 0, 0}
     GtkButton::default_spacing        = 8
+    GtkButton::focus-line-width       = 1
+    GtkButton::focus-padding          = 0
+    GtkCheckButton::indicator_size    = 15
+    GtkMenuBar::shadow_type           = none
+    GtkPaned::handle_full_size        = 1
     GtkRange::slider_width            = 15
     GtkRange::stepper_size            = 15
-    GtkCheckButton::indicator_size    = 15
-    GtkPaned::handle_full_size        = 1
     GtkRange::trough_border           = 1
     GtkScrollbar::min_slider_length   = 20
-    GtkMenuBar::shadow_type           = none
     GtkToolbar::shadow_type           = none
+    GtkWidget::interior_focus         = 1
 
     engine "xfce" 
     {

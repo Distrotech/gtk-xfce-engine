@@ -3,7 +3,10 @@ style "xfce-kolors-default"
     GtkButton::default_border         = {0, 0, 0, 0}
     GtkButton::default_outside_border = {0, 0, 0, 0}
     GtkButton::default_spacing        = 11
+    GtkButton::focus-line-width       = 1
+    GtkButton::focus-padding          = 0
     GtkCheckButton::indicator_size    = 11
+    GtkMenuBar::shadow_type           = none
     GtkMenuItem::selected_shadow_type = none
     GtkPaned::handle_full_size        = 1
     GtkRadioButton::indicator_size    = 11
@@ -14,13 +17,12 @@ style "xfce-kolors-default"
     GtkScrollbar::min_slider_length   = 20
     GtkSpinButton::shadow_type        = out
     GtkStatusbar::shadow_type         = none
-    GtkWidget::internal-padding       = 2
-    GtkWidget::focus-padding          = 0
+    GtkToolbar::shadow_type           = none
     GtkWidget::focus-line-pattern     = "\0"
     GtkWidget::focus-line-width       = 2
+    GtkWidget::focus-padding          = 0
     GtkWidget::interior_focus         = 0
-    GtkMenuBar::shadow_type           = none
-    GtkToolbar::shadow_type           = none
+    GtkWidget::internal-padding       = 2
     
     xthickness = 1
     ythickness = 1

@@ -1,18 +1,20 @@
 style "default"
 {
-    GtkWidget::interior_focus         = 1
     GtkButton::default_border         = {0, 0, 0, 0}
     GtkButton::default_outside_border = {0, 0, 0, 0}
     GtkButton::default_spacing        = 5
+    GtkButton::focus-line-width       = 1
+    GtkButton::focus-padding          = 0
     GtkCheckButton::indicator_size    = 15
+    GtkMenuItem::selected_shadow_type = out
     GtkPaned::handle_full_size        = 1
-    GtkRange::trough_border           = 0
     GtkRange::slider_width            = 15
     GtkRange::stepper_size            = 15
     GtkRange::stepper_spacing         = 0
-    GtkSpinButton::shadow_type        = out
-    GtkMenuItem::selected_shadow_type = out
+    GtkRange::trough_border           = 0
     GtkScrollbar::min_slider_length   = 20
+    GtkSpinButton::shadow_type        = out
+    GtkWidget::interior_focus         = 1
 
     fg[NORMAL]        = "#000000"
     fg[ACTIVE]        = "#000000"
