@@ -212,3 +212,9 @@ widget_class "*CheckButton*"       style "xfce-default"
 class "*CheckButton*"              style "xfce-default"
 widget_class "*RadioButton*"       style "xfce-default"
 class "*RadioButton*"              style "xfce-default"
+
+style "xfce-panel"
+{
+    GtkWidget::focus-padding	     = 0
+}
+class "XfceIconbutton" style "xfce-panel"

@@ -104,4 +104,9 @@ style "xfce-kde2-buttonstyle" = "default"
 widget_class "*Button*"            style "xfce-kde2-buttonstyle"
 class "*Button*"                   style "xfce-kde2-buttonstyle"
 
+style "xfce-panel"
+{
+    GtkWidget::focus-padding	     = 0
+}
+class "XfceIconbutton" style "xfce-panel"
 

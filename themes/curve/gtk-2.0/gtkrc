@@ -157,3 +157,9 @@ style "curve-button" = "curve-default"
 }
 widget_class "*Button*"            style "curve-button"
 class "*Button*"                   style "curve-button"
+
+style "xfce-panel"
+{
+    GtkWidget::focus-padding	     = 0
+}
+class "XfceIconbutton" style "xfce-panel"

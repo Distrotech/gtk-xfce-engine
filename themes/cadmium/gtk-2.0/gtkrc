@@ -165,3 +165,9 @@ style "xfce-titlebar"
 widget "xfwm"                      style "xfce-titlebar"
 class "MetaFrames"                 style "xfce-titlebar"
 widget_class "MetaFrames"          style "xfce-titlebar"
+
+style "xfce-panel"
+{
+    GtkWidget::focus-padding	     = 0
+}
+class "XfceIconbutton" style "xfce-panel"

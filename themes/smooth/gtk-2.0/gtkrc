@@ -57,3 +57,9 @@ style "thin" = "default"
 widget_class "*Progress*" style "thin" 
 class "*Progress*"        style "thin" 
 
+
+style "xfce-panel"
+{
+    GtkWidget::focus-padding	     = 0
+}
+class "XfceIconbutton" style "xfce-panel"

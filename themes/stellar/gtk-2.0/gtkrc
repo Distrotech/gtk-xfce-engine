@@ -59,3 +59,10 @@ style "menu" = "default"
 
 class "GtkWidget"    style "default"
 class "GtkMenuItem*" style "menu"
+
+
+style "xfce-panel"
+{
+    GtkWidget::focus-padding	     = 0
+}
+class "XfceIconbutton" style "xfce-panel"
