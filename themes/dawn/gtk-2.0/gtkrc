@@ -28,14 +28,14 @@ style "xfce-default"
     ythickness = 2
 
     base[ACTIVE]      = "#cececa"
-    base[INSENSITIVE] = "#eeede4"
+    base[INSENSITIVE] = "#ebe8e4"
     base[NORMAL]      = "#ffffff"
     base[PRELIGHT]    = "#b0c0d0"
     base[SELECTED]    = "#699dc9"
 
     bg[ACTIVE]        = "#cececa"
-    bg[INSENSITIVE]   = "#eeede4"
-    bg[NORMAL]        = "#eeede4"
+    bg[INSENSITIVE]   = "#ebe8e4"
+    bg[NORMAL]        = "#ebe8e4"
     bg[PRELIGHT]      = "#b0c0d0"
     bg[SELECTED]      = "#b0c0d0"
 
