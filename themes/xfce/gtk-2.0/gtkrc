@@ -57,7 +57,7 @@ style "default"
     engine "xfce" 
     {
         smooth_edge = true
-        grip_style = slide
+        grip_style = engrave
         boxfill
         {
             fill_style = plain
