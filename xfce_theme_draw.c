@@ -17,7 +17,7 @@
 */
 
 #ifdef HAVE_CONFIG_H
-#  include <config.h>
+#  include "config.h"
 #endif
 
 #include <math.h>
@@ -38,7 +38,7 @@
 
 /* If you want to try round corners, set RDELTA to 1 here : */
 #ifndef RDELTA
-  #define RDELTA 0
+  #define RDELTA 1
 #endif
 
 static void xfce_style_init       (XfceStyle      *style);

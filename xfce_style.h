@@ -1,3 +1,7 @@
+#ifdef HAVE_CONFIG_H
+#  include "config.h"
+#endif
+
 #include <gtk/gtkstyle.h>
 
 typedef struct _XfceStyle XfceStyle;

@@ -996,6 +996,7 @@ Optional Features:
   --enable-shared=PKGS  build shared libraries default=yes
   --enable-fast-install=PKGS  optimize for fast installation default=yes
   --disable-libtool-lock  avoid locking (might break parallel builds)
+  --disable-rcorners	set this to get experimental round corners
 
 Optional Packages:
   --with-PACKAGE[=ARG]    use PACKAGE [ARG=yes]
@@ -4237,7 +4238,7 @@ test "x$enable_libtool_lock" != xno && enable_libtool_lock=yes
 case $host in
 *-*-irix6*)
   # Find out which ABI we are using.
-  echo '#line 4240 "configure"' > conftest.$ac_ext
+  echo '#line 4241 "configure"' > conftest.$ac_ext
   if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
   (eval $ac_compile) 2>&5
   ac_status=$?
@@ -4773,7 +4774,7 @@ chmod -w .
 save_CFLAGS="$CFLAGS"
 CFLAGS="$CFLAGS -o out/conftest2.$ac_objext"
 compiler_c_o=no
-if { (eval echo configure:4776: \"$ac_compile\") 1>&5; (eval $ac_compile) 2>out/conftest.err; } && test -s out/conftest2.$ac_objext; then
+if { (eval echo configure:4777: \"$ac_compile\") 1>&5; (eval $ac_compile) 2>out/conftest.err; } && test -s out/conftest2.$ac_objext; then
   # The compiler can only warn and ignore the option if not recognized
   # So say no if there are warnings
   if test -s out/conftest.err; then
@@ -6566,7 +6567,7 @@ else
     lt_dlunknown=0; lt_dlno_uscore=1; lt_dlneed_uscore=2
   lt_status=$lt_dlunknown
   cat > conftest.$ac_ext <<EOF
-#line 6569 "configure"
+#line 6570 "configure"
 #include "confdefs.h"
 
 #if HAVE_DLFCN_H
@@ -6664,7 +6665,7 @@ else
     lt_dlunknown=0; lt_dlno_uscore=1; lt_dlneed_uscore=2
   lt_status=$lt_dlunknown
   cat > conftest.$ac_ext <<EOF
-#line 6667 "configure"
+#line 6668 "configure"
 #include "confdefs.h"
 
 #if HAVE_DLFCN_H
@@ -7830,6 +7831,17 @@ cat >>confdefs.h <<\_ACEOF
 _ACEOF
 
 fi
+
+
+# Check whether --enable-rcorners or --disable-rcorners was given.
+if test "${enable_rcorners+set}" = set; then
+  enableval="$enable_rcorners"
+
+cat >>confdefs.h <<\_ACEOF
+#define RDELTA 0
+_ACEOF
+
+fi;
 
 
 ac_config_files="$ac_config_files gtk-xfce-engine-2.spec Makefile Theme_b5/Makefile Theme_b5/gtk-2.0/Makefile Theme_basic/Makefile Theme_basic/gtk-2.0/Makefile Theme_funklor/Makefile Theme_funklor/gtk-2.0/Makefile Theme/gtk-2.0/Makefile Theme/Makefile Theme_light/Makefile Theme_light/gtk-2.0/Makefile Theme_redmondxp/Makefile Theme_redmondxp/gtk-2.0/Makefile"

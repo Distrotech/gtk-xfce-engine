@@ -36,6 +36,9 @@ AC_HEADER_STDC
 # Checks for typedefs, structures, and compiler characteristics.
 AC_C_CONST
 
+AC_ARG_ENABLE(rcorners, [  --disable-rcorners	set this to get experimental round corners], [ AC_DEFINE(RDELTA, 0, "rdelta") ],)
+
+
 AC_OUTPUT([
 gtk-xfce-engine-2.spec
 Makefile
