@@ -54,4 +54,6 @@ Theme_light/Makefile
 Theme_light/gtk-2.0/Makefile
 Theme_redmondxp/Makefile
 Theme_redmondxp/gtk-2.0/Makefile
+Theme_smooth/gtk-2.0/Makefile
+Theme_smooth/Makefile
 ])
