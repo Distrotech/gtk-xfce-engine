@@ -1,5 +1,5 @@
 # Default Xfce theme
-# Olivier Fourdan 05/2003
+# Olivier Fourdan 02/2004
 
 style "xfce-default"
 {
@@ -14,7 +14,7 @@ style "xfce-default"
     GtkRange::slider_width            = 15
     GtkRange::stepper_size            = 15
     GtkRange::stepper_spacing         = 0
-    GtkRange::trough_border           = 1
+    GtkRange::trough_border           = 0
     GtkScrollbar::min_slider_length   = 20
     GtkSpinButton::shadow_type        = out
     GtkWidget::internal_padding       = 0
@@ -28,16 +28,16 @@ style "xfce-default"
     ythickness = 2
 
     base[ACTIVE]      = "#c4c4c4"
-    base[INSENSITIVE] = "#f4f4f4"
+    base[INSENSITIVE] = "#f0f0f0"
     base[NORMAL]      = "#ffffff"
-    base[PRELIGHT]    = "#f4f4f4"
-    base[SELECTED]    = "#4c7ba6"
+    base[PRELIGHT]    = "#f0f0f0"
+    base[SELECTED]    = "#5058a0"
 
     bg[ACTIVE]        = "#c4c4c4"
-    bg[INSENSITIVE]   = "#f4f4f4"
-    bg[NORMAL]        = "#f4f4f4"
-    bg[PRELIGHT]      = "#f4f4f4"
-    bg[SELECTED]      = "#4c7ba6"
+    bg[INSENSITIVE]   = "#f0f0f0"
+    bg[NORMAL]        = "#f0f0f0"
+    bg[PRELIGHT]      = "#f0f0f0"
+    bg[SELECTED]      = "#5058a0"
 
     fg[ACTIVE]        = "#000000"
     fg[INSENSITIVE]   = "#808080"
@@ -69,7 +69,7 @@ style "xfce-colored" = "xfce-default"
     ythickness = 2
 
     bg[ACTIVE]        = "#c4c4c4"
-    bg[PRELIGHT]      = "#4c7ba6"
+    bg[PRELIGHT]      = "#5058a0"
 
     fg[ACTIVE]        = "#000000"
     fg[PRELIGHT]      = "#ffffff"
@@ -147,8 +147,8 @@ style "xfce-scrollbar" = "xfce-default"
         {
             fill_style = gradient
             orientation = auto
-            shade_start = 0.85
-            shade_end = 1.25
+            shade_start = 1.05
+            shade_end = 0.95
         }
     }
 }
@@ -160,17 +160,17 @@ style "xfce-button" = "xfce-default"
     xthickness = 2
     ythickness = 2
 
-    base[ACTIVE]      = "#c4c4c4"
-    base[INSENSITIVE] = "#e4e4e4"
+    base[ACTIVE]      = "#c0c0c0"
+    base[INSENSITIVE] = "#e0e0e0"
     base[NORMAL]      = "#ffffff"
-    base[PRELIGHT]    = "#e4e4e4"
-    base[SELECTED]    = "#4c7ba6"
+    base[PRELIGHT]    = "#e0e0e0"
+    base[SELECTED]    = "#5058a0"
 
-    bg[ACTIVE]        = "#c4c4c4"
-    bg[INSENSITIVE]   = "#e4e4e4"
-    bg[NORMAL]        = "#e4e4e4"
-    bg[PRELIGHT]      = "#e4e4e4"
-    bg[SELECTED]      = "#4c7ba6"
+    bg[ACTIVE]        = "#c0c0c0"
+    bg[INSENSITIVE]   = "#e0e0e0"
+    bg[NORMAL]        = "#e0e0e0"
+    bg[PRELIGHT]      = "#e0e0e0"
+    bg[SELECTED]      = "#5058a0"
 
     engine "xfce"
     {
@@ -179,8 +179,8 @@ style "xfce-button" = "xfce-default"
         {
             fill_style = gradient
             orientation = vertical
-            shade_start = 0.85
-            shade_end = 1.25
+            shade_start = 1.05
+            shade_end = 0.95
         }
     }
 }
@@ -197,8 +197,8 @@ class "*Scale*"                    style "xfce-button"
 
 style "xfce-progress" = "xfce-colored"
 {
-    xthickness = 2
-    ythickness = 2
+    xthickness = 1
+    ythickness = 1
 
     engine "xfce"
     {
@@ -207,8 +207,8 @@ style "xfce-progress" = "xfce-colored"
         {
             fill_style = gradient
             orientation = vertical
-            shade_start = 0.85
-            shade_end = 1.25
+            shade_start = 1.05
+            shade_end = 0.95
         }
     }
 }
@@ -219,3 +219,14 @@ widget_class "*CheckButton*"       style "xfce-default"
 class "*CheckButton*"              style "xfce-default"
 widget_class "*RadioButton*"       style "xfce-default"
 class "*RadioButton*"              style "xfce-default"
+
+style "xfce-titlebar"
+{
+    bg[SELECTED]      = "#5058a0"
+    fg[SELECTED]      = "#ffffff"
+    bg[ACTIVE]        = "#f0f0f0"
+    fg[NORMAL]        = "#a8a8a8"
+}
+widget "xfwm"                      style "xfce-titlebar"
+class "MetaFrames"                 style "xfce-titlebar"
+widget_class "MetaFrames"          style "xfce-titlebar"
