@@ -31,6 +31,5 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(-,root,root)
-%{_libdir}/*
-%{_datadir}/*
-
+%{_libdir}/gtk-2.0
+%{_datadir}/themes
