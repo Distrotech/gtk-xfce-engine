@@ -1,3 +1,74 @@
+2002-11-10  xfce
+
+	* Makefile.in, aclocal.m4, config.h.in, configure, configure.in,
+	gtk-xfce-engine-2.spec.in, xfce_theme_draw.c, Theme/Makefile.in,
+	Theme/gtk-2.0/Makefile.in, Theme_b5/Makefile.in,
+	Theme_b5/gtk-2.0/Makefile.in, Theme_basic/Makefile.in,
+	Theme_basic/gtk-2.0/Makefile.in, Theme_curve/Makefile.in,
+	Theme_curve/gtk-2.0/Makefile.in, Theme_funklor/Makefile.in,
+	Theme_funklor/gtk-2.0/Makefile.in, Theme_light/Makefile.in,
+	Theme_light/gtk-2.0/Makefile.in, Theme_redmondxp/Makefile.in,
+	Theme_redmondxp/gtk-2.0/Makefile.in, Theme_saltlake/Makefile.in,
+	Theme_saltlake/gtk-2.0/Makefile.in, Theme_smooth/Makefile.in,
+	Theme_smooth/gtk-2.0/Makefile.in: Change version number, change
+	frame corners in "smooth" mode.
+
+2002-11-10  madkiss
+
+	* debian/: changelog, control, copyright, rules: Initial revision
+
+2002-11-10  madkiss
+
+	* debian/: changelog, control, copyright, rules: 
+	Added first version of debian/ subdirectory
+
+2002-11-05  xfce
+
+	* Makefile.am, Makefile.in, aclocal.m4, configure, configure.in,
+	Theme/Makefile.in, Theme/gtk-2.0/Makefile.in, Theme_b5/Makefile.in,
+	Theme_b5/gtk-2.0/Makefile.in, Theme_basic/Makefile.in,
+	Theme_basic/gtk-2.0/Makefile.in, Theme_curve/ICON.png,
+	Theme_curve/Makefile.am, Theme_curve/Makefile.in,
+	Theme_curve/README.html, Theme_curve/gtk-2.0/Makefile.am,
+	Theme_curve/gtk-2.0/Makefile.in, Theme_curve/gtk-2.0/gtkrc,
+	Theme_funklor/Makefile.in, Theme_funklor/gtk-2.0/Makefile.in,
+	Theme_light/Makefile.in, Theme_light/gtk-2.0/Makefile.in,
+	Theme_redmondxp/Makefile.in, Theme_redmondxp/gtk-2.0/Makefile.in,
+	Theme_saltlake/Makefile.in, Theme_saltlake/gtk-2.0/Makefile.in,
+	Theme_smooth/Makefile.in, Theme_smooth/gtk-2.0/Makefile.in:
+	Xfce-curve theme is back.
+
+2002-10-22  xfce
+
+	* Theme_redmondxp/gtk-2.0/gtkrc: Change colors.
+
+2002-10-22  xfce
+
+	* Theme_redmondxp/gtk-2.0/gtkrc: [no log message]
+
+2002-10-22  xfce
+
+	* Theme_light/gtk-2.0/gtkrc: Change to lighter color for tabs and
+	buttons
+
+2002-10-17  xfce
+
+	* Theme_smooth/gtk-2.0/gtkrc: Change active title color for xfwm4.
+
+2002-10-12  xfce
+
+	* xfce_theme_draw.c: [no log message]
+
+2002-10-11  xfce
+
+	* Theme_light/gtk-2.0/gtkrc: [no log message]
+
+2002-10-09  xfce
+
+	* ChangeLog, Makefile.am, Makefile.in, config.h.in, configure,
+	configure.in, xfce_theme_draw.c: Change frame for "trough", update
+	ChangLog, set version to 2.0.10
+
 2002-10-05  xfce
 
 	* xfce_theme_draw.c: Remove shadow in trough
@@ -90,18 +161,22 @@
 	Theme/Makefile.in, Theme/gtk-2.0/Makefile.in, Theme_b5/Makefile.in,
 	Theme_b5/gtk-2.0/Makefile.in, Theme_b5/gtk-2.0/gtkrc,
 	Theme_basic/Makefile.in, Theme_basic/gtk-2.0/Makefile.in,
-	Theme_funklor/Makefile.in, Theme_funklor/gtk-2.0/Makefile.in,
-	Theme_light/Makefile.in, Theme_light/gtk-2.0/Makefile.in,
-	Theme_redmondxp/Makefile.in, Theme_redmondxp/gtk-2.0/Makefile.in,
-	Theme_saltlake/Makefile.in, Theme_saltlake/gtk-2.0/Makefile.in,
-	Theme_smooth/Makefile.in, Theme_smooth/gtk-2.0/Makefile.in: Remove
-	Xfce_curve
+	Theme_curve/ICON.png, Theme_curve/Makefile.am,
+	Theme_curve/Makefile.in, Theme_curve/README.html,
+	Theme_curve/gtk-2.0/Makefile.am, Theme_curve/gtk-2.0/Makefile.in,
+	Theme_curve/gtk-2.0/gtkrc, Theme_funklor/Makefile.in,
+	Theme_funklor/gtk-2.0/Makefile.in, Theme_light/Makefile.in,
+	Theme_light/gtk-2.0/Makefile.in, Theme_redmondxp/Makefile.in,
+	Theme_redmondxp/gtk-2.0/Makefile.in, Theme_saltlake/Makefile.in,
+	Theme_saltlake/gtk-2.0/Makefile.in, Theme_smooth/Makefile.in,
+	Theme_smooth/gtk-2.0/Makefile.in: Remove Xfce_curve
 
 2002-09-14  xfce
 
 	* Theme/Makefile.in, Theme/gtk-2.0/Makefile.in,
 	Theme_b5/Makefile.in, Theme_b5/gtk-2.0/Makefile.in,
 	Theme_basic/Makefile.in, Theme_basic/gtk-2.0/Makefile.in,
+	Theme_curve/Makefile.in, Theme_curve/gtk-2.0/Makefile.in,
 	Theme_funklor/Makefile.in, Theme_funklor/gtk-2.0/Makefile.in,
 	Theme_light/Makefile.in, Theme_light/gtk-2.0/Makefile.in,
 	Theme_redmondxp/Makefile.in, Theme_redmondxp/gtk-2.0/Makefile.in,
@@ -122,7 +197,8 @@
 	* Makefile.am, Makefile.in, aclocal.m4, configure, configure.in,
 	Theme/Makefile.in, Theme/gtk-2.0/Makefile.in, Theme_b5/Makefile.in,
 	Theme_b5/gtk-2.0/Makefile.in, Theme_basic/Makefile.in,
-	Theme_basic/gtk-2.0/Makefile.in, Theme_funklor/Makefile.in,
+	Theme_basic/gtk-2.0/Makefile.in, Theme_curve/Makefile.in,
+	Theme_curve/gtk-2.0/Makefile.in, Theme_funklor/Makefile.in,
 	Theme_funklor/gtk-2.0/Makefile.in, Theme_light/Makefile.in,
 	Theme_light/gtk-2.0/Makefile.in, Theme_redmondxp/Makefile.in,
 	Theme_redmondxp/gtk-2.0/Makefile.in, Theme_saltlake/ICON.png,
@@ -135,9 +211,30 @@
 2002-09-12  xfce
 
 	* Theme/gtk-2.0/gtkrc, Theme_b5/gtk-2.0/gtkrc,
-	Theme_basic/gtk-2.0/gtkrc, Theme_funklor/gtk-2.0/gtkrc,
-	Theme_light/gtk-2.0/gtkrc, Theme_redmondxp/gtk-2.0/gtkrc,
-	Theme_smooth/gtk-2.0/gtkrc: [no log message]
+	Theme_basic/gtk-2.0/gtkrc, Theme_curve/gtk-2.0/gtkrc,
+	Theme_funklor/gtk-2.0/gtkrc, Theme_light/gtk-2.0/gtkrc,
+	Theme_redmondxp/gtk-2.0/gtkrc, Theme_smooth/gtk-2.0/gtkrc: [no log
+	message]
+
+2002-09-12  xfce
+
+	* Theme_curve/gtk-2.0/gtkrc: [no log message]
+
+2002-09-12  xfce
+
+	* Theme_curve/gtk-2.0/gtkrc: [no log message]
+
+2002-09-12  xfce
+
+	* Theme_curve/gtk-2.0/gtkrc: [no log message]
+
+2002-09-11  xfce
+
+	* Theme_curve/gtk-2.0/gtkrc: [no log message]
+
+2002-09-11  xfce
+
+	* Theme_curve/gtk-2.0/gtkrc: [no log message]
 
 2002-09-09  xfce
 
@@ -145,17 +242,21 @@
 
 2002-09-09  xfce
 
-	* Theme_b5/gtk-2.0/gtkrc, Theme_funklor/gtk-2.0/gtkrc,
-	Theme_redmondxp/gtk-2.0/gtkrc, Theme_smooth/gtk-2.0/gtkrc: [no log
-	message]
+	* Theme_b5/gtk-2.0/gtkrc, Theme_curve/gtk-2.0/gtkrc,
+	Theme_funklor/gtk-2.0/gtkrc, Theme_redmondxp/gtk-2.0/gtkrc,
+	Theme_smooth/gtk-2.0/gtkrc: [no log message]
+
+2002-09-08  xfce
+
+	* Theme_curve/gtk-2.0/gtkrc: [no log message]
 
 2002-09-08  xfce
 
 	* xfce_theme_draw.c, Theme_b5/gtk-2.0/gtkrc,
-	Theme_funklor/gtk-2.0/gtkrc, Theme_light/gtk-2.0/gtkrc,
-	Theme_redmondxp/gtk-2.0/gtkrc, Theme_smooth/gtk-2.0/gtkrc: Use
-	default gtk theme for drawing arrows instead of our, use flat
-	pressed buttons.
+	Theme_curve/gtk-2.0/gtkrc, Theme_funklor/gtk-2.0/gtkrc,
+	Theme_light/gtk-2.0/gtkrc, Theme_redmondxp/gtk-2.0/gtkrc,
+	Theme_smooth/gtk-2.0/gtkrc: Use default gtk theme for drawing
+	arrows instead of our, use flat pressed buttons.
 
 2002-09-06  xfce
 
@@ -171,12 +272,20 @@
 
 2002-09-03  xfce
 
+	* Theme_curve/gtk-2.0/gtkrc: [no log message]
+
+2002-09-03  xfce
+
 	* Makefile.am, Makefile.in, configure, configure.in: [no log
 	message]
 
 2002-09-03  xfce
 
-	* configure, configure.in: Add theme "curve"
+	* configure, configure.in, Theme_curve/ICON.png,
+	Theme_curve/Makefile.am, Theme_curve/Makefile.in,
+	Theme_curve/README.html, Theme_curve/gtk-2.0/Makefile.am,
+	Theme_curve/gtk-2.0/Makefile.in, Theme_curve/gtk-2.0/gtkrc: Add
+	theme "curve"
 
 2002-09-02  xfce
 
