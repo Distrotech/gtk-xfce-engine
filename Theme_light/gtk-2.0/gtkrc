@@ -47,17 +47,17 @@ class "GtkWidget" style "default"
 
 style "button" = "default"
 {
-    bg[NORMAL]        = "#e1e1d9"
+    bg[NORMAL]        = "#f8f8ef"
     bg[ACTIVE]        = "#cfcfc4"
     bg[PRELIGHT]      = "#f5f5dd"
-    bg[INSENSITIVE]   = "#e1e1d9"
+    bg[INSENSITIVE]   = "#f8f8ef"
 }
 
 class "GtkButton" style "button"
 
 style "notebook" = "default"
 {
-    bg[NORMAL]        = "#e1e1d9"
+    bg[NORMAL]        = "#f8f8ef"
     bg[ACTIVE]        = "#d4d4ce"
 }
 
