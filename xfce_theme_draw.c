@@ -144,11 +144,11 @@ xfce_draw_handlers (GtkStyle * style, GdkWindow * window, GtkStateType state_typ
   GdkRectangle dest;
 
   if ((width == -1) && (height == -1))
-    gdk_window_get_size (window, &width, &height);
+    gdk_drawable_get_size (window, &width, &height);
   else if (width == -1)
-    gdk_window_get_size (window, &width, NULL);
+    gdk_drawable_get_size (window, &width, NULL);
   else if (height == -1)
-    gdk_window_get_size (window, NULL, &height);
+    gdk_drawable_get_size (window, NULL, &height);
 
   light_gc = style->light_gc[state_type];
   dark_gc = style->dark_gc[state_type];
@@ -278,11 +278,11 @@ draw_shadow (GtkStyle * style, GdkWindow * window, GtkStateType state_type, GtkS
   g_return_if_fail (window != NULL);
 
   if ((width == -1) && (height == -1))
-    gdk_window_get_size (window, &width, &height);
+    gdk_drawable_get_size (window, &width, &height);
   else if (width == -1)
-    gdk_window_get_size (window, &width, NULL);
+    gdk_drawable_get_size (window, &width, NULL);
   else if (height == -1)
-    gdk_window_get_size (window, NULL, &height);
+    gdk_drawable_get_size (window, NULL, &height);
 
   if (area)
   {
@@ -521,11 +521,11 @@ draw_diamond (GtkStyle * style, GdkWindow * window, GtkStateType state_type, Gtk
   g_return_if_fail (window != NULL);
 
   if ((width == -1) && (height == -1))
-    gdk_window_get_size (window, &width, &height);
+    gdk_drawable_get_size (window, &width, &height);
   else if (width == -1)
-    gdk_window_get_size (window, &width, NULL);
+    gdk_drawable_get_size (window, &width, NULL);
   else if (height == -1)
-    gdk_window_get_size (window, NULL, &height);
+    gdk_drawable_get_size (window, NULL, &height);
 
   half_width = width / 2;
   half_height = height / 2;
@@ -588,11 +588,11 @@ draw_box (GtkStyle * style, GdkWindow * window, GtkStateType state_type, GtkShad
   g_return_if_fail (window != NULL);
 
   if ((width == -1) && (height == -1))
-    gdk_window_get_size (window, &width, &height);
+    gdk_drawable_get_size (window, &width, &height);
   else if (width == -1)
-    gdk_window_get_size (window, &width, NULL);
+    gdk_drawable_get_size (window, &width, NULL);
   else if (height == -1)
-    gdk_window_get_size (window, NULL, &height);
+    gdk_drawable_get_size (window, NULL, &height);
 
   if (!style->bg_pixmap[state_type])
   {
@@ -607,7 +607,7 @@ draw_box (GtkStyle * style, GdkWindow * window, GtkStateType state_type, GtkShad
     }
   }
   else
-    gtk_style_apply_default_pixmap (style, window, state_type, area, x, y, width, height);
+    gtk_style_apply_default_background (style, window, 1, state_type, area, x, y, width, height);
 
   if ((detail) && (!strcmp("spinbutton_up", detail)))
   {
@@ -780,11 +780,11 @@ static void
 draw_arrow (GtkStyle * style, GdkWindow * window, GtkStateType state, GtkShadowType shadow, GdkRectangle * area, GtkWidget * widget, const gchar * detail, GtkArrowType arrow_type, gboolean fill, gint x, gint y, gint width, gint height)
 {
   if ((width == -1) && (height == -1))
-    gdk_window_get_size (window, &width, &height);
+    gdk_drawable_get_size (window, &width, &height);
   else if (width == -1)
-    gdk_window_get_size (window, &width, NULL);
+    gdk_drawable_get_size (window, &width, NULL);
   else if (height == -1)
-    gdk_window_get_size (window, NULL, &height);
+    gdk_drawable_get_size (window, NULL, &height);
 
   if (detail && strcmp (detail, "spinbutton") == 0)
   {
@@ -882,7 +882,7 @@ draw_shadow_gap (GtkStyle * style, GdkWindow * window, GtkStateType state_type, 
     break;
   }
 
-  gtk_style_apply_default_pixmap (style, window, state_type, area, rect.x, rect.y, rect.width, rect.height);
+  gtk_style_apply_default_background (style, window, 1, state_type, area, rect.x, rect.y, rect.width, rect.height);
 }
 
 static void
@@ -899,11 +899,11 @@ draw_box_gap (GtkStyle * style, GdkWindow * window, GtkStateType state_type, Gtk
   gtk_style_apply_default_background (style, window, widget && !GTK_WIDGET_NO_WINDOW (widget), state_type, area, x, y, width, height);
 
   if (width == -1 && height == -1)
-    gdk_window_get_size (window, &width, &height);
+    gdk_drawable_get_size (window, &width, &height);
   else if (width == -1)
-    gdk_window_get_size (window, &width, NULL);
+    gdk_drawable_get_size (window, &width, NULL);
   else if (height == -1)
-    gdk_window_get_size (window, NULL, &height);
+    gdk_drawable_get_size (window, NULL, &height);
 
   switch (shadow_type)
   {
@@ -1062,11 +1062,11 @@ draw_extension (GtkStyle * style, GdkWindow * window, GtkStateType state_type, G
   gtk_style_apply_default_background (style, window, widget && !GTK_WIDGET_NO_WINDOW (widget), GTK_STATE_NORMAL, area, x, y, width, height);
 
   if (width == -1 && height == -1)
-    gdk_window_get_size (window, &width, &height);
+    gdk_drawable_get_size (window, &width, &height);
   else if (width == -1)
-    gdk_window_get_size (window, &width, NULL);
+    gdk_drawable_get_size (window, &width, NULL);
   else if (height == -1)
-    gdk_window_get_size (window, NULL, &height);
+    gdk_drawable_get_size (window, NULL, &height);
 
   switch (shadow_type)
   {
@@ -1174,11 +1174,11 @@ draw_slider (GtkStyle * style, GdkWindow * window, GtkStateType state_type, GtkS
   g_return_if_fail (window != NULL);
 
   if ((width == -1) && (height == -1))
-    gdk_window_get_size (window, &width, &height);
+    gdk_drawable_get_size (window, &width, &height);
   else if (width == -1)
-    gdk_window_get_size (window, &width, NULL);
+    gdk_drawable_get_size (window, &width, NULL);
   else if (height == -1)
-    gdk_window_get_size (window, NULL, &height);
+    gdk_drawable_get_size (window, NULL, &height);
 
   orientation = GTK_ORIENTATION_HORIZONTAL;
   if (height > width)
@@ -1195,11 +1195,11 @@ draw_handle (GtkStyle * style, GdkWindow * window, GtkStateType state_type, GtkS
   g_return_if_fail (window != NULL);
 
   if ((width == -1) && (height == -1))
-    gdk_window_get_size (window, &width, &height);
+    gdk_drawable_get_size (window, &width, &height);
   else if (width == -1)
-    gdk_window_get_size (window, &width, NULL);
+    gdk_drawable_get_size (window, &width, NULL);
   else if (height == -1)
-    gdk_window_get_size (window, NULL, &height);
+    gdk_drawable_get_size (window, NULL, &height);
 
   orientation = GTK_ORIENTATION_HORIZONTAL;
   if (height > width)
