@@ -31,13 +31,13 @@ style "xfce-default"
     base[INSENSITIVE] = "#EEEEE2"
     base[NORMAL]      = "#ffffff"
     base[PRELIGHT]    = "#EEEEE2"
-    base[SELECTED]    = "#6ea0cd"
+    base[SELECTED]    = "#4a7eae"
 
     bg[ACTIVE]        = "#c4c4c4"
     bg[INSENSITIVE]   = "#EEEEE2"
     bg[NORMAL]        = "#EEEEE2"
     bg[PRELIGHT]      = "#EEEEE2"
-    bg[SELECTED]      = "#6ea0cd"
+    bg[SELECTED]      = "#4a7eae"
 
     fg[ACTIVE]        = "#000000"
     fg[INSENSITIVE]   = "#808080"
@@ -69,7 +69,7 @@ style "xfce-colored" = "xfce-default"
     ythickness = 2
 
     bg[ACTIVE]        = "#c4c4c4"
-    bg[PRELIGHT]      = "#6ea0cd"
+    bg[PRELIGHT]      = "#4a7eae"
 
     fg[ACTIVE]        = "#000000"
     fg[PRELIGHT]      = "#ffffff"
@@ -164,13 +164,13 @@ style "xfce-button" = "xfce-default"
     base[INSENSITIVE] = "#f4f4f4"
     base[NORMAL]      = "#ffffff"
     base[PRELIGHT]    = "#f4f4f4"
-    base[SELECTED]    = "#6ea0cd"
+    base[SELECTED]    = "#4a7eae"
 
     bg[ACTIVE]        = "#e0e0e0"
     bg[INSENSITIVE]   = "#f4f4f4"
     bg[NORMAL]        = "#f4f4f4"
     bg[PRELIGHT]      = "#f4f4f4"
-    bg[SELECTED]      = "#6ea0cd"
+    bg[SELECTED]      = "#4a7eae"
 
     engine "xfce"
     {
@@ -219,7 +219,7 @@ class "*RadioButton*"              style "xfce-default"
 
 style "xfce-titlebar"
 {
-    bg[SELECTED]      = "#6ea0cd"
+    bg[SELECTED]      = "#4a7eae"
     fg[SELECTED]      = "#ffffff"
     bg[ACTIVE]        = "#EEEEE2"
     fg[NORMAL]        = "#b4b492"
