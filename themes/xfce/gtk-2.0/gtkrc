@@ -190,16 +190,16 @@ style "progress" = "colored"
     xthickness = 0
     ythickness = 0
 
+    bg[NORMAL]        = "#ceced9"
+    bg[ACTIVE]        = "#a5a5a9"
+
     engine "xfce" 
     {
         smooth_edge = true
         grip_style = none
         boxfill
         {
-            fill_style = gradient
-            orientation = automatic
-            shade_start = 1.05
-            shade_end = 0.95
+            fill_style = plain
         }
     }
 }
@@ -207,7 +207,7 @@ style "progress" = "colored"
 style "handlebox" = "default"
 {
     xthickness = 0
-    ythickness = 0
+    ythickness = 2
 }
 
 style "rox" = "default"
