@@ -27,17 +27,17 @@ style "xfce-default"
     xthickness = 2
     ythickness = 2
 
-    base[ACTIVE]      = "#cececa"
+    base[ACTIVE]      = "#c2c4ca"
     base[INSENSITIVE] = "#eeeeef"
     base[NORMAL]      = "#ffffff"
-    base[PRELIGHT]    = "#d4d4e0"
-    base[SELECTED]    = "#d4d4e0"
+    base[PRELIGHT]    = "#d4d8e0"
+    base[SELECTED]    = "#7585C0"
 
-    bg[ACTIVE]        = "#cececa"
+    bg[ACTIVE]        = "#c2c4ca"
     bg[INSENSITIVE]   = "#eeeeef"
     bg[NORMAL]        = "#eeeeef"
-    bg[PRELIGHT]      = "#d4d4e0"
-    bg[SELECTED]      = "#d4d4e0"
+    bg[PRELIGHT]      = "#d4d8e0"
+    bg[SELECTED]      = "#d4d8e0"
 
     fg[ACTIVE]        = "#000000"
     fg[INSENSITIVE]   = "#8e8e8a"
@@ -49,7 +49,7 @@ style "xfce-default"
     text[INSENSITIVE] = "#000000"
     text[NORMAL]      = "#000000"
     text[PRELIGHT]    = "#000000"
-    text[SELECTED]    = "#000000"
+    text[SELECTED]    = "#ffffff"
 
     engine "xfce" 
     {
@@ -155,8 +155,8 @@ class "*MenuItem*"                 style "xfce-menuitem"
 
 style "xfce-titlebar"
 {
-    bg[SELECTED]      = "#c0c0d4"
-    fg[SELECTED]      = "#000000"
+    bg[SELECTED]      = "#7585C0"
+    fg[SELECTED]      = "#ffffff"
     bg[ACTIVE]        = "#ddddde"
     fg[NORMAL]        = "#9a9a9c"
 }
