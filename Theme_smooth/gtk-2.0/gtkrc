@@ -30,13 +30,13 @@ style "xfce-default"
     fg[INSENSITIVE]   = "#7f7f79"
     fg[NORMAL]        = "#000000"
     fg[PRELIGHT]      = "#000000"
-    fg[SELECTED]      = "#ffffff"
+    fg[SELECTED]      = "#d7d7cf"
 
     text[ACTIVE]      = "#000000"
     text[INSENSITIVE] = "#000000"
     text[NORMAL]      = "#000000"
     text[PRELIGHT]    = "#000000"
-    text[SELECTED]    = "#ffffff"
+    text[SELECTED]    = "#d7d7cf"
 
     engine "xfce" 
     {
@@ -68,13 +68,13 @@ style "xfce-colored"
     fg[INSENSITIVE]   = "#7f7f79"
     fg[NORMAL]        = "#000000"
     fg[PRELIGHT]      = "#ffffff"
-    fg[SELECTED]      = "#ffffff"
+    fg[SELECTED]      = "#d7d7cf"
 
     text[ACTIVE]      = "#000000"
     text[INSENSITIVE] = "#000000"
     text[NORMAL]      = "#000000"
     text[PRELIGHT]    = "#ffffff"
-    text[SELECTED]    = "#ffffff"
+    text[SELECTED]    = "#d7d7cf"
 
     engine "xfce" 
     {
