@@ -16,16 +16,16 @@ style "xfce-default"
     xthickness = 2
     ythickness = 2
 
-    base[ACTIVE]      = "#d8d7c4"
-    base[INSENSITIVE] = "#e1e0d7"
+    base[ACTIVE]      = "#d8d8d0"
+    base[INSENSITIVE] = "#e1e0df"
     base[NORMAL]      = "#ffffff"
-    base[PRELIGHT]    = "#e1e0d7"
+    base[PRELIGHT]    = "#e1e0df"
     base[SELECTED]    = "#3e83a6"
 
-    bg[ACTIVE]        = "#d8d7c4"
-    bg[INSENSITIVE]   = "#e1e0d7"
-    bg[NORMAL]        = "#e1e0d7"
-    bg[PRELIGHT]      = "#e1e0d7"
+    bg[ACTIVE]        = "#d8d8d0"
+    bg[INSENSITIVE]   = "#e1e0df"
+    bg[NORMAL]        = "#e1e0df"
+    bg[PRELIGHT]      = "#e1e0df"
     bg[SELECTED]      = "#3e83a6"
 
     fg[ACTIVE]        = "#000000"
@@ -54,18 +54,18 @@ widget_class "*.GtkToggleButton*"  style "xfce-default"
 
 style "xfce-colored"
 {
-    xthickness = 2
-    ythickness = 2
+    xthickness = 1
+    ythickness = 1
 
-    base[ACTIVE]      = "#d8d7c4"
-    base[INSENSITIVE] = "#e1e0d7"
+    base[ACTIVE]      = "#d8d8d0"
+    base[INSENSITIVE] = "#e1e0df"
     base[NORMAL]      = "#ffffff"
-    base[PRELIGHT]    = "#e1e0d7"
+    base[PRELIGHT]    = "#e1e0df"
     base[SELECTED]    = "#3e83a6"
 
     bg[ACTIVE]        = "#1d5a8b"
-    bg[INSENSITIVE]   = "#e1e0d7"
-    bg[NORMAL]        = "#e1e0d7"
+    bg[INSENSITIVE]   = "#e1e0df"
+    bg[NORMAL]        = "#e1e0df"
     bg[PRELIGHT]      = "#3e83a6"
     bg[SELECTED]      = "#3e83a6"
 
