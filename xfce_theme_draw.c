@@ -286,7 +286,8 @@ draw_shadow (GtkStyle * style, GdkWindow * window, GtkStateType state_type, GtkS
 	
   if(XFCE_RC_STYLE (style->rc_style)->smooth_edge)
   {
-      rdelta = 1;
+      /* if you want round corners, set rdelta to 1 here. */
+      rdelta = 0;
       gc1 = style->dark_gc[state_type];
       gc2 = style->light_gc[state_type];
       gc3 = style->dark_gc[state_type];
