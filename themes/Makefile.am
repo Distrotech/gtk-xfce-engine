@@ -9,4 +9,5 @@ SUBDIRS = \
 	redmondxp	\
 	saltlake	\
 	smooth		\
-	stellar
+	stellar		\
+	winter
