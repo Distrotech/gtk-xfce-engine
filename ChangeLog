@@ -1,3 +1,56 @@
+2004-05-18 22:04  olivier
+
+	* configure, configure.in, src/xfce_theme_draw.c: Backport from
+	  HEAD: Fix for multiscreen support
+
+2004-05-04 00:12  olivier
+
+	* Makefile.in, aclocal.m4, config.guess, config.sub, configure,
+	  install-sh, ltmain.sh, mkinstalldirs, src/Makefile.in,
+	  themes/Makefile.in, themes/b5/Makefile.in,
+	  themes/b5/gtk-2.0/Makefile.in, themes/basic/Makefile.in,
+	  themes/basic/gtk-2.0/Makefile.in, themes/curve/Makefile.in,
+	  themes/curve/gtk-2.0/Makefile.in, themes/kde2/Makefile.in,
+	  themes/kde2/gtk-2.0/Makefile.in, themes/kolors/Makefile.in,
+	  themes/kolors/gtk-2.0/Makefile.in, themes/light/Makefile.in,
+	  themes/light/gtk-2.0/Makefile.in, themes/redmondxp/Makefile.in,
+	  themes/redmondxp/gtk-2.0/Makefile.in,
+	  themes/saltlake/Makefile.in, themes/saltlake/gtk-2.0/Makefile.in,
+	  themes/smooth/Makefile.in, themes/smooth/gtk-2.0/Makefile.in,
+	  themes/stellar/Makefile.in, themes/stellar/gtk-2.0/Makefile.in,
+	  themes/winter/Makefile.in, themes/winter/gtk-2.0/Makefile.in,
+	  themes/xfce/Makefile.in, themes/xfce/gtk-2.0/Makefile.in: Update
+	  zh_TW translations by umm <umm@pchome.com.tw>
+
+2004-01-25 01:09  olivier
+
+	* Makefile.in, aclocal.m4, compile, config.guess, config.h.in,
+	  config.sub, configure, configure.in, depcomp, install-sh,
+	  ltmain.sh, missing, mkinstalldirs, src/Makefile.in,
+	  themes/Makefile.in, themes/b5/Makefile.in,
+	  themes/b5/gtk-2.0/Makefile.in, themes/basic/Makefile.in,
+	  themes/basic/gtk-2.0/Makefile.in, themes/curve/Makefile.in,
+	  themes/curve/gtk-2.0/Makefile.in, themes/kde2/Makefile.in,
+	  themes/kde2/gtk-2.0/Makefile.in, themes/kolors/Makefile.in,
+	  themes/kolors/gtk-2.0/Makefile.in, themes/light/Makefile.in,
+	  themes/light/gtk-2.0/Makefile.in, themes/redmondxp/Makefile.in,
+	  themes/redmondxp/gtk-2.0/Makefile.in,
+	  themes/saltlake/Makefile.in, themes/saltlake/gtk-2.0/Makefile.in,
+	  themes/smooth/Makefile.in, themes/smooth/gtk-2.0/Makefile.in,
+	  themes/stellar/Makefile.in, themes/stellar/gtk-2.0/Makefile.in,
+	  themes/winter/Makefile.in, themes/winter/gtk-2.0/Makefile.in,
+	  themes/xfce/Makefile.in, themes/xfce/gtk-2.0/Makefile.in: Update
+	  libtool and other automake, autoconf and gettext.
+
+2004-01-07 21:55  olivier
+
+	* configure, configure.in: Update version number
+
+2004-01-07 21:38  olivier
+
+	* ChangeLog: Huge update before 4.0.3 release, mainly: ChangeLog
+	  update, Version number updates.
+
 2004-01-07 19:58  olivier
 
 	* gtk-xfce-engine-2.spec.in: Fix spec files so that debug files
