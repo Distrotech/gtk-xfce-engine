@@ -36,31 +36,31 @@ style "default"
     base[ACTIVE]      = "#d4d8e0"
     base[INSENSITIVE] = "#eeeeef"
     base[NORMAL]      = "#ffffff"
-    base[PRELIGHT]    = "#d4d8e0"
+    base[PRELIGHT]    = "#647694"
     base[SELECTED]    = "#647694"
 
     bg[ACTIVE]        = "#d4d8e0"
     bg[INSENSITIVE]   = "#eeeeef"
     bg[NORMAL]        = "#eeeeef"
-    bg[PRELIGHT]      = "#d4d8e0"
+    bg[PRELIGHT]      = "#647694"
     bg[SELECTED]      = "#647694"
 
     fg[ACTIVE]        = "#000000"
     fg[INSENSITIVE]   = "#8e8e8a"
     fg[NORMAL]        = "#000000"
-    fg[PRELIGHT]      = "#000000"
+    fg[PRELIGHT]      = "#ffffff"
     fg[SELECTED]      = "#ffffff"
 
     text[ACTIVE]      = "#000000"
     text[INSENSITIVE] = "#000000"
     text[NORMAL]      = "#000000"
-    text[PRELIGHT]    = "#000000"
+    text[PRELIGHT]    = "#ffffff"
     text[SELECTED]    = "#ffffff"
 
     engine "xfce" 
     {
         smooth_edge = true
-        grip_style = none
+        grip_style = engrave
         boxfill
         {
             fill_style = plain
@@ -80,20 +80,9 @@ style "notebook" = "default"
 widget_class "*Notebook*"          style "notebook"
 class "*Notebook*"                 style "notebook"
 
-style "menu" = "default"
-{
-    xthickness = 1
-    ythickness = 1
-
-    bg[INSENSITIVE]   = "#ffffff"
-    bg[NORMAL]        = "#ffffff"
-}
-widget_class "*Menu*"              style "menu"
-class "*Menu*"                     style "menu"
-
 style "menubar" = "default"
 {
-    xthickness = 2
+    xthickness = 0
     ythickness = 2
 }
 widget_class "*BonoboDockItem"     style "menubar"
@@ -103,25 +92,13 @@ class "*ToolBar"                   style "menubar"
 widget_class "*MenuBar"            style "menubar"
 class "*MenuBar"                   style "menubar"
 
-style "menuitem" = "default"
-{
-    xthickness = 1
-    ythickness = 2
-
-    bg[PRELIGHT]    = "#647694"
-    bg[SELECTED]    = "#647694"
-    fg[PRELIGHT]    = "#ffffff"
-    fg[SELECTED]    = "#ffffff"
-}
-widget_class "*MenuItem*"          style "menuitem"
-class "*MenuItem*"                 style "menuitem"
-
 style "button" = "default"
 {
     xthickness = 3
     ythickness = 3
 
     bg[PRELIGHT]      = "#d4d8e0"
+    fg[PRELIGHT]      = "#000000"
     bg[NORMAL]        = "#d4d8e0"
     bg[ACTIVE]        = "#ceced9"
 
@@ -145,19 +122,28 @@ class "*button*"                   style "button"
 widget_class "*OptionMenu*"        style "button"
 class "*OptionMenu*"               style "button"
 
+style "menuitem" = "default"
+{
+    xthickness = 1
+    ythickness = 2
+}
+widget_class "*MenuItem*"          style "menuitem"
+class "*MenuItem*"                 style "menuitem"
+
 style "scrollbar" = "default"
 {
     xthickness = 2
     ythickness = 2
 
     bg[PRELIGHT]      = "#d4d8e0"
+    fg[PRELIGHT]      = "#000000"
     bg[NORMAL]        = "#d4d8e0"
     bg[ACTIVE]        = "#eeeeef"
 
     engine "xfce" 
     {
         smooth_edge = true
-        grip_style = engrave
+        grip_style = none
         boxfill
         {
             fill_style = gradient
@@ -194,6 +180,7 @@ style "progress" = "default"
     ythickness = 0
 
     bg[PRELIGHT]      = "#d4d8e0"
+    fg[PRELIGHT]      = "#000000"
     bg[NORMAL]        = "#ceced9"
     bg[ACTIVE]        = "#a5a5a9"
 
