@@ -17,7 +17,7 @@ style "curve-default"
     GtkWidget::focus-line-width       = 1
     GtkWidget::focus-padding          = 0
     GtkWidget::interior_focus         = 0
-    GtkWidget::interior_focus         = 1
+    GtkWidget::interior_focus         = 0
     GtkWidget::internal-padding       = 2
 
     xthickness = 2
