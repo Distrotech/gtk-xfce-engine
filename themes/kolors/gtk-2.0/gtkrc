@@ -62,7 +62,7 @@ widget_class "*"                   style "xfce-kolors-default"
 
 style "xfce-kolors-menustyle" = "xfce-kolors-default"
 {
-    xthickness = 0
+    xthickness = 1
     ythickness = 2
     engine "xfce" 
     {
@@ -150,3 +150,4 @@ style "xfce-kolors-titlebar"
 }
 widget "xfwm"                      style "xfce-kolors-titlebar"
 class "MetaFrames"                 style "xfce-kolors-titlebar"
+widget_class "MetaFrames"          style "xfce-kolors-titlebar"

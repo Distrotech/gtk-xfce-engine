@@ -66,4 +66,6 @@ style "titlebar"
 }
 
 widget "xfwm"	          style "titlebar"
+class "MetaFrames"        style "titlebar"
+widget_class "MetaFrames" style "titlebar"
 

@@ -92,3 +92,5 @@ class "*Notebook"         style "notebook"
 # }
 # 
 # widget "xfwm" style "titlebar"
+# class "MetaFrames" style "titlebar"
+

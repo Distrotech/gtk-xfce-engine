@@ -47,7 +47,7 @@ style "default"
 style "menu" = "default"
 {
   bg[PRELIGHT]     = "#9BA0B0" 
-  text[PRELIGHT]   = { 1.0, 1.0, 1.0 }
+  text[PRELIGHT]   = "#FFFFFF"
 }
 
 class "GtkWidget"    style "default"

@@ -109,8 +109,8 @@ class "*.GtkMenu*"                 style "xfce-redmondxp-menu"
 
 style "xfce-redmondxp-menubar" = "xfce-redmondxp-colored"
 {
-    xthickness = 0
-    ythickness = 0
+    xthickness = 1
+    ythickness = 1
 }
 
 widget_class "*BonoboDockItem*"    style "xfce-redmondxp-menubar"
@@ -201,3 +201,4 @@ style "xfce-redmondxp-titlebar"
 }
 widget "xfwm"                      style "xfce-redmondxp-titlebar"
 class "MetaFrames"                 style "xfce-redmondxp-titlebar"
+widget_class "MetaFrames"          style "xfce-redmondxp-titlebar"

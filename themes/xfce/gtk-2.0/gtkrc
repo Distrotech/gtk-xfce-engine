@@ -96,7 +96,7 @@ class "*Entry*"                    style "xfce-colored"
 
 style "xfce-menubar" = "xfce-colored"
 {
-    xthickness = 0
+    xthickness = 1
     ythickness = 2
 
     engine "xfce" 
