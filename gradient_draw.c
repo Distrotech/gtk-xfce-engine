@@ -15,6 +15,7 @@
 #endif
 
 #include <gtk/gtk.h>
+#include <math.h>
 #include "gradient_draw.h"
 
 static void gradient_rgb_to_hls(gdouble * r, gdouble * g, gdouble * b)
