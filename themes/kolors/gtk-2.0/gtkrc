@@ -21,7 +21,7 @@ style "default"
     GtkToolbar::shadow_type           = out
     GtkWidget::focus-line-pattern     = "\0"
     GtkWidget::focus-line-width       = 1
-    GtkWidget::interior_focus         = 0
+    GtkWidget::interior_focus         = 1
     GtkWidget::internal-padding       = 0
     
     xthickness = 1

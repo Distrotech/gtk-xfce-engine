@@ -219,9 +219,9 @@ style "rox" = "default"
 
 style "titlebar" = "default"
 {
-    bg[SELECTED]      = "#647694"
-    fg[SELECTED]      = "#ffffff"
-    bg[INSENSITIVE]   = "#d4d8e0"
+    bg[SELECTED]      = "#d4d8e0"
+    fg[SELECTED]      = "#000000"
+    bg[INSENSITIVE]   = "#eeeeef"
     fg[INSENSITIVE]   = "#647694"
 }
 
