@@ -208,32 +208,18 @@ void gradient_shade(GdkColor * a, GdkColor * b, gdouble k)
     b->blue = blue * 65535.0;
 }
 
-void gradient_alloc_color(GdkColor * color, GdkColormap * colormap, GdkColor light, GdkColor dark, gint position, gint steps, gboolean quadratic)
+void gradient_alloc_color(GdkColor * color, GdkColormap * colormap, GdkColor light, GdkColor dark, gint position, gint steps)
 {
-    gfloat a, b, c, delta;
-    if(quadratic)
-    {
-
-        /* delta = ax³ + bx² + cx */
-
-        a = 4.0 / (steps * steps * steps);
-        b = -6.0 / (steps * steps);
-        c = 3.0 / steps;
-
-        delta = (a * pow(position, 3)) + (b * pow(position, 2)) + (c * position);
-    }
-    else
-    {
-        /* delta = i/steps */
-        delta = ((float)position / (float)steps);
-    }
+    gfloat delta;
+    /* delta = i/steps */
+    delta = ((float)position / (float)steps);
     color->red = light.red + (float)((dark.red - light.red)) * delta;
     color->green = light.green + (float)((dark.green - light.green)) * delta;
     color->blue = light.blue + (float)((dark.blue - light.blue)) * delta;
     gdk_colormap_alloc_color(colormap, color, FALSE, TRUE);
 }
 
-void gradient_draw(GdkWindow * window, GdkGC * gc, GdkColormap * colormap, GdkRectangle * area, gint x, gint y, gint width, gint height, GdkColor light, GdkColor dark, GradientType gradient_type, gboolean quadratic, gboolean noclip)
+void gradient_draw(GdkWindow * window, GdkGC * gc, GdkColormap * colormap, GdkRectangle * area, gint x, gint y, gint width, gint height, GdkColor light, GdkColor dark, GradientType gradient_type, gboolean noclip)
 {
     GdkRectangle clip;
     GdkColor color;
@@ -286,7 +272,7 @@ void gradient_draw(GdkWindow * window, GdkGC * gc, GdkColormap * colormap, GdkRe
 
     for(i = 0; i < steps; i++)
     {
-        gradient_alloc_color(&color, colormap, light, dark, i, steps, quadratic);
+        gradient_alloc_color(&color, colormap, light, dark, i, steps);
         gdk_gc_set_foreground(gc, &color);
         if(diagonal)
         {
@@ -319,12 +305,12 @@ void gradient_draw(GdkWindow * window, GdkGC * gc, GdkColormap * colormap, GdkRe
     }
 }
 
-void gradient_draw_shaded(GdkWindow * window, GdkGC * gc, GdkColormap * colormap, GdkRectangle * area, gint x, gint y, gint width, gint height, GdkColor color, gfloat gradient_shade_value, gfloat shine_value, GradientType gradient_type, gboolean quadratic, gboolean noclip)
+void gradient_draw_shaded(GdkWindow * window, GdkGC * gc, GdkColormap * colormap, GdkRectangle * area, gint x, gint y, gint width, gint height, GdkColor color, gfloat shine_value, gfloat gradient_shade_value, GradientType gradient_type, gboolean noclip)
 {
     GdkColor light, dark;
 
     gradient_shade(&color, &dark, gradient_shade_value);
     gradient_shade(&color, &light, shine_value);
 
-    gradient_draw(window, gc, colormap, area, x, y, width, height, light, dark, gradient_type, quadratic, noclip);
+    gradient_draw(window, gc, colormap, area, x, y, width, height, light, dark, gradient_type, noclip);
 }

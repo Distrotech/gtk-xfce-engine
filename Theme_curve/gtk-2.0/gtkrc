@@ -49,7 +49,14 @@ style "curve-default"
 
     engine "xfce" 
     {
-        smooth_edge = TRUE
+        smooth_edge = true
+        boxfill
+        {
+	    fill_style = gradient
+	    orientation = auto
+	    shade_start = 0.95
+	    shade_end = 1.05
+	}
     }
 }
 

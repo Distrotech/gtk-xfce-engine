@@ -38,7 +38,7 @@ style "default"
 
     engine "xfce"
     {
-	smooth_edge = FALSE
+	smooth_edge = false
     }
 }
 

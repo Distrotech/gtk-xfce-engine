@@ -42,7 +42,7 @@ style "xfce-default"
 
     engine "xfce" 
     {
-	smooth_edge = FALSE
+	smooth_edge = false
     }
 }
 
@@ -80,11 +80,6 @@ style "xfce-colored"
     text[NORMAL]      = "#000000"
     text[PRELIGHT]    = "#ffffff"
     text[SELECTED]    = "#ffffff"
-
-    engine "xfce" 
-    {
-	smooth_edge = FALSE
-    }
 }
 
 class "GtkList"                    style "xfce-colored"

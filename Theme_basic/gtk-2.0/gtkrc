@@ -13,8 +13,14 @@ style "default"
 
     engine "xfce" 
     {
-	smooth_edge = TRUE
-	gradient = TRUE
+	smooth_edge = true
+        boxfill
+        {
+	    fill_style = gradient
+	    orientation = auto
+	    shade_start = 1.1
+	    shade_end = 0.9
+	}
     }
 }
 

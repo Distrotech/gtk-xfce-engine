@@ -61,7 +61,6 @@ typedef enum
 Part;
 
 #define PART_SIZE 13
-#define OPTION_INDICATOR_WIDTH 7
 
 static char check_light_bits[] = {
     0x00, 0x00, 0x00, 0x00, 0x00, 0x08, 0x00, 0x08, 0x00, 0x08, 0x00, 0x08,
@@ -145,7 +144,7 @@ parts[] =
 };
 
 /* internal functions */
-static void xfce_fill_background(GtkStyle * style, GdkWindow * window, GtkStateType state_type, GdkRectangle * area, GtkWidget * widget, gint x, gint y, gint width, gint height, GtkOrientation orientation);
+static void xfce_fill_background(GtkStyle * style, GdkWindow * window, GtkStateType state_type, GdkRectangle * area, GtkWidget * widget, gint x, gint y, gint width, gint height);
 static void xfce_draw_handlers(GtkStyle * style, GdkWindow * window, GtkStateType state_type, GdkRectangle * area, GtkWidget * widget, gint x, gint y, gint width, gint height, GtkOrientation orientation);
 
 static void draw_hline(GtkStyle * style, GdkWindow * window, GtkStateType state_type, GdkRectangle * area, GtkWidget * widget, const gchar * detail, gint x1, gint x2, gint y);
@@ -163,9 +162,11 @@ static void draw_extension(GtkStyle * style, GdkWindow * window, GtkStateType st
 static void draw_slider(GtkStyle * style, GdkWindow * window, GtkStateType state_type, GtkShadowType shadow_type, GdkRectangle * area, GtkWidget * widget, const gchar * detail, gint x, gint y, gint width, gint height, GtkOrientation orientation);
 static void draw_handle(GtkStyle * style, GdkWindow * window, GtkStateType state_type, GtkShadowType shadow_type, GdkRectangle * area, GtkWidget * widget, const gchar * detail, gint x, gint y, gint width, gint height, GtkOrientation orientation);
 
-static void xfce_fill_background(GtkStyle * style, GdkWindow * window, GtkStateType state_type, GdkRectangle * area, GtkWidget * widget, gint x, gint y, gint width, gint height, GtkOrientation orientation)
+static void xfce_fill_background(GtkStyle * style, GdkWindow * window, GtkStateType state_type, GdkRectangle * area, GtkWidget * widget, gint x, gint y, gint width, gint height)
 {
     GdkRectangle clip_area;
+    GradientType gradient_type = GRADIENT_VERTICAL;
+    gfloat shade_start = 1.0, shade_end = 1.0; 
   
     if((width == -1) && (height == -1))
         gdk_drawable_get_size(window, &width, &height);
@@ -183,29 +184,35 @@ static void xfce_fill_background(GtkStyle * style, GdkWindow * window, GtkStateT
     {
         GdkGC *gc = gdk_gc_new(window);
 	GdkGCValues gc_values;
-        GradientType gradient_type = GRADIENT_VERTICAL;
-        gfloat shade2 = 1.0, shade1 = 1.0; 
-       
-        if (XFCE_RC_STYLE(style->rc_style)->inverted_gradient)
+	switch (XFCE_RC_STYLE(style->rc_style)->gradient_type)
 	{
-	    shade1 = 1.1;
-	    shade2 = 0.9;
+	    case XFCE_RC_GRADIENT_HORIZONTAL:
+	        gradient_type = GRADIENT_HORIZONTAL;
+		break;
+	    case XFCE_RC_GRADIENT_VERTICAL:
+	        gradient_type = GRADIENT_VERTICAL;
+		break;
+	    case XFCE_RC_GRADIENT_NORTHERN_DIAGONAL:
+	        gradient_type = GRADIENT_NORTHERN_DIAGONAL;
+		break;
+	    case XFCE_RC_GRADIENT_SOUTHERN_DIAGONAL:
+	        gradient_type = GRADIENT_SOUTHERN_DIAGONAL;
+		break;
+	    case XFCE_RC_GRADIENT_AUTO:
+	    default:
+	        if (height > width)
+		{
+		    gradient_type = GRADIENT_HORIZONTAL;
+		}
+		else
+		{
+		    gradient_type = GRADIENT_VERTICAL;
+		}
+		break;
 	}
-	else
-	{
-	    shade1 = 0.9;
-	    shade2 = 1.1;
-	}
+        shade_start = XFCE_RC_STYLE(style->rc_style)->shade_start;
+        shade_end = XFCE_RC_STYLE(style->rc_style)->shade_end;
 	
-        if(orientation == GTK_ORIENTATION_HORIZONTAL)
-	{
-	    gradient_type = GRADIENT_VERTICAL;
-	}
-	else
-	{
-	    gradient_type = GRADIENT_HORIZONTAL;
-	}
-
         gdk_gc_get_values(style->bg_gc[state_type], &gc_values);
 	gdk_gc_set_function(gc, GDK_COPY);
         gdk_gc_set_line_attributes(gc, 1, GDK_LINE_SOLID, gc_values.cap_style, gc_values.join_style);
@@ -214,12 +221,12 @@ static void xfce_fill_background(GtkStyle * style, GdkWindow * window, GtkStateT
 	{
 	    gdk_gc_set_clip_rectangle(gc, area);
 	}
-        gradient_draw_shaded(window, gc, style->colormap, area, x, y, width, height, style->bg[state_type], shade1, shade2, gradient_type, FALSE, FALSE);
+        gradient_draw_shaded(window, gc, style->colormap, area, x, y, width, height, style->bg[state_type], shade_start, shade_end, gradient_type, FALSE);
         if (area)
 	{
             gdk_gc_set_clip_rectangle(gc, NULL);
         }
-        gdk_gc_unref(gc);
+        g_object_unref (G_OBJECT(gc));
     }
     else
     {
@@ -863,7 +870,7 @@ static void draw_box(GtkStyle * style, GdkWindow * window, GtkStateType state_ty
 
     if(!style->bg_pixmap[state_type])
     {
-	xfce_fill_background(style, window, state_type, area, widget, x, y, width, height, (width > height) ? GTK_ORIENTATION_HORIZONTAL : GTK_ORIENTATION_VERTICAL);
+	xfce_fill_background(style, window, state_type, area, widget, x, y, width, height);
     }
     else
     {

@@ -40,7 +40,7 @@ style "default"
 
     engine "xfce" 
     {
-	smooth_edge = TRUE
+	smooth_edge = true
     }
 }
 

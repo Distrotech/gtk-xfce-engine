@@ -44,9 +44,14 @@ style "xfce-redmondxp-default"
 
     engine "xfce" 
     {
-	smooth_edge = TRUE
-	gradient = TRUE
-	inverted_gradient=TRUE
+	smooth_edge = true
+        boxfill
+        {
+	    fill_style = gradient
+	    orientation = auto
+	    shade_start = 0.9
+	    shade_end = 1.1
+	}
     }
 }
 
