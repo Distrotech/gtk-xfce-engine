@@ -1,0 +1,51 @@
+style "xfce-etria-default"
+{
+    GtkWidget::interior_focus         = 1
+    GtkButton::default_border         = {0, 0, 0, 0}
+    GtkButton::default_outside_border = {0, 0, 0, 0}
+    GtkButton::default_spacing        = 10
+    GtkCheckButton::indicator_size    = 15
+    GtkPaned::handle_full_size        = 1
+    GtkRange::trough_border           = 0
+    GtkRange::slider_width            = 15
+    GtkRange::stepper_size            = 15
+    GtkRange::stepper_spacing         = 0
+    GtkSpinButton::shadow_type        = out
+    GtkMenuItem::selected_shadow_type = none
+    GtkScrollbar::min_slider_length   = 20
+    GtkWidget::internal-padding       = 2
+
+    xthickness = 2
+    ythickness = 2
+
+    base[ACTIVE]      = "#ffdd76"
+    base[INSENSITIVE] = "#fdfdfd"
+    base[NORMAL]      = "#fdfdfd"
+    base[PRELIGHT]    = "#3f3f3f"
+    base[SELECTED]    = "#ffdd76"
+
+    bg[ACTIVE]        = "#f0f0f0"
+    bg[INSENSITIVE]   = "#e2e2e2"
+    bg[NORMAL]        = "#f0f0f0"
+    bg[PRELIGHT]      = "#ffdd76"
+    bg[SELECTED]      = "#ffdd76"
+
+    fg[ACTIVE]        = "#3f3f3f"
+    fg[INSENSITIVE]   = "#999999"
+    fg[NORMAL]        = "#3f3f3f"
+    fg[PRELIGHT]      = "#3f3f3f"
+    fg[SELECTED]      = "#3f3f3f"
+
+    text[ACTIVE]      = "#fdfdfd"
+    text[INSENSITIVE] = "#f0f0f0"
+    text[NORMAL]      = "#3f3f3f"
+    text[PRELIGHT]    = "#3f3f3f"
+    text[SELECTED]    = "#3f3f3f"
+
+    engine "xfce" 
+    {
+	smooth_edge = TRUE
+    }
+}
+
+class "GtkWidget"                  style "xfce-etria-default"

@@ -6388,7 +6388,7 @@ GTK_VERSION=`$PKG_CONFIG --variable=gtk_binary_version gtk+-2.0`
 
 
 
-                                                                                                                                                                                                                            ac_config_files="$ac_config_files gtk-xfce-engine-2.spec Makefile Theme_b5/Makefile Theme_b5/gtk-2.0/Makefile Theme_basic/Makefile Theme_basic/gtk-2.0/Makefile Theme_funklor/Makefile Theme_funklor/gtk-2.0/Makefile Theme/gtk-2.0/Makefile Theme/Makefile Theme_light/Makefile Theme_light/gtk-2.0/Makefile Theme_redmondxp/Makefile Theme_redmondxp/gtk-2.0/Makefile Theme_smooth/gtk-2.0/Makefile Theme_smooth/Makefile Theme_saltlake/gtk-2.0/Makefile Theme_saltlake/Makefile Theme_curve/gtk-2.0/Makefile Theme_curve/Makefile Theme_stellar/Makefile Theme_stellar/gtk-2.0/Makefile"
+                                                                                                                                                                                                                                                ac_config_files="$ac_config_files gtk-xfce-engine-2.spec Makefile Theme/gtk-2.0/Makefile Theme/Makefile Theme_b5/Makefile Theme_b5/gtk-2.0/Makefile Theme_basic/Makefile Theme_basic/gtk-2.0/Makefile Theme_curve/gtk-2.0/Makefile Theme_curve/Makefile Theme_etria/Makefile Theme_etria/gtk-2.0/Makefile Theme_funklor/Makefile Theme_funklor/gtk-2.0/Makefile Theme_light/Makefile Theme_light/gtk-2.0/Makefile Theme_redmondxp/Makefile Theme_redmondxp/gtk-2.0/Makefile Theme_smooth/gtk-2.0/Makefile Theme_smooth/Makefile Theme_saltlake/gtk-2.0/Makefile Theme_saltlake/Makefile Theme_stellar/Makefile Theme_stellar/gtk-2.0/Makefile"
 cat >confcache <<\_ACEOF
 # This file is a shell script that caches the results of configure
 # tests run on this system so they can be shared between configure
@@ -6953,14 +6953,18 @@ do
   # Handling of arguments.
   "gtk-xfce-engine-2.spec" ) CONFIG_FILES="$CONFIG_FILES gtk-xfce-engine-2.spec" ;;
   "Makefile" ) CONFIG_FILES="$CONFIG_FILES Makefile" ;;
+  "Theme/gtk-2.0/Makefile" ) CONFIG_FILES="$CONFIG_FILES Theme/gtk-2.0/Makefile" ;;
+  "Theme/Makefile" ) CONFIG_FILES="$CONFIG_FILES Theme/Makefile" ;;
   "Theme_b5/Makefile" ) CONFIG_FILES="$CONFIG_FILES Theme_b5/Makefile" ;;
   "Theme_b5/gtk-2.0/Makefile" ) CONFIG_FILES="$CONFIG_FILES Theme_b5/gtk-2.0/Makefile" ;;
   "Theme_basic/Makefile" ) CONFIG_FILES="$CONFIG_FILES Theme_basic/Makefile" ;;
   "Theme_basic/gtk-2.0/Makefile" ) CONFIG_FILES="$CONFIG_FILES Theme_basic/gtk-2.0/Makefile" ;;
+  "Theme_curve/gtk-2.0/Makefile" ) CONFIG_FILES="$CONFIG_FILES Theme_curve/gtk-2.0/Makefile" ;;
+  "Theme_curve/Makefile" ) CONFIG_FILES="$CONFIG_FILES Theme_curve/Makefile" ;;
+  "Theme_etria/Makefile" ) CONFIG_FILES="$CONFIG_FILES Theme_etria/Makefile" ;;
+  "Theme_etria/gtk-2.0/Makefile" ) CONFIG_FILES="$CONFIG_FILES Theme_etria/gtk-2.0/Makefile" ;;
   "Theme_funklor/Makefile" ) CONFIG_FILES="$CONFIG_FILES Theme_funklor/Makefile" ;;
   "Theme_funklor/gtk-2.0/Makefile" ) CONFIG_FILES="$CONFIG_FILES Theme_funklor/gtk-2.0/Makefile" ;;
-  "Theme/gtk-2.0/Makefile" ) CONFIG_FILES="$CONFIG_FILES Theme/gtk-2.0/Makefile" ;;
-  "Theme/Makefile" ) CONFIG_FILES="$CONFIG_FILES Theme/Makefile" ;;
   "Theme_light/Makefile" ) CONFIG_FILES="$CONFIG_FILES Theme_light/Makefile" ;;
   "Theme_light/gtk-2.0/Makefile" ) CONFIG_FILES="$CONFIG_FILES Theme_light/gtk-2.0/Makefile" ;;
   "Theme_redmondxp/Makefile" ) CONFIG_FILES="$CONFIG_FILES Theme_redmondxp/Makefile" ;;
@@ -6969,8 +6973,6 @@ do
   "Theme_smooth/Makefile" ) CONFIG_FILES="$CONFIG_FILES Theme_smooth/Makefile" ;;
   "Theme_saltlake/gtk-2.0/Makefile" ) CONFIG_FILES="$CONFIG_FILES Theme_saltlake/gtk-2.0/Makefile" ;;
   "Theme_saltlake/Makefile" ) CONFIG_FILES="$CONFIG_FILES Theme_saltlake/Makefile" ;;
-  "Theme_curve/gtk-2.0/Makefile" ) CONFIG_FILES="$CONFIG_FILES Theme_curve/gtk-2.0/Makefile" ;;
-  "Theme_curve/Makefile" ) CONFIG_FILES="$CONFIG_FILES Theme_curve/Makefile" ;;
   "Theme_stellar/Makefile" ) CONFIG_FILES="$CONFIG_FILES Theme_stellar/Makefile" ;;
   "Theme_stellar/gtk-2.0/Makefile" ) CONFIG_FILES="$CONFIG_FILES Theme_stellar/gtk-2.0/Makefile" ;;
   "depfiles" ) CONFIG_COMMANDS="$CONFIG_COMMANDS depfiles" ;;
