@@ -204,9 +204,3 @@ style "xfce-redmondxp-titlebar"
 widget "xfwm"                      style "xfce-redmondxp-titlebar"
 class "MetaFrames"                 style "xfce-redmondxp-titlebar"
 widget_class "MetaFrames"          style "xfce-redmondxp-titlebar"
-
-style "xfce-panel"
-{
-    GtkWidget::focus-padding	     = 0
-}
-class "XfceIconbutton" style "xfce-panel"

@@ -95,10 +95,3 @@ class "*Notebook"         style "notebook"
 # 
 # widget "xfwm" style "titlebar"
 # class "MetaFrames" style "titlebar"
-
-
-style "xfce-panel"
-{
-    GtkWidget::focus-padding	     = 0
-}
-class "XfceIconbutton" style "xfce-panel"

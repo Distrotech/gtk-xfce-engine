@@ -16,7 +16,6 @@ style "default"
     GtkSpinButton::shadow_type        = out
     GtkWidget::focus-line-pattern     = "\0"
     GtkWidget::focus-line-width       = 2
-    GtkWidget::focus-padding          = 0
     GtkWidget::interior_focus         = 0
     GtkWidget::interior_focus         = 5
     GtkWidget::internal-padding       = 2
@@ -59,10 +58,3 @@ style "menu" = "default"
 
 class "GtkWidget"    style "default"
 class "GtkMenuItem*" style "menu"
-
-
-style "xfce-panel"
-{
-    GtkWidget::focus-padding	     = 0
-}
-class "XfceIconbutton" style "xfce-panel"

@@ -19,7 +19,6 @@ style "curve-default"
     GtkToolbar::shadow_type           = out
     GtkWidget::focus-line-pattern     = "\0"
     GtkWidget::focus-line-width       = 1
-    GtkWidget::focus-padding          = 0
     GtkWidget::interior_focus         = 0
     GtkWidget::interior_focus         = 0
     GtkWidget::internal-padding       = 2
@@ -157,9 +156,3 @@ style "curve-button" = "curve-default"
 }
 widget_class "*Button*"            style "curve-button"
 class "*Button*"                   style "curve-button"
-
-style "xfce-panel"
-{
-    GtkWidget::focus-padding	     = 0
-}
-class "XfceIconbutton" style "xfce-panel"

@@ -74,10 +74,3 @@ widget_class "*Scrollbar*"         style "scrollbar"
 class "*Scrollbar*"                style "scrollbar"
 widget_class "*Scale*"             style "scrollbar"
 class "*Scale*"                    style "scrollbar"
-
-style "xfce-panel"
-{
-    GtkWidget::focus-padding	     = 0
-}
-class "XfceIconbutton" style "xfce-panel"
-

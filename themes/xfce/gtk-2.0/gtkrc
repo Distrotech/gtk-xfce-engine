@@ -154,7 +154,7 @@ class "*MenuItem*"                 style "xfce-menuitem"
 
 style "xfce-titlebar"
 {
-    bg[SELECTED]      = "#7585c0"
+    bg[SELECTED]      = "#5f6c9c"
     fg[SELECTED]      = "#ffffff"
     bg[ACTIVE]        = "#c4c6cc"
     fg[NORMAL]        = "#868992"
@@ -162,9 +162,3 @@ style "xfce-titlebar"
 widget "xfwm"                      style "xfce-titlebar"
 class "MetaFrames"                 style "xfce-titlebar"
 widget_class "MetaFrames"          style "xfce-titlebar"
-
-style "xfce-panel"
-{
-    GtkWidget::focus-padding	     = 0
-}
-class "XfceIconbutton" style "xfce-panel"

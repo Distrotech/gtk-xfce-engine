@@ -20,7 +20,6 @@ style "xfce-kolors-default"
     GtkToolbar::shadow_type           = none
     GtkWidget::focus-line-pattern     = "\0"
     GtkWidget::focus-line-width       = 2
-    GtkWidget::focus-padding          = 0
     GtkWidget::interior_focus         = 0
     GtkWidget::internal-padding       = 2
     
@@ -153,9 +152,3 @@ style "xfce-kolors-titlebar"
 widget "xfwm"                      style "xfce-kolors-titlebar"
 class "MetaFrames"                 style "xfce-kolors-titlebar"
 widget_class "MetaFrames"          style "xfce-kolors-titlebar"
-
-style "xfce-panel"
-{
-    GtkWidget::focus-padding	     = 0
-}
-class "XfceIconbutton" style "xfce-panel"
