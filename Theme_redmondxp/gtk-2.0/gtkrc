@@ -90,3 +90,37 @@ widget_class "*.GtkText*"          style "xfce-redmondxp-colored"
 widget_class "*.GtkEntry*"         style "xfce-redmondxp-colored"
 widget_class "*.GtkTree*"          style "xfce-redmondxp-colored"
 widget_class "*.GtkProgress*"      style "xfce-redmondxp-colored"
+
+style "xfce-redmondxp-scroll"
+{
+    base[ACTIVE]      = "#D4D4CE"
+    base[INSENSITIVE] = "#EDEDE5"
+    base[NORMAL]      = "#EDEDE5"
+    base[PRELIGHT]    = "#C6D3FF"
+    base[SELECTED]    = "#C6D3FF"
+
+    bg[ACTIVE]        = "#D4D4CE"
+    bg[INSENSITIVE]   = "#EDEDE5"
+    bg[NORMAL]        = "#C6D3FF"
+    bg[PRELIGHT]      = "#C6D3FF"
+    bg[SELECTED]      = "#EDEDE5"
+
+    fg[ACTIVE]        = "#000000"
+    fg[INSENSITIVE]   = "#7f7f79"
+    fg[NORMAL]        = "#000000"
+    fg[PRELIGHT]      = "#000000"
+    fg[SELECTED]      = "#000000"
+
+    text[ACTIVE]      = "#000000"
+    text[INSENSITIVE] = "#000000"
+    text[NORMAL]      = "#000000"
+    text[PRELIGHT]    = "#000000"
+    text[SELECTED]    = "#000000"
+
+    engine "xfce" 
+    {
+	smooth_edge = TRUE
+    }
+}
+
+class "GtkScrollbar"        style "xfce-redmondxp-scroll"
