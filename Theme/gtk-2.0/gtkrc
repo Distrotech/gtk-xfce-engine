@@ -21,7 +21,7 @@ style "default"
   text[INSENSITIVE] = "#000000"
   text[NORMAL]      = "#000000"
   text[PRELIGHT]    = "#000000"
-  text[SELECTED]    = "#ffffff"
+  text[SELECTED]    = "#000000"
   engine "xfce" {}
 }
 
@@ -36,7 +36,7 @@ style "colored"
   bg[INSENSITIVE]   = "#D7D7CF"
   bg[NORMAL]        = "#D7D7CF"
   bg[PRELIGHT]      = "#1A65A2"
-  bg[SELECTED]      = "#E5E5E2"
+  bg[SELECTED]      = "#1A65A2"
   fg[ACTIVE]        = "#ffffff"
   fg[INSENSITIVE]   = "#7f7f79"
   fg[NORMAL]        = "#000000"
