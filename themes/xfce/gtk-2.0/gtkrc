@@ -155,7 +155,7 @@ class "*MenuItem*"                 style "xfce-menuitem"
 style "xfce-titlebar"
 {
     bg[SELECTED]      = "#859dc6"
-    fg[SELECTED]      = "#ffffff"
+    fg[SELECTED]      = "#e2e9f4"
     bg[ACTIVE]        = "#ccc9c8"
     fg[NORMAL]        = "#908c8a"
 }
