@@ -19,7 +19,7 @@ libxfce_la_SOURCES = \
 
 libxfce_la_LDFLAGS = -module -avoid-version
 
-libxfce_la_LIBADD = 
+libxfce_la_LIBADD = $(XFCE_LIBS)
 
 EXTRA_DIST = autogen.sh gtk-xfce-engine-2.spec gtk-xfce-engine-2.spec.in
 
