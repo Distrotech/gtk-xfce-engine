@@ -4,7 +4,7 @@ THEME="xfce"
 
 AC_PREREQ(2.52)
 
-VERSION=2.1.5
+VERSION=2.1.8
 PACKAGE=gtk-${THEME}-engine
 AM_INIT_AUTOMAKE($PACKAGE, $VERSION)
 
@@ -70,5 +70,7 @@ themes/smooth/gtk-2.0/Makefile
 themes/smooth/Makefile
 themes/stellar/gtk-2.0/Makefile
 themes/stellar/Makefile
+themes/winter/gtk-2.0/Makefile
+themes/winter/Makefile
 themes/Makefile
 ])
