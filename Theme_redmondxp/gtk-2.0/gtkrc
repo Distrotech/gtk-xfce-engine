@@ -137,7 +137,8 @@ style "xfce-redmondxp-button" = "xfce-redmondxp-default"
         }
     }
 }
-class "GtkButton" style "xfce-redmondxp-button"
+widget_class "*Button*"   style "xfce-redmondxp-button"
+class "*Button*"          style "xfce-redmondxp-button"
 
 style "xfce-redmondxp-notebook" = "xfce-redmondxp-default"
 {
@@ -148,7 +149,8 @@ style "xfce-redmondxp-notebook" = "xfce-redmondxp-default"
     bg[ACTIVE]        = "#d4d4ce"
 }
 
-class "GtkNotebook" style "xfce-redmondxp-notebook"
+widget_class "*Notebook*" style "xfce-redmondxp-notebook"
+class "*Notebook*"        style "xfce-redmondxp-notebook"
 
 style "xfce-redmondxp-titlebar"
 {
@@ -157,5 +159,4 @@ style "xfce-redmondxp-titlebar"
     bg[ACTIVE]        = "#7b96de"
     fg[NORMAL]        = "#dee7f7"
 }
-
 widget "xfwm"        style "xfce-redmondxp-titlebar"
