@@ -43,3 +43,25 @@ style "default"
 }
 
 class "GtkWidget" style "default"
+
+style "xfwm4-titlebar"
+{
+    fg[SELECTED]      = "#000000"
+    fg[ACTIVE]        = "#000000"
+    
+    bg[SELECTED]      = "#ffcb00"
+    bg[ACTIVE]        = "#dbdbdb"
+    
+    base[SELECTED]    = "#ffcb00"
+    base[ACTIVE]      = "#dbdbdb"
+    
+    text[SELECTED]    = "#000000"
+    text[ACTIVE]      = "#000000"
+
+    engine "xfce" 
+    {
+	smooth_edge = TRUE
+    }
+}
+
+widget "xfwm"        style "xfwm4-titlebar"
