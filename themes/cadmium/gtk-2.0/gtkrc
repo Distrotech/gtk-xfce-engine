@@ -163,6 +163,17 @@ style "menuitem" = "default"
 widget_class "*MenuItem*"          style "menuitem"
 class "*MenuItem*"                 style "menuitem"
 
+
+# This is for ROX-Filer
+# 
+style "rox" = "default"
+{
+  bg[NORMAL] = "#ffffff"
+  bg[ACTIVE] = "#ffffff"
+}
+widget_class "*Collection"         style "rox"
+
+
 # This is for the window borders (xfwm4 & metacity)
 # 
 style "titlebar"

@@ -55,6 +55,17 @@ style "button" = "default"
 widget_class "*Button*"            style "button"
 class "*Button*"                   style "button"
 
+
+# This is for ROX-Filer
+# 
+style "rox" = "default"
+{
+  bg[NORMAL] = "#ffffff"
+  bg[ACTIVE] = "#ffffff"
+}
+widget_class "*Collection"         style "rox"
+
+
 style "scrollbar" = "default"
 {
     xthickness = 1

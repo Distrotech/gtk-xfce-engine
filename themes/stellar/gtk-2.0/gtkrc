@@ -63,6 +63,17 @@ style "menu" = "default"
 class "GtkWidget"    style "default"
 class "GtkMenuItem*" style "menu"
 
+
+# This is for ROX-Filer
+# 
+style "rox" = "default"
+{
+  bg[NORMAL] = "#ffffff"
+  bg[ACTIVE] = "#ffffff"
+}
+widget_class "*Collection" style "rox"
+
+
 # This is for the window borders (xfwm4 & metacity)
 # 
 style "titlebar" = "default"

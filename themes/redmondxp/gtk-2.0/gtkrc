@@ -48,11 +48,11 @@ style "default"
 
     engine "xfce" 
     {
-	smooth_edge = true
-	boxfill
-	{
-	    fill_style = plain
-	}
+        smooth_edge = true
+        boxfill
+        {
+            fill_style = plain
+        }
     }
 }
 widget_class "*"                   style "default"
@@ -83,24 +83,24 @@ style "colored" = "default"
 
     engine "xfce" 
     {
-	smooth_edge = true
-	boxfill
-	{
-	    fill_style = gradient
-	    orientation = vertical
-	    shade_start = 0.9
-	    shade_end = 1.1
-	}
+        smooth_edge = true
+        boxfill
+        {
+            fill_style = gradient
+            orientation = vertical
+            shade_start = 0.9
+            shade_end = 1.1
+        }
     }
 }
 widget_class "*GtkList*"           style "colored"
 class "*GtkList*"                  style "colored"
-widget_class "*GtkEntry*"	   style "colored"
-class "*GtkEntry*"	           style "colored"
-widget_class "*GtkTree*"	   style "colored"
-class "*GtkTree*"	           style "colored"
-widget_class "*GtkProgress*"	   style "colored"
-class "*GtkProgress*"	           style "colored"
+widget_class "*GtkEntry*"          style "colored"
+class "*GtkEntry*"                 style "colored"
+widget_class "*GtkTree*"           style "colored"
+class "*GtkTree*"                  style "colored"
+widget_class "*GtkProgress*"       style "colored"
+class "*GtkProgress*"              style "colored"
 
 style "menu" = "colored"
 {
@@ -112,11 +112,11 @@ style "menu" = "colored"
 
     engine "xfce" 
     {
-	smooth_edge = true
-	boxfill
-	{
-	    fill_style = plain
-	}
+        smooth_edge = true
+        boxfill
+        {
+            fill_style = plain
+        }
     }
 }
 widget_class "*Menu*"              style "menu"
@@ -140,14 +140,14 @@ style "button" = "default"
 
     engine "xfce" 
     {
-	smooth_edge = true
-	boxfill
-	{
-	    fill_style = gradient
-	    orientation = vertical
-	    shade_start = 1.1
-	    shade_end = 0.9
-	}
+        smooth_edge = true
+        boxfill
+        {
+            fill_style = gradient
+            orientation = vertical
+            shade_start = 1.1
+            shade_end = 0.9
+        }
     }
 }
 widget_class "*Button*"            style "button"
@@ -184,20 +184,31 @@ style "scroll" = "default"
 
     engine "xfce" 
     {
-	smooth_edge = true
-	boxfill
-	{
-	    fill_style = gradient
-	    orientation = auto
-	    shade_start = 1.1
-	    shade_end = 0.9
-	}
+        smooth_edge = true
+        boxfill
+        {
+            fill_style = gradient
+            orientation = auto
+            shade_start = 1.1
+            shade_end = 0.9
+        }
     }
 }
 widget_class "*Scrollbar*"         style "scroll"
 class "*Scrollbar*"                style "scroll"
 widget_class "*Scale*"             style "scroll"
 class "*Scale*"                    style "scroll"
+
+
+# This is for ROX-Filer
+# 
+style "rox" = "default"
+{
+  bg[NORMAL] = "#ffffff"
+  bg[ACTIVE] = "#ffffff"
+}
+widget_class "*Collection"         style "rox"
+
 
 # This is for the window borders (xfwm4 & metacity)
 # 

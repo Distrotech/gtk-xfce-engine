@@ -55,8 +55,8 @@ style "default"
         smooth_edge = true
         boxfill
         {
-	    fill_style = plain
-	}
+            fill_style = plain
+        }
     }
 }
 
@@ -72,8 +72,8 @@ style "menu-color" = "default"
         smooth_edge = false
         boxfill
         {
-	    fill_style = plain
-	}
+            fill_style = plain
+        }
     }
 }
 
@@ -87,8 +87,8 @@ style "tool-bar" = "menu-color"
         smooth_edge = true
         boxfill
         {
-	    fill_style = plain
-	}
+            fill_style = plain
+        }
     }
 }
 widget_class "*BonoboDockItem"     style "tool-bar"
@@ -110,11 +110,11 @@ style "menu" = "menu-color"
         smooth_edge = false
         boxfill
         {
-	    fill_style = gradient
-	    orientation = vertical
-	    shade_start = 0.80
-	    shade_end = 1.80
-	}
+            fill_style = gradient
+            orientation = vertical
+            shade_start = 0.80
+            shade_end = 1.80
+        }
     }
 }
 widget_class "*MenuItem*"          style "menu"
@@ -130,11 +130,11 @@ style "progress" = "menu-color"
         smooth_edge = false
         boxfill
         {
-	    fill_style = gradient
-	    orientation = vertical
-	    shade_start = 0.80
-	    shade_end = 1.80
-	}
+            fill_style = gradient
+            orientation = vertical
+            shade_start = 0.80
+            shade_end = 1.80
+        }
     }
 }
 widget_class "*Progress*"          style "progress"
@@ -150,12 +150,23 @@ style "button" = "default"
         smooth_edge = true
         boxfill
         {
-	    fill_style = plain
+            fill_style = plain
         }
     }
 }
 widget_class "*Button*"            style "button"
 class "*Button*"                   style "button"
+
+
+# This is for ROX-Filer
+# 
+style "rox" = "default"
+{
+  bg[NORMAL] = "#ffffff"
+  bg[ACTIVE] = "#ffffff"
+}
+widget_class "*Collection"         style "rox"
+
 
 # This is for the window borders (xfwm4 & metacity)
 # 
@@ -167,7 +178,7 @@ style "titlebar"
     fg[INSENSITIVE]   = "#000000"
 }
 
-widget "xfwm"	          style "titlebar"
+widget "xfwm"             style "titlebar"
 class "MetaFrames"        style "titlebar"
 widget_class "MetaFrames" style "titlebar"
 

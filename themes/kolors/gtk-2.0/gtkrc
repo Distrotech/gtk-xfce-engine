@@ -149,6 +149,17 @@ style "progress" = "default"
 widget_class "*Progress*"          style "progress" 
 class "*Progress*"                 style "progress" 
 
+
+# This is for ROX-Filer
+# 
+style "rox" = "default"
+{
+  bg[NORMAL] = "#ffffff"
+  bg[ACTIVE] = "#ffffff"
+}
+widget_class "*Collection"         style "rox"
+
+
 # This is for the window borders (xfwm4 & metacity)
 # 
 style "titlebar"

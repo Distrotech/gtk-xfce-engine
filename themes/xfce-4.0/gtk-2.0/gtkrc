@@ -212,6 +212,17 @@ class "*CheckButton*"              style "default"
 widget_class "*RadioButton*"       style "default"
 class "*RadioButton*"              style "default"
 
+
+# This is for ROX-Filer
+# 
+style "rox" = "default"
+{
+  bg[NORMAL] = "#ffffff"
+  bg[ACTIVE] = "#ffffff"
+}
+widget_class "*Collection"         style "rox"
+
+
 # This is for the window borders (xfwm4 & metacity)
 # 
 style "titlebar" = "default"
@@ -222,6 +233,6 @@ style "titlebar" = "default"
     fg[INSENSITIVE]   = "#000000"
 }
 
-widget "xfwm"	          style "titlebar"
+widget "xfwm"             style "titlebar"
 class "MetaFrames"        style "titlebar"
 widget_class "MetaFrames" style "titlebar"
