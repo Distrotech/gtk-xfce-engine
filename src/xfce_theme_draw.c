@@ -659,7 +659,11 @@ static void draw_shadow(GtkStyle * style, GdkWindow * window, GtkStateType state
         case GTK_SHADOW_OUT:
             if(XFCE_RC_STYLE(style->rc_style)->smooth_edge)
             {
-                if(DETAIL("vscrollbar") || DETAIL("hscrollbar") || DETAIL("slider") || DETAIL("vscale") || DETAIL("hscale"))
+                if ((DETAIL("spinbutton_up") || DETAIL("spinbutton_down")) && (state_type != GTK_STATE_PRELIGHT))
+                {
+                    /* Do nothing */
+                }
+                else if(DETAIL("vscrollbar") || DETAIL("hscrollbar") || DETAIL("slider") || DETAIL("vscale") || DETAIL("hscale"))
                 {
                     if ((xt > 1) && (yt > 1))
                     {
@@ -747,7 +751,11 @@ static void draw_shadow(GtkStyle * style, GdkWindow * window, GtkStateType state
             }
             else
             {
-                if ((xt > 1) && (yt > 1))
+                if ((DETAIL("spinbutton_up") || DETAIL("spinbutton_down")) && (state_type != GTK_STATE_PRELIGHT))
+                {
+                    /* Do nothing */
+                }
+                else if ((xt > 1) && (yt > 1))
                 {
                     gdk_draw_line(window, style->dark_gc[state_type], x, y, x + width - 1, y);
                     gdk_draw_line(window, style->dark_gc[state_type], x, y, x, y + height - 1);
