@@ -33,7 +33,7 @@ style "xfce-default"
     base[INSENSITIVE] = "#eeeeef"
     base[NORMAL]      = "#ffffff"
     base[PRELIGHT]    = "#d4d8e0"
-    base[SELECTED]    = "#7585C0"
+    base[SELECTED]    = "#7585c0"
 
     bg[ACTIVE]        = "#c2c4ca"
     bg[INSENSITIVE]   = "#eeeeef"
@@ -157,7 +157,7 @@ class "*MenuItem*"                 style "xfce-menuitem"
 
 style "xfce-titlebar"
 {
-    bg[SELECTED]      = "#70727f"
+    bg[SELECTED]      = "#7585c0"
     fg[SELECTED]      = "#ffffff"
     bg[ACTIVE]        = "#c4c6cc"
     fg[NORMAL]        = "#868992"
