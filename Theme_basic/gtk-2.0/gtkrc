@@ -13,11 +13,11 @@ style "default"
 
     engine "xfce" 
     {
-	smooth_edge = true
+        smooth_edge = true
         boxfill
         {
-	    fill_style = plain
-	}
+            fill_style = plain
+        }
     }
 }
 widget_class "*"                style "default"
@@ -28,14 +28,14 @@ style "xfce-basic-buttonstyle" = "default"
     ythickness = 1
     engine "xfce" 
     {
-	smooth_edge = true
+        smooth_edge = true
         boxfill
         {
-	    fill_style = gradient
-	    orientation = nothern_diagonal
-	    shade_start = 0.9
-	    shade_end = 1.1
-	}
+            fill_style = gradient
+            orientation = nothern_diagonal
+            shade_start = 0.9
+            shade_end = 1.1
+        }
     }
 }
 widget_class "*Button*"            style "xfce-basic-buttonstyle"
@@ -47,16 +47,18 @@ style "xfce-basic-sbstyle" = "default"
     ythickness = 1
     engine "xfce" 
     {
-	smooth_edge = true
+        smooth_edge = true
         boxfill
         {
-	    fill_style = gradient
-	    orientation = auto
-	    shade_start = 0.9
-	    shade_end = 1.1
-	}
+            fill_style = gradient
+            orientation = auto
+            shade_start = 0.9
+            shade_end = 1.1
+        }
     }
 }
 widget_class "*Scrollbar*"         style "xfce-basic-sbstyle"
 class "*Scrollbar*"                style "xfce-basic-sbstyle"
+widget_class "*Scale*"             style "xfce-basic-sbstyle"
+class "*Scale*"                    style "xfce-basic-sbstyle"
 

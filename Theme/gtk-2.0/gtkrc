@@ -43,11 +43,11 @@ style "xfce-default"
 
     engine "xfce" 
     {
-	smooth_edge = false
+        smooth_edge = false
         boxfill
         {
-	    fill_style = plain
-	}
+            fill_style = plain
+        }
     }
 }
 
@@ -73,27 +73,27 @@ style "xfce-colored" = "xfce-default"
 
     engine "xfce" 
     {
-	smooth_edge = false
+        smooth_edge = false
         boxfill
         {
-	    fill_style = gradient
-	    orientation = vertical
-	    shade_start = 0.8
-	    shade_end = 1.1
-	}
+            fill_style = gradient
+            orientation = vertical
+            shade_start = 0.8
+            shade_end = 1.1
+        }
     }
 }
 
 widget_class "*List*"              style "xfce-colored"
 class "*List*"                     style "xfce-colored"
-widget_class "*MenuItem*"	   style "xfce-colored"
-class "*MenuItem*"	           style "xfce-colored"
-widget_class "*Text*"	           style "xfce-colored"
-class "*Text*"	                   style "xfce-colored"
+widget_class "*MenuItem*"          style "xfce-colored"
+class "*MenuItem*"                 style "xfce-colored"
+widget_class "*Text*"              style "xfce-colored"
+class "*Text*"                     style "xfce-colored"
 widget_class "*Entry*"             style "xfce-colored"
 class "*Entry*"                    style "xfce-colored"
-widget_class "*Tree*"	           style "xfce-colored"
-class "*Tree*"	                   style "xfce-colored"
+widget_class "*Tree*"              style "xfce-colored"
+class "*Tree*"                     style "xfce-colored"
 widget_class "*Progress*"          style "xfce-colored"
 class "*Progress*"                 style "xfce-colored"
 
@@ -103,18 +103,20 @@ style "xfce-scrollbar" = "xfce-default"
     ythickness = 2
     engine "xfce" 
     {
-	smooth_edge = false
+        smooth_edge = false
         boxfill
         {
-	    fill_style = gradient
-	    orientation = auto
-	    shade_start = 0.8
-	    shade_end = 1.1
-	}
+            fill_style = gradient
+            orientation = auto
+            shade_start = 0.8
+            shade_end = 1.1
+        }
     }
 }
 widget_class "*Scrollbar*"         style "xfce-scrollbar"
 class "*Scrollbar*"                style "xfce-scrollbar"
+widget_class "*Scale*"             style "xfce-scrollbar"
+class "*Scale*"                    style "xfce-scrollbar"
 
 style "xfce-button" = "xfce-default"
 {
@@ -122,14 +124,14 @@ style "xfce-button" = "xfce-default"
     ythickness = 2
     engine "xfce" 
     {
-	smooth_edge = false
+        smooth_edge = false
         boxfill
         {
-	    fill_style = gradient
-	    orientation = vertical
-	    shade_start = 1.1
-	    shade_end = 0.8
-	}
+            fill_style = gradient
+            orientation = vertical
+            shade_start = 1.1
+            shade_end = 0.8
+        }
     }
 }
 widget_class "*Button*"         style "xfce-button"

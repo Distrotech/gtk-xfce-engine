@@ -44,11 +44,11 @@ style "xfce-redmondxp-default"
 
     engine "xfce" 
     {
-	smooth_edge = true
+        smooth_edge = true
         boxfill
         {
-	    fill_style = plain
-	}
+            fill_style = plain
+        }
     }
 }
 widget_class "*"                   style "xfce-redmondxp-default"
@@ -68,14 +68,14 @@ style "xfce-redmondxp-colored" = "xfce-redmondxp-default"
 
     engine "xfce" 
     {
-	smooth_edge = true
+        smooth_edge = true
         boxfill
         {
-	    fill_style = gradient
-	    orientation = vertical
-	    shade_start = 0.9
-	    shade_end = 1.1
-	}
+            fill_style = gradient
+            orientation = vertical
+            shade_start = 0.9
+            shade_end = 1.1
+        }
     }
 }
 class "GtkList"                    style "xfce-redmondxp-colored"
@@ -103,18 +103,20 @@ style "xfce-redmondxp-scroll" = "xfce-redmondxp-default"
 
     engine "xfce" 
     {
-	smooth_edge = true
+        smooth_edge = true
         boxfill
         {
-	    fill_style = gradient
-	    orientation = auto
-	    shade_start = 0.9
-	    shade_end = 1.1
-	}
+            fill_style = gradient
+            orientation = auto
+            shade_start = 0.9
+            shade_end = 1.1
+        }
     }
 }
 widget_class "*Scrollbar*"         style "xfce-redmondxp-scroll"
 class "*Scrollbar*"                style "xfce-redmondxp-scroll"
+widget_class "*Scale*"             style "xfce-redmondxp-scroll"
+class "*Scale*"                    style "xfce-redmondxp-scroll"
 
 style "xfce-redmondxp-button" = "xfce-redmondxp-default"
 {
@@ -125,14 +127,14 @@ style "xfce-redmondxp-button" = "xfce-redmondxp-default"
 
     engine "xfce" 
     {
-	smooth_edge = true
+        smooth_edge = true
         boxfill
         {
-	    fill_style = gradient
-	    orientation = auto
-	    shade_start = 1.1
-	    shade_end = 0.9
-	}
+            fill_style = gradient
+            orientation = auto
+            shade_start = 1.1
+            shade_end = 0.9
+        }
     }
 }
 class "GtkButton" style "xfce-redmondxp-button"
@@ -156,4 +158,4 @@ style "xfce-redmondxp-titlebar"
     fg[NORMAL]        = "#dee7f7"
 }
 
-widget "xfwm"	     style "xfce-redmondxp-titlebar"
+widget "xfwm"        style "xfce-redmondxp-titlebar"
