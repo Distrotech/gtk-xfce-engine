@@ -33,6 +33,24 @@ xfce_rc_style_register_type (GTypeModule *module)
 static void
 xfce_rc_style_init (XfceRcStyle *style)
 {
+  static const gchar *rc_string =
+  ( "style \"default\"\n"
+    "{\n"
+      "GtkWidget::interior_focus=5\n"
+      "GtkButton::default_border={5,5,5,5}\n"
+      "GtkButton::default_outside_border={5,5,5,5}\n"
+      "GtkButton::default_spacing=6\n"
+      "GtkCheckButton::indicator_size=13\n"
+      "GtkPaned::handle_full_size=1\n"
+      "GtkRange::trough_border=2\n"
+      "GtkRange::slider_width=15\n"
+      "GtkRange::stepper_size=15\n"
+      "GtkRange::stepper_spacing=0\n"
+      "GtkSpinButton::shadow_type=etched-in\n"
+    "}\n"
+    "class \"GtkWidget\" style \"default\"\n"
+  );
+  gtk_rc_parse_string (rc_string);
 }
 
 static void
