@@ -30,11 +30,11 @@ style "default"
     xthickness = 2
     ythickness = 2
 
-    base[ACTIVE]      = "#c2c4ca"
+    base[ACTIVE]      = "#e0e0e1"
     base[INSENSITIVE] = "#eeeeef"
     base[NORMAL]      = "#ffffff"
     base[PRELIGHT]    = "#d4d8e0"
-    base[SELECTED]    = "#7585C0"
+    base[SELECTED]    = "#647694"
 
     bg[ACTIVE]        = "#c2c4ca"
     bg[INSENSITIVE]   = "#eeeeef"
@@ -172,10 +172,10 @@ widget_class "*Collection"         style "rox"
 # 
 style "titlebar" = "default"
 {
-    bg[SELECTED]      = "#70727f"
+    bg[SELECTED]      = "#647694"
     fg[SELECTED]      = "#ffffff"
-    bg[INSENSITIVE]   = "#d4d8e0"
-    fg[INSENSITIVE]   = "#ffffff"
+    bg[INSENSITIVE]   = "#eeeeef"
+    fg[INSENSITIVE]   = "#a5a5a9"
 }
 widget "xfwm"                      style "titlebar"
 class "MetaFrames"                 style "titlebar"
