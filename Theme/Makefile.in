@@ -78,7 +78,6 @@ VERSION = @VERSION@
 XFCE_CFLAGS = @XFCE_CFLAGS@
 XFCE_LIBS = @XFCE_LIBS@
 
-dummy = 
 SUBDIRS = gtk-2.0
 themedir = $(datadir)/themes/Xfce
 theme_DATA = ICON.png README.html
