@@ -205,10 +205,7 @@ style "xfce-progress" = "xfce-colored"
         smooth_edge = true
         boxfill
         {
-            fill_style = gradient
-            orientation = vertical
-            shade_start = 1.05
-            shade_end = 0.95
+            fill_style = plain
         }
     }
 }
