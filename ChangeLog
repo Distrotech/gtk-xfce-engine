@@ -1,3 +1,24 @@
+2004-12-22 20:23  benny
+
+	* ChangeLog, Makefile.in, aclocal.m4, autogen.sh, ltmain.sh,
+	m4/pkg.m4, src/Makefile.in, themes/Makefile.in,
+	themes/b5/Makefile.in, themes/b5/gtk-2.0/Makefile.in,
+	themes/basic/Makefile.in, themes/basic/gtk-2.0/Makefile.in,
+	themes/cadmium/Makefile.in, themes/cadmium/gtk-2.0/Makefile.in,
+	themes/curve/Makefile.in, themes/curve/gtk-2.0/Makefile.in,
+	themes/dawn/Makefile.in, themes/dawn/gtk-2.0/Makefile.in,
+	themes/kde2/Makefile.in, themes/kde2/gtk-2.0/Makefile.in,
+	themes/kolors/Makefile.in, themes/kolors/gtk-2.0/Makefile.in,
+	themes/light/Makefile.in, themes/light/gtk-2.0/Makefile.in,
+	themes/redmondxp/Makefile.in, themes/redmondxp/gtk-2.0/Makefile.in,
+	themes/saltlake/Makefile.in, themes/saltlake/gtk-2.0/Makefile.in,
+	themes/smooth/Makefile.in, themes/smooth/gtk-2.0/Makefile.in,
+	themes/stellar/Makefile.in, themes/stellar/gtk-2.0/Makefile.in,
+	themes/winter/Makefile.in, themes/winter/gtk-2.0/Makefile.in,
+	themes/xfce/Makefile.in, themes/xfce/gtk-2.0/Makefile.in,
+	themes/xfce-4.0/Makefile.in, themes/xfce-4.0/gtk-2.0/Makefile.in:
+	Update ChangeLog. Add missing m4 file.
+
 2004-12-06 21:48  benny
 
 	* themes/stellar/gtk-2.0/gtkrc: Color overrides for ExoIconBar.
