@@ -28,7 +28,7 @@ style "xfce-default"
     base[INSENSITIVE] = "#eeeeea"
     base[NORMAL]      = "#ffffff"
     base[PRELIGHT]    = "#b0c0d0"
-    base[SELECTED]    = "#b0c0d0"
+    base[SELECTED]    = "#4a7daf"
 
     bg[ACTIVE]        = "#cececa"
     bg[INSENSITIVE]   = "#eeeeea"
@@ -46,7 +46,7 @@ style "xfce-default"
     text[INSENSITIVE] = "#1f1f1f"
     text[NORMAL]      = "#1f1f1f"
     text[PRELIGHT]    = "#000000"
-    text[SELECTED]    = "#000000"
+    text[SELECTED]    = "#ffffff"
 
     engine "xfce" 
     {
@@ -146,3 +146,12 @@ style "xfce-menuitem" = "xfce-default"
 
 widget_class "*MenuItem*"          style "xfce-menuitem"
 class "*MenuItem*"                 style "xfce-menuitem"
+
+style "xfce-kolors-titlebar"
+{
+    bg[SELECTED]      = "#4a7daf"
+    fg[SELECTED]      = "#ffffff"
+}
+widget "xfwm"                      style "xfce-kolors-titlebar"
+class "MetaFrames"                 style "xfce-kolors-titlebar"
+widget_class "MetaFrames"          style "xfce-kolors-titlebar"
