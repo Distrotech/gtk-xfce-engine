@@ -7,7 +7,8 @@ SUBDIRS = Theme\
 	Theme_redmondxp\
 	Theme_light\
 	Theme_smooth\
-	Theme_saltlake
+	Theme_saltlake\
+	Theme_curve
 
 INCLUDES = $(XFCE_CFLAGS)
 CFLAGS = $(XFCE_CFLAGS) -DG_DISABLE_DEPRECATED -DGTK_DISABLE_DEPRECATED \

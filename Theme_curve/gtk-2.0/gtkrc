@@ -1,0 +1,39 @@
+style "curve-default"
+{
+    GtkWidget::interior_focus         = -2
+    GtkButton::default_border         = {0, 0 ,0 ,0}
+    GtkButton::default_outside_border = {0, 0 ,0 ,0}
+    GtkButton::default_spacing        = 0
+    GtkCheckButton::indicator_size    = 15
+    GtkPaned::handle_full_size        = 1
+    GtkRange::trough_border           = 2
+    GtkRange::slider_width            = 15
+    GtkRange::stepper_size            = 15
+    GtkRange::stepper_spacing         = 0
+    GtkSpinButton::shadow_type        = etched-in
+    GtkMenuBar::internal-padding      = 0
+    GtkWidget::focus_padding          = 1
+    GtkScrollbar::min_slider_length   = 20
+
+    fg[NORMAL]      = "#000000"
+    fg[ACTIVE]      = "#000000"
+    fg[PRELIGHT]    = "#000000"
+    fg[SELECTED]    = "#ffffff"
+    fg[INSENSITIVE] = "#7f7f7f"
+
+    bg[NORMAL]      = "#e5e5e5"
+    bg[PRELIGHT]    = "#f2f2f2"
+    bg[ACTIVE]      = "#cccccc"
+    bg[INSENSITIVE] = "#d8d8d8"
+    bg[SELECTED]    = "#4c59a6"
+
+    base[SELECTED]  = "#4c59a6"
+    text[SELECTED]  = "#ffffff"
+
+    engine "xfce" 
+    {
+        smooth_edge = TRUE
+    }
+}
+
+class "GtkWidget"                  style "curve-default"
