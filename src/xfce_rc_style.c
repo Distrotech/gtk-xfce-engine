@@ -35,7 +35,9 @@ theme_symbols[] =
     { "shade_start", TOKEN_SHADE_START },
     { "shade_end", TOKEN_SHADE_END },
     { "true", TOKEN_TRUE},
-    { "false", TOKEN_FALSE}
+    { "TRUE", TOKEN_TRUE},
+    { "false", TOKEN_FALSE},
+    { "FALSE", TOKEN_FALSE}
 };
 
 static guint n_theme_symbols = sizeof(theme_symbols) / sizeof(theme_symbols[0]);
