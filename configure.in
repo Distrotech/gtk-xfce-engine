@@ -41,4 +41,6 @@ gtk-xfce-engine-2.spec
 Makefile
 Theme/Makefile
 Theme/gtk-2.0/Makefile
+Theme_basic/Makefile
+Theme_basic/gtk-2.0/Makefile
 ])

@@ -1,0 +1,8 @@
+# Edit these colors and fonts however you like.
+
+style "default"
+{
+  engine "xfce" {}
+}
+
+class "*"                      style "default"

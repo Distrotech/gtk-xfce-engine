@@ -7065,7 +7065,7 @@ EOF
 
 fi
 
-ac_config_files="$ac_config_files gtk-xfce-engine-2.spec Makefile Theme/Makefile Theme/gtk-2.0/Makefile"
+ac_config_files="$ac_config_files gtk-xfce-engine-2.spec Makefile Theme/Makefile Theme/gtk-2.0/Makefile Theme_basic/Makefile Theme_basic/gtk-2.0/Makefile"
 cat >confcache <<\_ACEOF
 # This file is a shell script that caches the results of configure
 # tests run on this system so they can be shared between configure
@@ -7396,9 +7396,11 @@ do
   "Makefile" ) CONFIG_FILES="$CONFIG_FILES Makefile" ;;
   "Theme/Makefile" ) CONFIG_FILES="$CONFIG_FILES Theme/Makefile" ;;
   "Theme/gtk-2.0/Makefile" ) CONFIG_FILES="$CONFIG_FILES Theme/gtk-2.0/Makefile" ;;
+  "Theme_basic/Makefile" ) CONFIG_FILES="$CONFIG_FILES Theme_basic/Makefile" ;;
+  "Theme_basic/gtk-2.0/Makefile" ) CONFIG_FILES="$CONFIG_FILES Theme_basic/gtk-2.0/Makefile" ;;
   "depfiles" ) CONFIG_COMMANDS="$CONFIG_COMMANDS depfiles" ;;
   "config.h" ) CONFIG_HEADERS="$CONFIG_HEADERS config.h" ;;
-  *) { { echo "$as_me:7401: error: invalid argument: $ac_config_target" >&5
+  *) { { echo "$as_me:7403: error: invalid argument: $ac_config_target" >&5
 echo "$as_me: error: invalid argument: $ac_config_target" >&2;}
    { (exit 1); exit 1; }; };;
   esac
@@ -7643,7 +7645,7 @@ done; }
   esac
 
   if test x"$ac_file" != x-; then
-    { echo "$as_me:7646: creating $ac_file" >&5
+    { echo "$as_me:7648: creating $ac_file" >&5
 echo "$as_me: creating $ac_file" >&6;}
     rm -f "$ac_file"
   fi
@@ -7661,7 +7663,7 @@ echo "$as_me: creating $ac_file" >&6;}
       -) echo $tmp/stdin ;;
       [\\/$]*)
          # Absolute (can't be DOS-style, as IFS=:)
-         test -f "$f" || { { echo "$as_me:7664: error: cannot find input file: $f" >&5
+         test -f "$f" || { { echo "$as_me:7666: error: cannot find input file: $f" >&5
 echo "$as_me: error: cannot find input file: $f" >&2;}
    { (exit 1); exit 1; }; }
          echo $f;;
@@ -7674,7 +7676,7 @@ echo "$as_me: error: cannot find input file: $f" >&2;}
            echo $srcdir/$f
          else
            # /dev/null tree
-           { { echo "$as_me:7677: error: cannot find input file: $f" >&5
+           { { echo "$as_me:7679: error: cannot find input file: $f" >&5
 echo "$as_me: error: cannot find input file: $f" >&2;}
    { (exit 1); exit 1; }; }
          fi;;
@@ -7735,7 +7737,7 @@ for ac_file in : $CONFIG_HEADERS; do test "x$ac_file" = x: && continue
   * )   ac_file_in=$ac_file.in ;;
   esac
 
-  test x"$ac_file" != x- && { echo "$as_me:7738: creating $ac_file" >&5
+  test x"$ac_file" != x- && { echo "$as_me:7740: creating $ac_file" >&5
 echo "$as_me: creating $ac_file" >&6;}
 
   # First look for the input files in the build tree, otherwise in the
@@ -7746,7 +7748,7 @@ echo "$as_me: creating $ac_file" >&6;}
       -) echo $tmp/stdin ;;
       [\\/$]*)
          # Absolute (can't be DOS-style, as IFS=:)
-         test -f "$f" || { { echo "$as_me:7749: error: cannot find input file: $f" >&5
+         test -f "$f" || { { echo "$as_me:7751: error: cannot find input file: $f" >&5
 echo "$as_me: error: cannot find input file: $f" >&2;}
    { (exit 1); exit 1; }; }
          echo $f;;
@@ -7759,7 +7761,7 @@ echo "$as_me: error: cannot find input file: $f" >&2;}
            echo $srcdir/$f
          else
            # /dev/null tree
-           { { echo "$as_me:7762: error: cannot find input file: $f" >&5
+           { { echo "$as_me:7764: error: cannot find input file: $f" >&5
 echo "$as_me: error: cannot find input file: $f" >&2;}
    { (exit 1); exit 1; }; }
          fi;;
@@ -7876,7 +7878,7 @@ cat >>$CONFIG_STATUS <<\EOF
   rm -f $tmp/in
   if test x"$ac_file" != x-; then
     if cmp -s $ac_file $tmp/config.h 2>/dev/null; then
-      { echo "$as_me:7879: $ac_file is unchanged" >&5
+      { echo "$as_me:7881: $ac_file is unchanged" >&5
 echo "$as_me: $ac_file is unchanged" >&6;}
     else
       ac_dir=`$as_expr X"$ac_file" : 'X\(.*[^/]\)//*[^/][^/]*/*$' \| \
