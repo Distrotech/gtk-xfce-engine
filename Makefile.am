@@ -7,7 +7,6 @@ SUBDIRS = Theme\
 	Theme_redmondxp\
 	Theme_light\
 	Theme_smooth\
-	Theme_curve\
 	Theme_saltlake
 
 INCLUDES = $(XFCE_CFLAGS)

@@ -52,8 +52,6 @@ Theme_funklor/Makefile
 Theme_funklor/gtk-2.0/Makefile
 Theme/gtk-2.0/Makefile
 Theme/Makefile
-Theme_curve/gtk-2.0/Makefile
-Theme_curve/Makefile
 Theme_light/Makefile
 Theme_light/gtk-2.0/Makefile
 Theme_redmondxp/Makefile
