@@ -191,12 +191,13 @@ static void xfce_draw_handlers(GtkStyle * style, GdkWindow * window, GtkStateTyp
     {
         if(width > 15 + xthick)
         {
+	    gint len = (height - 2 * (ythick + 2) > 4 ? height - 2 * (ythick + 2) :  height - 2 * ythick);
             gint delta = x + (width / 2) - 5;
-            yy = y + ythick;
+            yy = y + (height - len) / 2;
             for(xx = 0; xx < 10; xx += 2)
             {
-                gdk_draw_line(window, dark_gc, xx + delta, yy, xx + delta, yy + height - ythick);
-                gdk_draw_line(window, light_gc, xx + delta + 1, yy, xx + delta + 1, yy + height - ythick);
+                gdk_draw_line(window, dark_gc, xx + delta, yy, xx + delta, yy + len - 1);
+                gdk_draw_line(window, light_gc, xx + delta + 1, yy, xx + delta + 1, yy + len - 1);
             }
         }
     }
@@ -204,12 +205,13 @@ static void xfce_draw_handlers(GtkStyle * style, GdkWindow * window, GtkStateTyp
     {
         if(height > 15 + ythick)
         {
+	    gint len = (width - 2 * (xthick + 2) > 4 ? width - 2 * (xthick + 2) :  width - 2 * xthick);
             gint delta = y + (height / 2) - 5;
-            xx = x + xthick;
+            xx = x + (width - len) / 2;
             for(yy = 0; yy < 10; yy += 2)
             {
-                gdk_draw_line(window, dark_gc, xx, yy + delta, xx + width - xthick, yy + delta);
-                gdk_draw_line(window, light_gc, xx, yy + delta + 1, xx + width - xthick, yy + delta + 1);
+                gdk_draw_line(window, dark_gc, xx, yy + delta, xx + len - 1, yy + delta);
+                gdk_draw_line(window, light_gc, xx, yy + delta + 1, xx + len - 1, yy + delta + 1);
             }
         }
     }
