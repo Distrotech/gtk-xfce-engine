@@ -19,7 +19,7 @@ style "default"
     fg[PRELIGHT]      = "#000000"
     fg[SELECTED]      = "#000000"
 
-    bg[ACTIVE]        = "#d4d4ce"
+    bg[ACTIVE]        = "#d4d4cd"
     bg[INSENSITIVE]   = "#edede5"
     bg[NORMAL]        = "#edede5"
     bg[PRELIGHT]      = "#f5f5dd"
@@ -44,3 +44,29 @@ style "default"
 }
 
 class "GtkWidget" style "default"
+
+style "button" = "default"
+{
+    bg[NORMAL]        = "#e1e1d9"
+    bg[ACTIVE]        = "#cfcfc4"
+    bg[PRELIGHT]      = "#f5f5dd"
+    bg[INSENSITIVE]   = "#e1e1d9"
+}
+
+class "GtkButton" style "button"
+
+style "notebook" = "default"
+{
+    bg[NORMAL]        = "#e1e1d9"
+    bg[ACTIVE]        = "#d4d4ce"
+}
+
+class "GtkNotebook" style "notebook"
+
+style "titlebar"
+{
+    bg[SELECTED]  = "#83759c"
+    fg[SELECTED]  = "#ffffff"
+}
+
+widget "xfwm" style "titlebar"
