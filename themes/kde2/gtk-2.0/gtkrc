@@ -86,13 +86,13 @@ style "xfce-kde2-buttonstyle" = "default"
     ythickness = 2
     engine "xfce" 
     {
-        smooth_edge = true
+        smooth_edge = false
         boxfill
         {
             fill_style = gradient
-            orientation = auto
-            shade_start = 1.05
-            shade_end = 1.00
+            orientation = vertical
+            shade_start = 1.25
+            shade_end = 0.90
         }
     }
 }
