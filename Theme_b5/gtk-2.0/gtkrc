@@ -14,22 +14,22 @@ style "default"
     GtkScrollbar::min_slider_length   = 20
 
     fg[ACTIVE]        = "#000000"
-    fg[INSENSITIVE]   = "#c6c6c6"
+    fg[INSENSITIVE]   = "#d6d6d6"
     fg[NORMAL]        = "#000000"
     fg[PRELIGHT]      = "#000000"
     fg[SELECTED]      = "#000000"
 
-    bg[ACTIVE]        = "#c6c6c6"
-    bg[INSENSITIVE]   = "#dbdbdb"
-    bg[NORMAL]        = "#dbdbdb"
-    bg[PRELIGHT]      = "#e8e8e8"
-    bg[SELECTED]      = "#8ca9ed"
+    bg[ACTIVE]        = "#d6d6d6"
+    bg[INSENSITIVE]   = "#ebebeb"
+    bg[NORMAL]        = "#ebebeb"
+    bg[PRELIGHT]      = "#bbddff"
+    bg[SELECTED]      = "#cfefff"
 
-    base[ACTIVE]      = "#c6c6c6"
-    base[INSENSITIVE] = "#c6c6c6"
+    base[ACTIVE]      = "#d6d6d6"
+    base[INSENSITIVE] = "#d6d6d6"
     base[NORMAL]      = "#ffffff"
-    base[PRELIGHT]    = "#e8e8e8"
-    base[SELECTED]    = "#8ca9ed"
+    base[PRELIGHT]    = "#bbddff"
+    base[SELECTED]    = "#cfefff"
 
     text[ACTIVE]      = "#000000"
     text[INSENSITIVE] = "#000000"
@@ -49,8 +49,8 @@ class "GtkWidget" style "default"
 # 
 style "xfwm4-ttitlebar"
 {
-    bg[SELECTED]      = "#4c59a6"
-    fg[SELECTED]      = "#ffffff"
+    bg[SELECTED]      = "#cfefff"
+    fg[SELECTED]      = "#000000"
 }
 
 widget "xfwm"	     style "xfwm4-ttitlebar"
