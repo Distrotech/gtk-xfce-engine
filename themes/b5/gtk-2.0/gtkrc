@@ -4,11 +4,11 @@ style "default"
     GtkButton::default_border         = {0, 0, 0, 0}
     GtkButton::default_outside_border = {0, 0, 0, 0}
     GtkButton::default_spacing        = 5
-    GtkCheckButton::indicator_size    = 15
+    GtkCheckButton::indicator_size    = 11
     GtkPaned::handle_full_size        = 1
-    GtkRange::trough_border           = 0
-    GtkRange::slider_width            = 15
-    GtkRange::stepper_size            = 15
+    GtkRange::trough_border           = 1
+    GtkRange::slider_width            = 11
+    GtkRange::stepper_size            = 11
     GtkRange::stepper_spacing         = 0
     GtkSpinButton::shadow_type        = etched-in
     GtkMenuItem::selected_shadow_type = out
@@ -16,23 +16,23 @@ style "default"
     GtkMenuBar::shadow_type           = none
     GtkToolbar::shadow_type           = none
 
-    fg[ACTIVE]        = "#000000"
-    fg[INSENSITIVE]   = "#d6d4d6"
+    fg[ACTIVE]        = "#525051"
+    fg[INSENSITIVE]   = "#525051"
     fg[NORMAL]        = "#000000"
     fg[PRELIGHT]      = "#000000"
     fg[SELECTED]      = "#000000"
 
-    bg[ACTIVE]        = "#d6d4d6"
-    bg[INSENSITIVE]   = "#efedef"
-    bg[NORMAL]        = "#efedef"
-    bg[PRELIGHT]      = "#bbddff"
-    bg[SELECTED]      = "#cfefff"
+    bg[ACTIVE]        = "#dddbde"
+    bg[INSENSITIVE]   = "#dddbde"
+    bg[NORMAL]        = "#dddbde"
+    bg[PRELIGHT]      = "#efedef"
+    bg[SELECTED]      = "#b7b5b8"
 
-    base[ACTIVE]      = "#d6d4d6"
+    base[ACTIVE]      = "#dddbde"
     base[INSENSITIVE] = "#d6d4d6"
     base[NORMAL]      = "#ffffff"
-    base[PRELIGHT]    = "#bbddff"
-    base[SELECTED]    = "#cfefff"
+    base[PRELIGHT]    = "#efedef"
+    base[SELECTED]    = "#b7b5b8"
 
     text[ACTIVE]      = "#000000"
     text[INSENSITIVE] = "#000000"
@@ -50,12 +50,19 @@ widget_class "*"          style "default"
 
 style "thin" = "default"
 {
+    bg[ACTIVE]        = "#f0ebef"
+    fg[NORMAL]        = "#525051"
     xthickness = 1
     ythickness = 1
 }
 
 widget_class "*Progress*" style "thin" 
 class "*Progress*"        style "thin" 
+widget_class "*Scrollbar*"         style "thin"
+class "*Scrollbar*"                style "thin"
+widget_class "*Scale*"             style "thin"
+class "*Scale*"                    style "thin"
+
 
 # This is for xfwm4, in case you want separate colors for the window borders.
 # 
@@ -63,6 +70,8 @@ style "titlebar"
 {
     bg[SELECTED]      = "#ffcb00"
     fg[SELECTED]      = "#000000"
+    bg[ACTIVE]        = "#f0ebef"
+    fg[NORMAL]        = "#525051"
 }
 
 widget "xfwm"	          style "titlebar"
