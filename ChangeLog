@@ -1,3 +1,25 @@
+2003-07-28 21:41  xfce
+
+	* themes/kde2/gtk-2.0/gtkrc: [no log message]
+
+2003-07-25 23:16  xfce
+
+	* configure, configure.in, themes/Makefile.am, themes/Makefile.in,
+	themes/curve/gtk-2.0/gtkrc, themes/kde2/ICON.png,
+	themes/kde2/Makefile.am, themes/kde2/Makefile.in,
+	themes/kde2/README.html, themes/kde2/gtk-2.0/Makefile.am,
+	themes/kde2/gtk-2.0/Makefile.in, themes/kde2/gtk-2.0/gtkrc: Add
+	kde2 theme
+
+2003-07-20 14:23  xfce
+
+	* configure, configure.in, src/xfce_rc_style.c: Version 2.1.3 Add
+	compat with themes from previous 2.0.x versions of gtk-xfce-engine
+
+2003-07-19 11:29  huysmans
+
+	* ChangeLog: Update ChangeLogs
+
 2003-07-13 10:43  huysmans
 
 	* ChangeLog: Update ChangeLogs for release
@@ -300,11 +322,6 @@
 	* xfce_theme_draw.c: Change various frame draw styles in smooth
 	mode.
 
-2002-11-28 21:17  madkiss
-
-	* debian/: changelog, control, rules: 
-	Update to debian/-subdir included in xfce4_20021127-1.
-
 2002-11-20 16:59  xfce
 
 	* xfce_theme_draw.c: [no log message]
@@ -322,15 +339,6 @@
 	* Makefile.in, aclocal.m4, config.h.in, configure, configure.in,
 	gtk-xfce-engine-2.spec.in, xfce_theme_draw.c: Change version
 	number, change frame corners in "smooth" mode.
-
-2002-11-10 11:02  madkiss
-
-	* debian/: changelog, control, copyright, rules: 
-	Added first version of debian/ subdirectory
-
-2002-11-10 11:02  madkiss
-
-	* debian/: changelog, control, copyright, rules: Initial revision
 
 2002-11-05 15:11  xfce
 
