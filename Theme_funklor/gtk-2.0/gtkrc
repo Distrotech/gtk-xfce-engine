@@ -13,17 +13,21 @@ style "default"
     GtkSpinButton::shadow_type        = etched-in
     GtkMenuItem::selected_shadow_type = etched-in
     GtkScrollbar::min_slider_length   = 20
+    GtkMenuBar::internal-padding      = 2
+
+    xthickness = 1
+    ythickness = 2
 
     fg[ACTIVE]        = "#00306b"
     fg[INSENSITIVE]   = "#acacac"
     fg[NORMAL]        = "#000000"
-    fg[PRELIGHT]      = "#00306b"
+    fg[PRELIGHT]      = "#ffffff"
     fg[SELECTED]      = "#ffffff"
 
     bg[ACTIVE]        = "#c6c6c6"
     bg[INSENSITIVE]   = "#eaeaea"
     bg[NORMAL]        = "#eaeaea"
-    bg[PRELIGHT]      = "#f7f7f7"
+    bg[PRELIGHT]      = "#517eb4"
     bg[SELECTED]      = "#517eb4"
 
     base[ACTIVE]      = "#c6c6c6"

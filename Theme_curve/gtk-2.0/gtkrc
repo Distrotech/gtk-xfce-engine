@@ -1,6 +1,6 @@
 style "curve-default"
 {
-    GtkWidget::interior_focus         = -2
+    GtkWidget::interior_focus         = 1
     GtkButton::default_border         = {0, 0 ,0 ,0}
     GtkButton::default_outside_border = {0, 0 ,0 ,0}
     GtkButton::default_spacing        = 2
@@ -12,7 +12,7 @@ style "curve-default"
     GtkRange::stepper_spacing         = 0
     GtkSpinButton::shadow_type        = etched-in
     GtkMenuItem::selected_shadow_type = none
-    GtkMenuBar::internal-padding      = 0
+    GtkMenuBar::internal-padding      = 2
     GtkWidget::focus_padding          = 1
     GtkScrollbar::min_slider_length   = 20
 
@@ -42,13 +42,32 @@ style "curve-default"
 
 class "GtkWidget"                  style "curve-default"
 
-style "curve-menu" = "curve-default"
+style "curve-menu-color" = "curve-default"
 {
-
     bg[PRELIGHT]    = "#6671b2"
     fg[PRELIGHT]    = "#ffffff"
 }
 
-widget_class "*.GtkMenu*"          style "curve-menu"
-widget_class "*.GtkProgress*"      style "curve-menu"
+style "curve-menu-bar" = "curve-menu-color"
+{
+    xthickness = 1
+    ythickness = 1
+}
+
+style "curve-menu" = "curve-menu-color"
+{
+    xthickness = 1
+    ythickness = 2
+}
+
+style "curve-tool-bar" = "curve-menu-color"
+{
+    xthickness = 1
+    ythickness = 1
+}
+
+widget_class "*.GtkMenu*"             style "curve-menu"
+widget_class "*.GtkMenuBar*"          style "curve-menu-bar"
+widget_class "*.GtkToolbar*"          style "curve-tool-bar"
+widget_class "*.GtkProgress*"         style "curve-menu-color"
 

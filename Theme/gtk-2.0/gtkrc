@@ -15,6 +15,9 @@ style "xfce-default"
     GtkSpinButton::shadow_type        = etched-in
     GtkScrollbar::min_slider_length   = 20
 
+    xthickness = 2
+    ythickness = 2
+
     base[ACTIVE]      = "#cdcdc8"
     base[INSENSITIVE] = "#d7d7cf"
     base[NORMAL]      = "#ffffff"
@@ -53,6 +56,9 @@ widget_class "*.GtkToggleButton*"  style "xfce-default"
 
 style "xfce-colored"
 {
+    xthickness = 2
+    ythickness = 2
+
     base[ACTIVE]      = "#cdcdc8"
     base[INSENSITIVE] = "#d7d7cf"
     base[NORMAL]      = "#ffffff"

@@ -2,7 +2,7 @@
 
 style "xfce-redmondxp-default"
 {
-    GtkWidget::interior_focus         = -2
+    GtkWidget::interior_focus         = 1
     GtkButton::default_border         = {0, 0, 0, 0}
     GtkButton::default_outside_border = {0, 0, 0, 0}
     GtkButton::default_spacing        = 10
@@ -15,6 +15,9 @@ style "xfce-redmondxp-default"
     GtkSpinButton::shadow_type        = out
     GtkMenuItem::selected_shadow_type = none
     GtkScrollbar::min_slider_length   = 20
+
+    xthickness = 2
+    ythickness = 2
 
     base[ACTIVE]      = "#e5e5e5"
     base[INSENSITIVE] = "#f7efe7"
@@ -54,6 +57,9 @@ widget_class "*.GtkToggleButton*"  style "xfce-redmondxp-default"
 
 style "xfce-redmondxp-colored" = "xfce-redmondxp-default"
 {
+    xthickness = 1
+    ythickness = 2
+
     bg[ACTIVE]        = "#0055ef"
     bg[PRELIGHT]      = "#0055ef"
 
@@ -101,6 +107,9 @@ class "GtkButton" style "xfce-redmondxp-button"
 
 style "xfce-redmondxp-notebook" = "xfce-redmondxp-default"
 {
+    xthickness = 1
+    ythickness = 1
+
     bg[NORMAL]        = "#fafaf2"
     bg[ACTIVE]        = "#d4d4ce"
 }
