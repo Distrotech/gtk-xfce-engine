@@ -46,6 +46,8 @@ Theme_b5/Makefile
 Theme_b5/gtk-2.0/Makefile
 Theme_basic/Makefile
 Theme_basic/gtk-2.0/Makefile
+Theme_curve/Makefile
+Theme_curve/gtk-2.0/Makefile
 Theme_funklor/Makefile
 Theme_funklor/gtk-2.0/Makefile
 Theme/gtk-2.0/Makefile
