@@ -9,7 +9,6 @@ style "default"
   GtkRange::slider_width = 15
   GtkRange::stepper_size = 15
   GtkRange::stepper_spacing = 0
-  GtkSpinButton::shadow_type = GTK_ETCHED_IN
 
   fg[NORMAL]        = "#000000"
   text[NORMAL]      = "#000000"
