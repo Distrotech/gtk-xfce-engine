@@ -8,7 +8,7 @@ style "xfce-redmondxp-default"
     GtkButton::default_spacing        = 10
     GtkCheckButton::indicator_size    = 15
     GtkPaned::handle_full_size        = 1
-    GtkRange::trough_border           = 2
+    GtkRange::trough_border           = 1
     GtkRange::slider_width            = 15
     GtkRange::stepper_size            = 15
     GtkRange::stepper_spacing         = 0

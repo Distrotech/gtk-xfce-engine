@@ -128,12 +128,10 @@ static void draw_vline (GtkStyle * style, GdkWindow * window, GtkStateType state
 static void draw_shadow (GtkStyle * style, GdkWindow * window, GtkStateType state_type, GtkShadowType shadow_type, GdkRectangle * area, GtkWidget * widget, const gchar * detail, gint x, gint y, gint width, gint height);
 
 static void draw_polygon (GtkStyle * style, GdkWindow * window, GtkStateType state_type, GtkShadowType shadow_type, GdkRectangle * area, GtkWidget * widget, const gchar * detail, GdkPoint * point, gint npoints, gint fill);
-static void draw_arrow (GtkStyle * style, GdkWindow * window, GtkStateType state_type, GtkShadowType shadow_type, GdkRectangle * area, GtkWidget * widget, const gchar * detail, GtkArrowType arrow_type, gint fill, gint x, gint y, gint width, gint height);
 static void draw_diamond (GtkStyle * style, GdkWindow * window, GtkStateType state_type, GtkShadowType shadow_type, GdkRectangle * area, GtkWidget * widget, const gchar * detail, gint x, gint y, gint width, gint height);
 static void draw_box (GtkStyle * style, GdkWindow * window, GtkStateType state_type, GtkShadowType shadow_type, GdkRectangle * area, GtkWidget * widget, const gchar * detail, gint x, gint y, gint width, gint height);
 static void draw_check (GtkStyle * style, GdkWindow * window, GtkStateType state_type, GtkShadowType shadow_type, GdkRectangle * area, GtkWidget * widget, const gchar * detail, gint x, gint y, gint width, gint height);
 static void draw_option (GtkStyle * style, GdkWindow * window, GtkStateType state_type, GtkShadowType shadow_type, GdkRectangle * area, GtkWidget * widget, const gchar * detail, gint x, gint y, gint width, gint height);
-static void draw_tab (GtkStyle * style, GdkWindow * window, GtkStateType state_type, GtkShadowType shadow_type, GdkRectangle * area, GtkWidget * widget, const gchar * detail, gint x, gint y, gint width, gint height);
 static void draw_shadow_gap (GtkStyle * style, GdkWindow * window, GtkStateType state_type, GtkShadowType shadow_type, GdkRectangle * area, GtkWidget * widget, const gchar * detail, gint x, gint y, gint width, gint height, GtkPositionType gap_side, gint gap_x, gint gap_width);
 static void draw_box_gap (GtkStyle * style, GdkWindow * window, GtkStateType state_type, GtkShadowType shadow_type, GdkRectangle * area, GtkWidget * widget, const gchar * detail, gint x, gint y, gint width, gint height, GtkPositionType gap_side, gint gap_x, gint gap_width);
 static void draw_extension (GtkStyle * style, GdkWindow * window, GtkStateType state_type, GtkShadowType shadow_type, GdkRectangle * area, GtkWidget * widget, const gchar * detail, gint x, gint y, gint width, gint height, GtkPositionType gap_side);
@@ -337,11 +335,11 @@ draw_shadow (GtkStyle * style, GdkWindow * window, GtkStateType state_type, GtkS
 	gdk_draw_line (window, style->dark_gc[state_type], x + 1, y + height - 1, x + width - 1 - RDELTA, y + height - 1);
 	gdk_draw_line (window, style->dark_gc[state_type], x + width - 1, y + 1, x + width - 1, y + height - 1 - RDELTA);
 
-	gdk_draw_line (window, style->mid_gc[state_type], x + 1, y + 1, x + width - 2, y + 1);
-	gdk_draw_line (window, style->mid_gc[state_type], x + 1, y + 1, x + 1, y + height - 2);
+	gdk_draw_line (window, style->bg_gc[state_type], x + 1, y + 1, x + width - 2, y + 1);
+	gdk_draw_line (window, style->bg_gc[state_type], x + 1, y + 1, x + 1, y + height - 2);
 
-	gdk_draw_line (window, style->light_gc[state_type], x + 2, y + height - 2, x + width - 2, y + height - 2);
-	gdk_draw_line (window, style->light_gc[state_type], x + width - 2, y + 2, x + width - 2, y + height - 2);
+	gdk_draw_line (window, style->bg_gc[state_type], x + 2, y + height - 2, x + width - 2, y + height - 2);
+	gdk_draw_line (window, style->bg_gc[state_type], x + width - 2, y + 2, x + width - 2, y + height - 2);
 
         gdk_draw_point (window, style->bg_gc[GTK_STATE_NORMAL], x, y);
         gdk_draw_point (window, style->bg_gc[GTK_STATE_NORMAL], x + width - 1, y);
@@ -703,156 +701,6 @@ draw_option (GtkStyle * style, GdkWindow * window, GtkStateType state, GtkShadow
       draw_part (window, style->text_gc[state], area, x, y, RADIO_TEXT);
     }
   }
-}
-
-static void
-draw_varrow (GdkWindow * window, GdkGC * gc, GtkShadowType shadow_type, GdkRectangle * area, GtkArrowType arrow_type, gint x, gint y, gint width, gint height)
-{
-  gint steps, extra;
-  gint y_start, y_increment;
-  gint i;
-
-  if (area)
-    gdk_gc_set_clip_rectangle (gc, area);
-
-  width = width + width % 2 - 1;	/* Force odd */
-
-  steps = 1 + width / 2;
-
-  extra = height - steps;
-
-  if (arrow_type == GTK_ARROW_DOWN)
-  {
-    y_start = y;
-    y_increment = 1;
-  }
-  else
-  {
-    y_start = y + height - 1;
-    y_increment = -1;
-  }
-
-  for (i = 0; i < extra; i++)
-  {
-    gdk_draw_line (window, gc, x, y_start + i * y_increment, x + width - 1, y_start + i * y_increment);
-  }
-  for (; i < height; i++)
-  {
-    gdk_draw_line (window, gc, x + (i - extra), y_start + i * y_increment, x + width - (i - extra) - 1, y_start + i * y_increment);
-  }
-
-
-  if (area)
-    gdk_gc_set_clip_rectangle (gc, NULL);
-}
-
-static void
-draw_harrow (GdkWindow * window, GdkGC * gc, GtkShadowType shadow_type, GdkRectangle * area, GtkArrowType arrow_type, gint x, gint y, gint width, gint height)
-{
-  gint steps, extra;
-  gint x_start, x_increment;
-  gint i;
-
-  if (area)
-    gdk_gc_set_clip_rectangle (gc, area);
-
-  height = height + height % 2 - 1;	/* Force odd */
-
-  steps = 1 + height / 2;
-
-  extra = width - steps;
-
-  if (arrow_type == GTK_ARROW_RIGHT)
-  {
-    x_start = x;
-    x_increment = 1;
-  }
-  else
-  {
-    x_start = x + width - 1;
-    x_increment = -1;
-  }
-
-  for (i = 0; i < extra; i++)
-  {
-    gdk_draw_line (window, gc, x_start + i * x_increment, y, x_start + i * x_increment, y + height - 1);
-  }
-  for (; i < width; i++)
-  {
-    gdk_draw_line (window, gc, x_start + i * x_increment, y + (i - extra), x_start + i * x_increment, y + height - (i - extra) - 1);
-  }
-
-
-  if (area)
-    gdk_gc_set_clip_rectangle (gc, NULL);
-}
-
-static void
-draw_arrow (GtkStyle * style, GdkWindow * window, GtkStateType state, GtkShadowType shadow, GdkRectangle * area, GtkWidget * widget, const gchar * detail, GtkArrowType arrow_type, gboolean fill, gint x, gint y, gint width, gint height)
-{
-  if ((width == -1) && (height == -1))
-    gdk_drawable_get_size (window, &width, &height);
-  else if (width == -1)
-    gdk_drawable_get_size (window, &width, NULL);
-  else if (height == -1)
-    gdk_drawable_get_size (window, NULL, &height);
-
-  if (detail && strcmp (detail, "spinbutton") == 0)
-  {
-    x += (width - 7) / 2;
-
-    if (arrow_type == GTK_ARROW_UP)
-      y += (height - 7) / 2;
-    else
-      y += (height - 5) / 2;
-
-    draw_varrow (window, style->text_gc[state], shadow, area, arrow_type, x, y, 7, 5);
-  }
-  else if (detail && strcmp (detail, "vscrollbar") == 0)
-  {
-    x += (width - 7) / 2;
-    y += (height - 5) / 2;
-
-    draw_varrow (window, style->text_gc[state], shadow, area, arrow_type, x, y, 7, 5);
-
-  }
-  else if (detail && strcmp (detail, "hscrollbar") == 0)
-  {
-    y += (height - 7) / 2;
-    x += (width - 5) / 2;
-
-    draw_harrow (window, style->text_gc[state], shadow, area, arrow_type, x, y, 5, 7);
-  }
-  else
-  {
-    if (arrow_type == GTK_ARROW_UP || arrow_type == GTK_ARROW_DOWN)
-    {
-      x += (width - 7) / 2;
-      y += (height - 5) / 2;
-
-      draw_varrow (window, style->text_gc[state], shadow, area, arrow_type, x, y, 7, 5);
-    }
-    else
-    {
-      x += (width - 5) / 2;
-      y += (height - 7) / 2;
-
-      draw_harrow (window, style->text_gc[state], shadow, area, arrow_type, x, y, 5, 7);
-    }
-  }
-}
-
-static void
-draw_tab (GtkStyle * style, GdkWindow * window, GtkStateType state_type, GtkShadowType shadow_type, GdkRectangle * area, GtkWidget * widget, const gchar * detail, gint x, gint y, gint width, gint height)
-{
-  g_return_if_fail (style != NULL);
-  g_return_if_fail (window != NULL);
-
-  x += (width - OPTION_INDICATOR_WIDTH) / 2;
-  y += (height - PART_SIZE) / 2 - 1;
-
-  draw_varrow (window, style->text_gc[state_type], shadow_type, area, GTK_ARROW_UP, x, y, OPTION_INDICATOR_WIDTH, 5);
-  draw_varrow (window, style->text_gc[state_type], shadow_type, area, GTK_ARROW_DOWN, x, y + OPTION_INDICATOR_WIDTH + 1, OPTION_INDICATOR_WIDTH, 5);
 }
 
 static void
@@ -1259,12 +1107,10 @@ xfce_style_class_init (XfceStyleClass *klass)
   style_class->draw_vline = draw_vline;
   style_class->draw_shadow = draw_shadow;
   style_class->draw_polygon = draw_polygon;
-  style_class->draw_arrow = draw_arrow;
   style_class->draw_diamond = draw_diamond;
   style_class->draw_box = draw_box;
   style_class->draw_check = draw_check;
   style_class->draw_option = draw_option;
-  style_class->draw_tab = draw_tab;
   style_class->draw_shadow_gap = draw_shadow_gap;
   style_class->draw_box_gap = draw_box_gap;
   style_class->draw_extension = draw_extension;
