@@ -620,6 +620,14 @@ draw_box (GtkStyle * style, GdkWindow * window, GtkStateType state_type, GtkShad
     {
       gdk_gc_set_clip_rectangle (style->black_gc, NULL);
     }
+  }   
+  else if ((detail) && (!strcmp("spinbutton_up", detail)))
+  {
+    gtk_paint_shadow (style, window, state_type, GTK_SHADOW_ETCHED_IN, area, widget, detail, x, y, width, height);
+  }
+  else if ((detail) && (!strcmp("spinbutton_down", detail)))
+  {
+    gtk_paint_shadow (style, window, state_type, GTK_SHADOW_ETCHED_IN, area, widget, detail, x, y, width, height);
   }
   else 
     gtk_paint_shadow (style, window, state_type, shadow_type, area, widget, detail, x, y, width, height);
@@ -795,11 +803,11 @@ draw_arrow (GtkStyle * style, GdkWindow * window, GtkStateType state, GtkShadowT
     x += (width - 7) / 2;
 
     if (arrow_type == GTK_ARROW_UP)
-      y += (height - 4) / 2;
+      y += (height - 7) / 2;
     else
-      y += (1 + height - 4) / 2;
+      y += (height - 5) / 2;
 
-    draw_varrow (window, style->text_gc[state], shadow, area, arrow_type, x, y, 7, 4);
+    draw_varrow (window, style->text_gc[state], shadow, area, arrow_type, x, y, 7, 5);
   }
   else if (detail && strcmp (detail, "vscrollbar") == 0)
   {

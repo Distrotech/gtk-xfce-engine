@@ -1100,7 +1100,7 @@ rm -f conftest.sh
 THEME="xfce"
 
 # For automake.
-VERSION=2.0.0
+VERSION=2.0.1
 PACKAGE=gtk-${THEME}-engine
 
 ac_aux_dir=
