@@ -8,8 +8,8 @@ style "default"
     GtkButton::focus-padding                     = 0
     GtkCheckButton::indicator_size               = 12
     GtkMenuBar::internal-padding                 = 2
-    GtkMenuBar::shadow_type                      = out
-    GtkHandleBox::shadow_type                    = out
+    GtkMenuBar::shadow_type                      = none
+    GtkHandleBox::shadow_type                    = none
     GtkMenuItem::selected_shadow_type            = etched-in
     GtkPaned::handle_full_size                   = 1
     GtkPaned::handle_size                        = 7
@@ -21,7 +21,7 @@ style "default"
     GtkScrollbar::has_backward_stepper           = 1
 #   GtkScrollbar::has_secondary_backward_stepper = 1
     GtkScrollbar::min_slider_length              = 20
-    GtkToolbar::shadow_type                      = out
+    GtkToolbar::shadow_type                      = none
     GtkWidget::focus-line-width                  = 1
     GtkWidget::focus_padding                     = 2 
     GtkWidget::interior_focus                    = 5 
@@ -141,15 +141,8 @@ style "scrollbar" = "default"
 widget_class "*Scrollbar*"         style "scrollbar"
 class "*Scrollbar*"                style "scrollbar"
 
-style "progress" = "default"
+style "scale" = "scrollbar"
 {
-    xthickness = 2
-    ythickness = 2
-
-    bg[PRELIGHT]      = "#d4d8e0"
-    bg[NORMAL]        = "#eeeeef"
-    bg[ACTIVE]        = "#8d95a4"
-
     engine "xfce" 
     {
         smooth_edge = true
@@ -163,10 +156,30 @@ style "progress" = "default"
         }
     }
 }
+widget_class "*Scale*"             style "scale"
+class "*Scale*"                    style "scale"
+
+style "progress" = "default"
+{
+    xthickness = 0
+    ythickness = 0
+
+    bg[PRELIGHT]      = "#d4d8e0"
+    bg[NORMAL]        = "#d2d2d4"
+    bg[ACTIVE]        = "#a5a5a9"
+
+    engine "xfce" 
+    {
+        smooth_edge = true
+        grip_style = none
+        boxfill
+        {
+            fill_style = plain
+        }
+    }
+}
 widget_class "*Progress*"          style "progress" 
 class "*Progress*"                 style "progress" 
-widget_class "*Scale*"             style "scrollbar"
-class "*Scale*"                    style "scrollbar"
 
 style "menuitem" = "default"
 {

@@ -141,15 +141,8 @@ style "scrollbar" = "default"
 widget_class "*Scrollbar*"         style "scrollbar"
 class "*Scrollbar*"                style "scrollbar"
 
-style "progress" = "default"
+style "scale" = "scrollbar"
 {
-    xthickness = 2
-    ythickness = 2
-
-    bg[PRELIGHT]      = "#bbb6c2"
-    bg[NORMAL]        = "#e8e7e6"
-    bg[ACTIVE]        = "#959492"
-
     engine "xfce" 
     {
         smooth_edge = true
@@ -163,10 +156,30 @@ style "progress" = "default"
         }
     }
 }
+widget_class "*Scale*"             style "scale"
+class "*Scale*"                    style "scale"
+
+style "progress" = "default"
+{
+    xthickness = 0
+    ythickness = 0
+
+    bg[PRELIGHT]      = "#bbb6c2"
+    bg[NORMAL]        = "#d2d1cf"
+    bg[ACTIVE]        = "#a5a29f"
+
+    engine "xfce" 
+    {
+        smooth_edge = true
+        grip_style = none
+        boxfill
+        {
+            fill_style = plain
+        }
+    }
+}
 widget_class "*Progress*"          style "progress" 
 class "*Progress*"                 style "progress" 
-widget_class "*Scale*"             style "scrollbar"
-class "*Scale*"                    style "scrollbar"
 
 style "menuitem" = "default"
 {
