@@ -5,7 +5,7 @@ style "default"
     GtkButton::child_displacement_x              = 0
     GtkButton::child_displacement_y              = 1
     GtkButton::default_spacing                   = 5
-    GtkButton::focus-padding                     = 0
+    GtkButton::focus-padding                     = 1
     GtkCheckButton::indicator_size               = 12
     GtkMenuBar::internal-padding                 = 2
     GtkMenuBar::shadow_type                      = out
@@ -22,9 +22,9 @@ style "default"
     GtkScrollbar::min_slider_length              = 20
     GtkToolbar::shadow_type                      = out
     GtkWidget::focus-line-width                  = 1
-    GtkWidget::focus_padding                     = 2
+    GtkWidget::focus_padding                     = 4
     GtkWidget::interior_focus                    = 5
-    GtkWidget::internal_padding                  = 2
+    GtkWidget::internal_padding                  = 4
 
     xthickness = 2
     ythickness = 2
@@ -226,15 +226,6 @@ style "titlebar" = "default"
 
 
 widget_class "*"                   style "default"
-
-widget_class "*.GtkList*"          style "colored"
-class "*.GtkList*"                 style "colored"
-widget_class "*.GtkEntry*"         style "colored"
-class "*.GtkEntry*"                style "colored"
-widget_class "*.GtkTree*"          style "colored"
-class "*.GtkTree*"                 style "colored"
-widget_class "*.GtkProgress*"      style "colored"
-class "*.GtkProgress*"             style "colored"
 
 widget_class "*Menu*"              style "menu"
 class "*Menu*"                     style "menu"
