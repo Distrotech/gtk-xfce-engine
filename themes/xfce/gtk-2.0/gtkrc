@@ -95,6 +95,7 @@ style "button" = "default"
     bg[PRELIGHT]      = "#d4d6d8"
     bg[NORMAL]        = "#d4d6d8"
     bg[ACTIVE]        = "#c2c4ca"
+
     engine "xfce" 
     {
         smooth_edge = true
@@ -114,10 +115,6 @@ widget_class "*button*"            style "button"
 class "*button*"                   style "button"
 widget_class "*OptionMenu*"        style "button"
 class "*OptionMenu*"               style "button"
-# widget_class "*Tree*"            style "button"
-# class "*Tree*"                   style "button"
-# widget_class "*Scale*"           style "button"
-# class "*Scale*"                  style "button"
 
 style "scrollbar" = "default"
 {
@@ -127,6 +124,7 @@ style "scrollbar" = "default"
     bg[PRELIGHT]      = "#d4d6d8"
     bg[NORMAL]        = "#d4d6d8"
     bg[ACTIVE]        = "#eeeeef"
+
     engine "xfce" 
     {
         smooth_edge = true
@@ -153,6 +151,7 @@ style "progress" = "default"
     bg[PRELIGHT]      = "#d4d8e0"
     bg[NORMAL]        = "#eeeeef"
     bg[ACTIVE]        = "#eeeeef"
+
     engine "xfce" 
     {
         smooth_edge = true
@@ -185,7 +184,6 @@ style "handlebox" = "default"
 }
 widget_class "*HandleBox"          style "handlebox"
 
-
 # This is for ROX-Filer
 # 
 style "rox" = "default"
@@ -194,7 +192,6 @@ style "rox" = "default"
   bg[ACTIVE] = "#ffffff"
 }
 widget_class "*Collection"         style "rox"
-
 
 # This is for the window borders (xfwm4 & metacity)
 # 
