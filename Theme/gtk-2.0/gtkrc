@@ -19,16 +19,16 @@ style "xfce-default"
     ythickness = 2
 
     base[ACTIVE]      = "#cdcdc8"
-    base[INSENSITIVE] = "#d7d7cf"
+    base[INSENSITIVE] = "#dadbda"
     base[NORMAL]      = "#ffffff"
-    base[PRELIGHT]    = "#e5e5df"
+    base[PRELIGHT]    = "#cacbca"
     base[SELECTED]    = "#1a65a2"
 
     bg[ACTIVE]        = "#c1c1ba"
-    bg[INSENSITIVE]   = "#d7d7cf"
-    bg[NORMAL]        = "#d7d7cf"
-    bg[PRELIGHT]      = "#d7d7cf"
-    bg[SELECTED]      = "#28578f"
+    bg[INSENSITIVE]   = "#dadbda"
+    bg[NORMAL]        = "#dadbda"
+    bg[PRELIGHT]      = "#dadbda"
+    bg[SELECTED]      = "#1a65a2"
 
     fg[ACTIVE]        = "#000000"
     fg[INSENSITIVE]   = "#7f7f79"
@@ -60,14 +60,14 @@ style "xfce-colored"
     ythickness = 2
 
     base[ACTIVE]      = "#cdcdc8"
-    base[INSENSITIVE] = "#d7d7cf"
+    base[INSENSITIVE] = "#dadbda"
     base[NORMAL]      = "#ffffff"
-    base[PRELIGHT]    = "#e5e5df"
+    base[PRELIGHT]    = "#cacbca"
     base[SELECTED]    = "#1a65a2"
 
     bg[ACTIVE]        = "#1d5a8b"
-    bg[INSENSITIVE]   = "#d7d7cf"
-    bg[NORMAL]        = "#d7d7cf"
+    bg[INSENSITIVE]   = "#dadbda"
+    bg[NORMAL]        = "#dadbda"
     bg[PRELIGHT]      = "#1a65a2"
     bg[SELECTED]      = "#1a65a2"
 
@@ -90,7 +90,6 @@ style "xfce-colored"
 }
 
 class "GtkList"                    style "xfce-colored"
-widget_class "*.GtkButton*"        style "xfce-colored"
 widget_class "*.GtkMenu*"          style "xfce-colored"
 widget_class "*.GtkText*"          style "xfce-colored"
 widget_class "*.GtkEntry*"         style "xfce-colored"
