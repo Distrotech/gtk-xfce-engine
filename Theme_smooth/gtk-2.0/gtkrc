@@ -33,3 +33,11 @@ style "default"
 }
 
 class "GtkWidget" style "default"
+
+style "titlebar"
+{
+    bg[SELECTED]      = "#1d5a8b"
+    fg[SELECTED]      = "#ffffff"
+}
+
+widget "xfwm"	     style "titlebar"
