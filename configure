@@ -270,7 +270,7 @@ PACKAGE_VERSION=
 PACKAGE_STRING=
 PACKAGE_BUGREPORT=
 
-ac_unique_file="xfce_theme_draw.c"
+ac_unique_file="src/xfce_theme_draw.c"
 ac_subst_vars='SHELL PATH_SEPARATOR PACKAGE_NAME PACKAGE_TARNAME PACKAGE_VERSION PACKAGE_STRING PACKAGE_BUGREPORT exec_prefix prefix program_transform_name bindir sbindir libexecdir datadir sysconfdir sharedstatedir localstatedir libdir includedir oldincludedir infodir mandir build_alias host_alias target_alias DEFS ECHO_C ECHO_N ECHO_T LIBS INSTALL_PROGRAM INSTALL_SCRIPT INSTALL_DATA CYGPATH_W PACKAGE VERSION ACLOCAL AUTOCONF AUTOMAKE AUTOHEADER MAKEINFO AMTAR install_sh STRIP ac_ct_STRIP INSTALL_STRIP_PROGRAM AWK SET_MAKE am__leading_dot MAINTAINER_MODE_TRUE MAINTAINER_MODE_FALSE MAINT build build_cpu build_vendor build_os host host_cpu host_vendor host_os CC CFLAGS LDFLAGS CPPFLAGS ac_ct_CC EXEEXT OBJEXT DEPDIR am__include am__quote AMDEP_TRUE AMDEP_FALSE AMDEPBACKSLASH CCDEPMODE am__fastdepCC_TRUE am__fastdepCC_FALSE LN_S RANLIB ac_ct_RANLIB LIBTOOL CPP X_CFLAGS X_PRE_LIBS X_LIBS X_EXTRA_LIBS EGREP GLIB_REQUIRED_VERSION GTK_REQUIRED_VERSION PKG_CONFIG XFCE_CFLAGS XFCE_LIBS GTK_VERSION LIBOBJS LTLIBOBJS'
 ac_subst_files=''
 
@@ -1250,7 +1250,7 @@ THEME="xfce"
 
 
 
-VERSION=2.0.11
+VERSION=2.1.0
 PACKAGE=gtk-${THEME}-engine
 am__api_version="1.7"
 ac_aux_dir=
@@ -6400,7 +6400,7 @@ GTK_VERSION=`$PKG_CONFIG --variable=gtk_binary_version gtk+-2.0`
 
 
 
-                                                                                                                                                                                                                                                ac_config_files="$ac_config_files gtk-xfce-engine-2.spec Makefile Theme/gtk-2.0/Makefile Theme/Makefile Theme_b5/Makefile Theme_b5/gtk-2.0/Makefile Theme_basic/Makefile Theme_basic/gtk-2.0/Makefile Theme_curve/gtk-2.0/Makefile Theme_curve/Makefile Theme_etria/Makefile Theme_etria/gtk-2.0/Makefile Theme_funklor/Makefile Theme_funklor/gtk-2.0/Makefile Theme_light/Makefile Theme_light/gtk-2.0/Makefile Theme_redmondxp/Makefile Theme_redmondxp/gtk-2.0/Makefile Theme_smooth/gtk-2.0/Makefile Theme_smooth/Makefile Theme_saltlake/gtk-2.0/Makefile Theme_saltlake/Makefile Theme_stellar/Makefile Theme_stellar/gtk-2.0/Makefile"
+                                                                                                                                                                                                                                                ac_config_files="$ac_config_files gtk-xfce-engine-2.spec Makefile src/Makefile themes/b5/Makefile themes/b5/gtk-2.0/Makefile themes/xfce/gtk-2.0/Makefile themes/xfce/Makefile themes/basic/gtk-2.0/Makefile themes/basic/Makefile themes/curve/gtk-2.0/Makefile themes/curve/Makefile themes/kolors/gtk-2.0/Makefile themes/kolors/Makefile themes/light/Makefile themes/light/gtk-2.0/Makefile themes/redmondxp/gtk-2.0/Makefile themes/redmondxp/Makefile themes/saltlake/gtk-2.0/Makefile themes/saltlake/Makefile themes/smooth/gtk-2.0/Makefile themes/smooth/Makefile themes/stellar/gtk-2.0/Makefile themes/stellar/Makefile themes/Makefile"
 cat >confcache <<\_ACEOF
 # This file is a shell script that caches the results of configure
 # tests run on this system so they can be shared between configure
@@ -6965,28 +6965,28 @@ do
   # Handling of arguments.
   "gtk-xfce-engine-2.spec" ) CONFIG_FILES="$CONFIG_FILES gtk-xfce-engine-2.spec" ;;
   "Makefile" ) CONFIG_FILES="$CONFIG_FILES Makefile" ;;
-  "Theme/gtk-2.0/Makefile" ) CONFIG_FILES="$CONFIG_FILES Theme/gtk-2.0/Makefile" ;;
-  "Theme/Makefile" ) CONFIG_FILES="$CONFIG_FILES Theme/Makefile" ;;
-  "Theme_b5/Makefile" ) CONFIG_FILES="$CONFIG_FILES Theme_b5/Makefile" ;;
-  "Theme_b5/gtk-2.0/Makefile" ) CONFIG_FILES="$CONFIG_FILES Theme_b5/gtk-2.0/Makefile" ;;
-  "Theme_basic/Makefile" ) CONFIG_FILES="$CONFIG_FILES Theme_basic/Makefile" ;;
-  "Theme_basic/gtk-2.0/Makefile" ) CONFIG_FILES="$CONFIG_FILES Theme_basic/gtk-2.0/Makefile" ;;
-  "Theme_curve/gtk-2.0/Makefile" ) CONFIG_FILES="$CONFIG_FILES Theme_curve/gtk-2.0/Makefile" ;;
-  "Theme_curve/Makefile" ) CONFIG_FILES="$CONFIG_FILES Theme_curve/Makefile" ;;
-  "Theme_etria/Makefile" ) CONFIG_FILES="$CONFIG_FILES Theme_etria/Makefile" ;;
-  "Theme_etria/gtk-2.0/Makefile" ) CONFIG_FILES="$CONFIG_FILES Theme_etria/gtk-2.0/Makefile" ;;
-  "Theme_funklor/Makefile" ) CONFIG_FILES="$CONFIG_FILES Theme_funklor/Makefile" ;;
-  "Theme_funklor/gtk-2.0/Makefile" ) CONFIG_FILES="$CONFIG_FILES Theme_funklor/gtk-2.0/Makefile" ;;
-  "Theme_light/Makefile" ) CONFIG_FILES="$CONFIG_FILES Theme_light/Makefile" ;;
-  "Theme_light/gtk-2.0/Makefile" ) CONFIG_FILES="$CONFIG_FILES Theme_light/gtk-2.0/Makefile" ;;
-  "Theme_redmondxp/Makefile" ) CONFIG_FILES="$CONFIG_FILES Theme_redmondxp/Makefile" ;;
-  "Theme_redmondxp/gtk-2.0/Makefile" ) CONFIG_FILES="$CONFIG_FILES Theme_redmondxp/gtk-2.0/Makefile" ;;
-  "Theme_smooth/gtk-2.0/Makefile" ) CONFIG_FILES="$CONFIG_FILES Theme_smooth/gtk-2.0/Makefile" ;;
-  "Theme_smooth/Makefile" ) CONFIG_FILES="$CONFIG_FILES Theme_smooth/Makefile" ;;
-  "Theme_saltlake/gtk-2.0/Makefile" ) CONFIG_FILES="$CONFIG_FILES Theme_saltlake/gtk-2.0/Makefile" ;;
-  "Theme_saltlake/Makefile" ) CONFIG_FILES="$CONFIG_FILES Theme_saltlake/Makefile" ;;
-  "Theme_stellar/Makefile" ) CONFIG_FILES="$CONFIG_FILES Theme_stellar/Makefile" ;;
-  "Theme_stellar/gtk-2.0/Makefile" ) CONFIG_FILES="$CONFIG_FILES Theme_stellar/gtk-2.0/Makefile" ;;
+  "src/Makefile" ) CONFIG_FILES="$CONFIG_FILES src/Makefile" ;;
+  "themes/b5/Makefile" ) CONFIG_FILES="$CONFIG_FILES themes/b5/Makefile" ;;
+  "themes/b5/gtk-2.0/Makefile" ) CONFIG_FILES="$CONFIG_FILES themes/b5/gtk-2.0/Makefile" ;;
+  "themes/xfce/gtk-2.0/Makefile" ) CONFIG_FILES="$CONFIG_FILES themes/xfce/gtk-2.0/Makefile" ;;
+  "themes/xfce/Makefile" ) CONFIG_FILES="$CONFIG_FILES themes/xfce/Makefile" ;;
+  "themes/basic/gtk-2.0/Makefile" ) CONFIG_FILES="$CONFIG_FILES themes/basic/gtk-2.0/Makefile" ;;
+  "themes/basic/Makefile" ) CONFIG_FILES="$CONFIG_FILES themes/basic/Makefile" ;;
+  "themes/curve/gtk-2.0/Makefile" ) CONFIG_FILES="$CONFIG_FILES themes/curve/gtk-2.0/Makefile" ;;
+  "themes/curve/Makefile" ) CONFIG_FILES="$CONFIG_FILES themes/curve/Makefile" ;;
+  "themes/kolors/gtk-2.0/Makefile" ) CONFIG_FILES="$CONFIG_FILES themes/kolors/gtk-2.0/Makefile" ;;
+  "themes/kolors/Makefile" ) CONFIG_FILES="$CONFIG_FILES themes/kolors/Makefile" ;;
+  "themes/light/Makefile" ) CONFIG_FILES="$CONFIG_FILES themes/light/Makefile" ;;
+  "themes/light/gtk-2.0/Makefile" ) CONFIG_FILES="$CONFIG_FILES themes/light/gtk-2.0/Makefile" ;;
+  "themes/redmondxp/gtk-2.0/Makefile" ) CONFIG_FILES="$CONFIG_FILES themes/redmondxp/gtk-2.0/Makefile" ;;
+  "themes/redmondxp/Makefile" ) CONFIG_FILES="$CONFIG_FILES themes/redmondxp/Makefile" ;;
+  "themes/saltlake/gtk-2.0/Makefile" ) CONFIG_FILES="$CONFIG_FILES themes/saltlake/gtk-2.0/Makefile" ;;
+  "themes/saltlake/Makefile" ) CONFIG_FILES="$CONFIG_FILES themes/saltlake/Makefile" ;;
+  "themes/smooth/gtk-2.0/Makefile" ) CONFIG_FILES="$CONFIG_FILES themes/smooth/gtk-2.0/Makefile" ;;
+  "themes/smooth/Makefile" ) CONFIG_FILES="$CONFIG_FILES themes/smooth/Makefile" ;;
+  "themes/stellar/gtk-2.0/Makefile" ) CONFIG_FILES="$CONFIG_FILES themes/stellar/gtk-2.0/Makefile" ;;
+  "themes/stellar/Makefile" ) CONFIG_FILES="$CONFIG_FILES themes/stellar/Makefile" ;;
+  "themes/Makefile" ) CONFIG_FILES="$CONFIG_FILES themes/Makefile" ;;
   "depfiles" ) CONFIG_COMMANDS="$CONFIG_COMMANDS depfiles" ;;
   "config.h" ) CONFIG_HEADERS="$CONFIG_HEADERS config.h" ;;
   *) { { echo "$as_me:$LINENO: error: invalid argument: $ac_config_target" >&5

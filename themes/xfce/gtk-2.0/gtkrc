@@ -1,0 +1,136 @@
+style "xfce-default"
+{
+    GtkWidget::interior_focus         = 1
+    GtkButton::default_border         = {0, 0, 0, 0}
+    GtkButton::default_outside_border = {0, 0, 0, 0}
+    GtkMenuItem::selected_shadow_type = none
+    GtkButton::default_spacing        = 5
+    GtkCheckButton::indicator_size    = 15
+    GtkPaned::handle_full_size        = 1
+    GtkRange::trough_border           = 1
+    GtkRange::slider_width            = 15
+    GtkRange::stepper_size            = 15
+    GtkRange::stepper_spacing         = 0
+    GtkSpinButton::shadow_type        = etched-in
+    GtkScrollbar::min_slider_length   = 20
+
+    xthickness = 2
+    ythickness = 2
+
+    base[ACTIVE]      = "#d8d8d0"
+    base[INSENSITIVE] = "#eae7e4"
+    base[NORMAL]      = "#ffffff"
+    base[PRELIGHT]    = "#eae7e4"
+    base[SELECTED]    = "#405090"
+
+    bg[ACTIVE]        = "#d8d8d0"
+    bg[INSENSITIVE]   = "#eae7e4"
+    bg[NORMAL]        = "#eae7e4"
+    bg[PRELIGHT]      = "#eae7e4"
+    bg[SELECTED]      = "#405090"
+
+    fg[ACTIVE]        = "#000000"
+    fg[INSENSITIVE]   = "#7f7f79"
+    fg[NORMAL]        = "#000000"
+    fg[PRELIGHT]      = "#000000"
+    fg[SELECTED]      = "#ffffff"
+
+    text[ACTIVE]      = "#000000"
+    text[INSENSITIVE] = "#000000"
+    text[NORMAL]      = "#000000"
+    text[PRELIGHT]    = "#000000"
+    text[SELECTED]    = "#ffffff"
+
+    engine "xfce" 
+    {
+        smooth_edge = false
+        boxfill
+        {
+            fill_style = plain
+        }
+    }
+}
+
+widget_class "*"                   style "xfce-default"
+widget_class "*SpinButton*"        style "xfce-default"
+widget_class "*CheckButton*"       style "xfce-default"
+widget_class "*RadioButton*"       style "xfce-default"
+widget_class "*ToggleButton*"      style "xfce-default"
+
+style "xfce-colored" = "xfce-default"
+{
+    xthickness = 1
+    ythickness = 1
+
+    bg[ACTIVE]        = "#1d5a8b"
+    bg[PRELIGHT]      = "#405090"
+
+    fg[ACTIVE]        = "#ffffff"
+    fg[PRELIGHT]      = "#ffffff"
+
+    text[ACTIVE]      = "#000000"
+    text[PRELIGHT]    = "#ffffff"
+
+    engine "xfce" 
+    {
+        smooth_edge = false
+        boxfill
+        {
+            fill_style = plain
+        }
+    }
+}
+
+widget_class "*List*"              style "xfce-colored"
+class "*List*"                     style "xfce-colored"
+widget_class "*MenuItem*"          style "xfce-colored"
+class "*MenuItem*"                 style "xfce-colored"
+widget_class "*Text*"              style "xfce-colored"
+class "*Text*"                     style "xfce-colored"
+widget_class "*Entry*"             style "xfce-colored"
+class "*Entry*"                    style "xfce-colored"
+widget_class "*Tree*"              style "xfce-colored"
+class "*Tree*"                     style "xfce-colored"
+widget_class "*Progress*"          style "xfce-colored"
+class "*Progress*"                 style "xfce-colored"
+
+style "xfce-scrollbar" = "xfce-default"
+{
+    xthickness = 2
+    ythickness = 2
+    engine "xfce" 
+    {
+        smooth_edge = false
+        boxfill
+        {
+            fill_style = gradient
+            orientation = auto
+            shade_start = 1.05
+            shade_end = 0.90
+        }
+    }
+}
+widget_class "*Scrollbar*"         style "xfce-scrollbar"
+class "*Scrollbar*"                style "xfce-scrollbar"
+widget_class "*Scale*"             style "xfce-scrollbar"
+class "*Scale*"                    style "xfce-scrollbar"
+
+style "xfce-button" = "xfce-default"
+{
+    xthickness = 2
+    ythickness = 2
+    engine "xfce" 
+    {
+        smooth_edge = false
+        boxfill
+        {
+            fill_style = gradient
+            orientation = vertical
+            shade_start = 1.05
+            shade_end = 0.90
+        }
+    }
+}
+widget_class "*Button*"         style "xfce-button"
+class "*Button*"                style "xfce-button"
+
