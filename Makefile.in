@@ -569,7 +569,7 @@ uninstall-info: uninstall-info-recursive
 @SET_MAKE@
 
 distclean-local:
-	rm -rf *.cache
+	rm -rf *.cache *~
 
 rpm : dist
 	rpmbuild -ta $(PACKAGE)-$(VERSION).tar.gz

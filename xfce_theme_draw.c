@@ -351,7 +351,7 @@ static void draw_shadow(GtkStyle * style, GdkWindow * window, GtkStateType state
         case GTK_SHADOW_IN:
             if(XFCE_RC_STYLE(style->rc_style)->smooth_edge)
             {
-                if(DETAIL("hscrollbar") || DETAIL("vscrollbar"))
+                if(DETAIL("hscrollbar") || DETAIL("vscrollbar") || DETAIL("trough"))
                 {
                     gdk_draw_line(window, style->dark_gc[state_type], x, y, x + width - 2, y);
                     gdk_draw_line(window, style->dark_gc[state_type], x, y, x, y + height - 2);
@@ -359,14 +359,12 @@ static void draw_shadow(GtkStyle * style, GdkWindow * window, GtkStateType state
                     gdk_draw_line(window, style->dark_gc[state_type], x, y + height - 1, x + width - 1, y + height - 1);
                     gdk_draw_line(window, style->dark_gc[state_type], x + width - 1, y, x + width - 1, y + height - 1);
 
-                    gdk_draw_line(window, style->mid_gc[state_type], x + 1, y + 1, x + width - 2, y + 1);
-                    gdk_draw_line(window, style->mid_gc[state_type], x + 1, y + 1, x + 1, y + height - 2);
+                    gdk_draw_line(window, style->bg_gc[state_type], x + 1, y + 1, x + width - 2, y + 1);
+                    gdk_draw_line(window, style->bg_gc[state_type], x + 1, y + 1, x + 1, y + height - 2);
 
-                    gdk_draw_line(window, style->light_gc[state_type], x + 2, y + height - 2, x + width - 2, y + height - 2);
-                    gdk_draw_line(window, style->light_gc[state_type], x + width - 2, y + 2, x + width - 2, y + height - 2);
-                }
-                else if(DETAIL("trough"))
-                {
+                    gdk_draw_line(window, style->bg_gc[state_type], x + 2, y + height - 2, x + width - 2, y + height - 2);
+                    gdk_draw_line(window, style->bg_gc[state_type], x + width - 2, y + 2, x + width - 2, y + height - 2);
+
                 }
 		else
 		{

@@ -1,3 +1,85 @@
+2002-10-05  xfce
+
+	* xfce_theme_draw.c: Remove shadow in trough
+
+2002-10-05  xfce
+
+	* xfce_theme_draw.c: [no log message]
+
+2002-10-05  xfce
+
+	* Theme_redmondxp/gtk-2.0/gtkrc: Change scrollbar color for
+	redmondxp gtkrc
+
+2002-10-05  xfce
+
+	* xfce_theme_draw.c: trough shadow.
+
+2002-10-05  xfce
+
+	* xfce_theme_draw.c, Theme/gtk-2.0/gtkrc,
+	Theme_basic/gtk-2.0/gtkrc, Theme_light/gtk-2.0/gtkrc,
+	Theme_redmondxp/gtk-2.0/gtkrc, Theme_saltlake/gtk-2.0/gtkrc,
+	Theme_smooth/gtk-2.0/gtkrc: Change drawing of vscale and hscale,
+	change interior focus border in various "smooth" themes.
+
+2002-10-04  xfce
+
+	* xfce_theme_draw.c: Optmizations, revert to dark frame instead of
+	black for widgets in smooth mode
+
+2002-10-04  xfce
+
+	* xfce_theme_draw.c, Theme_light/gtk-2.0/gtkrc: Change scrollbar
+	and various object drawing in smooth mode.
+
+2002-10-04  xfce
+
+	* xfce_theme_draw.c: [no log message]
+
+2002-10-04  xfce
+
+	* Theme_basic/gtk-2.0/gtkrc: Switch to smooth mode for "basic"
+	theme.
+
+2002-10-01  xfce
+
+	* xfce_rc_style.c, xfce_rc_style.h, xfce_style.h,
+	xfce_theme_draw.c, xfce_theme_main.c: Do some oddities with smooth
+	mode :)
+
+2002-10-01  xfce
+
+	* xfce_theme_draw.c: [no log message]
+
+2002-10-01  xfce
+
+	* Theme_basic/gtk-2.0/gtkrc, Theme_light/gtk-2.0/gtkrc,
+	Theme_saltlake/gtk-2.0/gtkrc, Theme_smooth/gtk-2.0/gtkrc: [no log
+	message]
+
+2002-10-01  xfce
+
+	* Makefile.am, Makefile.in: [no log message]
+
+2002-09-30  xfce
+
+	* config.h.in, xfce_theme_draw.c: Change drawing routine in smooth
+	mode to enhance contrast on widgets.
+
+2002-09-18  xfce
+
+	* Theme_b5/gtk-2.0/gtkrc: Even lighter, I'm really hot right now, I
+	need a refreshing theme :)
+
+2002-09-18  xfce
+
+	* Theme_b5/gtk-2.0/gtkrc: Make b5 theme lighter.
+
+2002-09-17  xfce
+
+	* ChangeLog: Update ChangeLog.
+
 2002-09-17  xfce
 
 	* configure, configure.in: Update configure.in

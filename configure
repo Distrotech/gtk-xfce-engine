@@ -1364,7 +1364,7 @@ ac_compiler_gnu=$ac_cv_c_compiler_gnu
 THEME="xfce"
 
 # For automake.
-VERSION=2.0.9
+VERSION=2.0.10
 PACKAGE=gtk-${THEME}-engine
 
 am__api_version="1.6"
