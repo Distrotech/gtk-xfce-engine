@@ -11,7 +11,7 @@ style "default"
     GtkRange::stepper_size            = 15
     GtkRange::stepper_spacing         = 0
     GtkSpinButton::shadow_type        = etched-in
-    GtkScrollbar::min_slider_length = 20
+    GtkScrollbar::min_slider_length   = 20
 
     fg[ACTIVE]        = "#000000"
     fg[INSENSITIVE]   = "#c5c5be"

@@ -1,7 +1,15 @@
 style "default"
 {
-    GtkRange::trough_border = 0
-    GtkScrollbar::min_slider_length = 20
+    GtkWidget::interior_focus         = 5
+    GtkButton::default_spacing        = 6
+    GtkCheckButton::indicator_size    = 15
+    GtkPaned::handle_full_size        = 1
+    GtkRange::trough_border           = 0
+    GtkRange::slider_width            = 15
+    GtkRange::stepper_size            = 15
+    GtkRange::stepper_spacing         = 0
+    GtkSpinButton::shadow_type        = etched-in
+    GtkScrollbar::min_slider_length   = 20
 
     fg[NORMAL]        = "#000000"
     fg[ACTIVE]        = "#000000"
