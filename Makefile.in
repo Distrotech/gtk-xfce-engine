@@ -164,7 +164,7 @@ RECURSIVE_TARGETS = info-recursive dvi-recursive pdf-recursive \
 DIST_COMMON = README AUTHORS COPYING ChangeLog INSTALL Makefile.am \
 	Makefile.in NEWS aclocal.m4 compile config.guess config.h.in \
 	config.sub configure configure.in depcomp \
-	gtk-xfce-engine-2.spec.in install-sh ltconfig ltmain.sh missing \
+	gtk-xfce-engine-2.spec.in install-sh ltmain.sh missing \
 	mkinstalldirs
 DIST_SUBDIRS = $(SUBDIRS)
 all: config.h
