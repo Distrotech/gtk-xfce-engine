@@ -12,9 +12,9 @@ style "curve-default"
     GtkRange::stepper_spacing         = 0
     GtkSpinButton::shadow_type        = etched-in
     GtkMenuItem::selected_shadow_type = none
-    GtkMenuBar::internal-padding      = 2
     GtkWidget::focus_padding          = 1
     GtkScrollbar::min_slider_length   = 20
+    GtkWidget::internal-padding       = 2
 
     xthickness = 2
     ythickness = 2
@@ -50,14 +50,14 @@ style "curve-menu-color" = "curve-default"
 
 style "curve-menu-bar" = "curve-menu-color"
 {
-    xthickness = 1
+    xthickness = 2
     ythickness = 1
 }
 
 style "curve-menu" = "curve-menu-color"
 {
     xthickness = 1
-    ythickness = 2
+    ythickness = 1
 }
 
 style "curve-tool-bar" = "curve-menu-color"
