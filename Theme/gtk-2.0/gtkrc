@@ -2,36 +2,24 @@
 
 style "default"
 {
-  GtkWidget::interior_focus = 1
-  GtkButton::default_border = { 5, 5, 5, 5 }
-  GtkButton::default_outside_border = { 5, 5, 5, 5 }
-  GtkButton::default_spacing = 6
-  GtkCheckButton::indicator_size = 13
-  GtkPaned::handle_full_size = 1
-  GtkRange::trough_border = 2
-  GtkRange::slider_width = 15
-  GtkRange::stepper_size = 15
-  GtkRange::stepper_spacing = 0
-  
   fg[NORMAL]        = "#000000"
-  text[NORMAL]      = "#000000"
-  text[INSENSITIVE] = "#000000"
-  fg[INSENSITIVE]   = "#000000"
   fg[ACTIVE]        = "#000000"
-  text[ACTIVE]      = "#000000"
   fg[PRELIGHT]      = "#000000"
-  text[PRELIGHT]    = "#000000"
+  fg[INSENSITIVE]   = "#000000"
   fg[SELECTED]      = "#ffffff"
-  text[SELECTED]    = "#ffffff"
-  bg[NORMAL]        = "#DCDCDC"
-  base[NORMAL]      = "#FFFFFF"
-  bg[ACTIVE]        = "#C6C6C6"
-  base[ACTIVE]      = "#E5E5E5"
-  bg[PRELIGHT]      = "#DCDCDC"
-  base[PRELIGHT]    = "#FFFFFF"
-  bg[SELECTED]      = "#235C9C"
-  bg[INSENSITIVE]   = "#DCDCDC"
-  base[INSENSITIVE] = "#DCDCDC"
+  text[NORMAL]      = "#000000"
+  text[ACTIVE]      = "#000000"
+  text[PRELIGHT]    = "#000000"
+  text[INSENSITIVE] = "#000000"
+  bg[NORMAL]        = "#D8D8D5"
+  bg[ACTIVE]        = "#C2C2BF"
+  bg[PRELIGHT]      = "#D8D8D5"
+  bg[INSENSITIVE]   = "#D8D8D5"
+  bg[SELECTED]      = "#275895"
+  base[NORMAL]      = "#E5E5E2"
+  base[ACTIVE]      = "#CDCDCB"
+  base[PRELIGHT]    = "#E5E5E2"
+  base[INSENSITIVE] = "#D8D8D5"
   engine "xfce" {}
 }
 
