@@ -20,6 +20,14 @@ style "default"
     GtkWidget::interior_focus         = 5
     GtkWidget::internal-padding       = 2
 
+    ExoIconBar::active-item-border-color = "#724056"
+    ExoIconBar::active-item-fill-color = "#b24d7a"
+    ExoIconBar::active-item-text-color = "#ffffff"
+
+    ExoIconBar::cursor-item-border-color = "#707481"
+    ExoIconBar::cursor-item-fill-color = "#AEB2C3"
+    ExoIconBar::cursor-item-text-color = "#000000"
+
     xthickness = 1
     ythickness = 1
 
