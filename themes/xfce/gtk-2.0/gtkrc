@@ -219,8 +219,8 @@ class "*RadioButton*"              style "xfce-default"
 
 style "xfce-titlebar"
 {
-    bg[SELECTED]      = "#4a7eae"
-    fg[SELECTED]      = "#ffffff"
+    bg[SELECTED]      = "#d7dbe4"
+    fg[SELECTED]      = "#000000"
     bg[ACTIVE]        = "#EEEEE2"
     fg[NORMAL]        = "#b4b492"
 }
