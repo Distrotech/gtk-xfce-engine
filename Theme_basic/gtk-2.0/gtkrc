@@ -6,12 +6,12 @@ style "default"
     GtkRange::stepper_size            = 15
     GtkCheckButton::indicator_size    = 15
     GtkPaned::handle_full_size        = 1
-    GtkRange::trough_border           = 2
+    GtkRange::trough_border           = 0
     GtkScrollbar::min_slider_length   = 20
 
     engine "xfce" 
     {
-	smooth_edge = FALSE
+	smooth_edge = TRUE
     }
 }
 
