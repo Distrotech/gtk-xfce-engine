@@ -109,8 +109,8 @@ style "curve-menu" = "curve-menu-color"
         {
 	    fill_style = gradient
 	    orientation = vertical
-	    shade_start = 0.80
-	    shade_end = 1.30
+	    shade_start = 0.90
+	    shade_end = 1.20
 	}
     }
 }

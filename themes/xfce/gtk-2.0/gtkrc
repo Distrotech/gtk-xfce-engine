@@ -1,18 +1,22 @@
 style "xfce-default"
 {
-    GtkWidget::interior_focus         = 1
     GtkButton::default_border         = {0, 0, 0, 0}
     GtkButton::default_outside_border = {0, 0, 0, 0}
-    GtkMenuItem::selected_shadow_type = none
     GtkButton::default_spacing        = 5
     GtkCheckButton::indicator_size    = 15
+    GtkMenuItem::selected_shadow_type = none
     GtkPaned::handle_full_size        = 1
-    GtkRange::trough_border           = 1
+    GtkRadioButton::indicator_size    = 15
     GtkRange::slider_width            = 15
     GtkRange::stepper_size            = 15
     GtkRange::stepper_spacing         = 0
-    GtkSpinButton::shadow_type        = etched-in
+    GtkRange::trough_border           = 0
     GtkScrollbar::min_slider_length   = 20
+    GtkSpinButton::shadow_type        = etched-in
+    GtkWidget::internal-padding       = 0
+    GtkWidget::focus-padding          = 0
+    GtkWidget::focus-line-width       = 1
+    GtkWidget::interior_focus         = 2
 
     xthickness = 2
     ythickness = 2
@@ -43,7 +47,7 @@ style "xfce-default"
 
     engine "xfce" 
     {
-        smooth_edge = false
+        smooth_edge = true
         boxfill
         {
             fill_style = plain
@@ -73,7 +77,7 @@ style "xfce-colored" = "xfce-default"
 
     engine "xfce" 
     {
-        smooth_edge = false
+        smooth_edge = true
         boxfill
         {
             fill_style = plain
@@ -100,7 +104,7 @@ style "xfce-scrollbar" = "xfce-default"
     ythickness = 2
     engine "xfce" 
     {
-        smooth_edge = false
+        smooth_edge = true
         boxfill
         {
             fill_style = gradient
@@ -121,7 +125,7 @@ style "xfce-button" = "xfce-default"
     ythickness = 2
     engine "xfce" 
     {
-        smooth_edge = false
+        smooth_edge = true
         boxfill
         {
             fill_style = gradient
