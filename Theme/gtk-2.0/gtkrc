@@ -1,6 +1,6 @@
 # Edit these colors and fonts however you like.
 
-style "default"
+style "xfce-default"
 {
   base[ACTIVE]      = "#CDCDC8"
   base[INSENSITIVE] = "#D7D7CF"
@@ -25,7 +25,13 @@ style "default"
   engine "xfce" {}
 }
 
-style "colored"
+class "GtkWidget"                  style "xfce-default"
+widget_class "*.GtkSpinButton*"    style "xfce-default"
+widget_class "*.GtkCheckButton*"   style "xfce-default"
+widget_class "*.GtkRadioButton*"   style "xfce-default"
+widget_class "*.GtkToggleButton*"  style "xfce-default"
+
+style "xfce-colored"
 {
   base[ACTIVE]      = "#CDCDC8"
   base[INSENSITIVE] = "#D7D7CF"
@@ -50,15 +56,10 @@ style "colored"
   engine "xfce" {}
 }
 
-class "*"                      style "default"
-widget_class "*Progress*"      style "colored"
-widget_class "*List*"          style "colored"
-widget_class "*Tree*"          style "colored"
-widget_class "*Text*"          style "colored"
-widget_class "*Entry*"         style "colored"
-widget_class "*Menu*"          style "colored"
-widget_class "*Button*"        style "colored"
-widget_class "*Spin*"          style "default"
-widget_class "*CheckButton*"   style "default"
-widget_class "*RadioButton*"   style "default"
-widget_class "*ToggleButton*"  style "default"
+class "GtkList"                    style "xfce-colored"
+widget_class "*.GtkButton*"        style "xfce-colored"
+widget_class "*.GtkMenu*"          style "xfce-colored"
+widget_class "*.GtkText*"          style "xfce-colored"
+widget_class "*.GtkEntry*"         style "xfce-colored"
+widget_class "*.GtkTree*"          style "xfce-colored"
+widget_class "*.GtkProgress*"      style "xfce-colored"

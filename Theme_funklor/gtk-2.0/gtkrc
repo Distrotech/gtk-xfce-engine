@@ -1,28 +1,28 @@
 style "default"
 {
-   fg[NORMAL]        = "#000000"
    fg[ACTIVE]        = "#00306b"
    fg[INSENSITIVE]   = "#acacac"
+   fg[NORMAL]        = "#000000"
    fg[PRELIGHT]      = "#00306b"
    fg[SELECTED]      = "#ffffff"
         
    bg[ACTIVE]        = "#c6c6c6"
-   bg[NORMAL]        = "#eaeaea"
    bg[INSENSITIVE]   = "#eaeaea"
+   bg[NORMAL]        = "#eaeaea"
    bg[PRELIGHT]      = "#f7f7f7"
    bg[SELECTED]      = "#517eb4"
 
+   base[ACTIVE]      = "#c6c6c6"
+   base[INSENSITIVE] = "#c6c6c6"
    base[NORMAL]      = "#ffffff"
-   base[ACTIVE]      = "#ffffff"
-   base[INSENSITIVE] = "#ffffff"
    base[PRELIGHT]    = "#eaeaea"
    base[SELECTED]    = "#517eb4"
         
-   text[NORMAL]      = "#000000"
    text[ACTIVE]      = "#000000"
+   text[INSENSITIVE] = "#000000"
+   text[NORMAL]      = "#000000"
    text[PRELIGHT]    = "#000000"
    text[SELECTED]    = "#ffffff"
-   text[INSENSITIVE] = "#000000"
 
    engine "xfce"
    {}
