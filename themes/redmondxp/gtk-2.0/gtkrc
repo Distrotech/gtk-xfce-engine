@@ -143,6 +143,8 @@ style "xfce-redmondxp-button" = "xfce-redmondxp-default"
 }
 widget_class "*Button*"            style "xfce-redmondxp-button"
 class "*Button*"                   style "xfce-redmondxp-button"
+widget_class "*button*"            style "xfce-redmondxp-button"
+class "*button*"                   style "xfce-redmondxp-button"
 widget_class "*OptionMenu*"        style "xfce-redmondxp-button"
 class "*OptionMenu*"               style "xfce-redmondxp-button"
 
