@@ -13,6 +13,7 @@ style "xfce-default"
     GtkRange::stepper_size            = 15
     GtkRange::stepper_spacing         = 0
     GtkSpinButton::shadow_type        = etched-in
+    GtkScrollbar::min_slider_length   = 20
 
     base[ACTIVE]      = "#cdcdc8"
     base[INSENSITIVE] = "#d7d7cf"

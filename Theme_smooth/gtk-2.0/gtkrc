@@ -1,6 +1,7 @@
 style "default"
 {
     GtkRange::trough_border = 0
+    GtkScrollbar::min_slider_length = 20
 
     fg[NORMAL]        = "#000000"
     fg[ACTIVE]        = "#000000"

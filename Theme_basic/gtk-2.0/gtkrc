@@ -4,6 +4,8 @@ style "default"
 {
     GtkPaned::handle_full_size        = 1
     GtkRange::trough_border           = 2
+    GtkScrollbar::min_slider_length = 20
+
     engine "xfce" 
     {
 	smooth_edge = FALSE
