@@ -1,5 +1,6 @@
 SUBDIRS = \
 	xfce		\
+	xfce-4.0	\
 	b5		\
 	basic		\
 	curve		\

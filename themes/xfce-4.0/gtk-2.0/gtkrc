@@ -27,20 +27,20 @@ style "xfce-default"
     xthickness = 2
     ythickness = 2
 
-    base[ACTIVE]      = "#c1c0bd"
-    base[INSENSITIVE] = "#dddbd7"
+    base[ACTIVE]      = "#bfbdbb"
+    base[INSENSITIVE] = "#eae7e4"
     base[NORMAL]      = "#ffffff"
-    base[PRELIGHT]    = "#dddbd7"
-    base[SELECTED]    = "#4a7daf"
+    base[PRELIGHT]    = "#eae7e4"
+    base[SELECTED]    = "#606080"
 
-    bg[ACTIVE]        = "#c1c0bd"
-    bg[INSENSITIVE]   = "#dddbd7"
-    bg[NORMAL]        = "#dddbd7"
-    bg[PRELIGHT]      = "#dddbd7"
-    bg[SELECTED]      = "#4a7daf"
+    bg[ACTIVE]        = "#bfbdbb"
+    bg[INSENSITIVE]   = "#eae7e4"
+    bg[NORMAL]        = "#eae7e4"
+    bg[PRELIGHT]      = "#eae7e4"
+    bg[SELECTED]      = "#606080"
 
     fg[ACTIVE]        = "#000000"
-    fg[INSENSITIVE]   = "#7c7a75"
+    fg[INSENSITIVE]   = "#7f7f79"
     fg[NORMAL]        = "#000000"
     fg[PRELIGHT]      = "#000000"
     fg[SELECTED]      = "#ffffff"
@@ -68,8 +68,8 @@ style "xfce-colored" = "xfce-default"
     xthickness = 3
     ythickness = 3
 
-    bg[ACTIVE]        = "#c1c0bd"
-    bg[PRELIGHT]      = "#4a7daf"
+    bg[ACTIVE]        = "#bfbdbb"
+    bg[PRELIGHT]      = "#606080"
 
     fg[ACTIVE]        = "#000000"
     fg[PRELIGHT]      = "#ffffff"
@@ -131,7 +131,7 @@ style "xfce-menuitem" = "xfce-colored"
             fill_style = gradient
             orientation = auto
             shade_start = 0.80
-            shade_end = 1.60
+            shade_end = 1.80
         }
     }
 }
@@ -151,7 +151,7 @@ style "xfce-scrollbar" = "xfce-default"
             fill_style = gradient
             orientation = auto
             shade_start = 0.80
-            shade_end = 1.60
+            shade_end = 1.80
         }
     }
 }
@@ -171,7 +171,7 @@ style "xfce-button" = "xfce-colored"
             fill_style = gradient
             orientation = vertical
             shade_start = 0.80
-            shade_end = 1.60
+            shade_end = 1.80
         }
     }
 }
@@ -199,7 +199,7 @@ style "xfce-progress" = "xfce-colored"
             fill_style = gradient
             orientation = vertical
             shade_start = 0.80
-            shade_end = 1.60
+            shade_end = 1.80
         }
     }
 }
