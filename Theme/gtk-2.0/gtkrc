@@ -21,7 +21,7 @@ style "default"
   text[INSENSITIVE] = "#000000"
   text[NORMAL]      = "#000000"
   text[PRELIGHT]    = "#000000"
-  text[SELECTED]    = "#000000"
+  text[SELECTED]    = "#ffffff"
   engine "xfce" {}
 }
 
@@ -50,7 +50,7 @@ style "colored"
   engine "xfce" {}
 }
 
-class "GtkWidget"              style "default"
+class "*"                      style "default"
 widget_class "*Button*"        style "colored"
 widget_class "*CheckButton*"   style "default"
 widget_class "*Entry*"         style "colored"
