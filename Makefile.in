@@ -513,7 +513,7 @@ distclean: distclean-recursive
 	-rm -f $(am__CONFIG_DISTCLEAN_FILES)
 distclean-am: clean-am distclean-compile distclean-depend \
 	distclean-generic distclean-hdr distclean-libtool \
-	distclean-tags
+	distclean-local distclean-tags
 
 dvi: dvi-recursive
 
@@ -551,10 +551,10 @@ uninstall-info: uninstall-info-recursive
 	clean-engineLTLIBRARIES clean-generic clean-libtool \
 	clean-recursive dist dist-all dist-gzip distcheck distclean \
 	distclean-compile distclean-depend distclean-generic \
-	distclean-hdr distclean-libtool distclean-recursive \
-	distclean-tags distcleancheck distdir dvi dvi-am dvi-recursive \
-	info info-am info-recursive install install-am install-data \
-	install-data-am install-data-recursive \
+	distclean-hdr distclean-libtool distclean-local \
+	distclean-recursive distclean-tags distcleancheck distdir dvi \
+	dvi-am dvi-recursive info info-am info-recursive install \
+	install-am install-data install-data-am install-data-recursive \
 	install-engineLTLIBRARIES install-exec install-exec-am \
 	install-exec-recursive install-info install-info-am \
 	install-info-recursive install-man install-recursive \
@@ -567,6 +567,9 @@ uninstall-info: uninstall-info-recursive
 	uninstall-info-recursive uninstall-recursive
 
 @SET_MAKE@
+
+distclean-local:
+	rm -rf *.cache
 
 rpm : dist
 	rpmbuild -ta $(PACKAGE)-$(VERSION).tar.gz

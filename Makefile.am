@@ -13,6 +13,9 @@ INCLUDES = $(XFCE_CFLAGS)
 CFLAGS = $(XFCE_CFLAGS) -DG_DISABLE_DEPRECATED -DGTK_DISABLE_DEPRECATED \
 -DGDK_DISABLE_DEPRECATED -DGDK_PIXBUF_DISABLE_DEPRECATED
 
+distclean-local:
+	rm -rf *.cache
+
 enginedir = $(libdir)/gtk-2.0/$(GTK_VERSION)/engines
 
 engine_LTLIBRARIES = libxfce.la
