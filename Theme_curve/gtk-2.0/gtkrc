@@ -100,10 +100,10 @@ style "curve-menu" = "curve-menu-color"
 	}
     }
 }
-widget_class "*MenuItem*"            style "curve-menu"
-class "*MenuItem*"                   style "curve-menu"
-widget_class "*.GtkProgress*"        style "curve-menu"
-class "*.GtkProgress*"               style "curve-menu"
+widget_class "*MenuItem*"          style "curve-menu"
+class "*MenuItem*"                 style "curve-menu"
+widget_class "*Progress*"          style "curve-menu"
+class "*Progress*"                 style "curve-menu"
 
 style "curve-tool-bar" = "curve-menu-color"
 {
@@ -127,6 +127,4 @@ widget_class "*Tool*"              style "curve-tool-bar"
 class "*Tool*"                     style "curve-tool-bar"
 widget_class "*MenuBar*"           style "curve-tool-bar"
 class "*MenuBar*"                  style "curve-tool-bar"
-
-widget_class "*.GtkProgress*"         style "curve-menu-color"
 
