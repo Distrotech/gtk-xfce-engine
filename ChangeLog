@@ -1,3 +1,27 @@
+2004-10-22 21:33  olivier
+
+	* themes/: dawn/gtk-2.0/gtkrc, xfce/gtk-2.0/gtkrc: Theme fixes
+	  update locale [fr] for desktop files
+
+2004-10-08 19:09  olivier
+
+	* src/xfce_theme_draw.c: Check for pointer validity in sliders
+	  decorations.
+
+2004-10-07 23:59  olivier
+
+	* aclocal.m4, configure, configure.in, themes/dawn/gtk-2.0/gtkrc:
+	  Change sliders for "dawn" theme
+
+2004-10-07 22:35  benny
+
+	* aclocal.m4: Added --enable-final (-O1 for GNU ld) as per Jaspers
+	  request. Added missing m4 files.
+
+2004-10-02 15:28  olivier
+
+	* ChangeLog, ltmain.sh: Update all files for 4.2 beta 1
+
 2004-09-21 00:22  olivier
 
 	* ChangeLog: Update all ChangeLogs
