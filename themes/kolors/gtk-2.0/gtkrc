@@ -125,10 +125,10 @@ style "sbstyle" = "default"
 }
 widget_class "*Scrollbar*"         style "sbstyle"
 class "*Scrollbar*"                style "sbstyle"
-widget_class "*Scale*"             style "sbstyle"
-class "*Scale*"                    style "sbstyle"
-widget_class "*Progress*"          style "sbstyle" 
-class "*Progress*"                 style "sbstyle" 
+widget_class "*GtkScale*"          style "sbstyle"
+class "*GtkScale*"                 style "sbstyle"
+widget_class "*GtkProgress*"       style "sbstyle" 
+class "*GtkProgress*"              style "sbstyle" 
 
 
 # This is for ROX-Filer

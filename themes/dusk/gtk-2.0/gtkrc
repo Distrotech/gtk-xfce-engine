@@ -110,8 +110,8 @@ widget_class "*OptionMenu*"        style "button"
 class "*OptionMenu*"               style "button"
 # widget_class "*Tree*"            style "button"
 # class "*Tree*"                   style "button"
-# widget_class "*Scale*"           style "button"
-# class "*Scale*"                  style "button"
+# widget_class "*GtkScale*"        style "button"
+# class "*GtkScale*"               style "button"
 
 style "sbstyle" = "default"
 {
@@ -132,16 +132,16 @@ style "sbstyle" = "default"
 }
 widget_class "*Scrollbar*"         style "sbstyle"
 class "*Scrollbar*"                style "sbstyle"
-widget_class "*Scale*"             style "sbstyle"
-class "*Scale*"                    style "sbstyle"
+widget_class "*GtkScale*"          style "sbstyle"
+class "*GtkScale*"                 style "sbstyle"
 
 style "progress" = "default"
 {
     xthickness = 2
     ythickness = 2
 }
-widget_class "*Progress*"          style "progress" 
-class "*Progress*"                 style "progress" 
+widget_class "*GtkProgress*"       style "progress" 
+class "*GtkProgress*"              style "progress" 
 
 style "menuitem" = "default"
 {

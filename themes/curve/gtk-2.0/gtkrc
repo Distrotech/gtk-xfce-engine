@@ -136,8 +136,8 @@ style "progress" = "menu-color"
         }
     }
 }
-widget_class "*Progress*"          style "progress"
-class "*Progress*"                 style "progress"
+widget_class "*GtkProgress*"       style "progress"
+class "*GtkProgress*"              style "progress"
 
 style "button" = "default"
 {

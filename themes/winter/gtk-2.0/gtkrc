@@ -160,8 +160,8 @@ style "scrollbar" = "default"
 }
 widget_class "*Scrollbar*"         style "scrollbar"
 class "*Scrollbar*"                style "scrollbar"
-widget_class "*Progress*"          style "scrollbar" 
-class "*Progress*"                 style "scrollbar" 
+widget_class "*GtkProgress*"       style "scrollbar" 
+class "*GtkProgress*"              style "scrollbar" 
 
 style "button" = "colored"
 {
@@ -189,8 +189,8 @@ widget_class "*OptionMenu*"        style "button"
 class "*OptionMenu*"               style "button" 
 widget_class "*Tree*"              style "button" 
 class "*Tree*"                     style "button" 
-widget_class "*Scale*"             style "button" 
-class "*Scale*"                    style "button" 
+widget_class "*GtkScale*"          style "button" 
+class "*GtkScale*"                 style "button" 
 
 widget_class "*CheckButton*"       style "default"
 class "*CheckButton*"              style "default"

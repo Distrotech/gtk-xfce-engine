@@ -185,8 +185,8 @@ style "scale" = "scrollbar"
         }
     }
 }
-widget_class "*Scale*"             style "scale"
-class "*Scale*"                    style "scale"
+widget_class "*GtkScale*"          style "scale"
+class "*GtkScale*"                 style "scale"
 
 style "progress" = "default"
 {
@@ -210,8 +210,8 @@ style "progress" = "default"
         }
     }
 }
-widget_class "*Progress*"          style "progress" 
-class "*Progress*"                 style "progress" 
+widget_class "*GtkProgress*"       style "progress" 
+class "*GtkProgress*"              style "progress" 
 
 style "handlebox" = "default"
 {
