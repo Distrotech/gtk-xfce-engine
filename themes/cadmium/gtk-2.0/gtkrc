@@ -7,15 +7,15 @@ style "default"
     GtkButton::default_spacing        = 5
     GtkButton::focus-line-width       = 1
     GtkButton::focus-padding          = 0
-    GtkCheckButton::indicator_size    = 15
+    GtkCheckButton::indicator_size    = 13
     GtkMenuBar::internal-padding      = 0
     GtkMenuBar::shadow_type           = out
     GtkMenuItem::selected_shadow_type = etched-in
     GtkPaned::handle_full_size        = 1
     GtkPaned::handle_size             = 7
-    GtkRadioButton::indicator_size    = 15
-    GtkRange::slider_width            = 15
-    GtkRange::stepper_size            = 15
+    GtkRadioButton::indicator_size    = 13
+    GtkRange::slider_width            = 12
+    GtkRange::stepper_size            = 12
     GtkRange::stepper_spacing         = 0
     GtkRange::trough_border           = 0
     GtkScrollbar::min_slider_length   = 20
@@ -85,8 +85,8 @@ widget_class "*BonoboDockItem*"    style "menustyle"
 class "*BonoboDockItem*"           style "menustyle"
 widget_class "*HandleBox*"         style "menustyle"
 class "*HandleBox*"                style "menustyle"
-widget_class "*Tool*"              style "menustyle"
-class "*Tool*"                     style "menustyle"
+widget_class "*ToolBar"            style "menustyle"
+class "*ToolBar*"                  style "menustyle"
 widget_class "*MenuBar*"           style "menustyle"
 class "*MenuBar*"                  style "menustyle"
 
@@ -94,6 +94,8 @@ style "button" = "default"
 {
     xthickness = 2
     ythickness = 2
+
+    bg[NORMAL]        = "#cdcdda"
 
     engine "xfce" 
     {
@@ -103,8 +105,8 @@ style "button" = "default"
         {
             fill_style = gradient
             orientation = vertical
-            shade_start = 1.1
-            shade_end = 0.9
+            shade_start = 2.0
+            shade_end = 1.0
         }
     }
 }
@@ -123,6 +125,9 @@ style "sbstyle" = "default"
 {
     xthickness = 2
     ythickness = 2
+
+    bg[NORMAL]        = "#cdcdda"
+
     engine "xfce" 
     {
         smooth_edge = true
@@ -131,8 +136,8 @@ style "sbstyle" = "default"
         {
             fill_style = gradient
             orientation = automatic
-            shade_start = 0.9
-            shade_end = 1.1
+            shade_start = 2.0
+            shade_end = 1.0
         }
     }
 }
