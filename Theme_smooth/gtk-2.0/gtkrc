@@ -24,7 +24,7 @@ style "xfce-default"
     bg[INSENSITIVE]   = "#d7d7cf"
     bg[NORMAL]        = "#d7d7cf"
     bg[PRELIGHT]      = "#d7d7cf"
-    bg[SELECTED]      = "#28578f"
+    bg[SELECTED]      = "#7b797b"
 
     fg[ACTIVE]        = "#000000"
     fg[INSENSITIVE]   = "#7f7f79"
