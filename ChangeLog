@@ -1,3 +1,17 @@
+2003-08-12 07:55  xfce
+
+	* themes/kde2/gtk-2.0/gtkrc: Add secondary backward stepper to
+	scrollbar
+
+2003-08-04 20:28  xfce
+
+	* themes/stellar/gtk-2.0/gtkrc: Use solid focus line width to
+	imitate Motif
+
+2003-08-03 20:45  bmeurer
+
+	* ChangeLog: Updated ChangeLogs
+
 2003-07-31 00:19  xfce
 
 	* themes/kde2/gtk-2.0/gtkrc: [no log message]
