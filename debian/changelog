@@ -1,6 +1,5 @@
-gtk-xfce-engine (2.0.10+cvs.20021109-1) unstable; urgency=low
+gtk2-engines-xfce (2.0.10+cvs.20021127-1) unstable; urgency=low
 
-  * Initial Release.
+  * Initial Release. (Closes: #170987)
 
- -- Martin Loschwitz <madkiss@madkiss.org>  Sat,  9 Nov 2002 10:41:34 +0100
-
+ -- Martin Loschwitz <madkiss@madkiss.org>  Wed, 27 Nov 2002 18:58:00 +0100
