@@ -1,0 +1,105 @@
+# created by KDE, Mon Jun 23 15:03:43 2003
+#
+# If you do not want KDE to override your GTK settings, select
+# Themes/Styles in the control center and disable the checkboxx 
+# "Apply fonts and colors to non-KDE apps"
+#
+
+style "default"
+{
+    GtkWidget::interior_focus         = 2
+    GtkWidget::focus-padding          = 2
+    GtkButton::default_border         = {0, 0, 0, 0}
+    GtkButton::default_outside_border = {0, 0, 0, 0}
+    GtkButton::default_spacing        = 12
+    GtkRange::slider_width            = 15
+    GtkRange::stepper_size            = 15
+    GtkCheckButton::indicator_size    = 15
+    GtkPaned::handle_full_size        = 1
+    GtkRange::trough_border           = 1
+    GtkScrollbar::min_slider_length   = 20
+    GtkMenuItem::selected_shadow_type = in
+
+    xthickness = 2
+    ythickness = 2
+
+    bg[NORMAL] = { 0.863, 0.863, 0.863 }
+    bg[SELECTED] = { 0.039, 0.373, 0.537 }
+    bg[INSENSITIVE] = { 0.863, 0.863, 0.863 }
+    bg[ACTIVE] = { 0.933, 0.933, 0.933 }
+    bg[PRELIGHT] = { 0.933, 0.933, 0.933 }
+
+    base[NORMAL] = { 1.000, 1.000, 1.000 }
+    base[SELECTED] = { 0.039, 0.373, 0.537 }
+    base[INSENSITIVE] = { 0.863, 0.863, 0.863 }
+    base[ACTIVE] = { 0.863, 0.863, 0.863 }
+    base[PRELIGHT] = { 0.933, 0.933, 0.933 }
+
+    text[NORMAL] = { 0.000, 0.000, 0.000 }
+    text[SELECTED] = { 1.000, 1.000, 1.000 }
+    text[INSENSITIVE] = { 0.718, 0.718, 0.718 }
+    text[ACTIVE] = { 0.000, 0.000, 0.000 }
+    text[PRELIGHT] = { 0.000, 0.000, 0.000 }
+
+    fg[NORMAL] = { 0.000, 0.000, 0.000 }
+    fg[SELECTED] = { 1.000, 1.000, 1.000 }
+    fg[INSENSITIVE] = { 0.718, 0.718, 0.718 }
+    fg[ACTIVE] = { 0.250, 0.250, 0.250 }
+    fg[PRELIGHT] = { 0.000, 0.000, 0.000 }
+
+    engine "xfce" 
+    {
+        smooth_edge = true
+        boxfill
+        {
+            fill_style = plain
+        }
+    }
+}
+widget_class "*" style "default"
+
+style "xfce-kde2-menustyle" = "default"
+{
+    xthickness = 3
+    ythickness = 3
+    engine "xfce" 
+    {
+        smooth_edge = true
+        boxfill
+        {
+            fill_style = gradient
+            orientation = auto
+            shade_start = 1.10
+            shade_end = 0.90
+        }
+    }
+}
+widget_class "*BonoboDockItem*"    style "xfce-kde2-menustyle"
+class "*BonoboDockItem*"           style "xfce-kde2-menustyle"
+widget_class "*HandleBox*"         style "xfce-kde2-menustyle"
+class "*HandleBox*"                style "xfce-kde2-menustyle"
+widget_class "*Tool*"              style "xfce-kde2-menustyle"
+class "*Tool*"                     style "xfce-kde2-menustyle"
+widget_class "*MenuBar*"           style "xfce-kde2-menustyle"
+class "*MenuBar*"                  style "xfce-kde2-menustyle"
+
+style "xfce-kde2-buttonstyle" = "default"
+{
+    xthickness = 2
+    ythickness = 2
+    engine "xfce" 
+    {
+        smooth_edge = true
+        boxfill
+        {
+            fill_style = gradient
+            orientation = auto
+            shade_start = 1.05
+            shade_end = 1.00
+        }
+    }
+}
+widget_class "*Button*"            style "xfce-kde2-buttonstyle"
+class "*Button*"                   style "xfce-kde2-buttonstyle"
+
+

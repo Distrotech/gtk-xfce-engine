@@ -3,6 +3,7 @@ SUBDIRS = \
 	b5		\
 	basic		\
 	curve		\
+	kde2		\
 	kolors		\
 	light		\
 	redmondxp	\

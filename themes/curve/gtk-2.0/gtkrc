@@ -32,7 +32,7 @@ style "curve-default"
     fg[INSENSITIVE]   = "#7f7f7f" 
 
     bg[NORMAL]        = "#e5e5e5" 
-    bg[PRELIGHT]      = "#e5e5e5" 
+    bg[PRELIGHT]      = "#f5f5f5" 
     bg[ACTIVE]        = "#cccccc" 
     bg[INSENSITIVE]   = "#d8d8d8" 
     bg[SELECTED]      = "#4464ac" 
@@ -78,8 +78,8 @@ style "curve-menu-color" = "curve-default"
 
 style "curve-tool-bar" = "curve-menu-color"
 {
-    xthickness = 1
-    ythickness = 2
+    xthickness = 3
+    ythickness = 3
 
     engine "xfce" 
     {
@@ -101,8 +101,8 @@ class "*MenuBar*"                  style "curve-tool-bar"
 
 style "curve-menu" = "curve-menu-color"
 {
-    xthickness = 2
-    ythickness = 2
+    xthickness = 4
+    ythickness = 4
 
     engine "xfce" 
     {
