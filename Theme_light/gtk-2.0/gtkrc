@@ -20,8 +20,8 @@ style "default"
     fg[SELECTED]      = "#000000"
 
     bg[ACTIVE]        = "#d4d4cd"
-    bg[INSENSITIVE]   = "#edede5"
-    bg[NORMAL]        = "#edede5"
+    bg[INSENSITIVE]   = "#ededdd"
+    bg[NORMAL]        = "#ededdd"
     bg[PRELIGHT]      = "#f5f5dd"
     bg[SELECTED]      = "#bcb4cf"
 
