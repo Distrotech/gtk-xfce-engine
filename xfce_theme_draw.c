@@ -795,14 +795,14 @@ draw_arrow (GtkStyle * style, GdkWindow * window, GtkStateType state, GtkShadowT
     else
       y += (height - 5) / 2;
 
-    draw_varrow (window, style->dark_gc[state], shadow, area, arrow_type, x, y, 7, 5);
+    draw_varrow (window, style->text_gc[state], shadow, area, arrow_type, x, y, 7, 5);
   }
   else if (detail && strcmp (detail, "vscrollbar") == 0)
   {
     x += (width - 7) / 2;
     y += (height - 5) / 2;
 
-    draw_varrow (window, style->dark_gc[state], shadow, area, arrow_type, x, y, 7, 5);
+    draw_varrow (window, style->text_gc[state], shadow, area, arrow_type, x, y, 7, 5);
 
   }
   else if (detail && strcmp (detail, "hscrollbar") == 0)
@@ -810,7 +810,7 @@ draw_arrow (GtkStyle * style, GdkWindow * window, GtkStateType state, GtkShadowT
     y += (height - 7) / 2;
     x += (width - 5) / 2;
 
-    draw_harrow (window, style->dark_gc[state], shadow, area, arrow_type, x, y, 5, 7);
+    draw_harrow (window, style->text_gc[state], shadow, area, arrow_type, x, y, 5, 7);
   }
   else
   {
@@ -819,14 +819,14 @@ draw_arrow (GtkStyle * style, GdkWindow * window, GtkStateType state, GtkShadowT
       x += (width - 7) / 2;
       y += (height - 5) / 2;
 
-      draw_varrow (window, style->dark_gc[state], shadow, area, arrow_type, x, y, 7, 5);
+      draw_varrow (window, style->text_gc[state], shadow, area, arrow_type, x, y, 7, 5);
     }
     else
     {
       x += (width - 5) / 2;
       y += (height - 7) / 2;
 
-      draw_harrow (window, style->dark_gc[state], shadow, area, arrow_type, x, y, 5, 7);
+      draw_harrow (window, style->text_gc[state], shadow, area, arrow_type, x, y, 5, 7);
     }
   }
 }
