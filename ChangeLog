@@ -1,3 +1,96 @@
+2003-07-06 15:42  xfce
+
+	* configure, configure.in, themes/b5/gtk-2.0/gtkrc,
+	themes/kolors/gtk-2.0/gtkrc, themes/light/gtk-2.0/gtkrc,
+	themes/redmondxp/gtk-2.0/gtkrc, themes/saltlake/gtk-2.0/gtkrc,
+	themes/stellar/gtk-2.0/gtkrc, themes/xfce/gtk-2.0/gtkrc: Apply
+	colors to metacity frames Various small improvements to gtkrc files
+
+2003-07-05 18:38  xfce
+
+	* themes/curve/gtk-2.0/gtkrc: [no log message]
+
+2003-07-05 14:31  xfce
+
+	* Makefile.in, ltconfig: Remove ltconfig script as it is generated
+
+2003-07-05 01:37  xfce
+
+	* Makefile.in, ltcf-c.sh: libttol update and all
+
+2003-06-29 22:23  xfce
+
+	* themes/: b5/gtk-2.0/gtkrc, basic/gtk-2.0/gtkrc,
+	curve/gtk-2.0/gtkrc, kolors/gtk-2.0/gtkrc, light/gtk-2.0/gtkrc,
+	redmondxp/gtk-2.0/gtkrc, xfce/gtk-2.0/gtkrc: [no log message]
+
+2003-06-28 23:06  xfce
+
+	* themes/: b5/gtk-2.0/gtkrc, basic/gtk-2.0/gtkrc,
+	curve/gtk-2.0/gtkrc, kolors/gtk-2.0/gtkrc, light/gtk-2.0/gtkrc,
+	redmondxp/gtk-2.0/gtkrc, xfce/gtk-2.0/gtkrc: [no log message]
+
+2003-06-28 22:44  xfce
+
+	* themes/: b5/gtk-2.0/gtkrc, basic/gtk-2.0/gtkrc,
+	curve/gtk-2.0/gtkrc, kolors/gtk-2.0/gtkrc, light/gtk-2.0/gtkrc,
+	redmondxp/gtk-2.0/gtkrc, xfce/gtk-2.0/gtkrc: Change themes
+
+2003-06-28 11:45  xfce
+
+	* Makefile.in, aclocal.m4, config.guess, config.h.in, config.sub,
+	configure, install-sh, ltmain.sh, src/Makefile.in,
+	themes/Makefile.in, themes/b5/Makefile.in,
+	themes/b5/gtk-2.0/Makefile.in, themes/basic/Makefile.in,
+	themes/basic/gtk-2.0/Makefile.in, themes/curve/Makefile.in,
+	themes/curve/gtk-2.0/Makefile.in, themes/kolors/Makefile.in,
+	themes/kolors/gtk-2.0/Makefile.in, themes/light/Makefile.in,
+	themes/light/gtk-2.0/Makefile.in, themes/redmondxp/Makefile.in,
+	themes/redmondxp/gtk-2.0/Makefile.in, themes/saltlake/Makefile.in,
+	themes/saltlake/gtk-2.0/Makefile.in, themes/smooth/Makefile.in,
+	themes/smooth/gtk-2.0/Makefile.in, themes/stellar/Makefile.in,
+	themes/stellar/gtk-2.0/Makefile.in, themes/xfce/Makefile.in,
+	themes/xfce/gtk-2.0/Makefile.in: Update to libtool-1.5 Use proper
+	complete CURRENT:REVISION:AGE scheme for lib versionning
+
+2003-06-03 23:25  xfce
+
+	* aclocal.m4, configure, configure.in: Upgrade version number to
+	2.1.1
+
+2003-06-03 22:16  xfce
+
+	* themes/: b5/gtk-2.0/gtkrc, basic/gtk-2.0/gtkrc,
+	light/gtk-2.0/gtkrc, saltlake/gtk-2.0/gtkrc, smooth/gtk-2.0/gtkrc:
+	Use 1 pix thickness for progress bar
+
+2003-05-27 19:12  xfce
+
+	* themes/: curve/gtk-2.0/gtkrc, kolors/gtk-2.0/gtkrc,
+	xfce/gtk-2.0/gtkrc: Use 1pix thickness for progress bars
+
+2003-05-27 08:21  xfce
+
+	* themes/redmondxp/gtk-2.0/gtkrc: [no log message]
+
+2003-05-26 23:16  xfce
+
+	* themes/xfce/gtk-2.0/gtkrc: Rework xfce theme (real nice now)
+
+2003-05-24 00:40  xfce
+
+	* themes/kolors/gtk-2.0/gtkrc: Reduce contrast of text to get
+	smoother look
+
+2003-05-21 22:40  xfce
+
+	* themes/redmondxp/gtk-2.0/gtkrc: Change bg color of redmondxp
+	theme
+
+2003-05-15 13:03  huysmans
+
+	* ChangeLog: Mass update of ChangeLogs
+
 2003-04-28 22:46  xfce
 
 	* AUTHORS: Add credits
