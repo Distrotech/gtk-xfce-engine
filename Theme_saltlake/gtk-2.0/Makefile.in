@@ -87,11 +87,11 @@ XFCE_LIBS = @XFCE_LIBS@
 am__include = @am__include@
 am__quote = @am__quote@
 install_sh = @install_sh@
-themedir = $(datadir)/themes/Xfce-Redmondxp/gtk-2.0
+themedir = $(datadir)/themes/Xfce-saltlake/gtk-2.0
 theme_DATA = gtkrc
 
 EXTRA_DIST = $(theme_DATA)
-subdir = Theme_redmondxp/gtk-2.0
+subdir = Theme_saltlake/gtk-2.0
 mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
 CONFIG_HEADER = $(top_builddir)/config.h
 CONFIG_CLEAN_FILES =
@@ -104,7 +104,7 @@ all: all-am
 .SUFFIXES:
 $(srcdir)/Makefile.in:  Makefile.am  $(top_srcdir)/configure.in $(ACLOCAL_M4)
 	cd $(top_srcdir) && \
-	  $(AUTOMAKE) --gnu  Theme_redmondxp/gtk-2.0/Makefile
+	  $(AUTOMAKE) --gnu  Theme_saltlake/gtk-2.0/Makefile
 Makefile:  $(srcdir)/Makefile.in  $(top_builddir)/config.status
 	cd $(top_builddir) && $(SHELL) ./config.status $(subdir)/$@ $(am__depfiles_maybe)
 

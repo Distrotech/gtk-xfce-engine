@@ -7844,7 +7844,7 @@ _ACEOF
 fi;
 
 
-ac_config_files="$ac_config_files gtk-xfce-engine-2.spec Makefile Theme_b5/Makefile Theme_b5/gtk-2.0/Makefile Theme_basic/Makefile Theme_basic/gtk-2.0/Makefile Theme_curve/Makefile Theme_curve/gtk-2.0/Makefile Theme_funklor/Makefile Theme_funklor/gtk-2.0/Makefile Theme/gtk-2.0/Makefile Theme/Makefile Theme_curve/gtk-2.0/Makefile Theme_curve/Makefile Theme_light/Makefile Theme_light/gtk-2.0/Makefile Theme_redmondxp/Makefile Theme_redmondxp/gtk-2.0/Makefile Theme_smooth/gtk-2.0/Makefile Theme_smooth/Makefile"
+ac_config_files="$ac_config_files gtk-xfce-engine-2.spec Makefile Theme_b5/Makefile Theme_b5/gtk-2.0/Makefile Theme_basic/Makefile Theme_basic/gtk-2.0/Makefile Theme_curve/Makefile Theme_curve/gtk-2.0/Makefile Theme_funklor/Makefile Theme_funklor/gtk-2.0/Makefile Theme/gtk-2.0/Makefile Theme/Makefile Theme_curve/gtk-2.0/Makefile Theme_curve/Makefile Theme_light/Makefile Theme_light/gtk-2.0/Makefile Theme_redmondxp/Makefile Theme_redmondxp/gtk-2.0/Makefile Theme_smooth/gtk-2.0/Makefile Theme_smooth/Makefile Theme_saltlake/gtk-2.0/Makefile Theme_saltlake/Makefile"
 cat >confcache <<\_ACEOF
 # This file is a shell script that caches the results of configure
 # tests run on this system so they can be shared between configure
@@ -8353,6 +8353,8 @@ do
   "Theme_redmondxp/gtk-2.0/Makefile" ) CONFIG_FILES="$CONFIG_FILES Theme_redmondxp/gtk-2.0/Makefile" ;;
   "Theme_smooth/gtk-2.0/Makefile" ) CONFIG_FILES="$CONFIG_FILES Theme_smooth/gtk-2.0/Makefile" ;;
   "Theme_smooth/Makefile" ) CONFIG_FILES="$CONFIG_FILES Theme_smooth/Makefile" ;;
+  "Theme_saltlake/gtk-2.0/Makefile" ) CONFIG_FILES="$CONFIG_FILES Theme_saltlake/gtk-2.0/Makefile" ;;
+  "Theme_saltlake/Makefile" ) CONFIG_FILES="$CONFIG_FILES Theme_saltlake/Makefile" ;;
   "depfiles" ) CONFIG_COMMANDS="$CONFIG_COMMANDS depfiles" ;;
   "config.h" ) CONFIG_HEADERS="$CONFIG_HEADERS config.h" ;;
   *) { { echo "$as_me:$LINENO: error: invalid argument: $ac_config_target" >&5
