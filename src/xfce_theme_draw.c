@@ -388,16 +388,23 @@ static void xfce_draw_grip_slide (GtkStyle * style, GdkWindow * window, GtkState
 
 static void xfce_draw_grips(GtkStyle * style, GdkWindow * window, GtkStateType state_type, GdkRectangle * area, GtkWidget * widget, gint x, gint y, gint width, gint height, GtkOrientation orientation)
 {
+    XfceRcStyle *rc_style;
+
     g_return_if_fail(style != NULL);
     g_return_if_fail(window != NULL);
 
-    if(XFCE_RC_STYLE(style->rc_style)->grip_style == XFCE_RC_GRIP_ROUGH)
+    rc_style = XFCE_RC_STYLE(style->rc_style);
+    
+    if (rc_style)
     {
-        xfce_draw_grip_rough (style, window, state_type, area, widget, x, y, width, height, orientation);
-    }
-    else if(XFCE_RC_STYLE(style->rc_style)->grip_style == XFCE_RC_GRIP_SLIDE)
-    {
-        xfce_draw_grip_slide (style, window, state_type, area, widget, x, y, width, height, orientation);
+        if(rc_style->grip_style == XFCE_RC_GRIP_ROUGH)
+        {
+            xfce_draw_grip_rough (style, window, state_type, area, widget, x, y, width, height, orientation);
+        }
+        else if(rc_style->grip_style == XFCE_RC_GRIP_SLIDE)
+        {
+            xfce_draw_grip_slide (style, window, state_type, area, widget, x, y, width, height, orientation);
+        }
     }
 }
 
