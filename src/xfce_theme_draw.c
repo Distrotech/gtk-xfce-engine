@@ -62,47 +62,47 @@ Part;
 
 #define PART_SIZE 13
 
-static char check_light_bits[] = {
+static const guchar check_light_bits[] = {
     0x00, 0x00, 0x00, 0x00, 0x00, 0x08, 0x00, 0x08, 0x00, 0x08, 0x00, 0x08,
     0x00, 0x08, 0x00, 0x08, 0x00, 0x08, 0x00, 0x08, 0x00, 0x08, 0xfc, 0x0f,
     0x00, 0x00,
 };
-static char check_dark_bits[] = {
+static const guchar check_dark_bits[] = {
     0x00, 0x00, 0xfe, 0x0f, 0x02, 0x00, 0x02, 0x00, 0x02, 0x00, 0x02, 0x00,
     0x02, 0x00, 0x02, 0x00, 0x02, 0x00, 0x02, 0x00, 0x02, 0x00, 0x02, 0x00,
     0x00, 0x00,
 };
-static char check_base_bits[] = {
+static const guchar check_base_bits[] = {
     0x00, 0x00, 0x00, 0x00, 0xfc, 0x07, 0xfc, 0x07, 0xfc, 0x07, 0xfc, 0x07,
     0xfc, 0x07, 0xfc, 0x07, 0xfc, 0x07, 0xfc, 0x07, 0xfc, 0x07, 0x00, 0x00,
     0x00, 0x00,
 };
-static char check_text_bits[] = {
+static const guchar check_text_bits[] = {
     0x00, 0x00, 0x00, 0x00, 0x00, 0x1c, 0x00, 0x0f, 0x80, 0x03, 0xc0, 0x01,
     0xe0, 0x00, 0x73, 0x00, 0x3f, 0x00, 0x3e, 0x00, 0x1c, 0x00, 0x18, 0x00,
     0x08, 0x00
 };
-static char check_cross_bits[] = {
+static const guchar check_cross_bits[] = {
     0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x18, 0x03, 0xb8, 0x03, 0xf0, 0x01,
     0xe0, 0x00, 0xf0, 0x01, 0xb8, 0x03, 0x18, 0x03, 0x00, 0x00, 0x00, 0x00,
     0x00, 0x00,
 };
-static char radio_light_bits[] = {
+static const guchar radio_light_bits[] = {
     0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x04, 0x00, 0x08, 0x00, 0x08,
     0x00, 0x08, 0x00, 0x08, 0x00, 0x08, 0x00, 0x04, 0x08, 0x02, 0xf0, 0x01,
     0x00, 0x00,
 };
-static char radio_dark_bits[] = {
+static const guchar radio_dark_bits[] = {
     0x00, 0x00, 0xf0, 0x01, 0x08, 0x02, 0x04, 0x00, 0x02, 0x00, 0x02, 0x00,
     0x02, 0x00, 0x02, 0x00, 0x02, 0x00, 0x04, 0x00, 0x00, 0x00, 0x00, 0x00,
     0x00, 0x00,
 };
-static char radio_base_bits[] = {
+static const guchar radio_base_bits[] = {
     0x00, 0x00, 0x00, 0x00, 0xf0, 0x01, 0xf8, 0x03, 0xfc, 0x07, 0xfc, 0x07,
     0xfc, 0x07, 0xfc, 0x07, 0xfc, 0x07, 0xf8, 0x03, 0xf0, 0x01, 0x00, 0x00,
     0x00, 0x00,
 };
-static char radio_text_bits[] = {
+static const guchar radio_text_bits[] = {
     0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xe0, 0x00, 0xf0, 0x01,
     0xf0, 0x01, 0xf0, 0x01, 0xe0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
     0x00, 0x00,
@@ -110,37 +110,24 @@ static char radio_text_bits[] = {
 
 static struct
 {
-    char *bits;
+    const guchar *bits;
+#if GTK_CHECK_VERSION(2, 2, 0)
+    GList *bmap_list; /* list of GdkBitmap */
+#else
     GdkBitmap *bmap;
+#endif
 }
 parts[] =
 {
-    {
-    check_light_bits, NULL}
-    ,
-    {
-    check_dark_bits, NULL}
-    ,
-    {
-    check_base_bits, NULL}
-    ,
-    {
-    check_text_bits, NULL}
-    ,
-    {
-    check_cross_bits, NULL}
-    ,
-    {
-    radio_light_bits, NULL}
-    ,
-    {
-    radio_dark_bits, NULL}
-    ,
-    {
-    radio_base_bits, NULL}
-    ,
-    {
-    radio_text_bits, NULL}
+    { check_light_bits, NULL },
+    { check_dark_bits,  NULL },
+    { check_base_bits,  NULL },
+    { check_text_bits,  NULL },
+    { check_cross_bits, NULL },
+    { radio_light_bits, NULL },
+    { radio_dark_bits,  NULL },
+    { radio_base_bits,  NULL },
+    { radio_text_bits,  NULL }
 };
 
 /* internal functions */
@@ -891,16 +878,46 @@ static void draw_box(GtkStyle * style, GdkWindow * window, GtkStateType state_ty
     draw_shadow(style, window, state_type, shadow_type, area, widget, detail, x, y, width, height);
 }
 
+static GdkBitmap *get_part_bmap (GdkDrawable *drawable, Part part)
+{
+#if GTK_CHECK_VERSION(2, 2, 0)
+    GdkScreen *screen = gdk_drawable_get_screen (drawable);
+    GdkBitmap *bitmap;
+    GList *tmp_list;
+
+    tmp_list = parts[part].bmap_list;
+    while (tmp_list)
+    {
+	bitmap = tmp_list->data;
+	if (gdk_drawable_get_screen (bitmap) == screen)
+	{
+	    return bitmap;
+	}
+	tmp_list = tmp_list->next;
+    }
+
+    bitmap = gdk_bitmap_create_from_data (drawable, (gchar *)parts[part].bits, PART_SIZE, PART_SIZE);
+    parts[part].bmap_list = g_list_prepend (parts[part].bmap_list, bitmap);
+
+    return bitmap;
+#else
+    if(!parts[part].bmap)
+    {
+	parts[part].bmap = gdk_bitmap_create_from_data(drawable, parts[part].bits, PART_SIZE, PART_SIZE);
+    }
+    return parts[part].bmap;
+#endif
+}
+
 static void draw_part(GdkDrawable * drawable, GdkGC * gc, GdkRectangle * area, gint x, gint y, Part part)
 {
     if(area)
-        gdk_gc_set_clip_rectangle(gc, area);
-
-    if(!parts[part].bmap)
-        parts[part].bmap = gdk_bitmap_create_from_data(drawable, parts[part].bits, PART_SIZE, PART_SIZE);
+    {
+	gdk_gc_set_clip_rectangle(gc, area);
+    }
 
     gdk_gc_set_ts_origin(gc, x, y);
-    gdk_gc_set_stipple(gc, parts[part].bmap);
+    gdk_gc_set_stipple(gc, get_part_bmap (drawable, part));
     gdk_gc_set_fill(gc, GDK_STIPPLED);
 
     gdk_draw_rectangle(drawable, gc, TRUE, x, y, PART_SIZE, PART_SIZE);
@@ -908,7 +925,9 @@ static void draw_part(GdkDrawable * drawable, GdkGC * gc, GdkRectangle * area, g
     gdk_gc_set_fill(gc, GDK_SOLID);
 
     if(area)
-        gdk_gc_set_clip_rectangle(gc, NULL);
+    {
+	gdk_gc_set_clip_rectangle(gc, NULL);
+    }
 }
 
 static void draw_check(GtkStyle * style, GdkWindow * window, GtkStateType state, GtkShadowType shadow, GdkRectangle * area, GtkWidget * widget, const gchar * detail, gint x, gint y, gint width, gint height)
