@@ -60,8 +60,6 @@ theme_parse_rc_style (GScanner * scanner, GtkRcStyle * rc_style)
 
   g_scanner_get_next_token (scanner);
 
-  rc_style->engine_data = NULL;
-
   return G_TOKEN_NONE;
 }
 
@@ -73,15 +71,6 @@ theme_merge_rc_style (GtkRcStyle * dest, GtkRcStyle * src)
 static void
 theme_rc_style_to_style (GtkStyle * style, GtkRcStyle * rc_style)
 {
-  style->klass = &xfce_default_class;
-  gtk_style_set_prop_experimental (style, "GtkButton::default_spacing", 6);
-  gtk_style_set_prop_experimental (style, "GtkCheckButton::indicator_size", 13);
-  gtk_style_set_prop_experimental (style, "GtkPaned::handle_full_size", 1);
-  gtk_style_set_prop_experimental (style, "GtkRange::trough_border", 2);
-  gtk_style_set_prop_experimental (style, "GtkRange::slider_width", SCROLLBAR_WIDTH);
-  gtk_style_set_prop_experimental (style, "GtkRange::stepper_size", SCROLLBAR_WIDTH);
-  gtk_style_set_prop_experimental (style, "GtkRange::stepper_spacing", 0);
-  gtk_style_set_prop_experimental (style, "GtkSpinButton::shadow_type", GTK_SHADOW_ETCHED_IN);
 }
 
 static void
@@ -112,17 +101,6 @@ theme_destroy_style (GtkStyle * style)
 void
 theme_init (GtkThemeEngine * engine)
 {
-  GtkRangeClass *rangeclass;
-
-  engine->parse_rc_style = theme_parse_rc_style;
-  engine->merge_rc_style = theme_merge_rc_style;
-  engine->rc_style_to_style = theme_rc_style_to_style;
-  engine->duplicate_style = theme_duplicate_style;
-  engine->realize_style = theme_realize_style;
-  engine->unrealize_style = theme_unrealize_style;
-  engine->destroy_rc_style = theme_destroy_rc_style;
-  engine->destroy_style = theme_destroy_style;
-  engine->set_background = NULL;
 }
 
 void
