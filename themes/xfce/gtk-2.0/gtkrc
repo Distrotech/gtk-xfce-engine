@@ -1,3 +1,6 @@
+# Default gtk theme for Xfce
+# Olivier Fourdan 03/2005
+
 style "default"
 {
     GtkButton::default_border                    = {0, 0, 0, 0}
@@ -30,23 +33,23 @@ style "default"
     xthickness = 2
     ythickness = 2
 
-    base[ACTIVE]      = "#d4d3d2"
-    base[INSENSITIVE] = "#e8e7e6"
+    base[ACTIVE]      = "#d4d8e0"
+    base[INSENSITIVE] = "#eeeeef"
     base[NORMAL]      = "#ffffff"
-    base[PRELIGHT]    = "#d4d3d2"
-    base[SELECTED]    = "#867d94"
+    base[PRELIGHT]    = "#d4d8e0"
+    base[SELECTED]    = "#647694"
 
-    bg[ACTIVE]        = "#d4d3d2"
-    bg[INSENSITIVE]   = "#e8e7e6"
-    bg[NORMAL]        = "#e8e7e6"
-    bg[PRELIGHT]      = "#d4d3d2"
-    bg[SELECTED]      = "#d4d3d2"
+    bg[ACTIVE]        = "#d4d8e0"
+    bg[INSENSITIVE]   = "#eeeeef"
+    bg[NORMAL]        = "#eeeeef"
+    bg[PRELIGHT]      = "#d4d8e0"
+    bg[SELECTED]      = "#647694"
 
     fg[ACTIVE]        = "#000000"
     fg[INSENSITIVE]   = "#8e8e8a"
     fg[NORMAL]        = "#000000"
     fg[PRELIGHT]      = "#000000"
-    fg[SELECTED]      = "#000000"
+    fg[SELECTED]      = "#ffffff"
 
     text[ACTIVE]      = "#000000"
     text[INSENSITIVE] = "#000000"
@@ -57,44 +60,73 @@ style "default"
     engine "xfce" 
     {
         smooth_edge = true
-        grip_style = engrave
+        grip_style = none
         boxfill
         {
-            fill_style = plain
+            fill_style = gradient
+            orientation = horizontal
+            shade_start = 1.25
+            shade_end = 1.00
         }
     }
 }
 widget_class "*"                   style "default"
 
+style "notebook" = "default"
+{
+    xthickness = 1
+    ythickness = 1
+
+    bg[NORMAL]        = "#ffffff"
+    bg[ACTIVE]        = "#d4d8e0"
+}
+widget_class "*Notebook*"          style "notebook"
+class "*Notebook*"                 style "notebook"
+
 style "menu" = "default"
 {
-    xthickness = 3
-    ythickness = 3
-    engine "xfce" 
-    {
-        smooth_edge = true
-        grip_style = engrave
-        boxfill
-        {
-            fill_style = plain
-        }
-    }
+    xthickness = 1
+    ythickness = 1
+
+    bg[INSENSITIVE]   = "#ffffff"
+    bg[NORMAL]        = "#ffffff"
 }
-widget_class "*BonoboDockItem"     style "menu"
-class "*BonoboDockItem"            style "menu"
-widget_class "*ToolBar"            style "menu"
-class "*ToolBar"                   style "menu"
-widget_class "*MenuBar"            style "menu"
-class "*MenuBar"                   style "menu"
+widget_class "*Menu*"              style "menu"
+class "*Menu*"                     style "menu"
+
+style "menubar" = "default"
+{
+    xthickness = 2
+    ythickness = 2
+}
+widget_class "*BonoboDockItem"     style "menubar"
+class "*BonoboDockItem"            style "menubar"
+widget_class "*ToolBar"            style "menubar"
+class "*ToolBar"                   style "menubar"
+widget_class "*MenuBar"            style "menubar"
+class "*MenuBar"                   style "menubar"
+
+style "menuitem" = "default"
+{
+    xthickness = 1
+    ythickness = 2
+
+    bg[PRELIGHT]    = "#647694"
+    bg[SELECTED]    = "#647694"
+    fg[PRELIGHT]    = "#ffffff"
+    fg[SELECTED]    = "#ffffff"
+}
+widget_class "*MenuItem*"          style "menuitem"
+class "*MenuItem*"                 style "menuitem"
 
 style "button" = "default"
 {
     xthickness = 3
     ythickness = 3
 
-    bg[PRELIGHT]      = "#d4d3d2"
-    bg[NORMAL]        = "#d4d3d2"
-    bg[ACTIVE]        = "#bbb6c2"
+    bg[PRELIGHT]      = "#d4d8e0"
+    bg[NORMAL]        = "#d4d8e0"
+    bg[ACTIVE]        = "#ceced9"
 
     engine "xfce" 
     {
@@ -121,14 +153,14 @@ style "scrollbar" = "default"
     xthickness = 2
     ythickness = 2
 
-    bg[PRELIGHT]      = "#d4d3d2"
-    bg[NORMAL]        = "#d4d3d2"
-    bg[ACTIVE]        = "#e8e7e6"
+    bg[PRELIGHT]      = "#d4d8e0"
+    bg[NORMAL]        = "#d4d8e0"
+    bg[ACTIVE]        = "#eeeeef"
 
     engine "xfce" 
     {
         smooth_edge = true
-        grip_style = none
+        grip_style = engrave
         boxfill
         {
             fill_style = gradient
@@ -164,9 +196,9 @@ style "progress" = "default"
     xthickness = 0
     ythickness = 0
 
-    bg[PRELIGHT]      = "#bbb6c2"
-    bg[NORMAL]        = "#d2d1cf"
-    bg[ACTIVE]        = "#a5a29f"
+    bg[PRELIGHT]      = "#d4d8e0"
+    bg[NORMAL]        = "#ceced9"
+    bg[ACTIVE]        = "#a5a5a9"
 
     engine "xfce" 
     {
@@ -174,21 +206,15 @@ style "progress" = "default"
         grip_style = none
         boxfill
         {
-            fill_style = plain
+            fill_style = gradient
+            orientation = automatic
+            shade_start = 1.05
+            shade_end = 0.95
         }
     }
 }
 widget_class "*Progress*"          style "progress" 
 class "*Progress*"                 style "progress" 
-
-style "menuitem" = "default"
-{
-    xthickness = 1
-    ythickness = 2
-}
-
-widget_class "*MenuItem*"          style "menuitem"
-class "*MenuItem*"                 style "menuitem"
 
 style "handlebox" = "default"
 {
@@ -210,11 +236,10 @@ widget_class "*Collection"         style "rox"
 # 
 style "titlebar" = "default"
 {
-#    bg[SELECTED]      = "#70727f"
-    bg[SELECTED]      = "#867d94"
+    bg[SELECTED]      = "#647694"
     fg[SELECTED]      = "#ffffff"
-    bg[INSENSITIVE]   = "#e8e7e6"
-    fg[INSENSITIVE]   = "#a9a5a5"
+    bg[INSENSITIVE]   = "#d4d8e0"
+    fg[INSENSITIVE]   = "#647694"
 }
 widget "xfwm"                      style "titlebar"
 class "MetaFrames"                 style "titlebar"

@@ -57,8 +57,6 @@ themes/xfce/gtk-2.0/Makefile
 themes/xfce/Makefile
 themes/xfce-4.0/gtk-2.0/Makefile
 themes/xfce-4.0/Makefile
-themes/xfce-4.2/gtk-2.0/Makefile
-themes/xfce-4.2/Makefile
 themes/basic/gtk-2.0/Makefile
 themes/basic/Makefile
 themes/cadmium/gtk-2.0/Makefile
