@@ -20,7 +20,7 @@ style "default"
   text[ACTIVE]      = "#000000"
   text[INSENSITIVE] = "#000000"
   text[NORMAL]      = "#000000"
-  text[PRELIGHT]    = "#000000"
+  text[PRELIGHT]    = "#ffffff"
   text[SELECTED]    = "#ffffff"
   engine "xfce" {}
 }
