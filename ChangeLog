@@ -1,3 +1,18 @@
+2003-03-26  xfce
+
+	* Theme/gtk-2.0/gtkrc, Theme_curve/gtk-2.0/gtkrc: Small adjusments
+	in color scheme
+
+2003-03-25  xfce
+
+	* Theme_curve/gtk-2.0/gtkrc: Change default xfwm4 theme (yeah,
+	again...but that's the default theme, ya know) Change Xfce-curve
+	theme
+
+2003-03-23  xfce
+
+	* ChangeLog: Update ChangeLog
+
 2003-03-19  huysmans
 
 	* autogen.sh: Only add extra autogen parameters when none are given
