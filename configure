@@ -1250,7 +1250,7 @@ THEME="xfce"
 
 
 
-VERSION=2.1.0
+VERSION=2.1.1
 PACKAGE=gtk-${THEME}-engine
 am__api_version="1.7"
 ac_aux_dir=
@@ -3083,7 +3083,7 @@ irix5* | irix6*)
 # This must be Linux ELF.
 linux-gnu*)
   case $host_cpu in
-  alpha* | hppa* | i*86 | powerpc* | sparc* | ia64* )
+  alpha* | hppa* | i*86 | mips | mipsel | powerpc* | sparc* | ia64* )
     lt_cv_deplibs_check_method=pass_all ;;
   *)
     # glibc up to 2.1.1 does not perform some relocations on ARM
