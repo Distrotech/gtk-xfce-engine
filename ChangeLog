@@ -1,3 +1,16 @@
+2003-09-10 09:39  huysmans
+
+	* configure, configure.in: Update version numbers and po files for
+	release
+
+2003-09-09 22:22  xfce
+
+	* themes/kde2/gtk-2.0/gtkrc: Change buttons style
+
+2003-08-26 09:38  huysmans
+
+	* ChangeLog: Update changelogs
+
 2003-08-12 07:55  xfce
 
 	* themes/kde2/gtk-2.0/gtkrc: Add secondary backward stepper to
