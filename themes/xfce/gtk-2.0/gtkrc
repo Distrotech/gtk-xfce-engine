@@ -23,7 +23,6 @@ style "xfce-default"
     GtkWidget::interior_focus         = 5
     GtkMenuBar::shadow_type           = none
     GtkToolbar::shadow_type           = none
-    BonoboDock::shadow_type           = none
 
     xthickness = 2
     ythickness = 2
@@ -110,8 +109,8 @@ style "xfce-menubar" = "xfce-colored"
     }
 }
 
-widget_class "*BonoboDock*"        style "xfce-menubar"
-class "*BonoboDock*"               style "xfce-menubar"
+widget_class "*BonoboDockItem*"    style "xfce-menubar"
+class "*BonoboDockItem*"           style "xfce-menubar"
 widget_class "*HandleBox*"         style "xfce-menubar"
 class "*HandleBox*"                style "xfce-menubar"
 widget_class "*Tool*"              style "xfce-menubar"

@@ -21,7 +21,6 @@ style "curve-default"
     GtkWidget::internal-padding       = 2
     GtkMenuBar::shadow_type           = none
     GtkToolbar::shadow_type           = none
-    BonoboDock::shadow_type           = none
 
     xthickness = 2
     ythickness = 2
@@ -91,8 +90,8 @@ style "curve-tool-bar" = "curve-menu-color"
 	}
     }
 }
-widget_class "*BonoboDock*"        style "curve-tool-bar"
-class "*BonoboDock*"               style "curve-tool-bar"
+widget_class "*BonoboDockItem*"    style "curve-tool-bar"
+class "*BonoboDockItem*"           style "curve-tool-bar"
 widget_class "*HandleBox*"         style "curve-tool-bar"
 class "*HandleBox*"                style "curve-tool-bar"
 widget_class "*Tool*"              style "curve-tool-bar"

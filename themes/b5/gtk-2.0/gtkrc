@@ -15,7 +15,6 @@ style "default"
     GtkScrollbar::min_slider_length   = 20
     GtkMenuBar::shadow_type           = none
     GtkToolbar::shadow_type           = none
-    BonoboDockItem::shadow_type       = none
 
     fg[ACTIVE]        = "#000000"
     fg[INSENSITIVE]   = "#d6d4d6"

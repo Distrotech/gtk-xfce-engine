@@ -13,9 +13,8 @@ style "default"
     GtkSpinButton::shadow_type        = etched-in
     GtkMenuItem::selected_shadow_type = in
     GtkScrollbar::min_slider_length   = 20
-    GtkMenuBar::shadow_type           = none
-    GtkToolbar::shadow_type           = none
-    BonoboDock::shadow_type           = none
+    GtkMenuBar::shadow_type           = out
+    GtkToolbar::shadow_type           = out
 
     fg[ACTIVE]        = "#000000"
     fg[INSENSITIVE]   = "#c5c5be"

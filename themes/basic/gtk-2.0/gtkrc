@@ -12,7 +12,6 @@ style "default"
     GtkScrollbar::min_slider_length   = 20
     GtkMenuBar::shadow_type           = none
     GtkToolbar::shadow_type           = none
-    BonoboDock::shadow_type           = none
 
     engine "xfce" 
     {
