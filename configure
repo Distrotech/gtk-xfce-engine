@@ -1472,7 +1472,7 @@ THEME="xfce"
 
 
 
-VERSION=2.1.6
+VERSION=2.1.7
 PACKAGE=gtk-${THEME}-engine
 am__api_version="1.7"
 ac_aux_dir=
