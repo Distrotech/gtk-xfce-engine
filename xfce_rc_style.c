@@ -16,17 +16,15 @@ static struct
     gchar *name;
     guint token;
 }
+
 theme_symbols[] =
 {
-    {
-    "smooth_edge", TOKEN_SMOOTHEDGE}
-    ,
-    {
-    "TRUE", TOKEN_TRUE}
-    ,
-    {
-    "FALSE", TOKEN_FALSE}
-,};
+    { "smooth_edge", TOKEN_SMOOTHEDGE },
+    { "gradient", TOKEN_GRADIENT },
+    { "inverted_gradient", TOKEN_INVERTED_GRADIENT },
+    { "TRUE", TOKEN_TRUE},
+    { "FALSE", TOKEN_FALSE}
+};
 
 static guint n_theme_symbols = sizeof(theme_symbols) / sizeof(theme_symbols[0]);
 
@@ -55,6 +53,9 @@ void xfce_rc_style_register_type(GTypeModule * module)
 
 static void xfce_rc_style_init(XfceRcStyle * style)
 {
+    style->smooth_edge = FALSE;
+    style->gradient = FALSE;
+    style->inverted_gradient = FALSE;
 }
 
 static void xfce_rc_style_class_init(XfceRcStyleClass * klass)
@@ -127,6 +128,22 @@ static guint xfce_rc_style_parse(GtkRcStyle * rc_style, GtkSettings * settings, 
                 }
                 theme_data->smooth_edge = i;
                 break;
+            case TOKEN_GRADIENT:
+                token = theme_parse_boolean(scanner, TOKEN_GRADIENT, &i);
+                if(token != G_TOKEN_NONE)
+                {
+                    break;
+                }
+                theme_data->gradient = i;
+                break;
+            case TOKEN_INVERTED_GRADIENT:
+                token = theme_parse_boolean(scanner, TOKEN_INVERTED_GRADIENT, &i);
+                if(token != G_TOKEN_NONE)
+                {
+                    break;
+                }
+                theme_data->inverted_gradient = i;
+                break;
             default:
                 g_scanner_get_next_token(scanner);
                 token = G_TOKEN_RIGHT_CURLY;
@@ -156,6 +173,8 @@ static void xfce_rc_style_merge(GtkRcStyle * dest, GtkRcStyle * src)
         XfceRcStyle *dest_data = XFCE_RC_STYLE(dest);
 
         dest_data->smooth_edge = src_data->smooth_edge;
+        dest_data->gradient = src_data->gradient;
+        dest_data->inverted_gradient = src_data->inverted_gradient;
     }
 
     parent_class->merge(dest, src);

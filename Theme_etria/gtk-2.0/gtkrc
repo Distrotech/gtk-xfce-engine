@@ -50,6 +50,7 @@ style "xfce-etria-default"
     engine "xfce" 
     {
 	smooth_edge = TRUE
+	gradient = TRUE
     }
 }
 
@@ -66,7 +67,6 @@ style "xfce-etria-titlebar"
     bg[ACTIVE]        = "#8F9FB4"
     fg[NORMAL]        = "#ffffff"
 }
-
 
 class "GtkWidget"                  style "xfce-etria-default"
 class "GtkMenuBar"                 style "xfce-etria-menustyle"

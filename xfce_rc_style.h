@@ -21,6 +21,8 @@ struct _XfceRcStyle
     GtkRcStyle parent_instance;
 
     gboolean smooth_edge;
+    gboolean gradient;
+    gboolean inverted_gradient;
 };
 
 struct _XfceRcStyleClass
@@ -30,14 +32,11 @@ struct _XfceRcStyleClass
 
 void xfce_rc_style_register_type(GTypeModule * module);
 
-/* Default stuff */
-#define DEFAULT_SCROLLTHUMB_SIZE  12
-#define DEFAULT_MIN_SLIDER_SIZE   9
-#define SMALLEST_HANDLE           17
-
 enum
 {
     TOKEN_SMOOTHEDGE = G_TOKEN_LAST + 1,
+    TOKEN_GRADIENT,
+    TOKEN_INVERTED_GRADIENT,
     TOKEN_TRUE,
-    TOKEN_FALSE,
+    TOKEN_FALSE
 };
