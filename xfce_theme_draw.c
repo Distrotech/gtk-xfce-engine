@@ -343,11 +343,11 @@ draw_shadow (GtkStyle * style, GdkWindow * window, GtkStateType state_type, GtkS
     gdk_draw_line (window, style->light_gc[state_type], x + 1, y + height - 1, x + width - 1, y + height - 1);
     gdk_draw_line (window, style->light_gc[state_type], x + width - 1, y + 1, x + width - 1, y + height - 1);
 
-    gdk_draw_line (window, style->black_gc, x + 1, y + 1, x + width - 2, y + 1);
-    gdk_draw_line (window, style->black_gc, x + 1, y + 1, x + 1, y + height - 2);
+    gdk_draw_line (window, style->dark_gc[state_type], x + 1, y + 1, x + width - 2, y + 1);
+    gdk_draw_line (window, style->dark_gc[state_type], x + 1, y + 1, x + 1, y + height - 2);
 
-    gdk_draw_line (window, style->dark_gc[state_type], x + 2, y + height - 2, x + width - 2, y + height - 2);
-    gdk_draw_line (window, style->dark_gc[state_type], x + width - 2, y + 2, x + width - 2, y + height - 2);
+    gdk_draw_line (window, style->mid_gc[state_type], x + 2, y + height - 2, x + width - 2, y + height - 2);
+    gdk_draw_line (window, style->mid_gc[state_type], x + width - 2, y + 2, x + width - 2, y + height - 2);
 #endif
     break;
 
@@ -366,11 +366,11 @@ draw_shadow (GtkStyle * style, GdkWindow * window, GtkStateType state_type, GtkS
     gdk_draw_line (window, style->bg_gc[state_type], x + 1, y + height - 2, x + width - 2, y + height - 2);
     gdk_draw_line (window, style->bg_gc[state_type], x + width - 2, y + 1, x + width - 2, y + height - 2);
 #else
-    gdk_draw_line (window, style->dark_gc[state_type], x, y, x + width - 1, y);
-    gdk_draw_line (window, style->dark_gc[state_type], x, y, x, y + height - 1);
+    gdk_draw_line (window, style->mid_gc[state_type], x, y, x + width - 1, y);
+    gdk_draw_line (window, style->mid_gc[state_type], x, y, x, y + height - 1);
 
-    gdk_draw_line (window, style->black_gc, x + 1, y + height - 1, x + width - 1, y + height - 1);
-    gdk_draw_line (window, style->black_gc, x + width - 1, y + 1, x + width - 1, y + height - 1);
+    gdk_draw_line (window, style->dark_gc[state_type], x + 1, y + height - 1, x + width - 1, y + height - 1);
+    gdk_draw_line (window, style->dark_gc[state_type], x + width - 1, y + 1, x + width - 1, y + height - 1);
 
     gdk_draw_line (window, style->light_gc[state_type], x + 1, y + 1, x + width - 2, y + 1);
     gdk_draw_line (window, style->light_gc[state_type], x + 1, y + 1, x + 1, y + height - 2);
@@ -795,14 +795,14 @@ draw_arrow (GtkStyle * style, GdkWindow * window, GtkStateType state, GtkShadowT
     else
       y += (height - 5) / 2;
 
-    draw_varrow (window, style->text_gc[state], shadow, area, arrow_type, x, y, 7, 5);
+    draw_varrow (window, style->dark_gc[state], shadow, area, arrow_type, x, y, 7, 5);
   }
   else if (detail && strcmp (detail, "vscrollbar") == 0)
   {
     x += (width - 7) / 2;
     y += (height - 5) / 2;
 
-    draw_varrow (window, style->text_gc[state], shadow, area, arrow_type, x, y, 7, 5);
+    draw_varrow (window, style->dark_gc[state], shadow, area, arrow_type, x, y, 7, 5);
 
   }
   else if (detail && strcmp (detail, "hscrollbar") == 0)
@@ -810,7 +810,7 @@ draw_arrow (GtkStyle * style, GdkWindow * window, GtkStateType state, GtkShadowT
     y += (height - 7) / 2;
     x += (width - 5) / 2;
 
-    draw_harrow (window, style->text_gc[state], shadow, area, arrow_type, x, y, 5, 7);
+    draw_harrow (window, style->dark_gc[state], shadow, area, arrow_type, x, y, 5, 7);
   }
   else
   {
@@ -819,14 +819,14 @@ draw_arrow (GtkStyle * style, GdkWindow * window, GtkStateType state, GtkShadowT
       x += (width - 7) / 2;
       y += (height - 5) / 2;
 
-      draw_varrow (window, style->text_gc[state], shadow, area, arrow_type, x, y, 7, 5);
+      draw_varrow (window, style->dark_gc[state], shadow, area, arrow_type, x, y, 7, 5);
     }
     else
     {
       x += (width - 5) / 2;
       y += (height - 7) / 2;
 
-      draw_harrow (window, style->text_gc[state], shadow, area, arrow_type, x, y, 5, 7);
+      draw_harrow (window, style->dark_gc[state], shadow, area, arrow_type, x, y, 5, 7);
     }
   }
 }
