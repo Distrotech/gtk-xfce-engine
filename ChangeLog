@@ -1,3 +1,11 @@
+2002-07-18 xfce
+
+	* Theme_light/gtk-2.0/gtkrc: Change prelight color.
+
+2002-07-18 xfce
+
+	* ChangeLog: Update ChangeLog
+
 2002-07-17 xfce
 
 	* Makefile.am, Makefile.in, config.h.in, configure, configure.in,
