@@ -196,7 +196,7 @@ static void xfce_draw_handlers(GtkStyle * style, GdkWindow * window, GtkStateTyp
     {
         if(width > 15 + xthick)
         {
-            gint delta = x + xthick + (width / 2) - 7;
+            gint delta = x + (width / 2) - 5;
             yy = y + ythick;
             for(xx = 0; xx < 10; xx += 2)
             {
@@ -209,7 +209,7 @@ static void xfce_draw_handlers(GtkStyle * style, GdkWindow * window, GtkStateTyp
     {
         if(height > 15 + ythick)
         {
-            gint delta = y + ythick + height / 2 - 7;
+            gint delta = y + (height / 2) - 5;
             xx = x + xthick;
             for(yy = 0; yy < 10; yy += 2)
             {
