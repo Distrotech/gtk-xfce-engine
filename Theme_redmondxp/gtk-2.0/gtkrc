@@ -16,16 +16,16 @@ style "xfce-redmondxp-default"
     GtkScrollbar::min_slider_length   = 20
 
     base[ACTIVE]      = "#e5e5e5"
-    base[INSENSITIVE] = "#edede5"
+    base[INSENSITIVE] = "#f7efe7"
     base[NORMAL]      = "#ffffff"
-    base[PRELIGHT]    = "#edede5"
-    base[SELECTED]    = "#4978cc"
+    base[PRELIGHT]    = "#f7efe7"
+    base[SELECTED]    = "#0055ef"
 
     bg[ACTIVE]        = "#d4d4ce"
-    bg[INSENSITIVE]   = "#edede5"
-    bg[NORMAL]        = "#edede5"
-    bg[PRELIGHT]      = "#edede5"
-    bg[SELECTED]      = "#4978cc"
+    bg[INSENSITIVE]   = "#f7efe7"
+    bg[NORMAL]        = "#f7efe7"
+    bg[PRELIGHT]      = "#f7efe7"
+    bg[SELECTED]      = "#0055ef"
 
     fg[ACTIVE]        = "#000000"
     fg[INSENSITIVE]   = "#7f7f79"
@@ -53,8 +53,8 @@ widget_class "*.GtkToggleButton*"  style "xfce-redmondxp-default"
 
 style "xfce-redmondxp-colored" = "xfce-redmondxp-default"
 {
-    bg[ACTIVE]        = "#4978cc"
-    bg[PRELIGHT]      = "#4978cc"
+    bg[ACTIVE]        = "#0055ef"
+    bg[PRELIGHT]      = "#0055ef"
 
     fg[ACTIVE]        = "#ffffff"
     fg[PRELIGHT]      = "#ffffff"
@@ -72,14 +72,14 @@ widget_class "*.GtkProgress*"      style "xfce-redmondxp-colored"
 style "xfce-redmondxp-scroll" = "xfce-redmondxp-default"
 {
     base[ACTIVE]      = "#d4d4ce"
-    base[INSENSITIVE] = "#edede5"
-    base[NORMAL]      = "#edede5"
+    base[INSENSITIVE] = "#f7efe7"
+    base[NORMAL]      = "#f7efe7"
     base[PRELIGHT]    = "#c6d3ff"
     base[SELECTED]    = "#c6d3ff"
 
     bg[NORMAL]        = "#c6d3ff"
     bg[PRELIGHT]      = "#c6d3ff"
-    bg[SELECTED]      = "#edede5"
+    bg[SELECTED]      = "#f7efe7"
 
     fg[SELECTED]      = "#000000"
 
@@ -91,7 +91,7 @@ class "GtkScrollbar"        style "xfce-redmondxp-scroll"
 style "xfce-redmondxp-button" = "xfce-redmondxp-default"
 {
     bg[NORMAL]        = "#fafaf2"
-    bg[ACTIVE]        = "#ffd16d"
+    bg[ACTIVE]        = "#ffcb39"
     bg[PRELIGHT]      = "#fafaf2"
     bg[INSENSITIVE]   = "#fafaf2"
 }
@@ -105,3 +105,13 @@ style "xfce-redmondxp-notebook" = "xfce-redmondxp-default"
 }
 
 class "GtkNotebook" style "xfce-redmondxp-notebook"
+
+style "xfce-redmondxp-titlebar"
+{
+    bg[SELECTED]      = "#0055ef"
+    fg[SELECTED]      = "#ffffff"
+    bg[ACTIVE]        = "#7b96de"
+    fg[NORMAL]        = "#dee7f7"
+}
+
+widget "xfwm"	     style "xfce-redmondxp-titlebar"
