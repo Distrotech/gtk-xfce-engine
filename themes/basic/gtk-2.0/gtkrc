@@ -5,21 +5,19 @@ style "default"
     GtkButton::default_spacing        = 8
     GtkButton::focus-line-width       = 1
     GtkButton::focus-padding          = 0
-    GtkCheckButton::indicator_size    = 15
-    GtkRadioButton::indicator_size    = 15
     GtkMenuBar::shadow_type           = none
     GtkPaned::handle_full_size        = 1
-    GtkRange::slider_width            = 15
-    GtkRange::stepper_size            = 15
-    GtkRange::trough_border           = 1
-    GtkScrollbar::min_slider_length   = 20
     GtkToolbar::shadow_type           = none
     GtkWidget::interior_focus         = 1
+    GtkRange::slider_width            = 14
+    GtkRange::stepper_size            = 14
+    GtkRange::stepper_spacing         = 0
+    GtkRange::trough_border           = 1
 
     engine "xfce" 
     {
         smooth_edge = true
-        grip_style = slide
+        grip_style = none
         boxfill
         {
             fill_style = plain
@@ -44,13 +42,13 @@ style "button" = "default"
     engine "xfce" 
     {
         smooth_edge = true
-        grip_style = slide
+        grip_style = none
         boxfill
         {
             fill_style = gradient
-            orientation = nothern_diagonal
-            shade_start = 1.1
-            shade_end = 0.95
+            orientation = vertical
+            shade_start = 1.10
+            shade_end = 1.00
         }
     }
 }
@@ -64,13 +62,10 @@ style "scrollbar" = "default"
     engine "xfce" 
     {
         smooth_edge = true
-        grip_style = slide
+        grip_style = none
         boxfill
         {
-            fill_style = gradient
-            orientation = auto
-            shade_start = 1.1
-            shade_end = 0.95
+            fill_style = plain
         }
     }
 }

@@ -11,7 +11,7 @@ style "default"
     GtkMenuItem::selected_shadow_type = none
     GtkPaned::handle_full_size        = 1
     GtkRange::slider_width            = 15
-    GtkRange::stepper_size            = 15
+    GtkRange::stepper_size            = 16
     GtkRange::stepper_spacing         = 0
     GtkRange::trough_border           = 0
     GtkScrollbar::min_slider_length   = 20
