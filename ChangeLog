@@ -1,77 +1,149 @@
-2005-03-11 22:52  olivier
+2005-03-11 22:06  olivier
 
-	* themes/xfce/gtk-2.0/gtkrc: Scrollbar had no handle
+	* configure.in, themes/Makefile.am, themes/xfce/gtk-2.0/gtkrc:
+	  Revert to old color scheme
 
-2005-03-11 22:47  olivier
-
-	* themes/xfce/gtk-2.0/gtkrc: Merge conflict!
-
-2005-03-11 22:20  olivier
-
-	* themes/xfce/gtk-2.0/gtkrc: Improve default theme
-
-2005-03-10 21:52  olivier
-
-	* themes/xfce/gtk-2.0/gtkrc: progress bar
-
-2005-03-09 22:28  olivier
+2005-03-09 22:24  olivier
 
 	* src/xfce_theme_draw.c, themes/xfce/gtk-2.0/gtkrc: Rework progress
 	  bar.
 
-2005-03-08 21:19  olivier
+2005-03-06 21:22  olivier
 
-	* themes/xfce/gtk-2.0/gtkrc: Use flat toolbar for 2.2 engine
+	* themes/xfce/gtk-2.0/gtkrc: Add frame around scales and progress
+	  bars, use different color, improve visibilty ofpressed/active
+	  buttons.
 
-2005-03-06 21:16  olivier
+2005-03-05 23:33  olivier
 
-	* themes/xfce/gtk-2.0/gtkrc: Add 1 pix between the frame and the
-	  actual progress bar/scale for smoother effect
+	* src/xfce_theme_draw.c, themes/xfce/gtk-2.0/gtkrc: Use light
+	  buttons and remove frame for handles.
 
-2005-03-06 21:11  olivier
+2005-03-05 15:41  olivier
 
-	* themes/xfce/gtk-2.0/gtkrc: Add a frame around scales and progress
-	  bar to improve readability.
+	* themes/xfce/gtk-2.0/gtkrc: Change active frame color
 
-2005-02-24 22:02  olivier
+2005-03-05 14:24  olivier
 
-	* themes/xfce/gtk-2.0/gtkrc: Theme update
+	* themes/xfce/gtk-2.0/gtkrc: Darker active button
 
-2005-02-05 22:49  olivier
+2005-03-05 14:20  olivier
 
-	* configure, configure.in, ltmain.sh, themes/Makefile.am,
-	  themes/Makefile.in, themes/dusk/ICON.png,
-	  themes/dusk/Makefile.am, themes/dusk/Makefile.in,
-	  themes/dusk/README.html, themes/dusk/gtk-2.0/Makefile.am,
-	  themes/dusk/gtk-2.0/Makefile.in, themes/dusk/gtk-2.0/gtkrc: Add
-	  James Golden's dusk theme.
+	* themes/xfce/gtk-2.0/gtkrc: New color scheme
+
+2005-03-05 13:46  olivier
+
+	* src/xfce_theme_draw.c: Draw flat frame menu
+
+2005-03-05 12:05  olivier
+
+	* themes/xfce/gtk-2.0/gtkrc: Change window decoration color for
+	  benny and jasper.
+
+2005-03-05 01:11  olivier
+
+	* src/xfce_theme_draw.c, themes/b5/gtk-2.0/gtkrc,
+	  themes/basic/gtk-2.0/gtkrc, themes/curve/gtk-2.0/gtkrc,
+	  themes/dawn/gtk-2.0/gtkrc, themes/dusk/gtk-2.0/gtkrc,
+	  themes/kde2/gtk-2.0/gtkrc, themes/kolors/gtk-2.0/gtkrc,
+	  themes/redmondxp/gtk-2.0/gtkrc, themes/winter/gtk-2.0/gtkrc,
+	  themes/xfce/gtk-2.0/gtkrc, themes/xfce-4.0/gtk-2.0/gtkrc: Improve
+	  shadows of toolbars
+
+2005-02-28 21:13  olivier
+
+	* themes/xfce/gtk-2.0/gtkrc: [no log message]
+
+2005-02-24 21:54  olivier
+
+	* themes/xfce/gtk-2.0/gtkrc: Improve theme
+
+2005-02-21 23:01  olivier
+
+	* themes/xfce/gtk-2.0/gtkrc: Change grip style.
+
+2005-02-21 22:54  olivier
+
+	* src/xfce_theme_draw.c: Force no shadow for toolbar and menubar
+
+2005-02-21 22:29  olivier
+
+	* themes/xfce/gtk-2.0/gtkrc: Enhance buttons and scrollbars using a
+	  darker color.
+
+2005-02-11 20:58  olivier
+
+	* configure.in, themes/Makefile.am, themes/b5/README.html,
+	  themes/basic/README.html, themes/light/README.html,
+	  themes/saltlake/README.html, themes/stellar/README.html,
+	  themes/xfce/README.html, themes/xfce/gtk-2.0/gtkrc,
+	  themes/xfce-4.0/README.html: Change default gtk theme.
+
+2005-02-05 22:33  olivier
+
+	* themes/: winter/gtk-2.0/.cvsignore, winter/gtk-2.0/Makefile.in,
+	  xfce/.cvsignore, xfce/Makefile.in, xfce/gtk-2.0/.cvsignore,
+	  xfce/gtk-2.0/Makefile.in, xfce-4.0/.cvsignore,
+	  xfce-4.0/Makefile.in, xfce-4.0/gtk-2.0/.cvsignore,
+	  xfce-4.0/gtk-2.0/Makefile.in: Add James Golden's dusk theme,
+	  remove generated files.
+
+2005-02-05 22:30  olivier
+
+	* themes/: redmondxp/.cvsignore, redmondxp/Makefile.in,
+	  redmondxp/gtk-2.0/.cvsignore, redmondxp/gtk-2.0/Makefile.in,
+	  saltlake/.cvsignore, saltlake/Makefile.in,
+	  saltlake/gtk-2.0/.cvsignore, saltlake/gtk-2.0/Makefile.in,
+	  smooth/.cvsignore, smooth/Makefile.in, smooth/gtk-2.0/.cvsignore,
+	  smooth/gtk-2.0/Makefile.in, stellar/.cvsignore,
+	  stellar/Makefile.in, stellar/gtk-2.0/.cvsignore,
+	  stellar/gtk-2.0/Makefile.in, winter/.cvsignore,
+	  winter/Makefile.in: Add James Golden's dusk theme, remove
+	  generated files.
 
 2005-02-05 22:27  olivier
 
-	* themes/dusk/: ICON.png, Makefile.am, README.html,
-	  gtk-2.0/Makefile.am, gtk-2.0/gtkrc: Add James Golden's dusk
-	  theme, remove generated files.
+	* themes/: dusk/.cvsignore, dusk/ICON.png, dusk/Makefile.am,
+	  dusk/README.html, dusk/gtk-2.0/.cvsignore,
+	  dusk/gtk-2.0/Makefile.am, dusk/gtk-2.0/gtkrc, kde2/.cvsignore,
+	  kde2/Makefile.in, kde2/gtk-2.0/.cvsignore,
+	  kde2/gtk-2.0/Makefile.in, kolors/.cvsignore, kolors/Makefile.in,
+	  kolors/gtk-2.0/.cvsignore, kolors/gtk-2.0/Makefile.in,
+	  light/.cvsignore, light/Makefile.in, light/gtk-2.0/.cvsignore,
+	  light/gtk-2.0/Makefile.in: Add James Golden's dusk theme, remove
+	  generated files.
+
+2005-02-05 22:24  olivier
+
+	* .cvsignore, COPYING, INSTALL, Makefile.in, aclocal.m4,
+	  autogen.sh, config.guess, config.h.in, config.sub, configure,
+	  configure.in, install-sh, ltmain.sh, missing, mkinstalldirs,
+	  stamp-h.in, src/.cvsignore, src/Makefile.in, themes/.cvsignore,
+	  themes/Makefile.am, themes/Makefile.in, themes/b5/.cvsignore,
+	  themes/b5/Makefile.in, themes/b5/gtk-2.0/.cvsignore,
+	  themes/b5/gtk-2.0/Makefile.in, themes/basic/.cvsignore,
+	  themes/basic/Makefile.in, themes/basic/gtk-2.0/.cvsignore,
+	  themes/basic/gtk-2.0/Makefile.in, themes/cadmium/.cvsignore,
+	  themes/cadmium/Makefile.in, themes/cadmium/gtk-2.0/.cvsignore,
+	  themes/cadmium/gtk-2.0/Makefile.in, themes/curve/.cvsignore,
+	  themes/curve/Makefile.in, themes/curve/gtk-2.0/.cvsignore,
+	  themes/curve/gtk-2.0/Makefile.in, themes/dawn/.cvsignore,
+	  themes/dawn/Makefile.in, themes/dawn/gtk-2.0/.cvsignore,
+	  themes/dawn/gtk-2.0/Makefile.in: Add James Golden's dusk theme,
+	  remove generated files.
 
 2005-01-10 17:46  benny
 
-	* ChangeLog, NEWS, README: Updated NEWS, README and ChangeLog.
+	* NEWS, README: Updated NEWS and README
 
-2005-01-06 00:28  benny
+2005-01-05 22:00  olivier
 
-	* ChangeLog: Update ChangeLog
+	* themes/xfce/gtk-2.0/gtkrc: Inactive WM frame
 
-2005-01-05 22:39  benny
+2005-01-03 22:44  olivier
 
-	* ChangeLog, ltmain.sh: Final updates.
-
-2005-01-05 21:57  olivier
-
-	* themes/xfce/gtk-2.0/gtkrc: Inactive WM frame color
-
-2005-01-03 22:46  olivier
-
-	* themes/: kolors/gtk-2.0/gtkrc, stellar/gtk-2.0/gtkrc: Backport
-	  from HEAD
+	* themes/: kolors/gtk-2.0/gtkrc, stellar/gtk-2.0/gtkrc: Theme
+	  adjust
 
 2005-01-02 13:50  olivier
 
@@ -765,11 +837,11 @@
 
 2003-07-05 14:31  xfce
 
-	* Makefile.in: Remove ltconfig script as it is generated
+	* Makefile.in, ltconfig: Remove ltconfig script as it is generated
 
 2003-07-05 01:37  xfce
 
-	* Makefile.in: libttol update and all
+	* Makefile.in, ltcf-c.sh: libttol update and all
 
 2003-06-29 22:23  xfce
 
@@ -881,11 +953,13 @@
 2003-04-18 22:29  xfce
 
 	* Makefile.am, Makefile.in, configure, configure.in,
-	  src/Makefile.am, src/Makefile.in, src/gradient_draw.c,
-	  src/gradient_draw.h, src/xfce_rc_style.c, src/xfce_rc_style.h,
-	  src/xfce_style.h, src/xfce_theme_draw.c, src/xfce_theme_main.c,
-	  themes/Makefile.am, themes/Makefile.in, themes/b5/ICON.png,
-	  themes/b5/Makefile.am, themes/b5/Makefile.in,
+	  gradient_draw.c, gradient_draw.h, xfce_rc_style.c,
+	  xfce_rc_style.h, xfce_style.h, xfce_theme_draw.c,
+	  xfce_theme_main.c, src/Makefile.am, src/Makefile.in,
+	  src/gradient_draw.c, src/gradient_draw.h, src/xfce_rc_style.c,
+	  src/xfce_rc_style.h, src/xfce_style.h, src/xfce_theme_draw.c,
+	  src/xfce_theme_main.c, themes/Makefile.am, themes/Makefile.in,
+	  themes/b5/ICON.png, themes/b5/Makefile.am, themes/b5/Makefile.in,
 	  themes/b5/README.html, themes/b5/gtk-2.0/Makefile.am,
 	  themes/b5/gtk-2.0/Makefile.in, themes/b5/gtk-2.0/gtkrc,
 	  themes/basic/ICON.png, themes/basic/Makefile.am,
@@ -915,10 +989,31 @@
 	  version to 2.1.0 (as it features a lot of improvements over
 	  gtk-xfce-engine 2.0.x)
 
+2003-04-14 23:48  xfce
+
+	* xfce_theme_draw.c: Use inverted gradient for active state,
+	  improve Redmondxp theme
+
+2003-04-13 00:50  xfce
+
+	* xfce_theme_draw.c: [no log message]
+
+2003-04-13 00:30  xfce
+
+	* gradient_draw.c, gradient_draw.h, xfce_rc_style.c,
+	  xfce_rc_style.h, xfce_theme_draw.c, xfce_theme_main.c: New xfce
+	  engine gtkrc syntax with a much better scanner.
+
+2003-04-11 00:03  xfce
+
+	* gradient_draw.c: Fix compiler warning
+
 2003-04-10 23:59  xfce
 
 	* Makefile.am, Makefile.in, aclocal.m4, config.guess, config.sub,
-	  configure, depcomp: Add gradients
+	  configure, depcomp, gradient_draw.c, gradient_draw.h,
+	  xfce_rc_style.c, xfce_rc_style.h, xfce_theme_draw.c: Add
+	  gradients
 
 2003-04-02 22:22  xfce
 
@@ -966,8 +1061,25 @@
 
 2003-03-01 00:23  xfce
 
-	* Makefile.in, aclocal.m4, config.h.in, configure, ltmain.sh: [no
-	  log message]
+	* Makefile.in, aclocal.m4, config.h.in, configure, ltcf-c.sh,
+	  ltconfig, ltmain.sh: [no log message]
+
+2003-02-27 23:16  xfce
+
+	* libtool: ops, remove libtool
+
+2003-02-27 22:53  xfce
+
+	* libtool: Add libtool script
+
+2003-02-20 22:40  xfce
+
+	* xfce_theme_draw.c: Rework of frame draw
+
+2003-02-19 23:51  xfce
+
+	* xfce_theme_draw.c: Change curve colors, avoid drawing frame
+	  arround toolbars
 
 2003-01-23 11:52  xfce
 
@@ -983,6 +1095,23 @@
 
 	* Makefile.am, Makefile.in, aclocal.m4, configure: [no log message]
 
+2002-12-11 08:08  xfce
+
+	* xfce_theme_draw.c: [no log message]
+
+2002-12-10 23:42  xfce
+
+	* xfce_theme_draw.c: Change various frame draw styles in smooth
+	  mode.
+
+2002-11-20 16:59  xfce
+
+	* xfce_theme_draw.c: [no log message]
+
+2002-11-10 15:18  xfce
+
+	* xfce_theme_draw.c: [no log message]
+
 2002-11-10 14:58  xfce
 
 	* ChangeLog: Update ChangeLog
@@ -990,19 +1119,64 @@
 2002-11-10 14:53  xfce
 
 	* Makefile.in, aclocal.m4, config.h.in, configure, configure.in,
-	  gtk-xfce-engine-2.spec.in: Change version number, change frame
-	  corners in "smooth" mode.
+	  gtk-xfce-engine-2.spec.in, xfce_theme_draw.c: Change version
+	  number, change frame corners in "smooth" mode.
 
 2002-11-05 15:11  xfce
 
 	* Makefile.am, Makefile.in, aclocal.m4, configure, configure.in:
 	  Xfce-curve theme is back.
 
+2002-10-12 15:26  xfce
+
+	* xfce_theme_draw.c: [no log message]
+
 2002-10-09 22:12  xfce
 
 	* ChangeLog, Makefile.am, Makefile.in, config.h.in, configure,
-	  configure.in: Change frame for "trough", update ChangLog, set
-	  version to 2.0.10
+	  configure.in, xfce_theme_draw.c: Change frame for "trough",
+	  update ChangLog, set version to 2.0.10
+
+2002-10-05 22:06  xfce
+
+	* xfce_theme_draw.c: Remove shadow in trough
+
+2002-10-05 17:57  xfce
+
+	* xfce_theme_draw.c: [no log message]
+
+2002-10-05 11:59  xfce
+
+	* xfce_theme_draw.c: trough shadow.
+
+2002-10-05 00:03  xfce
+
+	* xfce_theme_draw.c: Change drawing of vscale and hscale, change
+	  interior focus border in various "smooth" themes.
+
+2002-10-04 23:19  xfce
+
+	* xfce_theme_draw.c: Optmizations, revert to dark frame instead of
+	  black for widgets in smooth mode
+
+2002-10-04 22:45  xfce
+
+	* xfce_theme_draw.c: Change scrollbar and various object drawing in
+	  smooth mode.
+
+2002-10-04 15:44  xfce
+
+	* xfce_theme_draw.c: [no log message]
+
+2002-10-01 22:03  xfce
+
+	* xfce_rc_style.c, xfce_rc_style.h, xfce_style.h,
+	  xfce_theme_draw.c, xfce_theme_main.c: Do some oddities with
+	  smooth mode :)
+
+2002-10-01 19:04  xfce
+
+	* xfce_theme_draw.c: [no log message]
 
 2002-10-01 15:59  xfce
 
@@ -1010,8 +1184,8 @@
 
 2002-09-30 10:07  xfce
 
-	* config.h.in: Change drawing routine in smooth mode to enhance
-	  contrast on widgets.
+	* config.h.in, xfce_theme_draw.c: Change drawing routine in smooth
+	  mode to enhance contrast on widgets.
 
 2002-09-17 22:51  xfce
 
@@ -1039,6 +1213,11 @@
 	* Makefile.am, Makefile.in, aclocal.m4, configure, configure.in:
 	  Add theme saltlake
 
+2002-09-08 22:26  xfce
+
+	* xfce_theme_draw.c: Use default gtk theme for drawing arrows
+	  instead of our, use flat pressed buttons.
+
 2002-09-03 22:12  xfce
 
 	* Makefile.am, Makefile.in, configure, configure.in: [no log
@@ -1052,28 +1231,77 @@
 
 	* Makefile.am, Makefile.in: Replace "rpm -ta" with "rpmbuild -ta"
 
+2002-08-29 18:10  xfce
+
+	* xfce_theme_draw.c: [no log message]
+
 2002-08-28 16:03  xfce
 
 	* Makefile.am, Makefile.in, configure, configure.in: [no log
 	  message]
 
+2002-08-28 10:28  xfce
+
+	* xfce_theme_draw.c: [no log message]
+
+2002-08-28 00:12  xfce
+
+	* xfce_theme_draw.c: [no log message]
+
 2002-08-27 11:56  xfce
 
 	* gtk-xfce-engine-2.spec.in: [no log message]
 
+2002-08-26 15:10  xfce
+
+	* xfce_theme_draw.c: [no log message]
+
+2002-08-26 15:02  xfce
+
+	* xfce_theme_draw.c: [no log message]
+
+2002-08-26 13:07  xfce
+
+	* xfce_theme_draw.c: [no log message]
+
 2002-08-25 13:29  xfce
 
-	* config.h.in, configure, configure.in: Make round corners enabled
-	  by default, allow disable round corners from configure script.
+	* config.h.in, configure, configure.in, xfce_rc_style.c,
+	  xfce_rc_style.h, xfce_style.h, xfce_theme_draw.c,
+	  xfce_theme_main.c: Make round corners enabled by default, allow
+	  disable round corners from configure script.
+
+2002-08-24 15:33  xfce
+
+	* xfce_theme_draw.c: Improve "smooth_edge" mode.  The shadow
+	  drawing should be faster too.
 
 2002-08-24 14:34  xfce
 
-	* configure, configure.in, gtk-xfce-engine-2.spec.in: Remove round
-	  corners. W/out use of shape, it
+	* configure, configure.in, gtk-xfce-engine-2.spec.in,
+	  xfce_theme_draw.c: Remove round corners. W/out use of shape, it
 
 2002-08-24 14:19  xfce
 
 	* ChangeLog: Update ChangeLog
+
+2002-08-24 14:18  xfce
+
+	* xfce_theme_draw.c: Change theme when "smooth_edge" is set,
+	  implement round corner to reflect Eugenia's suggestion.
+
+2002-08-23 15:37  xfce
+
+	* xfce_theme_draw.c: REvert latest changes, going nowhere.
+
+2002-08-23 13:15  xfce
+
+	* xfce_theme_draw.c: Round corners (more)
+
+2002-08-23 10:55  xfce
+
+	* xfce_theme_draw.c: An attempt to implement slight round corners
+	  as suggested by Eugenia ;-)
 
 2002-07-24 14:34  xfce
 
@@ -1100,20 +1328,51 @@
 
 2002-07-16 19:13  huysmans
 
-	* config.h.in, configure: small fix for compile error
+	* config.h.in, configure, xfce_theme_draw.c: small fix for compile
+	  error
 
 2002-07-15 22:23  xfce
 
-	* configure, configure.in: Major improvement, add an option to the
-	  theme "smooth_edge", boolean, so one can set it to get slicker
-	  look.  Modified all themes, moved some default out of the code
-	  and put it the gtkrc files to give more control to the theme
-	  creator.
+	* configure, configure.in, xfce_rc_style.c, xfce_rc_style.h,
+	  xfce_theme_draw.c: Major improvement, add an option to the theme
+	  "smooth_edge", boolean, so one can set it to get slicker look.
+	  Modified all themes, moved some default out of the code and put
+	  it the gtkrc files to give more control to the theme creator.
+
+2002-07-15 15:03  xfce
+
+	* xfce_theme_draw.c: [no log message]
+
+2002-07-15 14:46  xfce
+
+	* xfce_theme_draw.c: Change shadows
+
+2002-07-15 14:37  xfce
+
+	* xfce_theme_draw.c: [no log message]
+
+2002-07-14 22:31  xfce
+
+	* xfce_theme_draw.c: [no log message]
 
 2002-07-14 22:25  xfce
 
-	* Makefile.am, Makefile.in, configure, configure.in: [no log
-	  message]
+	* Makefile.am, Makefile.in, configure, configure.in,
+	  xfce_theme_draw.c: [no log message]
+
+2002-07-14 21:34  xfce
+
+	* xfce_theme_draw.c: Revert latest changes
+
+2002-07-14 15:57  xfce
+
+	* xfce_theme_draw.c: Revert the change on arrows.
+
+2002-07-14 15:51  xfce
+
+	* xfce_theme_draw.c: Change the shadow of widget to be less sharp,
+	  ie by using dark_gc instead of black_gc to render the shadow
+	  (People may not like this)
 
 2002-07-04 21:27  xfce
 
@@ -1121,8 +1380,8 @@
 
 2002-07-04 15:34  xfce
 
-	* Makefile.am, Makefile.in, aclocal.m4, config.h.in, configure,
-	  configure.in: Add Xfce-Redmondxp theme
+	* Makefile.am, Makefile.in, acconfig.h, aclocal.m4, config.h.in,
+	  configure, configure.in: Add Xfce-Redmondxp theme
 
 2002-07-01 23:40  xfce
 
@@ -1147,6 +1406,10 @@
 
 	* configure, configure.in: Bump 2.0.6, change provided gtkrc
 
+2002-06-14 22:35  xfce
+
+	* xfce_theme_draw.c: Fix some remaining deprecated calls
+
 2002-06-13 23:47  xfce
 
 	* depcomp: [no log message]
@@ -1165,13 +1428,25 @@
 
 	* configure, configure.in: [no log message]
 
+2002-05-30 12:55  xfce
+
+	* xfce_rc_style.c: [no log message]
+
 2002-05-30 12:21  xfce
 
-	* configure, configure.in: [no log message]
+	* configure, configure.in, xfce_rc_style.c: [no log message]
+
+2002-05-30 08:30  xfce
+
+	* xfce_theme_draw.c: [no log message]
 
 2002-05-29 23:09  xfce
 
-	* configure, configure.in: [no log message]
+	* configure, configure.in, xfce_theme_draw.c: [no log message]
+
+2002-05-29 15:05  xfce
+
+	* xfce_theme_draw.c: [no log message]
 
 2002-05-29 10:06  xfce
 
@@ -1190,25 +1465,36 @@
 2002-05-28 23:16  xfce
 
 	* COPYING, Makefile.am, Makefile.in, configure, configure.in,
-	  gtk-xfce-engine-2.spec.in, AUTHORS, ChangeLog, NEWS, README: [no
-	  log message]
+	  gtk-xfce-engine-2.spec.in, xfce_theme_draw.c, AUTHORS, ChangeLog,
+	  NEWS, README: [no log message]
 
 2002-05-28 23:02  xfce
 
-	* Makefile.in, aclocal.m4, configure: [no log message]
+	* Makefile.in, aclocal.m4, configure, xfce_rc_style.c,
+	  xfce_theme_draw.c: [no log message]
+
+2002-05-28 18:55  xfce
+
+	* xfce_theme_draw.c: [no log message]
+
+2002-05-28 18:44  xfce
+
+	* xfce_theme_main.c: [no log message]
 
 2002-05-28 18:38  xfce
 
-	* Makefile.am, Makefile.in: [no log message]
+	* Makefile.am, Makefile.in, xfce_rc_style.c, xfce_rc_style.h,
+	  xfce_style.h: [no log message]
 
 2002-05-28 17:18  xfce
 
-	* stamp-h.in: [no log message]
+	* stamp-h.in, xfce_theme_main.c: [no log message]
 
 2002-05-28 16:41  xfce
 
-	* COPYING, INSTALL, Makefile.am, Makefile.in, aclocal.m4,
-	  autogen.sh, config.guess, config.h.in, config.sub, configure,
-	  configure.in, install-sh, ltmain.sh, missing, mkinstalldirs,
-	  stamp-h.in: Initial import
+	* COPYING, INSTALL, Makefile.am, Makefile.in, acconfig.h,
+	  aclocal.m4, autogen.sh, config.guess, config.h.in, config.sub,
+	  configure, configure.in, install-sh, ltmain.sh, missing,
+	  mkinstalldirs, stamp-h.in, xfce_theme_draw.c, xfce_theme_main.c:
+	  Initial import
 
