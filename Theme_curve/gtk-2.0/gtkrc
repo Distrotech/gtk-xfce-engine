@@ -11,7 +11,7 @@ style "curve-default"
     GtkRange::stepper_size            = 15
     GtkRange::stepper_spacing         = 0
     GtkSpinButton::shadow_type        = etched-in
-    GtkMenuItem::selected_shadow_type = out
+    GtkMenuItem::selected_shadow_type = none
     GtkMenuBar::internal-padding      = 0
     GtkWidget::focus_padding          = 1
     GtkScrollbar::min_slider_length   = 20
@@ -25,13 +25,13 @@ style "curve-default"
     fg[SELECTED]    = "#ffffff"
     fg[INSENSITIVE] = "#7f7f7f"
 
-    bg[NORMAL]      = "#e5e5e5"
+    bg[NORMAL]      = "#f2f2f2"
     bg[PRELIGHT]    = "#f2f2f2"
     bg[ACTIVE]      = "#cccccc"
     bg[INSENSITIVE] = "#d8d8d8"
-    bg[SELECTED]    = "#4c59a6"
+    bg[SELECTED]    = "#6671b2"
 
-    base[SELECTED]  = "#4c59a6"
+    base[SELECTED]  = "#6671b2"
     text[SELECTED]  = "#ffffff"
 
     engine "xfce" 
@@ -42,20 +42,10 @@ style "curve-default"
 
 class "GtkWidget"                  style "curve-default"
 
-style "curve-frame" = "curve-default"
-{
-
-    bg[SELECTED]    = "#6671b2"
-    bg[NORMAL]      = "#f2f2f2"
-}
-
-widget "xfwm" style "curve-frame"
-class "MetaFrames" style "curve-frame"
-
 style "curve-menu" = "curve-default"
 {
 
-    bg[PRELIGHT]    = "#4c59a6"
+    bg[PRELIGHT]    = "#6671b2"
     fg[PRELIGHT]    = "#ffffff"
 }
 
