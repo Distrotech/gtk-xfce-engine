@@ -160,6 +160,8 @@ style "scrollbar" = "default"
 }
 widget_class "*Scrollbar*"         style "scrollbar"
 class "*Scrollbar*"                style "scrollbar"
+widget_class "*Progress*"          style "scrollbar" 
+class "*Progress*"                 style "scrollbar" 
 
 style "button" = "colored"
 {
@@ -189,27 +191,6 @@ widget_class "*Tree*"              style "button"
 class "*Tree*"                     style "button" 
 widget_class "*Scale*"             style "button" 
 class "*Scale*"                    style "button" 
-
-style "progress" = "colored"
-{
-    xthickness = 1
-    ythickness = 1
-
-    engine "xfce" 
-    {
-        smooth_edge = true
-        grip_style = slide
-        boxfill
-        {
-            fill_style = gradient
-            orientation = vertical
-            shade_start = 0.80
-            shade_end = 1.80
-        }
-    }
-}
-widget_class "*Progress*"          style "progress" 
-class "*Progress*"                 style "progress" 
 
 widget_class "*CheckButton*"       style "default"
 class "*CheckButton*"              style "default"

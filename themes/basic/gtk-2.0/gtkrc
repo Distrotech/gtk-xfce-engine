@@ -26,15 +26,6 @@ style "default"
 }
 widget_class "*"                style "default"
 
-style "thin" = "default"
-{
-    xthickness = 1
-    ythickness = 1
-}
-
-widget_class "*Progress*"       style "thin" 
-class "*Progress*"              style "thin" 
-
 style "button" = "default"
 {
     xthickness = 2

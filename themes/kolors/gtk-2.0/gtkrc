@@ -128,26 +128,8 @@ widget_class "*Scrollbar*"         style "sbstyle"
 class "*Scrollbar*"                style "sbstyle"
 widget_class "*Scale*"             style "sbstyle"
 class "*Scale*"                    style "sbstyle"
-
-style "progress" = "default"
-{
-    xthickness = 1
-    ythickness = 1
-    engine "xfce" 
-    {
-        smooth_edge = true
-        grip_style = none
-        boxfill
-        {
-            fill_style = gradient
-            orientation = auto
-            shade_start = 1.1
-            shade_end = 0.9
-        }
-    }
-}
-widget_class "*Progress*"          style "progress" 
-class "*Progress*"                 style "progress" 
+widget_class "*Progress*"          style "sbstyle" 
+class "*Progress*"                 style "sbstyle" 
 
 
 # This is for ROX-Filer
