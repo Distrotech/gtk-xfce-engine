@@ -94,7 +94,7 @@ style "button" = "default"
 
     bg[PRELIGHT]      = "#d4d3d2"
     bg[NORMAL]        = "#d4d3d2"
-    bg[ACTIVE]        = "#bfbebd"
+    bg[ACTIVE]        = "#bbb6c2"
 
     engine "xfce" 
     {
@@ -140,17 +140,15 @@ style "scrollbar" = "default"
 }
 widget_class "*Scrollbar*"         style "scrollbar"
 class "*Scrollbar*"                style "scrollbar"
-widget_class "*Scale*"             style "scrollbar"
-class "*Scale*"                    style "scrollbar"
 
 style "progress" = "default"
 {
     xthickness = 2
     ythickness = 2
 
-    bg[PRELIGHT]      = "#d4d3d2"
+    bg[PRELIGHT]      = "#bbb6c2"
     bg[NORMAL]        = "#e8e7e6"
-    bg[ACTIVE]        = "#e8e7e6"
+    bg[ACTIVE]        = "#959492"
 
     engine "xfce" 
     {
@@ -167,6 +165,8 @@ style "progress" = "default"
 }
 widget_class "*Progress*"          style "progress" 
 class "*Progress*"                 style "progress" 
+widget_class "*Scale*"             style "scrollbar"
+class "*Scale*"                    style "scrollbar"
 
 style "menuitem" = "default"
 {
