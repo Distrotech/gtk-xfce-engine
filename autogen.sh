@@ -6,6 +6,8 @@ test -z "$srcdir" && srcdir=.
 
 DIE=0
 
+ACLOCAL_FLAGS="-I m4 $ACLOCAL_FLAGS"
+
 (test -f $srcdir/configure.in) || {
     echo -n "**Error**: Directory "\`$srcdir\'" does not look like the"
     echo " top-level package directory"
