@@ -45,6 +45,8 @@ style "xfce-redmondxp-default"
     engine "xfce" 
     {
 	smooth_edge = TRUE
+	gradient = TRUE
+	inverted_gradient=TRUE
     }
 }
 
