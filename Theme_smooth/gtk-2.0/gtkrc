@@ -1,6 +1,6 @@
 style "default"
 {
-    GtkRange::trough_border = 1
+    GtkRange::trough_border = 0
 
     fg[NORMAL]        = "#000000"
     fg[ACTIVE]        = "#000000"

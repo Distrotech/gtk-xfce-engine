@@ -3,13 +3,13 @@ style "curve-default"
     GtkWidget::interior_focus         = -2
     GtkButton::default_border         = {0, 0 ,0 ,0}
     GtkButton::default_outside_border = {0, 0 ,0 ,0}
-    GtkButton::default_spacing        = 3
+    GtkButton::default_spacing        = 2
     GtkCheckButton::indicator_size    = 15
     GtkPaned::handle_full_size        = 1
-    GtkRange::trough_border           = 1
+    GtkRange::trough_border           = 0
     GtkRange::slider_width            = 15
     GtkRange::stepper_size            = 15
-    GtkRange::stepper_spacing         = 1
+    GtkRange::stepper_spacing         = 0
     GtkSpinButton::shadow_type        = etched-in
 
     fg[NORMAL]      = "#000000"
