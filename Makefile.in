@@ -130,7 +130,8 @@ SUBDIRS = Theme\
 	Theme_light\
 	Theme_smooth\
 	Theme_saltlake\
-	Theme_curve
+	Theme_curve\
+	Theme_stellar
 
 
 INCLUDES = $(XFCE_CFLAGS)

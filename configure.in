@@ -66,4 +66,6 @@ Theme_saltlake/gtk-2.0/Makefile
 Theme_saltlake/Makefile
 Theme_curve/gtk-2.0/Makefile
 Theme_curve/Makefile
+Theme_stellar/Makefile
+Theme_stellar/gtk-2.0/Makefile
 ])

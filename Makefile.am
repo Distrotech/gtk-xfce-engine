@@ -8,7 +8,8 @@ SUBDIRS = Theme\
 	Theme_light\
 	Theme_smooth\
 	Theme_saltlake\
-	Theme_curve
+	Theme_curve\
+	Theme_stellar
 
 INCLUDES = $(XFCE_CFLAGS)
 libxfce_la_CFLAGS = $(XFCE_CFLAGS) -DG_DISABLE_DEPRECATED -DGTK_DISABLE_DEPRECATED \
