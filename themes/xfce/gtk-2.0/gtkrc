@@ -25,6 +25,7 @@ style "default"
     GtkWidget::focus_padding                     = 4
     GtkWidget::interior_focus                    = 5
     GtkWidget::internal_padding                  = 4
+    ExoIconBar::focus_padding                    = 2 
 
     xthickness = 2
     ythickness = 2
