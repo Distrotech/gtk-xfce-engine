@@ -85,16 +85,16 @@ class "*MenuBar*"                  style "xfce-kde2-menustyle"
 
 style "xfce-kde2-buttonstyle" = "default"
 {
-    xthickness = 2
-    ythickness = 2
+    xthickness = 3
+    ythickness = 3
     engine "xfce" 
     {
-        smooth_edge = false
+        smooth_edge = true
         boxfill
         {
             fill_style = gradient
             orientation = vertical
-            shade_start = 1.25
+            shade_start = 1.10
             shade_end = 0.90
         }
     }
