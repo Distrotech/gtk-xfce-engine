@@ -5,7 +5,8 @@ style "default"
     GtkButton::default_spacing        = 5
     GtkButton::focus-line-width       = 1
     GtkButton::focus-padding          = 0
-    GtkCheckButton::indicator_size    = 11
+    GtkCheckButton::indicator_size    = 15
+    GtkRadioButton::indicator_size    = 15
     GtkMenuBar::shadow_type           = none
     GtkMenuItem::selected_shadow_type = out
     GtkPaned::handle_full_size        = 1

@@ -6,6 +6,7 @@ style "default"
     GtkButton::focus-line-width                  = 1
     GtkButton::focus-padding                     = 0
     GtkCheckButton::indicator_size               = 15               
+    GtkRadioButton::indicator_size    = 15
     GtkMenuItem::selected_shadow_type            = in
     GtkPaned::handle_full_size                   = 1                
     GtkRange::slider_width                       = 15               

@@ -7,7 +7,7 @@ style "default"
     GtkButton::default_spacing        = 5
     GtkButton::focus-line-width       = 1
     GtkButton::focus-padding          = 0
-    GtkCheckButton::indicator_size    = 12
+    GtkCheckButton::indicator_size    = 15
     GtkMenuBar::internal-padding      = 0
     GtkMenuBar::shadow_type           = out
     GtkMenuItem::selected_shadow_type = etched-in
