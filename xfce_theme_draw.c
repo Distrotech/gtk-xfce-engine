@@ -27,6 +27,8 @@
 #include "xfce_style.h"
 #include "xfce_rc_style.h"
 
+#define ROUND_CORNERS 1
+
 /* 
   Port to GTK+-2.0 based on Thinice port by Tim Gerla <timg@rrv.net>
       Tomas Ögren <stric@ing.umu.se> and  Richard Hult <rhult@codefactory.se>
@@ -336,11 +338,11 @@ draw_shadow (GtkStyle * style, GdkWindow * window, GtkStateType state_type, GtkS
     gdk_draw_line (window, style->light_gc[state_type], x + width - 2, y + 1, x + width - 2, y + height - 2);
     break;
   case GTK_SHADOW_IN:
-    gdk_draw_line (window, gc1, x, y, x + width - 1, y);
-    gdk_draw_line (window, gc1, x, y, x, y + height - 1);
+    gdk_draw_line (window, gc1, x + ROUND_CORNERS, y, x + width - 1 - ROUND_CORNERS, y);
+    gdk_draw_line (window, gc1, x, y + ROUND_CORNERS, x, y + height - 1 - ROUND_CORNERS);
 
-    gdk_draw_line (window, gc2, x + 1, y + height - 1, x + width - 1, y + height - 1);
-    gdk_draw_line (window, gc2, x + width - 1, y + 1, x + width - 1, y + height - 1);
+    gdk_draw_line (window, gc2, x + 1, y + height - 1, x + width - 1 - ROUND_CORNERS, y + height - 1);
+    gdk_draw_line (window, gc2, x + width - 1, y + 1, x + width - 1, y + height - 1 - ROUND_CORNERS);
 
     gdk_draw_line (window, gc3, x + 1, y + 1, x + width - 2, y + 1);
     gdk_draw_line (window, gc3, x + 1, y + 1, x + 1, y + height - 2);
@@ -349,11 +351,11 @@ draw_shadow (GtkStyle * style, GdkWindow * window, GtkStateType state_type, GtkS
     gdk_draw_line (window, gc1, x + width - 2, y + 2, x + width - 2, y + height - 2);
     break;
   case GTK_SHADOW_OUT:
-    gdk_draw_line (window, gc1, x, y, x + width - 1, y);
-    gdk_draw_line (window, gc1, x, y, x, y + height - 1);
+    gdk_draw_line (window, gc1, x + ROUND_CORNERS, y, x + width - 1 - ROUND_CORNERS, y);
+    gdk_draw_line (window, gc1, x, y + ROUND_CORNERS, x, y + height - 1 - ROUND_CORNERS);
 
-    gdk_draw_line (window, gc3, x + 1, y + height - 1, x + width - 1, y + height - 1);
-    gdk_draw_line (window, gc3, x + width - 1, y + 1, x + width - 1, y + height - 1);
+    gdk_draw_line (window, gc3, x + 1, y + height - 1, x + width - 1 - ROUND_CORNERS, y + height - 1);
+    gdk_draw_line (window, gc3, x + width - 1, y + 1, x + width - 1, y + height - 1 - ROUND_CORNERS);
 
     gdk_draw_line (window, gc2, x + 1, y + 1, x + width - 2, y + 1);
     gdk_draw_line (window, gc2, x + 1, y + 1, x + 1, y + height - 2);
