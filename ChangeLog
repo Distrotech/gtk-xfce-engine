@@ -1,3 +1,41 @@
+2004-11-08 22:39  olivier
+
+	* configure: autogen
+
+2004-11-08 22:31  olivier
+
+	* configure.in, themes/b5/gtk-2.0/gtkrc,
+	  themes/cadmium/gtk-2.0/gtkrc, themes/curve/gtk-2.0/gtkrc,
+	  themes/dawn/gtk-2.0/gtkrc, themes/kde2/gtk-2.0/gtkrc,
+	  themes/kolors/gtk-2.0/gtkrc, themes/redmondxp/gtk-2.0/gtkrc,
+	  themes/winter/gtk-2.0/gtkrc, themes/xfce/gtk-2.0/gtkrc,
+	  themes/xfce-4.0/gtk-2.0/gtkrc: Themes fixes
+
+2004-11-06 17:23  olivier
+
+	* ChangeLog, INSTALL, Makefile.in, aclocal.m4, compile,
+	  config.guess, config.sub, configure, depcomp, install-sh,
+	  missing, src/Makefile.in, themes/Makefile.in,
+	  themes/b5/Makefile.in, themes/b5/gtk-2.0/Makefile.in,
+	  themes/basic/Makefile.in, themes/basic/gtk-2.0/Makefile.in,
+	  themes/cadmium/Makefile.in, themes/cadmium/gtk-2.0/Makefile.in,
+	  themes/curve/Makefile.in, themes/curve/gtk-2.0/Makefile.in,
+	  themes/dawn/Makefile.in, themes/dawn/gtk-2.0/Makefile.in,
+	  themes/kde2/Makefile.in, themes/kde2/gtk-2.0/Makefile.in,
+	  themes/kolors/Makefile.in, themes/kolors/gtk-2.0/Makefile.in,
+	  themes/light/Makefile.in, themes/light/gtk-2.0/Makefile.in,
+	  themes/redmondxp/Makefile.in,
+	  themes/redmondxp/gtk-2.0/Makefile.in,
+	  themes/saltlake/Makefile.in, themes/saltlake/gtk-2.0/Makefile.in,
+	  themes/smooth/Makefile.in, themes/smooth/gtk-2.0/Makefile.in,
+	  themes/stellar/Makefile.in, themes/stellar/gtk-2.0/Makefile.in,
+	  themes/winter/Makefile.in, themes/winter/gtk-2.0/Makefile.in,
+	  themes/xfce/Makefile.in, themes/xfce/gtk-2.0/Makefile.in,
+	  themes/xfce-4.0/Makefile.in, themes/xfce-4.0/gtk-2.0/Makefile.in:
+	  Update automake/autoconf/libtool/gettext versions to generate the
+	  configure scripts and Makefiles, Update versions of all packages
+	  to 4.1.99.1 (ie 4.2 RC1), Update ChangeLogs.
+
 2004-10-30 21:03  olivier
 
 	* ChangeLog: Global update for 4.1.91 (Xfce 4.2 beta 2)
