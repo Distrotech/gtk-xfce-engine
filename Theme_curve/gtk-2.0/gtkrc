@@ -19,20 +19,29 @@ style "curve-default"
     xthickness = 2
     ythickness = 2
 
-    fg[NORMAL]      = "#000000"
-    fg[ACTIVE]      = "#000000"
-    fg[PRELIGHT]    = "#000000"
-    fg[SELECTED]    = "#ffffff"
-    fg[INSENSITIVE] = "#7f7f7f"
+    fg[NORMAL]        = "#000000" 
+    fg[ACTIVE]        = "#000000" 
+    fg[PRELIGHT]      = "#000000" 
+    fg[SELECTED]      = "#FFFFFF" 
+    fg[INSENSITIVE]   = "#7F7F7F" 
 
-    bg[NORMAL]      = "#f2f2f2"
-    bg[PRELIGHT]    = "#f2f2f2"
-    bg[ACTIVE]      = "#cccccc"
-    bg[INSENSITIVE] = "#d8d8d8"
-    bg[SELECTED]    = "#6671b2"
+    bg[NORMAL]        = "#E5E5E5" 
+    bg[PRELIGHT]      = "#E5E5E5" 
+    bg[ACTIVE]        = "#CCCCCC" 
+    bg[INSENSITIVE]   = "#D8D8D8" 
+    bg[SELECTED]      = "#4C59A5" 
 
-    base[SELECTED]  = "#6671b2"
-    text[SELECTED]  = "#ffffff"
+    base[NORMAL]      = "#ffffff"       
+    base[SELECTED]    = "#4c59a5"       
+    base[ACTIVE]      = "#99a6bf"       
+    base[PRELIGHT]    = "#e5e5e5"       
+    base[INSENSITIVE] = "#d8d8d8"       
+
+    text[INSENSITIVE] = "#808080"       
+    text[NORMAL]      = "#000000"       
+    text[ACTIVE]      = "#ffffff"       
+    text[PRELIGHT]    = "#000000"       
+    text[SELECTED]    = "#ffffff"       
 
     engine "xfce" 
     {
@@ -44,7 +53,7 @@ class "GtkWidget"                  style "curve-default"
 
 style "curve-menu-color" = "curve-default"
 {
-    bg[PRELIGHT]    = "#6671b2"
+    bg[PRELIGHT]    = "#4C59A5"
     fg[PRELIGHT]    = "#ffffff"
 }
 
