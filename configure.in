@@ -70,5 +70,7 @@ themes/smooth/gtk-2.0/Makefile
 themes/smooth/Makefile
 themes/stellar/gtk-2.0/Makefile
 themes/stellar/Makefile
+themes/winter/gtk-2.0/Makefile
+themes/winter/Makefile
 themes/Makefile
 ])

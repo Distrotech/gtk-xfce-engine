@@ -153,7 +153,8 @@ SUBDIRS = \
 	redmondxp	\
 	saltlake	\
 	smooth		\
-	stellar
+	stellar		\
+	winter
 
 subdir = themes
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
