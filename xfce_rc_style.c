@@ -4,11 +4,6 @@
 static void      xfce_rc_style_init         (XfceRcStyle      *style);
 static void      xfce_rc_style_class_init   (XfceRcStyleClass *klass);
 static void      xfce_rc_style_finalize     (GObject             *object);
-static guint     xfce_rc_style_parse        (GtkRcStyle          *rc_style,
-					       GtkSettings          *settings,
-					       GScanner             *scanner);
-static void      xfce_rc_style_merge       (GtkRcStyle           *dest,
-					       GtkRcStyle           *src);
 
 static GtkStyle *xfce_rc_style_create_style (GtkRcStyle          *rc_style);
 
@@ -47,30 +42,7 @@ xfce_rc_style_class_init (XfceRcStyleClass *klass)
   GObjectClass *object_class = G_OBJECT_CLASS (klass);
 
   parent_class = g_type_class_peek_parent (klass);
-
-  rc_style_class->parse = xfce_rc_style_parse;
-  rc_style_class->merge = xfce_rc_style_merge;
   rc_style_class->create_style = xfce_rc_style_create_style;
-}
-
-static guint
-xfce_rc_style_parse (GtkRcStyle *rc_style,
-			GtkSettings  *settings,
-			GScanner   *scanner)
-{
-  return G_TOKEN_NONE;
-}
-
-static void
-xfce_rc_style_merge (GtkRcStyle * dest,
-			GtkRcStyle * src)
-{
-  if (XFCE_IS_RC_STYLE (src)) {
-    XfceRcStyle        *src_data = XFCE_RC_STYLE (src);
-    XfceRcStyle        *dest_data = XFCE_RC_STYLE (dest);
-  }
-  
-  parent_class->merge (dest, src);
 }
 
 /* Create an empty style suitable to this RC style

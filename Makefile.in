@@ -84,7 +84,10 @@ enginedir = $(libdir)/gtk-2.0/$(GTK_VERSION)/engines
 
 engine_LTLIBRARIES = libxfce.la
 
-libxfce_la_SOURCES =  	xfce_theme_draw.c		xfce_theme_main.c		xfce_rc_style.c
+libxfce_la_SOURCES = \
+	xfce_theme_draw.c	\
+	xfce_theme_main.c	\
+	xfce_rc_style.c
 
 
 libxfce_la_LDFLAGS = -module -avoid-version
@@ -111,9 +114,10 @@ COMPILE = $(CC) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CF
 LTCOMPILE = $(LIBTOOL) --mode=compile $(CC) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
 CCLD = $(CC)
 LINK = $(LIBTOOL) --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) $(LDFLAGS) -o $@
-DIST_COMMON =  ./stamp-h.in COPYING INSTALL Makefile.am Makefile.in \
-acconfig.h aclocal.m4 config.guess config.h.in config.sub configure \
-configure.in install-sh ltmain.sh missing mkinstalldirs
+DIST_COMMON =  README ./stamp-h.in AUTHORS COPYING ChangeLog INSTALL \
+Makefile.am Makefile.in NEWS acconfig.h aclocal.m4 config.guess \
+config.h.in config.sub configure configure.in install-sh ltmain.sh \
+missing mkinstalldirs
 
 
 DISTFILES = $(DIST_COMMON) $(SOURCES) $(HEADERS) $(TEXINFOS) $(EXTRA_DIST)
