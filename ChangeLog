@@ -1,3 +1,13 @@
+2002-07-24 xfce
+
+	* Makefile.am, Makefile.in, configure, configure.in: Add GTK_LIBS
+	dependency so that PyGTK apps work with the theme (as suggested by
+	Michele Campeotto <micampe@micampe.it>)
+
+2002-07-18 xfce
+
+	* ChangeLog: Update ChangeLog
+
 2002-07-18 xfce
 
 	* Theme_light/gtk-2.0/gtkrc: Change prelight color.
