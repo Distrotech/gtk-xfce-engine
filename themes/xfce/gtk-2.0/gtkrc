@@ -138,14 +138,8 @@ widget_class "*Scrollbar*"         style "sbstyle"
 class "*Scrollbar*"                style "sbstyle"
 widget_class "*Scale*"             style "sbstyle"
 class "*Scale*"                    style "sbstyle"
-
-style "progress" = "default"
-{
-    xthickness = 1
-    ythickness = 1
-}
-widget_class "*Progress*"          style "progress" 
-class "*Progress*"                 style "progress" 
+widget_class "*Progress*"          style "sbstyle" 
+class "*Progress*"                 style "sbstyle" 
 
 style "menuitem" = "default"
 {
