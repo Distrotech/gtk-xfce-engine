@@ -6,15 +6,15 @@ style "xfce-default"
     GtkCheckButton::indicator_size    = 15
     GtkMenuItem::selected_shadow_type = etched-in
     GtkPaned::handle_full_size        = 1
-    GtkPaned::handle_size             = 8
+    GtkPaned::handle_size             = 6
     GtkRadioButton::indicator_size    = 15
     GtkRange::slider_width            = 15
     GtkRange::stepper_size            = 15
     GtkRange::stepper_spacing         = 0
-    GtkRange::trough_border           = 1
+    GtkRange::trough_border           = 0
     GtkScrollbar::min_slider_length   = 20
     GtkSpinButton::shadow_type        = out
-    GtkWidget::internal_padding       = 0
+    GtkWidget::internal_padding       = 2
     GtkWidget::focus_padding          = 2
     GtkWidget::focus-line-width       = 1
     GtkWidget::interior_focus         = 5
@@ -120,8 +120,8 @@ style "xfce-sbstyle" = "xfce-default"
         {
             fill_style = gradient
             orientation = automatic
-            shade_start = 0.9
-            shade_end = 1.1
+            shade_start = 0.95
+            shade_end = 1.05
         }
     }
 }
@@ -147,11 +147,13 @@ style "xfce-menuitem" = "xfce-default"
 widget_class "*MenuItem*"          style "xfce-menuitem"
 class "*MenuItem*"                 style "xfce-menuitem"
 
-style "xfce-kolors-titlebar"
+style "xfce-titlebar"
 {
     bg[SELECTED]      = "#4a7daf"
     fg[SELECTED]      = "#ffffff"
+    bg[ACTIVE]        = "#eeeee2"
+    fg[NORMAL]        = "#b4b492"
 }
-widget "xfwm"                      style "xfce-kolors-titlebar"
-class "MetaFrames"                 style "xfce-kolors-titlebar"
-widget_class "MetaFrames"          style "xfce-kolors-titlebar"
+widget "xfwm"                      style "xfce-titlebar"
+class "MetaFrames"                 style "xfce-titlebar"
+widget_class "MetaFrames"          style "xfce-titlebar"
