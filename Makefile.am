@@ -6,7 +6,8 @@ engine_LTLIBRARIES = libxfce.la
 
 libxfce_la_SOURCES = \
 	xfce_theme_draw.c	\
-	xfce_theme_main.c
+	xfce_theme_main.c	\
+	xfce_rc_style.c
 
 libxfce_la_LDFLAGS = -module -avoid-version
 
