@@ -16,6 +16,7 @@ style "xfce-redmondxp-default"
     GtkWidget::internal-padding       = 4
     GtkMenuBar::shadow_type           = none
     GtkToolbar::shadow_type           = none
+    BonoboDock::shadow_type           = none
 
     xthickness = 2
     ythickness = 2
@@ -109,12 +110,12 @@ class "*.GtkMenu*"                 style "xfce-redmondxp-menu"
 
 style "xfce-redmondxp-menubar" = "xfce-redmondxp-colored"
 {
-    xthickness = 2
-    ythickness = 2
+    xthickness = 0
+    ythickness = 0
 }
 
-widget_class "*BonoboDockItem*"    style "xfce-redmondxp-menubar"
-class "*BonoboDockItem*"           style "xfce-redmondxp-menubar"
+widget_class "*BonoboDock*"        style "xfce-redmondxp-menubar"
+class "*BonoboDock*"               style "xfce-redmondxp-menubar"
 widget_class "*HandleBox*"         style "xfce-redmondxp-menubar"
 class "*HandleBox*"                style "xfce-redmondxp-menubar"
 widget_class "*Tool*"              style "xfce-redmondxp-menubar"

@@ -21,6 +21,7 @@ style "curve-default"
     GtkWidget::internal-padding       = 2
     GtkMenuBar::shadow_type           = none
     GtkToolbar::shadow_type           = none
+    BonoboDock::shadow_type           = none
 
     xthickness = 2
     ythickness = 2
@@ -78,7 +79,7 @@ style "curve-menu-color" = "curve-default"
 
 style "curve-tool-bar" = "curve-menu-color"
 {
-    xthickness = 2
+    xthickness = 0
     ythickness = 2
 
     engine "xfce" 
@@ -90,8 +91,8 @@ style "curve-tool-bar" = "curve-menu-color"
 	}
     }
 }
-widget_class "*BonoboDockItem*"    style "curve-tool-bar"
-class "*BonoboDockItem*"           style "curve-tool-bar"
+widget_class "*BonoboDock*"        style "curve-tool-bar"
+class "*BonoboDock*"               style "curve-tool-bar"
 widget_class "*HandleBox*"         style "curve-tool-bar"
 class "*HandleBox*"                style "curve-tool-bar"
 widget_class "*Tool*"              style "curve-tool-bar"
@@ -141,7 +142,7 @@ class "*Progress*"                 style "curve-progress"
 
 style "curve-button" = "curve-default"
 {
-    xthickness = 2
+    xthickness = 3
     ythickness = 2
 
     engine "xfce" 
