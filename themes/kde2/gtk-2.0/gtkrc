@@ -7,18 +7,21 @@
 
 style "default"
 {
-    GtkWidget::interior_focus         = 2
-    GtkWidget::focus-padding          = 2
-    GtkButton::default_border         = {0, 0, 0, 0}
-    GtkButton::default_outside_border = {0, 0, 0, 0}
-    GtkButton::default_spacing        = 12
-    GtkRange::slider_width            = 15
-    GtkRange::stepper_size            = 15
-    GtkCheckButton::indicator_size    = 15
-    GtkPaned::handle_full_size        = 1
-    GtkRange::trough_border           = 1
-    GtkScrollbar::min_slider_length   = 20
-    GtkMenuItem::selected_shadow_type = in
+    GtkWidget::interior_focus                    = 2                
+    GtkWidget::focus-padding                     = 2                
+    GtkButton::default_border                    = {0, 0, 0, 0}     
+    GtkButton::default_outside_border            = {0, 0, 0, 0}     
+    GtkButton::default_spacing                   = 12               
+    GtkRange::slider_width                       = 15               
+    GtkRange::stepper_size                       = 15               
+    GtkCheckButton::indicator_size               = 15               
+    GtkPaned::handle_full_size                   = 1                
+    GtkRange::trough_border                      = 1                
+    GtkScrollbar::min_slider_length              = 20               
+    GtkScrollbar::has_forward_stepper            = 1
+    GtkScrollbar::has_backward_stepper           = 1
+    GtkScrollbar::has_secondary_backward_stepper = 1
+    GtkMenuItem::selected_shadow_type            = in
 
     xthickness = 2
     ythickness = 2
