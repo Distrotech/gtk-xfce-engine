@@ -2,6 +2,9 @@
 
 style "default"
 {
+  GtkWidget::interior_focus = 1
+  GtkButton::default_border = { 1, 1, 1, 1 }
+  GtkButton::default_outside_border = { 0, 0, 0, 0 }
   GtkButton::default_spacing = 6
   GtkCheckButton::indicator_size = 13
   GtkPaned::handle_full_size = 1
@@ -9,7 +12,7 @@ style "default"
   GtkRange::slider_width = 15
   GtkRange::stepper_size = 15
   GtkRange::stepper_spacing = 0
-  GtkSpinButton::shadow_type = GTK_SHADOW_ETCHED_IN
+  GtkSpinButton::shadow-type = etched-in
   
   fg[NORMAL]        = "#000000"
   text[NORMAL]      = "#000000"

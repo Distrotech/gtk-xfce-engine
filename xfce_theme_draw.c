@@ -609,14 +609,20 @@ draw_box (GtkStyle * style, GdkWindow * window, GtkStateType state_type, GtkShad
   else
     gtk_style_apply_default_pixmap (style, window, state_type, area, x, y, width, height);
 
-#ifdef OLD_STYLE
-  if ((detail) && (!strcmp ("menuitem", detail)) && (state_type == GTK_STATE_PRELIGHT))
-    gtk_paint_shadow (style, window, state_type, GTK_SHADOW_IN, area, widget, detail, x, y, width, height);
-  else
+  if ((detail) && (!strcmp("buttondefault", detail)))
+  {
+    if (area)
+    {
+      gdk_gc_set_clip_rectangle (style->black_gc, area);
+    }
+    gdk_draw_rectangle (window, style->black_gc, FALSE, x, y, width - 1, height - 1);
+    if (area)
+    {
+      gdk_gc_set_clip_rectangle (style->black_gc, NULL);
+    }
+  }
+  else 
     gtk_paint_shadow (style, window, state_type, shadow_type, area, widget, detail, x, y, width, height);
-#else
-  gtk_paint_shadow (style, window, state_type, shadow_type, area, widget, detail, x, y, width, height);
-#endif
 }
 
 static void
