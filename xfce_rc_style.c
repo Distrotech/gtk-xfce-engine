@@ -33,6 +33,11 @@ xfce_rc_style_register_type (GTypeModule *module)
 static void
 xfce_rc_style_init (XfceRcStyle *style)
 {
+}
+
+static void
+xfce_rc_style_class_init (XfceRcStyleClass *klass)
+{
   static const gchar *rc_string =
   ( "style \"default\"\n"
     "{\n"
@@ -50,17 +55,13 @@ xfce_rc_style_init (XfceRcStyle *style)
     "}\n"
     "class \"GtkWidget\" style \"default\"\n"
   );
-  gtk_rc_parse_string (rc_string);
-}
-
-static void
-xfce_rc_style_class_init (XfceRcStyleClass *klass)
-{
   GtkRcStyleClass *rc_style_class = GTK_RC_STYLE_CLASS (klass);
   GObjectClass *object_class = G_OBJECT_CLASS (klass);
 
   parent_class = g_type_class_peek_parent (klass);
   rc_style_class->create_style = xfce_rc_style_create_style;
+
+  gtk_rc_parse_string (rc_string);
 }
 
 /* Create an empty style suitable to this RC style
