@@ -81,14 +81,14 @@ style "menustyle" = "default"
         }
     }
 }
-widget_class "*BonoboDockItem*"    style "menustyle"
-class "*BonoboDockItem*"           style "menustyle"
-widget_class "*HandleBox*"         style "menustyle"
-class "*HandleBox*"                style "menustyle"
+widget_class "*BonoboDockItem"     style "menustyle"
+class "*BonoboDockItem"            style "menustyle"
+widget_class "*HandleBox"          style "menustyle"
+class "*HandleBox"                 style "menustyle"
 widget_class "*ToolBar"            style "menustyle"
 class "*ToolBar*"                  style "menustyle"
-widget_class "*MenuBar*"           style "menustyle"
-class "*MenuBar*"                  style "menustyle"
+widget_class "*MenuBar"            style "menustyle"
+class "*MenuBar"                   style "menustyle"
 
 style "button" = "default"
 {

@@ -63,12 +63,12 @@ style "tools" = "default"
     ythickness = 1
 }
 
-widget_class "*BonoboDockItem*"    style "tools"
-class "*BonoboDockItem*"           style "tools"
-widget_class "*HandleBox*"         style "tools"
-class "*HandleBox*"                style "tools"
-widget_class "*Tool*"              style "tools"
-class "*Tool*"                     style "tools"
+widget_class "*BonoboDockItem"     style "tools"
+class "*BonoboDockItem"            style "tools"
+widget_class "*HandleBox"         style "tools"
+class "*HandleBox"                style "tools"
+widget_class "*ToolBar"            style "tools"
+class "*ToolBar"                   style "tools"
 
 style "colored" = "default"
 {
@@ -128,8 +128,8 @@ style "menubar" = "colored"
     ythickness = 1
 }
 
-widget_class "*MenuBar*"           style "menubar"
-class "*MenuBar*"                  style "menubar"
+widget_class "*MenuBar"            style "menubar"
+class "*MenuBar"                   style "menubar"
 
 style "button" = "default"
 {

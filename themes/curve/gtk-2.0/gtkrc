@@ -91,14 +91,14 @@ style "tool-bar" = "menu-color"
 	}
     }
 }
-widget_class "*BonoboDockItem*"    style "tool-bar"
-class "*BonoboDockItem*"           style "tool-bar"
-widget_class "*HandleBox*"         style "tool-bar"
-class "*HandleBox*"                style "tool-bar"
-widget_class "*Tool*"              style "tool-bar"
-class "*Tool*"                     style "tool-bar"
-widget_class "*MenuBar*"           style "tool-bar"
-class "*MenuBar*"                  style "tool-bar"
+widget_class "*BonoboDockItem"     style "tool-bar"
+class "*BonoboDockItem"            style "tool-bar"
+widget_class "*HandleBox"          style "tool-bar"
+class "*HandleBox"                 style "tool-bar"
+widget_class "*ToolBar"            style "tool-bar"
+class "*ToolBar"                   style "tool-bar"
+widget_class "*MenuBar"            style "tool-bar"
+class "*MenuBar"                   style "tool-bar"
 
 style "menu" = "menu-color"
 {

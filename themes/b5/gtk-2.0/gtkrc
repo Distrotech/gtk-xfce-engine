@@ -48,7 +48,7 @@ style "default"
     }
 }
 
-widget_class "*"          style "default"
+widget_class "*"           style "default"
 
 style "thin" = "default"
 {
@@ -58,12 +58,12 @@ style "thin" = "default"
     ythickness = 1
 }
 
-widget_class "*Progress*" style "thin" 
-class "*Progress*"        style "thin" 
-widget_class "*Scrollbar*"         style "thin"
-class "*Scrollbar*"                style "thin"
-widget_class "*Scale*"             style "thin"
-class "*Scale*"                    style "thin"
+widget_class "*Progress*"  style "thin" 
+class "*Progress*"         style "thin" 
+widget_class "*Scrollbar*" style "thin"
+class "*Scrollbar*"        style "thin"
+widget_class "*Scale*"     style "thin"
+class "*Scale*"            style "thin"
 
 
 # This is for the window borders (xfwm4 & metacity)
@@ -76,7 +76,7 @@ style "titlebar"
     fg[INSENSITIVE]   = "#525051"
 }
 
-widget "xfwm"	          style "titlebar"
-class "MetaFrames"        style "titlebar"
-widget_class "MetaFrames" style "titlebar"
+widget "xfwm"	           style "titlebar"
+class "MetaFrames"         style "titlebar"
+widget_class "MetaFrames"  style "titlebar"
 
