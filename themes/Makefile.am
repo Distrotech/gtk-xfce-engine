@@ -5,6 +5,7 @@ SUBDIRS = \
 	basic		\
 	cadmium		\
 	curve		\
+	dawn		\
 	kde2		\
 	kolors		\
 	light		\

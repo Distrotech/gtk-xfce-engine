@@ -60,6 +60,8 @@ themes/cadmium/gtk-2.0/Makefile
 themes/cadmium/Makefile
 themes/curve/gtk-2.0/Makefile
 themes/curve/Makefile
+themes/dawn/gtk-2.0/Makefile
+themes/dawn/Makefile
 themes/kolors/gtk-2.0/Makefile
 themes/kolors/Makefile
 themes/kde2/gtk-2.0/Makefile
