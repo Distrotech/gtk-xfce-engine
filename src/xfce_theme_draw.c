@@ -997,13 +997,20 @@ static void draw_box_gap(GtkStyle * style, GdkWindow * window, GtkStateType stat
         gdk_drawable_get_size(window, NULL, &height);
 
     if(XFCE_RC_STYLE(style->rc_style)->smooth_edge)
+    {
         gc1 = style->dark_gc[state_type];
+        gc2 = style->bg_gc[state_type];
+        gc3 = style->bg_gc[state_type];
+        gc4 = style->dark_gc[state_type];
+    }
     else
-        gc1 = style->light_gc[state_type];
-    gc2 = style->bg_gc[state_type];
-    gc3 = style->bg_gc[state_type];
-    gc4 = style->dark_gc[state_type];
-
+    {
+        gc1 = style->dark_gc[state_type];
+        gc2 = style->light_gc[state_type];
+        gc3 = style->dark_gc[state_type];
+        gc4 = style->black_gc;
+    }
+    
     if(area)
     {
         gdk_gc_set_clip_rectangle(gc1, area);
@@ -1023,11 +1030,12 @@ static void draw_box_gap(GtkStyle * style, GdkWindow * window, GtkStateType stat
             {
                 case GTK_POS_TOP:
                     gdk_draw_line(window, gc1, x, y, x, y + height - 1);
-                    gdk_draw_line(window, gc2, x + 1, y, x + 1, y + height - 2);
+                    gdk_draw_line(window, gc2, x + 1, y + 1, x + 1, y + height - 2);
 
-                    gdk_draw_line(window, gc3, x + 1, y + height - 2, x + width - 2, y + height - 2);
+                    gdk_draw_line(window, gc3, x + 2, y + height - 2, x + width - 2, y + height - 2);
                     gdk_draw_line(window, gc3, x + width - 2, y, x + width - 2, y + height - 2);
-                    gdk_draw_line(window, gc4, x, y + height - 1, x + width - 1, y + height - 1);
+
+                    gdk_draw_line(window, gc4, x + 1, y + height - 1, x + width - 1, y + height - 1);
                     gdk_draw_line(window, gc4, x + width - 1, y, x + width - 1, y + height - 1);
                     if(gap_x > 0)
                     {
@@ -1045,6 +1053,7 @@ static void draw_box_gap(GtkStyle * style, GdkWindow * window, GtkStateType stat
                 case GTK_POS_BOTTOM:
                     gdk_draw_line(window, gc1, x, y, x + width - 1, y);
                     gdk_draw_line(window, gc1, x, y, x, y + height - 1);
+
                     gdk_draw_line(window, gc2, x + 1, y + 1, x + width - 2, y + 1);
                     gdk_draw_line(window, gc2, x + 1, y + 1, x + 1, y + height - 1);
 
@@ -1069,7 +1078,8 @@ static void draw_box_gap(GtkStyle * style, GdkWindow * window, GtkStateType stat
 
                     gdk_draw_line(window, gc3, x, y + height - 2, x + width - 2, y + height - 2);
                     gdk_draw_line(window, gc3, x + width - 2, y + 1, x + width - 2, y + height - 2);
-                    gdk_draw_line(window, gc4, x, y + height - 1, x + width - 1, y + height - 1);
+
+                    gdk_draw_line(window, gc4, x + 1, y + height - 1, x + width - 1, y + height - 1);
                     gdk_draw_line(window, gc4, x + width - 1, y, x + width - 1, y + height - 1);
                     if(gap_x > 0)
                     {
@@ -1087,11 +1097,12 @@ static void draw_box_gap(GtkStyle * style, GdkWindow * window, GtkStateType stat
                 case GTK_POS_RIGHT:
                     gdk_draw_line(window, gc1, x, y, x + width - 1, y);
                     gdk_draw_line(window, gc1, x, y, x, y + height - 1);
+
                     gdk_draw_line(window, gc2, x + 1, y + 1, x + width - 1, y + 1);
                     gdk_draw_line(window, gc2, x + 1, y + 1, x + 1, y + height - 2);
 
                     gdk_draw_line(window, gc3, x + 1, y + height - 2, x + width - 1, y + height - 2);
-                    gdk_draw_line(window, gc4, x, y + height - 1, x + width - 1, y + height - 1);
+                    gdk_draw_line(window, gc4, x + 1, y + height - 1, x + width - 1, y + height - 1);
                     if(gap_x > 0)
                     {
                         gdk_draw_line(window, gc4, x + width - 1, y, x + width - 1, y + gap_x - 1);
@@ -1137,13 +1148,20 @@ static void draw_extension(GtkStyle * style, GdkWindow * window, GtkStateType st
         gdk_drawable_get_size(window, NULL, &height);
 
     if(XFCE_RC_STYLE(style->rc_style)->smooth_edge)
+    {
         gc1 = style->dark_gc[state_type];
+        gc2 = style->bg_gc[state_type];
+        gc3 = style->bg_gc[state_type];
+        gc4 = style->dark_gc[state_type];
+    }
     else
-        gc1 = style->light_gc[state_type];
-    gc2 = style->bg_gc[state_type];
-    gc3 = style->bg_gc[state_type];
-    gc4 = style->dark_gc[state_type];
-
+    {
+        gc1 = style->dark_gc[state_type];
+        gc2 = style->light_gc[state_type];
+        gc3 = style->dark_gc[state_type];
+        gc4 = style->black_gc;
+    }
+    
     if(area)
     {
         gdk_gc_set_clip_rectangle(gc1, area);
@@ -1164,7 +1182,7 @@ static void draw_extension(GtkStyle * style, GdkWindow * window, GtkStateType st
                 case GTK_POS_TOP:
                     gtk_style_apply_default_background(style, window, widget && !GTK_WIDGET_NO_WINDOW(widget), state_type, area, x + 1, y, width - 2, height - 1);
                     gdk_draw_line(window, gc1, x, y, x, y + height - 2);
-                    gdk_draw_line(window, gc2, x + 1, y, x + 1, y + height - 2);
+                    gdk_draw_line(window, gc2, x + 1, y + 1, x + 1, y + height - 2);
 
                     gdk_draw_line(window, gc3, x + 2, y + height - 2, x + width - 2, y + height - 2);
                     gdk_draw_line(window, gc3, x + width - 2, y, x + width - 2, y + height - 2);
