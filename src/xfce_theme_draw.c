@@ -996,35 +996,13 @@ static void draw_box_gap(GtkStyle * style, GdkWindow * window, GtkStateType stat
     else if(height == -1)
         gdk_drawable_get_size(window, NULL, &height);
 
-    switch (shadow_type)
-    {
-        case GTK_SHADOW_NONE:
-            return;
-        case GTK_SHADOW_IN:
-            gc1 = style->bg_gc[state_type];
-            gc2 = style->dark_gc[state_type];;
-            gc3 = style->bg_gc[state_type];
-            gc4 = style->light_gc[state_type];
-            break;
-        case GTK_SHADOW_ETCHED_IN:
-            gc1 = style->dark_gc[state_type];
-            gc2 = style->light_gc[state_type];
-            gc3 = style->dark_gc[state_type];
-            gc4 = style->light_gc[state_type];
-            break;
-        case GTK_SHADOW_OUT:
-            gc1 = style->light_gc[state_type];
-            gc2 = style->bg_gc[state_type];
-            gc3 = style->bg_gc[state_type];
-            gc4 = style->dark_gc[state_type];
-            break;
-        case GTK_SHADOW_ETCHED_OUT:
-            gc1 = style->light_gc[state_type];
-            gc2 = style->dark_gc[state_type];
-            gc3 = style->light_gc[state_type];
-            gc4 = style->dark_gc[state_type];
-            break;
-    }
+    if(XFCE_RC_STYLE(style->rc_style)->smooth_edge)
+        gc1 = style->dark_gc[state_type];
+    else
+        gc1 = style->light_gc[state_type];
+    gc2 = style->bg_gc[state_type];
+    gc3 = style->bg_gc[state_type];
+    gc4 = style->dark_gc[state_type];
 
     if(area)
     {
@@ -1158,35 +1136,13 @@ static void draw_extension(GtkStyle * style, GdkWindow * window, GtkStateType st
     else if(height == -1)
         gdk_drawable_get_size(window, NULL, &height);
 
-    switch (shadow_type)
-    {
-        case GTK_SHADOW_NONE:
-            return;
-        case GTK_SHADOW_IN:
-            gc1 = style->bg_gc[state_type];
-            gc2 = style->dark_gc[state_type];;
-            gc3 = style->bg_gc[state_type];
-            gc4 = style->light_gc[state_type];
-            break;
-        case GTK_SHADOW_ETCHED_IN:
-            gc1 = style->dark_gc[state_type];
-            gc2 = style->light_gc[state_type];
-            gc3 = style->dark_gc[state_type];
-            gc4 = style->light_gc[state_type];
-            break;
-        case GTK_SHADOW_OUT:
-            gc1 = style->light_gc[state_type];
-            gc2 = style->bg_gc[state_type];
-            gc3 = style->bg_gc[state_type];
-            gc4 = style->dark_gc[state_type];
-            break;
-        case GTK_SHADOW_ETCHED_OUT:
-            gc1 = style->light_gc[state_type];
-            gc2 = style->dark_gc[state_type];
-            gc3 = style->light_gc[state_type];
-            gc4 = style->dark_gc[state_type];
-            break;
-    }
+    if(XFCE_RC_STYLE(style->rc_style)->smooth_edge)
+        gc1 = style->dark_gc[state_type];
+    else
+        gc1 = style->light_gc[state_type];
+    gc2 = style->bg_gc[state_type];
+    gc3 = style->bg_gc[state_type];
+    gc4 = style->dark_gc[state_type];
 
     if(area)
     {
