@@ -64,14 +64,16 @@ style "notebook" = "default"
 
 class "GtkNotebook" style "notebook"
 
-style "titlebar"
-{
-    bg[SELECTED]  = "#818178"
-    fg[SELECTED]  = "#ffffff"
-    bg[ACTIVE]    = "#a5a789"
-    fg[ACTIVE]    = "#000000"
-    bg[NORMAL]    = "#c0c2ab"
-    fg[NORMAL]    = "#000000"
-}
-
-widget "xfwm" style "titlebar"
+# xfwm4 frame colors
+# 
+# style "titlebar"
+# {
+#     bg[SELECTED]  = "#818178"
+#     fg[SELECTED]  = "#ffffff"
+#     bg[ACTIVE]    = "#a5a789"
+#     fg[ACTIVE]    = "#000000"
+#     bg[NORMAL]    = "#c0c2ab"
+#     fg[NORMAL]    = "#000000"
+# }
+# 
+# widget "xfwm" style "titlebar"
