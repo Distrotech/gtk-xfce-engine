@@ -79,6 +79,7 @@ XFCE_CFLAGS = @XFCE_CFLAGS@
 XFCE_LIBS = @XFCE_LIBS@
 
 INCLUDES = $(XFCE_CFLAGS)
+CFLAGS = $(XFCE_CFLAGS) -DG_DISABLE_DEPRECATED
 
 enginedir = $(libdir)/gtk-2.0/$(GTK_VERSION)/engines
 
@@ -111,7 +112,6 @@ LIBS = @LIBS@
 libxfce_la_DEPENDENCIES = 
 libxfce_la_OBJECTS =  xfce_theme_draw.lo xfce_theme_main.lo \
 xfce_rc_style.lo
-CFLAGS = @CFLAGS@
 COMPILE = $(CC) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
 LTCOMPILE = $(LIBTOOL) --mode=compile $(CC) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
 CCLD = $(CC)

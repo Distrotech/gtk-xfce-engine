@@ -1,6 +1,7 @@
 @SET_MAKE@
 
 INCLUDES = $(XFCE_CFLAGS)
+CFLAGS = $(XFCE_CFLAGS) -DG_DISABLE_DEPRECATED
 
 enginedir = $(libdir)/gtk-2.0/$(GTK_VERSION)/engines
 
