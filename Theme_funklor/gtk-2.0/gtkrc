@@ -4,7 +4,7 @@ style "default"
     GtkButton::default_border         = {5, 5, 5, 5}
     GtkButton::default_outside_border = {5, 5, 5, 5}
     GtkButton::default_spacing        = 6
-    GtkCheckButton::indicator_size    = 13
+    GtkCheckButton::indicator_size    = 15
     GtkPaned::handle_full_size        = 1
     GtkRange::trough_border           = 2
     GtkRange::slider_width            = 15
