@@ -183,8 +183,8 @@ style "scroll" = "default"
 }
 widget_class "*Scrollbar*"         style "scroll"
 class "*Scrollbar*"                style "scroll"
-widget_class "*Scale*"             style "scroll"
-class "*Scale*"                    style "scroll"
+widget_class "*GtkScale*"          style "scroll"
+class "*GtkScale*"                 style "scroll"
 
 
 # This is for ROX-Filer

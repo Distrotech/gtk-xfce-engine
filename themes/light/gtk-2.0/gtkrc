@@ -56,8 +56,8 @@ style "thin" = "default"
     ythickness = 1
 }
 
-widget_class "*Progress*" style "thin" 
-class "*Progress*"        style "thin" 
+widget_class "*GtkProgress*" style "thin" 
+class "*GtkProgress*"     style "thin" 
 
 style "button" = "default"
 {
