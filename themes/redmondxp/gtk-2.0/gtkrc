@@ -144,7 +144,7 @@ style "button" = "default"
 	boxfill
 	{
 	    fill_style = gradient
-	    orientation = auto
+	    orientation = vertical
 	    shade_start = 1.1
 	    shade_end = 0.9
 	}
