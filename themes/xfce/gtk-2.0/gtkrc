@@ -31,7 +31,7 @@ style "xfce-default"
     base[INSENSITIVE] = "#eeeeea"
     base[NORMAL]      = "#ffffff"
     base[PRELIGHT]    = "#b0c0d0"
-    base[SELECTED]    = "#4a7daf"
+    base[SELECTED]    = "#699dc9"
 
     bg[ACTIVE]        = "#cececa"
     bg[INSENSITIVE]   = "#eeeeea"
@@ -155,10 +155,10 @@ class "*MenuItem*"                 style "xfce-menuitem"
 
 style "xfce-titlebar"
 {
-    bg[SELECTED]      = "#4a7daf"
+    bg[SELECTED]      = "#699dc9"
     fg[SELECTED]      = "#ffffff"
-    bg[ACTIVE]        = "#eeeee2"
-    fg[NORMAL]        = "#b4b492"
+    bg[ACTIVE]        = "#b0c0d0"
+    fg[NORMAL]        = "#000000"
 }
 widget "xfwm"                      style "xfce-titlebar"
 class "MetaFrames"                 style "xfce-titlebar"
