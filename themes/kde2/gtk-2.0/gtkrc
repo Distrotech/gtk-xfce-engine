@@ -67,10 +67,7 @@ style "xfce-kde2-menustyle" = "default"
         smooth_edge = true
         boxfill
         {
-            fill_style = gradient
-            orientation = auto
-            shade_start = 1.10
-            shade_end = 0.90
+            fill_style = plain
         }
     }
 }
