@@ -1505,7 +1505,7 @@ THEME="xfce"
 
 
 
-VERSION=2.2.5
+VERSION=2.2.6
 PACKAGE=gtk-${THEME}-engine
 am__api_version="1.9"
 ac_aux_dir=
@@ -21949,7 +21949,7 @@ GTK_VERSION=`$PKG_CONFIG --variable=gtk_binary_version gtk+-2.0`
 
 
 
-                                                                                                                                                                                                                                                                                                                                                    ac_config_files="$ac_config_files gtk-xfce-engine-2.spec Makefile src/Makefile themes/b5/Makefile themes/b5/gtk-2.0/Makefile themes/xfce/gtk-2.0/Makefile themes/xfce/Makefile themes/xfce-4.0/gtk-2.0/Makefile themes/xfce-4.0/Makefile themes/basic/gtk-2.0/Makefile themes/basic/Makefile themes/cadmium/gtk-2.0/Makefile themes/cadmium/Makefile themes/curve/gtk-2.0/Makefile themes/curve/Makefile themes/dawn/gtk-2.0/Makefile themes/dawn/Makefile themes/kolors/gtk-2.0/Makefile themes/kolors/Makefile themes/kde2/gtk-2.0/Makefile themes/kde2/Makefile themes/light/Makefile themes/light/gtk-2.0/Makefile themes/redmondxp/gtk-2.0/Makefile themes/redmondxp/Makefile themes/saltlake/gtk-2.0/Makefile themes/saltlake/Makefile themes/smooth/gtk-2.0/Makefile themes/smooth/Makefile themes/stellar/gtk-2.0/Makefile themes/stellar/Makefile themes/winter/gtk-2.0/Makefile themes/winter/Makefile themes/Makefile"
+                                                                                                                                                                                                                                                                                                                                                                        ac_config_files="$ac_config_files gtk-xfce-engine-2.spec Makefile src/Makefile themes/b5/Makefile themes/b5/gtk-2.0/Makefile themes/xfce/gtk-2.0/Makefile themes/xfce/Makefile themes/xfce-4.0/gtk-2.0/Makefile themes/xfce-4.0/Makefile themes/basic/gtk-2.0/Makefile themes/basic/Makefile themes/cadmium/gtk-2.0/Makefile themes/cadmium/Makefile themes/curve/gtk-2.0/Makefile themes/curve/Makefile themes/dawn/gtk-2.0/Makefile themes/dawn/Makefile themes/dusk/gtk-2.0/Makefile themes/dusk/Makefile themes/kolors/gtk-2.0/Makefile themes/kolors/Makefile themes/kde2/gtk-2.0/Makefile themes/kde2/Makefile themes/light/Makefile themes/light/gtk-2.0/Makefile themes/redmondxp/gtk-2.0/Makefile themes/redmondxp/Makefile themes/saltlake/gtk-2.0/Makefile themes/saltlake/Makefile themes/smooth/gtk-2.0/Makefile themes/smooth/Makefile themes/stellar/gtk-2.0/Makefile themes/stellar/Makefile themes/winter/gtk-2.0/Makefile themes/winter/Makefile themes/Makefile"
 cat >confcache <<\_ACEOF
 # This file is a shell script that caches the results of configure
 # tests run on this system so they can be shared between configure
@@ -22544,6 +22544,8 @@ do
   "themes/curve/Makefile" ) CONFIG_FILES="$CONFIG_FILES themes/curve/Makefile" ;;
   "themes/dawn/gtk-2.0/Makefile" ) CONFIG_FILES="$CONFIG_FILES themes/dawn/gtk-2.0/Makefile" ;;
   "themes/dawn/Makefile" ) CONFIG_FILES="$CONFIG_FILES themes/dawn/Makefile" ;;
+  "themes/dusk/gtk-2.0/Makefile" ) CONFIG_FILES="$CONFIG_FILES themes/dusk/gtk-2.0/Makefile" ;;
+  "themes/dusk/Makefile" ) CONFIG_FILES="$CONFIG_FILES themes/dusk/Makefile" ;;
   "themes/kolors/gtk-2.0/Makefile" ) CONFIG_FILES="$CONFIG_FILES themes/kolors/gtk-2.0/Makefile" ;;
   "themes/kolors/Makefile" ) CONFIG_FILES="$CONFIG_FILES themes/kolors/Makefile" ;;
   "themes/kde2/gtk-2.0/Makefile" ) CONFIG_FILES="$CONFIG_FILES themes/kde2/gtk-2.0/Makefile" ;;

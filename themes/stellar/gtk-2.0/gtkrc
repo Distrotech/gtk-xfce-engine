@@ -1,9 +1,8 @@
 style "default"
 {
     GtkButton::default_border         = {5, 5, 5, 5}
-    GtkButton::default_outside_border = {5, 5, 5, 5}
+    GtkButton::default_outside_border = {6, 6, 6, 6}
     GtkButton::default_spacing        = 5
-    GtkButton::focus-line-width       = 1
     GtkButton::focus-padding          = 0
     GtkCheckButton::indicator_size    = 15
     GtkRadioButton::indicator_size    = 15
@@ -17,7 +16,6 @@ style "default"
     GtkWidget::focus-line-pattern     = "\0"
     GtkWidget::focus-line-width       = 2
     GtkWidget::interior_focus         = 0
-    GtkWidget::interior_focus         = 5
     GtkWidget::internal-padding       = 2
 
     ExoIconBar::active-item-border-color = "#724056"
