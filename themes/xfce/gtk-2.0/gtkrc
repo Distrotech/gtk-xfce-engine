@@ -174,8 +174,8 @@ style "titlebar" = "default"
 {
     bg[SELECTED]      = "#647694"
     fg[SELECTED]      = "#ffffff"
-    bg[INSENSITIVE]   = "#d3d5d7"
-    fg[INSENSITIVE]   = "#929599"
+    bg[INSENSITIVE]   = "#eeeeef"
+    fg[INSENSITIVE]   = "#a5a5a9"
 }
 widget "xfwm"                      style "titlebar"
 class "MetaFrames"                 style "titlebar"
