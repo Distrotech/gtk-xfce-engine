@@ -661,6 +661,10 @@ static void draw_shadow(GtkStyle * style, GdkWindow * window, GtkStateType state
                 {
                     /* Do nothing */
                 }
+                else if (DETAIL("menubar") || DETAIL ("dockitem_bin") || DETAIL ("dockitem") || DETAIL ("toolbar") || DETAIL ("handlebox"))
+                {
+                    /* Do nothing */
+                }
                 else if(DETAIL("vscrollbar") || DETAIL("hscrollbar") || DETAIL("bar") || DETAIL("slider") || DETAIL("vscale") || DETAIL("hscale"))
                 {
                     if ((xt > 1) && (yt > 1))
@@ -750,6 +754,10 @@ static void draw_shadow(GtkStyle * style, GdkWindow * window, GtkStateType state
             else
             {
                 if ((DETAIL("spinbutton_up") || DETAIL("spinbutton_down")) && (state_type != GTK_STATE_PRELIGHT))
+                {
+                    /* Do nothing */
+                }
+                else if (DETAIL("menubar") || DETAIL ("dockitem_bin") || DETAIL ("dockitem") || DETAIL ("toolbar") || DETAIL ("handlebox"))
                 {
                     /* Do nothing */
                 }
