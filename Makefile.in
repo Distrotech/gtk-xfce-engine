@@ -46,9 +46,7 @@ AUTOMAKE = @AUTOMAKE@
 AWK = @AWK@
 CC = @CC@
 CCDEPMODE = @CCDEPMODE@
-CFLAGS = $(XFCE_CFLAGS) -DG_DISABLE_DEPRECATED -DGTK_DISABLE_DEPRECATED \
--DGDK_DISABLE_DEPRECATED -DGDK_PIXBUF_DISABLE_DEPRECATED
-
+CFLAGS = @CFLAGS@
 CPP = @CPP@
 CPPFLAGS = @CPPFLAGS@
 CYGPATH_W = @CYGPATH_W@
@@ -136,6 +134,9 @@ SUBDIRS = Theme\
 
 
 INCLUDES = $(XFCE_CFLAGS)
+libxfce_la_CFLAGS = $(XFCE_CFLAGS) -DG_DISABLE_DEPRECATED -DGTK_DISABLE_DEPRECATED \
+-DGDK_DISABLE_DEPRECATED -DGDK_PIXBUF_DISABLE_DEPRECATED
+
 
 enginedir = $(libdir)/gtk-2.0/$(GTK_VERSION)/engines
 
@@ -162,16 +163,16 @@ CONFIG_CLEAN_FILES = gtk-xfce-engine-2.spec
 LTLIBRARIES = $(engine_LTLIBRARIES)
 
 libxfce_la_DEPENDENCIES =
-am_libxfce_la_OBJECTS = xfce_theme_draw.lo xfce_theme_main.lo \
-	xfce_rc_style.lo
+am_libxfce_la_OBJECTS = libxfce_la-xfce_theme_draw.lo \
+	libxfce_la-xfce_theme_main.lo libxfce_la-xfce_rc_style.lo
 libxfce_la_OBJECTS = $(am_libxfce_la_OBJECTS)
 
 DEFAULT_INCLUDES =  -I. -I$(srcdir) -I.
 depcomp = $(SHELL) $(top_srcdir)/depcomp
 am__depfiles_maybe = depfiles
-@AMDEP_TRUE@DEP_FILES = ./$(DEPDIR)/xfce_rc_style.Plo \
-@AMDEP_TRUE@	./$(DEPDIR)/xfce_theme_draw.Plo \
-@AMDEP_TRUE@	./$(DEPDIR)/xfce_theme_main.Plo
+@AMDEP_TRUE@DEP_FILES = ./$(DEPDIR)/libxfce_la-xfce_rc_style.Plo \
+@AMDEP_TRUE@	./$(DEPDIR)/libxfce_la-xfce_theme_draw.Plo \
+@AMDEP_TRUE@	./$(DEPDIR)/libxfce_la-xfce_theme_main.Plo
 COMPILE = $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \
 	$(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
 LTCOMPILE = $(LIBTOOL) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) \
@@ -262,6 +263,9 @@ clean-engineLTLIBRARIES:
 	  echo "rm -f \"$${dir}/so_locations\""; \
 	  rm -f "$${dir}/so_locations"; \
 	done
+libxfce_la-xfce_theme_draw.lo: xfce_theme_draw.c
+libxfce_la-xfce_theme_main.lo: xfce_theme_main.c
+libxfce_la-xfce_rc_style.lo: xfce_rc_style.c
 libxfce.la: $(libxfce_la_OBJECTS) $(libxfce_la_DEPENDENCIES) 
 	$(LINK) -rpath $(enginedir) $(libxfce_la_LDFLAGS) $(libxfce_la_OBJECTS) $(libxfce_la_LIBADD) $(LIBS)
 
@@ -271,9 +275,9 @@ mostlyclean-compile:
 distclean-compile:
 	-rm -f *.tab.c
 
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/xfce_rc_style.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/xfce_theme_draw.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/xfce_theme_main.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxfce_la-xfce_rc_style.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxfce_la-xfce_theme_draw.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libxfce_la-xfce_theme_main.Plo@am__quote@
 
 distclean-depend:
 	-rm -rf ./$(DEPDIR)
@@ -310,6 +314,105 @@ distclean-depend:
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	depfile='$(DEPDIR)/$*.Plo' tmpdepfile='$(DEPDIR)/$*.TPlo' @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(LTCOMPILE) -c -o $@ `test -f '$<' || echo '$(srcdir)/'`$<
+
+libxfce_la-xfce_theme_draw.o: xfce_theme_draw.c
+@am__fastdepCC_TRUE@	if $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libxfce_la_CFLAGS) $(CFLAGS) -MT libxfce_la-xfce_theme_draw.o -MD -MP -MF "$(DEPDIR)/libxfce_la-xfce_theme_draw.Tpo" \
+@am__fastdepCC_TRUE@	  -c -o libxfce_la-xfce_theme_draw.o `test -f 'xfce_theme_draw.c' || echo '$(srcdir)/'`xfce_theme_draw.c; \
+@am__fastdepCC_TRUE@	then mv "$(DEPDIR)/libxfce_la-xfce_theme_draw.Tpo" "$(DEPDIR)/libxfce_la-xfce_theme_draw.Po"; \
+@am__fastdepCC_TRUE@	else rm -f "$(DEPDIR)/libxfce_la-xfce_theme_draw.Tpo"; exit 1; \
+@am__fastdepCC_TRUE@	fi
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='xfce_theme_draw.c' object='libxfce_la-xfce_theme_draw.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	depfile='$(DEPDIR)/libxfce_la-xfce_theme_draw.Po' tmpdepfile='$(DEPDIR)/libxfce_la-xfce_theme_draw.TPo' @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libxfce_la_CFLAGS) $(CFLAGS) -c -o libxfce_la-xfce_theme_draw.o `test -f 'xfce_theme_draw.c' || echo '$(srcdir)/'`xfce_theme_draw.c
+
+libxfce_la-xfce_theme_draw.obj: xfce_theme_draw.c
+@am__fastdepCC_TRUE@	if $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libxfce_la_CFLAGS) $(CFLAGS) -MT libxfce_la-xfce_theme_draw.obj -MD -MP -MF "$(DEPDIR)/libxfce_la-xfce_theme_draw.Tpo" \
+@am__fastdepCC_TRUE@	  -c -o libxfce_la-xfce_theme_draw.obj `if test -f 'xfce_theme_draw.c'; then $(CYGPATH_W) 'xfce_theme_draw.c'; else $(CYGPATH_W) '$(srcdir)/xfce_theme_draw.c'`; \
+@am__fastdepCC_TRUE@	then mv "$(DEPDIR)/libxfce_la-xfce_theme_draw.Tpo" "$(DEPDIR)/libxfce_la-xfce_theme_draw.Po"; \
+@am__fastdepCC_TRUE@	else rm -f "$(DEPDIR)/libxfce_la-xfce_theme_draw.Tpo"; exit 1; \
+@am__fastdepCC_TRUE@	fi
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='xfce_theme_draw.c' object='libxfce_la-xfce_theme_draw.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	depfile='$(DEPDIR)/libxfce_la-xfce_theme_draw.Po' tmpdepfile='$(DEPDIR)/libxfce_la-xfce_theme_draw.TPo' @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libxfce_la_CFLAGS) $(CFLAGS) -c -o libxfce_la-xfce_theme_draw.obj `if test -f 'xfce_theme_draw.c'; then $(CYGPATH_W) 'xfce_theme_draw.c'; else $(CYGPATH_W) '$(srcdir)/xfce_theme_draw.c'`
+
+libxfce_la-xfce_theme_draw.lo: xfce_theme_draw.c
+@am__fastdepCC_TRUE@	if $(LIBTOOL) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libxfce_la_CFLAGS) $(CFLAGS) -MT libxfce_la-xfce_theme_draw.lo -MD -MP -MF "$(DEPDIR)/libxfce_la-xfce_theme_draw.Tpo" \
+@am__fastdepCC_TRUE@	  -c -o libxfce_la-xfce_theme_draw.lo `test -f 'xfce_theme_draw.c' || echo '$(srcdir)/'`xfce_theme_draw.c; \
+@am__fastdepCC_TRUE@	then mv "$(DEPDIR)/libxfce_la-xfce_theme_draw.Tpo" "$(DEPDIR)/libxfce_la-xfce_theme_draw.Plo"; \
+@am__fastdepCC_TRUE@	else rm -f "$(DEPDIR)/libxfce_la-xfce_theme_draw.Tpo"; exit 1; \
+@am__fastdepCC_TRUE@	fi
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='xfce_theme_draw.c' object='libxfce_la-xfce_theme_draw.lo' libtool=yes @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	depfile='$(DEPDIR)/libxfce_la-xfce_theme_draw.Plo' tmpdepfile='$(DEPDIR)/libxfce_la-xfce_theme_draw.TPlo' @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(LIBTOOL) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libxfce_la_CFLAGS) $(CFLAGS) -c -o libxfce_la-xfce_theme_draw.lo `test -f 'xfce_theme_draw.c' || echo '$(srcdir)/'`xfce_theme_draw.c
+
+libxfce_la-xfce_theme_main.o: xfce_theme_main.c
+@am__fastdepCC_TRUE@	if $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libxfce_la_CFLAGS) $(CFLAGS) -MT libxfce_la-xfce_theme_main.o -MD -MP -MF "$(DEPDIR)/libxfce_la-xfce_theme_main.Tpo" \
+@am__fastdepCC_TRUE@	  -c -o libxfce_la-xfce_theme_main.o `test -f 'xfce_theme_main.c' || echo '$(srcdir)/'`xfce_theme_main.c; \
+@am__fastdepCC_TRUE@	then mv "$(DEPDIR)/libxfce_la-xfce_theme_main.Tpo" "$(DEPDIR)/libxfce_la-xfce_theme_main.Po"; \
+@am__fastdepCC_TRUE@	else rm -f "$(DEPDIR)/libxfce_la-xfce_theme_main.Tpo"; exit 1; \
+@am__fastdepCC_TRUE@	fi
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='xfce_theme_main.c' object='libxfce_la-xfce_theme_main.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	depfile='$(DEPDIR)/libxfce_la-xfce_theme_main.Po' tmpdepfile='$(DEPDIR)/libxfce_la-xfce_theme_main.TPo' @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libxfce_la_CFLAGS) $(CFLAGS) -c -o libxfce_la-xfce_theme_main.o `test -f 'xfce_theme_main.c' || echo '$(srcdir)/'`xfce_theme_main.c
+
+libxfce_la-xfce_theme_main.obj: xfce_theme_main.c
+@am__fastdepCC_TRUE@	if $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libxfce_la_CFLAGS) $(CFLAGS) -MT libxfce_la-xfce_theme_main.obj -MD -MP -MF "$(DEPDIR)/libxfce_la-xfce_theme_main.Tpo" \
+@am__fastdepCC_TRUE@	  -c -o libxfce_la-xfce_theme_main.obj `if test -f 'xfce_theme_main.c'; then $(CYGPATH_W) 'xfce_theme_main.c'; else $(CYGPATH_W) '$(srcdir)/xfce_theme_main.c'`; \
+@am__fastdepCC_TRUE@	then mv "$(DEPDIR)/libxfce_la-xfce_theme_main.Tpo" "$(DEPDIR)/libxfce_la-xfce_theme_main.Po"; \
+@am__fastdepCC_TRUE@	else rm -f "$(DEPDIR)/libxfce_la-xfce_theme_main.Tpo"; exit 1; \
+@am__fastdepCC_TRUE@	fi
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='xfce_theme_main.c' object='libxfce_la-xfce_theme_main.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	depfile='$(DEPDIR)/libxfce_la-xfce_theme_main.Po' tmpdepfile='$(DEPDIR)/libxfce_la-xfce_theme_main.TPo' @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libxfce_la_CFLAGS) $(CFLAGS) -c -o libxfce_la-xfce_theme_main.obj `if test -f 'xfce_theme_main.c'; then $(CYGPATH_W) 'xfce_theme_main.c'; else $(CYGPATH_W) '$(srcdir)/xfce_theme_main.c'`
+
+libxfce_la-xfce_theme_main.lo: xfce_theme_main.c
+@am__fastdepCC_TRUE@	if $(LIBTOOL) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libxfce_la_CFLAGS) $(CFLAGS) -MT libxfce_la-xfce_theme_main.lo -MD -MP -MF "$(DEPDIR)/libxfce_la-xfce_theme_main.Tpo" \
+@am__fastdepCC_TRUE@	  -c -o libxfce_la-xfce_theme_main.lo `test -f 'xfce_theme_main.c' || echo '$(srcdir)/'`xfce_theme_main.c; \
+@am__fastdepCC_TRUE@	then mv "$(DEPDIR)/libxfce_la-xfce_theme_main.Tpo" "$(DEPDIR)/libxfce_la-xfce_theme_main.Plo"; \
+@am__fastdepCC_TRUE@	else rm -f "$(DEPDIR)/libxfce_la-xfce_theme_main.Tpo"; exit 1; \
+@am__fastdepCC_TRUE@	fi
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='xfce_theme_main.c' object='libxfce_la-xfce_theme_main.lo' libtool=yes @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	depfile='$(DEPDIR)/libxfce_la-xfce_theme_main.Plo' tmpdepfile='$(DEPDIR)/libxfce_la-xfce_theme_main.TPlo' @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(LIBTOOL) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libxfce_la_CFLAGS) $(CFLAGS) -c -o libxfce_la-xfce_theme_main.lo `test -f 'xfce_theme_main.c' || echo '$(srcdir)/'`xfce_theme_main.c
+
+libxfce_la-xfce_rc_style.o: xfce_rc_style.c
+@am__fastdepCC_TRUE@	if $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libxfce_la_CFLAGS) $(CFLAGS) -MT libxfce_la-xfce_rc_style.o -MD -MP -MF "$(DEPDIR)/libxfce_la-xfce_rc_style.Tpo" \
+@am__fastdepCC_TRUE@	  -c -o libxfce_la-xfce_rc_style.o `test -f 'xfce_rc_style.c' || echo '$(srcdir)/'`xfce_rc_style.c; \
+@am__fastdepCC_TRUE@	then mv "$(DEPDIR)/libxfce_la-xfce_rc_style.Tpo" "$(DEPDIR)/libxfce_la-xfce_rc_style.Po"; \
+@am__fastdepCC_TRUE@	else rm -f "$(DEPDIR)/libxfce_la-xfce_rc_style.Tpo"; exit 1; \
+@am__fastdepCC_TRUE@	fi
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='xfce_rc_style.c' object='libxfce_la-xfce_rc_style.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	depfile='$(DEPDIR)/libxfce_la-xfce_rc_style.Po' tmpdepfile='$(DEPDIR)/libxfce_la-xfce_rc_style.TPo' @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libxfce_la_CFLAGS) $(CFLAGS) -c -o libxfce_la-xfce_rc_style.o `test -f 'xfce_rc_style.c' || echo '$(srcdir)/'`xfce_rc_style.c
+
+libxfce_la-xfce_rc_style.obj: xfce_rc_style.c
+@am__fastdepCC_TRUE@	if $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libxfce_la_CFLAGS) $(CFLAGS) -MT libxfce_la-xfce_rc_style.obj -MD -MP -MF "$(DEPDIR)/libxfce_la-xfce_rc_style.Tpo" \
+@am__fastdepCC_TRUE@	  -c -o libxfce_la-xfce_rc_style.obj `if test -f 'xfce_rc_style.c'; then $(CYGPATH_W) 'xfce_rc_style.c'; else $(CYGPATH_W) '$(srcdir)/xfce_rc_style.c'`; \
+@am__fastdepCC_TRUE@	then mv "$(DEPDIR)/libxfce_la-xfce_rc_style.Tpo" "$(DEPDIR)/libxfce_la-xfce_rc_style.Po"; \
+@am__fastdepCC_TRUE@	else rm -f "$(DEPDIR)/libxfce_la-xfce_rc_style.Tpo"; exit 1; \
+@am__fastdepCC_TRUE@	fi
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='xfce_rc_style.c' object='libxfce_la-xfce_rc_style.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	depfile='$(DEPDIR)/libxfce_la-xfce_rc_style.Po' tmpdepfile='$(DEPDIR)/libxfce_la-xfce_rc_style.TPo' @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libxfce_la_CFLAGS) $(CFLAGS) -c -o libxfce_la-xfce_rc_style.obj `if test -f 'xfce_rc_style.c'; then $(CYGPATH_W) 'xfce_rc_style.c'; else $(CYGPATH_W) '$(srcdir)/xfce_rc_style.c'`
+
+libxfce_la-xfce_rc_style.lo: xfce_rc_style.c
+@am__fastdepCC_TRUE@	if $(LIBTOOL) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libxfce_la_CFLAGS) $(CFLAGS) -MT libxfce_la-xfce_rc_style.lo -MD -MP -MF "$(DEPDIR)/libxfce_la-xfce_rc_style.Tpo" \
+@am__fastdepCC_TRUE@	  -c -o libxfce_la-xfce_rc_style.lo `test -f 'xfce_rc_style.c' || echo '$(srcdir)/'`xfce_rc_style.c; \
+@am__fastdepCC_TRUE@	then mv "$(DEPDIR)/libxfce_la-xfce_rc_style.Tpo" "$(DEPDIR)/libxfce_la-xfce_rc_style.Plo"; \
+@am__fastdepCC_TRUE@	else rm -f "$(DEPDIR)/libxfce_la-xfce_rc_style.Tpo"; exit 1; \
+@am__fastdepCC_TRUE@	fi
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='xfce_rc_style.c' object='libxfce_la-xfce_rc_style.lo' libtool=yes @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	depfile='$(DEPDIR)/libxfce_la-xfce_rc_style.Plo' tmpdepfile='$(DEPDIR)/libxfce_la-xfce_rc_style.TPlo' @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(LIBTOOL) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libxfce_la_CFLAGS) $(CFLAGS) -c -o libxfce_la-xfce_rc_style.lo `test -f 'xfce_rc_style.c' || echo '$(srcdir)/'`xfce_rc_style.c
 
 mostlyclean-libtool:
 	-rm -f *.lo
