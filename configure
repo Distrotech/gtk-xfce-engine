@@ -7844,7 +7844,7 @@ _ACEOF
 fi;
 
 
-ac_config_files="$ac_config_files gtk-xfce-engine-2.spec Makefile Theme_b5/Makefile Theme_b5/gtk-2.0/Makefile Theme_basic/Makefile Theme_basic/gtk-2.0/Makefile Theme_funklor/Makefile Theme_funklor/gtk-2.0/Makefile Theme/gtk-2.0/Makefile Theme/Makefile Theme_light/Makefile Theme_light/gtk-2.0/Makefile Theme_redmondxp/Makefile Theme_redmondxp/gtk-2.0/Makefile Theme_smooth/gtk-2.0/Makefile Theme_smooth/Makefile"
+ac_config_files="$ac_config_files gtk-xfce-engine-2.spec Makefile Theme_b5/Makefile Theme_b5/gtk-2.0/Makefile Theme_basic/Makefile Theme_basic/gtk-2.0/Makefile Theme_funklor/Makefile Theme_funklor/gtk-2.0/Makefile Theme/gtk-2.0/Makefile Theme/Makefile Theme_curve/gtk-2.0/Makefile Theme_curve/Makefile Theme_light/Makefile Theme_light/gtk-2.0/Makefile Theme_redmondxp/Makefile Theme_redmondxp/gtk-2.0/Makefile Theme_smooth/gtk-2.0/Makefile Theme_smooth/Makefile"
 cat >confcache <<\_ACEOF
 # This file is a shell script that caches the results of configure
 # tests run on this system so they can be shared between configure
@@ -8343,6 +8343,8 @@ do
   "Theme_funklor/gtk-2.0/Makefile" ) CONFIG_FILES="$CONFIG_FILES Theme_funklor/gtk-2.0/Makefile" ;;
   "Theme/gtk-2.0/Makefile" ) CONFIG_FILES="$CONFIG_FILES Theme/gtk-2.0/Makefile" ;;
   "Theme/Makefile" ) CONFIG_FILES="$CONFIG_FILES Theme/Makefile" ;;
+  "Theme_curve/gtk-2.0/Makefile" ) CONFIG_FILES="$CONFIG_FILES Theme_curve/gtk-2.0/Makefile" ;;
+  "Theme_curve/Makefile" ) CONFIG_FILES="$CONFIG_FILES Theme_curve/Makefile" ;;
   "Theme_light/Makefile" ) CONFIG_FILES="$CONFIG_FILES Theme_light/Makefile" ;;
   "Theme_light/gtk-2.0/Makefile" ) CONFIG_FILES="$CONFIG_FILES Theme_light/gtk-2.0/Makefile" ;;
   "Theme_redmondxp/Makefile" ) CONFIG_FILES="$CONFIG_FILES Theme_redmondxp/Makefile" ;;
