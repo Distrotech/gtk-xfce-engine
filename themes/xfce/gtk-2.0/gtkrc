@@ -155,10 +155,10 @@ class "*MenuItem*"                 style "xfce-menuitem"
 
 style "xfce-titlebar"
 {
-    bg[SELECTED]      = "#7585C0"
+    bg[SELECTED]      = "#70727a"
     fg[SELECTED]      = "#ffffff"
-    bg[ACTIVE]        = "#ddddde"
-    fg[NORMAL]        = "#9a9a9c"
+    bg[ACTIVE]        = "#c4c6cc"
+    fg[NORMAL]        = "#868992"
 }
 widget "xfwm"                      style "xfce-titlebar"
 class "MetaFrames"                 style "xfce-titlebar"
