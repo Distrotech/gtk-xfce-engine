@@ -33,10 +33,10 @@ style "curve-default"
     bg[PRELIGHT]      = "#e5e5e5" 
     bg[ACTIVE]        = "#cccccc" 
     bg[INSENSITIVE]   = "#d8d8d8" 
-    bg[SELECTED]      = "#5f7ab8" 
+    bg[SELECTED]      = "#4464ac" 
 
     base[NORMAL]      = "#ffffff"       
-    base[SELECTED]    = "#5f7ab8"       
+    base[SELECTED]    = "#4464ac"       
     base[ACTIVE]      = "#99a6bf"       
     base[PRELIGHT]    = "#e5e5e5"       
     base[INSENSITIVE] = "#d8d8d8"       
@@ -61,7 +61,7 @@ widget_class "*"                   style "curve-default"
 
 style "curve-menu-color" = "curve-default"
 {
-    bg[PRELIGHT]    = "#5f7ab8"
+    bg[PRELIGHT]    = "#4464ac"
     fg[PRELIGHT]    = "#ffffff"
 
     engine "xfce" 
@@ -109,8 +109,8 @@ style "curve-menu" = "curve-menu-color"
         {
 	    fill_style = gradient
 	    orientation = vertical
-	    shade_start = 0.75
-	    shade_end = 1.20
+	    shade_start = 0.80
+	    shade_end = 1.30
 	}
     }
 }
@@ -118,3 +118,20 @@ widget_class "*MenuItem*"          style "curve-menu"
 class "*MenuItem*"                 style "curve-menu"
 widget_class "*Progress*"          style "curve-menu"
 class "*Progress*"                 style "curve-menu"
+
+style "curve-button" = "curve-default"
+{
+    xthickness = 2
+    ythickness = 2
+
+    engine "xfce" 
+    {
+        smooth_edge = true
+        boxfill
+        {
+	    fill_style = plain
+        }
+    }
+}
+widget_class "*Button*"            style "curve-button"
+class "*Button*"                   style "curve-button"
