@@ -7,7 +7,7 @@ style "default"
     GtkButton::focus-padding          = 0
     GtkCheckButton::indicator_size    = 15
     GtkRadioButton::indicator_size    = 15
-    GtkMenuBar::shadow_type           = none
+    GtkMenuBar::shadow_type           = out
     GtkMenuItem::selected_shadow_type = out
     GtkPaned::handle_full_size        = 1
     GtkRange::slider_width            = 11
@@ -15,7 +15,7 @@ style "default"
     GtkRange::stepper_spacing         = 0
     GtkRange::trough_border           = 0
     GtkScrollbar::min_slider_length   = 20
-    GtkToolbar::shadow_type           = none
+    GtkToolbar::shadow_type           = out
     GtkWidget::interior_focus         = 1
 
     fg[ACTIVE]        = "#525051"

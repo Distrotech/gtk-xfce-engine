@@ -4,10 +4,10 @@ style "default"
     GtkButton::default_outside_border = {0, 0, 0, 0}
     GtkButton::default_spacing        = 8
     GtkButton::focus-line-width       = 1
-    GtkButton::focus-padding          = 0
-    GtkMenuBar::shadow_type           = none
+    GtkButton::focus-padding          = 2
+    GtkMenuBar::shadow_type           = out
     GtkPaned::handle_full_size        = 1
-    GtkToolbar::shadow_type           = none
+    GtkToolbar::shadow_type           = out
     GtkWidget::interior_focus         = 1
     GtkRange::slider_width            = 14
     GtkRange::stepper_size            = 14

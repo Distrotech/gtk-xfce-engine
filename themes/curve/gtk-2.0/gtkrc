@@ -15,7 +15,7 @@ style "default"
     GtkRange::stepper_spacing         = 0
     GtkRange::trough_border           = 0
     GtkScrollbar::min_slider_length   = 20
-    GtkStatusbar::shadow_type         = none
+    GtkStatusbar::shadow_type         = in
     GtkToolbar::shadow_type           = out
     GtkWidget::focus-line-pattern     = "\0"
     GtkWidget::focus-line-width       = 1

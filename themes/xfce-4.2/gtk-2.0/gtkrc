@@ -8,8 +8,8 @@ style "default"
     GtkButton::focus-padding                     = 0
     GtkCheckButton::indicator_size               = 12
     GtkMenuBar::internal-padding                 = 2
-    GtkMenuBar::shadow_type                      = none
-    GtkHandleBox::shadow_type                    = none
+    GtkMenuBar::shadow_type                      = out
+    GtkHandleBox::shadow_type                    = out
     GtkMenuItem::selected_shadow_type            = etched-in
     GtkPaned::handle_full_size                   = 1
     GtkPaned::handle_size                        = 7
@@ -21,7 +21,7 @@ style "default"
     GtkScrollbar::has_backward_stepper           = 1
 #   GtkScrollbar::has_secondary_backward_stepper = 1
     GtkScrollbar::min_slider_length              = 20
-    GtkToolbar::shadow_type                      = none
+    GtkToolbar::shadow_type                      = out
     GtkWidget::focus-line-width                  = 1
     GtkWidget::focus_padding                     = 2 
     GtkWidget::interior_focus                    = 5 
@@ -176,13 +176,6 @@ style "menuitem" = "default"
 
 widget_class "*MenuItem*"          style "menuitem"
 class "*MenuItem*"                 style "menuitem"
-
-style "handlebox" = "default"
-{
-    xthickness = 1
-    ythickness = 2
-}
-widget_class "*HandleBox"          style "handlebox"
 
 # This is for ROX-Filer
 # 
