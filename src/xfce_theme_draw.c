@@ -937,6 +937,9 @@ static void draw_check(GtkStyle * style, GdkWindow * window, GtkStateType state,
 
     if(DETAIL("check"))    /* Menu item */
     {
+        draw_part(window, style->dark_gc[state], area, x, y, CHECK_LIGHT);
+        draw_part(window, style->dark_gc[state], area, x, y, CHECK_DARK);
+
         if(shadow == GTK_SHADOW_IN)
         {
             draw_part(window, style->text_gc[state], area, x, y, CHECK_TEXT);
@@ -962,6 +965,9 @@ static void draw_option(GtkStyle * style, GdkWindow * window, GtkStateType state
 
     if(DETAIL("option"))   /* Menu item */
     {
+        draw_part(window, style->dark_gc[state], area, x, y, RADIO_LIGHT);
+        draw_part(window, style->dark_gc[state], area, x, y, RADIO_DARK);
+
         if(shadow == GTK_SHADOW_IN)
         {
             draw_part(window, style->text_gc[state], area, x, y, RADIO_TEXT);
