@@ -48,7 +48,7 @@ class "GtkWidget" style "default"
 
 style "titlebar"
 {
-    bg[SELECTED]      = "#1d5a8b"
+    bg[SELECTED]      = "#678653"
     fg[SELECTED]      = "#ffffff"
 }
 
