@@ -274,13 +274,15 @@ draw_vline (GtkStyle * style, GdkWindow * window, GtkStateType state_type, GdkRe
 static void
 draw_shadow (GtkStyle * style, GdkWindow * window, GtkStateType state_type, GtkShadowType shadow_type, GdkRectangle * area, GtkWidget * widget, const gchar * detail, gint x, gint y, gint width, gint height)
 {
+  GdkGC *gc1, *gc2, *gc3;
+
   g_return_if_fail (style != NULL);
   g_return_if_fail (window != NULL);
-  
-  GdkGC *gc1 = style->dark_gc[state_type];
-  GdkGC *gc2 = style->light_gc[state_type];
-  GdkGC *gc3 = style->black_gc;
-
+	
+  gc1 = style->dark_gc[state_type];
+  gc2 = style->light_gc[state_type];
+  gc3 = style->black_gc;
+	
   if(XFCE_RC_STYLE (style->rc_style)->smooth_edge)
   {
       gc1 = style->mid_gc[state_type];
