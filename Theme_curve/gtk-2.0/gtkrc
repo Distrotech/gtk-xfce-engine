@@ -6,7 +6,7 @@ style "curve-default"
     GtkButton::default_spacing        = 2
     GtkCheckButton::indicator_size    = 15
     GtkPaned::handle_full_size        = 1
-    GtkRange::trough_border           = 2
+    GtkRange::trough_border           = 1
     GtkRange::slider_width            = 15
     GtkRange::stepper_size            = 15
     GtkRange::stepper_spacing         = 0
@@ -22,39 +22,9 @@ style "curve-default"
     bg[PRELIGHT]    = "#f2f2f2"
     bg[ACTIVE]      = "#cccccc"
     bg[INSENSITIVE] = "#d8d8d8"
-    bg[SELECTED]    = "#28578f"
+    bg[SELECTED]    = "#0a5f89"
 
-    base[SELECTED]  = "#1a65a2"
-    text[SELECTED]  = "#ffffff"
-
-    engine "xfce" 
-    {
-        smooth_edge = FALSE
-    }
-}
-
-class "GtkWidget"                  style "curve-default"
-widget_class "*.GtkSpinButton*"    style "curve-default"
-widget_class "*.GtkCheckButton*"   style "curve-default"
-widget_class "*.GtkRadioButton*"   style "curve-default"
-widget_class "*.GtkToggleButton*"  style "curve-default"
-
-style "curve-colored"
-{
-    fg[NORMAL]      = "#000000"
-    fg[ACTIVE]      = "#000000"
-    fg[PRELIGHT]    = "#ffffff"
-    fg[SELECTED]    = "#ffffff"
-    fg[INSENSITIVE] = "#7f7f7f"
-
-    bg[NORMAL]      = "#e5e5e5"
-    bg[PRELIGHT]    = "#28578f"
-    bg[ACTIVE]      = "#28578f"
-    bg[INSENSITIVE] = "#d8d8d8"
-    bg[SELECTED]    = "#28578f"
-
-    base[PRELIGHT]  = "#28578f"
-    base[SELECTED]  = "#1a65a2"
+    base[SELECTED]  = "#0a5f89"
     text[SELECTED]  = "#ffffff"
 
     engine "xfce" 
@@ -63,5 +33,4 @@ style "curve-colored"
     }
 }
 
-class "GtkList"                    style "curve-colored"
-widget_class "*.GtkMenu*"          style "curve-colored"
+class "GtkWidget"                  style "curve-default"
