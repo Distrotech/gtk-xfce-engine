@@ -30,17 +30,17 @@ style "default"
     xthickness = 2
     ythickness = 2
 
-    base[ACTIVE]      = "#c2c4ca"
-    base[INSENSITIVE] = "#eeeeef"
+    base[ACTIVE]      = "#cfcecd"
+    base[INSENSITIVE] = "#e8e7e6"
     base[NORMAL]      = "#ffffff"
-    base[PRELIGHT]    = "#d4d8e0"
-    base[SELECTED]    = "#3e5e7d"
+    base[PRELIGHT]    = "#cfcecd"
+    base[SELECTED]    = "#536d80"
 
-    bg[ACTIVE]        = "#c2c4ca"
-    bg[INSENSITIVE]   = "#eeeeef"
-    bg[NORMAL]        = "#eeeeef"
-    bg[PRELIGHT]      = "#d4d8e0"
-    bg[SELECTED]      = "#d4d8e0"
+    bg[ACTIVE]        = "#cfcecd"
+    bg[INSENSITIVE]   = "#e8e7e6"
+    bg[NORMAL]        = "#e8e7e6"
+    bg[PRELIGHT]      = "#cfcecd"
+    bg[SELECTED]      = "#cfcecd"
 
     fg[ACTIVE]        = "#000000"
     fg[INSENSITIVE]   = "#8e8e8a"
@@ -92,9 +92,9 @@ style "button" = "default"
     xthickness = 3
     ythickness = 3
 
-    bg[PRELIGHT]      = "#d4d6d8"
-    bg[NORMAL]        = "#d4d6d8"
-    bg[ACTIVE]        = "#c2c4ca"
+    bg[PRELIGHT]      = "#cfcecd"
+    bg[NORMAL]        = "#cfcecd"
+    bg[ACTIVE]        = "#cfcecd"
 
     engine "xfce" 
     {
@@ -121,9 +121,9 @@ style "scrollbar" = "default"
     xthickness = 2
     ythickness = 2
 
-    bg[PRELIGHT]      = "#d4d6d8"
-    bg[NORMAL]        = "#d4d6d8"
-    bg[ACTIVE]        = "#eeeeef"
+    bg[PRELIGHT]      = "#cfcecd"
+    bg[NORMAL]        = "#cfcecd"
+    bg[ACTIVE]        = "#e8e7e6"
 
     engine "xfce" 
     {
@@ -148,9 +148,9 @@ style "progress" = "default"
     xthickness = 2
     ythickness = 2
 
-    bg[PRELIGHT]      = "#d4d8e0"
-    bg[NORMAL]        = "#eeeeef"
-    bg[ACTIVE]        = "#eeeeef"
+    bg[PRELIGHT]      = "#cfcecd"
+    bg[NORMAL]        = "#e8e7e6"
+    bg[ACTIVE]        = "#e8e7e6"
 
     engine "xfce" 
     {
@@ -198,9 +198,9 @@ widget_class "*Collection"         style "rox"
 style "titlebar" = "default"
 {
 #    bg[SELECTED]      = "#70727f"
-    bg[SELECTED]      = "#3e5e7d"
+    bg[SELECTED]      = "#536d80"
     fg[SELECTED]      = "#ffffff"
-    bg[INSENSITIVE]   = "#eeeeef"
+    bg[INSENSITIVE]   = "#e8e7e6"
     fg[INSENSITIVE]   = "#a5a5a9"
 }
 widget "xfwm"                      style "titlebar"
