@@ -36,7 +36,7 @@ AC_HEADER_STDC
 # Checks for typedefs, structures, and compiler characteristics.
 AC_C_CONST
 
-#gtk-xfce-theme.spec
 AC_OUTPUT([
+gtk-xfce-engine-2.spec
 Makefile
 ])
