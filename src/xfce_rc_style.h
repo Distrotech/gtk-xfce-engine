@@ -1,3 +1,42 @@
+/*  $Id$
+ *
+ *  This program is free software; you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation; either version 2 of the License, or
+ *  (at your option) any later version.
+ *
+ *  This program is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU General Public License for more details.
+ *
+ *  You should have received a copy of the GNU General Public License
+ *  along with this program; if not, write to the Free Software
+ *  Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
+ *
+ *  Copyright (C) 1999-2004 Olivier Fourdan (fourdan@xfce.org)
+ *
+ *  Portions based Thinice port by 
+ *                       Tim Gerla <timg@rrv.net>,
+ *                       Tomas Ögren <stric@ing.umu.se,
+ *                       Richard Hult <rhult@codefactory.se>
+ *  Portions based on Smooth theme by
+ *                       Andrew Johnson <ajgenius@ajgenius.us>
+ *  Portions based on IceGradient theme by  
+ *                       Tim Gerla <timg@means.net>
+ *                       Tomas Ã–gren <stric@ing.umu.se>
+ *                       JM Perez <jose.perez@upcnet.es>
+ *  Portions based on Wonderland theme by   
+ *                       Garrett LeSage
+ *                       Alexander Larsson
+ *                       Owen Taylor <otaylor@redhat.com>
+ *  Portions based on Raleigh theme by 
+ *                       Owen Taylor <otaylor@redhat.com>
+ *  Portions based on Notif theme
+ *  Portions based on Notif2 theme
+ *  Portions based on original GTK theme
+ */
+
 #ifdef HAVE_CONFIG_H
 #  include "config.h"
 #endif
@@ -25,13 +64,21 @@ typedef enum
     XFCE_RC_GRADIENT_AUTO
 } XfceRcGradientType;
 
+typedef enum
+{
+    XFCE_RC_HANDLER_NONE,
+    XFCE_RC_GRIP_ROUGH,
+    XFCE_RC_GRIP_SLIDE
+} XfceRcHandlerType;
+
 struct _XfceRcStyle
 {
     GtkRcStyle parent_instance;
 
     gboolean smooth_edge;
+    XfceRcHandlerType grip_style;
     gboolean gradient;
-    XfceRcGradientType gradient_type;
+    XfceRcGradientType gradient_style;
     gfloat shade_start;
     gfloat shade_end;
 };
@@ -48,6 +95,10 @@ enum
     TOKEN_SMOOTHEDGE = G_TOKEN_LAST + 1,
     TOKEN_BOXFILL,
     TOKEN_FILL_STYLE,
+    TOKEN_GRIP_STYLE,
+    TOKEN_GRIP_NONE,
+    TOKEN_GRIP_ROUGH,
+    TOKEN_GRIP_SLIDE,
     TOKEN_GRADIENT,
     TOKEN_PLAIN,
     TOKEN_ORIENTATION,

@@ -1,13 +1,40 @@
-/*
- * The code in this file is originated from the following theme:
+/*  $Id$
  *
- * Smooth theme by       Andrew Johnson <ajgenius@ajgenius.us>
- * IceGradient theme by  Tim Gerla <timg@means.net>
+ *  This program is free software; you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation; either version 2 of the License, or
+ *  (at your option) any later version.
+ *
+ *  This program is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU General Public License for more details.
+ *
+ *  You should have received a copy of the GNU General Public License
+ *  along with this program; if not, write to the Free Software
+ *  Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
+ *
+ *  Copyright (C) 1999-2004 Olivier Fourdan (fourdan@xfce.org)
+ *
+ *  Portions based Thinice port by 
+ *                       Tim Gerla <timg@rrv.net>,
+ *                       Tomas Ögren <stric@ing.umu.se,
+ *                       Richard Hult <rhult@codefactory.se>
+ *  Portions based on Smooth theme by
+ *                       Andrew Johnson <ajgenius@ajgenius.us>
+ *  Portions based on IceGradient theme by  
+ *                       Tim Gerla <timg@means.net>
  *                       Tomas Ã–gren <stric@ing.umu.se>
  *                       JM Perez <jose.perez@upcnet.es>
- * Wonderland theme by   Garrett LeSage
+ *  Portions based on Wonderland theme by   
+ *                       Garrett LeSage
  *                       Alexander Larsson
  *                       Owen Taylor <otaylor@redhat.com>
+ *  Portions based on Raleigh theme by 
+ *                       Owen Taylor <otaylor@redhat.com>
+ *  Portions based on Notif theme
+ *  Portions based on Notif2 theme
+ *  Portions based on original GTK theme
  */
 
 #ifdef HAVE_CONFIG_H
@@ -42,31 +69,31 @@ static void gradient_rgb_to_hls(gdouble * r, gdouble * g, gdouble * b)
     if(max != min)
     {
         if(l <= 0.5)
-	{
+        {
             s = (max - min) / (max + min);
         }
         else
-	{
+        {
             s = (max - min) / (2 - max - min);
         }
 
         delta = max - min;
         if(red == max)
-	{
+        {
             h = (green - blue) / delta;
         }
-	else if(green == max)
-	{
+        else if(green == max)
+        {
             h = 2 + (blue - red) / delta;
         }
         else if(blue == max)
-	{
+        {
             h = 4 + (red - green) / delta;
         }
 
         h *= 60;
         if(h < 0.0)
-	{
+        {
             h += 360;
         }
     }
@@ -103,66 +130,66 @@ static void gradient_hls_to_rgb(gdouble * h, gdouble * l, gdouble * s)
     else
     {
         while(hue > 360)
-	{
+        {
             hue -= 360;
         }
         while(hue < 0)
-	{
+        {
             hue += 360;
         }
 
         if(hue < 60)
-	{
+        {
             r = m1 + (m2 - m1) * hue / 60;
         }
         else if(hue < 180)
-	{
+        {
             r = m2;
         }
         else if(hue < 240)
-	{
+        {
             r = m1 + (m2 - m1) * (240 - hue) / 60;
         }
         else
-	{
+        {
             r = m1;
         }
 
         hue = *h;
         while(hue > 360)
-	{
+        {
             hue -= 360;
         }
         while(hue < 0)
-	{
+        {
             hue += 360;
         }
 
         if(hue < 60)
-	{
+        {
             g = m1 + (m2 - m1) * hue / 60;
         }
         else if(hue < 180)
-	{
+        {
             g = m2;
         }
         else if(hue < 240)
-	{
+        {
             g = m1 + (m2 - m1) * (240 - hue) / 60;
         }
         else
-	{
+        {
             g = m1;
         }
 
         hue = *h - 120;
         while(hue > 360)
-	{
+        {
             hue -= 360;
         }
-	while(hue < 0)
+        while(hue < 0)
         {
-	    hue += 360;
+            hue += 360;
         }
         if(hue < 60)
         {
@@ -219,14 +246,14 @@ void gradient_alloc_color(GdkColor * color, GdkColormap * colormap, GdkColor lig
     gdk_colormap_alloc_color(colormap, color, FALSE, TRUE);
 }
 
-void gradient_draw(GdkWindow * window, GdkGC * gc, GdkColormap * colormap, GdkRectangle * area, gint x, gint y, gint width, gint height, GdkColor light, GdkColor dark, GradientType gradient_type, gboolean noclip)
+void gradient_draw(GdkWindow * window, GdkGC * gc, GdkColormap * colormap, GdkRectangle * area, gint x, gint y, gint width, gint height, GdkColor light, GdkColor dark, GradientType gradient_style, gboolean noclip)
 {
     GdkRectangle clip;
     GdkColor color;
     gint i, steps = 0;
-    gboolean horizontal = (gradient_type == GRADIENT_HORIZONTAL);
-    gboolean northern = (gradient_type == GRADIENT_NORTHERN_DIAGONAL);
-    gboolean diagonal = ((gradient_type == GRADIENT_NORTHERN_DIAGONAL) || (gradient_type == GRADIENT_SOUTHERN_DIAGONAL));
+    gboolean horizontal = (gradient_style == GRADIENT_HORIZONTAL);
+    gboolean northern = (gradient_style == GRADIENT_NORTHERN_DIAGONAL);
+    gboolean diagonal = ((gradient_style == GRADIENT_NORTHERN_DIAGONAL) || (gradient_style == GRADIENT_SOUTHERN_DIAGONAL));
 
     clip.x = x;
     clip.y = y;
@@ -256,11 +283,11 @@ void gradient_draw(GdkWindow * window, GdkGC * gc, GdkColormap * colormap, GdkRe
         {
             GdkRectangle clip2;
             if(gdk_rectangle_intersect(area, &clip, &clip2))
-	    {
+            {
                 gdk_gc_set_clip_rectangle(gc, &clip2);
             }
             else
-	    {
+            {
                 gdk_gc_set_clip_rectangle(gc, area);
             }
         }
@@ -277,22 +304,22 @@ void gradient_draw(GdkWindow * window, GdkGC * gc, GdkColormap * colormap, GdkRe
         if(diagonal)
         {
             if(northern)
-	    {
+            {
                 gdk_draw_line(window, gc, x + i, y, x, y + i);
             }
-	    else
+            else
             {
-	        gdk_draw_line(window, gc, x + width - 1 - i, y, x + width - 1, y + i);
+                gdk_draw_line(window, gc, x + width - 1 - i, y, x + width - 1, y + i);
             }
-	}
+        }
         else
         {
             if(horizontal)
-	    {
+            {
                 gdk_draw_line(window, gc, x + i, y, x + i, y + height);
             }
             else
-	    {
+            {
                 gdk_draw_line(window, gc, x, y + i, x + width, y + i);
             }
         }
@@ -305,12 +332,12 @@ void gradient_draw(GdkWindow * window, GdkGC * gc, GdkColormap * colormap, GdkRe
     }
 }
 
-void gradient_draw_shaded(GdkWindow * window, GdkGC * gc, GdkColormap * colormap, GdkRectangle * area, gint x, gint y, gint width, gint height, GdkColor color, gfloat shine_value, gfloat gradient_shade_value, GradientType gradient_type, gboolean noclip)
+void gradient_draw_shaded(GdkWindow * window, GdkGC * gc, GdkColormap * colormap, GdkRectangle * area, gint x, gint y, gint width, gint height, GdkColor color, gfloat shine_value, gfloat gradient_shade_value, GradientType gradient_style, gboolean noclip)
 {
     GdkColor light, dark;
 
     gradient_shade(&color, &dark, gradient_shade_value);
     gradient_shade(&color, &light, shine_value);
 
-    gradient_draw(window, gc, colormap, area, x, y, width, height, light, dark, gradient_type, noclip);
+    gradient_draw(window, gc, colormap, area, x, y, width, height, light, dark, gradient_style, noclip);
 }

@@ -1,47 +1,46 @@
 style "default"
 {
-    GtkButton::default_border         = {0, 0, 0, 0}
-    GtkButton::default_outside_border = {0, 0, 0, 0}
-    GtkButton::child_displacement_x   = 0
-    GtkButton::child_displacement_y   = 1
-    GtkButton::default_spacing        = 5
-    GtkButton::focus-line-width       = 1
-    GtkButton::focus-padding          = 0
-    GtkCheckButton::indicator_size    = 15
-    GtkMenuBar::internal-padding      = 2
-    GtkMenuBar::shadow_type           = none
-    GtkMenuItem::selected_shadow_type = etched-in
-    GtkPaned::handle_full_size        = 1
-    GtkPaned::handle_size             = 7
-    GtkRadioButton::indicator_size    = 15
-    GtkRange::slider_width            = 14
-    GtkRange::stepper_size            = 15
-    GtkRange::stepper_spacing         = 0
-    GtkRange::trough_border           = 1
-    GtkScrollbar::min_slider_length   = 20
-    GtkScrollbar::has_backward_stepper = 1
+    GtkButton::default_border                    = {0, 0, 0, 0}
+    GtkButton::default_outside_border            = {0, 0, 0, 0}
+    GtkButton::child_displacement_x              = 0
+    GtkButton::child_displacement_y              = 1
+    GtkButton::default_spacing                   = 5
+    GtkButton::focus-padding                     = 0
+    GtkCheckButton::indicator_size               = 12
+    GtkMenuBar::internal-padding                 = 2
+    GtkMenuBar::shadow_type                      = none
+    GtkMenuItem::selected_shadow_type            = etched-in
+    GtkPaned::handle_full_size                   = 1
+    GtkPaned::handle_size                        = 7
+    GtkRadioButton::indicator_size               = 15
+    GtkRange::slider_width                       = 14
+    GtkRange::stepper_size                       = 15
+    GtkRange::stepper_spacing                    = 0
+    GtkRange::trough_border                      = 1
+    GtkScrollbar::has_backward_stepper           = 1
     GtkScrollbar::has_secondary_backward_stepper = 1
-    GtkSpinButton::shadow_type        = out
-    GtkToolbar::shadow_type           = none
-    GtkWidget::focus-line-width       = 1
-    GtkWidget::focus_padding          = 2
-    GtkWidget::interior_focus         = 5
-    GtkWidget::internal_padding       = 2
+    GtkScrollbar::min_slider_length              = 20
+    GtkSpinButton::shadow_type                   = out
+    GtkToolbar::shadow_type                      = none
+    GtkWidget::focus-line-width                  = 1
+    GtkWidget::focus_padding                     = 2 
+    GtkWidget::interior_focus                    = 5 
+    GtkWidget::internal_padding                  = 2 
     
     xthickness = 2
     ythickness = 2
 
-    base[ACTIVE]      = "#ccc9c8"
-    base[INSENSITIVE] = "#e6e3e1"
+    base[ACTIVE]      = "#e0e0e1"
+    base[INSENSITIVE] = "#eeeeef"
     base[NORMAL]      = "#ffffff"
-    base[PRELIGHT]    = "#ccc9c8"
-    base[SELECTED]    = "#b2bdd1"
+    base[PRELIGHT]    = "#d4d8e0"
+    base[SELECTED]    = "#d4d8e0"
 
-    bg[ACTIVE]        = "#ccc9c8"
-    bg[INSENSITIVE]   = "#e6e3e1"
-    bg[NORMAL]        = "#e6e3e1"
-    bg[PRELIGHT]      = "#ccc9c8"
-    bg[SELECTED]      = "#b2bdd1"
+    bg[ACTIVE]        = "#c2c4ca"
+    bg[INSENSITIVE]   = "#eeeeef"
+    bg[NORMAL]        = "#eeeeef"
+    bg[PRELIGHT]      = "#d4d8e0"
+    bg[SELECTED]      = "#d4d8e0"
 
     fg[ACTIVE]        = "#000000"
     fg[INSENSITIVE]   = "#8e8e8a"
@@ -58,6 +57,7 @@ style "default"
     engine "xfce" 
     {
         smooth_edge = true
+        grip_style = none
         boxfill
         {
             fill_style = plain
@@ -68,11 +68,12 @@ widget_class "*"                   style "default"
 
 style "menustyle" = "default"
 {
-    xthickness = 2
-    ythickness = 2
+    xthickness = 3
+    ythickness = 3
     engine "xfce" 
     {
         smooth_edge = true
+        grip_style = engrave
         boxfill
         {
             fill_style = plain
@@ -90,18 +91,19 @@ class "*MenuBar*"                  style "menustyle"
 
 style "button" = "default"
 {
-    xthickness = 2
-    ythickness = 2
+    xthickness = 3
+    ythickness = 3
 
     engine "xfce" 
     {
         smooth_edge = true
+        grip_style = none
         boxfill
         {
             fill_style = gradient
             orientation = vertical
-            shade_start = 1.05
-            shade_end = 0.95
+            shade_start = 1.10
+            shade_end = 1.00
         }
     }
 }
@@ -120,15 +122,17 @@ style "sbstyle" = "default"
 {
     xthickness = 1
     ythickness = 1
+
     engine "xfce" 
     {
         smooth_edge = true
+        grip_style = none
         boxfill
         {
             fill_style = gradient
             orientation = automatic
-            shade_start = 1.05
-            shade_end = 0.95
+            shade_start = 1.10
+            shade_end = 1.00
         }
     }
 }
@@ -160,7 +164,7 @@ style "titlebar" = "default"
 {
     bg[SELECTED]      = "#647694"
     fg[SELECTED]      = "#ffffff"
-    bg[INSENSITIVE]   = "#A0A3A7"
+    bg[INSENSITIVE]   = "#a0a3a7"
     fg[INSENSITIVE]   = "#ffffff"
 }
 widget "xfwm"                      style "titlebar"

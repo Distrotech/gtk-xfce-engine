@@ -56,6 +56,7 @@ style "default"
 
     engine "xfce"
     {
+        grip_style = slide
         smooth_edge = true
     }
 } 
@@ -79,6 +80,7 @@ style "colored" = "default"
     engine "xfce" 
     {
         smooth_edge = true
+        grip_style = slide
         boxfill
         {
             fill_style = plain
@@ -101,6 +103,7 @@ style "menubar" = "colored"
     engine "xfce" 
     {
         smooth_edge = true
+        grip_style = slide
         boxfill
         {
             fill_style = plain
@@ -125,6 +128,7 @@ style "menuitem" = "colored"
     engine "xfce" 
     {
         smooth_edge = true
+        grip_style = slide
         boxfill
         {
             fill_style = gradient
@@ -145,6 +149,7 @@ style "scrollbar" = "default"
     engine "xfce" 
     {
         smooth_edge = true
+        grip_style = slide
         boxfill
         {
             fill_style = gradient
@@ -165,6 +170,7 @@ style "button" = "colored"
     engine "xfce" 
     {
         smooth_edge = true
+        grip_style = slide
         boxfill
         {
             fill_style = gradient
@@ -193,6 +199,7 @@ style "progress" = "colored"
     engine "xfce" 
     {
         smooth_edge = true
+        grip_style = slide
         boxfill
         {
             fill_style = gradient
