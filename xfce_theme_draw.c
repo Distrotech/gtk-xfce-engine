@@ -356,7 +356,7 @@ static void draw_shadow(GtkStyle * style, GdkWindow * window, GtkStateType state
                     gdk_draw_line(window, style->dark_gc[state_type], x, y, x + width - 2, y);
                     gdk_draw_line(window, style->dark_gc[state_type], x, y, x, y + height - 2);
 
-                    gdk_draw_line(window, style->dark_gc[state_type], x, y + height - 1, x + width, y + height - 1);
+                    gdk_draw_line(window, style->dark_gc[state_type], x, y + height - 1, x + width - 1, y + height - 1);
                     gdk_draw_line(window, style->dark_gc[state_type], x + width - 1, y, x + width - 1, y + height - 1);
 
                     gdk_draw_line(window, style->mid_gc[state_type], x + 1, y + 1, x + width - 2, y + 1);
@@ -403,7 +403,7 @@ static void draw_shadow(GtkStyle * style, GdkWindow * window, GtkStateType state
         case GTK_SHADOW_OUT:
             if(XFCE_RC_STYLE(style->rc_style)->smooth_edge)
             {
-                if(DETAIL("slider") || DETAIL("vscrollbar") || DETAIL("hscrollbar"))
+                if(DETAIL("vscrollbar") || DETAIL("hscrollbar") || DETAIL("slider") || DETAIL("vscale") || DETAIL("hscale"))
                 {
                     gdk_draw_line(window, style->dark_gc[state_type], x, y, x + width - 1, y);
                     gdk_draw_line(window, style->dark_gc[state_type], x, y, x, y + height - 1);

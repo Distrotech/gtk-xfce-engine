@@ -5,7 +5,7 @@ style "xfce-default"
     GtkWidget::interior_focus         = 5
     GtkButton::default_border         = {5, 5, 5, 5}
     GtkButton::default_outside_border = {5, 5, 5, 5}
-    GtkButton::default_spacing        = 6
+    GtkButton::default_spacing        = 5
     GtkCheckButton::indicator_size    = 15
     GtkPaned::handle_full_size        = 1
     GtkRange::trough_border           = 2

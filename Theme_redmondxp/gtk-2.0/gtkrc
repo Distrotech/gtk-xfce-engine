@@ -2,9 +2,9 @@
 
 style "xfce-redmondxp-default"
 {
-    GtkWidget::interior_focus         = 2
-    GtkButton::default_border         = {5, 5, 5, 5}
-    GtkButton::default_outside_border = {5, 5, 5, 5}
+    GtkWidget::interior_focus         = -2
+    GtkButton::default_border         = {0, 0, 0, 0}
+    GtkButton::default_outside_border = {0, 0, 0, 0}
     GtkButton::default_spacing        = 10
     GtkCheckButton::indicator_size    = 15
     GtkPaned::handle_full_size        = 1

@@ -1,8 +1,8 @@
 style "default"
 {
-    GtkWidget::interior_focus         = 2
-    GtkButton::default_border         = {2, 2, 2, 2}
-    GtkButton::default_outside_border = {2, 2, 2, 2}
+    GtkWidget::interior_focus         = -2
+    GtkButton::default_border         = {0, 0, 0, 0}
+    GtkButton::default_outside_border = {0, 0, 0, 0}
     GtkButton::default_spacing        = 6
     GtkCheckButton::indicator_size    = 15
     GtkPaned::handle_full_size        = 1

@@ -2,6 +2,9 @@
 
 style "default"
 {
+    GtkWidget::interior_focus         = -2
+    GtkButton::default_border         = {0, 0, 0, 0}
+    GtkButton::default_outside_border = {0, 0, 0, 0}
     GtkRange::slider_width            = 15
     GtkRange::stepper_size            = 15
     GtkCheckButton::indicator_size    = 15
