@@ -47,19 +47,11 @@ style "xfce-redmondxp-default"
 	smooth_edge = true
         boxfill
         {
-	    fill_style = gradient
-	    orientation = auto
-	    shade_start = 0.9
-	    shade_end = 1.1
+	    fill_style = plain
 	}
     }
 }
-
-class "GtkWidget"                  style "xfce-redmondxp-default"
-widget_class "*.GtkSpinButton*"    style "xfce-redmondxp-default"
-widget_class "*.GtkCheckButton*"   style "xfce-redmondxp-default"
-widget_class "*.GtkRadioButton*"   style "xfce-redmondxp-default"
-widget_class "*.GtkToggleButton*"  style "xfce-redmondxp-default"
+widget_class "*"                   style "xfce-redmondxp-default"
 
 style "xfce-redmondxp-colored" = "xfce-redmondxp-default"
 {
@@ -73,8 +65,19 @@ style "xfce-redmondxp-colored" = "xfce-redmondxp-default"
     fg[PRELIGHT]      = "#ffffff"
 
     text[PRELIGHT]    = "#ffffff"
-}
 
+    engine "xfce" 
+    {
+	smooth_edge = true
+        boxfill
+        {
+	    fill_style = gradient
+	    orientation = vertical
+	    shade_start = 0.9
+	    shade_end = 1.1
+	}
+    }
+}
 class "GtkList"                    style "xfce-redmondxp-colored"
 widget_class "*.GtkMenu*"          style "xfce-redmondxp-colored"
 widget_class "*.GtkText*"          style "xfce-redmondxp-colored"
@@ -97,9 +100,21 @@ style "xfce-redmondxp-scroll" = "xfce-redmondxp-default"
     fg[SELECTED]      = "#000000"
 
     text[SELECTED]    = "#000000"
-}
 
-class "GtkScrollbar"        style "xfce-redmondxp-scroll"
+    engine "xfce" 
+    {
+	smooth_edge = true
+        boxfill
+        {
+	    fill_style = gradient
+	    orientation = auto
+	    shade_start = 0.9
+	    shade_end = 1.1
+	}
+    }
+}
+widget_class "*Scrollbar*"         style "xfce-redmondxp-scroll"
+class "*Scrollbar*"                style "xfce-redmondxp-scroll"
 
 style "xfce-redmondxp-button" = "xfce-redmondxp-default"
 {
@@ -107,8 +122,19 @@ style "xfce-redmondxp-button" = "xfce-redmondxp-default"
     bg[ACTIVE]        = "#ffcb39"
     bg[PRELIGHT]      = "#fafaf2"
     bg[INSENSITIVE]   = "#fafaf2"
-}
 
+    engine "xfce" 
+    {
+	smooth_edge = true
+        boxfill
+        {
+	    fill_style = gradient
+	    orientation = auto
+	    shade_start = 1.1
+	    shade_end = 0.9
+	}
+    }
+}
 class "GtkButton" style "xfce-redmondxp-button"
 
 style "xfce-redmondxp-notebook" = "xfce-redmondxp-default"

@@ -4,7 +4,7 @@ style "curve-default"
     GtkButton::default_outside_border = {0, 0 ,0 ,0}
     GtkButton::default_spacing        = 2
     GtkCheckButton::indicator_size    = 15
-    GtkMenuItem::selected_shadow_type = none
+    GtkMenuItem::selected_shadow_type = out
     GtkPaned::handle_full_size        = 1
     GtkRange::slider_width            = 15
     GtkRange::stepper_size            = 15
@@ -52,20 +52,29 @@ style "curve-default"
         smooth_edge = true
         boxfill
         {
-	    fill_style = gradient
-	    orientation = auto
-	    shade_start = 0.95
-	    shade_end = 1.05
+	    fill_style = plain
 	}
     }
 }
 
-class "GtkWidget"                  style "curve-default"
+widget_class "*"                   style "curve-default"
 
 style "curve-menu-color" = "curve-default"
 {
     bg[PRELIGHT]    = "#5f7ab8"
     fg[PRELIGHT]    = "#ffffff"
+
+    engine "xfce" 
+    {
+        smooth_edge = false
+        boxfill
+        {
+	    fill_style = gradient
+	    orientation = vertical
+	    shade_start = 0.90
+	    shade_end = 1.10
+	}
+    }
 }
 
 style "curve-menu-bar" = "curve-menu-color"
@@ -76,18 +85,48 @@ style "curve-menu-bar" = "curve-menu-color"
 
 style "curve-menu" = "curve-menu-color"
 {
-    xthickness = 1
-    ythickness = 1
+    xthickness = 2
+    ythickness = 2
+
+    engine "xfce" 
+    {
+        smooth_edge = true
+        boxfill
+        {
+	    fill_style = gradient
+	    orientation = vertical
+	    shade_start = 0.90
+	    shade_end = 1.20
+	}
+    }
 }
+widget_class "*MenuItem*"            style "curve-menu"
+class "*MenuItem*"                   style "curve-menu"
+widget_class "*.GtkProgress*"        style "curve-menu"
+class "*.GtkProgress*"               style "curve-menu"
 
 style "curve-tool-bar" = "curve-menu-color"
 {
-    xthickness = 1
-    ythickness = 1
-}
+    xthickness = 0
+    ythickness = 2
 
-widget_class "*.GtkMenu*"             style "curve-menu"
-widget_class "*.GtkMenuBar*"          style "curve-menu-bar"
-widget_class "*.GtkToolbar*"          style "curve-tool-bar"
+    engine "xfce" 
+    {
+        smooth_edge = true
+        boxfill
+        {
+	    fill_style = plain
+	}
+    }
+}
+widget_class "*BonoboDockItem*"    style "curve-tool-bar"
+class "*BonoboDockItem*"           style "curve-tool-bar"
+widget_class "*HandleBox*"         style "curve-tool-bar"
+class "*HandleBox*"                style "curve-tool-bar"
+widget_class "*Tool*"              style "curve-tool-bar"
+class "*Tool*"                     style "curve-tool-bar"
+widget_class "*MenuBar*"           style "curve-tool-bar"
+class "*MenuBar*"                  style "curve-tool-bar"
+
 widget_class "*.GtkProgress*"         style "curve-menu-color"
 

@@ -16,12 +16,47 @@ style "default"
 	smooth_edge = true
         boxfill
         {
-	    fill_style = gradient
-	    orientation = auto
-	    shade_start = 1.1
-	    shade_end = 0.9
+	    fill_style = plain
 	}
     }
 }
+widget_class "*"                style "default"
 
-class "*"                      style "default"
+style "xfce-basic-buttonstyle" = "default"
+{
+    xthickness = 1
+    ythickness = 1
+    engine "xfce" 
+    {
+	smooth_edge = true
+        boxfill
+        {
+	    fill_style = gradient
+	    orientation = nothern_diagonal
+	    shade_start = 0.9
+	    shade_end = 1.1
+	}
+    }
+}
+widget_class "*Button*"            style "xfce-basic-buttonstyle"
+class "*Button*"                   style "xfce-basic-buttonstyle"
+
+style "xfce-basic-sbstyle" = "default"
+{
+    xthickness = 1
+    ythickness = 1
+    engine "xfce" 
+    {
+	smooth_edge = true
+        boxfill
+        {
+	    fill_style = gradient
+	    orientation = auto
+	    shade_start = 0.9
+	    shade_end = 1.1
+	}
+    }
+}
+widget_class "*Scrollbar*"         style "xfce-basic-sbstyle"
+class "*Scrollbar*"                style "xfce-basic-sbstyle"
+

@@ -52,6 +52,62 @@ style "xfce-etria-default"
 	smooth_edge = true
         boxfill
         {
+	    fill_style = plain
+	}
+    }
+}
+widget_class "*"                   style "xfce-etria-default"
+
+style "xfce-etria-menustyle" = "xfce-etria-default"
+{
+    xthickness = 0
+    ythickness = 0
+    engine "xfce" 
+    {
+	smooth_edge = true
+        boxfill
+        {
+	    fill_style = plain
+	}
+    }
+}
+widget_class "*BonoboDockItem*"    style "xfce-etria-menustyle"
+class "*BonoboDockItem*"           style "xfce-etria-menustyle"
+widget_class "*HandleBox*"         style "xfce-etria-menustyle"
+class "*HandleBox*"                style "xfce-etria-menustyle"
+widget_class "*Tool*"              style "xfce-etria-menustyle"
+class "*Tool*"                     style "xfce-etria-menustyle"
+widget_class "*MenuBar*"           style "xfce-etria-menustyle"
+class "*MenuBar*"                  style "xfce-etria-menustyle"
+
+style "xfce-etria-buttonstyle" = "xfce-etria-default"
+{
+    xthickness = 1
+    ythickness = 1
+    engine "xfce" 
+    {
+	smooth_edge = true
+        boxfill
+        {
+	    fill_style = gradient
+	    orientation = vertical
+	    shade_start = 1.1
+	    shade_end = 0.9
+	}
+    }
+}
+widget_class "*Button*"            style "xfce-etria-buttonstyle"
+class "*Button*"                   style "xfce-etria-buttonstyle"
+
+style "xfce-etria-sbstyle" = "xfce-etria-default"
+{
+    xthickness = 1
+    ythickness = 1
+    engine "xfce" 
+    {
+	smooth_edge = true
+        boxfill
+        {
 	    fill_style = gradient
 	    orientation = auto
 	    shade_start = 1.1
@@ -59,12 +115,8 @@ style "xfce-etria-default"
 	}
     }
 }
-
-style "xfce-etria-menustyle" = "xfce-etria-default"
-{
-        xthickness = 0
-	ythickness = 0
-}
+widget_class "*Scrollbar*"         style "xfce-etria-sbstyle"
+class "*Scrollbar*"                style "xfce-etria-sbstyle"
 
 style "xfce-etria-titlebar"
 {
@@ -73,8 +125,4 @@ style "xfce-etria-titlebar"
     bg[ACTIVE]        = "#8F9FB4"
     fg[NORMAL]        = "#ffffff"
 }
-
-class "GtkWidget"                  style "xfce-etria-default"
-class "GtkMenuBar"                 style "xfce-etria-menustyle"
-class "GtkToolbar"                 style "xfce-etria-menustyle"
 widget "xfwm"	                   style "xfce-etria-titlebar"
