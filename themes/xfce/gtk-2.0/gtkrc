@@ -11,8 +11,8 @@ style "default"
     GtkButton::focus-padding                     = 0
     GtkCheckButton::indicator_size               = 12
     GtkMenuBar::internal-padding                 = 2
-    GtkMenuBar::shadow_type                      = out
-    GtkHandleBox::shadow_type                    = out
+    GtkMenuBar::shadow_type                      = none
+    GtkHandleBox::shadow_type                    = none
     GtkMenuItem::selected_shadow_type            = etched-in
     GtkPaned::handle_full_size                   = 1
     GtkPaned::handle_size                        = 7
@@ -24,7 +24,7 @@ style "default"
     GtkScrollbar::has_backward_stepper           = 1
 #   GtkScrollbar::has_secondary_backward_stepper = 1
     GtkScrollbar::min_slider_length              = 20
-    GtkToolbar::shadow_type                      = out
+    GtkToolbar::shadow_type                      = none
     GtkWidget::focus-line-width                  = 1
     GtkWidget::focus_padding                     = 2 
     GtkWidget::interior_focus                    = 5 
@@ -33,30 +33,17 @@ style "default"
     xthickness = 2
     ythickness = 2
 
-<<<<<<< gtkrc
     base[ACTIVE]      = "#d4d8e0"
     base[INSENSITIVE] = "#eeeeef"
-=======
-    base[ACTIVE]      = "#d4d3d2"
-    base[INSENSITIVE] = "#e8e7e6"
->>>>>>> 1.56.2.7
     base[NORMAL]      = "#ffffff"
-    base[PRELIGHT]    = "#d4d3d2"
-    base[SELECTED]    = "#867d94"
+    base[PRELIGHT]    = "#d4d8e0"
+    base[SELECTED]    = "#647694"
 
-<<<<<<< gtkrc
     bg[ACTIVE]        = "#d4d8e0"
     bg[INSENSITIVE]   = "#eeeeef"
     bg[NORMAL]        = "#eeeeef"
     bg[PRELIGHT]      = "#d4d8e0"
     bg[SELECTED]      = "#647694"
-=======
-    bg[ACTIVE]        = "#d4d3d2"
-    bg[INSENSITIVE]   = "#e8e7e6"
-    bg[NORMAL]        = "#e8e7e6"
-    bg[PRELIGHT]      = "#d4d3d2"
-    bg[SELECTED]      = "#fcfbf2"
->>>>>>> 1.56.2.7
 
     fg[ACTIVE]        = "#000000"
     fg[INSENSITIVE]   = "#8e8e8a"
@@ -100,15 +87,6 @@ style "menu" = "default"
 
     bg[INSENSITIVE]   = "#ffffff"
     bg[NORMAL]        = "#ffffff"
-
-    engine "xfce" 
-    {
-        smooth_edge = true
-        boxfill
-        {
-            fill_style = plain
-        }
-    }
 }
 widget_class "*Menu*"              style "menu"
 class "*Menu*"                     style "menu"
@@ -116,7 +94,7 @@ class "*Menu*"                     style "menu"
 style "menubar" = "default"
 {
     xthickness = 0
-    ythickness = 0
+    ythickness = 2
 }
 widget_class "*BonoboDockItem"     style "menubar"
 class "*BonoboDockItem"            style "menubar"
@@ -143,15 +121,9 @@ style "button" = "default"
     xthickness = 3
     ythickness = 3
 
-<<<<<<< gtkrc
     bg[PRELIGHT]      = "#d4d8e0"
     bg[NORMAL]        = "#d4d8e0"
     bg[ACTIVE]        = "#ceced9"
-=======
-    bg[PRELIGHT]      = "#d4d3d2"
-    bg[NORMAL]        = "#d4d3d2"
-    bg[ACTIVE]        = "#fcfbf2"
->>>>>>> 1.56.2.7
 
     engine "xfce" 
     {
@@ -178,9 +150,9 @@ style "scrollbar" = "default"
     xthickness = 2
     ythickness = 2
 
-    bg[PRELIGHT]      = "#d4d3d2"
-    bg[NORMAL]        = "#d4d3d2"
-    bg[ACTIVE]        = "#e8e7e6"
+    bg[PRELIGHT]      = "#d4d8e0"
+    bg[NORMAL]        = "#d4d8e0"
+    bg[ACTIVE]        = "#eeeeef"
 
     engine "xfce" 
     {
@@ -221,15 +193,9 @@ style "progress" = "default"
     xthickness = 0
     ythickness = 0
 
-<<<<<<< gtkrc
     bg[PRELIGHT]      = "#d4d8e0"
     bg[NORMAL]        = "#ceced9"
     bg[ACTIVE]        = "#a5a5a9"
-=======
-    bg[PRELIGHT]      = "#fcfbf2"
-    bg[NORMAL]        = "#d2d1cf"
-    bg[ACTIVE]        = "#a5a29f"
->>>>>>> 1.56.2.7
 
     engine "xfce" 
     {
@@ -237,29 +203,15 @@ style "progress" = "default"
         grip_style = none
         boxfill
         {
-<<<<<<< gtkrc
             fill_style = gradient
             orientation = automatic
             shade_start = 1.05
             shade_end = 0.95
-=======
-            fill_style = gradient
-            orientation = automatic
-            shade_start = 1.10
-            shade_end = 0.95
->>>>>>> 1.56.2.7
         }
     }
 }
 widget_class "*Progress*"          style "progress" 
 class "*Progress*"                 style "progress" 
-
-style "handlebox" = "default"
-{
-    xthickness = 0
-    ythickness = 0
-}
-widget_class "*HandleBox"          style "handlebox"
 
 style "handlebox" = "default"
 {
@@ -281,16 +233,10 @@ widget_class "*Collection"         style "rox"
 # 
 style "titlebar" = "default"
 {
-#    bg[SELECTED]      = "#70727f"
-    bg[SELECTED]      = "#867d94"
+    bg[SELECTED]      = "#647694"
     fg[SELECTED]      = "#ffffff"
-<<<<<<< gtkrc
     bg[INSENSITIVE]   = "#d4d8e0"
     fg[INSENSITIVE]   = "#647694"
-=======
-    bg[INSENSITIVE]   = "#e8e7e6"
-    fg[INSENSITIVE]   = "#a9a5a5"
->>>>>>> 1.56.2.7
 }
 widget "xfwm"                      style "titlebar"
 class "MetaFrames"                 style "titlebar"
