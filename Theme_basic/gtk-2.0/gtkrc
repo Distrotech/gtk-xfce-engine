@@ -2,10 +2,12 @@
 
 style "default"
 {
-   engine "xfce" 
-   {
-       smooth_edge = FALSE
-   }
+    GtkPaned::handle_full_size        = 1
+    GtkRange::trough_border           = 2
+    engine "xfce" 
+    {
+	smooth_edge = FALSE
+    }
 }
 
 class "*"                      style "default"

@@ -629,16 +629,7 @@ draw_box (GtkStyle * style, GdkWindow * window, GtkStateType state_type, GtkShad
   else
     gtk_style_apply_default_background (style, window, 1, state_type, area, x, y, width, height);
 
-  if ((detail) && (!strcmp("spinbutton_up", detail)))
-  {
-    gtk_paint_shadow (style, window, state_type, GTK_SHADOW_ETCHED_IN, area, widget, detail, x, y, width, height);
-  }
-  else if ((detail) && (!strcmp("spinbutton_down", detail)))
-  {
-    gtk_paint_shadow (style, window, state_type, GTK_SHADOW_ETCHED_IN, area, widget, detail, x, y, width, height);
-  }
-  else 
-    gtk_paint_shadow (style, window, state_type, shadow_type, area, widget, detail, x, y, width, height);
+  gtk_paint_shadow (style, window, state_type, shadow_type, area, widget, detail, x, y, width, height);
 }
 
 static void
