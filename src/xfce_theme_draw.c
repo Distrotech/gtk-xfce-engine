@@ -228,7 +228,7 @@ static void xfce_fill_background(GtkStyle * style, GdkWindow * window, GtkStateT
                 }
                 break;
         }
-        if (state_type == GTK_STATE_ACTIVE)
+        if ((state_type == GTK_STATE_ACTIVE) || (DETAIL("trough")))
         {
             shade_start = MIN (XFCE_RC_STYLE(style->rc_style)->shade_start, XFCE_RC_STYLE(style->rc_style)->shade_end);
             shade_end = MAX (XFCE_RC_STYLE(style->rc_style)->shade_start, XFCE_RC_STYLE(style->rc_style)->shade_end);
