@@ -75,8 +75,8 @@ style "xfce-menustyle" = "xfce-default"
         {
             fill_style = gradient
             orientation = vertical
-            shade_start = 1.05
-            shade_end = 0.95
+            shade_start = 0.95
+            shade_end = 1.00
         }
     }
 }
@@ -101,8 +101,8 @@ style "xfce-button" = "xfce-default"
         {
             fill_style = gradient
             orientation = vertical
-            shade_start = 1.1
-            shade_end = 0.9
+            shade_start = 0.95
+            shade_end = 1.00
         }
     }
 }
@@ -128,8 +128,8 @@ style "xfce-sbstyle" = "xfce-default"
         {
             fill_style = gradient
             orientation = automatic
-            shade_start = 0.9
-            shade_end = 1.1
+            shade_start = 0.95
+            shade_end = 1.00
         }
     }
 }
