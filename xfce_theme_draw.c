@@ -38,11 +38,6 @@
   Portions based on original GTK theme
  */
 
-/* If you want to try round corners, set RDELTA to 1 here : */
-#ifndef RDELTA
-#define RDELTA 1
-#endif
-
 static void xfce_style_init(XfceStyle * style);
 static void xfce_style_class_init(XfceStyleClass * klass);
 static GtkStyleClass *parent_class = NULL;
@@ -380,10 +375,10 @@ static void draw_shadow(GtkStyle * style, GdkWindow * window, GtkStateType state
                     gdk_draw_line(window, style->bg_gc[state_type], x + 2, y + height - 2, x + width - 2, y + height - 2);
                     gdk_draw_line(window, style->bg_gc[state_type], x + width - 2, y + 2, x + width - 2, y + height - 2);
 
-                    gdk_draw_point(window, style->bg_gc[GTK_STATE_NORMAL], x, y);
-                    gdk_draw_point(window, style->bg_gc[GTK_STATE_NORMAL], x + width - 1, y);
-                    gdk_draw_point(window, style->bg_gc[GTK_STATE_NORMAL], x, y + height - 1);
-                    gdk_draw_point(window, style->bg_gc[GTK_STATE_NORMAL], x + width - 1, y + height - 1);
+                    gdk_draw_point(window, style->mid_gc[GTK_STATE_NORMAL], x, y);
+                    gdk_draw_point(window, style->mid_gc[GTK_STATE_NORMAL], x + width - 1, y);
+                    gdk_draw_point(window, style->mid_gc[GTK_STATE_NORMAL], x, y + height - 1);
+                    gdk_draw_point(window, style->mid_gc[GTK_STATE_NORMAL], x + width - 1, y + height - 1);
                 }
 	    }
             else
@@ -460,10 +455,10 @@ static void draw_shadow(GtkStyle * style, GdkWindow * window, GtkStateType state
                     gdk_draw_line(window, style->mid_gc[state_type], x + 1, y + height - 2, x + width - 2, y + height - 2);
                     gdk_draw_line(window, style->mid_gc[state_type], x + width - 2, y + 1, x + width - 2, y + height - 2);
 
-                    gdk_draw_point(window, style->bg_gc[GTK_STATE_NORMAL], x, y);
-                    gdk_draw_point(window, style->bg_gc[GTK_STATE_NORMAL], x + width - 1, y);
-                    gdk_draw_point(window, style->bg_gc[GTK_STATE_NORMAL], x, y + height - 1);
-                    gdk_draw_point(window, style->bg_gc[GTK_STATE_NORMAL], x + width - 1, y + height - 1);
+                    gdk_draw_point(window, style->mid_gc[GTK_STATE_NORMAL], x, y);
+                    gdk_draw_point(window, style->mid_gc[GTK_STATE_NORMAL], x + width - 1, y);
+                    gdk_draw_point(window, style->mid_gc[GTK_STATE_NORMAL], x, y + height - 1);
+                    gdk_draw_point(window, style->mid_gc[GTK_STATE_NORMAL], x + width - 1, y + height - 1);
                 }
             }
             else

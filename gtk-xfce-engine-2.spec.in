@@ -7,10 +7,10 @@ URL: 		http://www.xfce.org/
 Source0: 	%{name}-%{version}.tar.gz
 Group: 		User Interface/Desktops
 BuildRoot: 	%{_tmppath}/%{name}-root
-Requires:	gtk2
-Requires:	glib2
-BuildRequires: 	gtk2-devel >= 2.0.0
-BuildRequires: 	glib2-devel >= 2.0.0
+Requires:	gtk2 >= @GTK_REQUIRED_VERSION@
+Requires:	glib2 >= @GLIB_REQUIRED_VERSION@
+BuildRequires: 	gtk2-devel >= @GTK_REQUIRED_VERSION@
+BuildRequires: 	glib2-devel >= @GLIB_REQUIRED_VERSION@
 
 %description
 A port of Xfce engine to GTK+-2.0.
