@@ -1,6 +1,6 @@
 @SET_MAKE@
 
-SUBDIRS = Theme Theme_basic Theme_funklor Theme_redmondxp
+SUBDIRS = Theme Theme_b5 Theme_basic Theme_funklor Theme_redmondxp
 
 INCLUDES = $(XFCE_CFLAGS)
 CFLAGS = $(XFCE_CFLAGS) -DG_DISABLE_DEPRECATED -DGTK_DISABLE_DEPRECATED \
