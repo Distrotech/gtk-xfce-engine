@@ -2,11 +2,11 @@ style "xfce-etria-default"
 {
     GtkButton::default_border         = {0, 0, 0, 0}
     GtkButton::default_outside_border = {0, 0, 0, 0}
-    GtkButton::default_spacing        = 10
-    GtkCheckButton::indicator_size    = 10
+    GtkButton::default_spacing        = 11
+    GtkCheckButton::indicator_size    = 11
     GtkMenuItem::selected_shadow_type = none
     GtkPaned::handle_full_size        = 1
-    GtkRadioButton::indicator_size    = 12
+    GtkRadioButton::indicator_size    = 11
     GtkRange::slider_width            = 11
     GtkRange::stepper_size            = 11
     GtkRange::stepper_spacing         = 0
@@ -14,7 +14,7 @@ style "xfce-etria-default"
     GtkScrollbar::min_slider_length   = 20
     GtkSpinButton::shadow_type        = out
     GtkStatusbar::shadow_type         = none
-    GtkWidget::internal-padding       = 0
+    GtkWidget::internal-padding       = 2
     GtkWidget::focus-padding          = 0
     GtkWidget::focus-line-pattern     = "\0"
     GtkWidget::interior_focus         = 0
@@ -23,13 +23,13 @@ style "xfce-etria-default"
     xthickness = 1
     ythickness = 1
 
-    base[ACTIVE]      = "#ffdd76"
+    base[ACTIVE]      = "#fef4d6"
     base[INSENSITIVE] = "#fdfdfd"
     base[NORMAL]      = "#fdfdfd"
     base[PRELIGHT]    = "#ffdd76"
     base[SELECTED]    = "#ffdd76"
 
-    bg[ACTIVE]        = "#f0f0f0"
+    bg[ACTIVE]        = "#e2e2e2"
     bg[INSENSITIVE]   = "#e2e2e2"
     bg[NORMAL]        = "#f0f0f0"
     bg[PRELIGHT]      = "#ffdd76"
@@ -41,7 +41,7 @@ style "xfce-etria-default"
     fg[PRELIGHT]      = "#3f3f3f"
     fg[SELECTED]      = "#3f3f3f"
 
-    text[ACTIVE]      = "#f0f0f0"
+    text[ACTIVE]      = "#3f3f3f"
     text[INSENSITIVE] = "#f0f0f0"
     text[NORMAL]      = "#3f3f3f"
     text[PRELIGHT]    = "#3f3f3f"
@@ -53,4 +53,12 @@ style "xfce-etria-default"
     }
 }
 
+style "xfce-etria-menustyle" = "xfce-etria-default"
+{
+        xthickness = 0
+	ythickness = 0
+}
+
 class "GtkWidget"                  style "xfce-etria-default"
+class "GtkMenuBar"                 style "xfce-etria-menustyle"
+class "GtkToolbar"                 style "xfce-etria-menustyle"
