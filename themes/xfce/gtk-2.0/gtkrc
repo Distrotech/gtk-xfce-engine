@@ -157,7 +157,7 @@ style "scrollbar" = "default"
     engine "xfce" 
     {
         smooth_edge = true
-        grip_style = engrave
+        grip_style = none
         boxfill
         {
             fill_style = gradient
