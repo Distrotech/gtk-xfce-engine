@@ -34,14 +34,14 @@ style "default"
     ythickness = 2
 
     base[ACTIVE]      = "#e3ddcc"
-    base[INSENSITIVE] = "#e0e0de"
+    base[INSENSITIVE] = "#e1dfde"
     base[NORMAL]      = "#ffffff"
     base[PRELIGHT]    = "#e3ddcc"
     base[SELECTED]    = "#5471a8"
 
     bg[ACTIVE]        = "#e3ddcc"
-    bg[INSENSITIVE]   = "#e0e0de"
-    bg[NORMAL]        = "#e0e0de"
+    bg[INSENSITIVE]   = "#e1dfde"
+    bg[NORMAL]        = "#e1dfde"
     bg[PRELIGHT]      = "#e3ddcc"
     bg[SELECTED]      = "#5471a8"
 
@@ -147,7 +147,7 @@ style "notebook" = "default"
     ythickness = 2
 
     bg[NORMAL]        = "#f0f0ee"
-    bg[ACTIVE]        = "#e3ddcc"
+    bg[ACTIVE]        = "#e3dedb"
 }
 
 style "scrollbar" = "default"
@@ -158,7 +158,7 @@ style "scrollbar" = "default"
     bg[PRELIGHT]      = "#f7f1df"
     fg[PRELIGHT]      = "#000000"
     bg[NORMAL]        = "#e3ddcc"
-    bg[ACTIVE]        = "#e0e0de"
+    bg[ACTIVE]        = "#e1dfde"
 
     engine "xfce" 
     {
