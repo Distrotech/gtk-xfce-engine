@@ -1,159 +1,105 @@
+2005-05-04 20:48  olivier
+
+	* ChangeLog: Update ChangeLog
+
 2004-07-09 12:39  olivier
 
-	* gtk-xfce-engine-2/branches/xfce_4_0/src/xfce_theme_draw.c: Fix
-	  compilation error with gtk+-2.0.x
+	* src/xfce_theme_draw.c: Fix compilation error with gtk+-2.0.x
 
 2004-07-09 09:32  olivier
 
-	* gtk-xfce-engine-2/branches/xfce_4_0/ChangeLog: Update ChangeLog
+	* ChangeLog: Update ChangeLog
 
 2004-07-09 07:53  olivier
 
-	* gtk-xfce-engine-2/branches/xfce_4_0/ChangeLog: Update ChangeLogs
-	  for 4.0.6
+	* ChangeLog: Update ChangeLogs for 4.0.6
 
 2004-05-18 20:04  olivier
 
-	* gtk-xfce-engine-2/branches/xfce_4_0/configure,
-	  gtk-xfce-engine-2/branches/xfce_4_0/configure.in,
-	  gtk-xfce-engine-2/branches/xfce_4_0/src/xfce_theme_draw.c:
-	  Backport from HEAD: Fix for multiscreen support
+	* configure, configure.in, src/xfce_theme_draw.c: Backport from
+	  HEAD: Fix for multiscreen support
 
 2004-05-03 22:12  olivier
 
-	* gtk-xfce-engine-2/branches/xfce_4_0/Makefile.in,
-	  gtk-xfce-engine-2/branches/xfce_4_0/aclocal.m4,
-	  gtk-xfce-engine-2/branches/xfce_4_0/config.guess,
-	  gtk-xfce-engine-2/branches/xfce_4_0/config.sub,
-	  gtk-xfce-engine-2/branches/xfce_4_0/configure,
-	  gtk-xfce-engine-2/branches/xfce_4_0/install-sh,
-	  gtk-xfce-engine-2/branches/xfce_4_0/ltmain.sh,
-	  gtk-xfce-engine-2/branches/xfce_4_0/mkinstalldirs,
-	  gtk-xfce-engine-2/branches/xfce_4_0/src/Makefile.in,
-	  gtk-xfce-engine-2/branches/xfce_4_0/themes/Makefile.in,
-	  gtk-xfce-engine-2/branches/xfce_4_0/themes/b5/Makefile.in,
-	  gtk-xfce-engine-2/branches/xfce_4_0/themes/b5/gtk-2.0/Makefile.in,
-	  gtk-xfce-engine-2/branches/xfce_4_0/themes/basic/Makefile.in,
-	  gtk-xfce-engine-2/branches/xfce_4_0/themes/basic/gtk-2.0/Makefile.in,
-	  gtk-xfce-engine-2/branches/xfce_4_0/themes/curve/Makefile.in,
-	  gtk-xfce-engine-2/branches/xfce_4_0/themes/curve/gtk-2.0/Makefile.in,
-	  gtk-xfce-engine-2/branches/xfce_4_0/themes/kde2/Makefile.in,
-	  gtk-xfce-engine-2/branches/xfce_4_0/themes/kde2/gtk-2.0/Makefile.in,
-	  gtk-xfce-engine-2/branches/xfce_4_0/themes/kolors/Makefile.in,
-	  gtk-xfce-engine-2/branches/xfce_4_0/themes/kolors/gtk-2.0/Makefile.in,
-	  gtk-xfce-engine-2/branches/xfce_4_0/themes/light/Makefile.in,
-	  gtk-xfce-engine-2/branches/xfce_4_0/themes/light/gtk-2.0/Makefile.in,
-	  gtk-xfce-engine-2/branches/xfce_4_0/themes/redmondxp/Makefile.in,
-	  gtk-xfce-engine-2/branches/xfce_4_0/themes/redmondxp/gtk-2.0/Makefile.in,
-	  gtk-xfce-engine-2/branches/xfce_4_0/themes/saltlake/Makefile.in,
-	  gtk-xfce-engine-2/branches/xfce_4_0/themes/saltlake/gtk-2.0/Makefile.in,
-	  gtk-xfce-engine-2/branches/xfce_4_0/themes/smooth/Makefile.in,
-	  gtk-xfce-engine-2/branches/xfce_4_0/themes/smooth/gtk-2.0/Makefile.in,
-	  gtk-xfce-engine-2/branches/xfce_4_0/themes/stellar/Makefile.in,
-	  gtk-xfce-engine-2/branches/xfce_4_0/themes/stellar/gtk-2.0/Makefile.in,
-	  gtk-xfce-engine-2/branches/xfce_4_0/themes/winter/Makefile.in,
-	  gtk-xfce-engine-2/branches/xfce_4_0/themes/winter/gtk-2.0/Makefile.in,
-	  gtk-xfce-engine-2/branches/xfce_4_0/themes/xfce/Makefile.in,
-	  gtk-xfce-engine-2/branches/xfce_4_0/themes/xfce/gtk-2.0/Makefile.in:
-	  Update zh_TW translations by umm <umm@pchome.com.tw>
+	* Makefile.in, aclocal.m4, config.guess, config.sub, configure,
+	  install-sh, ltmain.sh, mkinstalldirs, src/Makefile.in,
+	  themes/Makefile.in, themes/b5/Makefile.in,
+	  themes/b5/gtk-2.0/Makefile.in, themes/basic/Makefile.in,
+	  themes/basic/gtk-2.0/Makefile.in, themes/curve/Makefile.in,
+	  themes/curve/gtk-2.0/Makefile.in, themes/kde2/Makefile.in,
+	  themes/kde2/gtk-2.0/Makefile.in, themes/kolors/Makefile.in,
+	  themes/kolors/gtk-2.0/Makefile.in, themes/light/Makefile.in,
+	  themes/light/gtk-2.0/Makefile.in, themes/redmondxp/Makefile.in,
+	  themes/redmondxp/gtk-2.0/Makefile.in, themes/saltlake/Makefile.in,
+	  themes/saltlake/gtk-2.0/Makefile.in, themes/smooth/Makefile.in,
+	  themes/smooth/gtk-2.0/Makefile.in, themes/stellar/Makefile.in,
+	  themes/stellar/gtk-2.0/Makefile.in, themes/winter/Makefile.in,
+	  themes/winter/gtk-2.0/Makefile.in, themes/xfce/Makefile.in,
+	  themes/xfce/gtk-2.0/Makefile.in: Update zh_TW translations by umm
+	  <umm@pchome.com.tw>
 
 2004-01-25 00:09  olivier
 
-	* gtk-xfce-engine-2/branches/xfce_4_0/Makefile.in,
-	  gtk-xfce-engine-2/branches/xfce_4_0/aclocal.m4,
-	  gtk-xfce-engine-2/branches/xfce_4_0/compile,
-	  gtk-xfce-engine-2/branches/xfce_4_0/config.guess,
-	  gtk-xfce-engine-2/branches/xfce_4_0/config.h.in,
-	  gtk-xfce-engine-2/branches/xfce_4_0/config.sub,
-	  gtk-xfce-engine-2/branches/xfce_4_0/configure,
-	  gtk-xfce-engine-2/branches/xfce_4_0/configure.in,
-	  gtk-xfce-engine-2/branches/xfce_4_0/depcomp,
-	  gtk-xfce-engine-2/branches/xfce_4_0/install-sh,
-	  gtk-xfce-engine-2/branches/xfce_4_0/ltmain.sh,
-	  gtk-xfce-engine-2/branches/xfce_4_0/missing,
-	  gtk-xfce-engine-2/branches/xfce_4_0/mkinstalldirs,
-	  gtk-xfce-engine-2/branches/xfce_4_0/src/Makefile.in,
-	  gtk-xfce-engine-2/branches/xfce_4_0/themes/Makefile.in,
-	  gtk-xfce-engine-2/branches/xfce_4_0/themes/b5/Makefile.in,
-	  gtk-xfce-engine-2/branches/xfce_4_0/themes/b5/gtk-2.0/Makefile.in,
-	  gtk-xfce-engine-2/branches/xfce_4_0/themes/basic/Makefile.in,
-	  gtk-xfce-engine-2/branches/xfce_4_0/themes/basic/gtk-2.0/Makefile.in,
-	  gtk-xfce-engine-2/branches/xfce_4_0/themes/curve/Makefile.in,
-	  gtk-xfce-engine-2/branches/xfce_4_0/themes/curve/gtk-2.0/Makefile.in,
-	  gtk-xfce-engine-2/branches/xfce_4_0/themes/kde2/Makefile.in,
-	  gtk-xfce-engine-2/branches/xfce_4_0/themes/kde2/gtk-2.0/Makefile.in,
-	  gtk-xfce-engine-2/branches/xfce_4_0/themes/kolors/Makefile.in,
-	  gtk-xfce-engine-2/branches/xfce_4_0/themes/kolors/gtk-2.0/Makefile.in,
-	  gtk-xfce-engine-2/branches/xfce_4_0/themes/light/Makefile.in,
-	  gtk-xfce-engine-2/branches/xfce_4_0/themes/light/gtk-2.0/Makefile.in,
-	  gtk-xfce-engine-2/branches/xfce_4_0/themes/redmondxp/Makefile.in,
-	  gtk-xfce-engine-2/branches/xfce_4_0/themes/redmondxp/gtk-2.0/Makefile.in,
-	  gtk-xfce-engine-2/branches/xfce_4_0/themes/saltlake/Makefile.in,
-	  gtk-xfce-engine-2/branches/xfce_4_0/themes/saltlake/gtk-2.0/Makefile.in,
-	  gtk-xfce-engine-2/branches/xfce_4_0/themes/smooth/Makefile.in,
-	  gtk-xfce-engine-2/branches/xfce_4_0/themes/smooth/gtk-2.0/Makefile.in,
-	  gtk-xfce-engine-2/branches/xfce_4_0/themes/stellar/Makefile.in,
-	  gtk-xfce-engine-2/branches/xfce_4_0/themes/stellar/gtk-2.0/Makefile.in,
-	  gtk-xfce-engine-2/branches/xfce_4_0/themes/winter/Makefile.in,
-	  gtk-xfce-engine-2/branches/xfce_4_0/themes/winter/gtk-2.0/Makefile.in,
-	  gtk-xfce-engine-2/branches/xfce_4_0/themes/xfce/Makefile.in,
-	  gtk-xfce-engine-2/branches/xfce_4_0/themes/xfce/gtk-2.0/Makefile.in:
-	  Update libtool and other automake, autoconf and gettext.
+	* Makefile.in, aclocal.m4, compile, config.guess, config.h.in,
+	  config.sub, configure, configure.in, depcomp, install-sh,
+	  ltmain.sh, missing, mkinstalldirs, src/Makefile.in,
+	  themes/Makefile.in, themes/b5/Makefile.in,
+	  themes/b5/gtk-2.0/Makefile.in, themes/basic/Makefile.in,
+	  themes/basic/gtk-2.0/Makefile.in, themes/curve/Makefile.in,
+	  themes/curve/gtk-2.0/Makefile.in, themes/kde2/Makefile.in,
+	  themes/kde2/gtk-2.0/Makefile.in, themes/kolors/Makefile.in,
+	  themes/kolors/gtk-2.0/Makefile.in, themes/light/Makefile.in,
+	  themes/light/gtk-2.0/Makefile.in, themes/redmondxp/Makefile.in,
+	  themes/redmondxp/gtk-2.0/Makefile.in, themes/saltlake/Makefile.in,
+	  themes/saltlake/gtk-2.0/Makefile.in, themes/smooth/Makefile.in,
+	  themes/smooth/gtk-2.0/Makefile.in, themes/stellar/Makefile.in,
+	  themes/stellar/gtk-2.0/Makefile.in, themes/winter/Makefile.in,
+	  themes/winter/gtk-2.0/Makefile.in, themes/xfce/Makefile.in,
+	  themes/xfce/gtk-2.0/Makefile.in: Update libtool and other
+	  automake, autoconf and gettext.
 
 2004-01-07 20:55  olivier
 
-	* gtk-xfce-engine-2/branches/xfce_4_0/configure,
-	  gtk-xfce-engine-2/branches/xfce_4_0/configure.in: Update version
-	  number
+	* configure, configure.in: Update version number
 
 2004-01-07 20:38  olivier
 
-	* gtk-xfce-engine-2/branches/xfce_4_0/ChangeLog: Huge update before
-	  4.0.3 release, mainly: ChangeLog update, Version number updates.
+	* ChangeLog: Huge update before 4.0.3 release, mainly: ChangeLog
+	  update, Version number updates.
 
 2004-01-07 18:58  olivier
 
-	* gtk-xfce-engine-2/branches/xfce_4_0/gtk-xfce-engine-2.spec.in: Fix
-	  spec files so that debug files aren't include on Red Hat 9 and
-	  later
+	* gtk-xfce-engine-2.spec.in: Fix spec files so that debug files
+	  aren't include on Red Hat 9 and later
 
 2003-12-29 15:19  olivier
 
-	* gtk-xfce-engine-2/branches/xfce_4_0/ChangeLog: Update version
-	  number, Update ChangeLog Fix missing CHARSET in potfiles
+	* ChangeLog: Update version number, Update ChangeLog Fix missing
+	  CHARSET in potfiles
 
 2003-12-17 23:00  olivier
 
-	* gtk-xfce-engine-2/branches/xfce_4_0/ChangeLog: Update ChangeLog(s)
+	* ChangeLog: Update ChangeLog(s)
 
 2003-11-14 22:13  olivier
 
-	* gtk-xfce-engine-2/branches/xfce_4_0/themes/curve/gtk-2.0/gtkrc:
-	  enhance contrast for "curve" selected items
+	* themes/curve/gtk-2.0/gtkrc: enhance contrast for "curve" selected
+	  items
 
 2003-11-03 21:14  olivier
 
-	* gtk-xfce-engine-2/branches/xfce_4_0/ChangeLog,
-	  gtk-xfce-engine-2/branches/xfce_4_0/configure,
-	  gtk-xfce-engine-2/branches/xfce_4_0/configure.in,
-	  gtk-xfce-engine-2/branches/xfce_4_0/themes/Makefile.am,
-	  gtk-xfce-engine-2/branches/xfce_4_0/themes/Makefile.in,
-	  gtk-xfce-engine-2/branches/xfce_4_0/themes/curve/gtk-2.0/gtkrc,
-	  gtk-xfce-engine-2/branches/xfce_4_0/themes/winter,
-	  gtk-xfce-engine-2/branches/xfce_4_0/themes/winter/ICON.png,
-	  gtk-xfce-engine-2/branches/xfce_4_0/themes/winter/Makefile.am,
-	  gtk-xfce-engine-2/branches/xfce_4_0/themes/winter/Makefile.in,
-	  gtk-xfce-engine-2/branches/xfce_4_0/themes/winter/README.html,
-	  gtk-xfce-engine-2/branches/xfce_4_0/themes/winter/gtk-2.0,
-	  gtk-xfce-engine-2/branches/xfce_4_0/themes/winter/gtk-2.0/Makefile.am,
-	  gtk-xfce-engine-2/branches/xfce_4_0/themes/winter/gtk-2.0/Makefile.in,
-	  gtk-xfce-engine-2/branches/xfce_4_0/themes/winter/gtk-2.0/gtkrc:
+	* ChangeLog, configure, configure.in, themes/Makefile.am,
+	  themes/Makefile.in, themes/curve/gtk-2.0/gtkrc, themes/winter,
+	  themes/winter/ICON.png, themes/winter/Makefile.am,
+	  themes/winter/Makefile.in, themes/winter/README.html,
+	  themes/winter/gtk-2.0, themes/winter/gtk-2.0/Makefile.am,
+	  themes/winter/gtk-2.0/Makefile.in, themes/winter/gtk-2.0/gtkrc:
 	  Latest gtk xfce engine from HEAD
 
 2003-09-22 20:52  
 
-	* gtk-xfce-engine-2/branches/xfce_4_0: This commit was manufactured
-	  by cvs2svn to create branch 'xfce_4_0'.
+	* .: This commit was manufactured by cvs2svn to create branch
+	  'xfce_4_0'.
 
 2003-09-22 20:52  huysmans
 
