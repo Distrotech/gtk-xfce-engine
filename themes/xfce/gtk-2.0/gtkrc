@@ -1,6 +1,3 @@
-# Created April 2005 by Olivier Fourdan
-# Released under the GPL license
-
 style "default"
 {
     GtkButton::default_border                    = {0, 0, 0, 0}
@@ -33,17 +30,17 @@ style "default"
     xthickness = 2
     ythickness = 2
 
-    base[ACTIVE]      = "#e3ddcc"
-    base[INSENSITIVE] = "#e1dfde"
+    base[ACTIVE]      = "#d3d7e0"
+    base[INSENSITIVE] = "#edeff2"
     base[NORMAL]      = "#ffffff"
-    base[PRELIGHT]    = "#e3ddcc"
-    base[SELECTED]    = "#5471a8"
+    base[PRELIGHT]    = "#e6e8ea"
+    base[SELECTED]    = "#7289b9"
 
-    bg[ACTIVE]        = "#e3ddcc"
-    bg[INSENSITIVE]   = "#e1dfde"
-    bg[NORMAL]        = "#e1dfde"
-    bg[PRELIGHT]      = "#e3ddcc"
-    bg[SELECTED]      = "#5471a8"
+    bg[ACTIVE]        = "#e6e8ea"
+    bg[INSENSITIVE]   = "#edeff2"
+    bg[NORMAL]        = "#edeff2"
+    bg[PRELIGHT]      = "#e6e8ea"
+    bg[SELECTED]      = "#7289b9"
 
     fg[ACTIVE]        = "#000000"
     fg[INSENSITIVE]   = "#8e8e8a"
@@ -72,16 +69,12 @@ style "colored" = "default"
     xthickness = 2
     ythickness = 2
 
-    bg[ACTIVE]        = "#f7e5ad"
-    bg[PRELIGHT]      = "#5471a8"
-    base[PRELIGHT]    = "#5471a8"
+    bg[ACTIVE]        = "#d3d7e0"
+    bg[PRELIGHT]      = "#7289b9"
+    base[PRELIGHT]    = "#7289b9"
     fg[ACTIVE]        = "#ffffff"
     fg[PRELIGHT]      = "#ffffff"
     text[PRELIGHT]    = "#ffffff"
-    bg[SELECTED]      = "#5471a8"
-    fg[SELECTED]      = "#ffffff"
-    base[SELECTED]    = "#5471a8"
-    text[SELECTED]    = "#ffffff"
 
     engine "xfce" 
     {
@@ -102,8 +95,8 @@ style "menu" = "colored"
     xthickness = 2
     ythickness = 2
 
-    bg[INSENSITIVE]   = "#f0f0ee"
-    bg[NORMAL]        = "#f0f0ee"
+    bg[INSENSITIVE]   = "#ffffff"
+    bg[NORMAL]        = "#ffffff"
 }
 
 style "menuitem" = "menu"
@@ -123,9 +116,9 @@ style "button" = "default"
     xthickness = 2
     ythickness = 2
 
-    bg[PRELIGHT]      = "#f7f1df"
-    bg[NORMAL]        = "#e3ddcc"
-    bg[ACTIVE]        = "#f7e5ad"
+    bg[PRELIGHT]      = "#e6e8ea"
+    bg[NORMAL]        = "#e6e8ea"
+    bg[ACTIVE]        = "#c2cacf"
 
     engine "xfce" 
     {
@@ -146,8 +139,8 @@ style "notebook" = "default"
     xthickness = 2
     ythickness = 2
 
-    bg[NORMAL]        = "#f0f0ee"
-    bg[ACTIVE]        = "#e3dedb"
+    bg[NORMAL]        = "#f5f5f5"
+    bg[ACTIVE]        = "#d3d7e0"
 }
 
 style "scrollbar" = "default"
@@ -155,10 +148,10 @@ style "scrollbar" = "default"
     xthickness = 2
     ythickness = 2
 
-    bg[PRELIGHT]      = "#f7f1df"
+    bg[PRELIGHT]      = "#e6e8ea"
     fg[PRELIGHT]      = "#000000"
-    bg[NORMAL]        = "#e3ddcc"
-    bg[ACTIVE]        = "#e1dfde"
+    bg[NORMAL]        = "#e6e8ea"
+    bg[ACTIVE]        = "#edeff2"
 
     engine "xfce" 
     {
@@ -198,8 +191,8 @@ style "progress" = "colored"
     xthickness = 0
     ythickness = 0
 
-    bg[NORMAL]        = "#e3ddcc"
-    bg[ACTIVE]        = "#a9a5a3"
+    bg[NORMAL]        = "#d3d7e0"
+    bg[ACTIVE]        = "#a5a5a9"
 
     engine "xfce" 
     {
@@ -226,27 +219,14 @@ style "rox" = "default"
 
 style "titlebar" = "default"
 {
-    bg[SELECTED]      = "#5471a8" # "#5471a8"
+    bg[SELECTED]      = "#7289b9"
     fg[SELECTED]      = "#ffffff"
-    bg[INSENSITIVE]   = "#a9a5a3" # "#ccc4b7"
-    fg[INSENSITIVE]   = "#dad8d6" # #968b79"
+    bg[INSENSITIVE]   = "#e6e8ea"
+    fg[INSENSITIVE]   = "#9ea6b2"
 }
 
 
 widget_class "*"                   style "default"
-
-widget_class "*GtkTree*"           style "colored"
-class "*GtkTree*"                  style "colored"
-widget_class "*GtkCTree*"          style "colored"
-class "*GtkCTree*"                 style "colored"
-widget_class "*GtkList*"           style "colored"
-class "*GtkList*"                  style "colored"
-widget_class "*GtkCList*"          style "colored"
-class "*GtkCList*"                 style "colored"
-widget_class "*Entry*"             style "colored"
-class "*Entry*"                    style "colored"
-widget_class "*Text*"              style "colored"
-class "*Text*"                     style "colored"
 
 widget_class "*Menu*"              style "menu"
 class "*Menu*"                     style "menu"
