@@ -42,7 +42,7 @@ style "default"
     bg[ACTIVE]        = "#e6e8ea"
     bg[INSENSITIVE]   = "#edeff2"
     bg[NORMAL]        = "#edeff2"
-    bg[PRELIGHT]      = "#e6e8ea"
+    bg[PRELIGHT]      = "#f2f4f7"
     bg[SELECTED]      = "#5582c2"
 
     fg[ACTIVE]        = "#000000"
@@ -119,7 +119,7 @@ style "button" = "default"
     xthickness = 2
     ythickness = 2
 
-    bg[PRELIGHT]      = "#e6e8ea"
+    bg[PRELIGHT]      = "#f2f4f7"
     bg[NORMAL]        = "#e6e8ea"
     bg[ACTIVE]        = "#c2cacf"
 
@@ -151,7 +151,7 @@ style "scrollbar" = "default"
     xthickness = 2
     ythickness = 2
 
-    bg[PRELIGHT]      = "#e6e8ea"
+    bg[PRELIGHT]      = "#f2f4f7"
     fg[PRELIGHT]      = "#000000"
     bg[NORMAL]        = "#e6e8ea"
     bg[ACTIVE]        = "#edeff2"
