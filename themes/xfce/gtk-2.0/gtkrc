@@ -98,7 +98,7 @@ style "colored" = "default"
 style "menu" = "colored"
 {
     xthickness = 2
-    ythickness = 2
+    ythickness = 1
 
     bg[PRELIGHT]      = "#ffe371"
     bg[INSENSITIVE]   = "#f5f4f2"
@@ -112,7 +112,7 @@ style "menu" = "colored"
 
 style "menuitem" = "menu"
 {
-    xthickness = 2
+    xthickness = 1
     ythickness = 2
 
     engine "xfce" 
