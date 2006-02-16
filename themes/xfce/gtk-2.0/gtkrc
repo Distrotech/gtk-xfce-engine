@@ -287,6 +287,8 @@ class "*ToolBar"                   style "menubar"
 widget_class "*MenuBar"            style "menubar"
 class "*MenuBar"                   style "menubar"
 
+widget_class "*HandleBox*"         style "handlebox"
+
 widget_class "*Button*"            style "button"
 class "*Button*"                   style "button"
 widget_class "*button*"            style "button"
@@ -309,8 +311,6 @@ class "*GtkVScale*"                style "scale"
 
 widget_class "*.GtkProgress*"      style "progress"
 class "*.GtkProgress*"             style "progress"
-
-widget_class "*HandleBox*"         style "handlebox"
 
 widget_class "*.Collection"        style "rox"
 
