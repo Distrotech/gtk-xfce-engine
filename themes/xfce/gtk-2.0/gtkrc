@@ -12,8 +12,8 @@ style "default"
     GtkButton::focus-padding                     = 1
     GtkCheckButton::indicator_size               = 12
     GtkMenuBar::internal-padding                 = 2
-    GtkMenuBar::shadow_type                      = none
-    GtkHandleBox::shadow_type                    = none
+    GtkMenuBar::shadow_type                      = out
+    GtkHandleBox::shadow_type                    = out
     GtkMenuItem::selected_shadow_type            = etched-in
     GtkPaned::handle_full_size                   = 1
     GtkPaned::handle_size                        = 7
@@ -24,7 +24,7 @@ style "default"
     GtkRange::trough_border                      = 0
     GtkScrollbar::has_backward_stepper           = 1
     GtkScrollbar::min_slider_length              = 20
-    GtkToolbar::shadow_type                      = none
+    GtkToolbar::shadow_type                      = out
     GtkWidget::focus-line-width                  = 1
     GtkWidget::focus_padding                     = 4
     GtkWidget::interior_focus                    = 5
@@ -34,17 +34,17 @@ style "default"
     xthickness = 2
     ythickness = 2
 
-    base[ACTIVE]      = "#eed880"
-    base[INSENSITIVE] = "#e0dcc9"
+    base[ACTIVE]      = "#dbd9d3"
+    base[INSENSITIVE] = "#e6e4dd"
     base[NORMAL]      = "#ffffff"
     base[PRELIGHT]    = "#fff9e1"
     base[SELECTED]    = "#ffe371"
 
     bg[ACTIVE]        = "#fff9e1"
-    bg[INSENSITIVE]   = "#e0dcc9"
+    bg[INSENSITIVE]   = "#e6e4dd"
     bg[NORMAL]        = "#ebe9e2"
     bg[PRELIGHT]      = "#fff9e1"
-    bg[SELECTED]      = "#e0dcc9"
+    bg[SELECTED]      = "#dbd9d3"
 
     fg[ACTIVE]        = "#000000"
     fg[INSENSITIVE]   = "#8e8e8a"
@@ -98,7 +98,7 @@ style "colored" = "default"
 style "menu" = "colored"
 {
     xthickness = 2
-    ythickness = 1
+    ythickness = 2
 
     bg[PRELIGHT]      = "#ffe371"
     bg[INSENSITIVE]   = "#f5f4f2"
@@ -123,10 +123,10 @@ style "menuitem" = "menu"
 
 style "menubar" = "colored"
 {
-    bg[NORMAL]      = "#e0dcc9"
+    bg[NORMAL]      = "#e6e4dd"
 
-    xthickness = 0
-    ythickness = 1
+    xthickness = 2
+    ythickness = 2
 
     engine "xfce" 
     {
@@ -148,7 +148,7 @@ style "button" = "default"
     ythickness = 2
 
     bg[PRELIGHT]      = "#fff0b3"
-    bg[NORMAL]        = "#fff9e1"
+    bg[NORMAL]        = "#dbd9d3"
     bg[ACTIVE]        = "#ffe371"
 
     engine "xfce" 
@@ -170,8 +170,8 @@ style "notebook" = "default"
     xthickness = 2
     ythickness = 2
 
-    bg[NORMAL]        = "#f5f4f2"
-    bg[ACTIVE]        = "#e0dcc9"
+    bg[NORMAL]        = "#e6e4dd"
+    bg[ACTIVE]        = "#ebe9e2"
 }
 
 style "scrollbar" = "default"
@@ -179,9 +179,9 @@ style "scrollbar" = "default"
     xthickness = 2
     ythickness = 2
 
-    bg[PRELIGHT]      = "#e0dcc9"
-    bg[NORMAL]        = "#e0dcc9"
-    bg[ACTIVE]        = "#ebe9e2"
+    bg[PRELIGHT]      = "#fff0b3"
+    bg[NORMAL]        = "#e6e4dd"
+    bg[ACTIVE]        = "#dbd9d3"
 
     engine "xfce" 
     {
@@ -218,8 +218,8 @@ style "scale" = "scrollbar"
 
 style "progress" = "colored"
 {
-    xthickness = 0
-    ythickness = 0
+    xthickness = 1
+    ythickness = 1
 
     bg[NORMAL]        = "#ebe9e2"
     bg[ACTIVE]        = "#a5a5a9"
@@ -240,20 +240,37 @@ style "handlebox" = "default"
 {
     xthickness = 0
     ythickness = 2
+
+    engine "xfce" 
+    {
+        smooth_edge = true
+        grip_style = none
+        boxfill
+        {
+            fill_style = plain
+        }
+    }
+}
+
+style "tooltips" = "default"
+{
+    bg[NORMAL] = "#ffffdf"
+    fg[NORMAL] = "#000000"
+
 }
 
 style "rox" = "default"
 {
-  bg[NORMAL] = "#ffffff"
-  bg[ACTIVE] = "#ffffff"
+    bg[NORMAL] = "#ffffff"
+    bg[ACTIVE] = "#ffffff"
 }
 
 style "titlebar" = "default"
 {
-    bg[SELECTED]      = "#64665a"
+    bg[SELECTED]      = "#819093"
     fg[SELECTED]      = "#ffffff"
-    bg[INSENSITIVE]   = "#e0dcc9"
-    fg[INSENSITIVE]   = "#a9a281"
+    bg[INSENSITIVE]   = "#ebe9e2"
+    fg[INSENSITIVE]   = "#aea895"
 }
 
 
@@ -311,6 +328,8 @@ class "*GtkVScale*"                style "scale"
 
 widget_class "*.GtkProgress*"      style "progress"
 class "*.GtkProgress*"             style "progress"
+
+widget "gtk-tooltips*"             style "tooltips"
 
 widget_class "*.Collection"        style "rox"
 
