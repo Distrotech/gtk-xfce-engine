@@ -11,10 +11,7 @@ style "default"
     GtkButton::default_spacing                   = 5
     GtkButton::focus-padding                     = 1
     GtkCheckButton::indicator_size               = 12
-    GtkMenuBar::internal-padding                 = 2
-    GtkMenuBar::shadow_type                      = out
-    GtkHandleBox::shadow_type                    = out
-    GtkMenuItem::selected_shadow_type            = etched-in
+    GtkMenuItem::selected_shadow_type            = none
     GtkPaned::handle_full_size                   = 1
     GtkPaned::handle_size                        = 7
     GtkRadioButton::indicator_size               = 15
@@ -24,7 +21,6 @@ style "default"
     GtkRange::trough_border                      = 0
     GtkScrollbar::has_backward_stepper           = 1
     GtkScrollbar::min_slider_length              = 20
-    GtkToolbar::shadow_type                      = out
     GtkWidget::focus-line-width                  = 1
     GtkWidget::focus_padding                     = 4
     GtkWidget::interior_focus                    = 5
@@ -34,7 +30,7 @@ style "default"
     xthickness = 2
     ythickness = 2
 
-    base[ACTIVE]      = "#dbd9d3"
+    base[ACTIVE]      = "#d1cfc9"
     base[INSENSITIVE] = "#e6e4dd"
     base[NORMAL]      = "#ffffff"
     base[PRELIGHT]    = "#fff9e1"
@@ -70,9 +66,6 @@ style "default"
 
 style "colored" = "default"
 {
-    xthickness = 2
-    ythickness = 2
-
     bg[ACTIVE]        = "#ffe371"
     bg[PRELIGHT]      = "#fff0b3"
     bg[SELECTED]      = "#ffe371"
@@ -97,9 +90,6 @@ style "colored" = "default"
 
 style "menu" = "colored"
 {
-    xthickness = 2
-    ythickness = 2
-
     bg[PRELIGHT]      = "#ffe371"
     bg[INSENSITIVE]   = "#f5f4f2"
     bg[NORMAL]        = "#f5f4f2"
@@ -113,7 +103,6 @@ style "menu" = "colored"
 style "menuitem" = "menu"
 {
     xthickness = 1
-    ythickness = 2
 
     engine "xfce" 
     {
@@ -123,30 +112,14 @@ style "menuitem" = "menu"
 
 style "menubar" = "colored"
 {
-    bg[NORMAL]      = "#e6e4dd"
-
-    xthickness = 2
-    ythickness = 2
-
     engine "xfce" 
     {
         smooth_edge = true
-        grip_style = none
-        boxfill
-        {
-            fill_style = gradient
-            orientation = vertical
-            shade_start = 1.05
-            shade_end = 0.95
-        }
     }
 }
 
 style "button" = "default"
 {
-    xthickness = 2
-    ythickness = 2
-
     bg[PRELIGHT]      = "#fff0b3"
     bg[NORMAL]        = "#dbd9d3"
     bg[ACTIVE]        = "#ffe371"
@@ -167,21 +140,15 @@ style "button" = "default"
 
 style "notebook" = "default"
 {
-    xthickness = 2
-    ythickness = 2
-
     bg[NORMAL]        = "#e6e4dd"
-    bg[ACTIVE]        = "#ebe9e2"
+    bg[ACTIVE]        = "#d1cfc9"
 }
 
 style "scrollbar" = "default"
 {
-    xthickness = 2
-    ythickness = 2
-
     bg[PRELIGHT]      = "#fff0b3"
     bg[NORMAL]        = "#e6e4dd"
-    bg[ACTIVE]        = "#dbd9d3"
+    bg[ACTIVE]        = "#d1cfc9"
 
     engine "xfce" 
     {
@@ -199,9 +166,6 @@ style "scrollbar" = "default"
 
 style "scale" = "scrollbar"
 {
-    xthickness = 2
-    ythickness = 2
-
     engine "xfce" 
     {
         smooth_edge = true
@@ -218,8 +182,8 @@ style "scale" = "scrollbar"
 
 style "progress" = "colored"
 {
-    xthickness = 1
-    ythickness = 1
+    xthickness = 0
+    ythickness = 0
 
     bg[NORMAL]        = "#ebe9e2"
     bg[ACTIVE]        = "#a5a5a9"
@@ -238,9 +202,6 @@ style "progress" = "colored"
 
 style "handlebox" = "default"
 {
-    xthickness = 0
-    ythickness = 2
-
     engine "xfce" 
     {
         smooth_edge = true
