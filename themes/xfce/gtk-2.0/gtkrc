@@ -228,7 +228,9 @@ style "rox" = "default"
 
 style "titlebar" = "default"
 {
-    bg[SELECTED]      = "#819093"
+#    bg[SELECTED]      = "#8c9c91"
+#    bg[SELECTED]      = "#869696"
+    bg[SELECTED]      = "#8c9c9c"
     fg[SELECTED]      = "#ffffff"
     bg[INSENSITIVE]   = "#ebe9e2"
     fg[INSENSITIVE]   = "#aea895"
@@ -295,5 +297,6 @@ widget "gtk-tooltips*"             style "tooltips"
 widget_class "*.Collection"        style "rox"
 
 widget "xfwm"                      style "titlebar"
+widget "xfwm4-tabwin*"             style "titlebar"
 class "MetaFrames"                 style "titlebar"
 widget_class "MetaFrames"          style "titlebar"
