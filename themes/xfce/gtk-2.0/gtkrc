@@ -30,17 +30,17 @@ style "default"
     xthickness = 2
     ythickness = 2
 
-    base[ACTIVE]      = "#d1cfc9"
-    base[INSENSITIVE] = "#e6e4dd"
+    base[ACTIVE]      = "#dedcd5"
+    base[INSENSITIVE] = "#ebe9e2"
     base[NORMAL]      = "#ffffff"
     base[PRELIGHT]    = "#fff9e1"
     base[SELECTED]    = "#ffe371"
 
     bg[ACTIVE]        = "#fff9e1"
-    bg[INSENSITIVE]   = "#e6e4dd"
-    bg[NORMAL]        = "#ebe9e2"
+    bg[INSENSITIVE]   = "#ebe9e2"
+    bg[NORMAL]        = "#f0eee7"
     bg[PRELIGHT]      = "#fff9e1"
-    bg[SELECTED]      = "#dbd9d3"
+    bg[SELECTED]      = "#dedcd5"
 
     fg[ACTIVE]        = "#000000"
     fg[INSENSITIVE]   = "#8e8e8a"
@@ -121,7 +121,7 @@ style "menubar" = "colored"
 style "button" = "default"
 {
     bg[PRELIGHT]      = "#fff0b3"
-    bg[NORMAL]        = "#dbd9d3"
+    bg[NORMAL]        = "#dedcd5"
     bg[ACTIVE]        = "#ffe371"
 
     engine "xfce" 
@@ -140,15 +140,15 @@ style "button" = "default"
 
 style "notebook" = "default"
 {
-    bg[NORMAL]        = "#e6e4dd"
-    bg[ACTIVE]        = "#d1cfc9"
+    bg[NORMAL]        = "#ebe9e2"
+    bg[ACTIVE]        = "#dedcd5"
 }
 
 style "scrollbar" = "default"
 {
     bg[PRELIGHT]      = "#fff0b3"
-    bg[NORMAL]        = "#e6e4dd"
-    bg[ACTIVE]        = "#d1cfc9"
+    bg[NORMAL]        = "#ebe9e2"
+    bg[ACTIVE]        = "#dedcd5"
 
     engine "xfce" 
     {
@@ -185,7 +185,7 @@ style "progress" = "colored"
     xthickness = 0
     ythickness = 0
 
-    bg[NORMAL]        = "#ebe9e2"
+    bg[NORMAL]        = "#f0eee7"
     bg[ACTIVE]        = "#a5a5a9"
     bg[PRELIGHT]      = "#ffe371"
 
@@ -232,7 +232,7 @@ style "titlebar" = "default"
 #    bg[SELECTED]      = "#869696"
     bg[SELECTED]      = "#8c9c9c"
     fg[SELECTED]      = "#ffffff"
-    bg[INSENSITIVE]   = "#ebe9e2"
+    bg[INSENSITIVE]   = "#f0eee7"
     fg[INSENSITIVE]   = "#aea895"
 }
 
