@@ -30,20 +30,20 @@ style "default"
     xthickness = 2
     ythickness = 2
 
-    base[ACTIVE]      = "#dedcd5"
-    base[INSENSITIVE] = "#ebe9e2"
+    base[ACTIVE]      = "#e0dcd7"
+    base[INSENSITIVE] = "#f4f2ed"
     base[NORMAL]      = "#ffffff"
     base[PRELIGHT]    = "#fff9e1"
     base[SELECTED]    = "#ffe371"
 
     bg[ACTIVE]        = "#fff9e1"
-    bg[INSENSITIVE]   = "#ebe9e2"
-    bg[NORMAL]        = "#f0eee7"
+    bg[INSENSITIVE]   = "#f4f2ed"
+    bg[NORMAL]        = "#f4f2ed"
     bg[PRELIGHT]      = "#fff9e1"
-    bg[SELECTED]      = "#dedcd5"
+    bg[SELECTED]      = "#e0dcd7"
 
     fg[ACTIVE]        = "#000000"
-    fg[INSENSITIVE]   = "#8e8e8a"
+    fg[INSENSITIVE]   = "#858481"
     fg[NORMAL]        = "#000000"
     fg[PRELIGHT]      = "#000000"
     fg[SELECTED]      = "#000000"
@@ -91,8 +91,8 @@ style "colored" = "default"
 style "menu" = "colored"
 {
     bg[PRELIGHT]      = "#ffe371"
-    bg[INSENSITIVE]   = "#f5f4f2"
-    bg[NORMAL]        = "#f5f4f2"
+    bg[INSENSITIVE]   = "#f8f7f5"
+    bg[NORMAL]        = "#f8f7f5"
 
     engine "xfce" 
     {
@@ -121,7 +121,7 @@ style "menubar" = "colored"
 style "button" = "default"
 {
     bg[PRELIGHT]      = "#fff0b3"
-    bg[NORMAL]        = "#dedcd5"
+    bg[NORMAL]        = "#ebe6e1"
     bg[ACTIVE]        = "#ffe371"
 
     engine "xfce" 
@@ -140,15 +140,15 @@ style "button" = "default"
 
 style "notebook" = "default"
 {
-    bg[NORMAL]        = "#ebe9e2"
-    bg[ACTIVE]        = "#dedcd5"
+    bg[NORMAL]        = "#f8f7f5"
+    bg[ACTIVE]        = "#e0dcd7"
 }
 
 style "scrollbar" = "default"
 {
     bg[PRELIGHT]      = "#fff0b3"
-    bg[NORMAL]        = "#ebe9e2"
-    bg[ACTIVE]        = "#dedcd5"
+    bg[NORMAL]        = "#f4f2ed"
+    bg[ACTIVE]        = "#e0dcd7"
 
     engine "xfce" 
     {
@@ -185,7 +185,7 @@ style "progress" = "colored"
     xthickness = 0
     ythickness = 0
 
-    bg[NORMAL]        = "#f0eee7"
+    bg[NORMAL]        = "#f4f2ed"
     bg[ACTIVE]        = "#a5a5a9"
     bg[PRELIGHT]      = "#ffe371"
 
@@ -230,9 +230,10 @@ style "titlebar" = "default"
 {
 #    bg[SELECTED]      = "#8c9c91"
 #    bg[SELECTED]      = "#869696"
-    bg[SELECTED]      = "#8c9c9c"
+#    bg[SELECTED]      = "#8c9c9c"
+    bg[SELECTED]      = "#80918c"
     fg[SELECTED]      = "#ffffff"
-    bg[INSENSITIVE]   = "#f0eee7"
+    bg[INSENSITIVE]   = "#f4f2ed"
     fg[INSENSITIVE]   = "#aea895"
 }
 
