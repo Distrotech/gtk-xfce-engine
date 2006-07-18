@@ -1,5 +1,6 @@
-# Created January 2006
-# Carl Bolduc <drcurl@gmail.com> and Olivier Fourdan <fourdan@xfce.org>
+# Created July 2006
+# Olivier Fourdan <fourdan@xfce.org>
+# Based on Tango color scheme http://tango-project.org 
 # Released under the GPL license
 
 style "default"

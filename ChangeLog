@@ -1,3 +1,16 @@
+2006-04-21 19:01  olivier
+
+	* themes/xfce/gtk-2.0/gtkrc: Change the color of active window
+	  title.
+
+2006-04-16 14:43  olivier
+
+	* configure.in: Update package
+
+2006-04-15 17:32  olivier
+
+	* ChangeLog: Update ChangeLog
+
 2006-03-16 21:23  olivier
 
 	* themes/xfce/gtk-2.0/gtkrc: Tweak colors

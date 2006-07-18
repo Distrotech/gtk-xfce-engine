@@ -75,6 +75,8 @@ themes/kde2/gtk-2.0/Makefile
 themes/kde2/Makefile
 themes/light/Makefile
 themes/light/gtk-2.0/Makefile
+themes/orange/gtk-2.0/Makefile
+themes/orange/Makefile
 themes/redmondxp/gtk-2.0/Makefile
 themes/redmondxp/Makefile
 themes/saltlake/gtk-2.0/Makefile

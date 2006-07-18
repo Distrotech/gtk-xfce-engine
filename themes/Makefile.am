@@ -11,6 +11,7 @@ SUBDIRS = \
 	kde2		\
 	kolors		\
 	light		\
+	orange		\
 	redmondxp	\
 	saltlake	\
 	smooth		\
