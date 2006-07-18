@@ -380,6 +380,7 @@ static guint xfce_rc_style_parse(GtkRcStyle * rc_style, GtkSettings * settings, 
     guint old_scope;
     guint token;
     guint i;
+    gboolean b;
 
     /* Set up a new scope in this scanner. */
     if(!scope_id)
@@ -400,12 +401,12 @@ static guint xfce_rc_style_parse(GtkRcStyle * rc_style, GtkSettings * settings, 
         switch (token)
         {
             case TOKEN_SMOOTHEDGE:
-                token = theme_parse_boolean(scanner, TOKEN_SMOOTHEDGE, &i);
+                token = theme_parse_boolean(scanner, TOKEN_SMOOTHEDGE, &b);
                 if(token != G_TOKEN_NONE)
                 {
                     break;
                 }
-                theme_data->smooth_edge = i;
+                theme_data->smooth_edge = b;
                 break;
             case TOKEN_GRIP_STYLE:
                 token = theme_parse_grip_style(scanner, TOKEN_GRIP_STYLE, theme_data);
