@@ -197,7 +197,10 @@ style "progress" = "colored"
         grip_style = none
         boxfill
         {
-            fill_style = plain
+            fill_style = gradient
+            orientation = automatic
+            shade_start = 1.05
+            shade_end = 0.95
         }
     }
 }
@@ -289,8 +292,8 @@ class "*GtkHScale*"                style "scale"
 widget_class "*GtkVScale*"         style "scale"
 class "*GtkVScale*"                style "scale"
 
-widget_class "*.GtkProgress*"      style "progress"
-class "*.GtkProgress*"             style "progress"
+widget_class "*GtkProgress*"       style "progress"
+class "*GtkProgress*"              style "progress"
 
 widget "gtk-tooltips*"             style "tooltips"
 
