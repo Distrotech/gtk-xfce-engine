@@ -190,6 +190,7 @@ style "progress" = "colored"
     bg[NORMAL]        = "#eeeeec"
     bg[ACTIVE]        = "#d3d7cf"
     bg[PRELIGHT]      = "#8ae234"
+    fg[PRELIGHT]      = "#4e9a06"
 
     engine "xfce" 
     {
