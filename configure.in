@@ -1,13 +1,9 @@
 # Process this file with autoconf to produce a configure script.
-AC_INIT(src/xfce_theme_draw.c)
-THEME="xfce"
+AC_INIT([gtk-xfce-engine], [2.3.99.2], [http://bugzilla.xfce.org])
 
 AC_PREREQ(2.52)
 
-VERSION=2.3.99.2
-PACKAGE=gtk-${THEME}-engine
-AM_INIT_AUTOMAKE($PACKAGE, $VERSION)
-
+AM_INIT_AUTOMAKE([1.8 dist-bzip2 tar-ustar])
 AM_CONFIG_HEADER(config.h)
 AM_MAINTAINER_MODE
 
