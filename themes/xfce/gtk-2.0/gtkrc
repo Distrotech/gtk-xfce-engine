@@ -40,7 +40,7 @@ style "default"
     bg[ACTIVE]        = "#eeeeec"
     bg[INSENSITIVE]   = "#eeeeec"
     bg[NORMAL]        = "#eeeeec"
-    bg[PRELIGHT]      = "#eeeeec"
+    bg[PRELIGHT]      = "#d3d7cf"
     bg[SELECTED]      = "#d3d7cf"
 
     fg[ACTIVE]        = "#000000"
@@ -68,7 +68,7 @@ style "default"
 style "colored" = "default"
 {
     bg[ACTIVE]        = "#729fcf"
-    bg[PRELIGHT]      = "#eeeeec"
+    bg[PRELIGHT]      = "#d3d7cf"
     bg[SELECTED]      = "#729fcf"
     base[PRELIGHT]    = "#eeeeec"
     fg[ACTIVE]        = "#ffffff"
@@ -122,7 +122,7 @@ style "menubar" = "colored"
 
 style "button" = "default"
 {
-    bg[PRELIGHT]      = "#fafaf7"
+    bg[PRELIGHT]      = "#d3d7cf"
     bg[NORMAL]        = "#eeeeec"
     bg[ACTIVE]        = "#d3d7cf"
     fg[ACTIVE]        = "#000000"
@@ -150,13 +150,13 @@ style "notebook" = "default"
 style "scrollbar" = "default"
 {
     bg[PRELIGHT]      = "#eeeeec"
-    bg[NORMAL]        = "#eeeeec"
-    bg[ACTIVE]        = "#d3d7cf"
+    bg[NORMAL]        = "#d3d7cf"
+    bg[ACTIVE]        = "#eeeeec"
 
     engine "xfce"
     {
         smooth_edge = true
-        grip_style = none
+        grip_style = handle
         boxfill
         {
             fill_style = gradient
