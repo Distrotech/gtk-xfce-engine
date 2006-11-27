@@ -40,7 +40,7 @@ style "default"
     bg[ACTIVE]        = "#eeeeec"
     bg[INSENSITIVE]   = "#eeeeec"
     bg[NORMAL]        = "#eeeeec"
-    bg[PRELIGHT]      = "#d3d7cf"
+    bg[PRELIGHT]      = "#eeeeec"
     bg[SELECTED]      = "#d3d7cf"
 
     fg[ACTIVE]        = "#000000"
@@ -68,7 +68,7 @@ style "default"
 style "colored" = "default"
 {
     bg[ACTIVE]        = "#729fcf"
-    bg[PRELIGHT]      = "#d3d7cf"
+    bg[PRELIGHT]      = "#eeeeec"
     bg[SELECTED]      = "#729fcf"
     base[PRELIGHT]    = "#eeeeec"
     fg[ACTIVE]        = "#ffffff"
@@ -188,10 +188,10 @@ style "progress" = "colored"
     xthickness = 0
     ythickness = 0
 
+    fg[PRELIGHT]      = "#4e9a06"
+    bg[PRELIGHT]      = "#8ae234"
     bg[NORMAL]        = "#eeeeec"
     bg[ACTIVE]        = "#d3d7cf"
-    bg[PRELIGHT]      = "#8ae234"
-    fg[PRELIGHT]      = "#4e9a06"
 
     engine "xfce"
     {
@@ -235,7 +235,7 @@ style "rox" = "default"
 
 style "titlebar" = "default"
 {
-    bg[SELECTED]      = "#729fcf"
+    bg[SELECTED]      = "#3465a4"
     fg[SELECTED]      = "#ffffff"
     bg[INSENSITIVE]   = "#eeeeec"
     fg[INSENSITIVE]   = "#888a85"
