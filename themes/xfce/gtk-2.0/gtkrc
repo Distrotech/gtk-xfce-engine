@@ -92,8 +92,8 @@ style "colored" = "default"
 style "menu" = "colored"
 {
     bg[PRELIGHT]      = "#729fcf"
-    bg[INSENSITIVE]   = "#fafaf7"
-    bg[NORMAL]        = "#fafaf7"
+    bg[INSENSITIVE]   = "#ffffff"
+    bg[NORMAL]        = "#ffffff"
 
     engine "xfce"
     {
@@ -143,13 +143,13 @@ style "button" = "default"
 
 style "notebook" = "default"
 {
-    bg[NORMAL]        = "#fafaf7"
-    bg[ACTIVE]        = "#eeeeec"
+    bg[NORMAL]        = "#ffffff"
+    bg[ACTIVE]        = "#d3d7cf"
 }
 
 style "scrollbar" = "default"
 {
-    bg[PRELIGHT]      = "#eeeeec"
+    bg[PRELIGHT]      = "#d3d7cf"
     bg[NORMAL]        = "#d3d7cf"
     bg[ACTIVE]        = "#eeeeec"
 
