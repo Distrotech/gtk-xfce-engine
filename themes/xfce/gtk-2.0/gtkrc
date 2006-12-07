@@ -44,16 +44,16 @@ style "default"
     bg[PRELIGHT]      = "#eeeeec"
     bg[SELECTED]      = "#d3d7cf"
 
-    fg[ACTIVE]        = "#000000"
+    fg[ACTIVE]        = "#101010"
     fg[INSENSITIVE]   = "#888a85"
-    fg[NORMAL]        = "#000000"
-    fg[PRELIGHT]      = "#000000"
-    fg[SELECTED]      = "#000000"
+    fg[NORMAL]        = "#101010"
+    fg[PRELIGHT]      = "#101010"
+    fg[SELECTED]      = "#101010"
 
-    text[ACTIVE]      = "#000000"
-    text[INSENSITIVE] = "#000000"
-    text[NORMAL]      = "#000000"
-    text[PRELIGHT]    = "#000000"
+    text[ACTIVE]      = "#101010"
+    text[INSENSITIVE] = "#101010"
+    text[NORMAL]      = "#101010"
+    text[PRELIGHT]    = "#101010"
     text[SELECTED]    = "#ffffff"
 
     engine "xfce"
@@ -133,7 +133,7 @@ style "button" = "default"
     bg[PRELIGHT]      = "#d3d7cf"
     bg[SELECTED]      = "#3465a4"
 
-    fg[ACTIVE]        = "#000000"
+    fg[ACTIVE]        = "#101010"
     fg[SELECTED]      = "#ffffff"
 
     engine "xfce"
@@ -233,7 +233,7 @@ style "handlebox" = "default"
 style "tooltips" = "default"
 {
     bg[NORMAL] = "#ffffdf"
-    fg[NORMAL] = "#000000"
+    fg[NORMAL] = "#101010"
 }
 
 style "rox" = "default"
@@ -245,7 +245,7 @@ style "rox" = "default"
 style "titlebar" = "default"
 {
     bg[INSENSITIVE]   = "#eeeeec"
-    bg[SELECTED]      = "#2d4568"
+    bg[SELECTED]      = "#555753"
 
     fg[INSENSITIVE]   = "#888a85"
     fg[SELECTED]      = "#ffffff"
