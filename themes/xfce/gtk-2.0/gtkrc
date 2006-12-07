@@ -1,4 +1,5 @@
 # Created July 2006
+# Modified Dec. 2006
 # Olivier Fourdan <fourdan@xfce.org>
 # Based on Tango color scheme http://tango-project.org 
 # Released under the GPL license
@@ -35,7 +36,7 @@ style "default"
     base[INSENSITIVE] = "#eeeeec"
     base[NORMAL]      = "#ffffff"
     base[PRELIGHT]    = "#eeeeec"
-    base[SELECTED]    = "#729fcf"
+    base[SELECTED]    = "#3465a4"
 
     bg[ACTIVE]        = "#eeeeec"
     bg[INSENSITIVE]   = "#eeeeec"
@@ -67,12 +68,16 @@ style "default"
 
 style "colored" = "default"
 {
-    bg[ACTIVE]        = "#729fcf"
-    bg[PRELIGHT]      = "#eeeeec"
-    bg[SELECTED]      = "#729fcf"
     base[PRELIGHT]    = "#eeeeec"
+
+    bg[ACTIVE]        = "#3465a4"
+    bg[PRELIGHT]      = "#eeeeec"
+    bg[SELECTED]      = "#3465a4"
+
     fg[ACTIVE]        = "#ffffff"
     fg[PRELIGHT]      = "#ffffff"
+    fg[SELECTED]      = "#ffffff"
+
     text[PRELIGHT]    = "#ffffff"
 
     engine "xfce"
@@ -91,9 +96,9 @@ style "colored" = "default"
 
 style "menu" = "colored"
 {
-    bg[PRELIGHT]      = "#729fcf"
     bg[INSENSITIVE]   = "#ffffff"
     bg[NORMAL]        = "#ffffff"
+    bg[PRELIGHT]      = "#3465a4"
 
     engine "xfce"
     {
@@ -104,6 +109,7 @@ style "menu" = "colored"
 style "menuitem" = "menu"
 {
     xthickness = 1
+    ythickness = 3
 
     engine "xfce"
     {
@@ -122,10 +128,13 @@ style "menubar" = "colored"
 
 style "button" = "default"
 {
-    bg[PRELIGHT]      = "#d3d7cf"
-    bg[NORMAL]        = "#eeeeec"
     bg[ACTIVE]        = "#d3d7cf"
+    bg[NORMAL]        = "#eeeeec"
+    bg[PRELIGHT]      = "#d3d7cf"
+    bg[SELECTED]      = "#3465a4"
+
     fg[ACTIVE]        = "#000000"
+    fg[SELECTED]      = "#ffffff"
 
     engine "xfce"
     {
@@ -143,15 +152,15 @@ style "button" = "default"
 
 style "notebook" = "default"
 {
-    bg[NORMAL]        = "#ffffff"
     bg[ACTIVE]        = "#d3d7cf"
+    bg[NORMAL]        = "#ffffff"
 }
 
 style "scrollbar" = "default"
 {
-    bg[PRELIGHT]      = "#d3d7cf"
-    bg[NORMAL]        = "#d3d7cf"
     bg[ACTIVE]        = "#eeeeec"
+    bg[NORMAL]        = "#d3d7cf"
+    bg[PRELIGHT]      = "#d3d7cf"
 
     engine "xfce"
     {
@@ -188,10 +197,11 @@ style "progress" = "colored"
     xthickness = 0
     ythickness = 0
 
-    fg[PRELIGHT]      = "#4e9a06"
-    bg[PRELIGHT]      = "#8ae234"
-    bg[NORMAL]        = "#eeeeec"
     bg[ACTIVE]        = "#d3d7cf"
+    bg[NORMAL]        = "#eeeeec"
+    bg[PRELIGHT]      = "#8ae234"
+
+    fg[PRELIGHT]      = "#4e9a06"
 
     engine "xfce"
     {
@@ -224,21 +234,21 @@ style "tooltips" = "default"
 {
     bg[NORMAL] = "#ffffdf"
     fg[NORMAL] = "#000000"
-
 }
 
 style "rox" = "default"
 {
-    bg[NORMAL] = "#ffffff"
     bg[ACTIVE] = "#ffffff"
+    bg[NORMAL] = "#ffffff"
 }
 
 style "titlebar" = "default"
 {
-    bg[SELECTED]      = "#3465a4"
-    fg[SELECTED]      = "#ffffff"
     bg[INSENSITIVE]   = "#eeeeec"
+    bg[SELECTED]      = "#2d4568"
+
     fg[INSENSITIVE]   = "#888a85"
+    fg[SELECTED]      = "#ffffff"
 }
 
 
