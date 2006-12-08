@@ -6,6 +6,10 @@
 
 style "default"
 {
+    GtkWidget::focus-line-width                  = 1
+    GtkWidget::focus_padding                     = 4
+    GtkWidget::interior_focus                    = 5
+    GtkWidget::internal_padding                  = 4
     GtkButton::default_border                    = {0, 0, 0, 0}
     GtkButton::default_outside_border            = {0, 0, 0, 0}
     GtkButton::child_displacement_x              = 0
@@ -14,6 +18,7 @@ style "default"
     GtkButton::focus-padding                     = 1
     GtkCheckButton::indicator_size               = 12
     GtkMenuItem::selected_shadow_type            = etched-in
+    GtkMenuItem::internal_padding                = 5
     GtkPaned::handle_full_size                   = 1
     GtkPaned::handle_size                        = 7
     GtkRadioButton::indicator_size               = 15
@@ -23,10 +28,6 @@ style "default"
     GtkRange::trough_border                      = 0
     GtkScrollbar::has_backward_stepper           = 1
     GtkScrollbar::min_slider_length              = 20
-    GtkWidget::focus-line-width                  = 1
-    GtkWidget::focus_padding                     = 4
-    GtkWidget::interior_focus                    = 5
-    GtkWidget::internal_padding                  = 4
     ExoIconBar::focus_padding                    = 2 
 
     xthickness = 2
@@ -109,7 +110,7 @@ style "menu" = "colored"
 style "menuitem" = "menu"
 {
     xthickness = 1
-    ythickness = 3
+    ythickness = 1
 
     engine "xfce"
     {
@@ -245,7 +246,7 @@ style "rox" = "default"
 style "titlebar" = "default"
 {
     bg[INSENSITIVE]   = "#eeeeec"
-    bg[SELECTED]      = "#555753"
+    bg[SELECTED]      = "#2d3f52" # 40% of #729fcf
 
     fg[INSENSITIVE]   = "#888a85"
     fg[SELECTED]      = "#ffffff"
