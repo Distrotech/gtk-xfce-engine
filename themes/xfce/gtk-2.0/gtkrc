@@ -37,7 +37,7 @@ style "default"
     base[INSENSITIVE] = "#eeeeec"
     base[NORMAL]      = "#ffffff"
     base[PRELIGHT]    = "#eeeeec"
-    base[SELECTED]    = "#4e6e9e"
+    base[SELECTED]    = "#3465a4"
 
     bg[ACTIVE]        = "#eeeeec"
     bg[INSENSITIVE]   = "#eeeeec"
@@ -71,9 +71,9 @@ style "colored" = "default"
 {
     base[PRELIGHT]    = "#eeeeec"
 
-    bg[ACTIVE]        = "#4e6e9e"
+    bg[ACTIVE]        = "#3465a4"
     bg[PRELIGHT]      = "#eeeeec"
-    bg[SELECTED]      = "#4e6e9e"
+    bg[SELECTED]      = "#3465a4"
 
     fg[ACTIVE]        = "#ffffff"
     fg[PRELIGHT]      = "#ffffff"
@@ -99,7 +99,7 @@ style "menu" = "colored"
 {
     bg[INSENSITIVE]   = "#ffffff"
     bg[NORMAL]        = "#ffffff"
-    bg[PRELIGHT]      = "#4e6e9e"
+    bg[PRELIGHT]      = "#729fcf"
 
     engine "xfce"
     {
@@ -132,7 +132,7 @@ style "button" = "default"
     bg[ACTIVE]        = "#d3d7cf"
     bg[NORMAL]        = "#eeeeec"
     bg[PRELIGHT]      = "#d3d7cf"
-    bg[SELECTED]      = "#4e6e9e"
+    bg[SELECTED]      = "#3465a4"
 
     fg[ACTIVE]        = "#101010"
     fg[SELECTED]      = "#ffffff"
@@ -246,7 +246,7 @@ style "rox" = "default"
 style "titlebar" = "default"
 {
     bg[INSENSITIVE]   = "#eeeeec"
-    bg[SELECTED]      = "#4e6e9e"
+    bg[SELECTED]      = "#729fcf"
     fg[INSENSITIVE]   = "#888a85"
     fg[SELECTED]      = "#ffffff"
 }
