@@ -78,7 +78,7 @@ style "gradient" = "default"
         {
             fill_style = gradient
             orientation = vertical
-            shade_start = 1.05
+            shade_start = 1.10
             shade_end = 0.95
         }
     }
@@ -89,10 +89,58 @@ style "menu" = "gradient"
     bg[INSENSITIVE]   = "#ffffff"
     bg[NORMAL]        = "#ffffff"
     bg[PRELIGHT]      = "#d3d7cf"
+    fg[SELECTED]      = "#000000"
+    text[SELECTED]    = "#000000"
 
     engine "xfce"
     {
         smooth_edge = true
+        boxfill
+        {
+            fill_style = gradient
+            orientation = vertical
+            shade_start = 1.10
+            shade_end = 0.95
+        }
+    }
+}
+
+style "menuitem" = "menu"
+{
+    xthickness = 1
+    ythickness = 2
+
+    engine "xfce"
+    {
+        smooth_edge = true
+        boxfill
+        {
+            fill_style = gradient
+            orientation = vertical
+            shade_start = 1.10
+            shade_end = 0.95
+        }
+    }
+}
+
+style "menubar" = "menu"
+{
+    xthickness = 1
+    ythickness = 3
+
+    bg[INSENSITIVE]   = "#eeeeec"
+    bg[NORMAL]        = "#eeeeec"
+
+    engine "xfce"
+    {
+        smooth_edge = true
+        boxfill
+        {
+            fill_style = gradient
+            orientation = vertical
+            shade_start = 1.20
+            shade_end = 0.90
+        }
     }
 }
 
@@ -104,26 +152,6 @@ style "pager" = "gradient"
     bg[SELECTED]      = "#3465a4"
     fg[SELECTED]      = "#ffffff"
 
-    engine "xfce"
-    {
-        smooth_edge = true
-    }
-}
-
-style "menuitem" = "menu"
-{
-    xthickness = 1
-    ythickness = 1
-
-    engine "xfce"
-    {
-        smooth_edge = true
-    }
-}
-
-style "menubar" = "gradient"
-{
-    ythickness = 3
     engine "xfce"
     {
         smooth_edge = true
@@ -148,7 +176,7 @@ style "button" = "default"
         {
             fill_style = gradient
             orientation = vertical
-            shade_start = 1.05
+            shade_start = 1.10
             shade_end = 0.95
         }
     }
@@ -175,7 +203,7 @@ style "scrollbar" = "default"
         {
             fill_style = gradient
             orientation = automatic
-            shade_start = 1.05
+            shade_start = 1.10
             shade_end = 0.95
         }
     }
@@ -191,7 +219,7 @@ style "scale" = "scrollbar"
         {
             fill_style = gradient
             orientation = automatic
-            shade_start = 1.05
+            shade_start = 1.10
             shade_end = 0.95
         }
     }
@@ -216,7 +244,7 @@ style "progress" = "gradient"
         {
             fill_style = gradient
             orientation = automatic
-            shade_start = 1.05
+            shade_start = 1.10
             shade_end = 0.95
         }
     }
@@ -274,7 +302,7 @@ widget_class "*Pager*"             style "pager"
 class "*Pager*"                    style "pager"
 
 widget_class "*Menu*"              style "menu"
-class "*Menu*"                     style "menu"
+#class "*Menu*"                     style "menu"
 
 widget_class "*MenuItem*"          style "menuitem"
 class "*MenuItem*"                 style "menuitem"
@@ -283,8 +311,8 @@ widget_class "*BonoboDockItem"     style "menubar"
 class "*BonoboDockItem"            style "menubar"
 widget_class "*ToolBar"            style "menubar"
 class "*ToolBar"                   style "menubar"
-widget_class "*MenuBar"            style "menubar"
-class "*MenuBar"                   style "menubar"
+widget_class "*MenuBar*"           style "menubar"
+class "*MenuBar*"                  style "menubar"
 
 widget_class "*HandleBox*"         style "handlebox"
 
