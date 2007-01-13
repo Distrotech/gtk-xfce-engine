@@ -1,127 +1,96 @@
+2005-11-07 19:19  olivier
+
+	* configure.in: Bump version number for release
+
+2005-11-05 14:18  olivier
+
+	* ChangeLog: Update ChangeLog
+
 2005-05-14 19:44  olivier
 
-	* gtk-xfce-engine-2/branches/xfce_4_2/ChangeLog: Update ChangeLog
+	* ChangeLog: Update ChangeLog
 
 2005-05-04 20:49  olivier
 
-	* gtk-xfce-engine-2/branches/xfce_4_2/ChangeLog: Update ChangeLog
+	* ChangeLog: Update ChangeLog
 
 2005-04-12 14:57  jasper
 
-	* gtk-xfce-engine-2/branches/xfce_4_2/Makefile.in,
-	  gtk-xfce-engine-2/branches/xfce_4_2/aclocal.m4,
-	  gtk-xfce-engine-2/branches/xfce_4_2/autogen.sh,
-	  gtk-xfce-engine-2/branches/xfce_4_2/compile,
-	  gtk-xfce-engine-2/branches/xfce_4_2/config.guess,
-	  gtk-xfce-engine-2/branches/xfce_4_2/config.h.in,
-	  gtk-xfce-engine-2/branches/xfce_4_2/config.sub,
-	  gtk-xfce-engine-2/branches/xfce_4_2/configure,
-	  gtk-xfce-engine-2/branches/xfce_4_2/depcomp,
-	  gtk-xfce-engine-2/branches/xfce_4_2/install-sh,
-	  gtk-xfce-engine-2/branches/xfce_4_2/ltmain.sh,
-	  gtk-xfce-engine-2/branches/xfce_4_2/missing,
-	  gtk-xfce-engine-2/branches/xfce_4_2/mkinstalldirs,
-	  gtk-xfce-engine-2/branches/xfce_4_2/src/Makefile.in,
-	  gtk-xfce-engine-2/branches/xfce_4_2/themes/Makefile.in,
-	  gtk-xfce-engine-2/branches/xfce_4_2/themes/b5/Makefile.in,
-	  gtk-xfce-engine-2/branches/xfce_4_2/themes/b5/gtk-2.0/Makefile.in,
-	  gtk-xfce-engine-2/branches/xfce_4_2/themes/basic/Makefile.in,
-	  gtk-xfce-engine-2/branches/xfce_4_2/themes/basic/gtk-2.0/Makefile.in,
-	  gtk-xfce-engine-2/branches/xfce_4_2/themes/cadmium/Makefile.in,
-	  gtk-xfce-engine-2/branches/xfce_4_2/themes/cadmium/gtk-2.0/Makefile.in,
-	  gtk-xfce-engine-2/branches/xfce_4_2/themes/curve/Makefile.in,
-	  gtk-xfce-engine-2/branches/xfce_4_2/themes/curve/gtk-2.0/Makefile.in,
-	  gtk-xfce-engine-2/branches/xfce_4_2/themes/dawn/Makefile.in,
-	  gtk-xfce-engine-2/branches/xfce_4_2/themes/dawn/gtk-2.0/Makefile.in,
-	  gtk-xfce-engine-2/branches/xfce_4_2/themes/dusk/Makefile.in,
-	  gtk-xfce-engine-2/branches/xfce_4_2/themes/dusk/gtk-2.0/Makefile.in,
-	  gtk-xfce-engine-2/branches/xfce_4_2/themes/kde2/Makefile.in,
-	  gtk-xfce-engine-2/branches/xfce_4_2/themes/kde2/gtk-2.0/Makefile.in,
-	  gtk-xfce-engine-2/branches/xfce_4_2/themes/kolors/Makefile.in,
-	  gtk-xfce-engine-2/branches/xfce_4_2/themes/kolors/gtk-2.0/Makefile.in,
-	  gtk-xfce-engine-2/branches/xfce_4_2/themes/light/Makefile.in,
-	  gtk-xfce-engine-2/branches/xfce_4_2/themes/light/gtk-2.0/Makefile.in,
-	  gtk-xfce-engine-2/branches/xfce_4_2/themes/redmondxp/Makefile.in,
-	  gtk-xfce-engine-2/branches/xfce_4_2/themes/redmondxp/gtk-2.0/Makefile.in,
-	  gtk-xfce-engine-2/branches/xfce_4_2/themes/saltlake/Makefile.in,
-	  gtk-xfce-engine-2/branches/xfce_4_2/themes/saltlake/gtk-2.0/Makefile.in,
-	  gtk-xfce-engine-2/branches/xfce_4_2/themes/smooth/Makefile.in,
-	  gtk-xfce-engine-2/branches/xfce_4_2/themes/smooth/gtk-2.0/Makefile.in,
-	  gtk-xfce-engine-2/branches/xfce_4_2/themes/stellar/Makefile.in,
-	  gtk-xfce-engine-2/branches/xfce_4_2/themes/stellar/gtk-2.0/Makefile.in,
-	  gtk-xfce-engine-2/branches/xfce_4_2/themes/winter/Makefile.in,
-	  gtk-xfce-engine-2/branches/xfce_4_2/themes/winter/gtk-2.0/Makefile.in,
-	  gtk-xfce-engine-2/branches/xfce_4_2/themes/xfce-4.0/Makefile.in,
-	  gtk-xfce-engine-2/branches/xfce_4_2/themes/xfce-4.0/gtk-2.0/Makefile.in,
-	  gtk-xfce-engine-2/branches/xfce_4_2/themes/xfce/Makefile.in,
-	  gtk-xfce-engine-2/branches/xfce_4_2/themes/xfce/gtk-2.0/Makefile.in:
-	  Make xfce_4_2 branch use dev tools and remove generated files
+	* Makefile.in, aclocal.m4, autogen.sh, compile, config.guess,
+	  config.h.in, config.sub, configure, depcomp, install-sh,
+	  ltmain.sh, missing, mkinstalldirs, src/Makefile.in,
+	  themes/Makefile.in, themes/b5/Makefile.in,
+	  themes/b5/gtk-2.0/Makefile.in, themes/basic/Makefile.in,
+	  themes/basic/gtk-2.0/Makefile.in, themes/cadmium/Makefile.in,
+	  themes/cadmium/gtk-2.0/Makefile.in, themes/curve/Makefile.in,
+	  themes/curve/gtk-2.0/Makefile.in, themes/dawn/Makefile.in,
+	  themes/dawn/gtk-2.0/Makefile.in, themes/dusk/Makefile.in,
+	  themes/dusk/gtk-2.0/Makefile.in, themes/kde2/Makefile.in,
+	  themes/kde2/gtk-2.0/Makefile.in, themes/kolors/Makefile.in,
+	  themes/kolors/gtk-2.0/Makefile.in, themes/light/Makefile.in,
+	  themes/light/gtk-2.0/Makefile.in, themes/redmondxp/Makefile.in,
+	  themes/redmondxp/gtk-2.0/Makefile.in,
+	  themes/saltlake/Makefile.in, themes/saltlake/gtk-2.0/Makefile.in,
+	  themes/smooth/Makefile.in, themes/smooth/gtk-2.0/Makefile.in,
+	  themes/stellar/Makefile.in, themes/stellar/gtk-2.0/Makefile.in,
+	  themes/winter/Makefile.in, themes/winter/gtk-2.0/Makefile.in,
+	  themes/xfce-4.0/Makefile.in, themes/xfce-4.0/gtk-2.0/Makefile.in,
+	  themes/xfce/Makefile.in, themes/xfce/gtk-2.0/Makefile.in: Make
+	  xfce_4_2 branch use dev tools and remove generated files
 
 2005-03-27 17:05  olivier
 
-	* gtk-xfce-engine-2/branches/xfce_4_2/themes/xfce/gtk-2.0/gtkrc:
-	  ExoIconBar doesn't look very good when focus_padding != 2
+	* themes/xfce/gtk-2.0/gtkrc: ExoIconBar doesn't look very good when
+	  focus_padding != 2
 
 2005-03-22 22:40  olivier
 
-	* gtk-xfce-engine-2/branches/xfce_4_2/themes/xfce/gtk-2.0/gtkrc:
-	  Fix treeview prelight color
+	* themes/xfce/gtk-2.0/gtkrc: Fix treeview prelight color
 
 2005-03-21 21:56  olivier
 
-	* gtk-xfce-engine-2/branches/xfce_4_2/themes/xfce/gtk-2.0/gtkrc:
-	  Fix Adobe Acrobat 7 buttons
+	* themes/xfce/gtk-2.0/gtkrc: Fix Adobe Acrobat 7 buttons
 
 2005-03-21 21:30  olivier
 
-	* gtk-xfce-engine-2/branches/xfce_4_2/themes/xfce/gtk-2.0/gtkrc:
-	  Adjust progress bar colors
+	* themes/xfce/gtk-2.0/gtkrc: Adjust progress bar colors
 
 2005-03-20 23:51  olivier
 
-	* gtk-xfce-engine-2/branches/xfce_4_2/themes/xfce/gtk-2.0/gtkrc:
-	  *** empty log message ***
+	* themes/xfce/gtk-2.0/gtkrc: *** empty log message ***
 
 2005-03-20 23:45  olivier
 
-	* gtk-xfce-engine-2/branches/xfce_4_2/themes/xfce/gtk-2.0/gtkrc:
-	  Scales (again)
+	* themes/xfce/gtk-2.0/gtkrc: Scales (again)
 
 2005-03-20 23:30  olivier
 
-	* gtk-xfce-engine-2/branches/xfce_4_2/themes/xfce/gtk-2.0/gtkrc:
-	  Scales
+	* themes/xfce/gtk-2.0/gtkrc: Scales
 
 2005-03-20 23:17  olivier
 
-	* gtk-xfce-engine-2/branches/xfce_4_2/themes/xfce/gtk-2.0/gtkrc:
-	  Fix default theme
+	* themes/xfce/gtk-2.0/gtkrc: Fix default theme
 
 2005-03-19 21:53  olivier
 
-	* gtk-xfce-engine-2/branches/xfce_4_2/themes/xfce/gtk-2.0/gtkrc:
-	  Fix wrong foreground color in combobox (bug #848)
+	* themes/xfce/gtk-2.0/gtkrc: Fix wrong foreground color in combobox
+	  (bug #848)
 
 2005-03-19 12:24  olivier
 
-	* gtk-xfce-engine-2/branches/xfce_4_2/themes/b5/gtk-2.0/gtkrc,
-	  gtk-xfce-engine-2/branches/xfce_4_2/themes/basic/gtk-2.0/gtkrc,
-	  gtk-xfce-engine-2/branches/xfce_4_2/themes/cadmium/gtk-2.0/gtkrc,
-	  gtk-xfce-engine-2/branches/xfce_4_2/themes/curve/gtk-2.0/gtkrc,
-	  gtk-xfce-engine-2/branches/xfce_4_2/themes/dawn/gtk-2.0/gtkrc,
-	  gtk-xfce-engine-2/branches/xfce_4_2/themes/dusk/gtk-2.0/gtkrc,
-	  gtk-xfce-engine-2/branches/xfce_4_2/themes/kolors/gtk-2.0/gtkrc,
-	  gtk-xfce-engine-2/branches/xfce_4_2/themes/light/gtk-2.0/gtkrc,
-	  gtk-xfce-engine-2/branches/xfce_4_2/themes/redmondxp/gtk-2.0/gtkrc,
-	  gtk-xfce-engine-2/branches/xfce_4_2/themes/smooth/gtk-2.0/gtkrc,
-	  gtk-xfce-engine-2/branches/xfce_4_2/themes/winter/gtk-2.0/gtkrc,
-	  gtk-xfce-engine-2/branches/xfce_4_2/themes/xfce-4.0/gtk-2.0/gtkrc,
-	  gtk-xfce-engine-2/branches/xfce_4_2/themes/xfce/gtk-2.0/gtkrc:
-	  Use "GtkScale" and "GtkProgress" instead of just "Scale" and
-	  "Progress" for widget style definition.
-	* gtk-xfce-engine-2/branches/xfce_4_2/ChangeLog,
-	  gtk-xfce-engine-2/branches/xfce_4_2/configure,
-	  gtk-xfce-engine-2/branches/xfce_4_2/configure.in,
+	* themes/b5/gtk-2.0/gtkrc, themes/basic/gtk-2.0/gtkrc,
+	  themes/cadmium/gtk-2.0/gtkrc, themes/curve/gtk-2.0/gtkrc,
+	  themes/dawn/gtk-2.0/gtkrc, themes/dusk/gtk-2.0/gtkrc,
+	  themes/kolors/gtk-2.0/gtkrc, themes/light/gtk-2.0/gtkrc,
+	  themes/redmondxp/gtk-2.0/gtkrc, themes/smooth/gtk-2.0/gtkrc,
+	  themes/winter/gtk-2.0/gtkrc, themes/xfce-4.0/gtk-2.0/gtkrc,
+	  themes/xfce/gtk-2.0/gtkrc: Use "GtkScale" and "GtkProgress"
+	  instead of just "Scale" and "Progress" for widget style
+	  definition.
+
+2005-03-19 12:24  olivier
+
+	* ChangeLog, configure, configure.in,
 	  gtk-xfce-engine-2/trunk/themes/b5/gtk-2.0/gtkrc,
 	  gtk-xfce-engine-2/trunk/themes/basic/gtk-2.0/gtkrc,
 	  gtk-xfce-engine-2/trunk/themes/cadmium/gtk-2.0/gtkrc,
@@ -134,122 +103,99 @@
 	  gtk-xfce-engine-2/trunk/themes/smooth/gtk-2.0/gtkrc,
 	  gtk-xfce-engine-2/trunk/themes/winter/gtk-2.0/gtkrc,
 	  gtk-xfce-engine-2/trunk/themes/xfce-4.0/gtk-2.0/gtkrc,
-	  gtk-xfce-engine-2/trunk/themes/xfce/gtk-2.0/gtkrc: Use
-	  "GtkScale" and "GtkProgress" instead of just "Scale" and
-	  "Progress" for widget style definition.
+	  gtk-xfce-engine-2/trunk/themes/xfce/gtk-2.0/gtkrc: Use "GtkScale"
+	  and "GtkProgress" instead of just "Scale" and "Progress" for
+	  widget style definition.
 
 2005-03-12 14:52  olivier
 
-	* gtk-xfce-engine-2/branches/xfce_4_2/ChangeLog: Update ChangeLog
+	* ChangeLog: Update ChangeLog
 
 2005-03-11 21:53  olivier
 
-	* gtk-xfce-engine-2/branches/xfce_4_2/ChangeLog: Update ChangeLog
+	* ChangeLog: Update ChangeLog
 
 2005-03-11 21:52  olivier
 
-	* gtk-xfce-engine-2/branches/xfce_4_2/themes/xfce/gtk-2.0/gtkrc:
-	  Scrollbar had no handle
+	* themes/xfce/gtk-2.0/gtkrc: Scrollbar had no handle
 
 2005-03-11 21:47  olivier
 
-	* gtk-xfce-engine-2/branches/xfce_4_2/themes/xfce/gtk-2.0/gtkrc:
-	  Merge conflict!
+	* themes/xfce/gtk-2.0/gtkrc: Merge conflict!
 
 2005-03-11 21:20  olivier
 
-	* gtk-xfce-engine-2/branches/xfce_4_2/themes/xfce/gtk-2.0/gtkrc:
-	  Improve default theme
+	* themes/xfce/gtk-2.0/gtkrc: Improve default theme
 
 2005-03-10 20:53  olivier
 
-	* gtk-xfce-engine-2/branches/xfce_4_2/themes/xfce/gtk-2.0/gtkrc,
+	* themes/xfce/gtk-2.0/gtkrc,
 	  gtk-xfce-engine-2/trunk/themes/xfce-4.2/gtk-2.0/gtkrc: progress
 	  bar
 
 2005-03-09 21:28  olivier
 
-	* gtk-xfce-engine-2/branches/xfce_4_2/src/xfce_theme_draw.c,
-	  gtk-xfce-engine-2/branches/xfce_4_2/themes/xfce/gtk-2.0/gtkrc:
-	  Rework progress bar.
+	* src/xfce_theme_draw.c, themes/xfce/gtk-2.0/gtkrc: Rework progress
+	  bar.
 
 2005-03-08 20:19  olivier
 
-	* gtk-xfce-engine-2/branches/xfce_4_2/themes/xfce/gtk-2.0/gtkrc:
-	  Use flat toolbar for 2.2 engine
+	* themes/xfce/gtk-2.0/gtkrc: Use flat toolbar for 2.2 engine
 
 2005-03-06 20:16  olivier
 
-	* gtk-xfce-engine-2/branches/xfce_4_2/themes/xfce/gtk-2.0/gtkrc:
-	  Add 1 pix between the frame and the actual progress bar/scale
-	  for smoother effect
+	* themes/xfce/gtk-2.0/gtkrc: Add 1 pix between the frame and the
+	  actual progress bar/scale for smoother effect
 
 2005-03-06 20:11  olivier
 
-	* gtk-xfce-engine-2/branches/xfce_4_2/themes/xfce/gtk-2.0/gtkrc:
-	  Add a frame around scales and progress bar to improve
-	  readability.
+	* themes/xfce/gtk-2.0/gtkrc: Add a frame around scales and progress
+	  bar to improve readability.
 
 2005-02-24 21:02  olivier
 
-	* gtk-xfce-engine-2/branches/xfce_4_2/themes/xfce/gtk-2.0/gtkrc:
-	  Theme update
+	* themes/xfce/gtk-2.0/gtkrc: Theme update
 
 2005-02-05 21:50  olivier
 
-	* gtk-xfce-engine-2/branches/xfce_4_2/configure,
-	  gtk-xfce-engine-2/branches/xfce_4_2/configure.in,
-	  gtk-xfce-engine-2/branches/xfce_4_2/ltmain.sh,
-	  gtk-xfce-engine-2/branches/xfce_4_2/themes/Makefile.am,
-	  gtk-xfce-engine-2/branches/xfce_4_2/themes/Makefile.in,
-	  gtk-xfce-engine-2/branches/xfce_4_2/themes/dusk/ICON.png,
-	  gtk-xfce-engine-2/branches/xfce_4_2/themes/dusk/Makefile.am,
-	  gtk-xfce-engine-2/branches/xfce_4_2/themes/dusk/Makefile.in,
-	  gtk-xfce-engine-2/branches/xfce_4_2/themes/dusk/README.html,
-	  gtk-xfce-engine-2/branches/xfce_4_2/themes/dusk/gtk-2.0/Makefile.am,
-	  gtk-xfce-engine-2/branches/xfce_4_2/themes/dusk/gtk-2.0/Makefile.in,
-	  gtk-xfce-engine-2/branches/xfce_4_2/themes/dusk/gtk-2.0/gtkrc:
-	  Add James Golden's dusk theme.
+	* configure, configure.in, ltmain.sh, themes/Makefile.am,
+	  themes/Makefile.in, themes/dusk/ICON.png,
+	  themes/dusk/Makefile.am, themes/dusk/Makefile.in,
+	  themes/dusk/README.html, themes/dusk/gtk-2.0/Makefile.am,
+	  themes/dusk/gtk-2.0/Makefile.in, themes/dusk/gtk-2.0/gtkrc: Add
+	  James Golden's dusk theme.
 
 2005-02-05 21:35  
 
-	* gtk-xfce-engine-2/branches/xfce_4_2/themes/dusk,
-	  gtk-xfce-engine-2/branches/xfce_4_2/themes/dusk/.cvsignore,
-	  gtk-xfce-engine-2/branches/xfce_4_2/themes/dusk/gtk-2.0/.cvsignore:
-	  This commit was manufactured by cvs2svn to create branch
-	  'xfce_4_2'.
+	* themes/dusk, themes/dusk/.cvsignore,
+	  themes/dusk/gtk-2.0/.cvsignore: This commit was manufactured by
+	  cvs2svn to create branch 'xfce_4_2'.
 
 2005-01-10 16:46  benny
 
-	* gtk-xfce-engine-2/branches/xfce_4_2/ChangeLog,
-	  gtk-xfce-engine-2/branches/xfce_4_2/NEWS,
-	  gtk-xfce-engine-2/branches/xfce_4_2/README: Updated NEWS, README
-	  and ChangeLog.
+	* ChangeLog, NEWS, README: Updated NEWS, README and ChangeLog.
 
 2005-01-05 23:28  benny
 
-	* gtk-xfce-engine-2/branches/xfce_4_2/ChangeLog: Update ChangeLog
+	* ChangeLog: Update ChangeLog
 
 2005-01-05 21:39  benny
 
-	* gtk-xfce-engine-2/branches/xfce_4_2/ChangeLog,
-	  gtk-xfce-engine-2/branches/xfce_4_2/ltmain.sh: Final updates.
+	* ChangeLog, ltmain.sh: Final updates.
 
 2005-01-05 20:57  olivier
 
-	* gtk-xfce-engine-2/branches/xfce_4_2/themes/xfce/gtk-2.0/gtkrc:
-	  Inactive WM frame color
+	* themes/xfce/gtk-2.0/gtkrc: Inactive WM frame color
 
 2005-01-03 21:46  olivier
 
-	* gtk-xfce-engine-2/branches/xfce_4_2/themes/kolors/gtk-2.0/gtkrc,
-	  gtk-xfce-engine-2/branches/xfce_4_2/themes/stellar/gtk-2.0/gtkrc:
+	* themes/kolors/gtk-2.0/gtkrc, themes/stellar/gtk-2.0/gtkrc:
 	  Backport from HEAD
 
 2005-01-03 21:46  
 
-	* gtk-xfce-engine-2/branches/xfce_4_2: This commit was
-	  manufactured by cvs2svn to create branch 'xfce_4_2'.
+	* .: This commit was manufactured by cvs2svn to create branch
+	  'xfce_4_2'.
 
 2005-01-02 12:50  olivier
 
@@ -271,7 +217,8 @@
 	  gtk-xfce-engine-2/trunk/ltmain.sh,
 	  gtk-xfce-engine-2/trunk/src/xfce_theme_draw.c,
 	  gtk-xfce-engine-2/trunk/themes/cadmium/gtk-2.0/gtkrc: Update
-	  version number invers gradients for trough
+	  version number
+	  invers gradients for trough
 
 2004-12-31 16:08  olivier
 
@@ -315,8 +262,8 @@
 	  gtk-xfce-engine-2/trunk/themes/stellar/gtk-2.0/gtkrc,
 	  gtk-xfce-engine-2/trunk/themes/winter/gtk-2.0/gtkrc,
 	  gtk-xfce-engine-2/trunk/themes/xfce-4.0/gtk-2.0/gtkrc,
-	  gtk-xfce-engine-2/trunk/themes/xfce/gtk-2.0/gtkrc: Final touch
-	  on theme
+	  gtk-xfce-engine-2/trunk/themes/xfce/gtk-2.0/gtkrc: Final touch on
+	  theme
 
 2004-12-25 20:33  kelnos
 
@@ -396,8 +343,8 @@
 	  gtk-xfce-engine-2/trunk/themes/stellar/gtk-2.0/gtkrc,
 	  gtk-xfce-engine-2/trunk/themes/winter/gtk-2.0/gtkrc,
 	  gtk-xfce-engine-2/trunk/themes/xfce-4.0/gtk-2.0/gtkrc,
-	  gtk-xfce-engine-2/trunk/themes/xfce/gtk-2.0/gtkrc: Add colors
-	  for ROX-Filer's "Collection" widget.
+	  gtk-xfce-engine-2/trunk/themes/xfce/gtk-2.0/gtkrc: Add colors for
+	  ROX-Filer's "Collection" widget.
 
 2004-11-27 16:19  olivier
 
@@ -408,8 +355,8 @@
 	* gtk-xfce-engine-2/trunk/configure,
 	  gtk-xfce-engine-2/trunk/configure.in,
 	  gtk-xfce-engine-2/trunk/src/xfce_theme_draw.c,
-	  gtk-xfce-engine-2/trunk/themes/saltlake/gtk-2.0/gtkrc: Use a
-	  flat look for tabs
+	  gtk-xfce-engine-2/trunk/themes/saltlake/gtk-2.0/gtkrc: Use a flat
+	  look for tabs
 
 2004-11-13 18:01  olivier
 
@@ -479,13 +426,14 @@
 	  gtk-xfce-engine-2/trunk/themes/xfce/Makefile.in,
 	  gtk-xfce-engine-2/trunk/themes/xfce/gtk-2.0/Makefile.in: Update
 	  automake/autoconf/libtool/gettext versions to generate the
-	  configure scripts and Makefiles, Update versions of all packages
-	  to 4.1.99.1 (ie 4.2 RC1), Update ChangeLogs.
+	  configure scripts and Makefiles,
+	  Update versions of all packages to 4.1.99.1 (ie 4.2 RC1),
+	  Update ChangeLogs.
 
 2004-10-30 19:03  olivier
 
-	* gtk-xfce-engine-2/trunk/ChangeLog: Global update for 4.1.91
-	  (Xfce 4.2 beta 2)
+	* gtk-xfce-engine-2/trunk/ChangeLog: Global update for 4.1.91 (Xfce
+	  4.2 beta 2)
 
 2004-10-29 21:14  olivier
 
@@ -533,8 +481,8 @@
 2004-10-25 19:20  olivier
 
 	* gtk-xfce-engine-2/trunk/src/xfce_theme_draw.c,
-	  gtk-xfce-engine-2/trunk/themes/xfce/gtk-2.0/gtkrc: Code and
-	  theme cleanup
+	  gtk-xfce-engine-2/trunk/themes/xfce/gtk-2.0/gtkrc: Code and theme
+	  cleanup
 
 2004-10-24 18:02  olivier
 
@@ -571,13 +519,14 @@
 	* gtk-xfce-engine-2/trunk/aclocal.m4,
 	  gtk-xfce-engine-2/trunk/configure,
 	  gtk-xfce-engine-2/trunk/configure.in,
-	  gtk-xfce-engine-2/trunk/themes/dawn/gtk-2.0/gtkrc: Change
-	  sliders for "dawn" theme
+	  gtk-xfce-engine-2/trunk/themes/dawn/gtk-2.0/gtkrc: Change sliders
+	  for "dawn" theme
 
 2004-10-07 20:35  benny
 
-	* gtk-xfce-engine-2/trunk/aclocal.m4: Added --enable-final (-O1
-	  for GNU ld) as per Jaspers request. Added missing m4 files.
+	* gtk-xfce-engine-2/trunk/aclocal.m4: Added --enable-final (-O1 for
+	  GNU ld) as per Jaspers request. Added missing
+	  m4 files.
 
 2004-10-02 13:28  olivier
 
@@ -680,8 +629,8 @@
 	  gtk-xfce-engine-2/trunk/themes/saltlake/gtk-2.0/gtkrc,
 	  gtk-xfce-engine-2/trunk/themes/smooth/gtk-2.0/gtkrc,
 	  gtk-xfce-engine-2/trunk/themes/stellar/gtk-2.0/gtkrc,
-	  gtk-xfce-engine-2/trunk/themes/xfce/gtk-2.0/gtkrc: ndicator
-	  sizes set to 15
+	  gtk-xfce-engine-2/trunk/themes/xfce/gtk-2.0/gtkrc: ndicator sizes
+	  set to 15
 
 2004-08-20 19:27  olivier
 
@@ -698,28 +647,31 @@
 	  gtk-xfce-engine-2/trunk/themes/stellar/gtk-2.0/gtkrc,
 	  gtk-xfce-engine-2/trunk/themes/winter/gtk-2.0/gtkrc,
 	  gtk-xfce-engine-2/trunk/themes/xfce-4.0/gtk-2.0/gtkrc,
-	  gtk-xfce-engine-2/trunk/themes/xfce/gtk-2.0/gtkrc: Improve
-	  compat with GNOME by adjusting themes for metacity.
+	  gtk-xfce-engine-2/trunk/themes/xfce/gtk-2.0/gtkrc: Improve compat
+	  with GNOME by adjusting themes for metacity.
 
 2004-08-20 17:09  olivier
 
-	* gtk-xfce-engine-2/trunk/themes/xfce/gtk-2.0/gtkrc: Final touch
-	  on gtk theme
+	* gtk-xfce-engine-2/trunk/themes/xfce/gtk-2.0/gtkrc: Final touch on
+	  gtk theme
 
 2004-08-15 19:39  olivier
 
 	* gtk-xfce-engine-2/trunk/src/xfce_theme_draw.c,
 	  gtk-xfce-engine-2/trunk/themes/redmondxp/gtk-2.0/gtkrc,
 	  gtk-xfce-engine-2/trunk/themes/xfce/gtk-2.0/gtkrc: Resync with
-	  repository, most notably: - libxfcegui4 fixes with gtk 2.2 -
-	  xfwm4 updates - Present panel plugins in alphabetical order -
-	  Fix add plugin dialog being placed over the panel when using SM
-	  - French po updates - Other various small bug fixes
+	  repository, most notably:
+	  - libxfcegui4 fixes with gtk 2.2
+	  - xfwm4 updates
+	  - Present panel plugins in alphabetical order
+	  - Fix add plugin dialog being placed over the panel when using SM
+	  - French po updates
+	  - Other various small bug fixes
 
 2004-08-04 15:51  olivier
 
-	* gtk-xfce-engine-2/trunk/src/xfce_theme_draw.c: Improve drawing
-	  of option/radio marks in menu as per user's request.
+	* gtk-xfce-engine-2/trunk/src/xfce_theme_draw.c: Improve drawing of
+	  option/radio marks in menu as per user's request.
 
 2004-07-23 10:23  olivier
 
@@ -728,13 +680,13 @@
 
 2004-07-21 17:08  olivier
 
-	* gtk-xfce-engine-2/trunk/themes/xfce/gtk-2.0/gtkrc: Final touch
-	  on default theme, for WM frames.
+	* gtk-xfce-engine-2/trunk/themes/xfce/gtk-2.0/gtkrc: Final touch on
+	  default theme, for WM frames.
 
 2004-07-21 10:56  olivier
 
-	* gtk-xfce-engine-2/trunk/themes/xfce/gtk-2.0/gtkrc: Woops,
-	  comited the wrong file.
+	* gtk-xfce-engine-2/trunk/themes/xfce/gtk-2.0/gtkrc: Woops, comited
+	  the wrong file.
 
 2004-07-20 21:19  olivier
 
@@ -756,8 +708,8 @@
 	  gtk-xfce-engine-2/trunk/themes/stellar/gtk-2.0/gtkrc,
 	  gtk-xfce-engine-2/trunk/themes/winter/gtk-2.0/gtkrc,
 	  gtk-xfce-engine-2/trunk/themes/xfce-4.0/gtk-2.0/gtkrc,
-	  gtk-xfce-engine-2/trunk/themes/xfce/gtk-2.0/gtkrc: Remove
-	  useless focus-padding that has no effect anyway.
+	  gtk-xfce-engine-2/trunk/themes/xfce/gtk-2.0/gtkrc: Remove useless
+	  focus-padding that has no effect anyway.
 
 2004-07-13 17:16  olivier
 
@@ -795,8 +747,8 @@
 
 2004-06-22 10:51  olivier
 
-	* gtk-xfce-engine-2/trunk/themes/xfce/gtk-2.0/gtkrc: Drop the
-	  black frame
+	* gtk-xfce-engine-2/trunk/themes/xfce/gtk-2.0/gtkrc: Drop the black
+	  frame
 
 2004-06-21 20:24  olivier
 
@@ -923,18 +875,18 @@
 
 2004-02-28 15:33  olivier
 
-	* gtk-xfce-engine-2/trunk/themes/xfce/gtk-2.0/gtkrc: Change
-	  default color
+	* gtk-xfce-engine-2/trunk/themes/xfce/gtk-2.0/gtkrc: Change default
+	  color
 
 2004-02-25 21:35  olivier
 
-	* gtk-xfce-engine-2/trunk/themes/xfce/gtk-2.0/gtkrc: Use a
-	  slightly darker color
+	* gtk-xfce-engine-2/trunk/themes/xfce/gtk-2.0/gtkrc: Use a slightly
+	  darker color
 
 2004-02-24 22:13  olivier
 
-	* gtk-xfce-engine-2/trunk/themes/xfce/gtk-2.0/gtkrc: #3 has won
-	  the poll
+	* gtk-xfce-engine-2/trunk/themes/xfce/gtk-2.0/gtkrc: #3 has won the
+	  poll
 
 2004-02-18 22:31  olivier
 
@@ -986,8 +938,8 @@
 
 2004-02-04 21:08  olivier
 
-	* gtk-xfce-engine-2/trunk/themes/xfce/gtk-2.0/gtkrc: Change
-	  default theme for GTK
+	* gtk-xfce-engine-2/trunk/themes/xfce/gtk-2.0/gtkrc: Change default
+	  theme for GTK
 
 2004-01-25 00:07  olivier
 
@@ -1036,10 +988,11 @@
 2003-12-15 22:15  olivier
 
 	* gtk-xfce-engine-2/trunk/themes/xfce/gtk-2.0/gtkrc: Fix crash in
-	  workspace MCS plugin Include a patch from Patrick Bores
-	  <p@trickbores.com> that allows pop3 email checking from
-	  mailcheck panel plugin (use pop3://username:password@host for
-	  the mailbox) Small tweaks to default xfwm4 and gtk themes
+	  workspace MCS plugin
+	  Include a patch from Patrick Bores <p@trickbores.com> that allows
+	  pop3 email checking from mailcheck panel plugin (use
+	  pop3://username:password@host for the mailbox)
+	  Small tweaks to default xfwm4 and gtk themes
 
 2003-12-05 21:51  olivier
 
@@ -1061,8 +1014,8 @@
 	  gtk-xfce-engine-2/trunk/themes/xfce-4.0/gtk-2.0/Makefile.am,
 	  gtk-xfce-engine-2/trunk/themes/xfce-4.0/gtk-2.0/Makefile.in,
 	  gtk-xfce-engine-2/trunk/themes/xfce-4.0/gtk-2.0/gtkrc,
-	  gtk-xfce-engine-2/trunk/themes/xfce/gtk-2.0/gtkrc: Change
-	  default theme, rename older as xfce-4.0
+	  gtk-xfce-engine-2/trunk/themes/xfce/gtk-2.0/gtkrc: Change default
+	  theme, rename older as xfce-4.0
 
 2003-11-14 22:10  olivier
 
@@ -1109,7 +1062,8 @@
 
 	* gtk-xfce-engine-2/trunk/configure,
 	  gtk-xfce-engine-2/trunk/configure.in: Update version number to
-	  4.0.0 Improve focus change for modal dialogs in xfwm4
+	  4.0.0
+	  Improve focus change for modal dialogs in xfwm4
 
 2003-09-14 22:05  xfce
 
@@ -1135,8 +1089,8 @@
 
 2003-09-09 20:22  xfce
 
-	* gtk-xfce-engine-2/trunk/themes/kde2/gtk-2.0/gtkrc: Change
-	  buttons style
+	* gtk-xfce-engine-2/trunk/themes/kde2/gtk-2.0/gtkrc: Change buttons
+	  style
 
 2003-08-26 07:38  huysmans
 
@@ -1196,8 +1150,8 @@
 
 	* gtk-xfce-engine-2/trunk/configure,
 	  gtk-xfce-engine-2/trunk/configure.in,
-	  gtk-xfce-engine-2/trunk/src/xfce_rc_style.c: Version 2.1.3 Add
-	  compat with themes from previous 2.0.x versions of
+	  gtk-xfce-engine-2/trunk/src/xfce_rc_style.c: Version 2.1.3
+	  Add compat with themes from previous 2.0.x versions of
 	  gtk-xfce-engine
 
 2003-07-19 09:29  huysmans
@@ -1241,18 +1195,19 @@
 	  gtk-xfce-engine-2/trunk/themes/saltlake/gtk-2.0/gtkrc,
 	  gtk-xfce-engine-2/trunk/themes/stellar/gtk-2.0/gtkrc,
 	  gtk-xfce-engine-2/trunk/themes/xfce/gtk-2.0/gtkrc: Apply colors
-	  to metacity frames Various small improvements to gtkrc files
+	  to metacity frames
+	  Various small improvements to gtkrc files
 
 2003-07-05 16:38  xfce
 
-	* gtk-xfce-engine-2/trunk/themes/curve/gtk-2.0/gtkrc: *** empty
-	  log message ***
+	* gtk-xfce-engine-2/trunk/themes/curve/gtk-2.0/gtkrc: *** empty log
+	  message ***
 
 2003-07-05 12:31  xfce
 
 	* gtk-xfce-engine-2/trunk/Makefile.in,
-	  gtk-xfce-engine-2/trunk/ltconfig: Remove ltconfig script as it
-	  is generated
+	  gtk-xfce-engine-2/trunk/ltconfig: Remove ltconfig script as it is
+	  generated
 
 2003-07-04 23:37  xfce
 
@@ -1323,8 +1278,9 @@
 	  gtk-xfce-engine-2/trunk/themes/stellar/gtk-2.0/Makefile.in,
 	  gtk-xfce-engine-2/trunk/themes/xfce/Makefile.in,
 	  gtk-xfce-engine-2/trunk/themes/xfce/gtk-2.0/Makefile.in: Update
-	  to libtool-1.5 Use proper complete CURRENT:REVISION:AGE scheme
-	  for lib versionning
+	  to libtool-1.5
+	  Use proper complete CURRENT:REVISION:AGE scheme for lib
+	  versionning
 
 2003-06-03 21:25  xfce
 
@@ -1351,8 +1307,8 @@
 
 2003-05-27 06:21  xfce
 
-	* gtk-xfce-engine-2/trunk/themes/redmondxp/gtk-2.0/gtkrc: ***
-	  empty log message ***
+	* gtk-xfce-engine-2/trunk/themes/redmondxp/gtk-2.0/gtkrc: *** empty
+	  log message ***
 
 2003-05-26 21:16  xfce
 
@@ -1366,8 +1322,8 @@
 
 2003-05-21 20:40  xfce
 
-	* gtk-xfce-engine-2/trunk/themes/redmondxp/gtk-2.0/gtkrc: Change
-	  bg color of redmondxp theme
+	* gtk-xfce-engine-2/trunk/themes/redmondxp/gtk-2.0/gtkrc: Change bg
+	  color of redmondxp theme
 
 2003-05-15 11:03  huysmans
 
@@ -1381,8 +1337,8 @@
 
 	* gtk-xfce-engine-2/trunk/themes/curve/gtk-2.0/gtkrc,
 	  gtk-xfce-engine-2/trunk/themes/kolors/gtk-2.0/gtkrc,
-	  gtk-xfce-engine-2/trunk/themes/xfce/gtk-2.0/gtkrc: Small
-	  tweaking on "xfce" and "curve" themes
+	  gtk-xfce-engine-2/trunk/themes/xfce/gtk-2.0/gtkrc: Small tweaking
+	  on "xfce" and "curve" themes
 
 2003-04-22 19:40  xfce
 
@@ -1520,9 +1476,9 @@
 	  gtk-xfce-engine-2/trunk/xfce_rc_style.h,
 	  gtk-xfce-engine-2/trunk/xfce_style.h,
 	  gtk-xfce-engine-2/trunk/xfce_theme_draw.c,
-	  gtk-xfce-engine-2/trunk/xfce_theme_main.c: Cleanup and reorg,
-	  set new version to 2.1.0 (as it features a lot of improvements
-	  over gtk-xfce-engine 2.0.x)
+	  gtk-xfce-engine-2/trunk/xfce_theme_main.c: Cleanup and reorg, set
+	  new version to 2.1.0 (as it features a lot of improvements over
+	  gtk-xfce-engine 2.0.x)
 
 2003-04-17 20:26  xfce
 
@@ -1678,7 +1634,8 @@
 	* gtk-xfce-engine-2/trunk/ChangeLog,
 	  gtk-xfce-engine-2/trunk/Theme_curve/gtk-2.0/gtkrc,
 	  gtk-xfce-engine-2/trunk/Theme_etria/gtk-2.0/gtkrc: Update
-	  ChangeLog Improve Etria and Curve themes
+	  ChangeLog
+	  Improve Etria and Curve themes
 
 2003-04-01 21:48  xfce
 
@@ -1700,7 +1657,8 @@
 	  gtk-xfce-engine-2/trunk/Theme_etria/gtk-2.0/gtkrc,
 	  gtk-xfce-engine-2/trunk/configure,
 	  gtk-xfce-engine-2/trunk/configure.in: Initialize early i18n in
-	  mcs plugins Add Etria theme
+	  mcs plugins
+	  Add Etria theme
 
 2003-03-27 20:30  xfce
 
@@ -1714,9 +1672,9 @@
 
 2003-03-25 19:42  xfce
 
-	* gtk-xfce-engine-2/trunk/Theme_curve/gtk-2.0/gtkrc: Change
-	  default xfwm4 theme (yeah, again...but that's the default theme,
-	  ya know) Change Xfce-curve theme
+	* gtk-xfce-engine-2/trunk/Theme_curve/gtk-2.0/gtkrc: Change default
+	  xfwm4 theme (yeah, again...but that's the default theme, ya know)
+	  Change Xfce-curve theme
 
 2003-03-23 21:17  xfce
 
@@ -1729,8 +1687,9 @@
 
 2003-03-18 22:33  xfce
 
-	* gtk-xfce-engine-2/trunk/ChangeLog: Update ChangeLog Update build
-	  scripts (ie rerun autogen.sh) Update xfwm4's microdeck theme
+	* gtk-xfce-engine-2/trunk/ChangeLog: Update ChangeLog
+	  Update build scripts (ie rerun autogen.sh)
+	  Update xfwm4's microdeck theme
 	  Remove 1 pix border arround xffm menu bar
 
 2003-03-16 11:35  xfce
@@ -1814,8 +1773,8 @@
 2003-03-04 19:17  xfce
 
 	* gtk-xfce-engine-2/trunk/Theme/gtk-2.0/gtkrc,
-	  gtk-xfce-engine-2/trunk/Theme_stellar/gtk-2.0/gtkrc: Adjust
-	  theme colors
+	  gtk-xfce-engine-2/trunk/Theme_stellar/gtk-2.0/gtkrc: Adjust theme
+	  colors
 
 2003-03-03 23:14  xfce
 
@@ -1895,8 +1854,7 @@
 
 2003-01-23 10:52  xfce
 
-	* gtk-xfce-engine-2/trunk/COPYING,
-	  gtk-xfce-engine-2/trunk/INSTALL,
+	* gtk-xfce-engine-2/trunk/COPYING, gtk-xfce-engine-2/trunk/INSTALL,
 	  gtk-xfce-engine-2/trunk/autogen.sh,
 	  gtk-xfce-engine-2/trunk/config.guess,
 	  gtk-xfce-engine-2/trunk/config.sub,
@@ -1948,13 +1906,13 @@
 
 2002-12-13 11:50  xfce
 
-	* gtk-xfce-engine-2/trunk/Theme_smooth/gtk-2.0/gtkrc: *** empty
-	  log message ***
+	* gtk-xfce-engine-2/trunk/Theme_smooth/gtk-2.0/gtkrc: *** empty log
+	  message ***
 
 2002-12-13 10:13  xfce
 
-	* gtk-xfce-engine-2/trunk/Theme_smooth/gtk-2.0/gtkrc: *** empty
-	  log message ***
+	* gtk-xfce-engine-2/trunk/Theme_smooth/gtk-2.0/gtkrc: *** empty log
+	  message ***
 
 2002-12-12 20:16  xfce
 
@@ -2049,8 +2007,8 @@
 	  gtk-xfce-engine-2/trunk/configure,
 	  gtk-xfce-engine-2/trunk/configure.in,
 	  gtk-xfce-engine-2/trunk/gtk-xfce-engine-2.spec.in,
-	  gtk-xfce-engine-2/trunk/xfce_theme_draw.c: Change version
-	  number, change frame corners in "smooth" mode.
+	  gtk-xfce-engine-2/trunk/xfce_theme_draw.c: Change version number,
+	  change frame corners in "smooth" mode.
 
 2002-11-10 10:02  madkiss
 
@@ -2110,8 +2068,8 @@
 
 2002-10-17 19:31  xfce
 
-	* gtk-xfce-engine-2/trunk/Theme_smooth/gtk-2.0/gtkrc: Change
-	  active title color for xfwm4.
+	* gtk-xfce-engine-2/trunk/Theme_smooth/gtk-2.0/gtkrc: Change active
+	  title color for xfwm4.
 
 2002-10-12 13:26  xfce
 
@@ -2205,8 +2163,8 @@
 	* gtk-xfce-engine-2/trunk/Theme_basic/gtk-2.0/gtkrc,
 	  gtk-xfce-engine-2/trunk/Theme_light/gtk-2.0/gtkrc,
 	  gtk-xfce-engine-2/trunk/Theme_saltlake/gtk-2.0/gtkrc,
-	  gtk-xfce-engine-2/trunk/Theme_smooth/gtk-2.0/gtkrc: *** empty
-	  log message ***
+	  gtk-xfce-engine-2/trunk/Theme_smooth/gtk-2.0/gtkrc: *** empty log
+	  message ***
 
 2002-10-01 13:59  xfce
 
@@ -2216,13 +2174,13 @@
 2002-09-30 08:07  xfce
 
 	* gtk-xfce-engine-2/trunk/config.h.in,
-	  gtk-xfce-engine-2/trunk/xfce_theme_draw.c: Change drawing
-	  routine in smooth mode to enhance contrast on widgets.
+	  gtk-xfce-engine-2/trunk/xfce_theme_draw.c: Change drawing routine
+	  in smooth mode to enhance contrast on widgets.
 
 2002-09-18 14:16  xfce
 
-	* gtk-xfce-engine-2/trunk/Theme_b5/gtk-2.0/gtkrc: Even lighter,
-	  I'm really hot right now, I need a refreshing theme :)
+	* gtk-xfce-engine-2/trunk/Theme_b5/gtk-2.0/gtkrc: Even lighter, I'm
+	  really hot right now, I need a refreshing theme :)
 
 2002-09-18 14:13  xfce
 
@@ -2337,8 +2295,8 @@
 	  gtk-xfce-engine-2/trunk/Theme_funklor/gtk-2.0/gtkrc,
 	  gtk-xfce-engine-2/trunk/Theme_light/gtk-2.0/gtkrc,
 	  gtk-xfce-engine-2/trunk/Theme_redmondxp/gtk-2.0/gtkrc,
-	  gtk-xfce-engine-2/trunk/Theme_smooth/gtk-2.0/gtkrc: *** empty
-	  log message ***
+	  gtk-xfce-engine-2/trunk/Theme_smooth/gtk-2.0/gtkrc: *** empty log
+	  message ***
 
 2002-09-12 09:27  xfce
 
@@ -2367,8 +2325,8 @@
 
 2002-09-09 13:40  xfce
 
-	* gtk-xfce-engine-2/trunk/Theme_smooth/gtk-2.0/gtkrc: *** empty
-	  log message ***
+	* gtk-xfce-engine-2/trunk/Theme_smooth/gtk-2.0/gtkrc: *** empty log
+	  message ***
 
 2002-09-09 10:34  xfce
 
@@ -2376,8 +2334,8 @@
 	  gtk-xfce-engine-2/trunk/Theme_curve/gtk-2.0/gtkrc,
 	  gtk-xfce-engine-2/trunk/Theme_funklor/gtk-2.0/gtkrc,
 	  gtk-xfce-engine-2/trunk/Theme_redmondxp/gtk-2.0/gtkrc,
-	  gtk-xfce-engine-2/trunk/Theme_smooth/gtk-2.0/gtkrc: *** empty
-	  log message ***
+	  gtk-xfce-engine-2/trunk/Theme_smooth/gtk-2.0/gtkrc: *** empty log
+	  message ***
 
 2002-09-08 20:37  xfce
 
@@ -2397,14 +2355,14 @@
 
 2002-09-06 12:31  xfce
 
-	* gtk-xfce-engine-2/trunk/Theme_smooth/gtk-2.0/gtkrc: *** empty
-	  log message ***
+	* gtk-xfce-engine-2/trunk/Theme_smooth/gtk-2.0/gtkrc: *** empty log
+	  message ***
 
 2002-09-06 11:03  xfce
 
 	* gtk-xfce-engine-2/trunk/Theme_smooth/README.html,
-	  gtk-xfce-engine-2/trunk/Theme_smooth/gtk-2.0/gtkrc: *** empty
-	  log message ***
+	  gtk-xfce-engine-2/trunk/Theme_smooth/gtk-2.0/gtkrc: *** empty log
+	  message ***
 
 2002-09-05 15:24  xfce
 
@@ -2450,8 +2408,8 @@
 
 2002-09-01 08:42  xfce
 
-	* gtk-xfce-engine-2/trunk/Theme_smooth/gtk-2.0/gtkrc: *** empty
-	  log message ***
+	* gtk-xfce-engine-2/trunk/Theme_smooth/gtk-2.0/gtkrc: *** empty log
+	  message ***
 
 2002-08-29 16:11  xfce
 
@@ -2461,18 +2419,18 @@
 
 2002-08-29 10:51  xfce
 
-	* gtk-xfce-engine-2/trunk/Theme_smooth/gtk-2.0/gtkrc: *** empty
-	  log message ***
+	* gtk-xfce-engine-2/trunk/Theme_smooth/gtk-2.0/gtkrc: *** empty log
+	  message ***
 
 2002-08-29 10:44  xfce
 
-	* gtk-xfce-engine-2/trunk/Theme_smooth/gtk-2.0/gtkrc: *** empty
-	  log message ***
+	* gtk-xfce-engine-2/trunk/Theme_smooth/gtk-2.0/gtkrc: *** empty log
+	  message ***
 
 2002-08-29 07:58  xfce
 
-	* gtk-xfce-engine-2/trunk/Theme_smooth/gtk-2.0/gtkrc: *** empty
-	  log message ***
+	* gtk-xfce-engine-2/trunk/Theme_smooth/gtk-2.0/gtkrc: *** empty log
+	  message ***
 
 2002-08-28 14:03  xfce
 
@@ -2555,7 +2513,8 @@
 2002-08-24 13:33  xfce
 
 	* gtk-xfce-engine-2/trunk/xfce_theme_draw.c: Improve "smooth_edge"
-	  mode. The shadow drawing should be faster too.
+	  mode.
+	  The shadow drawing should be faster too.
 
 2002-08-24 12:34  xfce
 
@@ -2572,13 +2531,13 @@
 2002-08-24 12:18  xfce
 
 	* gtk-xfce-engine-2/trunk/xfce_theme_draw.c: Change theme when
-	  "smooth_edge" is set, implement round corner to reflect
-	  Eugenia's suggestion.
+	  "smooth_edge" is set, implement round corner to reflect Eugenia's
+	  suggestion.
 
 2002-08-23 13:37  xfce
 
-	* gtk-xfce-engine-2/trunk/xfce_theme_draw.c: REvert latest
-	  changes, going nowhere.
+	* gtk-xfce-engine-2/trunk/xfce_theme_draw.c: REvert latest changes,
+	  going nowhere.
 
 2002-08-23 11:15  xfce
 
@@ -2658,11 +2617,11 @@
 	  gtk-xfce-engine-2/trunk/configure.in,
 	  gtk-xfce-engine-2/trunk/xfce_rc_style.c,
 	  gtk-xfce-engine-2/trunk/xfce_rc_style.h,
-	  gtk-xfce-engine-2/trunk/xfce_theme_draw.c: Major improvement,
-	  add an option to the theme "smooth_edge", boolean, so one can
-	  set it to get slicker look. Modified all themes, moved some
-	  default out of the code and put it the gtkrc files to give more
-	  control to the theme creator.
+	  gtk-xfce-engine-2/trunk/xfce_theme_draw.c: Major improvement, add
+	  an option to the theme "smooth_edge", boolean, so one can set it
+	  to get slicker look.
+	  Modified all themes, moved some default out of the code and put
+	  it the gtkrc files to give more control to the theme creator.
 
 2002-07-15 13:03  xfce
 
@@ -2814,8 +2773,8 @@
 
 	* gtk-xfce-engine-2/trunk/Theme/gtk-2.0/gtkrc,
 	  gtk-xfce-engine-2/trunk/configure,
-	  gtk-xfce-engine-2/trunk/configure.in: Bump 2.0.6, change
-	  provided gtkrc
+	  gtk-xfce-engine-2/trunk/configure.in: Bump 2.0.6, change provided
+	  gtkrc
 
 2002-06-14 20:35  xfce
 
@@ -2866,8 +2825,8 @@
 
 2002-06-05 13:40  xfce
 
-	* gtk-xfce-engine-2/trunk/Theme/gtk-2.0/gtkrc: Add default
-	  selected base color that was missing
+	* gtk-xfce-engine-2/trunk/Theme/gtk-2.0/gtkrc: Add default selected
+	  base color that was missing
 
 2002-06-05 13:15  xfce
 
@@ -2970,8 +2929,7 @@
 
 2002-05-28 21:17  xfce
 
-	* gtk-xfce-engine-2/trunk/AUTHORS,
-	  gtk-xfce-engine-2/trunk/COPYING,
+	* gtk-xfce-engine-2/trunk/AUTHORS, gtk-xfce-engine-2/trunk/COPYING,
 	  gtk-xfce-engine-2/trunk/ChangeLog,
 	  gtk-xfce-engine-2/trunk/Makefile.am,
 	  gtk-xfce-engine-2/trunk/Makefile.in,
@@ -3017,8 +2975,7 @@
 
 2002-05-28 14:41  xfce
 
-	* gtk-xfce-engine-2/trunk/COPYING,
-	  gtk-xfce-engine-2/trunk/INSTALL,
+	* gtk-xfce-engine-2/trunk/COPYING, gtk-xfce-engine-2/trunk/INSTALL,
 	  gtk-xfce-engine-2/trunk/Makefile.am,
 	  gtk-xfce-engine-2/trunk/Makefile.in,
 	  gtk-xfce-engine-2/trunk/acconfig.h,
