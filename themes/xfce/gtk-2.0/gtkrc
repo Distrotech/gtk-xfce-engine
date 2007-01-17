@@ -277,8 +277,8 @@ style "rox" = "default"
 
 style "titlebar" = "default"
 {
-    bg[INSENSITIVE]   = "#d3d7cf"
-    bg[SELECTED]      = "#555753"
+    bg[INSENSITIVE]   = "#eeeeec"
+    bg[SELECTED]      = "#888a85"
     fg[INSENSITIVE]   = "#888a85"
     fg[SELECTED]      = "#ffffff"
 }
