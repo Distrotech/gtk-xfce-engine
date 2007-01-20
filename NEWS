@@ -1,4 +1,10 @@
+2.4.0
+=====
+- Several improvements to the default theme.
+- Change the engine so that scrollbars show the trough border. 
+
+
 2.2.5
------
-* Completely new default theme.
-* Improved drawing of control elements to enhance usability.
+=====
+- Completely new default theme.
+- Improved drawing of control elements to enhance usability.
