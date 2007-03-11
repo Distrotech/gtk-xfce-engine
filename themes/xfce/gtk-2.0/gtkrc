@@ -86,11 +86,13 @@ style "gradient" = "default"
 
 style "menu" = "gradient"
 {
-    bg[INSENSITIVE]   = "#ffffff"
-    bg[NORMAL]        = "#ffffff"
-    bg[PRELIGHT]      = "#d3d7cf"
-    fg[SELECTED]      = "#000000"
-    text[SELECTED]    = "#000000"
+    bg[PRELIGHT]      = "#729fcf"
+    bg[INSENSITIVE]   = "#fafaf7"
+    bg[NORMAL]        = "#fafaf7"
+    fg[ACTIVE]        = "#ffffff"
+    fg[PRELIGHT]      = "#ffffff"
+    fg[SELECTED]      = "#ffffff"
+    text[PRELIGHT]    = "#ffffff"
 
     engine "xfce"
     {
@@ -138,8 +140,8 @@ style "menubar" = "menu"
         {
             fill_style = gradient
             orientation = vertical
-            shade_start = 1.20
-            shade_end = 0.90
+            shade_start = 1.00
+            shade_end = 0.95
         }
     }
 }
@@ -277,10 +279,10 @@ style "rox" = "default"
 
 style "titlebar" = "default"
 {
-    bg[INSENSITIVE]   = "#eeeeec"
-    bg[SELECTED]      = "#888a85"
-    fg[INSENSITIVE]   = "#888a85"
+    bg[SELECTED]      = "#729fcf"
     fg[SELECTED]      = "#ffffff"
+    bg[INSENSITIVE]   = "#eeeeec"
+    fg[INSENSITIVE]   = "#888a85"
 }
 
 
