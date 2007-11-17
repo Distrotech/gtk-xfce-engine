@@ -1,5 +1,5 @@
 # Process this file with autoconf to produce a configure script.
-AC_INIT([gtk-xfce-engine], [2.4.1], [http://bugzilla.xfce.org])
+AC_INIT([gtk-xfce-engine], [2.4.2], [http://bugzilla.xfce.org])
 
 AC_PREREQ(2.52)
 
