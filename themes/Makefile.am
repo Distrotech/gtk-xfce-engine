@@ -2,6 +2,7 @@ SUBDIRS = \
 	xfce		\
 	xfce-4.0	\
 	xfce-4.2	\
+	xfce-4.4	\
 	b5		\
 	basic		\
 	cadmium		\

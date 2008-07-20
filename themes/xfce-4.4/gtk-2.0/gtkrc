@@ -2,6 +2,7 @@
 # Modified Dec. 2006
 # Modified Jan. 2007
 # Olivier Fourdan <fourdan@xfce.org>
+# Based on Tango color scheme http://tango-project.org 
 # Released under the GPL license
 
 style "default"
@@ -33,17 +34,17 @@ style "default"
     xthickness = 2
     ythickness = 2
 
-    base[ACTIVE]      = "#d9d7d6"
+    base[ACTIVE]      = "#d3d7cf"
     base[INSENSITIVE] = "#eeeeec"
     base[NORMAL]      = "#ffffff"
     base[PRELIGHT]    = "#eeeeec"
-    base[SELECTED]    = "#abcfff"
+    base[SELECTED]    = "#3465a4"
 
-    bg[ACTIVE]        = "#d9d7d6"
+    bg[ACTIVE]        = "#d3d7cf"
     bg[INSENSITIVE]   = "#eeeeec"
     bg[NORMAL]        = "#eeeeec"
     bg[PRELIGHT]      = "#eeeeec"
-    bg[SELECTED]      = "#d9d7d6"
+    bg[SELECTED]      = "#d3d7cf"
 
     fg[ACTIVE]        = "#000000"
     fg[INSENSITIVE]   = "#888a85"
@@ -55,7 +56,7 @@ style "default"
     text[INSENSITIVE] = "#101010"
     text[NORMAL]      = "#101010"
     text[PRELIGHT]    = "#101010"
-    text[SELECTED]    = "#101010"
+    text[SELECTED]    = "#ffffff"
 
     engine "xfce"
     {
@@ -78,30 +79,28 @@ style "gradient" = "default"
             fill_style = gradient
             orientation = vertical
             shade_start = 1.10
-            shade_end = 0.90
+            shade_end = 0.95
         }
     }
 }
 
 style "menu" = "gradient"
 {
-    bg[PRELIGHT]      = "#abcfff"
-    bg[INSENSITIVE]   = "#fafaf7"
-    bg[NORMAL]        = "#fafaf7"
-    fg[ACTIVE]        = "#101010"
-    fg[PRELIGHT]      = "#101010"
-    fg[SELECTED]      = "#101010"
-    text[PRELIGHT]    = "#101010"
+    bg[INSENSITIVE]   = "#ffffff"
+    bg[NORMAL]        = "#ffffff"
+    bg[PRELIGHT]      = "#d3d7cf"
+    fg[SELECTED]      = "#000000"
+    text[SELECTED]    = "#000000"
 
     engine "xfce"
     {
         smooth_edge = true
         boxfill
         {
-            fill_style = plain
+            fill_style = gradient
             orientation = vertical
             shade_start = 1.10
-            shade_end = 0.90
+            shade_end = 0.95
         }
     }
 }
@@ -116,10 +115,10 @@ style "menuitem" = "menu"
         smooth_edge = true
         boxfill
         {
-            fill_style = plain
+            fill_style = gradient
             orientation = vertical
-            shade_start = 0.90
-            shade_end = 1.10
+            shade_start = 1.10
+            shade_end = 0.95
         }
     }
 }
@@ -139,7 +138,7 @@ style "menubar" = "menu"
         {
             fill_style = gradient
             orientation = vertical
-            shade_start = 1.00
+            shade_start = 1.20
             shade_end = 0.90
         }
     }
@@ -150,7 +149,7 @@ style "pager" = "gradient"
     xthickness = 1
     ythickness = 1
 
-    bg[SELECTED]      = "#4e627d"
+    bg[SELECTED]      = "#3465a4"
     fg[SELECTED]      = "#ffffff"
 
     engine "xfce"
@@ -161,10 +160,10 @@ style "pager" = "gradient"
 
 style "button" = "default"
 {
-    bg[ACTIVE]        = "#d9d7d6"
+    bg[ACTIVE]        = "#d3d7cf"
     bg[NORMAL]        = "#eeeeec"
-    bg[PRELIGHT]      = "#abcfff"
-    bg[SELECTED]      = "#4e627d"
+    bg[PRELIGHT]      = "#d3d7cf"
+    bg[SELECTED]      = "#3465a4"
 
     fg[ACTIVE]        = "#000000"
     fg[SELECTED]      = "#ffffff"
@@ -178,7 +177,7 @@ style "button" = "default"
             fill_style = gradient
             orientation = vertical
             shade_start = 1.10
-            shade_end = 0.90
+            shade_end = 0.95
         }
     }
 }
@@ -193,8 +192,8 @@ style "notebook" = "default"
 style "scrollbar" = "default"
 {
     bg[ACTIVE]        = "#e8e8e6"
-    bg[NORMAL]        = "#d9d7d6"
-    bg[PRELIGHT]      = "#abcfff"
+    bg[NORMAL]        = "#d3d7cf"
+    bg[PRELIGHT]      = "#d3d7cf"
 
     engine "xfce"
     {
@@ -205,7 +204,7 @@ style "scrollbar" = "default"
             fill_style = gradient
             orientation = automatic
             shade_start = 1.10
-            shade_end = 0.90
+            shade_end = 0.95
         }
     }
 }
@@ -221,7 +220,7 @@ style "scale" = "scrollbar"
             fill_style = gradient
             orientation = automatic
             shade_start = 1.10
-            shade_end = 0.90
+            shade_end = 0.95
         }
     }
 }
@@ -231,9 +230,9 @@ style "progress" = "gradient"
     xthickness = 0
     ythickness = 0
 
-    bg[ACTIVE]        = "#d9d7d6"
+    bg[ACTIVE]        = "#d3d7cf"
     bg[NORMAL]        = "#e8e8e6"
-    bg[PRELIGHT]      = "#abcfff"
+    bg[PRELIGHT]      = "#8ae234"
 
     fg[PRELIGHT]      = "#4e9a06"
 
@@ -246,7 +245,7 @@ style "progress" = "gradient"
             fill_style = gradient
             orientation = automatic
             shade_start = 1.10
-            shade_end = 0.90
+            shade_end = 0.95
         }
     }
 }
@@ -278,10 +277,10 @@ style "rox" = "default"
 
 style "titlebar" = "default"
 {
-    bg[SELECTED]      = "#1a2738"
-    fg[SELECTED]      = "#ffffff"
     bg[INSENSITIVE]   = "#eeeeec"
+    bg[SELECTED]      = "#888a85"
     fg[INSENSITIVE]   = "#888a85"
+    fg[SELECTED]      = "#ffffff"
 }
 
 

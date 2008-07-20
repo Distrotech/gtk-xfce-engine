@@ -1,3 +1,24 @@
+2007-05-09 19:55  olivier
+
+	* themes/xfce/gtk-2.0/gtkrc: New default gtk theme that goes with
+	  new xfwm4 theme
+
+2007-03-11 21:49  olivier
+
+	* themes/xfce/gtk-2.0/gtkrc: Colors
+
+2007-01-20 16:15  benny
+
+	* NEWS, depcomp: Update NEWS.
+
+2007-01-19 22:01  olivier
+
+	* ChangeLog: Update ChangeLog
+
+2007-01-19 20:56  olivier
+
+	* configure.in, depcomp: Update version
+
 2007-01-17 20:21  olivier
 
 	* themes/xfce/gtk-2.0/gtkrc: Lighter gray
@@ -139,18 +160,7 @@
 
 2006-07-09 09:56  pollux
 
-	* configure.in, libxfce4mcs/trunk/configure.ac,
-	  xfcalendar/trunk/configure.in.in,
-	  xfce-mcs-manager/trunk/configure.in.in,
-	  xfce-utils/trunk/configure.in.in,
-	  xfce4-appfinder/trunk/configure.in.in,
-	  xfce4-icon-theme/trunk/configure.in.in,
-	  xfce4-mixer/trunk/configure.in.in,
-	  xfce4-panel/trunk/configure.ac.in,
-	  xfce4-session/trunk/configure.in.in,
-	  xfdesktop/trunk/configure.ac.in, xfprint/trunk/configure.in.in,
-	  xfwm4/trunk/configure.ac.in: bump all versions and dependencies
-	  to 4.3.90.2
+	* configure.in: bump all versions and dependencies to 4.3.90.2
 
 2006-04-21 19:01  olivier
 
@@ -288,10 +298,7 @@
 
 2005-03-19 12:24  olivier
 
-	* gtk-xfce-engine-2/branches/xfce_4_2/ChangeLog,
-	  gtk-xfce-engine-2/branches/xfce_4_2/configure,
-	  gtk-xfce-engine-2/branches/xfce_4_2/configure.in,
-	  themes/b5/gtk-2.0/gtkrc, themes/basic/gtk-2.0/gtkrc,
+	* themes/b5/gtk-2.0/gtkrc, themes/basic/gtk-2.0/gtkrc,
 	  themes/cadmium/gtk-2.0/gtkrc, themes/curve/gtk-2.0/gtkrc,
 	  themes/dawn/gtk-2.0/gtkrc, themes/dusk/gtk-2.0/gtkrc,
 	  themes/kolors/gtk-2.0/gtkrc, themes/light/gtk-2.0/gtkrc,
@@ -312,8 +319,7 @@
 
 2005-03-10 20:53  olivier
 
-	* gtk-xfce-engine-2/branches/xfce_4_2/themes/xfce/gtk-2.0/gtkrc,
-	  themes/xfce-4.2/gtk-2.0/gtkrc: progress bar
+	* themes/xfce-4.2/gtk-2.0/gtkrc: progress bar
 
 2005-03-09 21:24  olivier
 
@@ -2393,6 +2399,5 @@
 
 2002-05-28 14:41  
 
-	* gtk-xfce-engine-2/branches, gtk-xfce-engine-2/tags, .: New
-	  repository initialized by cvs2svn.
+	* .: New repository initialized by cvs2svn.
 

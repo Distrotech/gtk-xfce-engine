@@ -1,5 +1,5 @@
 SUBDIRS = gtk-2.0
-themedir = $(datadir)/themes/Xfce-4.0
+themedir = $(datadir)/themes/Xfce-4.4
 theme_DATA = README.html
 
 EXTRA_DIST = $(theme_DATA)
