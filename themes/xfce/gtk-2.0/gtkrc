@@ -1,6 +1,7 @@
 # Created July 2006
 # Modified Dec. 2006
 # Modified Jan. 2007
+# Modified Jul. 2008 for xfce 4.6
 # Olivier Fourdan <fourdan@xfce.org>
 # Released under the GPL license
 
@@ -37,7 +38,7 @@ style "default"
     base[INSENSITIVE] = "#eeeeec"
     base[NORMAL]      = "#ffffff"
     base[PRELIGHT]    = "#eeeeec"
-    base[SELECTED]    = "#abcfff"
+    base[SELECTED]    = "#bad8ff"
 
     bg[ACTIVE]        = "#d9d7d6"
     bg[INSENSITIVE]   = "#eeeeec"
@@ -85,7 +86,7 @@ style "gradient" = "default"
 
 style "menu" = "gradient"
 {
-    bg[PRELIGHT]      = "#abcfff"
+    bg[PRELIGHT]      = "#cce2ff"
     bg[INSENSITIVE]   = "#fafaf7"
     bg[NORMAL]        = "#fafaf7"
     fg[ACTIVE]        = "#101010"
@@ -147,10 +148,10 @@ style "menubar" = "menu"
 
 style "pager" = "gradient"
 {
-    xthickness = 1
-    ythickness = 1
+    xthickness = 0
+    ythickness = 0
 
-    bg[SELECTED]      = "#4e627d"
+    bg[SELECTED]      = "#5e98e3"
     fg[SELECTED]      = "#ffffff"
 
     engine "xfce"
@@ -163,7 +164,7 @@ style "button" = "default"
 {
     bg[ACTIVE]        = "#d9d7d6"
     bg[NORMAL]        = "#eeeeec"
-    bg[PRELIGHT]      = "#abcfff"
+    bg[PRELIGHT]      = "#cce2ff"
     bg[SELECTED]      = "#4e627d"
 
     fg[ACTIVE]        = "#000000"
@@ -194,7 +195,7 @@ style "scrollbar" = "default"
 {
     bg[ACTIVE]        = "#e8e8e6"
     bg[NORMAL]        = "#d9d7d6"
-    bg[PRELIGHT]      = "#abcfff"
+    bg[PRELIGHT]      = "#cce2ff"
 
     engine "xfce"
     {
@@ -233,7 +234,7 @@ style "progress" = "gradient"
 
     bg[ACTIVE]        = "#d9d7d6"
     bg[NORMAL]        = "#e8e8e6"
-    bg[PRELIGHT]      = "#abcfff"
+    bg[PRELIGHT]      = "#cce2ff"
 
     fg[PRELIGHT]      = "#4e9a06"
 
