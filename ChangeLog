@@ -1,3 +1,6 @@
+2008-10-13 12:51  stephan
+	* ChangeLog, convigure.in: Update ChangeLog and version-number for 2.5.91
+
 2007-05-09 19:55  olivier
 
 	* themes/xfce/gtk-2.0/gtkrc: New default gtk theme that goes with
