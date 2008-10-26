@@ -1,3 +1,7 @@
+2007-11-17 18:42  kelnos
+
+	* ChangeLog: update changelogs; ready to tag 4.4.2
+
 2007-11-17 17:52  kelnos
 
 	* configure.in: oops, forgot to bump version
@@ -24,547 +28,547 @@
 
 2007-01-20 16:15  benny
 
-	* : Update NEWS.
+	* Update NEWS.
 
 2007-01-19 22:01  olivier
 
-	* : Update ChangeLog
+	* Update ChangeLog
 
 2007-01-19 20:56  olivier
 
-	* : Update version
+	* Update version
 
 2007-01-17 20:21  olivier
 
-	* : Lighter gray
+	* Lighter gray
 
 2007-01-05 22:11  olivier
 
-	* : Use gradients in menu and menubar
+	* Use gradients in menu and menubar
 
 2007-01-02 18:57  olivier
 
-	* : Simpler theme
+	* Simpler theme
 
 2006-12-24 12:00  olivier
 
-	* : No more blue
+	* No more blue
 
 2006-12-20 20:45  olivier
 
-	* : Adjust colors
+	* Adjust colors
 
 2006-12-10 21:50  olivier
 
-	* : Use the same nuance of blue everywhere
+	* Use the same nuance of blue everywhere
 
 2006-12-10 20:56  olivier
 
-	* : The dark blue is too dark, use a light one, even if not from
-	  the Tango palette - I hope it looks fine on other LCD displays
+	* The dark blue is too dark, use a light one, even if not from the
+	  Tango palette - I hope it looks fine on other LCD displays
 
 2006-12-08 19:31  olivier
 
-	* : Use dark blue instead of gray for active window frame
+	* Use dark blue instead of gray for active window frame
 
 2006-12-07 20:45  olivier
 
-	* : Use Tango palette
+	* Use Tango palette
 
 2006-12-07 20:34  olivier
 
-	* : Use higher contrasts
+	* Use higher contrasts
 
 2006-11-28 18:41  olivier
 
-	* : Adjust colors
+	* Adjust colors
 
 2006-11-27 20:51  olivier
 
-	* : Adjust colors
+	* Adjust colors
 
 2006-11-27 18:37  olivier
 
-	* : Rework the default a bit, change the engine so that scrollbars
+	* Rework the default a bit, change the engine so that scrollbars
 	  show the trough border.
 
 2006-11-18 21:43  olivier
 
-	* : Larger menu bar
+	* Larger menu bar
 
 2006-11-05 10:33  benny
 
-	* : Update the build framework.
+	* Update the build framework.
 
 2006-10-24 21:46  olivier
 
-	* : Update version
+	* Update version
 
 2006-10-18 20:10  olivier
 
-	* : Forgot to commit this patch from Mike Massonnet...
+	* Forgot to commit this patch from Mike Massonnet...
 
 2006-09-03 11:31  benny
 
-	* : Bump version.
+	* Bump version.
 
 2006-08-24 17:15  olivier
 
-	* : Use a dark frame around selected menu item
+	* Use a dark frame around selected menu item
 
 2006-07-19 20:06  olivier
 
-	* : Try lighter color for progress bar
+	* Try lighter color for progress bar
 
 2006-07-19 19:56  olivier
 
-	* : Use gradient for progress bars
+	* Use gradient for progress bars
 
 2006-07-18 20:55  olivier
 
-	* : 64bit fix
+	* 64bit fix
 
 2006-07-18 19:58  olivier
 
-	* : Remove cvsignore
+	* Remove cvsignore
 
 2006-07-18 19:57  olivier
 
-	* : Missing files
+	* Missing files
 
 2006-07-18 19:56  olivier
 
-	* : Humm, that's the other way arround...
+	* Humm, that's the other way arround...
 
 2006-07-18 19:51  olivier
 
-	* : Change default GTK theme
+	* Change default GTK theme
 
 2006-07-18 19:10  olivier
 
-	* : Reorg
+	* Reorg
 
 2006-07-09 09:56  pollux
 
-	* : bump all versions and dependencies to 4.3.90.2
+	* bump all versions and dependencies to 4.3.90.2
 
 2006-04-21 19:01  olivier
 
-	* : Change the color of active window title.
+	* Change the color of active window title.
 
 2006-04-16 14:43  olivier
 
-	* : Update package
+	* Update package
 
 2006-04-15 17:32  olivier
 
-	* : Update ChangeLog
+	* Update ChangeLog
 
 2006-03-16 21:23  olivier
 
-	* : Tweak colors
+	* Tweak colors
 
 2006-03-12 22:06  olivier
 
-	* : Use slightly lighter colors.
+	* Use slightly lighter colors.
 
 2006-03-08 18:15  olivier
 
-	* : Change title colors.
+	* Change title colors.
 
 2006-03-07 18:23  olivier
 
-	* : Small improvements to the default theme.
+	* Small improvements to the default theme.
 
 2006-03-06 22:06  olivier
 
-	* : Change the default theme a bit
+	* Change the default theme a bit
 
 2006-02-18 19:05  olivier
 
-	* : Add previous theme as Xfce 4.2
+	* Add previous theme as Xfce 4.2
 
 2006-02-16 21:05  olivier
 
-	* : Fix a small issue with toolbars and buttons
+	* Fix a small issue with toolbars and buttons
 
 2006-01-31 22:16  olivier
 
-	* : Seems I got the menu thickness wrong there
+	* Seems I got the menu thickness wrong there
 
 2006-01-31 21:32  olivier
 
-	* : Include new default style for 4.4
+	* Include new default style for 4.4
 
 2005-11-06 15:42  olivier
 
-	* : Apply patch submitted by Jasper a while ago.
+	* Apply patch submitted by Jasper a while ago.
 
 2005-06-11 09:21  olivier
 
-	* : Brighter colors
+	* Brighter colors
 
 2005-06-08 05:41  olivier
 
-	* : Restore some settings that were removed
+	* Restore some settings that were removed
 
 2005-06-07 21:57  olivier
 
-	* : Cleaner theme
+	* Cleaner theme
 
 2005-05-14 19:44  olivier
 
-	* : Update ChangeLog
+	* Update ChangeLog
 
 2005-05-04 20:48  olivier
 
-	* : Update ChangeLog
+	* Update ChangeLog
 
 2005-05-03 19:42  olivier
 
-	* : Colors
+	* Colors
 
 2005-04-28 10:36  olivier
 
-	* : Change default color scheme
+	* Change default color scheme
 
 2005-04-02 08:10  olivier
 
-	* : New default "xfce" theme with frame colors designed for the
+	* New default "xfce" theme with frame colors designed for the
 	  default xfwm4 theme.
 
 2005-03-27 17:08  olivier
 
-	* : ExoIconBar doesn't look very good when focus_padding != 2
+	* ExoIconBar doesn't look very good when focus_padding != 2
 
 2005-03-22 22:10  olivier
 
-	* : Fix treeview prelight color
+	* Fix treeview prelight color
 
 2005-03-21 21:52  olivier
 
-	* : Fix Adobe Acrobat 7 buttons
+	* Fix Adobe Acrobat 7 buttons
 
 2005-03-21 21:17  olivier
 
-	* : Adjust progress bar colors
+	* Adjust progress bar colors
 
 2005-03-20 23:54  olivier
 
-	* : *** empty log message ***
+	* *** empty log message ***
 
 2005-03-20 23:32  olivier
 
-	* : Scales
+	* Scales
 
 2005-03-20 23:16  olivier
 
-	* : Fix default theme
+	* Fix default theme
 
 2005-03-20 09:26  olivier
 
-	* : thickness
+	* thickness
 
 2005-03-19 21:58  olivier
 
-	* : Fix wrong foreground color in combobox (bug #848)
+	* Fix wrong foreground color in combobox (bug #848)
 
 2005-03-19 12:24  olivier
 
-	* : Use "GtkScale" and "GtkProgress" instead of just "Scale" and
+	* Use "GtkScale" and "GtkProgress" instead of just "Scale" and
 	  "Progress" for widget style definition.
 
 2005-03-11 21:07  olivier
 
-	* : Remove xfce-4.2 theme
+	* Remove xfce-4.2 theme
 
 2005-03-11 21:06  olivier
 
-	* : Revert to old color scheme
+	* Revert to old color scheme
 
 2005-03-10 20:53  olivier
 
-	* : progress bar
+	* progress bar
 
 2005-03-09 21:24  olivier
 
-	* : Rework progress bar.
+	* Rework progress bar.
 
 2005-03-06 20:22  olivier
 
-	* : Add frame around scales and progress bars, use different color,
+	* Add frame around scales and progress bars, use different color,
 	  improve visibilty ofpressed/active buttons.
 
 2005-03-05 22:33  olivier
 
-	* : Use light buttons and remove frame for handles.
+	* Use light buttons and remove frame for handles.
 
 2005-03-05 14:41  olivier
 
-	* : Change active frame color
+	* Change active frame color
 
 2005-03-05 13:24  olivier
 
-	* : Darker active button
+	* Darker active button
 
 2005-03-05 13:20  olivier
 
-	* : New color scheme
+	* New color scheme
 
 2005-03-05 12:46  olivier
 
-	* : Draw flat frame menu
+	* Draw flat frame menu
 
 2005-03-05 11:05  olivier
 
-	* : Change window decoration color for benny and jasper.
+	* Change window decoration color for benny and jasper.
 
 2005-03-05 00:12  olivier
 
-	* : Improve shadows of toolbars
+	* Improve shadows of toolbars
 
 2005-02-28 20:13  olivier
 
-	* : *** empty log message ***
+	* *** empty log message ***
 
 2005-02-24 20:54  olivier
 
-	* : Improve theme
+	* Improve theme
 
 2005-02-21 22:01  olivier
 
-	* : Change grip style.
+	* Change grip style.
 
 2005-02-21 21:54  olivier
 
-	* : Force no shadow for toolbar and menubar
+	* Force no shadow for toolbar and menubar
 
 2005-02-21 21:29  olivier
 
-	* : Enhance buttons and scrollbars using a darker color.
+	* Enhance buttons and scrollbars using a darker color.
 
 2005-02-11 19:58  olivier
 
-	* : Change default gtk theme.
+	* Change default gtk theme.
 
 2005-02-05 21:35  olivier
 
-	* : Add James Golden's dusk theme, remove generated files.
+	* Add James Golden's dusk theme, remove generated files.
 
 2005-01-10 16:46  benny
 
-	* : Updated NEWS and README
+	* Updated NEWS and README
 
 2005-01-05 21:00  olivier
 
-	* : Inactive WM frame
+	* Inactive WM frame
 
 2005-01-03 21:44  olivier
 
-	* : Theme adjust
+	* Theme adjust
 
 2005-01-02 12:50  olivier
 
-	* : Update version and changelog
+	* Update version and changelog
 
 2005-01-01 22:20  olivier
 
-	* : Progress
+	* Progress
 
 2005-01-01 19:35  olivier
 
-	* : Update version number
+	* Update version number
 	  invers gradients for trough
 
 2004-12-31 16:08  olivier
 
-	* : Cute progress bar
+	* Cute progress bar
 
 2004-12-31 10:31  olivier
 
-	* : Add displacement
+	* Add displacement
 
 2004-12-31 10:24  olivier
 
-	* : Scrollbar and sliders
+	* Scrollbar and sliders
 
 2004-12-31 10:04  olivier
 
-	* : *** empty log message ***
+	* *** empty log message ***
 
 2004-12-31 10:02  olivier
 
-	* : Draw frame of sliders
+	* Draw frame of sliders
 
 2004-12-30 23:44  olivier
 
-	* : *** empty log message ***
+	* *** empty log message ***
 
 2004-12-30 18:05  olivier
 
-	* : Final touch on theme
+	* Final touch on theme
 
 2004-12-25 20:33  kelnos
 
-	* : fix distcheck-bz2
+	* fix distcheck-bz2
 
 2004-12-24 00:03  kelnos
 
-	* : add dist-bz2 and distcheck-bz2 targets
+	* add dist-bz2 and distcheck-bz2 targets
 
 2004-12-22 20:19  benny
 
-	* : Bump version to 2.2.4.
+	* Bump version to 2.2.4.
 
 2004-12-22 19:23  benny
 
-	* : Update ChangeLog. Add missing m4 file.
+	* Update ChangeLog. Add missing m4 file.
 
 2004-12-06 20:48  benny
 
-	* : Color overrides for ExoIconBar.
+	* Color overrides for ExoIconBar.
 
 2004-11-27 17:29  olivier
 
-	* : Add colors for ROX-Filer's "Collection" widget.
+	* Add colors for ROX-Filer's "Collection" widget.
 
 2004-11-27 16:19  olivier
 
-	* : Improve tabs
+	* Improve tabs
 
 2004-11-27 15:10  olivier
 
-	* : Use a flat look for tabs
+	* Use a flat look for tabs
 
 2004-11-13 18:01  olivier
 
-	* : Update ChangeLog
+	* Update ChangeLog
 
 2004-11-08 21:39  olivier
 
-	* : autogen
+	* autogen
 
 2004-11-08 21:31  olivier
 
-	* : Themes fixes
+	* Themes fixes
 
 2004-11-06 16:23  olivier
 
-	* : Update automake/autoconf/libtool/gettext versions to generate
-	  the configure scripts and Makefiles,
+	* Update automake/autoconf/libtool/gettext versions to generate the
+	  configure scripts and Makefiles,
 	  Update versions of all packages to 4.1.99.1 (ie 4.2 RC1),
 	  Update ChangeLogs.
 
 2004-10-30 19:03  olivier
 
-	* : Global update for 4.1.91 (Xfce 4.2 beta 2)
+	* Global update for 4.1.91 (Xfce 4.2 beta 2)
 
 2004-10-29 21:14  olivier
 
-	* : Adjust theme
+	* Adjust theme
 
 2004-10-27 21:06  olivier
 
-	* : ChangeLog
+	* ChangeLog
 
 2004-10-27 21:03  olivier
 
-	* : Common sense
+	* Common sense
 
 2004-10-27 20:56  olivier
 
-	* : Spinbutton tweaking
+	* Spinbutton tweaking
 
 2004-10-27 18:00  olivier
 
-	* : Some simple theme updates
+	* Some simple theme updates
 
 2004-10-25 19:59  olivier
 
-	* : Change spin buttons' shadows.
+	* Change spin buttons' shadows.
 
 2004-10-25 19:20  olivier
 
-	* : Code and theme cleanup
+	* Code and theme cleanup
 
 2004-10-24 18:02  olivier
 
-	* : Remove backward stepper as some apps (OO) don't support it...
+	* Remove backward stepper as some apps (OO) don't support it...
 
 2004-10-23 14:45  olivier
 
-	* : Update ChangeLog
+	* Update ChangeLog
 
 2004-10-23 13:35  olivier
 
-	* : Theme cleanup
+	* Theme cleanup
 
 2004-10-22 20:37  olivier
 
-	* : Updated versions and change logs
+	* Updated versions and change logs
 
 2004-10-22 19:33  olivier
 
-	* : Theme fixes
+	* Theme fixes
 	  update locale [fr] for desktop files
 
 2004-10-08 17:09  olivier
 
-	* : Check for pointer validity in sliders decorations.
+	* Check for pointer validity in sliders decorations.
 
 2004-10-07 21:59  olivier
 
-	* : Change sliders for "dawn" theme
+	* Change sliders for "dawn" theme
 
 2004-10-07 20:35  benny
 
-	* : Added --enable-final (-O1 for GNU ld) as per Jaspers request.
+	* Added --enable-final (-O1 for GNU ld) as per Jaspers request.
 	  Added missing
 	  m4 files.
 
 2004-10-02 13:28  olivier
 
-	* : Update all files for 4.2 beta 1
+	* Update all files for 4.2 beta 1
 
 2004-09-20 22:22  olivier
 
-	* : Update all ChangeLogs
+	* Update all ChangeLogs
 
 2004-09-16 20:30  olivier
 
-	* : Improve usability of the default theme
+	* Improve usability of the default theme
 
 2004-09-14 20:32  jasper
 
-	* : Cygwin patches by Maarten Boekhold.
+	* Cygwin patches by Maarten Boekhold.
 
 2004-09-05 20:58  olivier
 
-	* : Default theme imprevements
+	* Default theme imprevements
 
 2004-08-25 17:57  olivier
 
-	* : Add "grip_style" option to the theme engine.
+	* Add "grip_style" option to the theme engine.
 
 2004-08-24 10:32  olivier
 
-	* : *** empty log message ***
+	* *** empty log message ***
 
 2004-08-23 11:06  olivier
 
-	* : ndicator sizes set to 15
+	* ndicator sizes set to 15
 
 2004-08-20 19:27  olivier
 
-	* : Improve compat with GNOME by adjusting themes for metacity.
+	* Improve compat with GNOME by adjusting themes for metacity.
 
 2004-08-20 17:09  olivier
 
-	* : Final touch on gtk theme
+	* Final touch on gtk theme
 
 2004-08-15 19:39  olivier
 
-	* : Resync with repository, most notably:
+	* Resync with repository, most notably:
 	  - libxfcegui4 fixes with gtk 2.2
 	  - xfwm4 updates
 	  - Present panel plugins in alphabetical order
@@ -574,155 +578,154 @@
 
 2004-08-04 15:51  olivier
 
-	* : Improve drawing of option/radio marks in menu as per user's
+	* Improve drawing of option/radio marks in menu as per user's
 	  request.
 
 2004-07-23 10:23  olivier
 
-	* : *** empty log message ***
+	* *** empty log message ***
 
 2004-07-21 17:08  olivier
 
-	* : Final touch on default theme, for WM frames.
+	* Final touch on default theme, for WM frames.
 
 2004-07-21 10:56  olivier
 
-	* : Woops, comited the wrong file.
+	* Woops, comited the wrong file.
 
 2004-07-20 21:19  olivier
 
-	* : Adopt a smoother look for default Xfce theme.
+	* Adopt a smoother look for default Xfce theme.
 
 2004-07-17 09:23  olivier
 
-	* : Remove useless focus-padding that has no effect anyway.
+	* Remove useless focus-padding that has no effect anyway.
 
 2004-07-13 17:16  olivier
 
-	* : Use a focus padding of 0 for XfceIconbutton widget as suggested
+	* Use a focus padding of 0 for XfceIconbutton widget as suggested
 	  by Bernhard Walle
 
 2004-07-09 12:39  olivier
 
-	* : Fix compilation error with gtk+-2.0.x
+	* Fix compilation error with gtk+-2.0.x
 
 2004-07-07 19:38  olivier
 
-	* : Enhance contrast of selected widgets
+	* Enhance contrast of selected widgets
 
 2004-07-06 20:14  olivier
 
-	* : Make buttons darker
+	* Make buttons darker
 
 2004-06-22 10:51  olivier
 
-	* : Drop the black frame
+	* Drop the black frame
 
 2004-06-21 20:24  olivier
 
-	* : Use very slight reverse gradient for default and dawn themes
+	* Use very slight reverse gradient for default and dawn themes
 
 2004-06-16 19:24  olivier
 
-	* : Reduce focus padding for gtk buttons so that the icons appear
+	* Reduce focus padding for gtk buttons so that the icons appear
 	  larger in xfce panel
 
 2004-06-11 06:32  olivier
 
-	* : Change background color
+	* Change background color
 
 2004-05-27 20:41  olivier
 
-	* : Add new theme "Xfce-dawn"
+	* Add new theme "Xfce-dawn"
 
 2004-05-19 08:00  olivier
 
-	* : Add theme "cadmium"
+	* Add theme "cadmium"
 
 2004-05-18 19:58  olivier
 
-	* : Fix for multiscreen support
+	* Fix for multiscreen support
 
 2004-05-03 21:44  olivier
 
-	* : Update zh_TW translations from umm <umm@pchome.com.tw>
+	* Update zh_TW translations from umm <umm@pchome.com.tw>
 
 2004-03-16 21:19  olivier
 
-	* : Blue
+	* Blue
 
 2004-03-12 22:10  olivier
 
-	* : Change xfwm4 frames colors
+	* Change xfwm4 frames colors
 
 2004-03-02 19:00  olivier
 
-	* : Theme change
+	* Theme change
 
 2004-02-28 15:33  olivier
 
-	* : Change default color
+	* Change default color
 
 2004-02-25 21:35  olivier
 
-	* : Use a slightly darker color
+	* Use a slightly darker color
 
 2004-02-24 22:13  olivier
 
-	* : #3 has won the poll
+	* #3 has won the poll
 
 2004-02-18 22:31  olivier
 
-	* : Play with gtkrc
+	* Play with gtkrc
 
 2004-02-18 20:52  olivier
 
-	* : Change frame colors, various other small tweaks
+	* Change frame colors, various other small tweaks
 
 2004-02-13 17:25  olivier
 
-	* : Put back darker title
+	* Put back darker title
 
 2004-02-11 20:50  olivier
 
-	* : Change theme
+	* Change theme
 
 2004-02-10 20:15  olivier
 
-	* : Theme
+	* Theme
 
 2004-02-09 19:46  olivier
 
-	* : Use a light gray-blue for active title
+	* Use a light gray-blue for active title
 
 2004-02-06 21:54  olivier
 
-	* : Change gtk theme
+	* Change gtk theme
 
 2004-02-06 17:56  olivier
 
-	* : Nicer, smoother colors
+	* Nicer, smoother colors
 
 2004-02-05 20:05  olivier
 
-	* : Use no gradient on progress bar
+	* Use no gradient on progress bar
 
 2004-02-05 19:33  olivier
 
-	* : Rearrange default gtk theme
+	* Rearrange default gtk theme
 
 2004-02-04 21:08  olivier
 
-	* : Change default theme for GTK
+	* Change default theme for GTK
 
 2004-01-25 00:07  olivier
 
-	* : Update libtool and other automake, autoconf and gettext
-	  packages
+	* Update libtool and other automake, autoconf and gettext packages
 
 2003-12-15 22:15  olivier
 
-	* : Fix crash in workspace MCS plugin
+	* Fix crash in workspace MCS plugin
 	  Include a patch from Patrick Bores <p@trickbores.com> that allows
 	  pop3 email checking from mailcheck panel plugin (use
 	  pop3://username:password@host for the mailbox)
@@ -730,1022 +733,1020 @@
 
 2003-12-05 21:51  olivier
 
-	* : Change colors to light gray
+	* Change colors to light gray
 
 2003-12-04 22:33  olivier
 
-	* : Change default theme, rename older as xfce-4.0
+	* Change default theme, rename older as xfce-4.0
 
 2003-11-14 22:10  olivier
 
-	* : enhance contrast for "curve" selected items
+	* enhance contrast for "curve" selected items
 
 2003-11-07 22:33  jasper
 
-	* : Add missing winter theme
+	* Add missing winter theme
 
 2003-11-03 20:29  olivier
 
-	* : Change curve theme a bit
+	* Change curve theme a bit
 
 2003-11-02 08:22  olivier
 
-	* : Add hi.po
+	* Add hi.po
 
 2003-10-13 18:51  jasper
 
-	* : Update ChangeLog's after syncing with SF. Everything should now
+	* Update ChangeLog's after syncing with SF. Everything should now
 	  be up-to-date.
 
 2003-09-22 20:52  huysmans
 
-	* : Update ChangeLogs
+	* Update ChangeLogs
 
 2003-09-21 22:19  xfce
 
-	* : Update version number to 4.0.0
+	* Update version number to 4.0.0
 	  Improve focus change for modal dialogs in xfwm4
 
 2003-09-14 22:05  xfce
 
-	* : Update ChangeLog
+	* Update ChangeLog
 
 2003-09-14 21:47  xfce
 
-	* : Change b5 colors
+	* Change b5 colors
 
 2003-09-13 23:13  xfce
 
-	* : Update ChangeLog
+	* Update ChangeLog
 
 2003-09-10 07:54  huysmans
 
-	* : Update ChangeLogs
+	* Update ChangeLogs
 
 2003-09-10 07:39  huysmans
 
-	* : Update version numbers and po files for release
+	* Update version numbers and po files for release
 
 2003-09-09 20:22  xfce
 
-	* : Change buttons style
+	* Change buttons style
 
 2003-08-26 07:38  huysmans
 
-	* : Update changelogs
+	* Update changelogs
 
 2003-08-12 05:55  xfce
 
-	* : Add secondary backward stepper to scrollbar
+	* Add secondary backward stepper to scrollbar
 
 2003-08-04 18:28  xfce
 
-	* : Use solid focus line width to imitate Motif
+	* Use solid focus line width to imitate Motif
 
 2003-08-03 18:45  bmeurer
 
-	* : Updated ChangeLogs
+	* Updated ChangeLogs
 
 2003-07-30 22:19  xfce
 
-	* : *** empty log message ***
+	* *** empty log message ***
 
 2003-07-30 11:31  huysmans
 
-	* : Update changlogs
+	* Update changlogs
 
 2003-07-28 19:41  xfce
 
-	* : *** empty log message ***
+	* *** empty log message ***
 
 2003-07-25 21:17  xfce
 
-	* : Add kde2 theme
+	* Add kde2 theme
 
 2003-07-24 09:21  huysmans
 
-	* : Remove debian dirs on Martin's request
+	* Remove debian dirs on Martin's request
 
 2003-07-20 12:23  xfce
 
-	* : Version 2.1.3
+	* Version 2.1.3
 	  Add compat with themes from previous 2.0.x versions of
 	  gtk-xfce-engine
 
 2003-07-19 09:29  huysmans
 
-	* : Update ChangeLogs
+	* Update ChangeLogs
 
 2003-07-13 08:43  huysmans
 
-	* : Update ChangeLogs for release
+	* Update ChangeLogs for release
 
 2003-07-11 07:33  huysmans
 
-	* : Update ChangeLog's for release
+	* Update ChangeLog's for release
 
 2003-07-10 09:56  huysmans
 
-	* : Update ChangeLog's for release
+	* Update ChangeLog's for release
 
 2003-07-07 22:25  xfce
 
-	* : Update ltmain.sh with patched version
+	* Update ltmain.sh with patched version
 
 2003-07-07 21:32  xfce
 
-	* : Fix draw_shadow() when widget is too small (ie width/height <
-	  1)
+	* Fix draw_shadow() when widget is too small (ie width/height < 1)
 
 2003-07-06 19:45  huysmans
 
-	* : Updating ChangeLogs
+	* Updating ChangeLogs
 
 2003-07-06 13:43  xfce
 
-	* : Apply colors to metacity frames
+	* Apply colors to metacity frames
 	  Various small improvements to gtkrc files
 
 2003-07-05 16:38  xfce
 
-	* : *** empty log message ***
+	* *** empty log message ***
 
 2003-07-05 12:31  xfce
 
-	* : Remove ltconfig script as it is generated
+	* Remove ltconfig script as it is generated
 
 2003-07-04 23:37  xfce
 
-	* : libttol update and all
+	* libttol update and all
 
 2003-06-29 20:23  xfce
 
-	* : *** empty log message ***
+	* *** empty log message ***
 
 2003-06-28 21:06  xfce
 
-	* : *** empty log message ***
+	* *** empty log message ***
 
 2003-06-28 20:44  xfce
 
-	* : Change themes
+	* Change themes
 
 2003-06-28 09:46  xfce
 
-	* : Update to libtool-1.5
+	* Update to libtool-1.5
 	  Use proper complete CURRENT:REVISION:AGE scheme for lib
 	  versionning
 
 2003-06-03 21:25  xfce
 
-	* : Upgrade version number to 2.1.1
+	* Upgrade version number to 2.1.1
 
 2003-06-03 20:16  xfce
 
-	* : Use 1 pix thickness for progress bar
+	* Use 1 pix thickness for progress bar
 
 2003-05-27 17:13  xfce
 
-	* : Use 1pix thickness for progress bars
+	* Use 1pix thickness for progress bars
 
 2003-05-27 06:21  xfce
 
-	* : *** empty log message ***
+	* *** empty log message ***
 
 2003-05-26 21:16  xfce
 
-	* : Rework xfce theme (real nice now)
+	* Rework xfce theme (real nice now)
 
 2003-05-23 22:40  xfce
 
-	* : Reduce contrast of text to get smoother look
+	* Reduce contrast of text to get smoother look
 
 2003-05-21 20:40  xfce
 
-	* : Change bg color of redmondxp theme
+	* Change bg color of redmondxp theme
 
 2003-05-15 11:03  huysmans
 
-	* : Mass update of ChangeLogs
+	* Mass update of ChangeLogs
 
 2003-04-28 20:46  xfce
 
-	* : Add credits
+	* Add credits
 
 2003-04-28 20:13  xfce
 
-	* : Small tweaking on "xfce" and "curve" themes
+	* Small tweaking on "xfce" and "curve" themes
 
 2003-04-22 19:40  xfce
 
-	* : Change curve colors to look lie Wonderland colors
+	* Change curve colors to look lie Wonderland colors
 
 2003-04-18 20:48  xfce
 
-	* : Fix Makefile pointing to old theme name
+	* Fix Makefile pointing to old theme name
 
 2003-04-18 20:32  xfce
 
-	* : Cleanup and reorg, set new version to 2.1.0 (as it features a
-	  lot of improvements over gtk-xfce-engine 2.0.x)
+	* Cleanup and reorg, set new version to 2.1.0 (as it features a lot
+	  of improvements over gtk-xfce-engine 2.0.x)
 
 2003-04-17 20:26  xfce
 
-	* : Various enhancements
+	* Various enhancements
 
 2003-04-15 21:09  xfce
 
-	* : Change colors for redmondxp theme
+	* Change colors for redmondxp theme
 
 2003-04-14 21:49  xfce
 
-	* : Use inverted gradient for active state, improve Redmondxp theme
+	* Use inverted gradient for active state, improve Redmondxp theme
 
 2003-04-14 19:52  xfce
 
-	* : Adjust widget/colors
+	* Adjust widget/colors
 
 2003-04-13 20:01  xfce
 
-	* : Add gradient scales
+	* Add gradient scales
 
 2003-04-13 19:29  xfce
 
-	* : Change xfce default theme to use gradients too :)
+	* Change xfce default theme to use gradients too :)
 
 2003-04-13 13:56  xfce
 
-	* : Greatly improve themes that use newly added gradients
+	* Greatly improve themes that use newly added gradients
 
 2003-04-12 22:50  xfce
 
-	* : *** empty log message ***
+	* *** empty log message ***
 
 2003-04-12 22:30  xfce
 
-	* : New xfce engine gtkrc syntax with a much better scanner.
+	* New xfce engine gtkrc syntax with a much better scanner.
 
 2003-04-10 22:09  xfce
 
-	* : One more
+	* One more
 
 2003-04-10 22:03  xfce
 
-	* : Fix compiler warning
+	* Fix compiler warning
 
 2003-04-10 22:01  xfce
 
-	* : Add gradients
+	* Add gradients
 
 2003-04-04 21:22  xfce
 
-	* : *** empty log message ***
+	* *** empty log message ***
 
 2003-04-04 21:14  xfce
 
-	* : *** empty log message ***
+	* *** empty log message ***
 
 2003-04-04 21:12  xfce
 
-	* : Update Xfce-etria theme
+	* Update Xfce-etria theme
 
 2003-04-03 17:34  xfce
 
-	* : *** empty log message ***
+	* *** empty log message ***
 
 2003-04-02 20:43  xfce
 
-	* : Forgot to adjust interior focus
+	* Forgot to adjust interior focus
 
 2003-04-02 20:24  xfce
 
-	* : Update ChangeLog
+	* Update ChangeLog
 	  Improve Etria and Curve themes
 
 2003-04-01 21:48  xfce
 
-	* : Adjust Etria colors
+	* Adjust Etria colors
 
 2003-04-01 21:33  xfce
 
-	* : Initialize early i18n in mcs plugins
+	* Initialize early i18n in mcs plugins
 	  Add Etria theme
 
 2003-03-27 20:30  xfce
 
-	* : Update ChangeLog
+	* Update ChangeLog
 
 2003-03-26 20:20  xfce
 
-	* : Small adjusments in color scheme
+	* Small adjusments in color scheme
 
 2003-03-25 19:42  xfce
 
-	* : Change default xfwm4 theme (yeah, again...but that's the
-	  default theme, ya know)
+	* Change default xfwm4 theme (yeah, again...but that's the default
+	  theme, ya know)
 	  Change Xfce-curve theme
 
 2003-03-23 21:17  xfce
 
-	* : Update ChangeLog
+	* Update ChangeLog
 
 2003-03-19 07:12  huysmans
 
-	* : Only add extra autogen parameters when none are given
+	* Only add extra autogen parameters when none are given
 
 2003-03-18 22:33  xfce
 
-	* : Update ChangeLog
+	* Update ChangeLog
 	  Update build scripts (ie rerun autogen.sh)
 	  Update xfwm4's microdeck theme
 	  Remove 1 pix border arround xffm menu bar
 
 2003-03-16 11:35  xfce
 
-	* : Adjust colors
+	* Adjust colors
 
 2003-03-13 20:39  xfce
 
-	* : Update Changelogs
+	* Update Changelogs
 
 2003-03-11 22:09  xfce
 
-	* : *** empty log message ***
+	* *** empty log message ***
 
 2003-03-11 21:05  xfce
 
-	* : *** empty log message ***
+	* *** empty log message ***
 
 2003-03-11 20:55  xfce
 
-	* : Slightly adjust colors
+	* Slightly adjust colors
 
 2003-03-09 19:14  huysmans
 
-	* : Fix autogen.sh to run libtoolize
+	* Fix autogen.sh to run libtoolize
 
 2003-03-06 18:54  xfce
 
-	* : Rework the gtk theme files
+	* Rework the gtk theme files
 
 2003-03-05 20:08  xfce
 
-	* : Rework configure script, update xfce theme.
+	* Rework configure script, update xfce theme.
 
 2003-03-04 20:02  xfce
 
-	* : *** empty log message ***
+	* *** empty log message ***
 
 2003-03-04 19:17  xfce
 
-	* : Adjust theme colors
+	* Adjust theme colors
 
 2003-03-03 23:14  xfce
 
-	* : For Joe :)
+	* For Joe :)
 
 2003-02-28 23:27  xfce
 
-	* : *** empty log message ***
+	* *** empty log message ***
 
 2003-02-27 22:16  xfce
 
-	* : ops, remove libtool
+	* ops, remove libtool
 
 2003-02-27 21:53  xfce
 
-	* : Add libtool script
+	* Add libtool script
 
 2003-02-21 18:23  xfce
 
-	* : Rearrange gtkrc
+	* Rearrange gtkrc
 
 2003-02-20 21:41  xfce
 
-	* : Rework of frame draw
+	* Rework of frame draw
 
 2003-02-19 22:52  xfce
 
-	* : Change curve colors, avoid drawing frame arround toolbars
+	* Change curve colors, avoid drawing frame arround toolbars
 
 2003-01-23 10:52  xfce
 
-	* : Update auto* stuff
+	* Update auto* stuff
 
 2003-01-23 10:45  xfce
 
-	* : Update autogen.sh and Makefiles
+	* Update autogen.sh and Makefiles
 
 2003-01-17 08:55  xfce
 
-	* : *** empty log message ***
+	* *** empty log message ***
 
 2002-12-21 20:42  xfce
 
-	* : *** empty log message ***
+	* *** empty log message ***
 
 2002-12-13 11:50  xfce
 
-	* : *** empty log message ***
+	* *** empty log message ***
 
 2002-12-13 10:13  xfce
 
-	* : *** empty log message ***
+	* *** empty log message ***
 
 2002-12-12 20:16  xfce
 
-	* : add GTK-2.2 menuitem shadow style and change some other minor
+	* add GTK-2.2 menuitem shadow style and change some other minor
 	  changes.
 
 2002-12-11 07:08  xfce
 
-	* : *** empty log message ***
+	* *** empty log message ***
 
 2002-12-10 22:42  xfce
 
-	* : Change various frame draw styles in smooth mode.
+	* Change various frame draw styles in smooth mode.
 
 2002-12-01 21:10  xfce
 
-	* : *** empty log message ***
+	* *** empty log message ***
 
 2002-12-01 21:09  xfce
 
-	* : *** empty log message ***
+	* *** empty log message ***
 
 2002-12-01 15:55  xfce
 
-	* : *** empty log message ***
+	* *** empty log message ***
 
 2002-11-28 20:17  madkiss
 
-	* : Update to debian/-subdir included in xfce4_20021127-1.
+	* Update to debian/-subdir included in xfce4_20021127-1.
 
 2002-11-28 13:21  xfce
 
-	* : *** empty log message ***
+	* *** empty log message ***
 
 2002-11-20 15:59  xfce
 
-	* : *** empty log message ***
+	* *** empty log message ***
 
 2002-11-20 11:35  xfce
 
-	* : *** empty log message ***
+	* *** empty log message ***
 
 2002-11-10 14:18  xfce
 
-	* : *** empty log message ***
+	* *** empty log message ***
 
 2002-11-10 13:58  xfce
 
-	* : Update ChangeLog
+	* Update ChangeLog
 
 2002-11-10 13:53  xfce
 
-	* : Change version number, change frame corners in "smooth" mode.
+	* Change version number, change frame corners in "smooth" mode.
 
 2002-11-10 10:02  madkiss
 
-	* : Initial revision
+	* Initial revision
 
 2002-11-05 14:12  xfce
 
-	* : Xfce-curve theme is back.
+	* Xfce-curve theme is back.
 
 2002-10-22 18:52  xfce
 
-	* : Change colors.
+	* Change colors.
 
 2002-10-22 14:48  xfce
 
-	* : *** empty log message ***
+	* *** empty log message ***
 
 2002-10-22 09:51  xfce
 
-	* : Change to lighter color for tabs and buttons
+	* Change to lighter color for tabs and buttons
 
 2002-10-17 19:31  xfce
 
-	* : Change active title color for xfwm4.
+	* Change active title color for xfwm4.
 
 2002-10-12 13:26  xfce
 
-	* : *** empty log message ***
+	* *** empty log message ***
 
 2002-10-11 21:45  xfce
 
-	* : *** empty log message ***
+	* *** empty log message ***
 
 2002-10-09 20:12  xfce
 
-	* : Change frame for "trough", update ChangLog, set version to
-	  2.0.10
+	* Change frame for "trough", update ChangLog, set version to 2.0.10
 
 2002-10-05 20:06  xfce
 
-	* : Remove shadow in trough
+	* Remove shadow in trough
 
 2002-10-05 15:57  xfce
 
-	* : *** empty log message ***
+	* *** empty log message ***
 
 2002-10-05 11:20  xfce
 
-	* : Change scrollbar color for redmondxp gtkrc
+	* Change scrollbar color for redmondxp gtkrc
 
 2002-10-05 09:59  xfce
 
-	* : trough shadow.
+	* trough shadow.
 
 2002-10-04 22:04  xfce
 
-	* : Change drawing of vscale and hscale, change interior focus
-	  border in various "smooth" themes.
+	* Change drawing of vscale and hscale, change interior focus border
+	  in various "smooth" themes.
 
 2002-10-04 21:19  xfce
 
-	* : Optmizations, revert to dark frame instead of black for widgets
+	* Optmizations, revert to dark frame instead of black for widgets
 	  in smooth mode
 
 2002-10-04 20:45  xfce
 
-	* : Change scrollbar and various object drawing in smooth mode.
+	* Change scrollbar and various object drawing in smooth mode.
 
 2002-10-04 13:44  xfce
 
-	* : *** empty log message ***
+	* *** empty log message ***
 
 2002-10-04 13:03  xfce
 
-	* : Switch to smooth mode for "basic" theme.
+	* Switch to smooth mode for "basic" theme.
 
 2002-10-01 20:03  xfce
 
-	* : Do some oddities with smooth mode :)
+	* Do some oddities with smooth mode :)
 
 2002-10-01 17:04  xfce
 
-	* : *** empty log message ***
+	* *** empty log message ***
 
 2002-10-01 14:32  xfce
 
-	* : *** empty log message ***
+	* *** empty log message ***
 
 2002-10-01 13:59  xfce
 
-	* : *** empty log message ***
+	* *** empty log message ***
 
 2002-09-30 08:07  xfce
 
-	* : Change drawing routine in smooth mode to enhance contrast on
+	* Change drawing routine in smooth mode to enhance contrast on
 	  widgets.
 
 2002-09-18 14:16  xfce
 
-	* : Even lighter, I'm really hot right now, I need a refreshing
-	  theme :)
+	* Even lighter, I'm really hot right now, I need a refreshing theme
+	  :)
 
 2002-09-18 14:13  xfce
 
-	* : Make b5 theme lighter.
+	* Make b5 theme lighter.
 
 2002-09-17 20:51  xfce
 
-	* : Update ChangeLog.
+	* Update ChangeLog.
 
 2002-09-17 20:40  xfce
 
-	* : Update configure.in
+	* Update configure.in
 
 2002-09-17 20:30  xfce
 
-	* : Remove Xfce_curve
+	* Remove Xfce_curve
 
 2002-09-13 22:08  xfce
 
-	* : Regenerate all Makefile.in in case.
+	* Regenerate all Makefile.in in case.
 
 2002-09-12 20:00  xfce
 
-	* : Update ChangeLog.
+	* Update ChangeLog.
 
 2002-09-12 19:38  xfce
 
-	* : *** empty log message ***
+	* *** empty log message ***
 
 2002-09-12 12:40  xfce
 
-	* : Add theme saltlake
+	* Add theme saltlake
 
 2002-09-12 09:40  xfce
 
-	* : *** empty log message ***
+	* *** empty log message ***
 
 2002-09-12 09:27  xfce
 
-	* : *** empty log message ***
+	* *** empty log message ***
 
 2002-09-12 08:08  xfce
 
-	* : *** empty log message ***
+	* *** empty log message ***
 
 2002-09-12 07:46  xfce
 
-	* : *** empty log message ***
+	* *** empty log message ***
 
 2002-09-11 21:20  xfce
 
-	* : *** empty log message ***
+	* *** empty log message ***
 
 2002-09-11 21:17  xfce
 
-	* : *** empty log message ***
+	* *** empty log message ***
 
 2002-09-09 13:40  xfce
 
-	* : *** empty log message ***
+	* *** empty log message ***
 
 2002-09-09 10:34  xfce
 
-	* : *** empty log message ***
+	* *** empty log message ***
 
 2002-09-08 20:37  xfce
 
-	* : *** empty log message ***
+	* *** empty log message ***
 
 2002-09-08 20:26  xfce
 
-	* : Use default gtk theme for drawing arrows instead of our, use
-	  flat pressed buttons.
+	* Use default gtk theme for drawing arrows instead of our, use flat
+	  pressed buttons.
 
 2002-09-06 12:31  xfce
 
-	* : *** empty log message ***
+	* *** empty log message ***
 
 2002-09-06 11:03  xfce
 
-	* : *** empty log message ***
+	* *** empty log message ***
 
 2002-09-05 15:24  xfce
 
-	* : *** empty log message ***
+	* *** empty log message ***
 
 2002-09-03 21:04  xfce
 
-	* : *** empty log message ***
+	* *** empty log message ***
 
 2002-09-03 20:12  xfce
 
-	* : *** empty log message ***
+	* *** empty log message ***
 
 2002-09-03 12:47  xfce
 
-	* : Add theme "curve"
+	* Add theme "curve"
 
 2002-09-02 08:31  xfce
 
-	* : *** empty log message ***
+	* *** empty log message ***
 
 2002-09-02 07:39  xfce
 
-	* : Replace "rpm -ta" with "rpmbuild -ta"
+	* Replace "rpm -ta" with "rpmbuild -ta"
 
 2002-09-01 08:42  xfce
 
-	* : *** empty log message ***
+	* *** empty log message ***
 
 2002-08-29 16:11  xfce
 
-	* : *** empty log message ***
+	* *** empty log message ***
 
 2002-08-29 10:51  xfce
 
-	* : *** empty log message ***
+	* *** empty log message ***
 
 2002-08-29 10:44  xfce
 
-	* : *** empty log message ***
+	* *** empty log message ***
 
 2002-08-29 07:58  xfce
 
-	* : *** empty log message ***
+	* *** empty log message ***
 
 2002-08-28 14:03  xfce
 
-	* : *** empty log message ***
+	* *** empty log message ***
 
 2002-08-28 08:28  xfce
 
-	* : *** empty log message ***
+	* *** empty log message ***
 
 2002-08-27 22:12  xfce
 
-	* : *** empty log message ***
+	* *** empty log message ***
 
 2002-08-27 09:56  xfce
 
-	* : *** empty log message ***
+	* *** empty log message ***
 
 2002-08-27 09:47  xfce
 
-	* : *** empty log message ***
+	* *** empty log message ***
 
 2002-08-26 13:10  xfce
 
-	* : *** empty log message ***
+	* *** empty log message ***
 
 2002-08-26 13:02  xfce
 
-	* : *** empty log message ***
+	* *** empty log message ***
 
 2002-08-26 11:22  xfce
 
-	* : *** empty log message ***
+	* *** empty log message ***
 
 2002-08-26 11:07  xfce
 
-	* : *** empty log message ***
+	* *** empty log message ***
 
 2002-08-26 10:18  xfce
 
-	* : *** empty log message ***
+	* *** empty log message ***
 
 2002-08-25 11:29  xfce
 
-	* : Make round corners enabled by default, allow disable round
+	* Make round corners enabled by default, allow disable round
 	  corners from configure script.
 
 2002-08-24 13:33  xfce
 
-	* : Improve "smooth_edge" mode.
+	* Improve "smooth_edge" mode.
 	  The shadow drawing should be faster too.
 
 2002-08-24 12:34  xfce
 
-	* : Remove round corners. W/out use of shape, it
+	* Remove round corners. W/out use of shape, it
 
 2002-08-24 12:19  xfce
 
-	* : Update ChangeLog
+	* Update ChangeLog
 
 2002-08-24 12:18  xfce
 
-	* : Change theme when "smooth_edge" is set, implement round corner
-	  to reflect Eugenia's suggestion.
+	* Change theme when "smooth_edge" is set, implement round corner to
+	  reflect Eugenia's suggestion.
 
 2002-08-23 13:37  xfce
 
-	* : REvert latest changes, going nowhere.
+	* REvert latest changes, going nowhere.
 
 2002-08-23 11:15  xfce
 
-	* : Round corners (more)
+	* Round corners (more)
 
 2002-08-23 08:55  xfce
 
-	* : An attempt to implement slight round corners as suggested by
+	* An attempt to implement slight round corners as suggested by
 	  Eugenia ;-)
 
 2002-07-24 12:34  xfce
 
-	* : Update ChangeLog
+	* Update ChangeLog
 
 2002-07-24 12:32  xfce
 
-	* : Add GTK_LIBS dependency so that PyGTK apps work with the theme
+	* Add GTK_LIBS dependency so that PyGTK apps work with the theme
 	  (as suggested by Michele Campeotto <micampe@micampe.it>)
 
 2002-07-18 10:02  xfce
 
-	* : Update ChangeLog
+	* Update ChangeLog
 
 2002-07-18 10:00  xfce
 
-	* : Change prelight color.
+	* Change prelight color.
 
 2002-07-18 09:00  xfce
 
-	* : Update ChangeLog
+	* Update ChangeLog
 
 2002-07-17 20:24  xfce
 
-	* : Add new scheme "Xfce_light"
+	* Add new scheme "Xfce_light"
 
 2002-07-16 17:13  huysmans
 
-	* : small fix for compile error
+	* small fix for compile error
 
 2002-07-15 20:29  xfce
 
-	* : Change scrollbar size to 13 instead of 15 for XFce-Redmondxp
-	  and Xfce-b5
+	* Change scrollbar size to 13 instead of 15 for XFce-Redmondxp and
+	  Xfce-b5
 
 2002-07-15 20:23  xfce
 
-	* : Major improvement, add an option to the theme "smooth_edge",
+	* Major improvement, add an option to the theme "smooth_edge",
 	  boolean, so one can set it to get slicker look.
 	  Modified all themes, moved some default out of the code and put
 	  it the gtkrc files to give more control to the theme creator.
 
 2002-07-15 13:03  xfce
 
-	* : *** empty log message ***
+	* *** empty log message ***
 
 2002-07-15 12:46  xfce
 
-	* : Change shadows
+	* Change shadows
 
 2002-07-15 12:37  xfce
 
-	* : *** empty log message ***
+	* *** empty log message ***
 
 2002-07-14 20:31  xfce
 
-	* : *** empty log message ***
+	* *** empty log message ***
 
 2002-07-14 20:25  xfce
 
-	* : *** empty log message ***
+	* *** empty log message ***
 
 2002-07-14 19:34  xfce
 
-	* : Revert latest changes
+	* Revert latest changes
 
 2002-07-14 13:57  xfce
 
-	* : Revert the change on arrows.
+	* Revert the change on arrows.
 
 2002-07-14 13:51  xfce
 
-	* : Change the shadow of widget to be less sharp, ie by using
-	  dark_gc instead of black_gc to render the shadow (People may not
-	  like this)
+	* Change the shadow of widget to be less sharp, ie by using dark_gc
+	  instead of black_gc to render the shadow (People may not like
+	  this)
 
 2002-07-04 19:27  xfce
 
-	* : Update ChangeLog, release 2.0.6
+	* Update ChangeLog, release 2.0.6
 
 2002-07-04 13:34  xfce
 
-	* : Add Xfce-Redmondxp theme
+	* Add Xfce-Redmondxp theme
 
 2002-07-01 21:40  xfce
 
-	* : Update ChangeLog
+	* Update ChangeLog
 
 2002-07-01 08:31  xfce
 
-	* : *** empty log message ***
+	* *** empty log message ***
 
 2002-06-30 20:14  xfce
 
-	* : Improve default gtkrc
+	* Improve default gtkrc
 
 2002-06-28 08:34  xfce
 
-	* : Add theme Xfce_funklor based on a theme by Michael Pearce
+	* Add theme Xfce_funklor based on a theme by Michael Pearce
 	  (chuzwuzza@optushome.com.au),
 	  Improve Xfce theme.
 
 2002-06-27 07:56  xfce
 
-	* : *** empty log message ***
+	* *** empty log message ***
 
 2002-06-24 10:51  xfce
 
-	* : *** empty log message ***
+	* *** empty log message ***
 
 2002-06-24 10:15  xfce
 
-	* : Add a new "basic" sample theme using xfce engine.
+	* Add a new "basic" sample theme using xfce engine.
 
 2002-06-22 14:58  xfce
 
-	* : Bump 2.0.6, change provided gtkrc
+	* Bump 2.0.6, change provided gtkrc
 
 2002-06-14 20:35  xfce
 
-	* : Fix some remaining deprecated calls
+	* Fix some remaining deprecated calls
 
 2002-06-13 21:47  xfce
 
-	* : *** empty log message ***
+	* *** empty log message ***
 
 2002-06-13 21:46  xfce
 
-	* : Various cleanups
+	* Various cleanups
 
 2002-06-06 08:14  xfce
 
-	* : Whoops, forgot to update CVS !
+	* Whoops, forgot to update CVS !
 
 2002-06-05 14:18  xfce
 
-	* : *** empty log message ***
+	* *** empty log message ***
 
 2002-06-05 14:05  xfce
 
-	* : *** empty log message ***
+	* *** empty log message ***
 
 2002-06-05 14:03  xfce
 
-	* : *** empty log message ***
+	* *** empty log message ***
 
 2002-06-05 13:50  xfce
 
-	* : *** empty log message ***
+	* *** empty log message ***
 
 2002-06-05 13:40  xfce
 
-	* : Add default selected base color that was missing
+	* Add default selected base color that was missing
 
 2002-06-05 13:15  xfce
 
-	* : Improve contrast in provided gtkrc and update version nbr to
+	* Improve contrast in provided gtkrc and update version nbr to
 	  2.0.4
 
 2002-05-31 23:13  xfce
 
-	* : *** empty log message ***
+	* *** empty log message ***
 
 2002-05-31 09:23  xfce
 
-	* : *** empty log message ***
+	* *** empty log message ***
 
 2002-05-30 15:09  xfce
 
-	* : *** empty log message ***
+	* *** empty log message ***
 
 2002-05-30 10:55  xfce
 
-	* : *** empty log message ***
+	* *** empty log message ***
 
 2002-05-30 10:22  xfce
 
-	* : *** empty log message ***
+	* *** empty log message ***
 
 2002-05-30 06:30  xfce
 
-	* : *** empty log message ***
+	* *** empty log message ***
 
 2002-05-29 21:09  xfce
 
-	* : *** empty log message ***
+	* *** empty log message ***
 
 2002-05-29 13:05  xfce
 
-	* : *** empty log message ***
+	* *** empty log message ***
 
 2002-05-29 10:33  xfce
 
-	* : *** empty log message ***
+	* *** empty log message ***
 
 2002-05-29 08:13  xfce
 
-	* : *** empty log message ***
+	* *** empty log message ***
 
 2002-05-29 08:08  xfce
 
-	* : *** empty log message ***
+	* *** empty log message ***
 
 2002-05-29 08:03  xfce
 
-	* : Add default gtkrc for GNOME
+	* Add default gtkrc for GNOME
 
 2002-05-28 21:36  xfce
 
-	* : Add -DG_DISABLE_DEPRECATED
+	* Add -DG_DISABLE_DEPRECATED
 
 2002-05-28 21:17  xfce
 
-	* : *** empty log message ***
+	* *** empty log message ***
 
 2002-05-28 21:02  xfce
 
-	* : *** empty log message ***
+	* *** empty log message ***
 
 2002-05-28 16:55  xfce
 
-	* : *** empty log message ***
+	* *** empty log message ***
 
 2002-05-28 16:44  xfce
 
-	* : *** empty log message ***
+	* *** empty log message ***
 
 2002-05-28 16:38  xfce
 
-	* : *** empty log message ***
+	* *** empty log message ***
 
 2002-05-28 15:18  xfce
 
-	* : *** empty log message ***
+	* *** empty log message ***
 
 2002-05-28 14:41  xfce
 
-	* : Initial import
+	* Initial import
 
 2002-05-28 14:41  
 
-	* : New repository initialized by cvs2svn.
+	* New repository initialized by cvs2svn.
 
