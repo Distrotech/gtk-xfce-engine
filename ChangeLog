@@ -1,5 +1,10 @@
 2008-11-09	olivier
 
+	* themes/*/Makefile.am: Forgot to remove the README.html from the
+	  Makefile.am
+
+2008-11-09	olivier
+
 	* src/xfce_theme_draw.c: Fix bg color being shown under group box 
 	  title (Bug #1018),
 	  src/gradient_draw.c: Fix wrong UTF8 character in credit header
