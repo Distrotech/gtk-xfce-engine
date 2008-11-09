@@ -16,21 +16,21 @@
  *
  *  Copyright (C) 1999-2004 Olivier Fourdan (fourdan@xfce.org)
  *
- *  Portions based Thinice port by 
+ *  Portions based Thinice port by
  *                       Tim Gerla <timg@rrv.net>,
  *                       Tomas Ögren <stric@ing.umu.se,
  *                       Richard Hult <rhult@codefactory.se>
  *  Portions based on Smooth theme by
  *                       Andrew Johnson <ajgenius@ajgenius.us>
- *  Portions based on IceGradient theme by  
+ *  Portions based on IceGradient theme by
  *                       Tim Gerla <timg@means.net>
- *                       Tomas Ã–gren <stric@ing.umu.se>
+ *                       Tomas Ögren <stric@ing.umu.se>
  *                       JM Perez <jose.perez@upcnet.es>
- *  Portions based on Wonderland theme by   
+ *  Portions based on Wonderland theme by
  *                       Garrett LeSage
  *                       Alexander Larsson
  *                       Owen Taylor <otaylor@redhat.com>
- *  Portions based on Raleigh theme by 
+ *  Portions based on Raleigh theme by
  *                       Owen Taylor <otaylor@redhat.com>
  *  Portions based on Notif theme
  *  Portions based on Notif2 theme
@@ -165,14 +165,14 @@ static void xfce_fill_background(GtkStyle * style, GdkWindow * window, GtkStateT
     GradientType gradient_style = GRADIENT_VERTICAL;
     gfloat shade_start = 1.0, shade_end = 1.0;
     gboolean draw_flat = FALSE;
-  
-    if((width == -1) && (height == -1))
+
+    if ((width == -1) && (height == -1))
         gdk_drawable_get_size(window, &width, &height);
-    else if(width == -1)
+    else if (width == -1)
         gdk_drawable_get_size(window, &width, NULL);
-    else if(height == -1)
+    else if (height == -1)
         gdk_drawable_get_size(window, NULL, &height);
-  
+
     clip_area.x = x;
     clip_area.y = y;
     clip_area.width = width;
@@ -237,7 +237,7 @@ static void xfce_fill_background(GtkStyle * style, GdkWindow * window, GtkStateT
         {
             shade_start = XFCE_RC_STYLE(style->rc_style)->shade_start;
             shade_end = XFCE_RC_STYLE(style->rc_style)->shade_end;
-        }       
+        }
         gdk_gc_get_values(style->bg_gc[state_type], &gc_values);
         gdk_gc_set_function(gc, GDK_COPY);
         gdk_gc_set_line_attributes(gc, 1, GDK_LINE_SOLID, gc_values.cap_style, gc_values.join_style);
@@ -255,12 +255,12 @@ static void xfce_fill_background(GtkStyle * style, GdkWindow * window, GtkStateT
     }
     else
     {
-        if(area)
+        if (area)
         {
             gdk_gc_set_clip_rectangle(style->bg_gc[state_type], area);
         }
         gdk_draw_rectangle(window, style->bg_gc[state_type], TRUE, x, y, width, height);
-        if(area)
+        if (area)
         {
             gdk_gc_set_clip_rectangle(style->bg_gc[state_type], NULL);
         }
@@ -274,11 +274,11 @@ static void xfce_draw_grip_rough (GtkStyle * style, GdkWindow * window, GtkState
     GdkGC *light_gc, *dark_gc;
     GdkRectangle dest;
 
-    if((width == -1) && (height == -1))
+    if ((width == -1) && (height == -1))
         gdk_drawable_get_size(window, &width, &height);
-    else if(width == -1)
+    else if (width == -1)
         gdk_drawable_get_size(window, &width, NULL);
-    else if(height == -1)
+    else if (height == -1)
         gdk_drawable_get_size(window, NULL, &height);
 
     light_gc = style->light_gc[state_type];
@@ -295,9 +295,9 @@ static void xfce_draw_grip_rough (GtkStyle * style, GdkWindow * window, GtkState
     gdk_gc_set_clip_rectangle(light_gc, &dest);
     gdk_gc_set_clip_rectangle(dark_gc, &dest);
 
-    if(orientation == GTK_ORIENTATION_HORIZONTAL)
+    if (orientation == GTK_ORIENTATION_HORIZONTAL)
     {
-        if(width > 15 + xthick)
+        if (width > 15 + xthick)
         {
             gint len = (height - 2 * (ythick + 2) > 4 ? height - 2 * (ythick + 2) :  height - 2 * ythick);
             gint delta = x + (width / 2) - 5;
@@ -311,7 +311,7 @@ static void xfce_draw_grip_rough (GtkStyle * style, GdkWindow * window, GtkState
     }
     else
     {
-        if(height > 15 + ythick)
+        if (height > 15 + ythick)
         {
             gint len = (width - 2 * (xthick + 2) > 4 ? width - 2 * (xthick + 2) :  width - 2 * xthick);
             gint delta = y + (height / 2) - 5;
@@ -336,11 +336,11 @@ static void xfce_draw_grip_slide (GtkStyle * style, GdkWindow * window, GtkState
     GdkGC *light_gc, *dark_gc, *mid_gc, *bg_gc;
     GdkRectangle dest;
 
-    if((width == -1) && (height == -1))
+    if ((width == -1) && (height == -1))
         gdk_drawable_get_size(window, &width, &height);
-    else if(width == -1)
+    else if (width == -1)
         gdk_drawable_get_size(window, &width, NULL);
-    else if(height == -1)
+    else if (height == -1)
         gdk_drawable_get_size(window, NULL, &height);
 
     light_gc = style->light_gc[state_type];
@@ -362,8 +362,8 @@ static void xfce_draw_grip_slide (GtkStyle * style, GdkWindow * window, GtkState
     gdk_gc_set_clip_rectangle(bg_gc, &dest);
 
     gx = gy = gwidth = gheight = 0;
-    
-    if(orientation == GTK_ORIENTATION_HORIZONTAL)
+
+    if (orientation == GTK_ORIENTATION_HORIZONTAL)
     {
         gint delta = ((gint)((height - 3) / 2));
         gx = x + delta;
@@ -380,7 +380,7 @@ static void xfce_draw_grip_slide (GtkStyle * style, GdkWindow * window, GtkState
         gheight = height - 2 * delta - 1;
     }
 
-    if((gheight > 1) && (gwidth > 1))
+    if ((gheight > 1) && (gwidth > 1))
     {
         gdk_draw_rectangle(window, bg_gc, TRUE, gx, gy, gwidth, gheight);
 
@@ -410,14 +410,14 @@ static void xfce_draw_grips(GtkStyle * style, GdkWindow * window, GtkStateType s
     g_return_if_fail(window != NULL);
 
     rc_style = XFCE_RC_STYLE(style->rc_style);
-    
+
     if (rc_style)
     {
-        if(rc_style->grip_style == XFCE_RC_GRIP_ROUGH)
+        if (rc_style->grip_style == XFCE_RC_GRIP_ROUGH)
         {
             xfce_draw_grip_rough (style, window, state_type, area, widget, x, y, width, height, orientation);
         }
-        else if(rc_style->grip_style == XFCE_RC_GRIP_SLIDE)
+        else if (rc_style->grip_style == XFCE_RC_GRIP_SLIDE)
         {
             xfce_draw_grip_slide (style, window, state_type, area, widget, x, y, width, height, orientation);
         }
@@ -436,7 +436,7 @@ static void draw_hline(GtkStyle * style, GdkWindow * window, GtkStateType state_
     thickness_light = style->ythickness / 2;
     thickness_dark = style->ythickness - thickness_light;
 
-    if(area)
+    if (area)
     {
         gdk_gc_set_clip_rectangle(style->light_gc[state_type], area);
         gdk_gc_set_clip_rectangle(style->dark_gc[state_type], area);
@@ -455,7 +455,7 @@ static void draw_hline(GtkStyle * style, GdkWindow * window, GtkStateType state_
         gdk_draw_line(window, style->light_gc[state_type], x1 + thickness_light - i - 1, y + i, x2, y + i);
     }
 
-    if(area)
+    if (area)
     {
         gdk_gc_set_clip_rectangle(style->light_gc[state_type], NULL);
         gdk_gc_set_clip_rectangle(style->dark_gc[state_type], NULL);
@@ -474,7 +474,7 @@ static void draw_vline(GtkStyle * style, GdkWindow * window, GtkStateType state_
     thickness_light = style->xthickness / 2;
     thickness_dark = style->xthickness - thickness_light;
 
-    if(area)
+    if (area)
     {
         gdk_gc_set_clip_rectangle(style->light_gc[state_type], area);
         gdk_gc_set_clip_rectangle(style->dark_gc[state_type], area);
@@ -491,7 +491,7 @@ static void draw_vline(GtkStyle * style, GdkWindow * window, GtkStateType state_
         gdk_draw_line(window, style->light_gc[state_type], x + i, y1, x + i, y1 + thickness_light - i);
         gdk_draw_line(window, style->light_gc[state_type], x + i, y1 + thickness_light - i, x + i, y2);
     }
-    if(area)
+    if (area)
     {
         gdk_gc_set_clip_rectangle(style->light_gc[state_type], NULL);
         gdk_gc_set_clip_rectangle(style->dark_gc[state_type], NULL);
@@ -501,18 +501,21 @@ static void draw_vline(GtkStyle * style, GdkWindow * window, GtkStateType state_
 static void draw_shadow(GtkStyle * style, GdkWindow * window, GtkStateType state_type, GtkShadowType shadow_type, GdkRectangle * area, GtkWidget * widget, const gchar * detail, gint x, gint y, gint width, gint height)
 {
     gint xt, yt;
-    
+
     g_return_if_fail(style != NULL);
     g_return_if_fail(window != NULL);
 
-    if((width == -1) && (height == -1))
+    if (shadow_type == GTK_SHADOW_NONE)
+        return;
+
+    if ((width == -1) && (height == -1))
         gdk_drawable_get_size(window, &width, &height);
-    else if(width == -1)
+    else if (width == -1)
         gdk_drawable_get_size(window, &width, NULL);
-    else if(height == -1)
+    else if (height == -1)
         gdk_drawable_get_size(window, NULL, &height);
 
-    if(area)
+    if (area)
     {
         gdk_gc_set_clip_rectangle(style->light_gc[state_type], area);
         gdk_gc_set_clip_rectangle(style->dark_gc[state_type], area);
@@ -523,7 +526,7 @@ static void draw_shadow(GtkStyle * style, GdkWindow * window, GtkStateType state
 
     xt = MIN(style->xthickness, width - 1);
     yt = MIN(style->ythickness, height - 1);
-    
+
     switch (shadow_type)
     {
         case GTK_SHADOW_NONE:
@@ -577,9 +580,9 @@ static void draw_shadow(GtkStyle * style, GdkWindow * window, GtkStateType state
             }
             break;
         case GTK_SHADOW_IN:
-            if(XFCE_RC_STYLE(style->rc_style)->smooth_edge)
+            if (XFCE_RC_STYLE(style->rc_style)->smooth_edge)
             {
-                if(DETAIL("trough"))
+                if (DETAIL("trough"))
                 {
                     gdk_draw_line(window, style->bg_gc[GTK_STATE_NORMAL], x, y, x + width - 1, y);
                     gdk_draw_line(window, style->bg_gc[GTK_STATE_NORMAL], x, y, x, y + height - 1);
@@ -627,7 +630,7 @@ static void draw_shadow(GtkStyle * style, GdkWindow * window, GtkStateType state
             }
             else
             {
-                if(DETAIL("trough"))
+                if (DETAIL("trough"))
                 {
                     gdk_draw_line(window, style->dark_gc[GTK_STATE_ACTIVE], x, y, x + width - 1, y);
                     gdk_draw_line(window, style->dark_gc[GTK_STATE_ACTIVE], x, y, x, y + height - 1);
@@ -660,7 +663,7 @@ static void draw_shadow(GtkStyle * style, GdkWindow * window, GtkStateType state
             }
             break;
         case GTK_SHADOW_OUT:
-            if(XFCE_RC_STYLE(style->rc_style)->smooth_edge)
+            if (XFCE_RC_STYLE(style->rc_style)->smooth_edge)
             {
                 if ((DETAIL("spinbutton_up") || DETAIL("spinbutton_up") || DETAIL("spinbutton_down")) && (state_type != GTK_STATE_PRELIGHT))
                 {
@@ -716,7 +719,7 @@ static void draw_shadow(GtkStyle * style, GdkWindow * window, GtkStateType state
                         gdk_draw_line(window, style->dark_gc[state_type], x, y + height - 1, x + width - 1, y + height - 1);
                     }
                 }
-                else if(DETAIL("vscrollbar") || DETAIL("hscrollbar") || DETAIL("bar") || DETAIL("slider") || DETAIL("vscale") || DETAIL("hscale"))
+                else if (DETAIL("vscrollbar") || DETAIL("hscrollbar") || DETAIL("bar") || DETAIL("slider") || DETAIL("vscale") || DETAIL("hscale"))
                 {
                     if ((xt > 1) && (yt > 1))
                     {
@@ -741,7 +744,7 @@ static void draw_shadow(GtkStyle * style, GdkWindow * window, GtkStateType state
                         gdk_draw_line(window, style->dark_gc[state_type], x + width - 1, y + 1, x + width - 1, y + height - 1);
                     }
                 }
-                else if(DETAIL("menubar") || DETAIL("frame") || DETAIL("dockitem") || DETAIL("dockitem_bin") || DETAIL("menu") || DETAIL("toolbar"))
+                else if (DETAIL("menubar") || DETAIL("frame") || DETAIL("dockitem") || DETAIL("dockitem_bin") || DETAIL("menu") || DETAIL("toolbar"))
                 {
                     if ((xt > 1) && (yt > 1))
                     {
@@ -863,7 +866,7 @@ static void draw_shadow(GtkStyle * style, GdkWindow * window, GtkStateType state
             }
             break;
     }
-    if(area)
+    if (area)
     {
         gdk_gc_set_clip_rectangle(style->light_gc[state_type], NULL);
         gdk_gc_set_clip_rectangle(style->dark_gc[state_type], NULL);
@@ -878,14 +881,14 @@ static void draw_box(GtkStyle * style, GdkWindow * window, GtkStateType state_ty
     g_return_if_fail(style != NULL);
     g_return_if_fail(window != NULL);
 
-    if((width == -1) && (height == -1))
+    if ((width == -1) && (height == -1))
         gdk_drawable_get_size(window, &width, &height);
-    else if(width == -1)
+    else if (width == -1)
         gdk_drawable_get_size(window, &width, NULL);
-    else if(height == -1)
+    else if (height == -1)
         gdk_drawable_get_size(window, NULL, &height);
 
-    if(!style->bg_pixmap[state_type])
+    if (!style->bg_pixmap[state_type])
     {
         xfce_fill_background(style, window, state_type, area, widget, detail, x, y, width, height);
     }
@@ -919,7 +922,7 @@ static GdkBitmap *get_part_bmap (GdkDrawable *drawable, Part part)
 
     return bitmap;
 #else
-    if(!parts[part].bmap)
+    if (!parts[part].bmap)
     {
         parts[part].bmap = gdk_bitmap_create_from_data(drawable, parts[part].bits, PART_SIZE, PART_SIZE);
     }
@@ -929,7 +932,7 @@ static GdkBitmap *get_part_bmap (GdkDrawable *drawable, Part part)
 
 static void draw_part(GdkDrawable * drawable, GdkGC * gc, GdkRectangle * area, gint x, gint y, Part part)
 {
-    if(area)
+    if (area)
     {
         gdk_gc_set_clip_rectangle(gc, area);
     }
@@ -942,7 +945,7 @@ static void draw_part(GdkDrawable * drawable, GdkGC * gc, GdkRectangle * area, g
 
     gdk_gc_set_fill(gc, GDK_SOLID);
 
-    if(area)
+    if (area)
     {
         gdk_gc_set_clip_rectangle(gc, NULL);
     }
@@ -953,7 +956,7 @@ static void draw_check(GtkStyle * style, GdkWindow * window, GtkStateType state,
     x -= (1 + PART_SIZE - width) / 2;
     y -= (1 + PART_SIZE - height) / 2;
 
-    if(DETAIL("check"))    /* Menu item */
+    if (DETAIL("check"))    /* Menu item */
     {
 #if 0
         draw_part(window, style->bg_gc[state], area, x, y, CHECK_BASE);
@@ -961,7 +964,7 @@ static void draw_check(GtkStyle * style, GdkWindow * window, GtkStateType state,
         draw_part(window, style->dark_gc[state], area, x, y, CHECK_LIGHT);
         draw_part(window, style->dark_gc[state], area, x, y, CHECK_DARK);
 
-        if(shadow == GTK_SHADOW_IN)
+        if (shadow == GTK_SHADOW_IN)
         {
             draw_part(window, style->fg_gc[state], area, x, y, CHECK_CROSS);
         }
@@ -972,7 +975,7 @@ static void draw_check(GtkStyle * style, GdkWindow * window, GtkStateType state,
         draw_part(window, style->dark_gc[state], area, x, y, CHECK_LIGHT);
         draw_part(window, style->dark_gc[state], area, x, y, CHECK_DARK);
 
-        if(shadow == GTK_SHADOW_IN)
+        if (shadow == GTK_SHADOW_IN)
         {
             draw_part(window, style->text_gc[state], area, x, y, CHECK_CROSS);
         }
@@ -984,7 +987,7 @@ static void draw_option(GtkStyle * style, GdkWindow * window, GtkStateType state
     x -= (1 + PART_SIZE - width) / 2;
     y -= (1 + PART_SIZE - height) / 2;
 
-    if(DETAIL("option"))   /* Menu item */
+    if (DETAIL("option"))   /* Menu item */
     {
 #if 0
         draw_part(window, style->bg_gc[state], area, x, y, RADIO_BASE);
@@ -992,7 +995,7 @@ static void draw_option(GtkStyle * style, GdkWindow * window, GtkStateType state
         draw_part(window, style->dark_gc[state], area, x, y, RADIO_LIGHT);
         draw_part(window, style->dark_gc[state], area, x, y, RADIO_DARK);
 
-        if(shadow == GTK_SHADOW_IN)
+        if (shadow == GTK_SHADOW_IN)
         {
             draw_part(window, style->fg_gc[state], area, x, y, RADIO_TEXT);
         }
@@ -1003,7 +1006,7 @@ static void draw_option(GtkStyle * style, GdkWindow * window, GtkStateType state
         draw_part(window, style->dark_gc[state], area, x, y, RADIO_LIGHT);
         draw_part(window, style->dark_gc[state], area, x, y, RADIO_DARK);
 
-        if(shadow == GTK_SHADOW_IN)
+        if (shadow == GTK_SHADOW_IN)
         {
             draw_part(window, style->text_gc[state], area, x, y, RADIO_TEXT);
         }
@@ -1016,6 +1019,9 @@ static void draw_shadow_gap(GtkStyle * style, GdkWindow * window, GtkStateType s
 
     g_return_if_fail(style != NULL);
     g_return_if_fail(window != NULL);
+
+    if (shadow_type == GTK_SHADOW_NONE)
+        return;
 
     draw_shadow(style, window, state_type, shadow_type, area, widget, detail, x, y, width, height);
 
@@ -1062,14 +1068,14 @@ static void draw_box_gap(GtkStyle * style, GdkWindow * window, GtkStateType stat
 
     gtk_style_apply_default_background(style, window, widget && !GTK_WIDGET_NO_WINDOW(widget), state_type, area, x, y, width, height);
 
-    if(width == -1 && height == -1)
+    if (width == -1 && height == -1)
         gdk_drawable_get_size(window, &width, &height);
-    else if(width == -1)
+    else if (width == -1)
         gdk_drawable_get_size(window, &width, NULL);
-    else if(height == -1)
+    else if (height == -1)
         gdk_drawable_get_size(window, NULL, &height);
 
-    if(XFCE_RC_STYLE(style->rc_style)->smooth_edge)
+    if (XFCE_RC_STYLE(style->rc_style)->smooth_edge)
     {
         gc1 = style->dark_gc[state_type];
         gc2 = style->bg_gc[state_type];
@@ -1083,8 +1089,8 @@ static void draw_box_gap(GtkStyle * style, GdkWindow * window, GtkStateType stat
         gc3 = style->dark_gc[state_type];
         gc4 = style->black_gc;
     }
-    
-    if(area)
+
+    if (area)
     {
         gdk_gc_set_clip_rectangle(gc1, area);
         gdk_gc_set_clip_rectangle(gc2, area);
@@ -1110,13 +1116,13 @@ static void draw_box_gap(GtkStyle * style, GdkWindow * window, GtkStateType stat
 
                     gdk_draw_line(window, gc4, x + 1, y + height - 1, x + width - 1, y + height - 1);
                     gdk_draw_line(window, gc4, x + width - 1, y, x + width - 1, y + height - 1);
-                    if(gap_x > 0)
+                    if (gap_x > 0)
                     {
                         gdk_draw_line(window, gc1, x, y, x + gap_x - 1, y);
                         gdk_draw_line(window, gc2, x + 1, y + 1, x + gap_x - 1, y + 1);
                         gdk_draw_line(window, gc2, x + gap_x, y, x + gap_x, y);
                     }
-                    if((width - (gap_x + gap_width)) > 0)
+                    if ((width - (gap_x + gap_width)) > 0)
                     {
                         gdk_draw_line(window, gc1, x + gap_x + gap_width, y, x + width - 2, y);
                         gdk_draw_line(window, gc2, x + gap_x + gap_width, y + 1, x + width - 2, y + 1);
@@ -1132,13 +1138,13 @@ static void draw_box_gap(GtkStyle * style, GdkWindow * window, GtkStateType stat
 
                     gdk_draw_line(window, gc3, x + width - 2, y + 1, x + width - 2, y + height - 1);
                     gdk_draw_line(window, gc4, x + width - 1, y, x + width - 1, y + height - 1);
-                    if(gap_x > 0)
+                    if (gap_x > 0)
                     {
                         gdk_draw_line(window, gc4, x, y + height - 1, x + gap_x - 1, y + height - 1);
                         gdk_draw_line(window, gc3, x + 1, y + height - 2, x + gap_x - 1, y + height - 2);
                         gdk_draw_line(window, gc3, x + gap_x, y + height - 1, x + gap_x, y + height - 1);
                     }
-                    if((width - (gap_x + gap_width)) > 0)
+                    if ((width - (gap_x + gap_width)) > 0)
                     {
                         gdk_draw_line(window, gc4, x + gap_x + gap_width, y + height - 1, x + width - 2, y + height - 1);
                         gdk_draw_line(window, gc3, x + gap_x + gap_width, y + height - 2, x + width - 2, y + height - 2);
@@ -1154,13 +1160,13 @@ static void draw_box_gap(GtkStyle * style, GdkWindow * window, GtkStateType stat
 
                     gdk_draw_line(window, gc4, x + 1, y + height - 1, x + width - 1, y + height - 1);
                     gdk_draw_line(window, gc4, x + width - 1, y, x + width - 1, y + height - 1);
-                    if(gap_x > 0)
+                    if (gap_x > 0)
                     {
                         gdk_draw_line(window, gc1, x, y, x, y + gap_x - 1);
                         gdk_draw_line(window, gc2, x + 1, y + 1, x + 1, y + gap_x - 1);
                         gdk_draw_line(window, gc2, x, y + gap_x, x, y + gap_x);
                     }
-                    if((width - (gap_x + gap_width)) > 0)
+                    if ((width - (gap_x + gap_width)) > 0)
                     {
                         gdk_draw_line(window, gc1, x, y + gap_x + gap_width, x, y + height - 2);
                         gdk_draw_line(window, gc2, x + 1, y + gap_x + gap_width, x + 1, y + height - 2);
@@ -1176,13 +1182,13 @@ static void draw_box_gap(GtkStyle * style, GdkWindow * window, GtkStateType stat
 
                     gdk_draw_line(window, gc3, x + 1, y + height - 2, x + width - 1, y + height - 2);
                     gdk_draw_line(window, gc4, x + 1, y + height - 1, x + width - 1, y + height - 1);
-                    if(gap_x > 0)
+                    if (gap_x > 0)
                     {
                         gdk_draw_line(window, gc4, x + width - 1, y, x + width - 1, y + gap_x - 1);
                         gdk_draw_line(window, gc3, x + width - 2, y + 1, x + width - 2, y + gap_x - 1);
                         gdk_draw_line(window, gc3, x + width - 1, y + gap_x, x + width - 1, y + gap_x);
                     }
-                    if((width - (gap_x + gap_width)) > 0)
+                    if ((width - (gap_x + gap_width)) > 0)
                     {
                         gdk_draw_line(window, gc4, x + width - 1, y + gap_x + gap_width, x + width - 1, y + height - 2);
                         gdk_draw_line(window, gc3, x + width - 2, y + gap_x + gap_width, x + width - 2, y + height - 2);
@@ -1192,7 +1198,7 @@ static void draw_box_gap(GtkStyle * style, GdkWindow * window, GtkStateType stat
             }
     }
 
-    if(area)
+    if (area)
     {
         gdk_gc_set_clip_rectangle(gc1, NULL);
         gdk_gc_set_clip_rectangle(gc2, NULL);
@@ -1213,14 +1219,14 @@ static void draw_extension(GtkStyle * style, GdkWindow * window, GtkStateType st
 
     gtk_style_apply_default_background(style, window, widget && !GTK_WIDGET_NO_WINDOW(widget), GTK_STATE_NORMAL, area, x, y, width, height);
 
-    if(width == -1 && height == -1)
+    if (width == -1 && height == -1)
         gdk_drawable_get_size(window, &width, &height);
-    else if(width == -1)
+    else if (width == -1)
         gdk_drawable_get_size(window, &width, NULL);
-    else if(height == -1)
+    else if (height == -1)
         gdk_drawable_get_size(window, NULL, &height);
 
-    if(XFCE_RC_STYLE(style->rc_style)->smooth_edge)
+    if (XFCE_RC_STYLE(style->rc_style)->smooth_edge)
     {
         gc1 = style->dark_gc[state_type];
         gc2 = style->bg_gc[state_type];
@@ -1234,8 +1240,8 @@ static void draw_extension(GtkStyle * style, GdkWindow * window, GtkStateType st
         gc3 = style->dark_gc[state_type];
         gc4 = style->black_gc;
     }
-    
-    if(area)
+
+    if (area)
     {
         gdk_gc_set_clip_rectangle(gc1, area);
         gdk_gc_set_clip_rectangle(gc2, area);
@@ -1295,7 +1301,7 @@ static void draw_extension(GtkStyle * style, GdkWindow * window, GtkStateType st
             }
     }
 
-    if(area)
+    if (area)
     {
         gdk_gc_set_clip_rectangle(gc1, NULL);
         gdk_gc_set_clip_rectangle(gc2, NULL);
@@ -1309,15 +1315,15 @@ static void draw_slider(GtkStyle * style, GdkWindow * window, GtkStateType state
     g_return_if_fail(style != NULL);
     g_return_if_fail(window != NULL);
 
-    if((width == -1) && (height == -1))
+    if ((width == -1) && (height == -1))
         gdk_drawable_get_size(window, &width, &height);
-    else if(width == -1)
+    else if (width == -1)
         gdk_drawable_get_size(window, &width, NULL);
-    else if(height == -1)
+    else if (height == -1)
         gdk_drawable_get_size(window, NULL, &height);
 
     orientation = GTK_ORIENTATION_HORIZONTAL;
-    if(height > width)
+    if (height > width)
         orientation = GTK_ORIENTATION_VERTICAL;
 
     draw_box(style, window, state_type, shadow_type, area, widget, detail, x, y, width, height);
@@ -1329,15 +1335,15 @@ static void draw_handle(GtkStyle * style, GdkWindow * window, GtkStateType state
     g_return_if_fail(style != NULL);
     g_return_if_fail(window != NULL);
 
-    if((width == -1) && (height == -1))
+    if ((width == -1) && (height == -1))
         gdk_drawable_get_size(window, &width, &height);
-    else if(width == -1)
+    else if (width == -1)
         gdk_drawable_get_size(window, &width, NULL);
-    else if(height == -1)
+    else if (height == -1)
         gdk_drawable_get_size(window, NULL, &height);
 
     orientation = GTK_ORIENTATION_HORIZONTAL;
-    if(height > width)
+    if (height > width)
         orientation = GTK_ORIENTATION_VERTICAL;
 
 #if 0

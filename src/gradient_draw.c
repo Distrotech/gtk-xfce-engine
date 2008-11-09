@@ -16,21 +16,21 @@
  *
  *  Copyright (C) 1999-2004 Olivier Fourdan (fourdan@xfce.org)
  *
- *  Portions based Thinice port by 
+ *  Portions based Thinice port by
  *                       Tim Gerla <timg@rrv.net>,
  *                       Tomas Ögren <stric@ing.umu.se,
  *                       Richard Hult <rhult@codefactory.se>
  *  Portions based on Smooth theme by
  *                       Andrew Johnson <ajgenius@ajgenius.us>
- *  Portions based on IceGradient theme by  
+ *  Portions based on IceGradient theme by
  *                       Tim Gerla <timg@means.net>
- *                       Tomas Ã–gren <stric@ing.umu.se>
+ *                       Tomas Ögren <stric@ing.umu.se>
  *                       JM Perez <jose.perez@upcnet.es>
- *  Portions based on Wonderland theme by   
+ *  Portions based on Wonderland theme by
  *                       Garrett LeSage
  *                       Alexander Larsson
  *                       Owen Taylor <otaylor@redhat.com>
- *  Portions based on Raleigh theme by 
+ *  Portions based on Raleigh theme by
  *                       Owen Taylor <otaylor@redhat.com>
  *  Portions based on Notif theme
  *  Portions based on Notif2 theme

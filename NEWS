@@ -1,3 +1,9 @@
+2.5.92
+=====
+
+- Fix bg color being shown under group box title (Bug #1018)
+- Remove README.html files (Bug #3280)
+
 2.4.0
 =====
 - Several improvements to the default theme.

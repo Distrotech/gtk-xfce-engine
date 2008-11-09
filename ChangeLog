@@ -1,5 +1,12 @@
+2008-11-09	olivier
+
+	* src/xfce_theme_draw.c: Fix bg color being shown under group box 
+	  title (Bug #1018),
+	  src/gradient_draw.c: Fix wrong UTF8 character in credit header
+	  themes/*/README.html: Remove README.html files (Bug #3280)
+
 2008-10-13 12:51  stephan
-	* ChangeLog, convigure.in: Update ChangeLog and version-number for 2.5.91
+	* ChangeLog, configure.in: Update ChangeLog and version-number for 2.5.91
 
 2007-05-09 19:55  olivier
 
