@@ -1,3 +1,8 @@
+2009-01-13	jannis
+
+	* == 2.5.93 released! ==
+	* configure.in: Bump version number.
+
 2008-11-09	olivier
 
 	* themes/*/Makefile.am: Forgot to remove the README.html from the
