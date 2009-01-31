@@ -1,22 +1,87 @@
-2009-01-13	jannis
+2009-01-23 22:37  olivier
+
+	* configure.in, themes/xfce/gtk-2.0/gtkrc: Use a light blue for
+	  window decoration with default theme to match the change in xfwm4
+	  default theme
+
+2009-01-13 12:19  jannis
 
 	* == 2.5.93 released! ==
 	* configure.in: Bump version number.
 
-2008-11-09	olivier
+2008-11-09 21:49  olivier
 
-	* themes/*/Makefile.am: Forgot to remove the README.html from the
+	* ChangeLog, themes/b5/Makefile.am, themes/basic/Makefile.am,
+	  themes/cadmium/Makefile.am, themes/curve/Makefile.am,
+	  themes/dawn/Makefile.am, themes/dusk/Makefile.am,
+	  themes/kde2/Makefile.am, themes/kolors/Makefile.am,
+	  themes/light/Makefile.am, themes/orange/Makefile.am,
+	  themes/redmondxp/Makefile.am, themes/saltlake/Makefile.am,
+	  themes/smooth/Makefile.am, themes/stellar/Makefile.am,
+	  themes/winter/Makefile.am, themes/xfce-4.0/Makefile.am,
+	  themes/xfce-4.2/Makefile.am, themes/xfce-4.4/Makefile.am,
+	  themes/xfce/Makefile.am: * themes/*/Makefile.am: Forgot to remove
+	  the README.html from the
 	  Makefile.am
 
-2008-11-09	olivier
+2008-11-09 21:42  olivier
 
-	* src/xfce_theme_draw.c: Fix bg color being shown under group box 
+	* ChangeLog, NEWS, configure.in, src/gradient_draw.c,
+	  src/xfce_theme_draw.c, themes/b5/README.html,
+	  themes/basic/README.html, themes/cadmium/README.html,
+	  themes/curve/README.html, themes/dawn/README.html,
+	  themes/dusk/README.html, themes/kde2/README.html,
+	  themes/kolors/README.html, themes/light/README.html,
+	  themes/orange/README.html, themes/redmondxp/README.html,
+	  themes/saltlake/README.html, themes/smooth/README.html,
+	  themes/stellar/README.html, themes/winter/README.html,
+	  themes/xfce-4.0/README.html, themes/xfce-4.2/README.html,
+	  themes/xfce-4.4/README.html, themes/xfce/README.html: *
+	  src/xfce_theme_draw.c: Fix bg color being shown under group box
 	  title (Bug #1018),
 	  src/gradient_draw.c: Fix wrong UTF8 character in credit header
 	  themes/*/README.html: Remove README.html files (Bug #3280)
+	  * ChangeLog, configure.in: Update ChangeLog and version-number
+	  for 2.5.91
 
-2008-10-13 12:51  stephan
-	* ChangeLog, configure.in: Update ChangeLog and version-number for 2.5.91
+2008-10-13 10:56  stephan
+
+	* ChangeLog, configure.in: Update Changelog
+	  Bump version number to 2.5.91
+
+2008-07-21 22:01  olivier
+
+	* themes/xfce/gtk-2.0/gtkrc: Lighter selection color
+
+2008-07-20 14:48  olivier
+
+	* ChangeLog, configure.in, themes/Makefile.am, themes/b5/ICON.png,
+	  themes/b5/Makefile.am, themes/basic/ICON.png,
+	  themes/basic/Makefile.am, themes/cadmium/ICON.png,
+	  themes/cadmium/Makefile.am, themes/curve/ICON.png,
+	  themes/curve/Makefile.am, themes/dawn/ICON.png,
+	  themes/dawn/Makefile.am, themes/dusk/ICON.png,
+	  themes/dusk/Makefile.am, themes/kde2/ICON.png,
+	  themes/kde2/Makefile.am, themes/kolors/ICON.png,
+	  themes/kolors/Makefile.am, themes/light/ICON.png,
+	  themes/light/Makefile.am, themes/orange/ICON.png,
+	  themes/orange/Makefile.am, themes/redmondxp/ICON.png,
+	  themes/redmondxp/Makefile.am, themes/saltlake/ICON.png,
+	  themes/saltlake/Makefile.am, themes/smooth/ICON.png,
+	  themes/smooth/Makefile.am, themes/stellar/ICON.png,
+	  themes/stellar/Makefile.am, themes/winter/ICON.png,
+	  themes/winter/Makefile.am, themes/xfce-4.0/ICON.png,
+	  themes/xfce-4.0/Makefile.am, themes/xfce-4.2/ICON.png,
+	  themes/xfce-4.2/Makefile.am, themes/xfce-4.4,
+	  themes/xfce-4.4/Makefile.am, themes/xfce-4.4/README.html,
+	  themes/xfce-4.4/gtk-2.0, themes/xfce-4.4/gtk-2.0/Makefile.am,
+	  themes/xfce-4.4/gtk-2.0/gtkrc, themes/xfce/ICON.png,
+	  themes/xfce/Makefile.am, themes/xfce/README.html,
+	  themes/xfce/gtk-2.0/gtkrc: Update theme for 4.5
+
+2007-07-15 14:42  olivier
+
+	* themes/dusk/gtk-2.0/gtkrc: Including the iconrc is nonsense
 
 2007-05-09 19:55  olivier
 

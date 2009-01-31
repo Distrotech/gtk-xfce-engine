@@ -2,34 +2,64 @@
 # Modified Dec. 2006
 # Modified Jan. 2007
 # Modified Jul. 2008 for xfce 4.6
+# Modified Feb. 2009 for xfce 4.6
 # Olivier Fourdan <fourdan@xfce.org>
 # Released under the GPL license
 
 style "default"
 {
     GtkWidget::focus-line-width                  = 1
-    GtkWidget::focus_padding                     = 4
-    GtkWidget::interior_focus                    = 5
-    GtkWidget::internal_padding                  = 4
-    GtkButton::default_border                    = {0, 0, 0, 0}
-    GtkButton::default_outside_border            = {0, 0, 0, 0}
+    GtkWidget::focus_padding                     = 0
+    GtkWidget::interior_focus                    = 0
+    GtkWidget::internal_padding                  = 0
+    GtkWidget::focus-line-pattern                = "\0"
+
     GtkButton::child_displacement_x              = 0
     GtkButton::child_displacement_y              = 1
-    GtkButton::default_spacing                   = 5
-    GtkButton::focus-padding                     = 1
+    GtkButton::default_border                    = {0, 0, 0, 0}
+    GtkButton::default_outside_border            = {0, 0, 0, 0}
+
+    GtkButtonBox::child_internal_pad_x           = 0
+    GtkButtonBox::child_internal_pad_y           = 0
+    GtkButtonBox::child_min_heigth               = 0
+    GtkButtonBox::child_min_width                = 0
+
     GtkCheckButton::indicator_size               = 12
+    GtkRadioButton::indicator_size               = 12
+
+    GtkExpander::expander-size                   = 11
+    GtkExpander::expander_spacing                = 0
+
+    GtkMenuBar::internal-padding                 = 0
+    GtkMenu::horizontal-padding                  = 0
+    GtkMenuItem::internal_padding                = 2
     GtkMenuItem::selected_shadow_type            = etched-in
-    GtkMenuItem::internal_padding                = 5
+    GtkMenu::vertical-padding                    = 0
+    GtkOptionMenu::indicator_size                = 0
+    GtkOptionMenu::indicator_spacing             = 0
+
     GtkPaned::handle_full_size                   = 1
-    GtkPaned::handle_size                        = 7
-    GtkRadioButton::indicator_size               = 15
+    GtkPaned::handle_size                        = 3
+
     GtkRange::slider_width                       = 15
     GtkRange::stepper_size                       = 15
     GtkRange::stepper_spacing                    = 0
+    GtkRange::stepper_spacing                    = 0
     GtkRange::trough_border                      = 0
+    GtkRange::trough-border                      = 0
+    GtkScale::trough-side-details                = 1
+    GtkScale::value_spacing                      = 0
+
     GtkScrollbar::has_backward_stepper           = 1
     GtkScrollbar::min_slider_length              = 20
-    ExoIconBar::focus_padding                    = 2 
+    GtkScrolledWindow::scrollbar_spacing         = 0
+    GtkToolbar::internal-padding                 = 0
+    GtkToolbar::space-size                       = 10
+    GtkTreeView::expander-size                   = 11
+    GtkTreeView::horizontal-separator            = 0
+    GtkTreeView::vertical-separator              = 0
+
+    ExoIconBar::focus_padding                    = 1
 
     xthickness = 2
     ythickness = 2
@@ -186,6 +216,9 @@ style "button" = "default"
 
 style "notebook" = "default"
 {
+    xthickness = 1
+    ythickness = 1
+
     bg[ACTIVE]        = "#e8e8e6"
     bg[NORMAL]        = "#ffffff"
     fg[NORMAL]        = "#101010"

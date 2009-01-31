@@ -1,5 +1,15 @@
+2.6.0 ?
+=======
+
+- Much compact version of the default theme.
+
+2.5.99.1
+========
+
+- Update WM colors to match the new xfwm4 decoration theme
+
 2.5.92
-=====
+======
 
 - Fix bg color being shown under group box title (Bug #1018)
 - Remove README.html files (Bug #3280)
