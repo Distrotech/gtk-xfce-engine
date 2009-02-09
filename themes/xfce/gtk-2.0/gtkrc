@@ -12,12 +12,12 @@ style "default"
     GtkWidget::focus_padding                     = 0
     GtkWidget::interior_focus                    = 0
     GtkWidget::internal_padding                  = 0
-    GtkWidget::focus-line-pattern                = "\0"
 
     GtkButton::child_displacement_x              = 0
     GtkButton::child_displacement_y              = 1
     GtkButton::default_border                    = {0, 0, 0, 0}
     GtkButton::default_outside_border            = {0, 0, 0, 0}
+    GtkButton::focus-line-pattern                = "\0"
 
     GtkButtonBox::child_internal_pad_x           = 0
     GtkButtonBox::child_internal_pad_y           = 0
@@ -25,16 +25,24 @@ style "default"
     GtkButtonBox::child_min_width                = 0
 
     GtkCheckButton::indicator_size               = 12
+    GtkCheckButton::focus-line-pattern           = "\1\1"
+
+    GtkEntry::focus-line-pattern                 = "\0"
+
     GtkRadioButton::indicator_size               = 12
+    GtkRadioButton::focus-line-pattern           = "\1\1"
 
     GtkExpander::expander-size                   = 11
     GtkExpander::expander_spacing                = 0
 
     GtkMenuBar::internal-padding                 = 0
+
     GtkMenu::horizontal-padding                  = 0
+    GtkMenu::vertical-padding                    = 0
+
     GtkMenuItem::internal_padding                = 2
     GtkMenuItem::selected_shadow_type            = etched-in
-    GtkMenu::vertical-padding                    = 0
+
     GtkOptionMenu::indicator_size                = 0
     GtkOptionMenu::indicator_spacing             = 0
 
@@ -47,15 +55,21 @@ style "default"
     GtkRange::stepper_spacing                    = 0
     GtkRange::trough_border                      = 0
     GtkRange::trough-border                      = 0
+
     GtkScale::trough-side-details                = 1
     GtkScale::value_spacing                      = 0
 
     GtkScrollbar::has_backward_stepper           = 1
     GtkScrollbar::min_slider_length              = 20
+
     GtkScrolledWindow::scrollbar_spacing         = 0
+
+    GtkTextView::focus-line-pattern              = "\0"
+
     GtkToolbar::internal-padding                 = 0
     GtkToolbar::space-size                       = 10
     GtkTreeView::expander-size                   = 11
+
     GtkTreeView::horizontal-separator            = 0
     GtkTreeView::vertical-separator              = 0
 
