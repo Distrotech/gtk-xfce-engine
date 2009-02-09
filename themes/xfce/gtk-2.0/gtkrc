@@ -172,7 +172,7 @@ style "menuitem" = "menu"
 style "menubar" = "menu"
 {
     xthickness = 1
-    ythickness = 3
+    ythickness = 2
 
     bg[INSENSITIVE]   = "#eeeeec"
     bg[NORMAL]        = "#eeeeec"
