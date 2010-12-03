@@ -43,8 +43,8 @@ style "default"
     GtkMenuItem::internal_padding                = 2
     GtkMenuItem::selected_shadow_type            = etched-in
 
-    GtkOptionMenu::indicator_size                = 0
-    GtkOptionMenu::indicator_spacing             = 0
+    GtkOptionMenu::indicator_size                = {0, 0}
+    GtkOptionMenu::indicator_spacing             = {0, 0, 0, 0}
 
     GtkPaned::handle_full_size                   = 1
     GtkPaned::handle_size                        = 3
