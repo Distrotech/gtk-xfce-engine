@@ -46,6 +46,13 @@
 #include "xfce_rc_style.h"
 #include "xfce_style.h"
 
+G_MODULE_EXPORT void theme_init(GTypeModule * module);
+G_MODULE_EXPORT void theme_exit(void);
+G_MODULE_EXPORT GtkRcStyle *theme_create_rc_style(void);
+G_MODULE_EXPORT const gchar * g_module_check_init (GModule * module);
+
+
+
 G_MODULE_EXPORT void theme_init(GTypeModule * module)
 {
     xfce_rc_style_register_type(module);

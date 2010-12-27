@@ -147,7 +147,7 @@ static void xfce_fill_background(GtkStyle * style, GdkWindow * window, GtkStateT
 static void xfce_draw_grips(GtkStyle * style, GdkWindow * window, GtkStateType state_type, GdkRectangle * area, GtkWidget * widget, gint x, gint y, gint width, gint height, GtkOrientation orientation);
 
 static void draw_hline(GtkStyle * style, GdkWindow * window, GtkStateType state_type, GdkRectangle * area, GtkWidget * widget, const gchar * detail, gint x1, gint x2, gint y);
-static void draw_vline(GtkStyle * style, GdkWindow * window, GtkStateType state_type, GdkRectangle * area, GtkWidget * widget, const gchar * detail, gint y1, gint y2, gint x);
+static void draw_vline(GtkStyle * style, GdkWindow * window, GtkStateType state_type, GdkRectangle * area, GtkWidget * widget, const gchar * detail, gint y_1, gint y_2, gint x);
 static void draw_shadow(GtkStyle * style, GdkWindow * window, GtkStateType state_type, GtkShadowType shadow_type, GdkRectangle * area, GtkWidget * widget, const gchar * detail, gint x, gint y, gint width, gint height);
 
 static void draw_box(GtkStyle * style, GdkWindow * window, GtkStateType state_type, GtkShadowType shadow_type, GdkRectangle * area, GtkWidget * widget, const gchar * detail, gint x, gint y, gint width, gint height);
@@ -462,7 +462,7 @@ static void draw_hline(GtkStyle * style, GdkWindow * window, GtkStateType state_
     }
 }
 
-static void draw_vline(GtkStyle * style, GdkWindow * window, GtkStateType state_type, GdkRectangle * area, GtkWidget * widget, const gchar * detail, gint y1, gint y2, gint x)
+static void draw_vline(GtkStyle * style, GdkWindow * window, GtkStateType state_type, GdkRectangle * area, GtkWidget * widget, const gchar * detail, gint y_1, gint y_2, gint x)
 {
     gint thickness_light;
     gint thickness_dark;
@@ -481,15 +481,15 @@ static void draw_vline(GtkStyle * style, GdkWindow * window, GtkStateType state_
     }
     for(i = 0; i < thickness_dark; i++)
     {
-        gdk_draw_line(window, style->dark_gc[state_type], x + i, y2 - i - 1, x + i, y2);
-        gdk_draw_line(window, style->dark_gc[state_type], x + i, y1, x + i, y2 - i - 1);
+        gdk_draw_line(window, style->dark_gc[state_type], x + i, y_2 - i - 1, x + i, y_2);
+        gdk_draw_line(window, style->dark_gc[state_type], x + i, y_1, x + i, y_2 - i - 1);
     }
 
     x += thickness_dark;
     for(i = 0; i < thickness_light; i++)
     {
-        gdk_draw_line(window, style->light_gc[state_type], x + i, y1, x + i, y1 + thickness_light - i);
-        gdk_draw_line(window, style->light_gc[state_type], x + i, y1 + thickness_light - i, x + i, y2);
+        gdk_draw_line(window, style->light_gc[state_type], x + i, y_1, x + i, y_1 + thickness_light - i);
+        gdk_draw_line(window, style->light_gc[state_type], x + i, y_1 + thickness_light - i, x + i, y_2);
     }
     if (area)
     {
@@ -1045,7 +1045,7 @@ static void draw_shadow_gap(GtkStyle * style, GdkWindow * window, GtkStateType s
             rect.width = 2;
             rect.height = gap_width;
             break;
-        case GTK_POS_RIGHT:
+        default: /* GTK_POS_RIGHT */
             rect.x = x + width - 2;
             rect.y = y + gap_x;
             rect.width = 2;

@@ -2,7 +2,7 @@
 #
 # $Id$
 #
-# Copyright (c) 2002-2005
+# Copyright (c) 2002-2010
 #         The Xfce development team. All rights reserved.
 #
 # Written for Xfce by Benedikt Meurer <benny@xfce.org>.
@@ -18,6 +18,6 @@ EOF
   exit 1
 }
 
-exec xdt-autogen $@
+XDT_AUTOGEN_REQUIRED_VERSION="4.7.3" exec xdt-autogen $@
 
 # vi:set ts=2 sw=2 et ai:
