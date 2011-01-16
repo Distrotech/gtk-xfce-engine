@@ -1,16 +1,16 @@
 dnl
-dnl Copyright (c) 2004 - 2010 The Xfce development team
+dnl Copyright (c) 2004-2011 The Xfce development team
 dnl
 
 dnl ***************************
 dnl *** Version information ***
 dnl ***************************
 m4_define([gtk_xfce_engine_version_major], [2])
-m4_define([gtk_xfce_engine_version_minor], [7])
+m4_define([gtk_xfce_engine_version_minor], [8])
 m4_define([gtk_xfce_engine_version_micro], [0])
 m4_define([gtk_xfce_engine_version_nano],  []) dnl leave this empty to have no nano version
 m4_define([gtk_xfce_engine_version_build], [@REVISION@])
-m4_define([gtk_xfce_engine_version_tag],   [git])
+m4_define([gtk_xfce_engine_version_tag],   [])
 m4_define([gtk_xfce_engine_version], [gtk_xfce_engine_version_major().gtk_xfce_engine_version_minor().gtk_xfce_engine_version_micro()ifelse(gtk_xfce_engine_version_nano(), [], [], [.gtk_xfce_engine_version_nano()])ifelse(gtk_xfce_engine_version_tag(), [git], [gtk_xfce_engine_version_tag()-gtk_xfce_engine_version_build()], [gtk_xfce_engine_version_tag()])])
 
 dnl *******************************************
@@ -21,8 +21,7 @@ m4_define([gtk_xfce_engine_debug_default], [ifelse(gtk_xfce_engine_version_tag()
 dnl ***************************
 dnl *** Initialize autoconf ***
 dnl ***************************
-AC_COPYRIGHT([Copyright (c) 2002 - 2010
-        The Xfce development team. All rights reserved.])
+AC_COPYRIGHT([Copyright (c) 2002-2011 The Xfce development team. All rights reserved.])
 AC_INIT([gtk-xfce-engine], [gtk_xfce_engine_version], [http://bugzilla.xfce.org/])
 AC_PREREQ([2.50])
 AC_REVISION([gtk_xfce_engine_version_build])

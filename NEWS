@@ -1,3 +1,7 @@
+2.8.0
+=====
+- Re-add Xfce 4.6's gtkrc theme as Xfce-4.6 (bug #7061).
+
 2.7.0
 =====
 - Cleanup build files.
