@@ -65,6 +65,7 @@ typedef enum
     CHECK_BASE,
     CHECK_TEXT,
     CHECK_CROSS,
+    CHECK_DASH,
     RADIO_LIGHT,
     RADIO_DARK,
     RADIO_BASE,
@@ -97,6 +98,11 @@ static const guchar check_text_bits[] = {
 static const guchar check_cross_bits[] = {
     0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x03, 0x80, 0x03, 0xd8, 0x01,
     0xf8, 0x00, 0x78, 0x00, 0x38, 0x00, 0x18, 0x00, 0x00, 0x00, 0x00, 0x00,
+    0x00, 0x00,
+};
+static const guchar check_dash_bits[] = {
+    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xf8, 0x03,
+    0xf8, 0x03, 0xf8, 0x03, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
     0x00, 0x00,
 };
 static const guchar radio_light_bits[] = {
@@ -136,6 +142,7 @@ parts[] =
     { check_base_bits,  NULL },
     { check_text_bits,  NULL },
     { check_cross_bits, NULL },
+    { check_dash_bits,  NULL },
     { radio_light_bits, NULL },
     { radio_dark_bits,  NULL },
     { radio_base_bits,  NULL },
@@ -981,6 +988,10 @@ static void draw_check(GtkStyle * style, GdkWindow * window, GtkStateType state,
         {
             draw_part(window, style->fg_gc[state], area, x, y, CHECK_CROSS);
         }
+        else if (shadow == GTK_SHADOW_ETCHED_IN)
+        {
+            draw_part(window, style->fg_gc[state], area, x, y, CHECK_DASH);
+        }
     }
     else
     {
@@ -991,6 +1002,10 @@ static void draw_check(GtkStyle * style, GdkWindow * window, GtkStateType state,
         if (shadow == GTK_SHADOW_IN)
         {
             draw_part(window, style->text_gc[state], area, x, y, CHECK_CROSS);
+        }
+        else if (shadow == GTK_SHADOW_ETCHED_IN)
+        {
+            draw_part(window, style->fg_gc[state], area, x, y, CHECK_DASH);
         }
     }
 }
