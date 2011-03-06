@@ -4,7 +4,7 @@ Version: 	@VERSION@
 Release: 	1
 License:	GPL
 URL: 		http://www.xfce.org/
-Source0: 	%{name}-%{version}.tar.gz
+Source0: 	%{name}-%{version}.tar.bz2
 Group: 		User Interface/Desktops
 BuildRoot: 	%{_tmppath}/%{name}-root
 Requires:	gtk2 >= @GTK_REQUIRED_VERSION@

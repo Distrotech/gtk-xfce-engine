@@ -15,6 +15,7 @@
  *  Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
  *
  *  Copyright (C) 1999-2004 Olivier Fourdan (fourdan@xfce.org)
+ *  Copyright (C) 2011 Peter de Ridder (peter@xfce.org)
  *
  *  Portions based Thinice port by
  *                       Tim Gerla <timg@rrv.net>,

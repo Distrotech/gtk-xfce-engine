@@ -1,3 +1,8 @@
+2.8.1
+=====
+- Fix rendering of GtkSpinButton (bug #4946)
+- Fix rendering of inconsistent checkboxes (bug #7279)
+
 2.8.0
 =====
 - Re-add Xfce 4.6's gtkrc theme as Xfce-4.6 (bug #7061).
