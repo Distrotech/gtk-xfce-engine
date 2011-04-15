@@ -15,6 +15,7 @@
  *  Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
  *
  *  Copyright (C) 1999-2004 Olivier Fourdan (fourdan@xfce.org)
+ *  Copyright (C) 2011 Peter de Ridder <peter@xfce.org>
  *
  *  Portions based Thinice port by
  *                       Tim Gerla <timg@rrv.net>,
@@ -214,7 +215,7 @@ static void gradient_hls_to_rgb(gdouble * h, gdouble * l, gdouble * s)
     }
 }
 
-void gradient_shade(GdkColor * a, GdkColor * b, gdouble k)
+static void gradient_add_stop_color_shaded(cairo_pattern_t *gradient, gdouble offset, const GdkColor * a, gdouble k)
 {
     gdouble red = (gdouble) a->red / 65535.0;
     gdouble green = (gdouble) a->green / 65535.0;
@@ -230,114 +231,51 @@ void gradient_shade(GdkColor * a, GdkColor * b, gdouble k)
 
     gradient_hls_to_rgb(&red, &green, &blue);
 
-    b->red = red * 65535.0;
-    b->green = green * 65535.0;
-    b->blue = blue * 65535.0;
+    cairo_pattern_add_color_stop_rgb(gradient, offset, red, green, blue);
 }
 
-void gradient_alloc_color(GdkColor * color, GdkColormap * colormap, GdkColor light, GdkColor dark, gint position, gint steps)
+void gradient_draw_shaded(cairo_t *cr, gint x, gint y, gint width, gint height, const GdkColor * color, gfloat shine_value, gfloat gradient_shade_value, GradientType gradient_style)
 {
-    gfloat delta;
-    /* delta = i/steps */
-    delta = ((float)position / (float)steps);
-    color->red = light.red + (float)((dark.red - light.red)) * delta;
-    color->green = light.green + (float)((dark.green - light.green)) * delta;
-    color->blue = light.blue + (float)((dark.blue - light.blue)) * delta;
-    gdk_colormap_alloc_color(colormap, color, FALSE, TRUE);
-}
-
-void gradient_draw(GdkWindow * window, GdkGC * gc, GdkColormap * colormap, GdkRectangle * area, gint x, gint y, gint width, gint height, GdkColor light, GdkColor dark, GradientType gradient_style, gboolean noclip)
-{
-    GdkRectangle clip;
-    GdkColor color;
-    gint i, steps = 0;
+    cairo_pattern_t *gradient;
     gboolean horizontal = (gradient_style == GRADIENT_HORIZONTAL);
     gboolean northern = (gradient_style == GRADIENT_NORTHERN_DIAGONAL);
     gboolean diagonal = ((gradient_style == GRADIENT_NORTHERN_DIAGONAL) || (gradient_style == GRADIENT_SOUTHERN_DIAGONAL));
 
-    clip.x = x;
-    clip.y = y;
-    clip.width = width;
-    clip.height = height;
-
-    g_return_if_fail(window != NULL);
-    g_return_if_fail(colormap != NULL);
-    g_return_if_fail(gc != NULL);
-
     if(diagonal)
     {
-        steps = width + height - 1;
+        gdouble size = (width + height) / 2.0;
+        gdouble xx = (width - height)/4.0 + x;
+        gdouble yy = (height - width)/4.0 + y;
+
+        if(northern)
+        {
+            gradient = cairo_pattern_create_linear(xx, yy, xx + size, yy + size);
+        }
+        else
+        {
+            gradient = cairo_pattern_create_linear(xx + size, yy, xx, yy + size);
+        }
     }
     else if(horizontal)
     {
-        steps = width;
+        gradient = cairo_pattern_create_linear(x, y, x + width, y);
     }
     else
     {
-        steps = height;
+        gradient = cairo_pattern_create_linear(x, y, x, y + height);
     }
 
-    if(!noclip)
-    {
-        if(area)
-        {
-            GdkRectangle clip2;
-            if(gdk_rectangle_intersect(area, &clip, &clip2))
-            {
-                gdk_gc_set_clip_rectangle(gc, &clip2);
-            }
-            else
-            {
-                gdk_gc_set_clip_rectangle(gc, area);
-            }
-        }
-        else
-        {
-            gdk_gc_set_clip_rectangle(gc, &clip);
-        }
-    }
+    gradient_add_stop_color_shaded(gradient, 0, color, shine_value);
+    gradient_add_stop_color_shaded(gradient, 1, color, gradient_shade_value);
 
-    for(i = 0; i < steps; i++)
-    {
-        gradient_alloc_color(&color, colormap, light, dark, i, steps);
-        gdk_gc_set_foreground(gc, &color);
-        if(diagonal)
-        {
-            if(northern)
-            {
-                gdk_draw_line(window, gc, x + i, y, x, y + i);
-            }
-            else
-            {
-                gdk_draw_line(window, gc, x + width - 1 - i, y, x + width - 1, y + i);
-            }
-        }
-        else
-        {
-            if(horizontal)
-            {
-                gdk_draw_line(window, gc, x + i, y, x + i, y + height);
-            }
-            else
-            {
-                gdk_draw_line(window, gc, x, y + i, x + width, y + i);
-            }
-        }
-        gdk_colormap_free_colors(colormap, &color, 1);
-    }
+    cairo_save(cr);
 
-    if(!noclip)
-    {
-        gdk_gc_set_clip_rectangle(gc, NULL);
-    }
-}
+    cairo_set_source(cr, gradient);
+    cairo_set_operator(cr, CAIRO_OPERATOR_SOURCE);
 
-void gradient_draw_shaded(GdkWindow * window, GdkGC * gc, GdkColormap * colormap, GdkRectangle * area, gint x, gint y, gint width, gint height, GdkColor color, gfloat shine_value, gfloat gradient_shade_value, GradientType gradient_style, gboolean noclip)
-{
-    GdkColor light, dark;
+    cairo_rectangle(cr, x, y, width, height);
 
-    gradient_shade(&color, &dark, gradient_shade_value);
-    gradient_shade(&color, &light, shine_value);
+    cairo_fill (cr);
 
-    gradient_draw(window, gc, colormap, area, x, y, width, height, light, dark, gradient_style, noclip);
+    cairo_restore(cr);
 }

@@ -15,6 +15,7 @@
  *  Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
  *
  *  Copyright (C) 1999-2004 Olivier Fourdan (fourdan@xfce.org)
+ *  Copyright (C) 2011 Peter de Ridder <peter@xfce.org>
  *
  *  Portions based Thinice port by 
  *                       Tim Gerla <timg@rrv.net>,
@@ -51,12 +52,6 @@ typedef enum
 #define GRADIENT(horizontal) (horizontal ? GRADIENT_HORIZONTAL : GRADIENT_VERTICAL)
 #define DIAGONALGRADIENT(northern) (northern ? GRADIENT_NORTHERN_DIAGONAL : GRADIENT_SOUTHERN_DIAGONAL)
 
-void gradient_alloc_color(GdkColor * color, GdkColormap * colormap, GdkColor light, GdkColor dark, gint position, gint steps);
-
-void gradient_shade(GdkColor * a, GdkColor * b, gdouble k);
-
-void gradient_draw(GdkWindow * window, GdkGC * gc, GdkColormap * colormap, GdkRectangle * area, gint x, gint y, gint width, gint height, GdkColor light, GdkColor dark, GradientType gradient_style, gboolean noclip);
-
-void gradient_draw_shaded(GdkWindow * window, GdkGC * gc, GdkColormap * colormap, GdkRectangle * area, gint x, gint y, gint width, gint height, GdkColor color, gfloat shine_value, gfloat shade_value, GradientType gradient_style, gboolean noclip);
+void gradient_draw_shaded(cairo_t * cr, gint x, gint y, gint width, gint height, const GdkColor * color, gfloat shine_value, gfloat shade_value, GradientType gradient_style);
 
 #endif /* INC_GRADIENT_DRAW_H */

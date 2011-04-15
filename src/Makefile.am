@@ -9,6 +9,10 @@ enginedir = $(libdir)/gtk-2.0/$(GTK_BINARY_VERSION)/engines
 engine_LTLIBRARIES = libxfce.la
 
 libxfce_la_SOURCES = \
+	cairo-support.c	 \
+	cairo-support.h \
+	ge-support.h \
+	general-support.h \
 	gradient_draw.c	 \
 	gradient_draw.h \
 	xfce_theme_draw.c \
