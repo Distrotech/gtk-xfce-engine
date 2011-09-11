@@ -1,3 +1,7 @@
+2.9.0
+=====
+- Changed drawing routines to use cairo
+
 2.8.1
 =====
 - Fix rendering of GtkSpinButton (bug #4946)
