@@ -50,12 +50,29 @@ AC_HEADER_STDC()
 dnl ***********************************
 dnl *** Check for required packages ***
 dnl ***********************************
-XDT_CHECK_PACKAGE([GTK], [gtk+-2.0], [2.20.0])
-XDT_CHECK_PACKAGE([GLIB], [glib-2.0], [2.24.0])
+AM_PATH_GLIB_2_0([2.24.0])
 XDT_CHECK_PACKAGE([GMODULE], [gmodule-2.0], [2.24.0])
 
-GTK_BINARY_VERSION=`$PKG_CONFIG --variable=gtk_binary_version gtk+-2.0`
-AC_SUBST([GTK_BINARY_VERSION])
+dnl ***********************************
+dnl *** Check for optional packages ***
+dnl ***********************************
+XDT_CHECK_OPTIONAL_PACKAGE([GTK2], [gtk+-2.0], [2.20.0], [gtk2], [Gtk 2 theme engine])
+XDT_CHECK_OPTIONAL_PACKAGE([GTK3], [gtk+-3.0], [3.0.0], [gtk3], [Gtk 3 theme engine])
+
+GTK_SUBDIRS=""
+if test x"$GTK2_FOUND" = x"yes"
+then
+  GTK2_BINARY_VERSION=`$PKG_CONFIG --variable=gtk_binary_version gtk+-2.0`
+  AC_SUBST([GTK2_BINARY_VERSION])
+  GTK_SUBDIRS="$GTK_SUBDIRS gtk-2.0"
+fi
+if test x"$GTK3_FOUND" = x"yes"
+then
+  GTK3_BINARY_VERSION=`$PKG_CONFIG --variable=gtk_binary_version gtk+-3.0`
+  AC_SUBST([GTK3_BINARY_VERSION])
+  GTK_SUBDIRS="$GTK_SUBDIRS gtk-3.0"
+fi
+AC_SUBST([GTK_SUBDIRS])
 
 dnl ***********************************
 dnl *** Check for debugging support ***
@@ -78,9 +95,11 @@ AC_SUBST([PLATFORM_LDFLAGS])
 AC_OUTPUT([
 gtk-xfce-engine-2.spec
 Makefile
-src/Makefile
+gtk-2.0/Makefile
+gtk-3.0/Makefile
 themes/b5/Makefile
 themes/b5/gtk-2.0/Makefile
+themes/b5/gtk-3.0/Makefile
 themes/xfce/gtk-2.0/Makefile
 themes/xfce/Makefile
 themes/xfce-4.0/gtk-2.0/Makefile
@@ -128,5 +147,9 @@ dnl ***************************
 echo
 echo "Build Configuration:"
 echo
+echo "* Gtk 2 Engine: $GTK2_FOUND"
+echo "* Gtk 3 Engine: $GTK3_FOUND"
+echo
+echo "* Install Prefix: $prefix"
 echo "* Debug Support: $enable_debug"
 echo
