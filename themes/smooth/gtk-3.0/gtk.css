@@ -1,0 +1,183 @@
+
+@define-color fg_active #000000;
+@define-color fg_insensitive #969696;
+@define-color fg_normal #000000;
+@define-color fg_prelight #000000;
+@define-color fg_selected #000000;
+
+@define-color bg_active #c2c2be;
+@define-color bg_insensitive #c2c2be;
+@define-color bg_normal #c2c2be;
+@define-color bg_prelight #f2f2ee;
+@define-color bg_selected #a5abba;
+
+@define-color base_active #a5abba;
+@define-color base_insensitive #ffffff;
+@define-color base_normal #ffffff;
+@define-color base_prelight #eaeaea;
+@define-color base_selected #a5abba;
+
+@define-color text_active #000000;
+@define-color text_insensitive #000000;
+@define-color text_normal #000000;
+@define-color text_prelight #000000;
+@define-color text_selected #000000;
+
+* {
+    engine: xfce;
+
+    -xfce-smooth-edge: true;
+
+    -GtkButton-default-border        : 0;
+    -GtkButton-default-outside-border: 0;
+    -GtkButton-default-spacing       : 5;
+    -GtkWidget-focus-line-width      : 1;
+    -GtkWidget-focus-padding         : 0;
+    -GtkCheckButton-indicator-size   : 14;
+    -GtkMenuItem-selected-shadow-type: out;
+    /*GtkPaned::handle_full_size     : 1*/
+    -GtkRange-slider-width           : 15;
+    -GtkRange-stepper-size           : 15;
+    -GtkRange-stepper-spacing        : 0;
+    -GtkRange-trough-border          : 0;
+    -GtkScrollbar-min-slider-length  : 20;
+    -GtkWidget-interior-focus        : 1;
+
+    color: @fg_normal;
+    background-color: @bg_normal;
+    border-color: shade(@bg_normal, 0.7);
+}
+
+*:active {
+    color: @fg_active;
+    background-color: @bg_active;
+    border-color: shade(@bg_active, 0.7);
+}
+
+*:insensitive {
+    color: @fg_insensitive;
+    background-color: @bg_insensitive;
+    border-color: shade(@bg_insensitive, 0.7);
+}
+
+*:hover {
+    color: @fg_prelight;
+    background-color: @bg_prelight;
+    border-color: shade(@bg_prelight, 0.7);
+}
+
+*:selected {
+    color: @fg_selected;
+    background-color: @bg_selected;
+    border-color: shade(@bg_selected, 0.7);
+}
+
+.view, .entry {
+    color: @text_normal;
+    background-color: @base_normal;
+    border-color: shade(@bg_normal, 0.7);
+}
+
+.view:active, .entry:active {
+    color: @text_active;
+    background-color: @base_active;
+    border-color: shade(@bg_normal, 0.7);
+}
+
+.view:insensitive, .entry:insensitive {
+    color: @text_insensitive;
+    background-color: @base_insensitive;
+    border-color: shade(@bg_normal, 0.7);
+}
+
+.view:hover, .entry:hover {
+    color: @text_prelight;
+    background-color: @base_prelight;
+    border-color: shade(@bg_normal, 0.7);
+}
+
+.view:selected, .entry:selected {
+    color: @text_selected;
+    background-color: @base_selected;
+    border-color: shade(@bg_normal, 0.7);
+}
+
+.check, .radio {
+    color: @text_normal;
+    background-color: @base_normal;
+    border-color: @fg_normal;
+}
+
+.check:active, .radio:active {
+    color: @text_normal;
+    background-color: @base_normal;
+    border-color: @fg_normal;
+}
+
+.check:insensitive, .radio:insensitive {
+    color: @text_insensitive;
+    background-color: @base_insensitive;
+    border-color: @fg_insensitive;
+}
+
+.check:hover, .radio:hover {
+    color: @text_prelight;
+    background-color: @base_prelight;
+    border-color: @fg_prelight;
+}
+
+.check:selected, .radio:selected {
+    color: @text_active;
+    background-color: @base_active;
+    border-color: @fg_active;
+}
+
+.cell {
+    color: @text_normal;
+}
+
+.cell:active {
+    color: @text_active;
+}
+
+.cell:insensitive {
+    color: @text_insensitive;
+}
+
+.cell:hover {
+    color: @text_prelight;
+}
+
+.cell:selected {
+    color: @text_selected;
+}
+
+/*
+.spinbutton {
+    color: @fg_normal;
+    background-color: @bg_normal;
+}
+*/
+
+.progressbar {
+    background-color: @bg_prelight;
+
+    border-width: 1 1;
+}
+
+.trough {
+    background-color: @bg_active;
+}
+
+.notebook {
+    color: @fg_active;
+    background-color: @bg_active;
+    border-color: shade(@bg_active, 0.7);
+}
+
+.notebook:active {
+    color: @fg_normal;
+    background-color: @bg_normal;
+    border-color: shade(@bg_normal, 0.7);
+}
+

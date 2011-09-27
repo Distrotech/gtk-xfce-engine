@@ -5,8 +5,8 @@ dnl
 dnl ***************************
 dnl *** Version information ***
 dnl ***************************
-m4_define([gtk_xfce_engine_version_major], [2])
-m4_define([gtk_xfce_engine_version_minor], [9])
+m4_define([gtk_xfce_engine_version_major], [3])
+m4_define([gtk_xfce_engine_version_minor], [0])
 m4_define([gtk_xfce_engine_version_micro], [0])
 m4_define([gtk_xfce_engine_version_nano],  []) dnl leave this empty to have no nano version
 m4_define([gtk_xfce_engine_version_build], [@REVISION@])
@@ -126,15 +126,19 @@ themes/kde2/gtk-2.0/Makefile
 themes/kde2/Makefile
 themes/light/Makefile
 themes/light/gtk-2.0/Makefile
+themes/light/gtk-3.0/Makefile
 themes/orange/gtk-2.0/Makefile
 themes/orange/Makefile
 themes/redmondxp/gtk-2.0/Makefile
 themes/redmondxp/Makefile
 themes/saltlake/gtk-2.0/Makefile
+themes/saltlake/gtk-3.0/Makefile
 themes/saltlake/Makefile
 themes/smooth/gtk-2.0/Makefile
+themes/smooth/gtk-3.0/Makefile
 themes/smooth/Makefile
 themes/stellar/gtk-2.0/Makefile
+themes/stellar/gtk-3.0/Makefile
 themes/stellar/Makefile
 themes/winter/gtk-2.0/Makefile
 themes/winter/Makefile
