@@ -113,8 +113,10 @@ themes/xfce-4.6/gtk-2.0/Makefile
 themes/basic/gtk-2.0/Makefile
 themes/basic/Makefile
 themes/cadmium/gtk-2.0/Makefile
+themes/cadmium/gtk-3.0/Makefile
 themes/cadmium/Makefile
 themes/curve/gtk-2.0/Makefile
+themes/curve/gtk-3.0/Makefile
 themes/curve/Makefile
 themes/dawn/gtk-2.0/Makefile
 themes/dawn/Makefile
