@@ -111,6 +111,7 @@ themes/xfce-4.4/gtk-2.0/Makefile
 themes/xfce-4.6/Makefile
 themes/xfce-4.6/gtk-2.0/Makefile
 themes/basic/gtk-2.0/Makefile
+themes/basic/gtk-3.0/Makefile
 themes/basic/Makefile
 themes/cadmium/gtk-2.0/Makefile
 themes/cadmium/gtk-3.0/Makefile
