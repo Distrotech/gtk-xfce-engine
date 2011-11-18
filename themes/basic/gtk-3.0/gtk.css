@@ -26,7 +26,7 @@
 }                                                         
                                                           
 .button:active {                                          
-    background-image: -gtk-gradient(linear, left top, left bottom, from(shade(#9E9A91, 1.1)), to(shade(#9E9A91, 1.0)));
+    background-image: -gtk-gradient(linear, left top, left bottom, from(shade(#9E9A91, 1.0)), to(shade(#9E9A91, 1.1)));
 }                                                         
                                                           
 .button:insensitive {                                     
@@ -38,7 +38,7 @@
 }
 
 .button:selected {
-    background-image: -gtk-gradient(linear, left top, left bottom, from(shade(#4B6983, 1.1)), to(shade(#4B6983, 1.0)));
+    background-image: -gtk-gradient(linear, left top, left bottom, from(shade(#4B6983, 1.0)), to(shade(#4B6983, 1.1)));
 }
 
 .scrollbar, .scale {

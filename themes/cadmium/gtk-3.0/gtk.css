@@ -323,7 +323,7 @@ GtkCalendar:selected {
 }
 
 .slider.vertical:active, .progressbar.vertical:active {
-    background-image: -gtk-gradient(linear, left top, right top, from(shade(@bg_active, 2.0)), to(shade(@bg_active, 1.0)));
+    background-image: -gtk-gradient(linear, left top, right top, from(shade(@bg_active, 1.0)), to(shade(@bg_active, 2.0)));
 }
 
 .slider.vertical:insensitive, .progressbar.vertical:insensitive {
@@ -335,5 +335,5 @@ GtkCalendar:selected {
 }
 
 .slider.vertical:selected, .progressbar.vertical:selected {
-    background-image: -gtk-gradient(linear, left top, right top, from(shade(@bg_selected, 2.0)), to(shade(@bg_selected, 1.0)));
+    background-image: -gtk-gradient(linear, left top, right top, from(shade(@bg_selected, 1.0)), to(shade(@bg_selected, 2.0)));
 }
