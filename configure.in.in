@@ -135,8 +135,10 @@ themes/light/Makefile
 themes/light/gtk-2.0/Makefile
 themes/light/gtk-3.0/Makefile
 themes/orange/gtk-2.0/Makefile
+themes/orange/gtk-3.0/Makefile
 themes/orange/Makefile
 themes/redmondxp/gtk-2.0/Makefile
+themes/redmondxp/gtk-3.0/Makefile
 themes/redmondxp/Makefile
 themes/saltlake/gtk-2.0/Makefile
 themes/saltlake/gtk-3.0/Makefile
