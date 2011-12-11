@@ -361,6 +361,7 @@ GtkCalendar:selected {
 
 .button:selected {
     background-image: -gtk-gradient(linear, left top, left bottom, from(shade(@bg_selected, 0.9)), to(shade(@bg_selected, 1.1)));
+    border-color: darker(@bg_selected);
 }
 
 .button.horizontal, .scrollbar.slider.horizontal {
