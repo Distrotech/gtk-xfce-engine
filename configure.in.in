@@ -37,10 +37,14 @@ m4_ifdef([AM_SILENT_RULES], [AM_SILENT_RULES([yes])])
 dnl ********************************
 dnl *** Check for basic programs ***
 dnl ********************************
-AC_PROG_LIBTOOL()
-AC_DISABLE_STATIC()
 AC_PROG_CC()
 AC_PROG_INSTALL()
+
+dnl *************************
+dnl *** Check for libtool ***
+dnl *************************
+LT_PREREQ([2.2.6])
+LT_INIT([disable-static])
 
 dnl **********************************
 dnl *** Check for standard headers ***
