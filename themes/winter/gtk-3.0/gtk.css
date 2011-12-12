@@ -173,31 +173,43 @@ GtkCalendar:selected {
 .check, .radio {
     color: @text_normal;
     background-color: @base_normal;
-    border-color: @fg_normal;
+    border-color: darker(@bg_normal);
 }
 
 .check:active, .radio:active {
     color: @text_normal;
     background-color: @base_normal;
-    border-color: @fg_normal;
+    border-color: darker(@bg_normal);
 }
 
 .check:insensitive, .radio:insensitive {
     color: @text_insensitive;
     background-color: @base_insensitive;
-    border-color: @fg_insensitive;
+    border-color: darker(@bg_insensitive);
 }
 
 .check:hover, .radio:hover {
     color: @text_prelight;
     background-color: @base_prelight;
-    border-color: @fg_prelight;
+    border-color: darker(@bg_prelight);
 }
 
 .check:selected, .radio:selected {
     color: @text_active;
     background-color: @base_active;
-    border-color: @fg_active;
+    border-color: darker(@bg_active);
+}
+
+.check:inconsistent, .radio:inconsistent {
+    color: @fg_normal;
+    background-color: @base_normal;
+    border-color: darker(@bg_normal);
+}
+
+.check:insensitive:inconsistent, .radio:insensitive:inconsistent {
+    color: @fg_insensitive;
+    background-color: @base_insensitive;
+    border-color: darker(@bg_insensitive);
 }
 
 .cell {
@@ -276,13 +288,13 @@ GtkCalendar:selected {
     background-image: -gtk-gradient(linear, left top, right top, from(shade(@bg_active, 0.8)), to(shade(@bg_active, 1.8)));
 }
 
-.notebook tab {
+.notebook tab, .notebook tab * {
     color: @fg_active;
     background-color: @bg_active;
     border-color: darker(@bg_active);
 }
 
-.notebook tab:active {
+.notebook tab:active, .notebook tab *:active {
     color: @fg_normal;
     background-color: @bg_normal;
     border-color: darker(@bg_normal);
@@ -336,24 +348,32 @@ GtkCalendar:selected {
     background-image: -gtk-gradient(linear, left top, left bottom, from(shade(@bg_selected, 0.8)), to(shade(@bg_selected, 1.8)));
 }
 
+.dock {
+    color: @base_selected;
+}
+
 .slider {
+    color: @base_selected;
     background-image: -gtk-gradient(linear, left top, left bottom, from(shade(@bg_normal, 0.8)), to(shade(@bg_normal, 1.8)));
 }
 
 .slider:active {
+    color: @base_selected;
     background-image: -gtk-gradient(linear, left top, left bottom, from(shade(@bg_active, 1.8)), to(shade(@bg_active, 0.8)));
 }
 
 .slider:insensitive {
+    color: @base_selected;
     background-image: -gtk-gradient(linear, left top, left bottom, from(shade(@bg_insensitive, 0.8)), to(shade(@bg_insensitive, 1.8)));
 }
 
 .slider:hover {
+    color: @base_selected;
     background-image: -gtk-gradient(linear, left top, left bottom, from(shade(@bg_prelight, 0.8)), to(shade(@bg_prelight, 1.8)));
 }
 
 .slider:selected {
-    background-color: @base_selected;
+    color: @base_selected;
     background-image: -gtk-gradient(linear, left top, left bottom, from(shade(@bg_selected, 1.8)), to(shade(@bg_selected, 0.8)));
 }
 

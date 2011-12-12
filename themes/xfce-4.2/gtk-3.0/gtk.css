@@ -180,31 +180,43 @@ GtkCalendar:selected {
 .check, .radio {
     color: @text_normal;
     background-color: @base_normal;
-    border-color: @fg_normal;
+    border-color: darker(@bg_normal);
 }
 
 .check:active, .radio:active {
     color: @text_normal;
     background-color: @base_normal;
-    border-color: @fg_normal;
+    border-color: darker(@bg_normal);
 }
 
 .check:insensitive, .radio:insensitive {
     color: @text_insensitive;
     background-color: @base_insensitive;
-    border-color: @fg_insensitive;
+    border-color: darker(@bg_insensitive);
 }
 
 .check:hover, .radio:hover {
     color: @text_prelight;
     background-color: @base_prelight;
-    border-color: @fg_prelight;
+    border-color: darker(@bg_prelight);
 }
 
 .check:selected, .radio:selected {
     color: @text_active;
     background-color: @base_active;
-    border-color: @fg_active;
+    border-color: darker(@bg_active);
+}
+
+.check:inconsistent, .radio:inconsistent {
+    color: @fg_normal;
+    background-color: @base_normal;
+    border-color: darker(@bg_normal);
+}
+
+.check:insensitive:inconsistent, .radio:insensitive:inconsistent {
+    color: @fg_insensitive;
+    background-color: @base_insensitive;
+    border-color: darker(@bg_insensitive);
 }
 
 .cell {
@@ -279,13 +291,13 @@ GtkCalendar:selected {
     border-color: darker(#f5f5f5);
 }
 
-.notebook tab {
+.notebook tab, .notebook tab * {
     color: @fg_active;
     background-color: #d3d7e0;
     border-color: darker(#d3d7e0);
 }
 
-.notebook tab:active {
+.notebook tab:active, .notebook tab *:active {
     color: @fg_normal;
     background-color: #f5f5f5;
     border-color: darker(#f5f5f5);
