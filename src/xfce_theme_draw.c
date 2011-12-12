@@ -296,13 +296,9 @@ static void xfce_draw_grip_rough (GtkStyle * style, GdkWindow * window, GtkState
 
 static void xfce_draw_grip_slide (GtkStyle * style, GdkWindow * window, GtkStateType state_type, GdkRectangle * area, GtkWidget * widget, gint x, gint y, gint width, gint height, GtkOrientation orientation)
 {
-    gint xthick, ythick;
     gint gx, gy, gwidth, gheight;
     cairo_t *cr;
     GdkColor *light, *dark, *mid, *bg;
-
-    xthick = style->xthickness;
-    ythick = style->ythickness;
 
     light = &style->light[state_type];
     dark = &style->dark[state_type];
