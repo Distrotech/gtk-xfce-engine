@@ -244,19 +244,15 @@ static void xfce_draw_grip_rough (GtkThemingEngine * engine, cairo_t * cr, GtkSt
 
 static void xfce_draw_grip_slide (GtkThemingEngine * engine, cairo_t * cr, GtkStateFlags state, gdouble x, gdouble y, gdouble width, gdouble height, GtkOrientation orientation)
 {
-    gint xthick, ythick;
     gint gx, gy, gwidth, gheight;
     GdkRGBA light, dark, mid, bg;
     GtkBorder border;
 
     gtk_theming_engine_get_border(engine, state, &border);
 
-    xthick = border.left;
-    ythick = border.top;
-
     gtk_theming_engine_get_border_color(engine, state, &dark);
     color_dark2light_mid(&dark, &light, &mid);
-    gtk_theming_engine_get_background_color(engine, GTK_STATE_FLAG_SELECTED, &bg);
+    gtk_theming_engine_get_color(engine, state, &bg);
 
     gx = gy = gwidth = gheight = 0;
 
