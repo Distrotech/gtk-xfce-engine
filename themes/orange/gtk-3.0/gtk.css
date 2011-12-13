@@ -38,22 +38,18 @@
     -GtkButton-default-outside-border: 0;
     -GtkButton-child-displacement-x  : 0;
     -GtkButton-child-displacement-y  : 1;
-    -GtkButton-default-spacing       : 5;
-    -GtkWidget-focus-padding         : 1;
     -GtkCheckButton-indicator-size   : 12;
     -GtkMenuItem-selected-shadow-type: none;
-    /*GtkPaned::handle_full_size     : 1*/
     -GtkPaned-handle-size            : 7;
     -GtkRange-slider-width           : 15;
     -GtkRange-stepper-size           : 15;
     -GtkRange-stepper-spacing        : 0;
     -GtkRange-trough-border          : 0;
-    -GtkScrollbar-has-backward-stepper: 1;
+    -GtkScrollbar-has-backward-stepper: true;
     -GtkScrollbar-min-slider-length  : 20;
     -GtkWidget-focus-line-width      : 1;
     -GtkWidget-focus-padding         : 4;
-    -GtkWidget-interior-focus        : 5;
-    -GtkWidget-internal-padding      : 4;
+    -GtkWidget-interior-focus        : true;
 
     border-width: 2 2;
 
@@ -72,7 +68,7 @@
     color: @fg_insensitive;
     background-color: @bg_insensitive;
     border-color: darker(@bg_insensitive);
-    text-shadow: 1 1 white
+    text-shadow: 1 1 white;
 }
 
 *:hover {
@@ -371,6 +367,8 @@ GtkCalendar:selected {
 .button {
     background-image: -gtk-gradient(linear, left top, left bottom, from(shade(#ebe6e1, 1.05)), to(shade(#ebe6e1, 0.95)));
     border-color: darker(#ebe6e1);
+
+    -GtkWidget-focus-padding: 1;
 }                                                         
                                                           
 .button:active {                                          

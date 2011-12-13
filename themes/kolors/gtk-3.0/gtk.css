@@ -31,25 +31,22 @@
 
     -GtkButton-default-border        : 0;
     -GtkButton-default-outside-border: 0;
-    -GtkButton-default-spacing       : 11;
     -GtkWidget-focus-padding         : 0;
     -GtkCheckButton-indicator-size   : 14;
     -GtkMenuBar-shadow-type          : out;
     -GtkMenuItem-selected-shadow-type: none;
-    /*GtkPaned::handle_full_size     : 1*/
     -GtkRange-slider-width           : 11;
     -GtkRange-stepper-size           : 13;
     -GtkRange-stepper-spacing        : 0;
     -GtkRange-trough-border          : 0;
     -GtkScrollbar-min-slider-length  : 20;
-    -GtkScrollbar-has-backward-stepper: 1;
-    -GtkScrollbar-has-secondary-backward-stepper: 1;
-    -GtkStatusBar-shadow-type        : in;
-    -GtkToolBar-shadow-type          : out;
-    /*-GtkWidget-focus-line-pattern    : "\0";*/
+    -GtkScrollbar-has-backward-stepper: true;
+    -GtkScrollbar-has-secondary-backward-stepper: true;
+    -GtkStatusbar-shadow-type        : in;
+    -GtkToolbar-shadow-type          : out;
+    -GtkWidget-focus-line-pattern    : "\0";
     -GtkWidget-focus-line-width      : 1;
-    -GtkWidget-interior-focus        : 1;
-    -GtkWidget-internal-padding      : 0;
+    -GtkWidget-interior-focus        : true;
 
     border-width: 1 1;
 
@@ -68,7 +65,7 @@
     color: @fg_insensitive;
     background-color: @bg_insensitive;
     border-color: darker(@bg_insensitive);
-    text-shadow: 1 1 white
+    text-shadow: 1 1 white;
 }
 
 *:hover {
@@ -182,7 +179,7 @@ GtkCalendar:selected {
     background-color: @base_normal;
     border-color: darker(@bg_normal);
 
-    -GtkCheckButton-indicator-size   : 10;
+    -GtkCheckButton-indicator-size: 10;
 }
 
 .check:active, .radio:active {

@@ -31,21 +31,18 @@
 
     -GtkButton-default-border        : 5;
     -GtkButton-default-outside-border: 6;
-    -GtkButton-default-spacing       : 5;
     -GtkWidget-focus-padding         : 0;
     -GtkCheckButton-indicator-size   : 14;
     -GtkMenuItem-selected-shadow-type: in;
-    /*GtkPaned::handle_full_size     : 1*/
     -GtkRange-slider-width           : 12;
     -GtkRange-stepper-size           : 12;
     -GtkRange-stepper-spacing        : 0;
     -GtkRange-trough-border          : 0;
     -GtkScrollbar-min-slider-length  : 20;
     -GtkToolbar-shadow-type          : out;
-    /*GtkWidget::focus-line-pattern  : "\0"*/
+    -GtkWidget-focus-line-pattern    : "\0";
     -GtkWidget-focus-line-width      : 2;
-    -GtkWidget-interior-focus        : 0;
-    -GtkWidget-internal-padding      : 2;
+    -GtkWidget-interior-focus        : false;
 
     border-width: 1 1;
 
@@ -64,7 +61,7 @@
     color: @fg_insensitive;
     background-color: @bg_insensitive;
     border-color: darker(@bg_insensitive);
-    text-shadow: 1 1 white
+    text-shadow: 1 1 white;
 }
 
 *:hover {

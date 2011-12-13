@@ -6,17 +6,19 @@
 
     -GtkButton-default-border        : 0;
     -GtkButton-default-outside-border: 0;
-    -GtkButton-default-spacing       : 8;
     -GtkWidget-focus-line-width      : 1;
     -GtkWidget-focus-padding         : 2;
-    -GtkMenuItem-shadow-type         : out;
-    /*GtkPaned::handle_full_size     : 1*/
+    -GtkMenuBar-shadow-type          : out;
     -GtkToolbar-shadow-type          : out;
-    -GtkWidget-interior-focus        : 1;
+    -GtkWidget-interior-focus        : true;
     -GtkRange-slider-width           : 14;
     -GtkRange-stepper-size           : 14;
     -GtkRange-stepper-spacing        : 0;
     -GtkRange-trough-border          : 0;
+}
+
+*:insensitive {
+    text-shadow: 1 1 white;
 }
 
 .button {

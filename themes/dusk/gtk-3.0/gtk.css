@@ -33,31 +33,25 @@
     -GtkButton-default-outside-border: 0;
     -GtkButton-child-displacement-x  : 0;
     -GtkButton-child-displacement-y  : 1;
-    -GtkButton-default-spacing       : 4;
     -GtkCheckButton-indicator-size   : 8;
-    -GtkMenuBar-internal-paddinc     : 1;
+    -GtkMenuBar-internal-padding     : 1;
     -GtkMenuBar-shadow-type          : out;
-    -GtkHandleBox-shadow-type        : out;
     -GtkMenuItem-selected-shadow-type: etched-in;
-    /*GtkPaned::handle_full_size     : 1*/
     -GtkPaned-handle-size     	     : 4;
     -GtkRange-slider-width           : 12;
     -GtkRange-stepper-size           : 10;
     -GtkRange-stepper-spacing        : 0;
     -GtkRange-trough-border          : 0;
-    -GtkScrollbar-has-backward-stepper: 1;
-    -GtkScrollbar-has-secondary-backward-stepper: 0;
+    -GtkScrollbar-has-backward-stepper: true;
+    -GtkScrollbar-has-secondary-backward-stepper: false;
     -GtkScrollbar-min-slider-length  : 10;
     -GtkToolbar-shadow-type          : out;
     -GtkWidget-focus-line-width      : 1;
     -GtkWidget-focus-padding         : 1;
-    -GtkWidget-interior-focus        : 1;
-    -GtkWidget-internal-padding      : 2;
-    -GtkEntry-cursor-color           : #fcfcfc;
-    -GtkEntry-secondary-cursor-color : #fcfcfc;
-    -GtkTesxView-cursor-color        : #fcfcfc;
-    -GtkTesxView-secondary-cursor-color: #fcfcfc;
-    -GtkEntry-cursor-aspect-ratio    : 0.1;
+    -GtkWidget-interior-focus        : true;
+    -GtkWidget-cursor-color          : #fcfcfc;
+    -GtkWidget-secondary-cursor-color: #fcfcfc;
+    -GtkWidget-cursor-aspect-ratio   : 0.1;
 
     border-width: 1 1;
 
@@ -76,7 +70,7 @@
     color: @fg_insensitive;
     background-color: @bg_insensitive;
     border-color: darker(@bg_insensitive);
-    text-shadow: 1 1 white
+    text-shadow: 1 1 white;
 }
 
 *:hover {
