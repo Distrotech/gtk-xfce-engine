@@ -37,6 +37,12 @@ libxfce_la_LDFLAGS = \
 	-no-undefined \
 	$(PLATFORM_LDFLAGS)
 
+CLEANFILES= $(BUILT_SOURCES)
+
+EXTRA_DIST= \
+	xfce_typebuiltin.c.template \
+	xfce_typebuiltin.h.template
+
 xfce_typebuiltin.h: xfce_style_types.h Makefile xfce_typebuiltin.h.template
 	@( cd $(srcdir) && $(GLIB_MKENUMS) --template ./xfce_typebuiltin.h.template \
 	./xfce_style_types.h ) >> xgen-gtbh \
