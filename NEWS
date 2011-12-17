@@ -1,6 +1,10 @@
+2.99.0
+======
+- Added Gtk+-3.0 theming engine.
+
 2.9.0
 =====
-- Changed drawing routines to use cairo
+- Changed drawing routines to use cairo.
 
 2.8.1
 =====
