@@ -75,6 +75,9 @@ then
   GTK3_BINARY_VERSION=`$PKG_CONFIG --variable=gtk_binary_version gtk+-3.0`
   AC_SUBST([GTK3_BINARY_VERSION])
   GTK_SUBDIRS="$GTK_SUBDIRS gtk-3.0"
+  dnl libm is needed for floor() and ceil()
+  AC_CHECK_LIBM
+  AC_SUBST(LIBM)
 fi
 AC_SUBST([GTK_SUBDIRS])
 
