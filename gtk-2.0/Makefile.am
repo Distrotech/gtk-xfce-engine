@@ -4,7 +4,7 @@ INCLUDES = \
 	-DG_LOG_DOMAIN=\"gtk-xfce-engine\" \
 	$(PLATFORM_CPPFLAGS)
 
-enginedir = $(libdir)/gtk-2.0/$(GTK_BINARY_VERSION)/engines
+enginedir = $(libdir)/gtk-2.0/$(GTK2_BINARY_VERSION)/engines
 
 engine_LTLIBRARIES = libxfce.la
 
@@ -22,13 +22,13 @@ libxfce_la_SOURCES = \
 	xfce_style.h
 
 libxfce_la_CFLAGS = \
-	$(GTK_CFLAGS) \
+	$(GTK2_CFLAGS) \
 	$(GLIB_CFLAGS) \
 	$(GMODULE_CFLAGS) \
 	$(PLATFORM_CFLAGS)
 
 libxfce_la_LIBADD = \
-	$(GTK_LIBS) \
+	$(GTK2_LIBS) \
 	$(GLIB_LIBS) \
 	$(GMODULE_LIBS)
 

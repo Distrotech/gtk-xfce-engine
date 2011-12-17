@@ -5,8 +5,8 @@ dnl
 dnl ***************************
 dnl *** Version information ***
 dnl ***************************
-m4_define([gtk_xfce_engine_version_major], [2])
-m4_define([gtk_xfce_engine_version_minor], [9])
+m4_define([gtk_xfce_engine_version_major], [3])
+m4_define([gtk_xfce_engine_version_minor], [0])
 m4_define([gtk_xfce_engine_version_micro], [0])
 m4_define([gtk_xfce_engine_version_nano],  []) dnl leave this empty to have no nano version
 m4_define([gtk_xfce_engine_version_build], [@REVISION@])
@@ -54,12 +54,29 @@ AC_HEADER_STDC()
 dnl ***********************************
 dnl *** Check for required packages ***
 dnl ***********************************
-XDT_CHECK_PACKAGE([GTK], [gtk+-2.0], [2.20.0])
-XDT_CHECK_PACKAGE([GLIB], [glib-2.0], [2.24.0])
+AM_PATH_GLIB_2_0([2.24.0])
 XDT_CHECK_PACKAGE([GMODULE], [gmodule-2.0], [2.24.0])
 
-GTK_BINARY_VERSION=`$PKG_CONFIG --variable=gtk_binary_version gtk+-2.0`
-AC_SUBST([GTK_BINARY_VERSION])
+dnl ***********************************
+dnl *** Check for optional packages ***
+dnl ***********************************
+XDT_CHECK_OPTIONAL_PACKAGE([GTK2], [gtk+-2.0], [2.20.0], [gtk2], [Gtk 2 theme engine])
+XDT_CHECK_OPTIONAL_PACKAGE([GTK3], [gtk+-3.0], [3.0.0], [gtk3], [Gtk 3 theme engine])
+
+GTK_SUBDIRS=""
+if test x"$GTK2_FOUND" = x"yes"
+then
+  GTK2_BINARY_VERSION=`$PKG_CONFIG --variable=gtk_binary_version gtk+-2.0`
+  AC_SUBST([GTK2_BINARY_VERSION])
+  GTK_SUBDIRS="$GTK_SUBDIRS gtk-2.0"
+fi
+if test x"$GTK3_FOUND" = x"yes"
+then
+  GTK3_BINARY_VERSION=`$PKG_CONFIG --variable=gtk_binary_version gtk+-3.0`
+  AC_SUBST([GTK3_BINARY_VERSION])
+  GTK_SUBDIRS="$GTK_SUBDIRS gtk-3.0"
+fi
+AC_SUBST([GTK_SUBDIRS])
 
 dnl ***********************************
 dnl *** Check for debugging support ***
@@ -82,46 +99,67 @@ AC_SUBST([PLATFORM_LDFLAGS])
 AC_OUTPUT([
 gtk-xfce-engine-2.spec
 Makefile
-src/Makefile
+gtk-2.0/Makefile
+gtk-3.0/Makefile
 themes/b5/Makefile
 themes/b5/gtk-2.0/Makefile
+themes/b5/gtk-3.0/Makefile
 themes/xfce/gtk-2.0/Makefile
+themes/xfce/gtk-3.0/Makefile
 themes/xfce/Makefile
 themes/xfce-4.0/gtk-2.0/Makefile
+themes/xfce-4.0/gtk-3.0/Makefile
 themes/xfce-4.0/Makefile
 themes/xfce-4.2/gtk-2.0/Makefile
+themes/xfce-4.2/gtk-3.0/Makefile
 themes/xfce-4.2/Makefile
 themes/xfce-4.4/Makefile
 themes/xfce-4.4/gtk-2.0/Makefile
+themes/xfce-4.4/gtk-3.0/Makefile
 themes/xfce-4.6/Makefile
 themes/xfce-4.6/gtk-2.0/Makefile
+themes/xfce-4.6/gtk-3.0/Makefile
 themes/basic/gtk-2.0/Makefile
+themes/basic/gtk-3.0/Makefile
 themes/basic/Makefile
 themes/cadmium/gtk-2.0/Makefile
+themes/cadmium/gtk-3.0/Makefile
 themes/cadmium/Makefile
 themes/curve/gtk-2.0/Makefile
+themes/curve/gtk-3.0/Makefile
 themes/curve/Makefile
 themes/dawn/gtk-2.0/Makefile
+themes/dawn/gtk-3.0/Makefile
 themes/dawn/Makefile
 themes/dusk/gtk-2.0/Makefile
+themes/dusk/gtk-3.0/Makefile
 themes/dusk/Makefile
 themes/kolors/gtk-2.0/Makefile
+themes/kolors/gtk-3.0/Makefile
 themes/kolors/Makefile
 themes/kde2/gtk-2.0/Makefile
+themes/kde2/gtk-3.0/Makefile
 themes/kde2/Makefile
 themes/light/Makefile
 themes/light/gtk-2.0/Makefile
+themes/light/gtk-3.0/Makefile
 themes/orange/gtk-2.0/Makefile
+themes/orange/gtk-3.0/Makefile
 themes/orange/Makefile
 themes/redmondxp/gtk-2.0/Makefile
+themes/redmondxp/gtk-3.0/Makefile
 themes/redmondxp/Makefile
 themes/saltlake/gtk-2.0/Makefile
+themes/saltlake/gtk-3.0/Makefile
 themes/saltlake/Makefile
 themes/smooth/gtk-2.0/Makefile
+themes/smooth/gtk-3.0/Makefile
 themes/smooth/Makefile
 themes/stellar/gtk-2.0/Makefile
+themes/stellar/gtk-3.0/Makefile
 themes/stellar/Makefile
 themes/winter/gtk-2.0/Makefile
+themes/winter/gtk-3.0/Makefile
 themes/winter/Makefile
 themes/Makefile
 ])
@@ -132,5 +170,9 @@ dnl ***************************
 echo
 echo "Build Configuration:"
 echo
+echo "* Gtk 2 Engine: $GTK2_FOUND"
+echo "* Gtk 3 Engine: $GTK3_FOUND"
+echo
+echo "* Install Prefix: $prefix"
 echo "* Debug Support: $enable_debug"
 echo
