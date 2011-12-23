@@ -401,13 +401,13 @@ GtkCalendar:selected {
 }
 
 .button:hover {
-    background-image: -gtk-gradient(linear, left top, left bottom, from(shade(#d3d7cf, 0.95)), to(shade(#d3d7cf, 1.1)));
+    background-image: -gtk-gradient(linear, left top, left bottom, from(shade(#d3d7cf, 1.1)), to(shade(#d3d7cf, 0.95)));
     border-color: darker(#d3d7cf);
 }
 
 .button:selected {
     color: #ffffff;
-    background-image: -gtk-gradient(linear, left top, left bottom, from(shade(#3465a4, 1.1)), to(shade(#3465a4, 0.95)));
+    background-image: -gtk-gradient(linear, left top, left bottom, from(shade(#3465a4, 0.95)), to(shade(#3465a4, 1.1)));
     border-color: darker(#3465a4);
 }
 
