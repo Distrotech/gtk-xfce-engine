@@ -147,6 +147,7 @@ parts[] =
 static void xfce_draw_grips(GtkThemingEngine * engine, cairo_t * cr, gdouble x, gdouble y, gdouble width, gdouble height, GtkOrientation orientation);
 
 static void render_line(GtkThemingEngine * engine, cairo_t * cr, gdouble x1, gdouble y1, gdouble x2, gdouble y2);
+static void render_background(GtkThemingEngine * engine, cairo_t * cr, gdouble x, gdouble y, gdouble width, gdouble height);
 static void render_frame(GtkThemingEngine * engine, cairo_t * cr, gdouble x, gdouble y, gdouble width, gdouble height);
 
 static void render_check(GtkThemingEngine * engine, cairo_t * cr, gdouble x, gdouble y, gdouble width, gdouble height);
@@ -409,6 +410,66 @@ static void render_line(GtkThemingEngine * engine, cairo_t * cr, gdouble x1, gdo
         cairo_line_to(cr, x2, y_1 + (thickness_light / 2.0));
         cairo_stroke(cr);
     }
+}
+
+static void render_background(GtkThemingEngine * engine, cairo_t * cr, gdouble x, gdouble y, gdouble width, gdouble height)
+{
+    GdkRGBA bg_color;
+    cairo_pattern_t *pattern;
+    gint xthick, ythick;
+    gint xt, yt;
+    GtkStateFlags state;
+    GtkBorder border;
+    gboolean smooth_edge;
+
+    state = gtk_theming_engine_get_state(engine);
+
+    gtk_theming_engine_get_background_color(engine, state, &bg_color);
+    gtk_theming_engine_get(engine, state, GTK_STYLE_PROPERTY_BACKGROUND_IMAGE, &pattern, NULL);
+
+    gtk_theming_engine_get(engine, state, XFCE_SMOOTH_EDGE, &smooth_edge, NULL);
+    gtk_theming_engine_get_border (engine, state, &border);
+
+    xthick = border.left;
+    ythick = border.top;
+
+    cairo_save(cr);
+    cairo_translate(cr, x, y);
+
+    xt = MIN(xthick, width - 1);
+    yt = MIN(ythick, height - 1);
+    if(smooth_edge && gtk_theming_engine_has_class(engine, GTK_STYLE_CLASS_PROGRESSBAR))
+    {
+        xt = 1;
+        yt = 1;
+    }
+    else
+    {
+        xt = MIN(xt, 2);
+        yt = MIN(yt, 2);
+    }
+
+    cairo_rectangle(cr, xt, yt, width - xt * 2, height - yt * 2);
+
+    if(pattern)
+    {
+        cairo_scale(cr, width, height);
+        cairo_set_source(cr, pattern);
+        cairo_scale(cr, 1.0 / width, 1.0 / height);
+    }
+    else
+    {
+        gdk_cairo_set_source_rgba(cr, &bg_color);
+    }
+
+    cairo_fill(cr);
+
+    if(pattern)
+    {
+        cairo_pattern_destroy (pattern);
+    }
+
+    cairo_restore(cr);
 }
 
 static void render_frame(GtkThemingEngine * engine, cairo_t * cr, gdouble x, gdouble y, gdouble width, gdouble height)
@@ -1685,6 +1746,7 @@ static void xfce_engine_class_init(XfceEngineClass * klass)
     GtkThemingEngineClass *engine_class = GTK_THEMING_ENGINE_CLASS(klass);
 
     engine_class->render_line = render_line;
+    engine_class->render_background = render_background;
     engine_class->render_frame = render_frame;
     engine_class->render_check = render_check;
     engine_class->render_option = render_option;
