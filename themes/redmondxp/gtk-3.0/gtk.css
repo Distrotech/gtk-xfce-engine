@@ -293,6 +293,31 @@ GtkCalendar:selected {
     border-color: darker(#fafaf2);
 }
 
+.expander {
+    color: @base_normal;
+    border-color: @fg_normal;
+}
+
+.expander:active {
+    color: @base_normal;
+    border-color: @fg_normal;
+}
+
+.expander:insensitive {
+    color: @base_insensitive;
+    border-color: @fg_insensitive;
+}
+
+.expander:hover {
+    color: @fg_prelight;
+    border-color: @fg_prelight;
+}
+
+.expander:selected {
+    color: @base_selected;
+    border-color: @fg_selected;
+}
+
 .menu {
     background-color: #ffffff;
     border-color: darker(#ffffff);

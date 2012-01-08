@@ -305,6 +305,31 @@ GtkCalendar:selected {
     border-color: darker(#f8f7f5);
 }
 
+.expander {
+    color: @base_normal;
+    border-color: @fg_normal;
+}
+
+.expander:active {
+    color: @base_normal;
+    border-color: @fg_normal;
+}
+
+.expander:insensitive {
+    color: @base_insensitive;
+    border-color: @fg_insensitive;
+}
+
+.expander:hover {
+    color: @fg_prelight;
+    border-color: @fg_prelight;
+}
+
+.expander:selected {
+    color: @base_selected;
+    border-color: @fg_selected;
+}
+
 .menu {
     background-image: -gtk-gradient(linear, left top, left bottom, from(shade(#f8f7f5, 1.05)), to(shade(#f8f7f5, 0.95)));
     border-color: darker(#f8f7f5);
