@@ -419,8 +419,8 @@ GtkCalendar:selected {
 }
 
 .button:hover {
-    background-image: -gtk-gradient(linear, left top, left bottom, from(shade(#d3d7cf, 1.1)), to(shade(#d3d7cf, 0.95)));
-    border-color: darker(#d3d7cf);
+    background-image: -gtk-gradient(linear, left top, left bottom, from(shade(#cce2ff, 1.1)), to(shade(#cce2ff, 0.95)));
+    border-color: darker(#cce2ff);
 }
 
 .button:selected {
