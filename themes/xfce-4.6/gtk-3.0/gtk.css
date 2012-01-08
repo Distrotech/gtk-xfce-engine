@@ -120,7 +120,7 @@
     background-color: @base_normal;
     border-color: darker(@bg_normal);
 
-    -GtkEntry-focus-line-pattern: "\0";
+    -GtkWidget-focus-line-pattern: "\0";
 }
 
 .view:active, .entry:active {
