@@ -373,8 +373,8 @@ static void render_line(GtkThemingEngine * engine, cairo_t * cr, gdouble x1, gdo
         thickness_light = xthick / 2;
         thickness_dark = xthick - thickness_light;
 
-	/* Compensation for the way x and y are caclculated */
-	x1 += 1 + thickness_dark - thickness_light;
+        /* Compensation for the way x and y are caclculated */
+        x1 += 1 + thickness_dark - thickness_light;
         y_2 += 1;
 
         cairo_set_line_width (cr, thickness_dark);
@@ -394,8 +394,8 @@ static void render_line(GtkThemingEngine * engine, cairo_t * cr, gdouble x1, gdo
         thickness_light = ythick / 2;
         thickness_dark = ythick - thickness_light;
 
-	/* Compensation for the way x and y are caclculated */
-	y_1 += 1 + thickness_dark - thickness_light;
+        /* Compensation for the way x and y are caclculated */
+        y_1 += 1 + thickness_dark - thickness_light;
         x2 += 1;
 
         cairo_set_line_width (cr, thickness_dark);
@@ -432,6 +432,12 @@ static void render_background(GtkThemingEngine * engine, cairo_t * cr, gdouble x
 
     xthick = border.left;
     ythick = border.top;
+
+    if (gtk_theming_engine_has_class(engine, GTK_STYLE_CLASS_SPINBUTTON) && gtk_theming_engine_has_class(engine, GTK_STYLE_CLASS_BUTTON))
+    {
+        if (!(state & GTK_STATE_FLAG_ACTIVE) &&  !(state & GTK_STATE_FLAG_PRELIGHT))
+            return;
+    }
 
     cairo_save(cr);
     cairo_translate(cr, x, y);
@@ -482,7 +488,6 @@ static void render_frame(GtkThemingEngine * engine, cairo_t * cr, gdouble x, gdo
     GdkRGBA black = {0.0, 0.0, 0.0, 1.0}; /* black */
     gboolean smooth_edge;
     GtkBorder border;
-    GtkJunctionSides junction;
 
     state = gtk_theming_engine_get_state(engine);
     gtk_theming_engine_get(engine, state, GTK_STYLE_PROPERTY_BORDER_STYLE, &border_style, NULL);
@@ -499,204 +504,11 @@ static void render_frame(GtkThemingEngine * engine, cairo_t * cr, gdouble x, gdo
     ythick = border.top;
 
     /* Spin buttons are a special case */
-    if (gtk_theming_engine_has_class(engine, GTK_STYLE_CLASS_SPINBUTTON))
+    if (gtk_theming_engine_has_class(engine, GTK_STYLE_CLASS_SPINBUTTON) && gtk_theming_engine_has_class(engine, GTK_STYLE_CLASS_BUTTON))
     {
-        junction = gtk_theming_engine_get_junction_sides(engine);
-        if ((junction & GTK_JUNCTION_TOP) == GTK_JUNCTION_TOP || (junction & GTK_JUNCTION_BOTTOM) == GTK_JUNCTION_BOTTOM)
-        {
-            if (!(state & GTK_STATE_FLAG_ACTIVE))
-            {
-                border_style = GTK_BORDER_STYLE_OUTSET;
-            }
-
-            if (state == GTK_STATE_FLAG_NORMAL || state & GTK_STATE_FLAG_INSENSITIVE)
-            {
-                gtk_theming_engine_get_border_color(engine, state, &dark);
-            }
-            else
-            {
-                gtk_theming_engine_get_border_color(engine, GTK_STATE_FLAG_NORMAL, &dark);
-            }
-
-            y = floor(y);
-            height = ceil(height);
-
-            xt = MIN(xthick, width - 1);
-            yt = MIN(ythick, height - 1);
-
-            gtk_theming_engine_get(engine, state, XFCE_SMOOTH_EDGE, &smooth_edge, NULL);
-            color_dark2light_mid(&dark, &light, &mid);
-            if (smooth_edge)
-            {
-                if ((xt > 1) && (yt > 1))
-                {
-                    gdk_cairo_set_source_rgba(cr, &dark);
-                    if ((junction & GTK_JUNCTION_TOP) != GTK_JUNCTION_TOP)
-                    {
-                        cairo_rectangle(cr, x - 2, y, 1, 1);
-                    }
-                    if ((junction & GTK_JUNCTION_BOTTOM) != GTK_JUNCTION_BOTTOM)
-                    {
-                        cairo_rectangle(cr, x - 2, y + height - 1, 1, 1);
-                    }
-                    cairo_fill(cr);
-
-                    if ((junction & GTK_JUNCTION_TOP) != GTK_JUNCTION_TOP)
-                    {
-                        cairo_move_to(cr, x - 0.5, y + 1.5);
-                    }
-                    else
-                    {
-                        cairo_move_to(cr, x - 0.5, y + 0.5);
-                    }
-                    if ((junction & GTK_JUNCTION_BOTTOM) != GTK_JUNCTION_BOTTOM)
-                    {
-                        cairo_line_to(cr, x - 0.5, y + height - 1.5);
-                    }
-                    else
-                    {
-                        cairo_line_to(cr, x - 0.5, y + height - 0.5);
-                    }
-                    cairo_stroke(cr);
-
-                    if ((junction & GTK_JUNCTION_TOP) != GTK_JUNCTION_TOP)
-                    {
-                        gdk_cairo_set_source_rgba(cr, &mid);
-                        cairo_rectangle(cr, x - 2, y + 1, 1, 1);
-                        cairo_fill(cr);
-                    }
-
-                    gdk_cairo_set_source_rgba(cr, &light);
-                    if ((junction & GTK_JUNCTION_TOP) != GTK_JUNCTION_TOP)
-                    {
-                        cairo_move_to(cr, x - 1.5, y + 2.5);
-                    }
-                    else
-                    {
-                        cairo_move_to(cr, x - 1.5, y + 0.5);
-                    }
-                    if ((junction & GTK_JUNCTION_BOTTOM) != GTK_JUNCTION_BOTTOM)
-                    {
-                        cairo_line_to(cr, x - 1.5, y + height - 1.5);
-                    }
-                    else
-                    {
-                        cairo_line_to(cr, x - 1.5, y + height - 0.5);
-                    }
-                    cairo_stroke(cr);
-
-                    gdk_cairo_set_source_rgba(cr, &mid);
-                    if ((junction & GTK_JUNCTION_TOP) != GTK_JUNCTION_TOP)
-                    {
-                        cairo_rectangle(cr, x - 1, y, 1, 1);
-                    }
-                    if ((junction & GTK_JUNCTION_BOTTOM) != GTK_JUNCTION_BOTTOM)
-                    {
-                        cairo_rectangle(cr, x - 1, y + height - 1, 1, 1);
-                    }
-                    cairo_fill(cr);
-                }
-                else if ((xt > 0) && (yt > 0))
-                {
-                    gdk_cairo_set_source_rgba(cr, &light);
-                    cairo_move_to(cr, x - 0.5, y + 0.5);
-                    cairo_line_to(cr, x - 0.5, y + height - 0.5);
-                    cairo_stroke(cr);
-
-                    gdk_cairo_set_source_rgba(cr, &mid);
-                    if ((junction & GTK_JUNCTION_TOP) != GTK_JUNCTION_TOP)
-                    {
-                        cairo_rectangle(cr, x - 1, y, 1, 1);
-                    }
-                    if ((junction & GTK_JUNCTION_BOTTOM) != GTK_JUNCTION_BOTTOM)
-                    {
-                        cairo_rectangle(cr, x - 1, y + height - 1, 1, 1);
-                    }
-                    cairo_fill(cr);
-                }
-            }
-            else
-            {
-                if ((xt > 1) && (yt > 1))
-                {
-                    if ((junction & GTK_JUNCTION_TOP) != GTK_JUNCTION_TOP)
-                    {
-                        gdk_cairo_set_source_rgba(cr, &dark);
-                        cairo_move_to(cr, x - 1.5, y + 0.5);
-                        cairo_line_to(cr, x - 0.5, y + 0.5);
-                        cairo_stroke(cr);
-                    }
-
-                    gdk_cairo_set_source_rgba(cr, &light);
-                    if ((junction & GTK_JUNCTION_TOP) != GTK_JUNCTION_TOP)
-                    {
-                        cairo_move_to(cr, x - 0.5, y + 1.5);
-                    }
-                    else
-                    {
-                        cairo_move_to(cr, x - 0.5, y + 0.5);
-                    }
-                    cairo_line_to(cr, x - 0.5, y + height - 0.5);
-                    if ((junction & GTK_JUNCTION_BOTTOM) != GTK_JUNCTION_BOTTOM)
-                    {
-                        cairo_line_to(cr, x - 1.5, y + height - 0.5);
-                    }
-                    cairo_stroke(cr);
-
-                    if ((junction & GTK_JUNCTION_TOP) != GTK_JUNCTION_TOP)
-                    {
-                        gdk_cairo_set_source_rgba(cr, &black);
-                        cairo_rectangle(cr, x - 2, y + 1, 1, 1);
-                        cairo_fill(cr);
-                    }
-
-                    gdk_cairo_set_source_rgba(cr, &dark);
-                    if ((junction & GTK_JUNCTION_TOP) != GTK_JUNCTION_TOP)
-                    {
-                        cairo_move_to(cr, x - 1.5, y + 2.5);
-                    }
-                    else
-                    {
-                        cairo_move_to(cr, x - 1.5, y + 0.5);
-                    }
-                    if ((junction & GTK_JUNCTION_BOTTOM) != GTK_JUNCTION_BOTTOM)
-                    {
-                        cairo_line_to(cr, x - 1.5, y + height - 1.5);
-                    }
-                    else
-                    {
-                        cairo_line_to(cr, x - 1.5, y + height - 0.5);
-                    }
-                    cairo_stroke(cr);
-                }
-                else if ((xt > 0) && (yt > 0))
-                {
-                    if ((junction & GTK_JUNCTION_TOP) != GTK_JUNCTION_TOP)
-                    {
-                        gdk_cairo_set_source_rgba(cr, &dark);
-                        cairo_rectangle(cr, x - 1, y, 1, 1);
-                        cairo_fill(cr);
-                    }
-
-                    gdk_cairo_set_source_rgba(cr, &light);
-                    if ((junction & GTK_JUNCTION_TOP) != GTK_JUNCTION_TOP)
-                    {
-                        cairo_move_to(cr, x - 0.5, y + 1.5);
-                    }
-                    else
-                    {
-                        cairo_move_to(cr, x - 0.5, y + 0.5);
-                    }
-                    cairo_line_to(cr, x - 0.5, y + height - 0.5);
-                    cairo_stroke(cr);
-                }
-            }
-
-            if (state != GTK_STATE_FLAG_NORMAL && !(state & GTK_STATE_FLAG_INSENSITIVE))
-            {
-                gtk_theming_engine_get_border_color(engine, state, &dark);
-            }
-        }
+        /* Draw an outset border when hovering a spinner button */
+        if (!(state & GTK_STATE_FLAG_ACTIVE))
+            border_style = GTK_BORDER_STYLE_OUTSET;
     }
 
     xt = MIN(xthick, width - 1);
@@ -707,17 +519,17 @@ static void render_frame(GtkThemingEngine * engine, cairo_t * cr, gdouble x, gdo
         case GTK_BORDER_STYLE_NONE:
             break;
         case GTK_BORDER_STYLE_SOLID:
-	    gdk_cairo_set_source_rgba(cr, &dark);
+            gdk_cairo_set_source_rgba(cr, &dark);
             if ((xt > 1) && (yt > 1))
             {
-		cairo_set_line_width(cr, 2.0);
+                cairo_set_line_width(cr, 2.0);
                 cairo_rectangle(cr, x + 1, y + 1, width - 2, height - 2);
-	    }
+            }
             else if ((xt > 0) && (yt > 0))
             {
                 cairo_rectangle(cr, x + 0.5, y + 0.5, width - 1, height - 1);
             }
-	    cairo_stroke(cr);
+            cairo_stroke(cr);
             break;
         case GTK_BORDER_STYLE_INSET:
             gtk_theming_engine_get(engine, state, XFCE_SMOOTH_EDGE, &smooth_edge, NULL);
@@ -788,7 +600,7 @@ static void render_frame(GtkThemingEngine * engine, cairo_t * cr, gdouble x, gdo
             {
                 if (gtk_theming_engine_has_class(engine, GTK_STYLE_CLASS_TROUGH))
                 {
-		    gtk_theming_engine_get_border_color(engine, GTK_STATE_FLAG_ACTIVE, &dark);
+                    gtk_theming_engine_get_border_color(engine, GTK_STATE_FLAG_ACTIVE, &dark);
                     gdk_cairo_set_source_rgba(cr, &dark);
                     cairo_rectangle(cr, x + 0.5, y + 0.5, width - 1, height - 1);
                     cairo_stroke(cr);
@@ -841,17 +653,17 @@ static void render_frame(GtkThemingEngine * engine, cairo_t * cr, gdouble x, gdo
             if (smooth_edge)
             {
                 if (gtk_theming_engine_has_class(engine, GTK_STYLE_CLASS_SPINBUTTON) && !(state & GTK_STATE_FLAG_PRELIGHT))
-		{
+                {
                     /* Do nothing */
-		}
-		else if (gtk_theming_engine_has_class(engine, GTK_STYLE_CLASS_PROGRESSBAR))
+                }
+                else if (gtk_theming_engine_has_class(engine, GTK_STYLE_CLASS_PROGRESSBAR))
                 {
                     gdk_cairo_set_source_rgba(cr, &dark);
                     cairo_rectangle(cr, x + 0.5, y + 0.5, width - 1, height - 1);
                     cairo_stroke(cr);
 
-		    gtk_theming_engine_get_border_color(engine, GTK_STATE_FLAG_NORMAL, &dark);
-		    color_dark2light_mid(&dark, &light, &mid);
+                    gtk_theming_engine_get_border_color(engine, GTK_STATE_FLAG_NORMAL, &dark);
+                    color_dark2light_mid(&dark, &light, &mid);
 
                     gdk_cairo_set_source_rgba(cr, &mid);
                     cairo_rectangle(cr, x, y, 1, 1);
@@ -1069,9 +881,9 @@ static void render_frame(GtkThemingEngine * engine, cairo_t * cr, gdouble x, gdo
             else
             {
                 if (gtk_theming_engine_has_class(engine, GTK_STYLE_CLASS_SPINBUTTON) && !(state & GTK_STATE_FLAG_PRELIGHT))
-		{
+                {
                     /* Do nothing */
-		}
+                }
                 else if (gtk_theming_engine_has_class(engine, GTK_STYLE_CLASS_MENUBAR))
                 {
                     if ((xt > 1) && (yt > 1))

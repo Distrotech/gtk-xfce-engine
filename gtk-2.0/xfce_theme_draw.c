@@ -158,24 +158,28 @@ static void xfce_fill_background(GtkStyle * style, GdkWindow * window, GtkStateT
 {
     GradientType gradient_style = GRADIENT_VERTICAL;
     gfloat shade_start = 1.0, shade_end = 1.0;
-    gboolean draw_flat = FALSE;
+    gboolean draw_base = FALSE;
     cairo_t *cr;
 
     /* Spin buttons are a special case */
     if (widget && GTK_IS_SPIN_BUTTON (widget))
     {
-        if (DETAIL("spinbutton_up") || DETAIL("spinbutton_down"))
+        /* The entry part needs to be completed on the background */
+        if (DETAIL("spinbutton"))
         {
+            draw_base = TRUE;
+        }
+        else if (DETAIL("spinbutton_up") || DETAIL("spinbutton_down"))
+        {
+            /* Only draw the spinner buttons if you interact with them */
             if ((state_type != GTK_STATE_PRELIGHT) && (state_type != GTK_STATE_ACTIVE))
-            {
-                draw_flat = TRUE;
-            }
+                return;
         }
     }
 
     cr = ge_gdk_drawable_to_cairo(window, area);
 
-    if ((!draw_flat) && (XFCE_RC_STYLE(style->rc_style)->gradient))
+    if ((!draw_base) && (XFCE_RC_STYLE(style->rc_style)->gradient))
     {
         switch (XFCE_RC_STYLE(style->rc_style)->gradient_style)
         {
@@ -226,7 +230,7 @@ static void xfce_fill_background(GtkStyle * style, GdkWindow * window, GtkStateT
     }
     else
     {
-        gdk_cairo_set_source_color(cr, &style->bg[state_type]); 
+        gdk_cairo_set_source_color(cr, draw_base ? &style->base[state_type] : &style->bg[state_type]); 
         cairo_rectangle(cr, x, y, width, height);
         cairo_fill(cr);
     }
@@ -457,17 +461,27 @@ static void draw_shadow(GtkStyle * style, GdkWindow * window, GtkStateType state
     /* Spin buttons are a special case */
     if (widget && GTK_IS_SPIN_BUTTON (widget))
     {
-        /* GtkEntry doesn't provide the text area as frame size */
-        if (DETAIL("entry"))
+        /* The button part of the spin button is a separate window which isn't drawn correctly */
+        if (DETAIL("spinbutton"))
         {
             gint line_width = 0;
             gboolean interior_focus;
-            gdk_drawable_get_size (GTK_ENTRY(widget)->text_area, &width, NULL);
-            if (!gtk_widget_has_focus(widget))
+            if (gtk_widget_has_focus(widget))
                 gtk_widget_style_get(widget, "focus-line-width", &line_width, "interior-focus", &interior_focus, NULL);
             if (interior_focus)
                 line_width = 0;
-            width += (style->xthickness + line_width) * 2;
+
+            if (gtk_widget_get_direction(widget) != GTK_TEXT_DIR_RTL)
+            {
+                x -= widget->allocation.width - width;
+            }
+            width = widget->allocation.width;
+            if (line_width)
+                gtk_paint_focus(style, window, state_type, area, widget, detail, x, y, width, height);
+            x += line_width;
+            width -= 2 * line_width;
+            y += line_width;
+            height -= 2 * line_width;
         }
     }
 
@@ -1575,29 +1589,6 @@ static void draw_extension(GtkStyle * style, GdkWindow * window, GtkStateType st
     cairo_destroy(cr);
 }
 
-static void draw_focus(GtkStyle * style, GdkWindow * window, GtkStateType state_type, GdkRectangle * area, GtkWidget * widget, const gchar * detail, gint x, gint y, gint width, gint height)
-{
-    CHECK_ARGS;
-
-    /* Spin buttons are a special case */
-    if (widget && GTK_IS_SPIN_BUTTON (widget))
-    {
-        /* GtkEntry doesn't provide the text area as focus size */
-        if (DETAIL("entry"))
-        {
-            gint line_width = 0;
-            gboolean interior_focus;
-            gdk_drawable_get_size (GTK_ENTRY(widget)->text_area, &width, NULL);
-            gtk_widget_style_get (widget, "focus-line-width", &line_width, "interior-focus", &interior_focus, NULL);
-            if (interior_focus)
-                line_width = 0;
-            width += (style->xthickness + line_width) * 2;
-        }
-    }
-
-    parent_class->draw_focus(style, window, state_type, area, widget, detail, x, y, width, height);
-}
-
 static void draw_slider(GtkStyle * style, GdkWindow * window, GtkStateType state_type, GtkShadowType shadow_type, GdkRectangle * area, GtkWidget * widget, const gchar * detail, gint x, gint y, gint width, gint height, GtkOrientation orientation)
 {
     CHECK_ARGS;
@@ -1663,7 +1654,6 @@ static void xfce_style_class_init(XfceStyleClass * klass)
     style_class->draw_shadow_gap = draw_shadow_gap;
     style_class->draw_box_gap = draw_box_gap;
     style_class->draw_extension = draw_extension;
-    style_class->draw_focus = draw_focus;
     style_class->draw_slider = draw_slider;
     style_class->draw_handle = draw_handle;
 }
