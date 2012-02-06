@@ -513,7 +513,3 @@ GtkCalendar:selected {
     background-image: -gtk-gradient(linear, left top, right top, from(shade(@bg_selected, 0.9)), to(shade(@bg_selected, 1.1)));
     border-color: darker(@bg_selected);
 }
-
-.radio {
-    -GtkCheckButton-indicator-size: 14;
-}

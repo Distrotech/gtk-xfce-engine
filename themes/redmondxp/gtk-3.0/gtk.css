@@ -32,7 +32,7 @@
     -GtkButton-default-outside-border: 0;
     -GtkWidget-focus-line-width      : 1;
     -GtkWidget-focus-padding         : 0;
-    -GtkCheckButton-indicator-size   : 14;
+    -GtkCheckButton-indicator-size   : 15;
     -GtkMenuBar-shadow-type          : out;
     -GtkMenuItem-selected-shadow-type: none;
     -GtkRange-slider-width           : 15;

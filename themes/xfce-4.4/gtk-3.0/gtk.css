@@ -497,5 +497,5 @@ GtkCalendar:selected {
 }
 
 .radio {
-    -GtkCheckButton-indicator-size: 14;
+    -GtkCheckButton-indicator-size: 15;
 }

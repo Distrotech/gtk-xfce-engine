@@ -182,7 +182,7 @@ GtkCalendar:selected {
     background-color: @base_normal;
     border-color: darker(@bg_normal);
 
-    -GtkCheckButton-indicator-size: 14;
+    -GtkCheckButton-indicator-size: 15;
 }
 
 .check:active, .radio:active {
