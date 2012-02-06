@@ -1005,8 +1005,8 @@ static void render_check(GtkThemingEngine * engine, cairo_t * cr, gdouble x, gdo
     GtkStateFlags state;
     GdkRGBA bg, border, fg;
 
-    x -= (1 + PART_SIZE - width) / 2;
-    y -= (1 + PART_SIZE - height) / 2;
+    x -= floor((1 + PART_SIZE - width) / 2);
+    y -= floor((1 + PART_SIZE - height) / 2);
 
     state = gtk_theming_engine_get_state(engine);
     gtk_theming_engine_get_background_color(engine, state, &bg);
