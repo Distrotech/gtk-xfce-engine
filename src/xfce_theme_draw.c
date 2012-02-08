@@ -168,6 +168,9 @@ static void xfce_fill_background(GtkStyle * style, GdkWindow * window, GtkStateT
         if (DETAIL("spinbutton"))
         {
             draw_base = TRUE;
+            /* The entry sets the background to the base state color
+             * This function is called with the state conditionally set according to state-hint */
+            state_type = gtk_widget_get_state(widget);
         }
         else if (DETAIL("spinbutton_up") || DETAIL("spinbutton_down"))
         {
