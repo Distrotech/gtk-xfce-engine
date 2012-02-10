@@ -1,3 +1,9 @@
+2.99.1
+======
+- Changed rendering of GtkSpinButton.
+- Pixel align checkboxes in the Gtk+-3.0 engine.
+- Link against libm (bug #6253).
+
 2.99.0
 ======
 - Added Gtk+-3.0 theming engine.
