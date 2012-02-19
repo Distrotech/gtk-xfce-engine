@@ -681,7 +681,8 @@ static void render_frame(GtkThemingEngine * engine, cairo_t * cr, gdouble x, gdo
                         cairo_stroke(cr);
                     }
                 }
-                else if (gtk_theming_engine_has_class(engine, GTK_STYLE_CLASS_MENUBAR))
+                else if (gtk_theming_engine_has_class(engine, GTK_STYLE_CLASS_MENUBAR) &&
+                         !gtk_theming_engine_has_class(engine, GTK_STYLE_CLASS_MENUITEM))
                 {
                     if ((xt > 1) && (yt > 1))
                     {
@@ -884,7 +885,8 @@ static void render_frame(GtkThemingEngine * engine, cairo_t * cr, gdouble x, gdo
                 {
                     /* Do nothing */
                 }
-                else if (gtk_theming_engine_has_class(engine, GTK_STYLE_CLASS_MENUBAR))
+                else if (gtk_theming_engine_has_class(engine, GTK_STYLE_CLASS_MENUBAR) &&
+                         !gtk_theming_engine_has_class(engine, GTK_STYLE_CLASS_MENUITEM))
                 {
                     if ((xt > 1) && (yt > 1))
                     {
