@@ -39,7 +39,6 @@
     -GtkButton-child-displacement-x  : 0;
     -GtkButton-child-displacement-y  : 1;
     -GtkCheckButton-indicator-size   : 12;
-    -GtkMenuItem-selected-shadow-type: none;
     -GtkPaned-handle-size            : 7;
     -GtkRange-slider-width           : 15;
     -GtkRange-stepper-size           : 15;
@@ -339,7 +338,7 @@ GtkCalendar:selected {
     background-image: -gtk-gradient(linear, left top, left bottom, from(shade(#f8f7f5, 1.05)), to(shade(#f8f7f5, 0.95)));
     border-color: darker(#f8f7f5);
 
-    border-width: 1 2;
+    border-width: 0 0;
 }
 
 .menuitem:active, .menu:active {
@@ -353,10 +352,17 @@ GtkCalendar:selected {
     border-color: darker(#f8f7f5);
 }
 
-.menuitem:hover, .menu:hover {
+.menu:hover {
     color: #000000;
     background-image: -gtk-gradient(linear, left top, left bottom, from(shade(#ffe371, 1.05)), to(shade(#ffe371, 0.95)));
     border-color: darker(#ffe371);
+}
+
+.menuitem:hover {
+    color: #000000;
+    background-image: -gtk-gradient(linear, left top, left bottom, from(shade(#ffe371, 1.05)), to(shade(#ffe371, 0.95)));
+    border-color: darker(#ffe371);
+    border-style: none;
 }
 
 .menuitem:selected, .menu:selected {
@@ -378,7 +384,7 @@ GtkCalendar:selected {
     background-image: -gtk-gradient(linear, left top, left bottom, from(shade(@bg_insensitive, 1.05)), to(shade(@bg_insensitive, 0.95)));
 }
 
-.menubar:hover, .toolbar:hover {
+.toolbar:hover {
     color: #000000;
     background-image: -gtk-gradient(linear, left top, left bottom, from(shade(#fff0b3, 1.05)), to(shade(#fff0b3, 0.95)));
     border-color: darker(#fff0b3);

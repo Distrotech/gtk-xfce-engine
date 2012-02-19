@@ -33,7 +33,6 @@
     -GtkButton-default-outside-border: 0;
     -GtkCheckButton-indicator-size   : 15;
     -GtkMenuBar-shadow-type          : out;
-    -GtkMenuItem-selected-shadow-type: out;
     -GtkPaned-handle-size            : 8;
     -GtkRange-slider-width           : 15;
     -GtkRange-stepper-size           : 15;
@@ -330,7 +329,7 @@ GtkCalendar:selected {
     border-color: darker(#A4B8CB);
 }
 
-.dock:hover, .menubar:hover, .toolbar:hover {
+.dock:hover .toolbar:hover {
     color: #224466;
     background-color: #B3C8DD;
     border-color: darker(#B3C8DD);
@@ -360,10 +359,17 @@ GtkCalendar:selected {
     background-image: -gtk-gradient(linear, left top, left bottom, from(shade(@bg_insensitive, 0.8)), to(shade(@bg_insensitive, 1.8)));
 }
 
-.button:hover, .menuitem:hover {
+.button:hover {
     color: #224466;
     background-image: -gtk-gradient(linear, left top, left bottom, from(shade(#B3C8DD, 0.8)), to(shade(#B3C8DD, 1.8)));
     border-color: darker(#B3C8DD);
+}
+
+.menuitem:hover {
+    color: #224466;
+    background-image: -gtk-gradient(linear, left top, left bottom, from(shade(#B3C8DD, 0.8)), to(shade(#B3C8DD, 1.8)));
+    border-color: darker(#B3C8DD);
+    border-style: outset;
 }
 
 .button:selected, .menuitem:selected {

@@ -43,6 +43,10 @@
     background-image: -gtk-gradient(linear, left top, left bottom, from(shade(#4B6983, 1.0)), to(shade(#4B6983, 1.1)));
 }
 
+.menuitem {
+    border-width: 0 0;
+}
+
 .scrollbar, .scale {
     border-width: 2 2;
 }

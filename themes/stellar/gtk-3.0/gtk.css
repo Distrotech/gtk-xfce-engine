@@ -33,7 +33,6 @@
     -GtkButton-default-outside-border: 6;
     -GtkWidget-focus-padding         : 0;
     -GtkCheckButton-indicator-size   : 15;
-    -GtkMenuItem-selected-shadow-type: in;
     -GtkRange-slider-width           : 12;
     -GtkRange-stepper-size           : 12;
     -GtkRange-stepper-spacing        : 0;
@@ -298,9 +297,9 @@ GtkCalendar:selected {
     border-color: @fg_selected;
 }
 
-.menu:hover {
+.menuitem:hover {
     color: #FFFFFF;
     background-color: #9BA0B0;
     border-color: darker(#9BA0B0);
+    border-style: inset;
 }
-

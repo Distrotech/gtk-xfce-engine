@@ -40,7 +40,6 @@
     -GtkCheckButton-indicator-size   : 12;
     -GtkMenuBar-internal-padding     : 2;
     -GtkMenuBar-shadow-type          : out;
-    -GtkMenuItem-selected-shadow-type: etched-in;
     -GtkPaned-handle-size            : 7;
     -GtkRange-slider-width           : 15;
     -GtkRange-stepper-size           : 15;
@@ -355,7 +354,7 @@ GtkCalendar:selected {
     background-color: #ffffff;
     border-color: darker(#ffffff);
 
-    border-width: 1 2;
+    border-width: 1;
 }
 
 .menuitem:active {
@@ -373,6 +372,11 @@ GtkCalendar:selected {
     color: #ffffff;
     background-color: #5582c2;
     border-color: darker(#5582c2);
+    border-style: solid;
+}
+
+.menuitem *:hover {
+    color: #ffffff;
 }
 
 .menuitem:selected {
@@ -380,14 +384,14 @@ GtkCalendar:selected {
     border-color: darker(@bg_selected);
 }
 
-.menubar:active .toolbar:active {
+.menubar:active, .toolbar:active {
     color: #ffffff;
     background-color: #d3d7e0;
     border-color: darker(#d3d7e0);
 }
 
 
-.menubar:hover .toolbar:hover {
+.toolbar:hover {
     color: #ffffff;
     background-color: #5582c2;
     border-color: darker(#5582c2);

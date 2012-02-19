@@ -34,7 +34,6 @@
     -GtkWidget-focus-padding         : 0;
     -GtkCheckButton-indicator-size   : 15;
     -GtkMenuBar-shadow-type          : out;
-    -GtkMenuItem-selected-shadow-type: none;
     -GtkRange-slider-width           : 15;
     -GtkRange-stepper-size           : 15;
     -GtkRange-stepper-spacing        : 0;
@@ -348,29 +347,13 @@ GtkCalendar:selected {
 }
 
 .menubar {
-    background-image: -gtk-gradient(linear, left top, left bottom, from(shade(@bg_normal, 0.9)), to(shade(@bg_normal, 1.1)));
-
     border-width: 2 2;
 }
 
 .menubar:active {
     color: #ffffff;
-    background-image: -gtk-gradient(linear, left top, left bottom, from(shade(#0055ef, 1.1)), to(shade(#0055ef, 0.9)));
+    background-color: #0055ef;
     border-color: darker(#0055ef);
-}
-
-.menubar:insensitive {
-    background-image: -gtk-gradient(linear, left top, left bottom, from(shade(@bg_insensitive, 0.9)), to(shade(@bg_insensitive, 1.1)));
-}
-
-.menubar:hover {
-    color: #ffffff;
-    background-image: -gtk-gradient(linear, left top, left bottom, from(shade(#0055ef, 0.9)), to(shade(#0055ef, 1.1)));
-    border-color: darker(#0055ef);
-}
-
-.menubar:selected {
-    background-image: -gtk-gradient(linear, left top, left bottom, from(shade(@bg_selected, 1.1)), to(shade(@bg_selected, 0.9)));
 }
 
 .button {
@@ -447,6 +430,21 @@ GtkCalendar:selected {
 .button.vertical:selected, .scrollbar.slider.vertical:selected {
     background-image: -gtk-gradient(linear, left top, right top, from(shade(#efebdf, 0.9)), to(shade(#efebdf, 1.1)));
     border-color: darker(#efebdf);
+}
+
+.menuitem {
+    border-width: 0 0;
+}
+
+.menuitem:hover {
+    color: #ffffff;
+    background-color: #0055ef;
+    border-color: darker(#0055ef);
+    border-style: none;
+}
+
+.menuitem *:hover {
+    color: #ffffff;
 }
 
 .scale.slider.horizontal {
