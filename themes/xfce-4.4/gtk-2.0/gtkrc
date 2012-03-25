@@ -339,7 +339,7 @@ class "*GtkVScale*"                style "scale"
 widget_class "*GtkProgress*"       style "progress"
 class "*GtkProgress*"              style "progress"
 
-widget "gtk-tooltips*"             style "tooltips"
+widget "gtk-tooltip*"              style "tooltips"
 
 widget_class "*.Collection"        style "rox"
 
