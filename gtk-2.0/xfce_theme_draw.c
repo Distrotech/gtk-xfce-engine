@@ -59,83 +59,8 @@ static GtkStyleClass *parent_class = NULL;
 
 extern GtkStyleClass xfce_default_class;
 
-/* Taken from raleigh theme engine */
-typedef enum
-{
-    CHECK_LIGHT,
-    CHECK_DARK,
-    CHECK_BASE,
-    CHECK_TEXT,
-    CHECK_CROSS,
-    CHECK_DASH,
-    RADIO_LIGHT,
-    RADIO_DARK,
-    RADIO_BASE,
-    RADIO_TEXT
-}
-Part;
-
-#define PART_SIZE 13
-
-static const guint32 check_light_bits[] = {
-    0x0000, 0x0000, 0x0800, 0x0800, 0x0800, 0x0800, 0x0800, 0x0800, 0x0800,
-    0x0800, 0x0800, 0x0ffc, 0x0000,
-};
-static const guint32 check_dark_bits[] = {
-    0x0000, 0x0ffe, 0x0002, 0x0002, 0x0002, 0x0002, 0x0002, 0x0002, 0x0002,
-    0x0002, 0x0002, 0x0002, 0x0000,
-};
-static const guint32 check_base_bits[] = {
-    0x0000, 0x0000, 0x07fc, 0x07fc, 0x07fc, 0x07fc, 0x07fc, 0x07fc, 0x07fc,
-    0x07fc, 0x07fc, 0x0000, 0x0000,
-};
-static const guint32 check_text_bits[] = {
-    0x0000, 0x0000, 0x1c00, 0x0f00, 0x0380, 0x01c0, 0x00e0, 0x0073, 0x003f,
-    0x003e, 0x001c, 0x0018, 0x0008
-};
-static const guint32 check_cross_bits[] = {
-    0x0000, 0x0000, 0x0000, 0x0300, 0x0380, 0x01d8, 0x00f8, 0x0078, 0x0038,
-    0x0018, 0x0000, 0x0000, 0x0000,
-};
-static const guint32 check_dash_bits[] = {
-    0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x03f8, 0x03f8, 0x03f8, 0x0000,
-    0x0000, 0x0000, 0x0000, 0x0000,
-};
-static const guint32 radio_light_bits[] = {
-    0x0000, 0x0000, 0x0000, 0x0400, 0x0800, 0x0800, 0x0800, 0x0800, 0x0800,
-    0x0400, 0x0208, 0x01f0, 0x0000,
-};
-static const guint32 radio_dark_bits[] = {
-    0x0000, 0x01f0, 0x0208, 0x0004, 0x0002, 0x0002, 0x0002, 0x0002, 0x0002,
-    0x0004, 0x0000, 0x0000, 0x0000,
-};
-static const guint32 radio_base_bits[] = {
-    0x0000, 0x0000, 0x01f0, 0x03f8, 0x07fc, 0x07fc, 0x07fc, 0x07fc, 0x07fc,
-    0x03f8, 0x01f0, 0x0000, 0x0000,
-};
-static const guint32 radio_text_bits[] = {
-    0x0000, 0x0000, 0x0000, 0x0000, 0x00e0, 0x01f0, 0x01f0, 0x01f0, 0x00e0,
-    0x0000, 0x0000, 0x0000, 0x0000,
-};
-
-static struct
-{
-    const guint32 *bits;
-    cairo_surface_t *bmap;
-}
-parts[] =
-{
-    { check_light_bits, NULL },
-    { check_dark_bits,  NULL },
-    { check_base_bits,  NULL },
-    { check_text_bits,  NULL },
-    { check_cross_bits, NULL },
-    { check_dash_bits,  NULL },
-    { radio_light_bits, NULL },
-    { radio_dark_bits,  NULL },
-    { radio_base_bits,  NULL },
-    { radio_text_bits,  NULL }
-};
+#define CHECK_MIN_SIZE 15
+#define CHECK_DRAW_SIZE 11
 
 /* internal functions */
 static void xfce_fill_background(GtkStyle * style, GdkWindow * window, GtkStateType state_type, GdkRectangle * area, GtkWidget * widget, const gchar * detail, gint x, gint y, gint width, gint height);
@@ -1034,102 +959,191 @@ static void draw_box(GtkStyle * style, GdkWindow * window, GtkStateType state_ty
     draw_shadow(style, window, state_type, shadow_type, area, widget, detail, x, y, width, height);
 }
 
-static cairo_surface_t *get_part_bmap (Part part)
+static void draw_dash(cairo_t * cr, const GdkColor * c, gdouble x, gdouble y, guint size)
 {
-    if (!parts[part].bmap)
+    guint w, b;
+
+    b = (size + 7) / 10;
+
+    w = size / 4;
+    if ((w % 2) != (size % 2))
     {
-        parts[part].bmap = cairo_image_surface_create_for_data((guchar*)parts[part].bits, CAIRO_FORMAT_A1, PART_SIZE, PART_SIZE, sizeof(guint32));
+        w += 1;
     }
-    return parts[part].bmap;
-}
-
-static void draw_part(GdkDrawable * drawable, GdkColor * c, GdkRectangle * area, gint x, gint y, Part part)
-{
-    cairo_t *cr;
-
-    cr = ge_gdk_drawable_to_cairo(drawable, area);
 
     gdk_cairo_set_source_color(cr, c);
 
-    cairo_mask_surface(cr, get_part_bmap (part), x, y);
+    cairo_set_line_width (cr, w);
+    cairo_set_line_cap(cr, CAIRO_LINE_CAP_BUTT);
 
-    cairo_destroy(cr);
+    cairo_move_to (cr, x + b, y + size / 2.0);
+    cairo_line_to (cr, x + size - b, y + size / 2.0);
+
+    cairo_stroke(cr);
 }
 
 static void draw_check(GtkStyle * style, GdkWindow * window, GtkStateType state, GtkShadowType shadow, GdkRectangle * area, GtkWidget * widget, const gchar * detail, gint x, gint y, gint width, gint height)
 {
+    cairo_t *cr;
+    guint size;
+    guint w, b;
+
     CHECK_ARGS;
     SANITIZE_SIZE;
 
-    x -= (1 + PART_SIZE - width) / 2;
-    y -= (1 + PART_SIZE - height) / 2;
-
-    if (DETAIL("check"))    /* Menu item */
+    /* Make sure it doesn't get to small */
+    if (width < CHECK_MIN_SIZE)
+        width = CHECK_DRAW_SIZE;
+    else
     {
-#if 0
-        draw_part(window, style->bg_gc[state], area, x, y, CHECK_BASE);
-#endif
-        draw_part(window, &style->dark[state], area, x, y, CHECK_LIGHT);
-        draw_part(window, &style->dark[state], area, x, y, CHECK_DARK);
+        width -= CHECK_MIN_SIZE - CHECK_DRAW_SIZE;
+        x += (CHECK_MIN_SIZE - CHECK_DRAW_SIZE) / 2;
+    }
+    if (height < CHECK_MIN_SIZE)
+        height = CHECK_DRAW_SIZE;
+    else
+    {
+        height -= CHECK_MIN_SIZE - CHECK_DRAW_SIZE;
+        y += (CHECK_MIN_SIZE - CHECK_DRAW_SIZE) / 2;
+    }
 
-        if (shadow == GTK_SHADOW_IN)
-        {
-            draw_part(window, &style->fg[state], area, x, y, CHECK_CROSS);
-        }
-        else if (shadow == GTK_SHADOW_ETCHED_IN)
-        {
-            draw_part(window, &style->fg[state], area, x, y, CHECK_DASH);
-        }
+    /* Make it square */
+    if (width > height)
+    {
+        x += width - height;
+        size = height;
     }
     else
     {
-        draw_part(window, &style->base[state], area, x, y, CHECK_BASE);
-        draw_part(window, &style->dark[state], area, x, y, CHECK_LIGHT);
-        draw_part(window, &style->dark[state], area, x, y, CHECK_DARK);
-
-        if (shadow == GTK_SHADOW_IN)
-        {
-            draw_part(window, &style->text[state], area, x, y, CHECK_CROSS);
-        }
-        else if (shadow == GTK_SHADOW_ETCHED_IN)
-        {
-            draw_part(window, &style->fg[state], area, x, y, CHECK_DASH);
-        }
+        y += height - width;
+        size = width;
     }
+
+    cr = ge_gdk_drawable_to_cairo(window, area);
+
+    cairo_set_antialias (cr, CAIRO_ANTIALIAS_NONE);
+
+    cairo_rectangle (cr, x + 0.5, y + 0.5, width - 1, height - 1);
+
+    if (!DETAIL("check"))    /* not Menu item */
+    {
+        /* Draw the background */
+        gdk_cairo_set_source_color(cr, &style->base[state]);
+        cairo_fill_preserve(cr);
+    }
+
+    /* Draw the border */
+    gdk_cairo_set_source_color(cr, &style->dark[state]);
+    cairo_stroke(cr);
+
+    x += 1;
+    y += 1;
+    size -= 2;
+
+    if (shadow == GTK_SHADOW_IN)
+    {
+        b = (size + 7) / 10;
+        w = ((size + 4 - b) / 6);
+
+        /* Draw the check */
+        gdk_cairo_set_source_color(cr, &style->fg[state]);
+
+        cairo_move_to (cr, x + b, y + floor(size / 2 - 1.5));
+
+        cairo_line_to (cr, x + b, y + size - b);
+        cairo_line_to (cr, x + b + w, y + size - b);
+
+        cairo_line_to (cr, x + size - b, y + b + w);
+        cairo_line_to (cr, x + size - b, y + b);
+        cairo_line_to (cr, x + size - b + 1 - w, y + b);
+
+        cairo_line_to (cr, x + b + w, y + size - b + 1 - 2 * w);
+
+        cairo_line_to (cr, x + b + w, y + floor(size / 2 - 1.5));
+
+        cairo_close_path (cr);
+        cairo_fill(cr);
+    }
+    else if (shadow == GTK_SHADOW_ETCHED_IN)
+    {
+        gdk_cairo_set_source_color(cr, &style->fg[state]);
+        draw_dash(cr, &style->fg[state], x, y, size);
+    }
+
+    cairo_destroy(cr);
 }
 
 static void draw_option(GtkStyle * style, GdkWindow * window, GtkStateType state, GtkShadowType shadow, GdkRectangle * area, GtkWidget * widget, const gchar * detail, gint x, gint y, gint width, gint height)
 {
+    cairo_t *cr;
+    guint size;
+
     CHECK_ARGS;
     SANITIZE_SIZE;
 
-    x -= (1 + PART_SIZE - width) / 2;
-    y -= (1 + PART_SIZE - height) / 2;
-
-    if (DETAIL("option"))   /* Menu item */
+    /* Make sure it doesn't get to small */
+    if (width < CHECK_MIN_SIZE)
+        width = CHECK_DRAW_SIZE;
+    else
     {
-#if 0
-        draw_part(window, style->bg_gc[state], area, x, y, RADIO_BASE);
-#endif
-        draw_part(window, &style->dark[state], area, x, y, RADIO_LIGHT);
-        draw_part(window, &style->dark[state], area, x, y, RADIO_DARK);
+        width -= CHECK_MIN_SIZE - CHECK_DRAW_SIZE;
+        x += (CHECK_MIN_SIZE - CHECK_DRAW_SIZE) / 2;
+    }
+    if (height < CHECK_MIN_SIZE)
+        height = CHECK_DRAW_SIZE;
+    else
+    {
+        height -= CHECK_MIN_SIZE - CHECK_DRAW_SIZE;
+        y += (CHECK_MIN_SIZE - CHECK_DRAW_SIZE) / 2;
+    }
 
-        if (shadow == GTK_SHADOW_IN)
-        {
-            draw_part(window, &style->fg[state], area, x, y, RADIO_TEXT);
-        }
+    /* Make it square */
+    if (width > height)
+    {
+        x += width - height;
+        size = height;
     }
     else
     {
-        draw_part(window, &style->base[state], area, x, y, RADIO_BASE);
-        draw_part(window, &style->dark[state], area, x, y, RADIO_LIGHT);
-        draw_part(window, &style->dark[state], area, x, y, RADIO_DARK);
-
-        if (shadow == GTK_SHADOW_IN)
-        {
-            draw_part(window, &style->text[state], area, x, y, RADIO_TEXT);
-        }
+        y += height - width;
+        size = width;
     }
+
+    cr = ge_gdk_drawable_to_cairo(window, area);
+
+    cairo_set_antialias (cr, CAIRO_ANTIALIAS_NONE);
+
+    cairo_arc (cr, x + (width / 2.0), y + (height / 2.0), width / 2, 0, 2 * M_PI);
+
+    if (!DETAIL("option"))   /* not Menu item */
+    {
+        /* Draw the background */
+        gdk_cairo_set_source_color(cr, &style->base[state]);
+        cairo_fill_preserve(cr);
+    }
+
+    /* Draw the border */
+    gdk_cairo_set_source_color(cr, &style->dark[state]);
+    cairo_stroke(cr);
+
+    x += 1;
+    y += 1;
+    size -= 2;
+
+    if (shadow == GTK_SHADOW_IN)
+    {
+        /* Draw the dot */
+        gdk_cairo_set_source_color(cr, &style->fg[state]);
+
+        cairo_arc (cr, x + (size / 2.0), y + (size / 2.0), (size / 2.0) - ((size + 2) / 5), 0, 2 * M_PI);
+        cairo_fill(cr);
+    }
+    else if (shadow == GTK_SHADOW_ETCHED_IN)
+    {
+        draw_dash(cr, &style->fg[state], x, y, size);
+    }
+
+    cairo_destroy(cr);
 }
 
 static void draw_shadow_gap(GtkStyle * style, GdkWindow * window, GtkStateType state_type, GtkShadowType shadow_type, GdkRectangle * area, GtkWidget * widget, const gchar * detail, gint x, gint y, gint width, gint height, GtkPositionType gap_side, gint gap_x, gint gap_width)

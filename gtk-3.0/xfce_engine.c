@@ -65,83 +65,8 @@
 
 G_DEFINE_DYNAMIC_TYPE(XfceEngine, xfce_engine, GTK_TYPE_THEMING_ENGINE)
 
-/* Taken from raleigh theme engine */
-typedef enum
-{
-    CHECK_LIGHT,
-    CHECK_DARK,
-    CHECK_BASE,
-    CHECK_TEXT,
-    CHECK_CROSS,
-    CHECK_DASH,
-    RADIO_LIGHT,
-    RADIO_DARK,
-    RADIO_BASE,
-    RADIO_TEXT
-}
-Part;
-
-#define PART_SIZE 13
-
-static const guint32 check_light_bits[] = {
-    0x0000, 0x0000, 0x0800, 0x0800, 0x0800, 0x0800, 0x0800, 0x0800, 0x0800,
-    0x0800, 0x0800, 0x0ffc, 0x0000,
-};
-static const guint32 check_dark_bits[] = {
-    0x0000, 0x0ffe, 0x0002, 0x0002, 0x0002, 0x0002, 0x0002, 0x0002, 0x0002,
-    0x0002, 0x0002, 0x0002, 0x0000,
-};
-static const guint32 check_base_bits[] = {
-    0x0000, 0x0000, 0x07fc, 0x07fc, 0x07fc, 0x07fc, 0x07fc, 0x07fc, 0x07fc,
-    0x07fc, 0x07fc, 0x0000, 0x0000,
-};
-static const guint32 check_text_bits[] = {
-    0x0000, 0x0000, 0x1c00, 0x0f00, 0x0380, 0x01c0, 0x00e0, 0x0073, 0x003f,
-    0x003e, 0x001c, 0x0018, 0x0008
-};
-static const guint32 check_cross_bits[] = {
-    0x0000, 0x0000, 0x0000, 0x0300, 0x0380, 0x01d8, 0x00f8, 0x0078, 0x0038,
-    0x0018, 0x0000, 0x0000, 0x0000,
-};
-static const guint32 check_dash_bits[] = {
-    0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x03f8, 0x03f8, 0x03f8, 0x0000,
-    0x0000, 0x0000, 0x0000, 0x0000,
-};
-static const guint32 radio_light_bits[] = {
-    0x0000, 0x0000, 0x0000, 0x0400, 0x0800, 0x0800, 0x0800, 0x0800, 0x0800,
-    0x0400, 0x0208, 0x01f0, 0x0000,
-};
-static const guint32 radio_dark_bits[] = {
-    0x0000, 0x01f0, 0x0208, 0x0004, 0x0002, 0x0002, 0x0002, 0x0002, 0x0002,
-    0x0004, 0x0000, 0x0000, 0x0000,
-};
-static const guint32 radio_base_bits[] = {
-    0x0000, 0x0000, 0x01f0, 0x03f8, 0x07fc, 0x07fc, 0x07fc, 0x07fc, 0x07fc,
-    0x03f8, 0x01f0, 0x0000, 0x0000,
-};
-static const guint32 radio_text_bits[] = {
-    0x0000, 0x0000, 0x0000, 0x0000, 0x00e0, 0x01f0, 0x01f0, 0x01f0, 0x00e0,
-    0x0000, 0x0000, 0x0000, 0x0000,
-};
-
-static struct
-{
-    const guint32 *bits;
-    cairo_surface_t *bmap;
-}
-parts[] =
-{
-    { check_light_bits, NULL },
-    { check_dark_bits,  NULL },
-    { check_base_bits,  NULL },
-    { check_text_bits,  NULL },
-    { check_cross_bits, NULL },
-    { check_dash_bits,  NULL },
-    { radio_light_bits, NULL },
-    { radio_dark_bits,  NULL },
-    { radio_base_bits,  NULL },
-    { radio_text_bits,  NULL }
-};
+#define CHECK_MIN_SIZE 15
+#define CHECK_DRAW_SIZE 11
 
 /* internal functions */
 static void xfce_draw_grips(GtkThemingEngine * engine, cairo_t * cr, gdouble x, gdouble y, gdouble width, gdouble height, GtkOrientation orientation);
@@ -986,47 +911,117 @@ static void render_frame(GtkThemingEngine * engine, cairo_t * cr, gdouble x, gdo
     }
 }
 
-static cairo_surface_t *get_part_bmap (Part part)
+static void draw_dash(cairo_t * cr, const GdkRGBA * c, gdouble x, gdouble y, guint size)
 {
-    if (!parts[part].bmap)
-    {
-        parts[part].bmap = cairo_image_surface_create_for_data((guchar*)parts[part].bits, CAIRO_FORMAT_A1, PART_SIZE, PART_SIZE, sizeof(guint32));
-    }
-    return parts[part].bmap;
-}
+    guint w, b;
 
-static void draw_part(cairo_t * cr, const GdkRGBA * c, gdouble x, gdouble y, Part part)
-{
+    b = (size + 7) / 10;
+
+    w = size / 4;
+    if ((w % 2) != (size % 2))
+    {
+        w += 1;
+    }
+
     gdk_cairo_set_source_rgba(cr, c);
 
-    cairo_mask_surface(cr, get_part_bmap (part), x, y);
+    cairo_set_line_width (cr, w);
+    cairo_set_line_cap(cr, CAIRO_LINE_CAP_BUTT);
+
+    cairo_move_to (cr, x + b, y + size / 2.0);
+    cairo_line_to (cr, x + size - b, y + size / 2.0);
+
+    cairo_stroke(cr);
 }
 
 static void render_check(GtkThemingEngine * engine, cairo_t * cr, gdouble x, gdouble y, gdouble width, gdouble height)
 {
     GtkStateFlags state;
     GdkRGBA bg, border, fg;
+    guint size;
+    guint w, b;
 
-    x -= floor((1 + PART_SIZE - width) / 2);
-    y -= floor((1 + PART_SIZE - height) / 2);
+    /* Make sure it doesn't get to small */
+    if (width < CHECK_MIN_SIZE)
+        width = CHECK_DRAW_SIZE;
+    else
+    {
+        width -= CHECK_MIN_SIZE - CHECK_DRAW_SIZE;
+        x += (CHECK_MIN_SIZE - CHECK_DRAW_SIZE) / 2;
+    }
+    if (height < CHECK_MIN_SIZE)
+        height = CHECK_DRAW_SIZE;
+    else
+    {
+        height -= CHECK_MIN_SIZE - CHECK_DRAW_SIZE;
+        y += (CHECK_MIN_SIZE - CHECK_DRAW_SIZE) / 2;
+    }
+
+    /* Make it square */
+    if (width > height)
+    {
+        x += width - height;
+        size = height;
+    }
+    else
+    {
+        y += height - width;
+        size = width;
+    }
 
     state = gtk_theming_engine_get_state(engine);
     gtk_theming_engine_get_background_color(engine, state, &bg);
     gtk_theming_engine_get_border_color(engine, state, &border);
     gtk_theming_engine_get_color(engine, state, &fg);
 
+    GE_CAIRO_INIT;
+
+    cairo_set_antialias (cr, CAIRO_ANTIALIAS_NONE);
+
+    cairo_rectangle (cr, x + 0.5, y + 0.5, size - 1, size - 1);
+
     if (!gtk_theming_engine_has_class(engine, GTK_STYLE_CLASS_MENUITEM))
-        draw_part(cr, &bg, x, y, CHECK_BASE);
-    draw_part(cr, &border, x, y, CHECK_LIGHT);
-    draw_part(cr, &border, x, y, CHECK_DARK);
+    {
+        /* Draw the background */
+        gdk_cairo_set_source_rgba(cr, &bg);
+        cairo_fill_preserve(cr);
+    }
+
+    /* Draw the border */
+    gdk_cairo_set_source_rgba(cr, &border);
+    cairo_stroke(cr);
+
+    x += 1;
+    y += 1;
+    size -= 2;
 
     if (state & GTK_STATE_FLAG_INCONSISTENT)
     {
-        draw_part(cr, &fg, x, y, CHECK_DASH);
+        draw_dash(cr, &fg, x, y, size);
     }
     else if (state & GTK_STATE_FLAG_ACTIVE)
     {
-        draw_part(cr, &fg, x, y, CHECK_CROSS);
+        b = (size + 7) / 10;
+        w = ((size + 4 - b) / 6);
+
+        /* Draw the check */
+        gdk_cairo_set_source_rgba(cr, &fg);
+
+        cairo_move_to (cr, x + b, y + floor(size / 2 - 1.5));
+
+        cairo_line_to (cr, x + b, y + size - b);
+        cairo_line_to (cr, x + b + w, y + size - b);
+
+        cairo_line_to (cr, x + size - b, y + b + w);
+        cairo_line_to (cr, x + size - b, y + b);
+        cairo_line_to (cr, x + size - b + 1 - w, y + b);
+
+        cairo_line_to (cr, x + b + w, y + size - b + 1 - 2 * w);
+
+        cairo_line_to (cr, x + b + w, y + floor(size / 2 - 1.5));
+
+        cairo_close_path (cr);
+        cairo_fill(cr);
     }
 }
 
@@ -1034,27 +1029,73 @@ static void render_option(GtkThemingEngine * engine, cairo_t * cr, gdouble x, gd
 {
     GtkStateFlags state;
     GdkRGBA bg, border, fg;
+    guint size;
 
-    x -= (1 + PART_SIZE - width) / 2;
-    y -= (1 + PART_SIZE - height) / 2;
+    /* Make sure it doesn't get to small */
+    if (width < CHECK_MIN_SIZE)
+        width = CHECK_DRAW_SIZE;
+    else
+    {
+        width -= CHECK_MIN_SIZE - CHECK_DRAW_SIZE;
+        x += (CHECK_MIN_SIZE - CHECK_DRAW_SIZE) / 2;
+    }
+    if (height < CHECK_MIN_SIZE)
+        height = CHECK_DRAW_SIZE;
+    else
+    {
+        height -= CHECK_MIN_SIZE - CHECK_DRAW_SIZE;
+        y += (CHECK_MIN_SIZE - CHECK_DRAW_SIZE) / 2;
+    }
+
+    /* Make it square */
+    if (width > height)
+    {
+        x += width - height;
+        size = height;
+    }
+    else
+    {
+        y += height - width;
+        size = width;
+    }
 
     state = gtk_theming_engine_get_state(engine);
     gtk_theming_engine_get_background_color(engine, state, &bg);
     gtk_theming_engine_get_border_color(engine, state, &border);
     gtk_theming_engine_get_color(engine, state, &fg);
 
+    GE_CAIRO_INIT;
+
+    cairo_set_antialias (cr, CAIRO_ANTIALIAS_NONE);
+
+    cairo_arc (cr, x + (size / 2.0), y + (size / 2.0), (size - 1) / 2.0, 0, 2 * M_PI);
+
     if (!gtk_theming_engine_has_class(engine, GTK_STYLE_CLASS_MENUITEM))
-        draw_part(cr, &bg, x, y, RADIO_BASE);
-    draw_part(cr, &border, x, y, RADIO_LIGHT);
-    draw_part(cr, &border, x, y, RADIO_DARK);
+    {
+        /* Draw the background */
+        gdk_cairo_set_source_rgba(cr, &bg);
+        cairo_fill_preserve(cr);
+    }
+
+    /* Draw the border */
+    gdk_cairo_set_source_rgba(cr, &border);
+    cairo_stroke(cr);
+
+    x += 1;
+    y += 1;
+    size -= 2;
 
     if (state & GTK_STATE_FLAG_INCONSISTENT)
     {
-        draw_part(cr, &fg, x, y, CHECK_DASH);
+        draw_dash(cr, &fg, x, y, size);
     }
     else if (state & GTK_STATE_FLAG_ACTIVE)
     {
-        draw_part(cr, &fg, x, y, RADIO_TEXT);
+        /* Draw the dot */
+        gdk_cairo_set_source_rgba(cr, &fg);
+
+        cairo_arc (cr, x + (size / 2.0), y + (size / 2.0), (size / 2.0) - ((size + 2) / 5), 0, 2 * M_PI);
+        cairo_fill(cr);
     }
 }
 
@@ -1352,6 +1393,8 @@ static void render_frame_gap(GtkThemingEngine * engine, cairo_t * cr, gdouble x,
             ew = 2;
             eh = gap_e - gap_s;
             break;
+        default:
+            return;
     }
 
     cairo_save (cr);
