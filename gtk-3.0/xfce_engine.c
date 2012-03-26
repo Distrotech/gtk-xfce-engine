@@ -15,7 +15,7 @@
  *  Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
  *
  *  Copyright (C) 1999-2004 Olivier Fourdan (fourdan@xfce.org)
- *  Copyright (C) 2011 Peter de Ridder (peter@xfce.org)
+ *  Copyright (C) 2011-2012 Peter de Ridder (peter@xfce.org)
  *
  *  Portions based Thinice port by
  *                       Tim Gerla <timg@rrv.net>,
@@ -57,6 +57,9 @@
 #define GRIP_STYLE "grip-style"
 #define XFCE_GRIP_STYLE "-"XFCE_NAMESPACE"-"GRIP_STYLE
 
+#define BUTTON_DEFAULT_BORDER "button-default-border"
+#define XFCE_BUTTON_DEFAULT_BORDER "-"XFCE_NAMESPACE"-"BUTTON_DEFAULT_BORDER
+
 /* macros to make sure that things are sane ... */
 #define GE_CAIRO_INIT                               \
     cairo_set_line_width (cr, 1.0);                 \
@@ -70,6 +73,7 @@ G_DEFINE_DYNAMIC_TYPE(XfceEngine, xfce_engine, GTK_TYPE_THEMING_ENGINE)
 
 /* internal functions */
 static void xfce_draw_grips(GtkThemingEngine * engine, cairo_t * cr, gdouble x, gdouble y, gdouble width, gdouble height, GtkOrientation orientation);
+static void xfce_draw_frame(GtkThemingEngine * engine, cairo_t * cr, gdouble x, gdouble y, gdouble width, gdouble height, GtkBorderStyle border_style);
 
 static void render_line(GtkThemingEngine * engine, cairo_t * cr, gdouble x1, gdouble y1, gdouble x2, gdouble y2);
 static void render_background(GtkThemingEngine * engine, cairo_t * cr, gdouble x, gdouble y, gdouble width, gdouble height);
@@ -409,13 +413,58 @@ static void render_frame(GtkThemingEngine * engine, cairo_t * cr, gdouble x, gdo
     gint xthick, ythick;
     GtkStateFlags state;
     GtkBorderStyle border_style;
+    GtkBorder border;
+    GtkBorder *default_border;
+
+    state = gtk_theming_engine_get_state(engine);
+    gtk_theming_engine_get(engine, state, GTK_STYLE_PROPERTY_BORDER_STYLE, &border_style, NULL);
+
+    xthick = border.left;
+    ythick = border.top;
+
+    xt = MIN(xthick, width - 1);
+    yt = MIN(ythick, height - 1);
+
+    /* Spin buttons are a special case */
+    if (gtk_theming_engine_has_class(engine, GTK_STYLE_CLASS_SPINBUTTON) && gtk_theming_engine_has_class(engine, GTK_STYLE_CLASS_BUTTON))
+    {
+        /* Draw an outset border when hovering a spinner button */
+        if (!(state & GTK_STATE_FLAG_ACTIVE))
+            border_style = GTK_BORDER_STYLE_OUTSET;
+    }
+
+    /* Default buttons are a special case */
+    if (gtk_theming_engine_has_class(engine, GTK_STYLE_CLASS_BUTTON) && gtk_theming_engine_has_class(engine, GTK_STYLE_CLASS_DEFAULT))
+    {
+        /* Draw an inset border around the default border */
+        gtk_theming_engine_get(engine, state, XFCE_BUTTON_DEFAULT_BORDER, &default_border, NULL);
+
+	if (default_border &&
+            (default_border->left > xt) && (default_border->right > xt) &&
+	    (default_border->top > yt) && (default_border->bottom > yt))
+	{
+            xfce_draw_frame(engine, cr, x - default_border->left, y - default_border->top,
+                    width + default_border->left + default_border->right, height + default_border->top + default_border->bottom,
+                    GTK_BORDER_STYLE_INSET);
+	}
+
+        gtk_border_free(default_border);
+    }
+
+    xfce_draw_frame(engine, cr, x, y, width, height, border_style);
+}
+
+static void xfce_draw_frame(GtkThemingEngine * engine, cairo_t * cr, gdouble x, gdouble y, gdouble width, gdouble height, GtkBorderStyle border_style)
+{
+    gint xt, yt;
+    gint xthick, ythick;
+    GtkStateFlags state;
     GdkRGBA dark, light, mid, bg;
     GdkRGBA black = {0.0, 0.0, 0.0, 1.0}; /* black */
     gboolean smooth_edge;
     GtkBorder border;
 
     state = gtk_theming_engine_get_state(engine);
-    gtk_theming_engine_get(engine, state, GTK_STYLE_PROPERTY_BORDER_STYLE, &border_style, NULL);
 
     if (border_style == GTK_BORDER_STYLE_NONE)
         return;
@@ -427,14 +476,6 @@ static void render_frame(GtkThemingEngine * engine, cairo_t * cr, gdouble x, gdo
 
     xthick = border.left;
     ythick = border.top;
-
-    /* Spin buttons are a special case */
-    if (gtk_theming_engine_has_class(engine, GTK_STYLE_CLASS_SPINBUTTON) && gtk_theming_engine_has_class(engine, GTK_STYLE_CLASS_BUTTON))
-    {
-        /* Draw an outset border when hovering a spinner button */
-        if (!(state & GTK_STATE_FLAG_ACTIVE))
-            border_style = GTK_BORDER_STYLE_OUTSET;
-    }
 
     xt = MIN(xthick, width - 1);
     yt = MIN(ythick, height - 1);
@@ -1406,7 +1447,7 @@ static void render_frame_gap(GtkThemingEngine * engine, cairo_t * cr, gdouble x,
     cairo_rectangle (cr, x0, ey + eh, x1 - x0, y_1 - (ey + eh));
     cairo_clip (cr);
 
-    render_frame (engine, cr, x, y, width, height);
+    xfce_draw_frame (engine, cr, x, y, width, height, border_style);
 
     cairo_restore (cr);
 }
@@ -1619,6 +1660,13 @@ static void xfce_engine_class_init(XfceEngineClass * klass)
     gtk_theming_engine_register_property(XFCE_NAMESPACE, NULL,
             g_param_spec_enum(GRIP_STYLE, "Grip style", "Grip style",
                 XFCE_TYPE_GRIP_STYLE, XFCE_GRIP_ROUGH, 0));
+
+    /* Compatibility properties */
+    gtk_theming_engine_register_property(XFCE_NAMESPACE, NULL,
+            g_param_spec_boxed (BUTTON_DEFAULT_BORDER,
+                "Default Spacing",
+                "Extra space to add for GTK_CAN_DEFAULT buttons",
+                GTK_TYPE_BORDER, 0));
 }
 
 static void xfce_engine_class_finalize(XfceEngineClass * klass)
