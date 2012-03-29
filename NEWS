@@ -1,3 +1,10 @@
+2.99.2
+======
+- Improved menu theming
+- Theme gtk-tooltip (bug #8494).
+- Scale radio and check boxes (bug #8456).
+- Draw inset border around default button (bug #8454).
+
 2.99.1
 ======
 - Changed rendering of GtkSpinButton.
