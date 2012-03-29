@@ -300,3 +300,6 @@ GtkCalendar:selected {
     border-width: 1 1;
 }
 
+.menuitem:hover {
+    border-style: solid;
+}

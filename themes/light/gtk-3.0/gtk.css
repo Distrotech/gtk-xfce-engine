@@ -34,7 +34,6 @@
     -GtkWidget-focus-padding         : 0;
     -GtkCheckButton-indicator-size   : 15;
     -GtkMenuBar-shadow-type          : out;
-    -GtkMenuItem-selected-shadow-type: in;
     -GtkRange-slider-width           : 15;
     -GtkRange-stepper-size           : 15;
     -GtkRange-stepper-spacing        : 0;
@@ -318,3 +317,10 @@ GtkCalendar:selected {
     border-color: darker(#f5f5dd);
 }
 
+.menuitem {
+    border-width: 2 2;
+}
+
+.menuitem:hover {
+    border-style: inset;
+}

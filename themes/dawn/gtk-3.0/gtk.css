@@ -36,7 +36,6 @@
     -GtkCheckButton-indicator-size   : 12;
     -GtkMenuBar-internal-padding     : 4;
     -GtkMenuBar-shadow-type          : out;
-    -GtkMenuItem-selected-shadow-type: etched-in;
     -GtkPaned-handle-size     	     : 7;
     -GtkRange-slider-width           : 16;
     -GtkRange-stepper-size           : 16;
@@ -366,7 +365,11 @@ GtkCalendar:selected {
 }
 
 .menuitem {
-    border-width: 1 2;
+    border-width: 1 1;
+}
+
+.menuitem:hover {
+    border-style: solid;
 }
 
 .radio {

@@ -34,7 +34,6 @@
     -GtkWidget-focus-padding         : 0;
     -GtkCheckButton-indicator-size   : 15;
     -GtkMenuBar-shadow-type          : out;
-    -GtkMenuItem-selected-shadow-type: none;
     -GtkRange-slider-width           : 11;
     -GtkRange-stepper-size           : 13;
     -GtkRange-stepper-spacing        : 0;
@@ -377,4 +376,12 @@ GtkCalendar:selected {
 
 .button.vertical:selected, .slider.vertical:selected {
     background-image: -gtk-gradient(linear, left top, right top, from(shade(@bg_selected, 0.9)), to(shade(@bg_selected, 1.1)));
+}
+
+.menuitem {
+    border-width: 0 0;
+}
+
+.menuitem:hover {
+    border-style: none;
 }

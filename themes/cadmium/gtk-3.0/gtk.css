@@ -318,7 +318,7 @@ GtkCalendar:selected {
     background-image: -gtk-gradient(linear, left top, left bottom, from(shade(@bg_insensitive, 1.05)), to(shade(@bg_insensitive, 0.95)));
 }
 
-.dock:hover, .menubar:hover, .toolbar:hover {
+.dock:hover, .toolbar:hover {
     background-image: -gtk-gradient(linear, left top, left bottom, from(shade(@bg_prelight, 1.05)), to(shade(@bg_prelight, 0.95)));
 }
 
@@ -348,7 +348,12 @@ GtkCalendar:selected {
 }
 
 .menuitem {
-    border-width: 1 2;
+    border-width: 1 1;
+    background-image: none;
+}
+
+.menuitem:hover {
+    border-style: solid;
 }
 
 .slider.vertical, .progressbar.vertical {

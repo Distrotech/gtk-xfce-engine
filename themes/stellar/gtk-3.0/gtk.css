@@ -31,9 +31,9 @@
 
     -GtkButton-default-border        : 5;
     -GtkButton-default-outside-border: 6;
+    -xfce-button-default-border      : 5;
     -GtkWidget-focus-padding         : 0;
     -GtkCheckButton-indicator-size   : 15;
-    -GtkMenuItem-selected-shadow-type: in;
     -GtkRange-slider-width           : 12;
     -GtkRange-stepper-size           : 12;
     -GtkRange-stepper-spacing        : 0;
@@ -74,6 +74,10 @@
     color: @fg_selected;
     background-color: @bg_selected;
     border-color: darker(@bg_selected);
+}
+
+*:focus {
+    -xfce-button-default-border: 7;
 }
 
 .view, .entry {
@@ -298,9 +302,9 @@ GtkCalendar:selected {
     border-color: @fg_selected;
 }
 
-.menu:hover {
+.menuitem:hover {
     color: #FFFFFF;
     background-color: #9BA0B0;
     border-color: darker(#9BA0B0);
+    border-style: inset;
 }
-
