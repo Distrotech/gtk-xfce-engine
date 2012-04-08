@@ -30,7 +30,8 @@ libxfce_la_CFLAGS = \
 libxfce_la_LIBADD = \
 	$(GTK_LIBS) \
 	$(GLIB_LIBS) \
-	$(GMODULE_LIBS)
+	$(GMODULE_LIBS) \
+	$(LIBM)
 
 libxfce_la_LDFLAGS = \
 	-module \
