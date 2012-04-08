@@ -322,6 +322,14 @@ GtkCalendar:selected {
     border-color: @fg_selected;
 }
 
+GtkComboBox {
+    padding: 0;
+}
+
+GtkComboBox .button {
+    padding: 1;
+}
+
 .button, .slider.horizontal {
     background-image: -gtk-gradient(linear, left top, left bottom, from(shade(@bg_normal, 1.1)), to(shade(@bg_normal, 1.0)));
 

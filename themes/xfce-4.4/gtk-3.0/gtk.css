@@ -324,6 +324,14 @@ GtkCalendar:selected {
     border-color: @fg_selected;
 }
 
+GtkComboBox {
+    padding: 0;
+}
+
+GtkComboBox .button {
+    padding: 1;
+}
+
 .menu {
     background-color: #ffffff;
     border-color: darker(#ffffff);

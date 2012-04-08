@@ -21,6 +21,14 @@
     text-shadow: 1 1 white;
 }
 
+GtkComboBox {
+    padding: 0;
+}
+
+GtkComboBox .button {
+    padding: 1;
+}
+
 .button {
     border-width: 2 2;
 
