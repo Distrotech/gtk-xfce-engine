@@ -7,10 +7,10 @@ dnl *** Version information ***
 dnl ***************************
 m4_define([gtk_xfce_engine_version_major], [2])
 m4_define([gtk_xfce_engine_version_minor], [99])
-m4_define([gtk_xfce_engine_version_micro], [2])
+m4_define([gtk_xfce_engine_version_micro], [3])
 m4_define([gtk_xfce_engine_version_nano],  []) dnl leave this empty to have no nano version
 m4_define([gtk_xfce_engine_version_build], [@REVISION@])
-m4_define([gtk_xfce_engine_version_tag],   [git])
+m4_define([gtk_xfce_engine_version_tag],   [])
 m4_define([gtk_xfce_engine_version], [gtk_xfce_engine_version_major().gtk_xfce_engine_version_minor().gtk_xfce_engine_version_micro()ifelse(gtk_xfce_engine_version_nano(), [], [], [.gtk_xfce_engine_version_nano()])ifelse(gtk_xfce_engine_version_tag(), [git], [gtk_xfce_engine_version_tag()-gtk_xfce_engine_version_build()], [gtk_xfce_engine_version_tag()])])
 
 dnl *******************************************
@@ -100,7 +100,6 @@ AC_MSG_RESULT([$PLATFORM_LDFLAGS])
 AC_SUBST([PLATFORM_LDFLAGS])
 
 AC_OUTPUT([
-gtk-xfce-engine-2.spec
 Makefile
 gtk-2.0/Makefile
 gtk-3.0/Makefile

@@ -1,3 +1,8 @@
+2.99.3
+======
+- Link against libm for floor() and ceil().
+- Reduce GtkComboBox padding (bug #8455).
+
 2.99.2
 ======
 - Improved menu theming
