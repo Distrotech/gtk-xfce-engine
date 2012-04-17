@@ -47,7 +47,7 @@
     -GtkWidget-focus-padding         : 3;
     -GtkWidget-interior-focus        : true;
 
-    border-width: 2 2;
+    border-width: 2px 2px;
 
     color: @fg_normal;
     background-color: @bg_normal;
@@ -258,14 +258,14 @@ GtkCalendar:selected {
     background-image: -gtk-gradient(linear, left top, left bottom, from(shade(@bg_prelight, 1.1)), to(shade(@bg_prelight, 1.0)));
     border-color: darker(@bg_prelight);
 
-    border-width: 1 1;
+    border-width: 1px 1px;
 }
 
 .progressbar.vertical {
     background-image: -gtk-gradient(linear, left top, right top, from(shade(@bg_prelight, 1.1)), to(shade(@bg_prelight, 1.0)));
     border-color: darker(@bg_prelight);
 
-    border-width: 1 1;
+    border-width: 1px 1px;
 }
 
 .trough {
@@ -323,11 +323,11 @@ GtkCalendar:selected {
 }
 
 GtkComboBox {
-    padding: 0;
+    padding: 0px;
 }
 
 GtkComboBox .button {
-    padding: 1;
+    padding: 1px;
 }
 
 .button, .slider.horizontal {
@@ -373,7 +373,7 @@ GtkComboBox .button {
 }
 
 .menuitem {
-    border-width: 1 1;
+    border-width: 1px 1px;
 }
 
 .menuitem:hover {

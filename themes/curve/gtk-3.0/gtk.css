@@ -44,7 +44,7 @@
     -GtkWidget-focus-line-width      : 1;
     -GtkWidget-interior-focus        : false;
 
-    border-width: 2 2;
+    border-width: 2px 2px;
 
     color: @fg_normal;
     background-color: @bg_normal;
@@ -254,7 +254,7 @@ GtkCalendar:selected {
 .progressbar {
     -xfce-smooth-edge: false;
 
-    border-width: 1 1;
+    border-width: 1px 1px;
 
     color: #ffffff;
     background-image: -gtk-gradient(linear, left top, left bottom, from(shade(#4464ac, 0.8)), to(shade(#4464ac, 1.8)));
@@ -264,7 +264,7 @@ GtkCalendar:selected {
 .trough {
     -xfce-smooth-edge: false;
 
-    border-width: 1 1;
+    border-width: 1px 1px;
 
     color: #ffffff;
     background-image: -gtk-gradient(linear, left top, left bottom, from(shade(@bg_normal, 0.8)), to(shade(@bg_normal, 1.8)));
@@ -274,7 +274,7 @@ GtkCalendar:selected {
 .trough.scale, .trough.scrollbar {
     -xfce-smooth-edge: true;
 
-    border-width: 2 2;
+    border-width: 2px 2px;
 
     background-color: @bg_active;
     background-image: none;
@@ -319,11 +319,11 @@ GtkCalendar:selected {
 }
 
 GtkComboBox {
-    padding: 0;
+    padding: 0px;
 }
 
 GtkComboBox .button {
-    padding: 1;
+    padding: 1px;
 }
 
 .dock:hover .toolbar:hover {

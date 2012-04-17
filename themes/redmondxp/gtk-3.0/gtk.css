@@ -42,7 +42,7 @@
     -GtkToolbar-shadow-type          : out;
     -GtkWidget-interior-focus        : true;
 
-    border-width: 2 2;
+    border-width: 2px 2px;
 
     color: @fg_normal;
     background-color: @bg_normal;
@@ -79,7 +79,7 @@
     background-color: @base_normal;
     border-color: darker(@bg_normal);
 
-    border-width: 1 1;
+    border-width: 1px 1px;
 }
 
 .view:active, .entry:active {
@@ -256,7 +256,7 @@ GtkCalendar:selected {
     background-image: -gtk-gradient(linear, left top, left bottom, from(shade(#0055ef, 0.9)), to(shade(#0055ef, 1.1)));
     border-color: darker(#0055ef);
 
-    border-width: 1 1;
+    border-width: 1px 1px;
 }
 
 .trough {
@@ -277,7 +277,7 @@ GtkCalendar:selected {
     background-color: #fafaf2;
     border-color: darker(#fafaf2);
 
-    border-width: 1 1;
+    border-width: 1px 1px;
 }
 
 .notebook tab, .notebook tab * {
@@ -318,18 +318,18 @@ GtkCalendar:selected {
 }
 
 GtkComboBox {
-    padding: 0;
+    padding: 0px;
 }
 
 GtkComboBox .button {
-    padding: 1;
+    padding: 1px;
 }
 
 .menu {
     background-color: #ffffff;
     border-color: darker(#ffffff);
 
-    border-width: 1 1;
+    border-width: 1px 1px;
 }
 
 .menu:active {
@@ -355,7 +355,7 @@ GtkComboBox .button {
 }
 
 .menubar {
-    border-width: 2 2;
+    border-width: 2px 2px;
 }
 
 .menubar:active {
@@ -441,7 +441,7 @@ GtkComboBox .button {
 }
 
 .menuitem {
-    border-width: 0 0;
+    border-width: 0px 0px;
 }
 
 .menuitem:hover {

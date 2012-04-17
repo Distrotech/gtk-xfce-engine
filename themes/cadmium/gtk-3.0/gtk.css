@@ -47,7 +47,7 @@
     -GtkToolbar-shadow-type          : out;
     -GtkWidget-interior-focus        : true;
 
-    border-width: 2 2;
+    border-width: 2px 2px;
 
     color: @fg_normal;
     background-color: @bg_normal;
@@ -307,11 +307,11 @@ GtkCalendar:selected {
 }
 
 GtkComboBox {
-    padding: 0;
+    padding: 0px;
 }
 
 GtkComboBox .button {
-    padding: 1;
+    padding: 1px;
 }
 
 .dock, .menubar, .toolbar {
@@ -356,7 +356,7 @@ GtkComboBox .button {
 }
 
 .menuitem {
-    border-width: 1 1;
+    border-width: 1px 1px;
     background-image: none;
 }
 

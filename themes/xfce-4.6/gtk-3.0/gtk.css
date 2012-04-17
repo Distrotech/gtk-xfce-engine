@@ -81,7 +81,7 @@
     -GtkTreeView-horizontal-separator: 0;
     -GtkTreeView-vertical-separator  : 0;
 
-    border-width: 2 2;
+    border-width: 2px 2px;
 
     color: @fg_normal;
     background-color: @bg_normal;
@@ -297,7 +297,7 @@ GtkCalendar:selected {
     background-image: -gtk-gradient(linear, left top, left bottom, from(shade(#cce2ff, 1.1)), to(shade(#cce2ff, 0.9)));
     border-color: darker(#cce2ff);
 
-    border-width: 0 0;
+    border-width: 0px 0px;
 }
 
 .progressbar.vertical {
@@ -318,7 +318,7 @@ GtkCalendar:selected {
     background-color: #ffffff;
     border-color: darker(#ffffff);
 
-    border-width: 1 1;
+    border-width: 1px 1px;
 }
 
 .notebook tab, .notebook tab * {
@@ -359,11 +359,11 @@ GtkCalendar:selected {
 }
 
 GtkComboBox {
-    padding: 0;
+    padding: 0px;
 }
 
 GtkComboBox .button {
-    padding: 1;
+    padding: 1px;
 }
 
 .menu {
@@ -375,7 +375,7 @@ GtkComboBox .button {
     background-color: #fafaf7;
     border-color: darker(#fafaf7);
 
-    border-width: 1 1;
+    border-width: 1px 1px;
 }
 
 .menu:active, .memuitem:active {
@@ -413,7 +413,7 @@ GtkComboBox .button {
     background-image: -gtk-gradient(linear, left top, left bottom, from(shade(#eeeeec, 1.0)), to(shade(#eeeeec, 0.9)));
     border-color: darker(#eeeeec);
 
-    border-width: 1 2;
+    border-width: 1px 2px;
 }
 
 .menubar:active {

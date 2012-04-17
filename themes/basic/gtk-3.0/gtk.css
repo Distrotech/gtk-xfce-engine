@@ -22,15 +22,15 @@
 }
 
 GtkComboBox {
-    padding: 0;
+    padding: 0px;
 }
 
 GtkComboBox .button {
-    padding: 1;
+    padding: 1px;
 }
 
 .button {
-    border-width: 2 2;
+    border-width: 2px 2px;
 
     background-image: -gtk-gradient(linear, left top, left bottom, from(shade(#DCDAD5, 1.1)), to(shade(#DCDAD5, 1.0)));
 }                                                         
@@ -52,9 +52,9 @@ GtkComboBox .button {
 }
 
 .menuitem {
-    border-width: 0 0;
+    border-width: 0px 0px;
 }
 
 .scrollbar, .scale {
-    border-width: 2 2;
+    border-width: 2px 2px;
 }

@@ -43,7 +43,7 @@
     -GtkWidget-focus-padding         : 2;
     -GtkWidget-interior-focus        : true;
 
-    border-width: 2 2;
+    border-width: 2px 2px;
 
     color: @fg_normal;
     background-color: @bg_normal;
@@ -254,7 +254,7 @@ GtkCalendar:selected {
     background-color: @bg_prelight;
     border-color: darker(@bg_prelight);
 
-    border-width: 1 1;
+    border-width: 1px 1px;
 }
 
 .scale.trough, .scrollbar.trough {
@@ -300,21 +300,21 @@ GtkCalendar:selected {
 }
 
 GtkComboBox {
-    padding: 0;
+    padding: 0px;
 }
 
 GtkComboBox .button {
-    padding: 1;
+    padding: 1px;
 }
 
 .dock, .menubar, .toolbar {
-    border-width: 3 3;
+    border-width: 3px 3px;
 }
 
 .button {
     background-image: -gtk-gradient(linear, left top, left bottom, from(shade(@bg_normal, 1.1)), to(shade(@bg_normal, 0.9)));
 
-    border-width: 3 3;
+    border-width: 3px 3px;
 
     -GtkWidget-focus-padding: 0;
 }

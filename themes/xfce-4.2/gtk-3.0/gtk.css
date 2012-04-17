@@ -52,7 +52,7 @@
     -GtkWidget-focus-padding         : 4;
     -GtkWidget-interior-focus        : true;
 
-    border-width: 2 2;
+    border-width: 2px 2px;
 
     color: @fg_normal;
     background-color: @bg_normal;
@@ -263,7 +263,7 @@ GtkCalendar:selected {
     background-color: #5582c2;
     border-color: darker(#5582c2);
 
-    border-width: 0 0;
+    border-width: 0px 0px;
 }
 
 .trough {
@@ -324,11 +324,11 @@ GtkCalendar:selected {
 }
 
 GtkComboBox {
-    padding: 0;
+    padding: 0px;
 }
 
 GtkComboBox .button {
-    padding: 1;
+    padding: 1px;
 }
 
 .menu {
@@ -362,7 +362,7 @@ GtkComboBox .button {
     background-color: #ffffff;
     border-color: darker(#ffffff);
 
-    border-width: 1;
+    border-width: 1px;
 }
 
 .menuitem:active {
@@ -483,7 +483,7 @@ GtkComboBox .button {
 }
 
 .dock {
-    border-width: 0 2;
+    border-width: 0px 2px;
 }
 
 .radio {

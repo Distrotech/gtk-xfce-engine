@@ -52,7 +52,7 @@
     -GtkWidget-secondary-cursor-color: #fcfcfc;
     -GtkWidget-cursor-aspect-ratio   : 0.1;
 
-    border-width: 1 1;
+    border-width: 1px 1px;
 
     color: @fg_normal;
     background-color: @bg_normal;
@@ -263,7 +263,7 @@ GtkCalendar:selected {
     background-color: @bg_prelight;
     border-color: darker(@bg_prelight);
 
-    border-width: 1 1;
+    border-width: 1px 1px;
 }
 
 .scale.trough, .scrollbar.trough {
@@ -314,11 +314,11 @@ GtkCalendar:selected {
 }
 
 GtkComboBox {
-    padding: 0;
+    padding: 0px;
 }
 
 GtkComboBox .button {
-    padding: 1;
+    padding: 1px;
 }
 
 .radio {
@@ -326,7 +326,7 @@ GtkComboBox .button {
 }
 
 .menuitem {
-    border-width: 1 2;
+    border-width: 1px 2px;
 }
 
 .button, .slider.horizontal {
@@ -352,7 +352,7 @@ GtkComboBox .button {
 }
 
 .menuitem {
-    border-width: 1 1;
+    border-width: 1px 1px;
 }
 
 .menuitem:hover {

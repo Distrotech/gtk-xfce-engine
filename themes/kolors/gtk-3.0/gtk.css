@@ -47,7 +47,7 @@
     -GtkWidget-focus-line-width      : 1;
     -GtkWidget-interior-focus        : true;
 
-    border-width: 1 1;
+    border-width: 1px 1px;
 
     color: @fg_normal;
     background-color: @bg_normal;
@@ -266,14 +266,14 @@ GtkCalendar:selected {
     background-image: -gtk-gradient(linear, left top, left bottom, from(shade(@bg_prelight, 1.1)), to(shade(@bg_prelight, 0.9)));
     border-color: darker(@bg_prelight);
 
-    border-width: 1 1;
+    border-width: 1px 1px;
 }
 
 .progressbar.vertical {
     background-image: -gtk-gradient(linear, left top, right top, from(shade(@bg_prelight, 1.1)), to(shade(@bg_prelight, 0.9)));
     border-color: darker(@bg_prelight);
 
-    border-width: 1 1;
+    border-width: 1px 1px;
 }
 
 .trough {
@@ -331,21 +331,21 @@ GtkCalendar:selected {
 }
 
 GtkComboBox {
-    padding: 0;
+    padding: 0px;
 }
 
 GtkComboBox .button {
-    padding: 1;
+    padding: 1px;
 }
 
 .dock, .menubar, .toolbar {
-    border-width: 1 2;
+    border-width: 1px 2px;
 }
 
 .button, .slider.horizontal {
     background-image: -gtk-gradient(linear, left top, left bottom, from(shade(@bg_normal, 1.1)), to(shade(@bg_normal, 0.9)));
 
-    border-width: 1 1;
+    border-width: 1px 1px;
 }
 
 .button:active, .slider.horizontal:active {
@@ -367,7 +367,7 @@ GtkComboBox .button {
 .button.vertical, .slider.vertical {
     background-image: -gtk-gradient(linear, left top, right top, from(shade(@bg_normal, 1.1)), to(shade(@bg_normal, 0.9)));
 
-    border-width: 1 1;
+    border-width: 1px 1px;
 }
 
 .button.vertical:active, .slider.vertical:active {
@@ -387,7 +387,7 @@ GtkComboBox .button {
 }
 
 .menuitem {
-    border-width: 0 0;
+    border-width: 0px 0px;
 }
 
 .menuitem:hover {

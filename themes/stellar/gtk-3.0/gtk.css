@@ -44,7 +44,7 @@
     -GtkWidget-focus-line-width      : 2;
     -GtkWidget-interior-focus        : false;
 
-    border-width: 1 1;
+    border-width: 1px 1px;
 
     color: @fg_normal;
     background-color: @bg_normal;
@@ -303,11 +303,11 @@ GtkCalendar:selected {
 }
 
 GtkComboBox {
-    padding: 0;
+    padding: 0px;
 }
 
 GtkComboBox .button {
-    padding: 1;
+    padding: 1px;
 }
 
 .menuitem:hover {

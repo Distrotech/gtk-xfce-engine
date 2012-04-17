@@ -295,15 +295,15 @@ GtkCalendar:selected {
 }
 
 GtkComboBox {
-    padding: 0;
+    padding: 0px;
 }
 
 GtkComboBox .button {
-    padding: 1;
+    padding: 1px;
 }
 
 .menuitem {
-    border-width: 2 2;
+    border-width: 2px 2px;
 }
 
 .menuitem:hover {
@@ -313,7 +313,7 @@ GtkComboBox .button {
 .slider {
     color: #525051;
 
-    border-width: 1 1;
+    border-width: 1px 1px;
 }
 
 .slider:active {
