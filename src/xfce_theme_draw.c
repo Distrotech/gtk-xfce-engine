@@ -987,6 +987,7 @@ static void draw_check(GtkStyle * style, GdkWindow * window, GtkStateType state,
     cairo_t *cr;
     guint size;
     guint w, b;
+    GdkColor * c;
 
     CHECK_ARGS;
     SANITIZE_SIZE;
@@ -1023,13 +1024,18 @@ static void draw_check(GtkStyle * style, GdkWindow * window, GtkStateType state,
 
     cairo_set_antialias (cr, CAIRO_ANTIALIAS_NONE);
 
-    cairo_rectangle (cr, x + 0.5, y + 0.5, width - 1, height - 1);
+    cairo_rectangle (cr, x + 0.5, y + 0.5, size - 1, size - 1);
 
     if (!DETAIL("check"))    /* not Menu item */
     {
         /* Draw the background */
         gdk_cairo_set_source_color(cr, &style->base[state]);
         cairo_fill_preserve(cr);
+        c = &style->text[state];
+    }
+    else
+    {
+        c = &style->fg[state];
     }
 
     /* Draw the border */
@@ -1046,7 +1052,7 @@ static void draw_check(GtkStyle * style, GdkWindow * window, GtkStateType state,
         w = ((size + 4 - b) / 6);
 
         /* Draw the check */
-        gdk_cairo_set_source_color(cr, &style->fg[state]);
+        gdk_cairo_set_source_color(cr, c);
 
         cairo_move_to (cr, x + b, y + floor(size / 2 - 1.5));
 
@@ -1066,8 +1072,7 @@ static void draw_check(GtkStyle * style, GdkWindow * window, GtkStateType state,
     }
     else if (shadow == GTK_SHADOW_ETCHED_IN)
     {
-        gdk_cairo_set_source_color(cr, &style->fg[state]);
-        draw_dash(cr, &style->fg[state], x, y, size);
+        draw_dash(cr, c, x, y, size);
     }
 
     cairo_destroy(cr);
@@ -1077,6 +1082,7 @@ static void draw_option(GtkStyle * style, GdkWindow * window, GtkStateType state
 {
     cairo_t *cr;
     guint size;
+    GdkColor * c;
 
     CHECK_ARGS;
     SANITIZE_SIZE;
@@ -1113,13 +1119,18 @@ static void draw_option(GtkStyle * style, GdkWindow * window, GtkStateType state
 
     cairo_set_antialias (cr, CAIRO_ANTIALIAS_NONE);
 
-    cairo_arc (cr, x + (width / 2.0), y + (height / 2.0), width / 2, 0, 2 * M_PI);
+    cairo_arc (cr, x + (size / 2.0), y + (size / 2.0), (size - 1) / 2.0, 0, 2 * M_PI);
 
     if (!DETAIL("option"))   /* not Menu item */
     {
         /* Draw the background */
         gdk_cairo_set_source_color(cr, &style->base[state]);
         cairo_fill_preserve(cr);
+        c = &style->text[state];
+    }
+    else
+    {
+        c = &style->fg[state];
     }
 
     /* Draw the border */
@@ -1133,14 +1144,14 @@ static void draw_option(GtkStyle * style, GdkWindow * window, GtkStateType state
     if (shadow == GTK_SHADOW_IN)
     {
         /* Draw the dot */
-        gdk_cairo_set_source_color(cr, &style->fg[state]);
+        gdk_cairo_set_source_color(cr, c);
 
         cairo_arc (cr, x + (size / 2.0), y + (size / 2.0), (size / 2.0) - ((size + 2) / 5), 0, 2 * M_PI);
         cairo_fill(cr);
     }
     else if (shadow == GTK_SHADOW_ETCHED_IN)
     {
-        draw_dash(cr, &style->fg[state], x, y, size);
+        draw_dash(cr, c, x, y, size);
     }
 
     cairo_destroy(cr);
