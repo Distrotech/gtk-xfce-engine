@@ -15,7 +15,7 @@
  *  Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
  *
  *  Copyright (C) 1999-2004 Olivier Fourdan (fourdan@xfce.org)
- *  Copyright (C) 2011 Peter de Ridder (peter@xfce.org)
+ *  Copyright (C) 2011-2012 Peter de Ridder (peter@xfce.org)
  *
  *  Portions based Thinice port by
  *                       Tim Gerla <timg@rrv.net>,
@@ -663,7 +663,7 @@ static void draw_shadow(GtkStyle * style, GdkWindow * window, GtkStateType state
                         cairo_stroke(cr);
                     }
                 }
-                else if (DETAIL ("dockitem_bin") || DETAIL ("dockitem") || DETAIL ("toolbar"))
+                else if (DETAIL ("handlebox_bin") || DETAIL ("handlebox") || DETAIL ("toolbar"))
                 {
                     if ((xt > 1) && (yt > 1))
                     {
@@ -695,7 +695,7 @@ static void draw_shadow(GtkStyle * style, GdkWindow * window, GtkStateType state
                         cairo_stroke(cr);
                     }
                 }
-                else if (DETAIL("vscrollbar") || DETAIL("hscrollbar") || DETAIL("bar") || DETAIL("slider") || DETAIL("vscale") || DETAIL("hscale"))
+                else if (DETAIL("vscrollbar") || DETAIL("hscrollbar") || DETAIL("slider") || DETAIL("vscale") || DETAIL("hscale"))
                 {
                     if ((xt > 1) && (yt > 1))
                     {
@@ -736,7 +736,7 @@ static void draw_shadow(GtkStyle * style, GdkWindow * window, GtkStateType state
                         cairo_stroke(cr);
                     }
                 }
-                else if (DETAIL("menubar") || DETAIL("frame") || DETAIL("dockitem") || DETAIL("dockitem_bin") || DETAIL("menu") || DETAIL("toolbar"))
+                else if (DETAIL("frame"))
                 {
                     if ((xt > 1) && (yt > 1))
                     {
@@ -864,7 +864,7 @@ static void draw_shadow(GtkStyle * style, GdkWindow * window, GtkStateType state
                         cairo_stroke(cr);
                     }
                 }
-                else if (DETAIL ("dockitem_bin") || DETAIL ("dockitem") || DETAIL ("toolbar"))
+                else if (DETAIL ("handlebox_bin") || DETAIL ("handlebox") || DETAIL ("toolbar"))
                 {
                     if ((xt > 1) && (yt > 1))
                     {
