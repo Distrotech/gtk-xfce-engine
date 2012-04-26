@@ -306,6 +306,9 @@ static void render_line(GtkThemingEngine * engine, cairo_t * cr, gdouble x1, gdo
         x1 += 1 + thickness_dark - thickness_light;
         y_2 += 1;
 
+        y_1 = floor(y_1);
+        y_2 = floor(y_2);
+
         cairo_set_line_width (cr, thickness_dark);
         gdk_cairo_set_source_rgba(cr, &dark);
         cairo_move_to(cr, x1 - (thickness_dark / 2.0), y_1);
@@ -326,6 +329,9 @@ static void render_line(GtkThemingEngine * engine, cairo_t * cr, gdouble x1, gdo
         /* Compensation for the way x and y are caclculated */
         y_1 += 1 + thickness_dark - thickness_light;
         x2 += 1;
+
+        x1 = floor(x1);
+        x2 = floor(x2);
 
         cairo_set_line_width (cr, thickness_dark);
         gdk_cairo_set_source_rgba(cr, &dark);
@@ -378,7 +384,8 @@ static void render_background(GtkThemingEngine * engine, cairo_t * cr, gdouble x
         xt = 0;
         yt = 0;
     }
-    else if (smooth_edge && gtk_theming_engine_has_class(engine, GTK_STYLE_CLASS_PROGRESSBAR))
+    else if ((smooth_edge && gtk_theming_engine_has_class(engine, GTK_STYLE_CLASS_PROGRESSBAR)) ||
+             (smooth_edge && gtk_theming_engine_has_class(engine, GTK_STYLE_CLASS_TROUGH)))
     {
         xt = 1;
         yt = 1;
@@ -386,10 +393,20 @@ static void render_background(GtkThemingEngine * engine, cairo_t * cr, gdouble x
     else
     {
         xt = MIN(xt, 2);
-        yt = MIN(yt, 2);
+        xt = MIN(xt, yt);
+        yt = xt;
     }
 
-    cairo_rectangle(cr, xt, yt, width - xt * 2, height - yt * 2);
+    /* The menubar only draws a bottom line */
+    if (gtk_theming_engine_has_class(engine, GTK_STYLE_CLASS_MENUBAR) &&
+        !gtk_theming_engine_has_class(engine, GTK_STYLE_CLASS_MENUITEM))
+    {
+        cairo_rectangle(cr, 0, 0, width, height - yt);
+    }
+    else
+    {
+        cairo_rectangle(cr, xt, yt, width - xt * 2, height - yt * 2);
+    }
 
     if(pattern)
     {
@@ -444,14 +461,14 @@ static void render_frame(GtkThemingEngine * engine, cairo_t * cr, gdouble x, gdo
         /* Draw an inset border around the default border */
         gtk_theming_engine_get(engine, state, XFCE_BUTTON_DEFAULT_BORDER, &default_border, NULL);
 
-	if (default_border &&
+        if (default_border &&
             (default_border->left > xt) && (default_border->right > xt) &&
-	    (default_border->top > yt) && (default_border->bottom > yt))
-	{
+            (default_border->top > yt) && (default_border->bottom > yt))
+        {
             xfce_draw_frame(engine, cr, x - default_border->left, y - default_border->top,
                     width + default_border->left + default_border->right, height + default_border->top + default_border->bottom,
                     GTK_BORDER_STYLE_INSET);
-	}
+        }
 
         gtk_border_free(default_border);
     }
@@ -507,9 +524,19 @@ static void xfce_draw_frame(GtkThemingEngine * engine, cairo_t * cr, gdouble x, 
             color_dark2light_mid(&dark, &light, &mid);
             if (smooth_edge)
             {
-                if (gtk_theming_engine_has_class(engine, GTK_STYLE_CLASS_TROUGH))
+                if (gtk_theming_engine_has_class(engine, GTK_STYLE_CLASS_TROUGH) && !gtk_theming_engine_has_class(engine, GTK_STYLE_CLASS_SCALE))
                 {
-                    /* Do nothing */
+                    gtk_theming_engine_get_background_color(engine, state, &bg);
+                    gdk_cairo_set_source_rgba(cr, &bg);
+                    cairo_rectangle(cr, x + 0.5, y + 0.5, width - 1, height - 1);
+                    cairo_stroke(cr);
+
+                    gdk_cairo_set_source_rgba(cr, &mid);
+                    cairo_rectangle(cr, x, y, 1, 1);
+                    cairo_rectangle(cr, x + width - 1, y, 1, 1);
+                    cairo_rectangle(cr, x, y + height - 1, 1, 1);
+                    cairo_rectangle(cr, x + width - 1, y + height - 1, 1, 1);
+                    cairo_fill(cr);
                 }
                 else if ((xt > 1) && (yt > 1))
                 {
@@ -571,7 +598,6 @@ static void xfce_draw_frame(GtkThemingEngine * engine, cairo_t * cr, gdouble x, 
             {
                 if (gtk_theming_engine_has_class(engine, GTK_STYLE_CLASS_TROUGH))
                 {
-                    gtk_theming_engine_get_border_color(engine, GTK_STATE_FLAG_ACTIVE, &dark);
                     gdk_cairo_set_source_rgba(cr, &dark);
                     cairo_rectangle(cr, x + 0.5, y + 0.5, width - 1, height - 1);
                     cairo_stroke(cr);
@@ -632,9 +658,6 @@ static void xfce_draw_frame(GtkThemingEngine * engine, cairo_t * cr, gdouble x, 
                     gdk_cairo_set_source_rgba(cr, &dark);
                     cairo_rectangle(cr, x + 0.5, y + 0.5, width - 1, height - 1);
                     cairo_stroke(cr);
-
-                    gtk_theming_engine_get_border_color(engine, GTK_STATE_FLAG_NORMAL, &dark);
-                    color_dark2light_mid(&dark, &light, &mid);
 
                     gdk_cairo_set_source_rgba(cr, &mid);
                     cairo_rectangle(cr, x, y, 1, 1);
@@ -708,7 +731,7 @@ static void xfce_draw_frame(GtkThemingEngine * engine, cairo_t * cr, gdouble x, 
                         cairo_stroke(cr);
                     }
                 }
-                else if (gtk_theming_engine_has_class(engine, GTK_STYLE_CLASS_SLIDER))
+                else if (gtk_theming_engine_has_class(engine, GTK_STYLE_CLASS_SCROLLBAR) || gtk_theming_engine_has_class(engine, GTK_STYLE_CLASS_SLIDER) || gtk_theming_engine_has_class(engine, GTK_STYLE_CLASS_SCALE))
                 {
                     if ((xt > 1) && (yt > 1))
                     {
@@ -1114,6 +1137,8 @@ static void render_option(GtkThemingEngine * engine, cairo_t * cr, gdouble x, gd
 
     cairo_set_antialias (cr, CAIRO_ANTIALIAS_NONE);
 
+    /* This is required since the render layout leaves a stale cairo point */
+    cairo_new_sub_path (cr);
     cairo_arc (cr, x + (size / 2.0), y + (size / 2.0), (size - 1) / 2.0, 0, 2 * M_PI);
 
     if (!gtk_theming_engine_has_class(engine, GTK_STYLE_CLASS_MENUITEM))
