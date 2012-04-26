@@ -373,7 +373,12 @@ static void render_background(GtkThemingEngine * engine, cairo_t * cr, gdouble x
 
     xt = MIN(xthick, width - 1);
     yt = MIN(ythick, height - 1);
-    if(smooth_edge && gtk_theming_engine_has_class(engine, GTK_STYLE_CLASS_PROGRESSBAR))
+    if (gtk_theming_engine_has_class(engine, GTK_STYLE_CLASS_NOTEBOOK))
+    {
+        xt = 0;
+        yt = 0;
+    }
+    else if (smooth_edge && gtk_theming_engine_has_class(engine, GTK_STYLE_CLASS_PROGRESSBAR))
     {
         xt = 1;
         yt = 1;
@@ -1467,7 +1472,7 @@ static void render_extension(GtkThemingEngine * engine, cairo_t * cr, gdouble x,
     state = gtk_theming_engine_get_state(engine);
     gtk_theming_engine_get_border(engine, state, &border);
 
-    GTK_THEMING_ENGINE_GET_CLASS(engine)->render_background(engine, cr, x - border.left + 1, y - border.top + 1, width + border.left + border.right - 2, height + border.top + border.bottom - 2);
+    GTK_THEMING_ENGINE_GET_CLASS(engine)->render_background(engine, cr, x, y, width, height);
 
     gtk_theming_engine_get(engine, state, XFCE_SMOOTH_EDGE, &smooth_edge, NULL);
 

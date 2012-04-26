@@ -1479,7 +1479,7 @@ static void draw_extension(GtkStyle * style, GdkWindow * window, GtkStateType st
     CHECK_ARGS;
     SANITIZE_SIZE;
 
-    gtk_style_apply_default_background(style, window, widget && !GTK_WIDGET_NO_WINDOW(widget), GTK_STATE_NORMAL, area, x, y, width, height);
+    gtk_style_apply_default_background(style, window, widget && !GTK_WIDGET_NO_WINDOW(widget), state_type, area, x, y, width, height);
 
     if (XFCE_RC_STYLE(style->rc_style)->smooth_edge)
     {
