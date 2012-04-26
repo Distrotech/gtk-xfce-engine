@@ -504,8 +504,16 @@ static void xfce_draw_frame(GtkThemingEngine * engine, cairo_t * cr, gdouble x, 
 
     switch (border_style)
     {
+#if GTK_CHECK_VERSION(3,4,0)
+        case GTK_BORDER_STYLE_HIDDEN:
+#endif
         case GTK_BORDER_STYLE_NONE:
             break;
+#if GTK_CHECK_VERSION(3,4,0)
+        case GTK_BORDER_STYLE_DOTTED:
+        case GTK_BORDER_STYLE_DASHED:
+        case GTK_BORDER_STYLE_DOUBLE:
+#endif
         case GTK_BORDER_STYLE_SOLID:
             gdk_cairo_set_source_rgba(cr, &dark);
             if ((xt > 1) && (yt > 1))
@@ -519,6 +527,78 @@ static void xfce_draw_frame(GtkThemingEngine * engine, cairo_t * cr, gdouble x, 
             }
             cairo_stroke(cr);
             break;
+#if GTK_CHECK_VERSION(3,4,0)
+	case GTK_BORDER_STYLE_GROOVE:
+            color_dark2light(&dark, &light);
+            if ((xt > 1) && (yt > 1))
+            {
+                gdk_cairo_set_source_rgba(cr, &light);
+                cairo_move_to(cr, x + 0.5, y + height - 0.5);
+                cairo_line_to(cr, x + width - 0.5, y + height - 0.5);
+                cairo_line_to(cr, x + width - 0.5, y + 0.5);
+                cairo_stroke(cr);
+
+                gdk_cairo_set_source_rgba(cr, &dark);
+                cairo_move_to(cr, x + width - 1.5, y + 0.5);
+                cairo_line_to(cr, x + 0.5, y + 0.5);
+                cairo_line_to(cr, x + 0.5, y + height - 1.5);
+                cairo_stroke(cr);
+
+                gdk_cairo_set_source_rgba(cr, &light);
+                cairo_move_to(cr, x + width - 1.5, y + 1.5);
+                cairo_line_to(cr, x + 1.5, y + 1.5);
+                cairo_line_to(cr, x + 1.5, y + height - 1.5);
+                cairo_stroke(cr);
+
+                gdk_cairo_set_source_rgba(cr, &dark);
+                cairo_move_to(cr, x + 1.5, y + height - 1.5);
+                cairo_line_to(cr, x + width - 1.5, y + height - 1.5);
+                cairo_line_to(cr, x + width - 1.5, y + 1.5);
+                cairo_stroke(cr);
+            }
+            else if ((xt > 0) && (yt > 0))
+            {
+                gdk_cairo_set_source_rgba(cr, &dark);
+                cairo_rectangle(cr, x + 0.5, y + 0.5, width - 1, height - 1);
+                cairo_stroke(cr);
+            }
+            break;
+	case GTK_BORDER_STYLE_RIDGE:
+            color_dark2light(&dark, &light);
+            if ((xt > 1) && (yt > 1))
+            {
+                gdk_cairo_set_source_rgba(cr, &dark);
+                cairo_move_to(cr, x + 0.5, y + height - 0.5);
+                cairo_line_to(cr, x + width - 0.5, y + height - 0.5);
+                cairo_line_to(cr, x + width - 0.5, y + 0.5);
+                cairo_stroke(cr);
+
+                gdk_cairo_set_source_rgba(cr, &light);
+                cairo_move_to(cr, x + width - 1.5, y + 0.5);
+                cairo_line_to(cr, x + 0.5, y + 0.5);
+                cairo_line_to(cr, x + 0.5, y + height - 1.5);
+                cairo_stroke(cr);
+
+                gdk_cairo_set_source_rgba(cr, &dark);
+                cairo_move_to(cr, x + width - 1.5, y + 1.5);
+                cairo_line_to(cr, x + 1.5, y + 1.5);
+                cairo_line_to(cr, x + 1.5, y + height - 1.5);
+                cairo_stroke(cr);
+
+                gdk_cairo_set_source_rgba(cr, &light);
+                cairo_move_to(cr, x + 1.5, y + height - 1.5);
+                cairo_line_to(cr, x + width - 1.5, y + height - 1.5);
+                cairo_line_to(cr, x + width - 1.5, y + 1.5);
+                cairo_stroke(cr);
+            }
+            else if ((xt > 0) && (yt > 0))
+            {
+                gdk_cairo_set_source_rgba(cr, &light);
+                cairo_rectangle(cr, x + 0.5, y + 0.5, width - 1, height - 1);
+                cairo_stroke(cr);
+            }
+            break;
+#endif
         case GTK_BORDER_STYLE_INSET:
             gtk_theming_engine_get(engine, state, XFCE_SMOOTH_EDGE, &smooth_edge, NULL);
             color_dark2light_mid(&dark, &light, &mid);
