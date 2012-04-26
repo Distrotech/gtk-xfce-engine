@@ -73,6 +73,7 @@
 
     -GtkScrollbar-has-backward-stepper: true;
     -GtkScrollbar-min-slider-length  : 20;
+    -GtkScrolledWindow-scrollbar-spacing: 0;
 
     -GtkToolbar-internal-padding     : 0;
     -GtkToolbar-space-size           : 10;
@@ -203,6 +204,10 @@ GtkCalendar:selected {
     background-color: @base_active;
 }
 
+GtkCalendar.button, GtkCalendar.button:active, GtkCalendar.button:insensitive, GtkCalendar.button:hover, GtkCalendar.button:selected {
+    background-image: none;
+}
+
 .check, .radio {
     color: @text_normal;
     background-color: @base_normal;
@@ -235,20 +240,10 @@ GtkCalendar:selected {
     border-color: darker(@bg_active);
 }
 
-.check:inconsistent, .radio:inconsistent {
-    color: @fg_normal;
-    background-color: @base_normal;
-    border-color: darker(@bg_normal);
-}
-
-.check:insensitive:inconsistent, .radio:insensitive:inconsistent {
-    color: @fg_insensitive;
-    background-color: @base_insensitive;
-    border-color: darker(@bg_insensitive);
-}
-
 .cell {
     color: @text_normal;
+
+    border-width: 0px 0px;
 }
 
 .cell:active {
@@ -292,12 +287,15 @@ GtkCalendar:selected {
     background-color: @bg_selected;
 }
 
+GtkProgressBar {
+    border-width: 0px 0px;
+    padding: 0px;
+}
+
 .progressbar {
     color: #4e9a06;
     background-image: -gtk-gradient(linear, left top, left bottom, from(shade(#cce2ff, 1.1)), to(shade(#cce2ff, 0.9)));
     border-color: darker(#cce2ff);
-
-    border-width: 0px 0px;
 }
 
 .progressbar.vertical {
@@ -305,6 +303,7 @@ GtkCalendar:selected {
 }
 
 .trough {
+    background-color: #e8e8e6;
     background-image: -gtk-gradient(linear, left top, left bottom, from(shade(#e8e8e6, 0.9)), to(shade(#e8e8e6, 1.1)));
     border-color: darker(#e8e8e6);
 }
@@ -313,12 +312,19 @@ GtkCalendar:selected {
     background-image: -gtk-gradient(linear, left top, right top, from(shade(#e8e8e6, 0.9)), to(shade(#e8e8e6, 1.1)));
 }
 
+.scrollbar.trough {
+    background-color: #d9d7d6;
+
+    border-width: 2px 2px;
+}
+
 .notebook {
     color: #101010;
     background-color: #ffffff;
     border-color: darker(#ffffff);
 
     border-width: 1px 1px;
+    padding: 1px;
 }
 
 .notebook tab, .notebook tab * {
@@ -375,7 +381,8 @@ GtkComboBox .button {
     background-color: #fafaf7;
     border-color: darker(#fafaf7);
 
-    border-width: 1px 1px;
+    border-width: 2px 1px;
+    padding: 2px 1px;
 }
 
 .menu:active, .memuitem:active {
@@ -413,7 +420,11 @@ GtkComboBox .button {
     background-image: -gtk-gradient(linear, left top, left bottom, from(shade(#eeeeec, 1.0)), to(shade(#eeeeec, 0.9)));
     border-color: darker(#eeeeec);
 
-    border-width: 1px 2px;
+    border-width: 2px 1px;
+}
+
+.menubar * {
+    padding: 2px 3px;
 }
 
 .menubar:active {
@@ -434,7 +445,7 @@ GtkComboBox .button {
 }
 
 .button {
-    background-image: -gtk-gradient(linear, left top, left bottom, from(shade(#eeeeec, 1.1)), to(shade(#eeeeec, 0.95)));
+    background-image: -gtk-gradient(linear, left top, left bottom, from(shade(#eeeeec, 1.1)), to(shade(#eeeeec, 0.9)));
     border-color: darker(#eeeeec);
 
     -GtkWidget-focus-line-pattern: "\0";
@@ -442,24 +453,24 @@ GtkComboBox .button {
 
 .button:active {
     color: #000000;
-    background-image: -gtk-gradient(linear, left top, left bottom, from(shade(#d3d7cf, 0.95)), to(shade(#d3d7cf, 1.1)));
-    border-color: darker(#d3d7cf);
+    background-image: -gtk-gradient(linear, left top, left bottom, from(shade(#d9d7d6, 0.9)), to(shade(#d9d7d6, 1.1)));
+    border-color: darker(#d9d7d6);
 }
 
 .button:insensitive {
-    background-image: -gtk-gradient(linear, left top, left bottom, from(shade(@bg_insensitive, 1.1)), to(shade(@bg_insensitive, 0.95)));
+    background-image: -gtk-gradient(linear, left top, left bottom, from(shade(@bg_insensitive, 1.1)), to(shade(@bg_insensitive, 0.9)));
     border-color: darker(@bg_insensitive);
 }
 
 .button:hover {
-    background-image: -gtk-gradient(linear, left top, left bottom, from(shade(#cce2ff, 1.1)), to(shade(#cce2ff, 0.95)));
+    background-image: -gtk-gradient(linear, left top, left bottom, from(shade(#cce2ff, 1.1)), to(shade(#cce2ff, 0.9)));
     border-color: darker(#cce2ff);
 }
 
 .button:selected {
     color: #ffffff;
-    background-image: -gtk-gradient(linear, left top, left bottom, from(shade(#3465a4, 0.95)), to(shade(#3465a4, 1.1)));
-    border-color: darker(#3465a4);
+    background-image: -gtk-gradient(linear, left top, left bottom, from(shade(#4e627d, 0.9)), to(shade(#4e627d, 1.1)));
+    border-color: darker(#4e627d);
 }
 
 .tooltip {
@@ -520,4 +531,9 @@ GtkComboBox .button {
 .button.vertical:selected, .slider.vertical:selected {
     background-image: -gtk-gradient(linear, left top, right top, from(shade(@bg_selected, 0.9)), to(shade(@bg_selected, 1.1)));
     border-color: darker(@bg_selected);
+}
+
+.dock {
+    -xfce-grip-style: rough;
+    border-style: outset;
 }
