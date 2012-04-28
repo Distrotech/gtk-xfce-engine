@@ -1,3 +1,15 @@
+3.0.0
+=====
+- Added px for border sizes.
+- Corrected DETAIL names.
+- Use the correct colors for options and checks.
+- More consistent extension rendering.
+- Corrected class matching and alignments.
+- Require Gtk 3.2.
+- Tuned default theme for Gtk 3.2.
+- Added Gtk 3.4 support to the engine.
+- Default themes don't support Gtk+-3.4.
+
 2.99.3
 ======
 - Link against libm for floor() and ceil().
