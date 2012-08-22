@@ -278,4 +278,6 @@ void gradient_draw_shaded(cairo_t *cr, gint x, gint y, gint width, gint height, 
     cairo_fill (cr);
 
     cairo_restore(cr);
+
+    cairo_pattern_destroy(gradient);
 }
