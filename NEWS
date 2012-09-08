@@ -1,3 +1,8 @@
+3.0.1
+=====
+- Don't leak a graduent pattern at each draw (bug #8521).
+- Default themes don't support Gtk+-3.4.
+
 3.0.0
 =====
 - Added px for border sizes.
