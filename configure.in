@@ -14,7 +14,7 @@ m4_define([gtk_xfce_engine_version_major], [3])
 m4_define([gtk_xfce_engine_version_minor], [0])
 m4_define([gtk_xfce_engine_version_micro], [1])
 m4_define([gtk_xfce_engine_version_nano],  []) dnl leave this empty to have no nano version
-m4_define([gtk_xfce_engine_version_build], [bd46665])
+m4_define([gtk_xfce_engine_version_build], [6395179])
 m4_define([gtk_xfce_engine_version_tag],   [])
 m4_define([gtk_xfce_engine_version], [gtk_xfce_engine_version_major().gtk_xfce_engine_version_minor().gtk_xfce_engine_version_micro()ifelse(gtk_xfce_engine_version_nano(), [], [], [.gtk_xfce_engine_version_nano()])ifelse(gtk_xfce_engine_version_tag(), [git], [gtk_xfce_engine_version_tag()-gtk_xfce_engine_version_build()], [gtk_xfce_engine_version_tag()])])
 
