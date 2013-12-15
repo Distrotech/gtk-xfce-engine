@@ -1259,13 +1259,13 @@ static void draw_box_gap(GtkStyle * style, GdkWindow * window, GtkStateType stat
                     gdk_cairo_set_source_color(cr, c3);
                     cairo_move_to(cr, x + 2.5, y + height - 1.5);
                     cairo_line_to(cr, x + width - 1.5, y + height - 1.5);
-                    cairo_line_to(cr, x + width - 1.5, y + 0.5);
+                    cairo_line_to(cr, x + width - 0.5, y + 0.5);
                     cairo_stroke(cr);
 
                     gdk_cairo_set_source_color(cr, c4);
                     cairo_move_to(cr, x + 1.5, y + height - 0.5);
                     cairo_line_to(cr, x + width - 0.5, y + height - 0.5);
-                    cairo_line_to(cr, x + width - 0.5, y + 0.5);
+                    cairo_line_to(cr, x + width - 0.5, y + 1.5);
                     cairo_stroke(cr);
 
                     cairo_set_line_cap(cr, CAIRO_LINE_CAP_BUTT);
@@ -1290,7 +1290,7 @@ static void draw_box_gap(GtkStyle * style, GdkWindow * window, GtkStateType stat
                     {
                         gdk_cairo_set_source_color(cr, c1);
                         cairo_move_to(cr, x + gap_x + gap_width, y + 0.5);
-                        cairo_line_to(cr, x + width - 1, y + 0.5);
+                        cairo_line_to(cr, x + width, y + 0.5);
                         cairo_stroke(cr);
 
                         gdk_cairo_set_source_color(cr, c2);
@@ -1316,12 +1316,12 @@ static void draw_box_gap(GtkStyle * style, GdkWindow * window, GtkStateType stat
                     cairo_stroke(cr);
 
                     gdk_cairo_set_source_color(cr, c3);
-                    cairo_move_to(cr, x + width - 1.5, y + 1.5);
+                    cairo_move_to(cr, x + width - 1.5, y + 2.5);
                     cairo_line_to(cr, x + width - 1.5, y + height - 0.5);
                     cairo_stroke(cr);
 
                     gdk_cairo_set_source_color(cr, c4);
-                    cairo_move_to(cr, x + width - 0.5, y + 0.5);
+                    cairo_move_to(cr, x + width - 0.5, y + 1.5);
                     cairo_line_to(cr, x + width - 0.5, y + height - 0.5);
                     cairo_stroke(cr);
 
@@ -1329,12 +1329,12 @@ static void draw_box_gap(GtkStyle * style, GdkWindow * window, GtkStateType stat
                     if (gap_x > 0)
                     {
                         gdk_cairo_set_source_color(cr, c4);
-                        cairo_move_to(cr, x, y + height - 0.5);
+                        cairo_move_to(cr, x + 1, y + height - 0.5);
                         cairo_line_to(cr, x + gap_x, y + height - 0.5);
                         cairo_stroke(cr);
 
                         gdk_cairo_set_source_color(cr, c3);
-                        cairo_move_to(cr, x + 1, y + height - 1.5);
+                        cairo_move_to(cr, x + 2, y + height - 1.5);
                         cairo_line_to(cr, x + gap_x, y + height - 1.5);
 
                         cairo_move_to(cr, x + gap_x, y + height - 0.5);
@@ -1371,25 +1371,25 @@ static void draw_box_gap(GtkStyle * style, GdkWindow * window, GtkStateType stat
                     gdk_cairo_set_source_color(cr, c3);
                     cairo_move_to(cr, x + 0.5, y + height - 1.5);
                     cairo_line_to(cr, x + width - 1.5, y + height - 1.5);
-                    cairo_line_to(cr, x + width - 1.5, y + 1.5);
+                    cairo_line_to(cr, x + width - 1.5, y + 2.5);
                     cairo_stroke(cr);
 
                     gdk_cairo_set_source_color(cr, c4);
                     cairo_move_to(cr, x + 1.5, y + height - 0.5);
                     cairo_line_to(cr, x + width - 0.5, y + height - 0.5);
-                    cairo_line_to(cr, x + width - 0.5, y + 0.5);
+                    cairo_line_to(cr, x + width - 0.5, y + 1.5);
                     cairo_stroke(cr);
 
                     cairo_set_line_cap(cr, CAIRO_LINE_CAP_BUTT);
                     if (gap_x > 0)
                     {
                         gdk_cairo_set_source_color(cr, c1);
-                        cairo_move_to(cr, x + 0.5, y);
+                        cairo_move_to(cr, x + 0.5, y + 1);
                         cairo_line_to(cr, x + 0.5, y + gap_x);
                         cairo_stroke(cr);
 
                         gdk_cairo_set_source_color(cr, c2);
-                        cairo_move_to(cr, x + 1.5, y + 1);
+                        cairo_move_to(cr, x + 1.5, y + 2);
                         cairo_line_to(cr, x + 1.5, y + gap_x);
 
                         cairo_move_to(cr, x + 0.5, y + gap_x);
@@ -1400,7 +1400,7 @@ static void draw_box_gap(GtkStyle * style, GdkWindow * window, GtkStateType stat
                     {
                         gdk_cairo_set_source_color(cr, c1);
                         cairo_move_to(cr, x + 0.5, y + gap_x + gap_width);
-                        cairo_line_to(cr, x + 0.5, y + height - 1);
+                        cairo_line_to(cr, x + 0.5, y + height);
                         cairo_stroke(cr);
 
                         gdk_cairo_set_source_color(cr, c2);
@@ -1426,7 +1426,7 @@ static void draw_box_gap(GtkStyle * style, GdkWindow * window, GtkStateType stat
                     cairo_stroke(cr);
 
                     gdk_cairo_set_source_color(cr, c3);
-                    cairo_move_to(cr, x + 1.5, y + height - 1.5);
+                    cairo_move_to(cr, x + 2.5, y + height - 1.5);
                     cairo_line_to(cr, x + width - 0.5, y + height - 1.5);
                     cairo_stroke(cr);
 
@@ -1439,12 +1439,12 @@ static void draw_box_gap(GtkStyle * style, GdkWindow * window, GtkStateType stat
                     if (gap_x > 0)
                     {
                         gdk_cairo_set_source_color(cr, c4);
-                        cairo_move_to(cr, x + width - 0.5, y);
+                        cairo_move_to(cr, x + width - 0.5, y + 1);
                         cairo_line_to(cr, x + width - 0.5, y + gap_x);
                         cairo_stroke(cr);
 
                         gdk_cairo_set_source_color(cr, c3);
-                        cairo_move_to(cr, x + width - 1.5, y + 1);
+                        cairo_move_to(cr, x + width - 1.5, y + 2);
                         cairo_line_to(cr, x + width - 1.5, y + gap_x);
 
                         cairo_move_to(cr, x + width - 0.5, y + gap_x);
