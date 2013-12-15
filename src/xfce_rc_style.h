@@ -81,6 +81,7 @@ struct _XfceRcStyle
     XfceRcGradientType gradient_style;
     gfloat shade_start;
     gfloat shade_end;
+    gboolean flat_border;
 };
 
 struct _XfceRcStyleClass
@@ -109,6 +110,7 @@ enum
     TOKEN_SOUTHERN_DIAGONAL,
     TOKEN_SHADE_START,
     TOKEN_SHADE_END,
+    TOKEN_FLATBORDER,
     TOKEN_TRUE,
     TOKEN_FALSE
 };
