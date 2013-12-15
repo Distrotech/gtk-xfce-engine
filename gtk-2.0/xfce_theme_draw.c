@@ -423,345 +423,560 @@ static void draw_shadow(GtkStyle * style, GdkWindow * window, GtkStateType state
     xt = MIN(style->xthickness, width - 1);
     yt = MIN(style->ythickness, height - 1);
 
-    switch (shadow_type)
+    if (XFCE_RC_STYLE(style->rc_style)->flat_border)
     {
-        case GTK_SHADOW_NONE:
-            break;
-        case GTK_SHADOW_ETCHED_IN:
-            if ((xt > 1) && (yt > 1))
-            {
-                gdk_cairo_set_source_color(cr, &style->light[state_type]);
-                cairo_move_to(cr, x + 0.5, y + height - 0.5);
-                cairo_line_to(cr, x + width - 0.5, y + height - 0.5);
-                cairo_line_to(cr, x + width - 0.5, y + 0.5);
-                cairo_stroke(cr);
-
-                gdk_cairo_set_source_color(cr, &style->dark[state_type]);
-                cairo_move_to(cr, x + width - 1.5, y + 0.5);
-                cairo_line_to(cr, x + 0.5, y + 0.5);
-                cairo_line_to(cr, x + 0.5, y + height - 1.5);
-                cairo_stroke(cr);
-
-                gdk_cairo_set_source_color(cr, &style->light[state_type]);
-                cairo_move_to(cr, x + width - 1.5, y + 1.5);
-                cairo_line_to(cr, x + 1.5, y + 1.5);
-                cairo_line_to(cr, x + 1.5, y + height - 1.5);
-                cairo_stroke(cr);
-
-                gdk_cairo_set_source_color(cr, &style->dark[state_type]);
-                cairo_move_to(cr, x + 1.5, y + height - 1.5);
-                cairo_line_to(cr, x + width - 1.5, y + height - 1.5);
-                cairo_line_to(cr, x + width - 1.5, y + 1.5);
-                cairo_stroke(cr);
-            }
-            else if ((xt > 0) && (yt > 0))
-            {
-                gdk_cairo_set_source_color(cr, &style->dark[state_type]);
-                cairo_rectangle(cr, x + 0.5, y + 0.5, width - 1, height - 1);
-                cairo_stroke(cr);
-            }
-            break;
-        case GTK_SHADOW_ETCHED_OUT:
-            if ((xt > 1) && (yt > 1))
+        if ((DETAIL("spinbutton_up") || DETAIL("spinbutton_down")) && (state_type != GTK_STATE_PRELIGHT && state_type != GTK_STATE_ACTIVE))
+        {
+            /* Do nothing */
+        }
+        else if (DETAIL("menubar") || DETAIL ("handlebox_bin") || DETAIL ("handlebox") || DETAIL ("toolbar"))
+        {
+            if (yt > 0)
             {
                 gdk_cairo_set_source_color(cr, &style->dark[state_type]);
                 cairo_move_to(cr, x + 0.5, y + height - 0.5);
                 cairo_line_to(cr, x + width - 0.5, y + height - 0.5);
-                cairo_line_to(cr, x + width - 0.5, y + 0.5);
-                cairo_stroke(cr);
-
-                gdk_cairo_set_source_color(cr, &style->light[state_type]);
-                cairo_move_to(cr, x + width - 1.5, y + 0.5);
-                cairo_line_to(cr, x + 0.5, y + 0.5);
-                cairo_line_to(cr, x + 0.5, y + height - 1.5);
-                cairo_stroke(cr);
-
-                gdk_cairo_set_source_color(cr, &style->dark[state_type]);
-                cairo_move_to(cr, x + width - 1.5, y + 1.5);
-                cairo_line_to(cr, x + 1.5, y + 1.5);
-                cairo_line_to(cr, x + 1.5, y + height - 1.5);
-                cairo_stroke(cr);
-
-                gdk_cairo_set_source_color(cr, &style->light[state_type]);
-                cairo_move_to(cr, x + 1.5, y + height - 1.5);
-                cairo_line_to(cr, x + width - 1.5, y + height - 1.5);
-                cairo_line_to(cr, x + width - 1.5, y + 1.5);
                 cairo_stroke(cr);
             }
-            else if ((xt > 0) && (yt > 0))
+        }
+        else
+        {
+            if (((xt > 0) && (yt > 0)) || DETAIL("bar") || DETAIL("trough") || DETAIL("trough-lower") || DETAIL("trough-upper"))
             {
-                gdk_cairo_set_source_color(cr, &style->light[state_type]);
-                cairo_rectangle(cr, x + 0.5, y + 0.5, width - 1, height - 1);
-                cairo_stroke(cr);
-            }
-            break;
-        case GTK_SHADOW_IN:
-            if (XFCE_RC_STYLE(style->rc_style)->smooth_edge)
-            {
-                if (DETAIL("trough") || DETAIL("trough-lower") || DETAIL("trough-upper"))
+                if (DETAIL("trough-lower"))
                 {
-                    gdk_cairo_set_source_color(cr, &style->bg[DETAIL("trough-lower") ? GTK_STATE_SELECTED : GTK_STATE_NORMAL]);
-                    cairo_rectangle(cr, x + 0.5, y + 0.5, width - 1, height - 1);
-                    cairo_stroke(cr);
-
-                    gdk_cairo_set_source_color(cr, &style->mid[GTK_STATE_NORMAL]);
-                    cairo_rectangle(cr, x, y, 1, 1);
-                    cairo_rectangle(cr, x + width - 1, y, 1, 1);
-                    cairo_rectangle(cr, x, y + height - 1, 1, 1);
-                    cairo_rectangle(cr, x + width - 1, y + height - 1, 1, 1);
-                    cairo_fill(cr);
+                    state_type = GTK_STATE_SELECTED;
                 }
-                else if ((xt > 1) && (yt > 1))
+
+                gdk_cairo_set_source_color(cr, &style->dark[state_type]);
+                cairo_rectangle(cr, x + 0.5, y + 0.5, width - 1, height - 1);
+                cairo_stroke(cr);
+
+                if (XFCE_RC_STYLE(style->rc_style)->smooth_edge)
                 {
-                    gdk_cairo_set_source_color(cr, &style->dark[state_type]);
-                    cairo_move_to(cr, x + 1.5, y + 0.5);
-                    cairo_line_to(cr, x + width - 1.5, y + 0.5);
-                    cairo_move_to(cr, x + 0.5, y + 1.5);
-                    cairo_line_to(cr, x + 0.5, y + height - 1.5);
+                    if (DETAIL("menu"))
+                    {
+                        /* Sharp edges */
+                    }
+                    else
+                    {
+                        if (DETAIL("bar"))
+                        {
+                            state_type = GTK_STATE_NORMAL;
+                        }
 
-                    cairo_move_to(cr, x + 1.5, y + height - 0.5);
-                    cairo_line_to(cr, x + width - 1.5, y + height - 0.5);
-                    cairo_move_to(cr, x + width - 0.5, y + 1.5);
-                    cairo_line_to(cr, x + width - 0.5, y + height - 1.5);
-                    cairo_stroke(cr);
-
-                    gdk_cairo_set_source_color(cr, &style->mid[state_type]);
-                    cairo_move_to(cr, x + width - 1.5, y + 1.5);
-                    cairo_line_to(cr, x + 1.5, y + 1.5);
-                    cairo_line_to(cr, x + 1.5, y + height - 1.5);
-                    cairo_stroke(cr);
-
+                        gdk_cairo_set_source_color(cr, &style->mid[state_type]);
+                        cairo_rectangle(cr, x, y, 1, 1);
+                        cairo_rectangle(cr, x + width - 1, y, 1, 1);
+                        cairo_rectangle(cr, x, y + height - 1, 1, 1);
+                        cairo_rectangle(cr, x + width - 1, y + height - 1, 1, 1);
+                        cairo_fill(cr);
+                    }
+                }
+            }
+        }
+    }
+    else
+    {
+        switch (shadow_type)
+        {
+            case GTK_SHADOW_NONE:
+                break;
+            case GTK_SHADOW_ETCHED_IN:
+                if ((xt > 1) && (yt > 1))
+                {
                     gdk_cairo_set_source_color(cr, &style->light[state_type]);
-                    cairo_move_to(cr, x + 2.5, y + height - 1.5);
-                    cairo_line_to(cr, x + width - 1.5, y + height - 1.5);
-                    cairo_line_to(cr, x + width - 1.5, y + 2.5);
-                    cairo_stroke(cr);
-
-                    gdk_cairo_set_source_color(cr, &style->mid[state_type]);
-                    cairo_rectangle(cr, x, y, 1, 1);
-                    cairo_rectangle(cr, x + width - 1, y, 1, 1);
-                    cairo_rectangle(cr, x, y + height - 1, 1, 1);
-                    cairo_rectangle(cr, x + width - 1, y + height - 1, 1, 1);
-                    cairo_fill(cr);
-                }
-                else if ((xt > 0) && (yt > 0))
-                {
-                    gdk_cairo_set_source_color(cr, &style->dark[state_type]);
-                    cairo_move_to(cr, x + 1.5, y + 0.5);
+                    cairo_move_to(cr, x + 0.5, y + height - 0.5);
+                    cairo_line_to(cr, x + width - 0.5, y + height - 0.5);
                     cairo_line_to(cr, x + width - 0.5, y + 0.5);
-                    cairo_move_to(cr, x + 0.5, y + 1.5);
-                    cairo_line_to(cr, x + 0.5, y + height - 0.5);
                     cairo_stroke(cr);
 
-                    gdk_cairo_set_source_color(cr, &style->light[state_type]);
-                    cairo_move_to(cr, x + 1.5, y + height - 0.5);
-                    cairo_line_to(cr, x + width - 0.5, y + height - 0.5);
-                    cairo_line_to(cr, x + width - 0.5, y + 1.5);
-                    cairo_stroke(cr);
-
-                    gdk_cairo_set_source_color(cr, &style->mid[state_type]);
-                    cairo_rectangle(cr, x, y, 1, 1);
-                    cairo_rectangle(cr, x + width - 1, y, 1, 1);
-                    cairo_rectangle(cr, x, y + height - 1, 1, 1);
-                    cairo_rectangle(cr, x + width - 1, y + height - 1, 1, 1);
-                    cairo_fill(cr);
-                }
-            }
-            else
-            {
-                if (DETAIL("trough") || DETAIL("trough-lower") || DETAIL("trough-upper"))
-                {
-                    gdk_cairo_set_source_color(cr, &style->dark[DETAIL("trough-lower") ? GTK_STATE_SELECTED : GTK_STATE_ACTIVE]);
-                    cairo_rectangle(cr, x + 0.5, y + 0.5, width - 1, height - 1);
-                    cairo_stroke(cr);
-                }
-                else if ((xt > 1) && (yt > 1))
-                {
                     gdk_cairo_set_source_color(cr, &style->dark[state_type]);
-                    cairo_move_to(cr, x + width - 0.5, y + 0.5);
+                    cairo_move_to(cr, x + width - 1.5, y + 0.5);
                     cairo_line_to(cr, x + 0.5, y + 0.5);
-                    cairo_line_to(cr, x + 0.5, y + height - 0.5);
+                    cairo_line_to(cr, x + 0.5, y + height - 1.5);
                     cairo_stroke(cr);
 
                     gdk_cairo_set_source_color(cr, &style->light[state_type]);
-                    cairo_move_to(cr, x + 1.5, y + height - 0.5);
-                    cairo_line_to(cr, x + width - 0.5, y + height - 0.5);
-                    cairo_line_to(cr, x + width - 0.5, y + 1.5);
-                    cairo_stroke(cr);
-
-                    gdk_cairo_set_source_color(cr, &style->black);
                     cairo_move_to(cr, x + width - 1.5, y + 1.5);
                     cairo_line_to(cr, x + 1.5, y + 1.5);
                     cairo_line_to(cr, x + 1.5, y + height - 1.5);
                     cairo_stroke(cr);
 
                     gdk_cairo_set_source_color(cr, &style->dark[state_type]);
-                    cairo_move_to(cr, x + 2.5, y + height - 1.5);
+                    cairo_move_to(cr, x + 1.5, y + height - 1.5);
                     cairo_line_to(cr, x + width - 1.5, y + height - 1.5);
-                    cairo_line_to(cr, x + width - 1.5, y + 2.5);
+                    cairo_line_to(cr, x + width - 1.5, y + 1.5);
                     cairo_stroke(cr);
                 }
                 else if ((xt > 0) && (yt > 0))
                 {
                     gdk_cairo_set_source_color(cr, &style->dark[state_type]);
-                    cairo_move_to(cr, x + width - 0.5, y + 0.5);
-                    cairo_line_to(cr, x + 0.5, y + 0.5);
-                    cairo_line_to(cr, x + 0.5, y + height - 0.5);
+                    cairo_rectangle(cr, x + 0.5, y + 0.5, width - 1, height - 1);
+                    cairo_stroke(cr);
+                }
+                break;
+            case GTK_SHADOW_ETCHED_OUT:
+                if ((xt > 1) && (yt > 1))
+                {
+                    gdk_cairo_set_source_color(cr, &style->dark[state_type]);
+                    cairo_move_to(cr, x + 0.5, y + height - 0.5);
+                    cairo_line_to(cr, x + width - 0.5, y + height - 0.5);
+                    cairo_line_to(cr, x + width - 0.5, y + 0.5);
                     cairo_stroke(cr);
 
                     gdk_cairo_set_source_color(cr, &style->light[state_type]);
-                    cairo_move_to(cr, x + 1.5, y + height - 0.5);
-                    cairo_line_to(cr, x + width - 0.5, y + height - 0.5);
-                    cairo_line_to(cr, x + width - 0.5, y + 1.5);
-                    cairo_stroke(cr);
-                }
-            }
-            break;
-        case GTK_SHADOW_OUT:
-            if (XFCE_RC_STYLE(style->rc_style)->smooth_edge)
-            {
-                if ((DETAIL("spinbutton_up") || DETAIL("spinbutton_down")) && (state_type != GTK_STATE_PRELIGHT))
-                {
-                    /* Do nothing */
-                }
-                else if (DETAIL("bar"))
-                {
-                    gdk_cairo_set_source_color(cr, &style->dark[state_type]);
-                    cairo_rectangle(cr, x + 0.5, y + 0.5, width - 1, height - 1);
+                    cairo_move_to(cr, x + width - 1.5, y + 0.5);
+                    cairo_line_to(cr, x + 0.5, y + 0.5);
+                    cairo_line_to(cr, x + 0.5, y + height - 1.5);
                     cairo_stroke(cr);
 
-                    gdk_cairo_set_source_color(cr, &style->mid[GTK_STATE_NORMAL]);
-                    cairo_rectangle(cr, x, y, 1, 1);
-                    cairo_rectangle(cr, x + width - 1, y, 1, 1);
-                    cairo_rectangle(cr, x, y + height - 1, 1, 1);
-                    cairo_rectangle(cr, x + width - 1, y + height - 1, 1, 1);
-                    cairo_fill(cr);
+                    gdk_cairo_set_source_color(cr, &style->dark[state_type]);
+                    cairo_move_to(cr, x + width - 1.5, y + 1.5);
+                    cairo_line_to(cr, x + 1.5, y + 1.5);
+                    cairo_line_to(cr, x + 1.5, y + height - 1.5);
+                    cairo_stroke(cr);
+
+                    gdk_cairo_set_source_color(cr, &style->light[state_type]);
+                    cairo_move_to(cr, x + 1.5, y + height - 1.5);
+                    cairo_line_to(cr, x + width - 1.5, y + height - 1.5);
+                    cairo_line_to(cr, x + width - 1.5, y + 1.5);
+                    cairo_stroke(cr);
                 }
-                else if (DETAIL("menu"))
+                else if ((xt > 0) && (yt > 0))
                 {
-                    if ((xt > 0) && (yt > 0))
+                    gdk_cairo_set_source_color(cr, &style->light[state_type]);
+                    cairo_rectangle(cr, x + 0.5, y + 0.5, width - 1, height - 1);
+                    cairo_stroke(cr);
+                }
+                break;
+            case GTK_SHADOW_IN:
+                if (XFCE_RC_STYLE(style->rc_style)->smooth_edge)
+                {
+                    if (DETAIL("trough") || DETAIL("trough-lower") || DETAIL("trough-upper"))
+                    {
+                        gdk_cairo_set_source_color(cr, &style->bg[DETAIL("trough-lower") ? GTK_STATE_SELECTED : GTK_STATE_NORMAL]);
+                        cairo_rectangle(cr, x + 0.5, y + 0.5, width - 1, height - 1);
+                        cairo_stroke(cr);
+
+                        gdk_cairo_set_source_color(cr, &style->mid[GTK_STATE_NORMAL]);
+                        cairo_rectangle(cr, x, y, 1, 1);
+                        cairo_rectangle(cr, x + width - 1, y, 1, 1);
+                        cairo_rectangle(cr, x, y + height - 1, 1, 1);
+                        cairo_rectangle(cr, x + width - 1, y + height - 1, 1, 1);
+                        cairo_fill(cr);
+                    }
+                    else if ((xt > 1) && (yt > 1))
+                    {
+                        gdk_cairo_set_source_color(cr, &style->dark[state_type]);
+                        cairo_move_to(cr, x + 1.5, y + 0.5);
+                        cairo_line_to(cr, x + width - 1.5, y + 0.5);
+                        cairo_move_to(cr, x + 0.5, y + 1.5);
+                        cairo_line_to(cr, x + 0.5, y + height - 1.5);
+
+                        cairo_move_to(cr, x + 1.5, y + height - 0.5);
+                        cairo_line_to(cr, x + width - 1.5, y + height - 0.5);
+                        cairo_move_to(cr, x + width - 0.5, y + 1.5);
+                        cairo_line_to(cr, x + width - 0.5, y + height - 1.5);
+                        cairo_stroke(cr);
+
+                        gdk_cairo_set_source_color(cr, &style->mid[state_type]);
+                        cairo_move_to(cr, x + width - 1.5, y + 1.5);
+                        cairo_line_to(cr, x + 1.5, y + 1.5);
+                        cairo_line_to(cr, x + 1.5, y + height - 1.5);
+                        cairo_stroke(cr);
+
+                        gdk_cairo_set_source_color(cr, &style->light[state_type]);
+                        cairo_move_to(cr, x + 2.5, y + height - 1.5);
+                        cairo_line_to(cr, x + width - 1.5, y + height - 1.5);
+                        cairo_line_to(cr, x + width - 1.5, y + 2.5);
+                        cairo_stroke(cr);
+
+                        gdk_cairo_set_source_color(cr, &style->mid[state_type]);
+                        cairo_rectangle(cr, x, y, 1, 1);
+                        cairo_rectangle(cr, x + width - 1, y, 1, 1);
+                        cairo_rectangle(cr, x, y + height - 1, 1, 1);
+                        cairo_rectangle(cr, x + width - 1, y + height - 1, 1, 1);
+                        cairo_fill(cr);
+                    }
+                    else if ((xt > 0) && (yt > 0))
+                    {
+                        gdk_cairo_set_source_color(cr, &style->dark[state_type]);
+                        cairo_move_to(cr, x + 1.5, y + 0.5);
+                        cairo_line_to(cr, x + width - 0.5, y + 0.5);
+                        cairo_move_to(cr, x + 0.5, y + 1.5);
+                        cairo_line_to(cr, x + 0.5, y + height - 0.5);
+                        cairo_stroke(cr);
+
+                        gdk_cairo_set_source_color(cr, &style->light[state_type]);
+                        cairo_move_to(cr, x + 1.5, y + height - 0.5);
+                        cairo_line_to(cr, x + width - 0.5, y + height - 0.5);
+                        cairo_line_to(cr, x + width - 0.5, y + 1.5);
+                        cairo_stroke(cr);
+
+                        gdk_cairo_set_source_color(cr, &style->mid[state_type]);
+                        cairo_rectangle(cr, x, y, 1, 1);
+                        cairo_rectangle(cr, x + width - 1, y, 1, 1);
+                        cairo_rectangle(cr, x, y + height - 1, 1, 1);
+                        cairo_rectangle(cr, x + width - 1, y + height - 1, 1, 1);
+                        cairo_fill(cr);
+                    }
+                }
+                else
+                {
+                    if (DETAIL("trough") || DETAIL("trough-lower") || DETAIL("trough-upper"))
+                    {
+                        gdk_cairo_set_source_color(cr, &style->dark[DETAIL("trough-lower") ? GTK_STATE_SELECTED : GTK_STATE_ACTIVE]);
+                        cairo_rectangle(cr, x + 0.5, y + 0.5, width - 1, height - 1);
+                        cairo_stroke(cr);
+                    }
+                    else if ((xt > 1) && (yt > 1))
+                    {
+                        gdk_cairo_set_source_color(cr, &style->dark[state_type]);
+                        cairo_move_to(cr, x + width - 0.5, y + 0.5);
+                        cairo_line_to(cr, x + 0.5, y + 0.5);
+                        cairo_line_to(cr, x + 0.5, y + height - 0.5);
+                        cairo_stroke(cr);
+
+                        gdk_cairo_set_source_color(cr, &style->light[state_type]);
+                        cairo_move_to(cr, x + 1.5, y + height - 0.5);
+                        cairo_line_to(cr, x + width - 0.5, y + height - 0.5);
+                        cairo_line_to(cr, x + width - 0.5, y + 1.5);
+                        cairo_stroke(cr);
+
+                        gdk_cairo_set_source_color(cr, &style->black);
+                        cairo_move_to(cr, x + width - 1.5, y + 1.5);
+                        cairo_line_to(cr, x + 1.5, y + 1.5);
+                        cairo_line_to(cr, x + 1.5, y + height - 1.5);
+                        cairo_stroke(cr);
+
+                        gdk_cairo_set_source_color(cr, &style->dark[state_type]);
+                        cairo_move_to(cr, x + 2.5, y + height - 1.5);
+                        cairo_line_to(cr, x + width - 1.5, y + height - 1.5);
+                        cairo_line_to(cr, x + width - 1.5, y + 2.5);
+                        cairo_stroke(cr);
+                    }
+                    else if ((xt > 0) && (yt > 0))
+                    {
+                        gdk_cairo_set_source_color(cr, &style->dark[state_type]);
+                        cairo_move_to(cr, x + width - 0.5, y + 0.5);
+                        cairo_line_to(cr, x + 0.5, y + 0.5);
+                        cairo_line_to(cr, x + 0.5, y + height - 0.5);
+                        cairo_stroke(cr);
+
+                        gdk_cairo_set_source_color(cr, &style->light[state_type]);
+                        cairo_move_to(cr, x + 1.5, y + height - 0.5);
+                        cairo_line_to(cr, x + width - 0.5, y + height - 0.5);
+                        cairo_line_to(cr, x + width - 0.5, y + 1.5);
+                        cairo_stroke(cr);
+                    }
+                }
+                break;
+            case GTK_SHADOW_OUT:
+                if (XFCE_RC_STYLE(style->rc_style)->smooth_edge)
+                {
+                    if ((DETAIL("spinbutton_up") || DETAIL("spinbutton_down")) && (state_type != GTK_STATE_PRELIGHT))
+                    {
+                        /* Do nothing */
+                    }
+                    else if (DETAIL("bar"))
                     {
                         gdk_cairo_set_source_color(cr, &style->dark[state_type]);
                         cairo_rectangle(cr, x + 0.5, y + 0.5, width - 1, height - 1);
                         cairo_stroke(cr);
+
+                        gdk_cairo_set_source_color(cr, &style->mid[GTK_STATE_NORMAL]);
+                        cairo_rectangle(cr, x, y, 1, 1);
+                        cairo_rectangle(cr, x + width - 1, y, 1, 1);
+                        cairo_rectangle(cr, x, y + height - 1, 1, 1);
+                        cairo_rectangle(cr, x + width - 1, y + height - 1, 1, 1);
+                        cairo_fill(cr);
+                    }
+                    else if (DETAIL("menu"))
+                    {
+                        if ((xt > 0) && (yt > 0))
+                        {
+                            gdk_cairo_set_source_color(cr, &style->dark[state_type]);
+                            cairo_rectangle(cr, x + 0.5, y + 0.5, width - 1, height - 1);
+                            cairo_stroke(cr);
+                        }
+                    }
+                    else if (DETAIL("menubar"))
+                    {
+                        if ((xt > 1) && (yt > 1))
+                        {
+                            gdk_cairo_set_source_color(cr, &style->mid[state_type]);
+                            cairo_move_to(cr, x + 0.5, y + height - 1.5);
+                            cairo_line_to(cr, x + width - 0.5, y + height - 1.5);
+                            cairo_stroke(cr);
+
+                            gdk_cairo_set_source_color(cr, &style->dark[state_type]);
+                            cairo_move_to(cr, x + 0.5, y + height - 0.5);
+                            cairo_line_to(cr, x + width - 0.5, y + height - 0.5);
+                            cairo_stroke(cr);
+                        }
+                        else if ((xt > 0) && (yt > 0))
+                        {
+                            gdk_cairo_set_source_color(cr, &style->dark[state_type]);
+                            cairo_move_to(cr, x + 0.5, y + height - 0.5);
+                            cairo_line_to(cr, x + width - 0.5, y + height - 0.5);
+                            cairo_stroke(cr);
+                        }
+                    }
+                    else if (DETAIL ("handlebox_bin") || DETAIL ("handlebox") || DETAIL ("toolbar"))
+                    {
+                        if ((xt > 1) && (yt > 1))
+                        {
+                            gdk_cairo_set_source_color(cr, &style->light[state_type]);
+                            cairo_move_to(cr, x + 0.5, y + 0.5);
+                            cairo_line_to(cr, x + width - 0.5, y + 0.5);
+                            cairo_stroke(cr);
+
+                            gdk_cairo_set_source_color(cr, &style->mid[state_type]);
+                            cairo_move_to(cr, x + 0.5 , y + height - 1.5);
+                            cairo_line_to(cr, x + width - 0.5, y + height - 1.5);
+                            cairo_stroke(cr);
+
+                            gdk_cairo_set_source_color(cr, &style->dark[state_type]);
+                            cairo_move_to(cr, x + 0.5, y + height - 0.5);
+                            cairo_line_to(cr, x + width - 0.5, y + height - 0.5);
+                            cairo_stroke(cr);
+                        }
+                        else if ((xt > 0) && (yt > 0))
+                        {
+                            gdk_cairo_set_source_color(cr, &style->light[state_type]);
+                            cairo_move_to(cr, x + 0.5, y + 0.5);
+                            cairo_line_to(cr, x + width - 0.5, y + 0.5);
+                            cairo_stroke(cr);
+
+                            gdk_cairo_set_source_color(cr, &style->dark[state_type]);
+                            cairo_move_to(cr, x + 0.5, y + height - 0.5);
+                            cairo_line_to(cr, x + width - 0.5, y + height - 0.5);
+                            cairo_stroke(cr);
+                        }
+                    }
+                    else if (DETAIL("vscrollbar") || DETAIL("hscrollbar") || DETAIL("slider") || DETAIL("vscale") || DETAIL("hscale"))
+                    {
+                        if ((xt > 1) && (yt > 1))
+                        {
+                            gdk_cairo_set_source_color(cr, &style->dark[state_type]);
+                            cairo_move_to(cr, x + width - 0.5, y + 0.5);
+                            cairo_line_to(cr, x + 0.5, y + 0.5);
+                            cairo_line_to(cr, x + 0.5, y + height - 0.5);
+
+                            cairo_move_to(cr, x + 1.5, y + height - 0.5);
+                            cairo_line_to(cr, x + width - 0.5, y + height - 0.5);
+                            cairo_line_to(cr, x + width - 0.5, y + 1.5);
+                            cairo_stroke(cr);
+
+                            gdk_cairo_set_source_color(cr, &style->light[state_type]);
+                            cairo_move_to(cr, x + width - 2.5, y + 1.5);
+                            cairo_line_to(cr, x + 1.5, y + 1.5);
+                            cairo_line_to(cr, x + 1.5, y + height - 2.5);
+                            cairo_stroke(cr);
+
+                            gdk_cairo_set_source_color(cr, &style->mid[state_type]);
+                            cairo_move_to(cr, x + 1.5, y + height - 1.5);
+                            cairo_line_to(cr, x + width - 1.5, y + height - 1.5);
+                            cairo_line_to(cr, x + width - 1.5, y + 1.5);
+                            cairo_stroke(cr);
+                        }
+                        else if ((xt > 0) && (yt > 0))
+                        {
+                            gdk_cairo_set_source_color(cr, &style->light[state_type]);
+                            cairo_move_to(cr, x + width - 0.5, y + 0.5);
+                            cairo_line_to(cr, x + 0.5, y + 0.5);
+                            cairo_line_to(cr, x + 0.5, y + height - 0.5);
+                            cairo_stroke(cr);
+
+                            gdk_cairo_set_source_color(cr, &style->dark[state_type]);
+                            cairo_move_to(cr, x + 1.5, y + height - 0.5);
+                            cairo_line_to(cr, x + width - 0.5, y + height - 0.5);
+                            cairo_line_to(cr, x + width - 0.5, y + 1.5);
+                            cairo_stroke(cr);
+                        }
+                    }
+                    else if (DETAIL("frame"))
+                    {
+                        if ((xt > 1) && (yt > 1))
+                        {
+                            gdk_cairo_set_source_color(cr, &style->light[state_type]);
+                            cairo_move_to(cr, x + width - 1.5, y + 0.5);
+                            cairo_line_to(cr, x + 0.5, y + 0.5);
+                            cairo_line_to(cr, x + 0.5, y + height - 1.5);
+                            cairo_stroke(cr);
+
+                            gdk_cairo_set_source_color(cr, &style->dark[state_type]);
+                            cairo_move_to(cr, x + 0.5, y + height - 0.5);
+                            cairo_line_to(cr, x + width - 0.5, y + height - 0.5);
+                            cairo_line_to(cr, x + width - 0.5, y + 0.5);
+                            cairo_stroke(cr);
+
+                            gdk_cairo_set_source_color(cr, &style->bg[state_type]);
+                            cairo_move_to(cr, x + width - 1.5, y + 1.5);
+                            cairo_line_to(cr, x + 1.5, y + 1.5);
+                            cairo_line_to(cr, x + 1.5, y + height - 1.5);
+
+                            cairo_move_to(cr, x + 2.5, y + height - 1.5);
+                            cairo_line_to(cr, x + width - 1.5, y + height - 1.5);
+                            cairo_line_to(cr, x + width - 1.5, y + 2.5);
+                            cairo_stroke(cr);
+                        }
+                        else if ((xt > 0) && (yt > 0))
+                        {
+                            gdk_cairo_set_source_color(cr, &style->light[state_type]);
+                            cairo_move_to(cr, x + width - 0.5, y + 0.5);
+                            cairo_line_to(cr, x + 0.5, y + 0.5);
+                            cairo_line_to(cr, x + 0.5, y + height - 0.5);
+                            cairo_stroke(cr);
+
+                            gdk_cairo_set_source_color(cr, &style->dark[state_type]);
+                            cairo_move_to(cr, x + 1.5, y + height - 0.5);
+                            cairo_line_to(cr, x + width - 0.5, y + height - 0.5);
+                            cairo_line_to(cr, x + width - 0.5, y + 1.5);
+                            cairo_stroke(cr);
+                        }
+                    }
+                    else
+                    {
+                        if ((xt > 1) && (yt > 1))
+                        {
+                            gdk_cairo_set_source_color(cr, &style->dark[state_type]);
+                            cairo_move_to(cr, x + 1.5, y + 0.5);
+                            cairo_line_to(cr, x + width - 1.5, y + 0.5);
+                            cairo_move_to(cr, x + 0.5, y + 1.5);
+                            cairo_line_to(cr, x + 0.5, y + height - 1.5);
+
+                            cairo_move_to(cr, x + 1.5, y + height - 0.5);
+                            cairo_line_to(cr, x + width - 1.5, y + height - 0.5);
+                            cairo_move_to(cr, x + width - 0.5, y + 1.5);
+                            cairo_line_to(cr, x + width - 0.5, y + height - 1.5);
+                            cairo_stroke(cr);
+
+                            gdk_cairo_set_source_color(cr, &style->light[state_type]);
+                            cairo_move_to(cr, x + width - 2.5, y + 1.5);
+                            cairo_line_to(cr, x + 1.5, y + 1.5);
+                            cairo_line_to(cr, x + 1.5, y + height - 2.5);
+                            cairo_stroke(cr);
+
+                            gdk_cairo_set_source_color(cr, &style->mid[state_type]);
+                            cairo_move_to(cr, x + 1.5, y + height - 1.5);
+                            cairo_line_to(cr, x + width - 1.5, y + height - 1.5);
+                            cairo_line_to(cr, x + width - 1.5, y + 1.5);
+                            cairo_stroke(cr);
+
+                            gdk_cairo_set_source_color(cr, &style->mid[state_type]);
+                            cairo_rectangle(cr, x, y, 1, 1);
+                            cairo_rectangle(cr, x + width - 1, y, 1, 1);
+                            cairo_rectangle(cr, x, y + height - 1, 1, 1);
+                            cairo_rectangle(cr, x + width - 1, y + height - 1, 1, 1);
+                            cairo_fill(cr);
+                        }
+                        else if ((xt > 0) && (yt > 0))
+                        {
+                            gdk_cairo_set_source_color(cr, &style->light[state_type]);
+                            cairo_move_to(cr, x + 1.5, y + 0.5);
+                            cairo_line_to(cr, x + width - 0.5, y + 0.5);
+                            cairo_move_to(cr, x + 0.5, y + 1.5);
+                            cairo_line_to(cr, x + 0.5, y + height - 0.5);
+                            cairo_stroke(cr);
+
+                            gdk_cairo_set_source_color(cr, &style->dark[state_type]);
+                            cairo_move_to(cr, x + 1.5, y + height - 0.5);
+                            cairo_line_to(cr, x + width - 0.5, y + height - 0.5);
+                            cairo_line_to(cr, x + width - 0.5, y + 1.5);
+                            cairo_stroke(cr);
+
+                            gdk_cairo_set_source_color(cr, &style->mid[state_type]);
+                            cairo_rectangle(cr, x, y, 1, 1);
+                            cairo_rectangle(cr, x + width - 1, y, 1, 1);
+                            cairo_rectangle(cr, x, y + height - 1, 1, 1);
+                            cairo_rectangle(cr, x + width - 1, y + height - 1, 1, 1);
+                            cairo_fill(cr);
+                        }
                     }
                 }
-                else if (DETAIL("menubar"))
+                else
                 {
-                    if ((xt > 1) && (yt > 1))
+                    if ((DETAIL("spinbutton_up") || DETAIL("spinbutton_down")) && (state_type != GTK_STATE_PRELIGHT))
                     {
-                        gdk_cairo_set_source_color(cr, &style->mid[state_type]);
-                        cairo_move_to(cr, x + 0.5, y + height - 1.5);
-                        cairo_line_to(cr, x + width - 0.5, y + height - 1.5);
-                        cairo_stroke(cr);
-
-                        gdk_cairo_set_source_color(cr, &style->dark[state_type]);
-                        cairo_move_to(cr, x + 0.5, y + height - 0.5);
-                        cairo_line_to(cr, x + width - 0.5, y + height - 0.5);
-                        cairo_stroke(cr);
+                        /* Do nothing */
                     }
-                    else if ((xt > 0) && (yt > 0))
+                    else if (DETAIL("menubar"))
                     {
-                        gdk_cairo_set_source_color(cr, &style->dark[state_type]);
-                        cairo_move_to(cr, x + 0.5, y + height - 0.5);
-                        cairo_line_to(cr, x + width - 0.5, y + height - 0.5);
-                        cairo_stroke(cr);
+                        if ((xt > 1) && (yt > 1))
+                        {
+                            gdk_cairo_set_source_color(cr, &style->mid[state_type]);
+                            cairo_move_to(cr, x + 0.5, y + height - 1.5);
+                            cairo_line_to(cr, x + width - 0.5, y + height - 1.5);
+                            cairo_stroke(cr);
+
+                            gdk_cairo_set_source_color(cr, &style->dark[state_type]);
+                            cairo_move_to(cr, x + 0.5, y + height - 0.5);
+                            cairo_line_to(cr, x + width - 0.5, y + height - 0.5);
+                            cairo_stroke(cr);
+                        }
+                        else if ((xt > 0) && (yt > 0))
+                        {
+                            gdk_cairo_set_source_color(cr, &style->dark[state_type]);
+                            cairo_move_to(cr, x + 0.5, y + height - 0.5);
+                            cairo_line_to(cr, x + width - 0.5, y + height - 0.5);
+                            cairo_stroke(cr);
+                        }
                     }
-                }
-                else if (DETAIL ("handlebox_bin") || DETAIL ("handlebox") || DETAIL ("toolbar"))
-                {
-                    if ((xt > 1) && (yt > 1))
+                    else if (DETAIL ("handlebox_bin") || DETAIL ("handlebox") || DETAIL ("toolbar"))
                     {
-                        gdk_cairo_set_source_color(cr, &style->light[state_type]);
-                        cairo_move_to(cr, x + 0.5, y + 0.5);
-                        cairo_line_to(cr, x + width - 0.5, y + 0.5);
-                        cairo_stroke(cr);
+                        if ((xt > 1) && (yt > 1))
+                        {
+                            gdk_cairo_set_source_color(cr, &style->light[state_type]);
+                            cairo_move_to(cr, x + 0.5, y + 0.5);
+                            cairo_line_to(cr, x + width - 0.5, y + 0.5);
+                            cairo_stroke(cr);
 
-                        gdk_cairo_set_source_color(cr, &style->mid[state_type]);
-                        cairo_move_to(cr, x + 0.5 , y + height - 1.5);
-                        cairo_line_to(cr, x + width - 0.5, y + height - 1.5);
-                        cairo_stroke(cr);
+                            gdk_cairo_set_source_color(cr, &style->mid[state_type]);
+                            cairo_move_to(cr, x + 0.5 , y + height - 1.5);
+                            cairo_line_to(cr, x + width - 0.5, y + height - 1.5);
+                            cairo_stroke(cr);
 
-                        gdk_cairo_set_source_color(cr, &style->dark[state_type]);
-                        cairo_move_to(cr, x + 0.5, y + height - 0.5);
-                        cairo_line_to(cr, x + width - 0.5, y + height - 0.5);
-                        cairo_stroke(cr);
+                            gdk_cairo_set_source_color(cr, &style->dark[state_type]);
+                            cairo_move_to(cr, x + 0.5, y + height - 0.5);
+                            cairo_line_to(cr, x + width - 0.5, y + height - 0.5);
+                            cairo_stroke(cr);
+                        }
+                        else if ((xt > 0) && (yt > 0))
+                        {
+                            gdk_cairo_set_source_color(cr, &style->light[state_type]);
+                            cairo_move_to(cr, x + 0.5, y + 0.5);
+                            cairo_line_to(cr, x + width - 0.5, y + 0.5);
+                            cairo_stroke(cr);
+
+                            gdk_cairo_set_source_color(cr, &style->dark[state_type]);
+                            cairo_move_to(cr, x + 0.5, y + height - 0.5);
+                            cairo_line_to(cr, x + width - 0.5, y + height - 0.5);
+                            cairo_stroke(cr);
+                        }
                     }
-                    else if ((xt > 0) && (yt > 0))
-                    {
-                        gdk_cairo_set_source_color(cr, &style->light[state_type]);
-                        cairo_move_to(cr, x + 0.5, y + 0.5);
-                        cairo_line_to(cr, x + width - 0.5, y + 0.5);
-                        cairo_stroke(cr);
-
-                        gdk_cairo_set_source_color(cr, &style->dark[state_type]);
-                        cairo_move_to(cr, x + 0.5, y + height - 0.5);
-                        cairo_line_to(cr, x + width - 0.5, y + height - 0.5);
-                        cairo_stroke(cr);
-                    }
-                }
-                else if (DETAIL("vscrollbar") || DETAIL("hscrollbar") || DETAIL("slider") || DETAIL("vscale") || DETAIL("hscale"))
-                {
-                    if ((xt > 1) && (yt > 1))
+                    else if ((xt > 1) && (yt > 1))
                     {
                         gdk_cairo_set_source_color(cr, &style->dark[state_type]);
                         cairo_move_to(cr, x + width - 0.5, y + 0.5);
                         cairo_line_to(cr, x + 0.5, y + 0.5);
                         cairo_line_to(cr, x + 0.5, y + height - 0.5);
+                        cairo_stroke(cr);
 
+                        gdk_cairo_set_source_color(cr, &style->black);
                         cairo_move_to(cr, x + 1.5, y + height - 0.5);
                         cairo_line_to(cr, x + width - 0.5, y + height - 0.5);
                         cairo_line_to(cr, x + width - 0.5, y + 1.5);
                         cairo_stroke(cr);
 
                         gdk_cairo_set_source_color(cr, &style->light[state_type]);
-                        cairo_move_to(cr, x + width - 2.5, y + 1.5);
-                        cairo_line_to(cr, x + 1.5, y + 1.5);
-                        cairo_line_to(cr, x + 1.5, y + height - 2.5);
-                        cairo_stroke(cr);
-
-                        gdk_cairo_set_source_color(cr, &style->mid[state_type]);
-                        cairo_move_to(cr, x + 1.5, y + height - 1.5);
-                        cairo_line_to(cr, x + width - 1.5, y + height - 1.5);
-                        cairo_line_to(cr, x + width - 1.5, y + 1.5);
-                        cairo_stroke(cr);
-                    }
-                    else if ((xt > 0) && (yt > 0))
-                    {
-                        gdk_cairo_set_source_color(cr, &style->light[state_type]);
-                        cairo_move_to(cr, x + width - 0.5, y + 0.5);
-                        cairo_line_to(cr, x + 0.5, y + 0.5);
-                        cairo_line_to(cr, x + 0.5, y + height - 0.5);
-                        cairo_stroke(cr);
-
-                        gdk_cairo_set_source_color(cr, &style->dark[state_type]);
-                        cairo_move_to(cr, x + 1.5, y + height - 0.5);
-                        cairo_line_to(cr, x + width - 0.5, y + height - 0.5);
-                        cairo_line_to(cr, x + width - 0.5, y + 1.5);
-                        cairo_stroke(cr);
-                    }
-                }
-                else if (DETAIL("frame"))
-                {
-                    if ((xt > 1) && (yt > 1))
-                    {
-                        gdk_cairo_set_source_color(cr, &style->light[state_type]);
-                        cairo_move_to(cr, x + width - 1.5, y + 0.5);
-                        cairo_line_to(cr, x + 0.5, y + 0.5);
-                        cairo_line_to(cr, x + 0.5, y + height - 1.5);
-                        cairo_stroke(cr);
-
-                        gdk_cairo_set_source_color(cr, &style->dark[state_type]);
-                        cairo_move_to(cr, x + 0.5, y + height - 0.5);
-                        cairo_line_to(cr, x + width - 0.5, y + height - 0.5);
-                        cairo_line_to(cr, x + width - 0.5, y + 0.5);
-                        cairo_stroke(cr);
-
-                        gdk_cairo_set_source_color(cr, &style->bg[state_type]);
                         cairo_move_to(cr, x + width - 1.5, y + 1.5);
                         cairo_line_to(cr, x + 1.5, y + 1.5);
                         cairo_line_to(cr, x + 1.5, y + height - 1.5);
+                        cairo_stroke(cr);
 
+                        gdk_cairo_set_source_color(cr, &style->dark[state_type]);
                         cairo_move_to(cr, x + 2.5, y + height - 1.5);
                         cairo_line_to(cr, x + width - 1.5, y + height - 1.5);
                         cairo_line_to(cr, x + width - 1.5, y + 2.5);
@@ -782,167 +997,8 @@ static void draw_shadow(GtkStyle * style, GdkWindow * window, GtkStateType state
                         cairo_stroke(cr);
                     }
                 }
-                else
-                {
-                    if ((xt > 1) && (yt > 1))
-                    {
-                        gdk_cairo_set_source_color(cr, &style->dark[state_type]);
-                        cairo_move_to(cr, x + 1.5, y + 0.5);
-                        cairo_line_to(cr, x + width - 1.5, y + 0.5);
-                        cairo_move_to(cr, x + 0.5, y + 1.5);
-                        cairo_line_to(cr, x + 0.5, y + height - 1.5);
-
-                        cairo_move_to(cr, x + 1.5, y + height - 0.5);
-                        cairo_line_to(cr, x + width - 1.5, y + height - 0.5);
-                        cairo_move_to(cr, x + width - 0.5, y + 1.5);
-                        cairo_line_to(cr, x + width - 0.5, y + height - 1.5);
-                        cairo_stroke(cr);
-
-                        gdk_cairo_set_source_color(cr, &style->light[state_type]);
-                        cairo_move_to(cr, x + width - 2.5, y + 1.5);
-                        cairo_line_to(cr, x + 1.5, y + 1.5);
-                        cairo_line_to(cr, x + 1.5, y + height - 2.5);
-                        cairo_stroke(cr);
-
-                        gdk_cairo_set_source_color(cr, &style->mid[state_type]);
-                        cairo_move_to(cr, x + 1.5, y + height - 1.5);
-                        cairo_line_to(cr, x + width - 1.5, y + height - 1.5);
-                        cairo_line_to(cr, x + width - 1.5, y + 1.5);
-                        cairo_stroke(cr);
-
-                        gdk_cairo_set_source_color(cr, &style->mid[state_type]);
-                        cairo_rectangle(cr, x, y, 1, 1);
-                        cairo_rectangle(cr, x + width - 1, y, 1, 1);
-                        cairo_rectangle(cr, x, y + height - 1, 1, 1);
-                        cairo_rectangle(cr, x + width - 1, y + height - 1, 1, 1);
-                        cairo_fill(cr);
-                    }
-                    else if ((xt > 0) && (yt > 0))
-                    {
-                        gdk_cairo_set_source_color(cr, &style->light[state_type]);
-                        cairo_move_to(cr, x + 1.5, y + 0.5);
-                        cairo_line_to(cr, x + width - 0.5, y + 0.5);
-                        cairo_move_to(cr, x + 0.5, y + 1.5);
-                        cairo_line_to(cr, x + 0.5, y + height - 0.5);
-                        cairo_stroke(cr);
-
-                        gdk_cairo_set_source_color(cr, &style->dark[state_type]);
-                        cairo_move_to(cr, x + 1.5, y + height - 0.5);
-                        cairo_line_to(cr, x + width - 0.5, y + height - 0.5);
-                        cairo_line_to(cr, x + width - 0.5, y + 1.5);
-                        cairo_stroke(cr);
-
-                        gdk_cairo_set_source_color(cr, &style->mid[state_type]);
-                        cairo_rectangle(cr, x, y, 1, 1);
-                        cairo_rectangle(cr, x + width - 1, y, 1, 1);
-                        cairo_rectangle(cr, x, y + height - 1, 1, 1);
-                        cairo_rectangle(cr, x + width - 1, y + height - 1, 1, 1);
-                        cairo_fill(cr);
-                    }
-                }
-            }
-            else
-            {
-                if ((DETAIL("spinbutton_up") || DETAIL("spinbutton_down")) && (state_type != GTK_STATE_PRELIGHT))
-                {
-                    /* Do nothing */
-                }
-                else if (DETAIL("menubar"))
-                {
-                    if ((xt > 1) && (yt > 1))
-                    {
-                        gdk_cairo_set_source_color(cr, &style->mid[state_type]);
-                        cairo_move_to(cr, x + 0.5, y + height - 1.5);
-                        cairo_line_to(cr, x + width - 0.5, y + height - 1.5);
-                        cairo_stroke(cr);
-
-                        gdk_cairo_set_source_color(cr, &style->dark[state_type]);
-                        cairo_move_to(cr, x + 0.5, y + height - 0.5);
-                        cairo_line_to(cr, x + width - 0.5, y + height - 0.5);
-                        cairo_stroke(cr);
-                    }
-                    else if ((xt > 0) && (yt > 0))
-                    {
-                        gdk_cairo_set_source_color(cr, &style->dark[state_type]);
-                        cairo_move_to(cr, x + 0.5, y + height - 0.5);
-                        cairo_line_to(cr, x + width - 0.5, y + height - 0.5);
-                        cairo_stroke(cr);
-                    }
-                }
-                else if (DETAIL ("handlebox_bin") || DETAIL ("handlebox") || DETAIL ("toolbar"))
-                {
-                    if ((xt > 1) && (yt > 1))
-                    {
-                        gdk_cairo_set_source_color(cr, &style->light[state_type]);
-                        cairo_move_to(cr, x + 0.5, y + 0.5);
-                        cairo_line_to(cr, x + width - 0.5, y + 0.5);
-                        cairo_stroke(cr);
-
-                        gdk_cairo_set_source_color(cr, &style->mid[state_type]);
-                        cairo_move_to(cr, x + 0.5 , y + height - 1.5);
-                        cairo_line_to(cr, x + width - 0.5, y + height - 1.5);
-                        cairo_stroke(cr);
-
-                        gdk_cairo_set_source_color(cr, &style->dark[state_type]);
-                        cairo_move_to(cr, x + 0.5, y + height - 0.5);
-                        cairo_line_to(cr, x + width - 0.5, y + height - 0.5);
-                        cairo_stroke(cr);
-                    }
-                    else if ((xt > 0) && (yt > 0))
-                    {
-                        gdk_cairo_set_source_color(cr, &style->light[state_type]);
-                        cairo_move_to(cr, x + 0.5, y + 0.5);
-                        cairo_line_to(cr, x + width - 0.5, y + 0.5);
-                        cairo_stroke(cr);
-
-                        gdk_cairo_set_source_color(cr, &style->dark[state_type]);
-                        cairo_move_to(cr, x + 0.5, y + height - 0.5);
-                        cairo_line_to(cr, x + width - 0.5, y + height - 0.5);
-                        cairo_stroke(cr);
-                    }
-                }
-                else if ((xt > 1) && (yt > 1))
-                {
-                    gdk_cairo_set_source_color(cr, &style->dark[state_type]);
-                    cairo_move_to(cr, x + width - 0.5, y + 0.5);
-                    cairo_line_to(cr, x + 0.5, y + 0.5);
-                    cairo_line_to(cr, x + 0.5, y + height - 0.5);
-                    cairo_stroke(cr);
-
-                    gdk_cairo_set_source_color(cr, &style->black);
-                    cairo_move_to(cr, x + 1.5, y + height - 0.5);
-                    cairo_line_to(cr, x + width - 0.5, y + height - 0.5);
-                    cairo_line_to(cr, x + width - 0.5, y + 1.5);
-                    cairo_stroke(cr);
-
-                    gdk_cairo_set_source_color(cr, &style->light[state_type]);
-                    cairo_move_to(cr, x + width - 1.5, y + 1.5);
-                    cairo_line_to(cr, x + 1.5, y + 1.5);
-                    cairo_line_to(cr, x + 1.5, y + height - 1.5);
-                    cairo_stroke(cr);
-
-                    gdk_cairo_set_source_color(cr, &style->dark[state_type]);
-                    cairo_move_to(cr, x + 2.5, y + height - 1.5);
-                    cairo_line_to(cr, x + width - 1.5, y + height - 1.5);
-                    cairo_line_to(cr, x + width - 1.5, y + 2.5);
-                    cairo_stroke(cr);
-                }
-                else if ((xt > 0) && (yt > 0))
-                {
-                    gdk_cairo_set_source_color(cr, &style->light[state_type]);
-                    cairo_move_to(cr, x + width - 0.5, y + 0.5);
-                    cairo_line_to(cr, x + 0.5, y + 0.5);
-                    cairo_line_to(cr, x + 0.5, y + height - 0.5);
-                    cairo_stroke(cr);
-
-                    gdk_cairo_set_source_color(cr, &style->dark[state_type]);
-                    cairo_move_to(cr, x + 1.5, y + height - 0.5);
-                    cairo_line_to(cr, x + width - 0.5, y + height - 0.5);
-                    cairo_line_to(cr, x + width - 0.5, y + 1.5);
-                    cairo_stroke(cr);
-                }
-            }
-            break;
+                break;
+        }
     }
 
     cairo_destroy(cr);

@@ -77,6 +77,7 @@ theme_symbols[] =
     { "southern_diagonal", TOKEN_SOUTHERN_DIAGONAL },
     { "shade_start", TOKEN_SHADE_START },
     { "shade_end", TOKEN_SHADE_END },
+    { "flat_border", TOKEN_FLATBORDER },
     { "true", TOKEN_TRUE},
     { "TRUE", TOKEN_TRUE},
     { "false", TOKEN_FALSE},
@@ -116,6 +117,7 @@ static void xfce_rc_style_init(XfceRcStyle * style)
     style->gradient_style = XFCE_RC_GRADIENT_AUTO;
     style->shade_start = DEFAULT_SHADE_START;
     style->shade_end = DEFAULT_SHADE_END;
+    style->flat_border = FALSE;
 }
 
 static void xfce_rc_style_class_init(XfceRcStyleClass * klass)
@@ -422,6 +424,14 @@ static guint xfce_rc_style_parse(GtkRcStyle * rc_style, GtkSettings * settings, 
                     break;
                 }
                 break;
+            case TOKEN_FLATBORDER:
+                token = theme_parse_boolean(scanner, TOKEN_FLATBORDER, &b);
+                if(token != G_TOKEN_NONE)
+                {
+                    break;
+                }
+                theme_data->flat_border = b;
+                break;
             default:
                 g_scanner_get_next_token(scanner);
                 token = G_TOKEN_RIGHT_CURLY;
@@ -460,6 +470,7 @@ static void xfce_rc_style_merge(GtkRcStyle * dest, GtkRcStyle * src)
     dest_data->gradient_style = src_data->gradient_style;
     dest_data->shade_start = src_data->shade_start;
     dest_data->shade_end = src_data->shade_end;
+    dest_data->flat_border = src_data->flat_border;
 }
 
 /* Create an empty style suitable to this RC style
