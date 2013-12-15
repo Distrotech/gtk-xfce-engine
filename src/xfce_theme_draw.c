@@ -107,6 +107,11 @@ static void xfce_fill_background(GtkStyle * style, GdkWindow * window, GtkStateT
 
     cr = ge_gdk_drawable_to_cairo(window, area);
 
+    if (DETAIL("trough-lower"))
+    {
+        state_type = GTK_STATE_SELECTED;
+    }
+
     if ((!draw_base) && (XFCE_RC_STYLE(style->rc_style)->gradient))
     {
         switch (XFCE_RC_STYLE(style->rc_style)->gradient_style)
@@ -143,7 +148,7 @@ static void xfce_fill_background(GtkStyle * style, GdkWindow * window, GtkStateT
                 }
                 break;
         }
-        if ((state_type == GTK_STATE_ACTIVE) || (DETAIL("trough")))
+        if ((state_type == GTK_STATE_ACTIVE) || (DETAIL("trough")) || (DETAIL("trough-lower")) || (DETAIL("trough-upper")))
         {
             shade_start = MIN (XFCE_RC_STYLE(style->rc_style)->shade_start, XFCE_RC_STYLE(style->rc_style)->shade_end);
             shade_end = MAX (XFCE_RC_STYLE(style->rc_style)->shade_start, XFCE_RC_STYLE(style->rc_style)->shade_end);
@@ -493,9 +498,9 @@ static void draw_shadow(GtkStyle * style, GdkWindow * window, GtkStateType state
         case GTK_SHADOW_IN:
             if (XFCE_RC_STYLE(style->rc_style)->smooth_edge)
             {
-                if (DETAIL("trough"))
+                if (DETAIL("trough") || DETAIL("trough-lower") || DETAIL("trough-upper"))
                 {
-                    gdk_cairo_set_source_color(cr, &style->bg[GTK_STATE_NORMAL]);
+                    gdk_cairo_set_source_color(cr, &style->bg[DETAIL("trough-lower") ? GTK_STATE_SELECTED : GTK_STATE_NORMAL]);
                     cairo_rectangle(cr, x + 0.5, y + 0.5, width - 1, height - 1);
                     cairo_stroke(cr);
 
@@ -564,9 +569,9 @@ static void draw_shadow(GtkStyle * style, GdkWindow * window, GtkStateType state
             }
             else
             {
-                if (DETAIL("trough"))
+                if (DETAIL("trough") || DETAIL("trough-lower") || DETAIL("trough-upper"))
                 {
-                    gdk_cairo_set_source_color(cr, &style->dark[GTK_STATE_ACTIVE]);
+                    gdk_cairo_set_source_color(cr, &style->dark[DETAIL("trough-lower") ? GTK_STATE_SELECTED : GTK_STATE_ACTIVE]);
                     cairo_rectangle(cr, x + 0.5, y + 0.5, width - 1, height - 1);
                     cairo_stroke(cr);
                 }
