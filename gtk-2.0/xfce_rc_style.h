@@ -71,9 +71,17 @@ typedef enum
     XFCE_RC_GRIP_SLIDE
 } XfceRcHandlerType;
 
+typedef enum
+{
+    XFCE_RC_FLAGS_NONE = 0,
+    XFCE_RC_FOCUS_COLOR = 1<<0
+} XfceRcFlags;
+
 struct _XfceRcStyle
 {
     GtkRcStyle parent_instance;
+
+    XfceRcFlags flags;
 
     gboolean smooth_edge;
     XfceRcHandlerType grip_style;
@@ -82,6 +90,7 @@ struct _XfceRcStyle
     gfloat shade_start;
     gfloat shade_end;
     gboolean flat_border;
+    GdkColor focus_color;
 };
 
 struct _XfceRcStyleClass
@@ -111,6 +120,7 @@ enum
     TOKEN_SHADE_START,
     TOKEN_SHADE_END,
     TOKEN_FLATBORDER,
+    TOKEN_FOCUSCOLOR,
     TOKEN_TRUE,
     TOKEN_FALSE
 };

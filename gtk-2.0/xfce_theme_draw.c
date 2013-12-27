@@ -1706,6 +1706,93 @@ static void draw_handle(GtkStyle * style, GdkWindow * window, GtkStateType state
     xfce_draw_grips(style, window, state_type, area, widget, x, y, width, height, orientation);
 }
 
+static void draw_focus(GtkStyle * style, GdkWindow * window, GtkStateType state_type, GdkRectangle * area, GtkWidget * widget, const gchar * detail, gint x, gint y, gint width, gint height)
+{
+    cairo_t *cr;
+    gboolean free_dash_list = FALSE;
+    gint line_width = 1;
+    gint8 *dash_list = (gint8 *) "\1\1";
+
+    CHECK_ARGS;
+    SANITIZE_SIZE;
+
+    if (widget)
+    {
+        gtk_widget_style_get (widget,
+                "focus-line-width", &line_width,
+                "focus-line-pattern", (gchar *)&dash_list,
+                NULL);
+
+        free_dash_list = TRUE;
+    }
+
+    if (DETAIL("add-mode"))
+    {
+        if (free_dash_list)
+            g_free (dash_list);
+
+        dash_list = (gint8 *) "\4\4";
+        free_dash_list = FALSE;
+    }
+
+    cr = gdk_cairo_create (window);
+
+    if (DETAIL("colorwheel_light"))
+        cairo_set_source_rgb (cr, 0., 0., 0.);
+    else if (DETAIL("colorwheel_dark"))
+        cairo_set_source_rgb (cr, 1., 1., 1.);
+    else if (XFCE_RC_STYLE(style->rc_style)->flags & XFCE_RC_FOCUS_COLOR)
+        gdk_cairo_set_source_color (cr, &XFCE_RC_STYLE(style->rc_style)->focus_color);
+    else
+        gdk_cairo_set_source_color (cr, &style->fg[state_type]);
+
+    cairo_set_line_width (cr, line_width);
+
+    if (dash_list[0])
+    {
+        gint n_dashes = strlen ((const gchar *) dash_list);
+        gdouble *dashes = g_new (gdouble, n_dashes);
+        gdouble total_length = 0;
+        gdouble dash_offset;
+        gint i;
+
+        for (i = 0; i < n_dashes; i++)
+        {
+            dashes[i] = dash_list[i];
+            total_length += dash_list[i];
+        }
+
+        /* The dash offset here aligns the pattern to integer pixels
+         * by starting the dash at the right side of the left border
+         * Negative dash offsets in cairo don't work
+         * (https://bugs.freedesktop.org/show_bug.cgi?id=2729)
+         */
+        dash_offset = - line_width / 2.;
+        while (dash_offset < 0)
+            dash_offset += total_length;
+
+        cairo_set_dash (cr, dashes, n_dashes, dash_offset);
+        g_free (dashes);
+    }
+
+    if (area)
+    {
+        gdk_cairo_rectangle (cr, area);
+        cairo_clip (cr);
+    }
+
+    cairo_rectangle (cr,
+            x + line_width / 2.,
+            y + line_width / 2.,
+            width - line_width,
+            height - line_width);
+    cairo_stroke (cr);
+    cairo_destroy (cr);
+
+    if (free_dash_list)
+        g_free (dash_list);
+}
+
 GType xfce_type_style = 0;
 
 void xfce_style_register_type(GTypeModule * module)
@@ -1745,4 +1832,5 @@ static void xfce_style_class_init(XfceStyleClass * klass)
     style_class->draw_extension = draw_extension;
     style_class->draw_slider = draw_slider;
     style_class->draw_handle = draw_handle;
+    style_class->draw_focus = draw_focus;
 }
