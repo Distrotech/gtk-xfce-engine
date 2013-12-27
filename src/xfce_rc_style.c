@@ -78,6 +78,7 @@ theme_symbols[] =
     { "shade_start", TOKEN_SHADE_START },
     { "shade_end", TOKEN_SHADE_END },
     { "flat_border", TOKEN_FLATBORDER },
+    { "focus_color", TOKEN_FOCUSCOLOR },
     { "true", TOKEN_TRUE},
     { "TRUE", TOKEN_TRUE},
     { "false", TOKEN_FALSE},
@@ -111,6 +112,7 @@ void xfce_rc_style_register_type(GTypeModule * module)
 
 static void xfce_rc_style_init(XfceRcStyle * style)
 {
+    style->flags = XFCE_RC_FLAGS_NONE;
     style->smooth_edge = FALSE;
     style->grip_style = XFCE_RC_GRIP_ROUGH;
     style->gradient = FALSE;
@@ -375,6 +377,24 @@ static guint theme_parse_grip_style (GScanner * scanner, GTokenType wanted_token
     return G_TOKEN_NONE;
 }
 
+static guint theme_parse_color (GScanner *scanner, GTokenType wanted_token, GtkRcStyle *style, GdkColor *retval)
+{
+    guint token;
+
+    token = g_scanner_get_next_token (scanner);
+    if (token != wanted_token)
+    {
+        return wanted_token;
+    }
+    token = g_scanner_get_next_token (scanner);
+    if (token != G_TOKEN_EQUAL_SIGN)
+    {
+        return G_TOKEN_EQUAL_SIGN;
+    }
+
+    return gtk_rc_parse_color_full (scanner, style, retval);
+}
+
 static guint xfce_rc_style_parse(GtkRcStyle * rc_style, GtkSettings * settings, GScanner * scanner)
 {
     static GQuark scope_id = 0;
@@ -383,6 +403,7 @@ static guint xfce_rc_style_parse(GtkRcStyle * rc_style, GtkSettings * settings, 
     guint token;
     guint i;
     gboolean b;
+    GdkColor c;
 
     /* Set up a new scope in this scanner. */
     if(!scope_id)
@@ -432,6 +453,15 @@ static guint xfce_rc_style_parse(GtkRcStyle * rc_style, GtkSettings * settings, 
                 }
                 theme_data->flat_border = b;
                 break;
+            case TOKEN_FOCUSCOLOR:
+                token = theme_parse_color (scanner, TOKEN_FOCUSCOLOR, rc_style, &c);
+                if(token != G_TOKEN_NONE)
+                {
+                    break;
+                }
+                theme_data->focus_color = c;
+                theme_data->flags |= XFCE_RC_FOCUS_COLOR;
+                break;
             default:
                 g_scanner_get_next_token(scanner);
                 token = G_TOKEN_RIGHT_CURLY;
@@ -464,6 +494,7 @@ static void xfce_rc_style_merge(GtkRcStyle * dest, GtkRcStyle * src)
     src_data = XFCE_RC_STYLE(src);
     dest_data = XFCE_RC_STYLE(dest);
 
+    dest_data->flags = src_data->flags;
     dest_data->smooth_edge = src_data->smooth_edge;
     dest_data->grip_style = src_data->grip_style;
     dest_data->gradient = src_data->gradient;
@@ -471,6 +502,7 @@ static void xfce_rc_style_merge(GtkRcStyle * dest, GtkRcStyle * src)
     dest_data->shade_start = src_data->shade_start;
     dest_data->shade_end = src_data->shade_end;
     dest_data->flat_border = src_data->flat_border;
+    dest_data->focus_color = src_data->focus_color;
 }
 
 /* Create an empty style suitable to this RC style
