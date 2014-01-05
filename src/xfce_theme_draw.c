@@ -1776,14 +1776,21 @@ static void draw_focus(GtkStyle * style, GdkWindow * window, GtkStateType state_
             total_length += dash_list[i];
         }
 
-        /* The dash offset here aligns the pattern to integer pixels
-         * by starting the dash at the right side of the left border
-         * Negative dash offsets in cairo don't work
-         * (https://bugs.freedesktop.org/show_bug.cgi?id=2729)
-         */
-        dash_offset = - line_width / 2.;
-        while (dash_offset < 0)
-            dash_offset += total_length;
+        if (XFCE_RC_STYLE(style->rc_style)->smooth_edge)
+        {
+          dash_offset = 0;
+        }
+        else
+        {
+            /* The dash offset here aligns the pattern to integer pixels
+             * by starting the dash at the right side of the left border
+             * Negative dash offsets in cairo don't work
+             * (https://bugs.freedesktop.org/show_bug.cgi?id=2729)
+             */
+            dash_offset = - line_width / 2.;
+            while (dash_offset < 0)
+                dash_offset += total_length;
+        }
 
         cairo_set_dash (cr, dashes, n_dashes, dash_offset);
         g_free (dashes);
@@ -1795,11 +1802,41 @@ static void draw_focus(GtkStyle * style, GdkWindow * window, GtkStateType state_
         cairo_clip (cr);
     }
 
-    cairo_rectangle (cr,
-            x + line_width / 2.,
-            y + line_width / 2.,
-            width - line_width,
-            height - line_width);
+    if (XFCE_RC_STYLE(style->rc_style)->smooth_edge)
+    {
+        cairo_move_to (cr,
+                x + 1,
+                y + line_width / 2.);
+        cairo_line_to (cr,
+                x + width - 1,
+                y + line_width / 2.);
+        cairo_move_to (cr,
+                x + width - line_width / 2.,
+                y + 1);
+        cairo_line_to (cr,
+                x + width - line_width / 2.,
+                y + height - 1);
+        cairo_move_to (cr,
+                x + width - 1,
+                y + height - line_width / 2.);
+        cairo_line_to (cr,
+                x + 1,
+                y + height - line_width / 2.);
+        cairo_move_to (cr,
+                x + line_width / 2.,
+                y + height - 1);
+        cairo_line_to (cr,
+                x + line_width / 2.,
+                y + 1);
+    }
+    else
+    {
+        cairo_rectangle (cr,
+                x + line_width / 2.,
+                y + line_width / 2.,
+                width - line_width,
+                height - line_width);
+    }
     cairo_stroke (cr);
     cairo_destroy (cr);
 
