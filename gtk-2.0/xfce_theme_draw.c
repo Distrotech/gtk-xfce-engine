@@ -383,6 +383,9 @@ static void draw_shadow(GtkStyle * style, GdkWindow * window, GtkStateType state
 {
     gint xt, yt;
     cairo_t *cr;
+    GtkWidget *parent;
+    GtkStyle *pstyle;
+    GdkColor *pbg;
 
     CHECK_ARGS;
 
@@ -390,6 +393,17 @@ static void draw_shadow(GtkStyle * style, GdkWindow * window, GtkStateType state
         return;
 
     SANITIZE_SIZE;
+
+    parent = gtk_widget_get_parent(widget);
+    if (parent)
+    {
+        pstyle = gtk_widget_get_style(widget);
+        pbg = &pstyle->bg[gtk_widget_get_state(parent)];
+    }
+    else
+    {
+        pbg = &style->mid[state_type];
+    }
 
     /* Spin buttons are a special case */
     if (widget && GTK_IS_SPIN_BUTTON (widget))
@@ -465,7 +479,7 @@ static void draw_shadow(GtkStyle * style, GdkWindow * window, GtkStateType state
                             state_type = GTK_STATE_NORMAL;
                         }
 
-                        gdk_cairo_set_source_color(cr, &style->mid[state_type]);
+                        gdk_cairo_set_source_color(cr, pbg);
                         cairo_rectangle(cr, x, y, 1, 1);
                         cairo_rectangle(cr, x + width - 1, y, 1, 1);
                         cairo_rectangle(cr, x, y + height - 1, 1, 1);
@@ -559,7 +573,7 @@ static void draw_shadow(GtkStyle * style, GdkWindow * window, GtkStateType state
                         cairo_rectangle(cr, x + 0.5, y + 0.5, width - 1, height - 1);
                         cairo_stroke(cr);
 
-                        gdk_cairo_set_source_color(cr, &style->mid[GTK_STATE_NORMAL]);
+                        gdk_cairo_set_source_color(cr, pbg);
                         cairo_rectangle(cr, x, y, 1, 1);
                         cairo_rectangle(cr, x + width - 1, y, 1, 1);
                         cairo_rectangle(cr, x, y + height - 1, 1, 1);
@@ -592,7 +606,7 @@ static void draw_shadow(GtkStyle * style, GdkWindow * window, GtkStateType state
                         cairo_line_to(cr, x + width - 1.5, y + 2.5);
                         cairo_stroke(cr);
 
-                        gdk_cairo_set_source_color(cr, &style->mid[state_type]);
+                        gdk_cairo_set_source_color(cr, pbg);
                         cairo_rectangle(cr, x, y, 1, 1);
                         cairo_rectangle(cr, x + width - 1, y, 1, 1);
                         cairo_rectangle(cr, x, y + height - 1, 1, 1);
@@ -614,7 +628,7 @@ static void draw_shadow(GtkStyle * style, GdkWindow * window, GtkStateType state
                         cairo_line_to(cr, x + width - 0.5, y + 1.5);
                         cairo_stroke(cr);
 
-                        gdk_cairo_set_source_color(cr, &style->mid[state_type]);
+                        gdk_cairo_set_source_color(cr, pbg);
                         cairo_rectangle(cr, x, y, 1, 1);
                         cairo_rectangle(cr, x + width - 1, y, 1, 1);
                         cairo_rectangle(cr, x, y + height - 1, 1, 1);
@@ -685,7 +699,7 @@ static void draw_shadow(GtkStyle * style, GdkWindow * window, GtkStateType state
                         cairo_rectangle(cr, x + 0.5, y + 0.5, width - 1, height - 1);
                         cairo_stroke(cr);
 
-                        gdk_cairo_set_source_color(cr, &style->mid[GTK_STATE_NORMAL]);
+                        gdk_cairo_set_source_color(cr, pbg);
                         cairo_rectangle(cr, x, y, 1, 1);
                         cairo_rectangle(cr, x + width - 1, y, 1, 1);
                         cairo_rectangle(cr, x, y + height - 1, 1, 1);
@@ -865,7 +879,7 @@ static void draw_shadow(GtkStyle * style, GdkWindow * window, GtkStateType state
                             cairo_line_to(cr, x + width - 1.5, y + 1.5);
                             cairo_stroke(cr);
 
-                            gdk_cairo_set_source_color(cr, &style->mid[state_type]);
+                            gdk_cairo_set_source_color(cr, pbg);
                             cairo_rectangle(cr, x, y, 1, 1);
                             cairo_rectangle(cr, x + width - 1, y, 1, 1);
                             cairo_rectangle(cr, x, y + height - 1, 1, 1);
@@ -887,7 +901,7 @@ static void draw_shadow(GtkStyle * style, GdkWindow * window, GtkStateType state
                             cairo_line_to(cr, x + width - 0.5, y + 1.5);
                             cairo_stroke(cr);
 
-                            gdk_cairo_set_source_color(cr, &style->mid[state_type]);
+                            gdk_cairo_set_source_color(cr, pbg);
                             cairo_rectangle(cr, x, y, 1, 1);
                             cairo_rectangle(cr, x + width - 1, y, 1, 1);
                             cairo_rectangle(cr, x, y + height - 1, 1, 1);
