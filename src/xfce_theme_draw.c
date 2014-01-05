@@ -397,6 +397,9 @@ static void draw_shadow(GtkStyle * style, GdkWindow * window, GtkStateType state
     parent = gtk_widget_get_parent(widget);
     if (parent)
     {
+        /* Get the background color from the parent widget.
+         * This makes a nicer corner if the background colors differ.
+         */
         pstyle = gtk_widget_get_style(widget);
         pbg = &pstyle->bg[gtk_widget_get_state(parent)];
     }
@@ -1322,14 +1325,14 @@ static void draw_box_gap(GtkStyle * style, GdkWindow * window, GtkStateType stat
                     cairo_stroke(cr);
 
                     gdk_cairo_set_source_color(cr, c2);
-                    cairo_move_to(cr, x + 1.5, y + 1.5);
+                    cairo_move_to(cr, x + 1.5, y + 0.5);
                     cairo_line_to(cr, x + 1.5, y + height - 1.5);
                     cairo_stroke(cr);
 
                     gdk_cairo_set_source_color(cr, c3);
                     cairo_move_to(cr, x + 2.5, y + height - 1.5);
                     cairo_line_to(cr, x + width - 1.5, y + height - 1.5);
-                    cairo_line_to(cr, x + width - 0.5, y + 0.5);
+                    cairo_line_to(cr, x + width - 1.5, y + 0.5);
                     cairo_stroke(cr);
 
                     gdk_cairo_set_source_color(cr, c4);
@@ -1351,10 +1354,9 @@ static void draw_box_gap(GtkStyle * style, GdkWindow * window, GtkStateType stat
                         cairo_line_to(cr, x + gap_x, y + 1.5);
                         cairo_stroke(cr);
 
-                        cairo_rectangle(cr, x + gap_x, y + 0.5, 1, 1);
-                        cairo_move_to(cr, x + gap_x, y);
+                        cairo_move_to(cr, x + gap_x, y + 0.5);
                         cairo_line_to(cr, x + gap_x + 1, y + 0.5);
-                        cairo_fill(cr);
+                        cairo_stroke(cr);
                     }
                     if ((width - (gap_x + gap_width)) > 0)
                     {
@@ -1554,8 +1556,6 @@ static void draw_extension(GtkStyle * style, GdkWindow * window, GtkStateType st
     CHECK_ARGS;
     SANITIZE_SIZE;
 
-    gtk_style_apply_default_background(style, window, widget && !GTK_WIDGET_NO_WINDOW(widget), state_type, area, x, y, width, height);
-
     if (XFCE_RC_STYLE(style->rc_style)->smooth_edge)
     {
         c1 = &style->dark[state_type];
@@ -1591,7 +1591,7 @@ static void draw_extension(GtkStyle * style, GdkWindow * window, GtkStateType st
                     cairo_stroke(cr);
 
                     gdk_cairo_set_source_color(cr, c2);
-                    cairo_move_to(cr, x + 1.5, y + 1.5);
+                    cairo_move_to(cr, x + 1.5, y + 0.5);
                     cairo_line_to(cr, x + 1.5, y + height - 1.5);
                     cairo_stroke(cr);
 
@@ -1643,7 +1643,7 @@ static void draw_extension(GtkStyle * style, GdkWindow * window, GtkStateType st
                     cairo_stroke(cr);
 
                     gdk_cairo_set_source_color(cr, c2);
-                    cairo_move_to(cr, x + 1.5, y + 1.5);
+                    cairo_move_to(cr, x + 0.5, y + 1.5);
                     cairo_line_to(cr, x + width - 1.5, y + 1.5);
                     cairo_stroke(cr);
 
