@@ -400,7 +400,7 @@ static void draw_shadow(GtkStyle * style, GdkWindow * window, GtkStateType state
         /* Get the background color from the parent widget.
          * This makes a nicer corner if the background colors differ.
          */
-        pstyle = gtk_widget_get_style(widget);
+        pstyle = gtk_widget_get_style(parent);
         pbg = &pstyle->bg[gtk_widget_get_state(parent)];
     }
     else
