@@ -69,7 +69,7 @@
     color: @fg_insensitive;
     background-color: @bg_insensitive;
     border-color: darker(@bg_insensitive);
-    text-shadow: 1 1 white;
+    text-shadow: 1px 1px white;
 }
 
 *:hover {

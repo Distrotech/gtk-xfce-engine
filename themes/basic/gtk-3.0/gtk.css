@@ -18,7 +18,7 @@
 }
 
 *:insensitive {
-    text-shadow: 1 1 white;
+    text-shadow: 1px 1px white;
 }
 
 GtkComboBox {
