@@ -1,3 +1,13 @@
+2.9.1
+=====
+- Changed rendering of the spinner
+- Correctly match gtk-tooltip widgets (bug #8494)
+- Use size for the radio and check boxes (bug #8456)
+- Don't leak a graduent pattern at each draw (bug #8521)
+- Support trough-side-details
+- Added flat_border and focus_color style properties
+- More rendering improvements
+
 2.9.0
 =====
 - Changed drawing routines to use cairo
