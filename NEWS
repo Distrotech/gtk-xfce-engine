@@ -1,3 +1,12 @@
+3.1.0
+=====
+- Added default colors to xfce basic theme
+- Fix uinitialized value (bug #10877)
+- Support trough-side-details
+- Added flat_border and focus_color style properties
+- More rendering improvements
+- Gtk+-3 support has been stopped
+
 3.0.1
 =====
 - Don't leak a graduent pattern at each draw (bug #8521).
