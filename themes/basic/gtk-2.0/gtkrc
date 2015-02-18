@@ -14,6 +14,30 @@ style "default"
     GtkRange::stepper_spacing         = 0
     GtkRange::trough_border           = 0
 
+    fg[ACTIVE]        = "#000000"
+    fg[INSENSITIVE]   = "#757575"
+    fg[NORMAL]        = "#000000"
+    fg[PRELIGHT]      = "#000000"
+    fg[SELECTED]      = "#ffffff"
+
+    bg[ACTIVE]        = "#c4c2bd"
+    bg[INSENSITIVE]   = "#dcdad5"
+    bg[NORMAL]        = "#dcdad5"
+    bg[PRELIGHT]      = "#eeebe7"
+    bg[SELECTED]      = "#4b6983"
+
+    base[ACTIVE]      = "#9c9a94"
+    base[INSENSITIVE] = "#eeebe7"
+    base[NORMAL]      = "#ffffff"
+    base[PRELIGHT]    = "#ffffff"
+    base[SELECTED]    = "#4b6983"
+
+    text[ACTIVE]      = "#ffffff"
+    text[INSENSITIVE] = "#757575"
+    text[NORMAL]      = "#000000"
+    text[PRELIGHT]    = "#000000"
+    text[SELECTED]    = "#ffffff"
+
     engine "xfce" 
     {
         smooth_edge = true
