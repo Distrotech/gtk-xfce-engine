@@ -415,7 +415,7 @@ static void draw_shadow(GtkStyle * style, GdkWindow * window, GtkStateType state
         if (DETAIL("spinbutton"))
         {
             gint line_width = 0;
-            gboolean interior_focus;
+            gboolean interior_focus = FALSE;
             if (gtk_widget_has_focus(widget))
                 gtk_widget_style_get(widget, "focus-line-width", &line_width, "interior-focus", &interior_focus, NULL);
             if (interior_focus)
