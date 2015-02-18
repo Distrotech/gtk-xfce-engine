@@ -64,7 +64,7 @@ dnl ***********************************
 dnl *** Check for optional packages ***
 dnl ***********************************
 XDT_CHECK_OPTIONAL_PACKAGE([GTK2], [gtk+-2.0], [2.20.0], [gtk2], [Gtk 2 theme engine])
-XDT_CHECK_OPTIONAL_PACKAGE([GTK3], [gtk+-3.0], [3.2.0], [gtk3], [Gtk 3 theme engine])
+XDT_CHECK_OPTIONAL_PACKAGE([GTK3], [gtk+-3.0], [3.2.0], [gtk3], [Gtk 3 theme engine], [no])
 
 GTK_SUBDIRS=""
 if test x"$GTK2_FOUND" = x"yes"
