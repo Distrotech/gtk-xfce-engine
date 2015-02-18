@@ -1,3 +1,8 @@
+2.9.2
+=====
+- Add default colors to xfce basic theme
+- Fix uinitialized value (bug #10877)
+
 2.9.1
 =====
 - Changed rendering of the spinner
