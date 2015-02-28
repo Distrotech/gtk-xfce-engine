@@ -1,7 +1,12 @@
+3.2.0
+=====
+- Add new theme Xfce-flat
+- Fix invalid free on theme parse error
+
 3.1.0
 =====
 - Added default colors to xfce basic theme
-- Fix uinitialized value (bug #10877)
+- Fix uninitialized value (bug #10877)
 - Support trough-side-details
 - Added flat_border and focus_color style properties
 - More rendering improvements
