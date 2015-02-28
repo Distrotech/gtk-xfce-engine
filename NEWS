@@ -1,7 +1,12 @@
+2.10.0
+======
+- Add new theme Xfce-flat
+- Fix invalid free on theme parse error
+
 2.9.2
 =====
 - Add default colors to xfce basic theme
-- Fix uinitialized value (bug #10877)
+- Fix uninitialized value (bug #10877)
 
 2.9.1
 =====
