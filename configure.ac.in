@@ -136,6 +136,9 @@ themes/dawn/Makefile
 themes/dusk/gtk-2.0/Makefile
 themes/dusk/gtk-3.0/Makefile
 themes/dusk/Makefile
+themes/flat/gtk-2.0/Makefile
+themes/flat/gtk-3.0/Makefile
+themes/flat/Makefile
 themes/kolors/gtk-2.0/Makefile
 themes/kolors/gtk-3.0/Makefile
 themes/kolors/Makefile

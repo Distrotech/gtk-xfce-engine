@@ -10,6 +10,7 @@ SUBDIRS = \
 	curve		\
 	dawn		\
 	dusk		\
+	flat		\
 	kde2		\
 	kolors		\
 	light		\
